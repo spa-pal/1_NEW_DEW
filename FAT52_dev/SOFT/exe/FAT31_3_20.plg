@@ -29,3 +29,50 @@ linking...
 Program Size: Code=9520 RO-data=568 RW-data=224 ZI-data=5216  
 FromELF: creating hex file...
 ".\exe\FAT31_3_20.axf" - 0 Error(s), 8 Warning(s).
+Build target '3wire_20pos'
+assembling startup_LPC17xx.s...
+compiling core_cm3.c...
+compiling system_LPC17xx.c...
+compiling main.c...
+power_cnt.h(18): warning:  #47-D: incompatible redefinition of macro "BUFSIZE" (declared at line 5 of "uart0.h")
+main.c(946): warning:  #223-D: function "read_summary_power" declared implicitly
+main.c(974): warning:  #260-D: explicit type is missing ("int" assumed)
+main.c(974): warning:  #550-D: variable "_1hz_cnt" was set but never used
+compiling gran.c...
+compiling cmd.c...
+compiling uart0.c...
+compiling full_can.c...
+full_can.c(425): warning:  #550-D: variable "temp" was set but never used
+compiling power_cnt.c...
+power_cnt.c(202): warning:  #223-D: function "gran_char" declared implicitly
+power_cnt.c(460): warning:  #177-D: variable "t" was declared but never referenced
+power_cnt.c(713): warning:  #63-D: shift count is too large
+linking...
+Program Size: Code=9520 RO-data=568 RW-data=224 ZI-data=5216  
+FromELF: creating hex file...
+".\exe\FAT31_3_20.axf" - 0 Error(s), 8 Warning(s).
+"FM.EXE" DEVICE(LPC1766,4.0,0) ERASE(DEVICE,PROTECTISP) HEXFILE(E:\Users\Pal\DEVICES\1_NEW_DEW\FAT52_dev\SOFT\exe\FAT31_3_20.HEX,NOCHECKSUMS,NOFILL,PROTECTISP) COM(1,19200) HARDWARE(BOOTEXEC,100,50)
+Flash Magic Version 7.72.3554
+8051/XA Driver Version 3.04.3296
+ARM UART Driver Version 3.11.3302
+ARM Cortex UART Driver Version 4.67.3554
+ARM Ethernet Driver Version 2.05.3296
+ARM Cortex Ethernet Driver Version 2.10.3471
+ARM CAN Driver Version 2.12.3476
+(C) Embedded Systems Academy 2000-2014 All rights reserved
+NON PRODUCTION USE ONLY
+Connection failed: invalid command (Operation Failed.  Failed to autobaud - step 1. See http://www.flashmagictool.com/autobaud.html)
+"FM.EXE" DEVICE(LPC1766,4.0,0) ERASE(DEVICE,PROTECTISP) HEXFILE(E:\Users\Pal\DEVICES\1_NEW_DEW\FAT52_dev\SOFT\exe\FAT31_3_20.HEX,NOCHECKSUMS,NOFILL,PROTECTISP) COM(1,19200) HARDWARE(BOOTEXEC,100,50)
+Flash Magic Version 7.72.3554
+8051/XA Driver Version 3.04.3296
+ARM UART Driver Version 3.11.3302
+ARM Cortex UART Driver Version 4.67.3554
+ARM Ethernet Driver Version 2.05.3296
+ARM Cortex Ethernet Driver Version 2.10.3471
+ARM CAN Driver Version 2.12.3476
+(C) Embedded Systems Academy 2000-2014 All rights reserved
+NON PRODUCTION USE ONLY
+Connected
+Device selected
+Erase complete (DEVICE)
+Hex file programming failed: transmit or receive error

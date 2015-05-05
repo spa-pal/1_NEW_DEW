@@ -580,10 +580,10 @@
       <FileType>1</FileType>
       <tvExp>1</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>35</ColumnNumber>
+      <ColumnNumber>16</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>868</TopLine>
-      <CurrentLine>873</CurrentLine>
+      <TopLine>748</TopLine>
+      <CurrentLine>761</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
@@ -650,10 +650,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>8</ColumnNumber>
+      <ColumnNumber>40</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>596</TopLine>
-      <CurrentLine>596</CurrentLine>
+      <TopLine>284</TopLine>
+      <CurrentLine>300</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\full_can.c</PathWithFileName>
       <FilenameWithoutPath>full_can.c</FilenameWithoutPath>
@@ -861,61 +861,19 @@
     <ActiveMDIGroup>0</ActiveMDIGroup>
     <MDIGroup>
       <Size>100</Size>
-      <ActiveTab>11</ActiveTab>
+      <ActiveTab>6</ActiveTab>
       <Documents>
         <Doc>
-          <Name>.\full_can.c</Name>
-          <ColumnNumber>8</ColumnNumber>
-          <TopLine>596</TopLine>
-          <CurrentLine>596</CurrentLine>
+          <Name>.\system_LPC17xx.c</Name>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>398</TopLine>
+          <CurrentLine>409</CurrentLine>
         </Doc>
         <Doc>
-          <Name>LPC17xx.h</Name>
-          <ColumnNumber>35</ColumnNumber>
-          <TopLine>960</TopLine>
-          <CurrentLine>971</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\uart0.c</Name>
-          <ColumnNumber>15</ColumnNumber>
-          <TopLine>96</TopLine>
-          <CurrentLine>109</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>power_cnt.h</Name>
-          <ColumnNumber>27</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>20</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\power_cnt.c</Name>
-          <ColumnNumber>20</ColumnNumber>
-          <TopLine>514</TopLine>
-          <CurrentLine>514</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\main.c</Name>
-          <ColumnNumber>35</ColumnNumber>
-          <TopLine>868</TopLine>
-          <CurrentLine>873</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>main.h</Name>
-          <ColumnNumber>7</ColumnNumber>
-          <TopLine>299</TopLine>
-          <CurrentLine>308</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>system_LPC17xx.h</Name>
+          <Name>C:\Keil\ARM\RV31\INC\stdint.h</Name>
           <ColumnNumber>0</ColumnNumber>
           <TopLine>1</TopLine>
-          <CurrentLine>1</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>full_can.h</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>6</TopLine>
-          <CurrentLine>17</CurrentLine>
+          <CurrentLine>11</CurrentLine>
         </Doc>
         <Doc>
           <Name>uart0.h</Name>
@@ -924,16 +882,58 @@
           <CurrentLine>43</CurrentLine>
         </Doc>
         <Doc>
-          <Name>C:\Keil\\ARM\RV31\INC\stdint.h</Name>
+          <Name>full_can.h</Name>
           <ColumnNumber>0</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>11</CurrentLine>
+          <TopLine>6</TopLine>
+          <CurrentLine>17</CurrentLine>
         </Doc>
         <Doc>
-          <Name>.\system_LPC17xx.c</Name>
+          <Name>system_LPC17xx.h</Name>
           <ColumnNumber>0</ColumnNumber>
-          <TopLine>398</TopLine>
-          <CurrentLine>409</CurrentLine>
+          <TopLine>1</TopLine>
+          <CurrentLine>1</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>main.h</Name>
+          <ColumnNumber>7</ColumnNumber>
+          <TopLine>299</TopLine>
+          <CurrentLine>308</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\main.c</Name>
+          <ColumnNumber>16</ColumnNumber>
+          <TopLine>748</TopLine>
+          <CurrentLine>761</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\power_cnt.c</Name>
+          <ColumnNumber>20</ColumnNumber>
+          <TopLine>514</TopLine>
+          <CurrentLine>514</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>power_cnt.h</Name>
+          <ColumnNumber>27</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>20</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\uart0.c</Name>
+          <ColumnNumber>15</ColumnNumber>
+          <TopLine>96</TopLine>
+          <CurrentLine>109</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>LPC17xx.h</Name>
+          <ColumnNumber>35</ColumnNumber>
+          <TopLine>960</TopLine>
+          <CurrentLine>971</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\full_can.c</Name>
+          <ColumnNumber>40</ColumnNumber>
+          <TopLine>284</TopLine>
+          <CurrentLine>300</CurrentLine>
         </Doc>
       </Documents>
     </MDIGroup>
