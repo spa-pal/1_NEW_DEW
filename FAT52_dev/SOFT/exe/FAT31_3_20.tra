@@ -19,7 +19,7 @@
 ### ADS-LD Output File: '.\exe\FAT31_3_20.axf'
 ### ADS-LD Command File: '.\exe\FAT31_3_20.lnp'
 ### Checking for dirty Components...
-### Creating CmdFile '.\exe\FAT31_3_20.lnp', Handle=0x0000049C
+### Creating CmdFile '.\exe\FAT31_3_20.lnp', Handle=0x00000490
 ### Writing '.lnp' file
 ### ADS-LD Command file '.\exe\FAT31_3_20.lnp' is ready.
 ### ADS-LD: About to start ADS-LD Thread.

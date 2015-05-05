@@ -76,3 +76,73 @@ Connected
 Device selected
 Erase complete (DEVICE)
 Hex file programming failed: transmit or receive error
+Build target '3wire_20pos'
+compiling main.c...
+power_cnt.h(18): warning:  #47-D: incompatible redefinition of macro "BUFSIZE" (declared at line 5 of "uart0.h")
+main.c(946): warning:  #223-D: function "read_summary_power" declared implicitly
+main.c(974): warning:  #260-D: explicit type is missing ("int" assumed)
+main.c(976): error:  #268: declaration may not appear after executable statement in block
+main.c(974): warning:  #177-D: variable "_1hz_cnt" was declared but never referenced
+Target not created
+Build target '3wire_20pos'
+compiling main.c...
+power_cnt.h(18): warning:  #47-D: incompatible redefinition of macro "BUFSIZE" (declared at line 5 of "uart0.h")
+main.c(946): warning:  #223-D: function "read_summary_power" declared implicitly
+main.c(974): warning:  #260-D: explicit type is missing ("int" assumed)
+main.c(974): warning:  #177-D: variable "_1hz_cnt" was declared but never referenced
+linking...
+Program Size: Code=9088 RO-data=568 RW-data=224 ZI-data=5216  
+FromELF: creating hex file...
+".\exe\FAT31_3_20.axf" - 0 Error(s), 4 Warning(s).
+"FM.EXE" DEVICE(LPC1766,4.0,0) ERASE(DEVICE,PROTECTISP) HEXFILE(E:\Users\Pal\DEVICES\1_NEW_DEW\FAT52_dev\SOFT\exe\FAT31_3_20.HEX,NOCHECKSUMS,NOFILL,PROTECTISP) COM(1,19200) HARDWARE(BOOTEXEC,100,50)
+Flash Magic Version 7.72.3554
+8051/XA Driver Version 3.04.3296
+ARM UART Driver Version 3.11.3302
+ARM Cortex UART Driver Version 4.67.3554
+ARM Ethernet Driver Version 2.05.3296
+ARM Cortex Ethernet Driver Version 2.10.3471
+ARM CAN Driver Version 2.12.3476
+(C) Embedded Systems Academy 2000-2014 All rights reserved
+NON PRODUCTION USE ONLY
+Connected
+Device selected
+Erase complete (DEVICE)
+Hex file programming complete (E:\Users\Pal\DEVICES\1_NEW_DEW\FAT52_dev\SOFT\exe\FAT31_3_20.HEX)
+Build target '3wire_20pos'
+compiling main.c...
+power_cnt.h(18): warning:  #47-D: incompatible redefinition of macro "BUFSIZE" (declared at line 5 of "uart0.h")
+main.c(946): warning:  #223-D: function "read_summary_power" declared implicitly
+main.c(974): warning:  #260-D: explicit type is missing ("int" assumed)
+main.c(974): warning:  #177-D: variable "_1hz_cnt" was declared but never referenced
+linking...
+Program Size: Code=9088 RO-data=568 RW-data=224 ZI-data=5216  
+FromELF: creating hex file...
+".\exe\FAT31_3_20.axf" - 0 Error(s), 4 Warning(s).
+"FM.EXE" DEVICE(LPC1766,4.0,0) ERASE(DEVICE,PROTECTISP) HEXFILE(E:\Users\Pal\DEVICES\1_NEW_DEW\FAT52_dev\SOFT\exe\FAT31_3_20.HEX,NOCHECKSUMS,NOFILL,PROTECTISP) COM(1,19200) HARDWARE(BOOTEXEC,100,50)
+Flash Magic Version 7.72.3554
+8051/XA Driver Version 3.04.3296
+ARM UART Driver Version 3.11.3302
+ARM Cortex UART Driver Version 4.67.3554
+ARM Ethernet Driver Version 2.05.3296
+ARM Cortex Ethernet Driver Version 2.10.3471
+ARM CAN Driver Version 2.12.3476
+(C) Embedded Systems Academy 2000-2014 All rights reserved
+NON PRODUCTION USE ONLY
+Connected
+Device selected
+Erase complete (DEVICE)
+Hex file programming failed: transmit or receive error
+"FM.EXE" DEVICE(LPC1766,4.0,0) ERASE(DEVICE,PROTECTISP) HEXFILE(E:\Users\Pal\DEVICES\1_NEW_DEW\FAT52_dev\SOFT\exe\FAT31_3_20.HEX,NOCHECKSUMS,NOFILL,PROTECTISP) COM(1,19200) HARDWARE(BOOTEXEC,100,50)
+Flash Magic Version 7.72.3554
+8051/XA Driver Version 3.04.3296
+ARM UART Driver Version 3.11.3302
+ARM Cortex UART Driver Version 4.67.3554
+ARM Ethernet Driver Version 2.05.3296
+ARM Cortex Ethernet Driver Version 2.10.3471
+ARM CAN Driver Version 2.12.3476
+(C) Embedded Systems Academy 2000-2014 All rights reserved
+NON PRODUCTION USE ONLY
+Connected
+Device selected
+Erase complete (DEVICE)
+Hex file programming complete (E:\Users\Pal\DEVICES\1_NEW_DEW\FAT52_dev\SOFT\exe\FAT31_3_20.HEX)

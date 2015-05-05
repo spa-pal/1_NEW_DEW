@@ -580,10 +580,10 @@
       <FileType>1</FileType>
       <tvExp>1</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>10</ColumnNumber>
+      <ColumnNumber>15</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1074</TopLine>
-      <CurrentLine>1079</CurrentLine>
+      <TopLine>827</TopLine>
+      <CurrentLine>849</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
@@ -664,10 +664,10 @@
       <FileType>1</FileType>
       <tvExp>1</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>4</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>692</TopLine>
-      <CurrentLine>697</CurrentLine>
+      <TopLine>456</TopLine>
+      <CurrentLine>457</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\power_cnt.c</PathWithFileName>
       <FilenameWithoutPath>power_cnt.c</FilenameWithoutPath>
@@ -901,15 +901,15 @@
         </Doc>
         <Doc>
           <Name>.\main.c</Name>
-          <ColumnNumber>10</ColumnNumber>
-          <TopLine>1074</TopLine>
-          <CurrentLine>1079</CurrentLine>
+          <ColumnNumber>15</ColumnNumber>
+          <TopLine>827</TopLine>
+          <CurrentLine>849</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\power_cnt.c</Name>
-          <ColumnNumber>4</ColumnNumber>
-          <TopLine>692</TopLine>
-          <CurrentLine>697</CurrentLine>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>456</TopLine>
+          <CurrentLine>457</CurrentLine>
         </Doc>
         <Doc>
           <Name>power_cnt.h</Name>

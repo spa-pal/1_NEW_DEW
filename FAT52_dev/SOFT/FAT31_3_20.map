@@ -145,10 +145,10 @@ Image Symbol Table
     .ARM.__at_0x02FC                         0x000002fc   Section        4  startup_lpc17xx.o(.ARM.__at_0x02FC)
     .text                                    0x00000300   Section        0  system_lpc17xx.o(.text)
     .text                                    0x00000520   Section        0  main.o(.text)
-    .text                                    0x000013b4   Section        0  uart0.o(.text)
-    .text                                    0x00001768   Section        0  full_can.o(.text)
-    .text                                    0x00001dc0   Section        0  power_cnt.o(.text)
-    NVIC_EnableIRQ                           0x00002733   Thumb Code    30  power_cnt.o(.text)
+    .text                                    0x00001204   Section        0  uart0.o(.text)
+    .text                                    0x000015b8   Section        0  full_can.o(.text)
+    .text                                    0x00001c10   Section        0  power_cnt.o(.text)
+    NVIC_EnableIRQ                           0x00002583   Thumb Code    30  power_cnt.o(.text)
     .data                                    0x10000000   Section        4  system_lpc17xx.o(.data)
     .data                                    0x10000004   Section      135  main.o(.data)
     _1hz_cnt                                 0x1000001c   Data           4  main.o(.data)
@@ -241,30 +241,30 @@ Image Symbol Table
     rtc_init                                 0x00000c05   Thumb Code    10  main.o(.text)
     pwm_init                                 0x00000c0f   Thumb Code    68  main.o(.text)
     SysTick_Handler                          0x00000c53   Thumb Code   554  main.o(.text)
-    main                                     0x00000e7d   Thumb Code  1322  main.o(.text)
-    putchar0                                 0x000013b5   Thumb Code    80  uart0.o(.text)
-    uart_out0                                0x00001405   Thumb Code   146  uart0.o(.text)
-    UART0_IRQHandler                         0x00001497   Thumb Code   328  uart0.o(.text)
-    uart_in_an0                              0x000015df   Thumb Code     2  uart0.o(.text)
-    index_offset0                            0x000015e1   Thumb Code    36  uart0.o(.text)
-    control_check0                           0x00001605   Thumb Code   114  uart0.o(.text)
-    uart_in0                                 0x00001677   Thumb Code   184  uart0.o(.text)
-    can1_out                                 0x00001769   Thumb Code   406  full_can.o(.text)
-    can_in_an                                0x000018ff   Thumb Code   268  full_can.o(.text)
-    can_isr_tx1                              0x00001a0b   Thumb Code   142  full_can.o(.text)
-    can1_init                                0x00001a99   Thumb Code   122  full_can.o(.text)
-    FullCAN_SetFilter                        0x00001b13   Thumb Code   322  full_can.o(.text)
-    can_isr_rx1                              0x00001c55   Thumb Code   306  full_can.o(.text)
-    CAN_IRQHandler                           0x00001d87   Thumb Code    40  full_can.o(.text)
-    UARTInit                                 0x00001dc1   Thumb Code   330  power_cnt.o(.text)
-    UART1_IRQHandler                         0x00001f0b   Thumb Code  1028  power_cnt.o(.text)
-    power_cnt_crc                            0x0000230f   Thumb Code    46  power_cnt.o(.text)
-    putchar1                                 0x0000233d   Thumb Code    84  power_cnt.o(.text)
-    uart_out_adr1                            0x00002391   Thumb Code   112  power_cnt.o(.text)
-    sleep_coding                             0x00002401   Thumb Code   142  power_cnt.o(.text)
-    read_current_power                       0x0000248f   Thumb Code   144  power_cnt.o(.text)
-    read_summary_power                       0x0000251f   Thumb Code   152  power_cnt.o(.text)
-    sleep_an                                 0x000025b7   Thumb Code   380  power_cnt.o(.text)
+    main                                     0x00000e7d   Thumb Code   806  main.o(.text)
+    putchar0                                 0x00001205   Thumb Code    80  uart0.o(.text)
+    uart_out0                                0x00001255   Thumb Code   146  uart0.o(.text)
+    UART0_IRQHandler                         0x000012e7   Thumb Code   328  uart0.o(.text)
+    uart_in_an0                              0x0000142f   Thumb Code     2  uart0.o(.text)
+    index_offset0                            0x00001431   Thumb Code    36  uart0.o(.text)
+    control_check0                           0x00001455   Thumb Code   114  uart0.o(.text)
+    uart_in0                                 0x000014c7   Thumb Code   184  uart0.o(.text)
+    can1_out                                 0x000015b9   Thumb Code   406  full_can.o(.text)
+    can_in_an                                0x0000174f   Thumb Code   268  full_can.o(.text)
+    can_isr_tx1                              0x0000185b   Thumb Code   142  full_can.o(.text)
+    can1_init                                0x000018e9   Thumb Code   122  full_can.o(.text)
+    FullCAN_SetFilter                        0x00001963   Thumb Code   322  full_can.o(.text)
+    can_isr_rx1                              0x00001aa5   Thumb Code   306  full_can.o(.text)
+    CAN_IRQHandler                           0x00001bd7   Thumb Code    40  full_can.o(.text)
+    UARTInit                                 0x00001c11   Thumb Code   330  power_cnt.o(.text)
+    UART1_IRQHandler                         0x00001d5b   Thumb Code  1028  power_cnt.o(.text)
+    power_cnt_crc                            0x0000215f   Thumb Code    46  power_cnt.o(.text)
+    putchar1                                 0x0000218d   Thumb Code    84  power_cnt.o(.text)
+    uart_out_adr1                            0x000021e1   Thumb Code   112  power_cnt.o(.text)
+    sleep_coding                             0x00002251   Thumb Code   142  power_cnt.o(.text)
+    read_current_power                       0x000022df   Thumb Code   144  power_cnt.o(.text)
+    read_summary_power                       0x0000236f   Thumb Code   152  power_cnt.o(.text)
+    sleep_an                                 0x00002407   Thumb Code   380  power_cnt.o(.text)
     SystemFrequency                          0x10000000   Data           4  system_lpc17xx.o(.data)
     link_stat                                0x10000004   Data           1  main.o(.data)
     link_cnt                                 0x10000006   Data           2  main.o(.data)
@@ -419,9 +419,9 @@ Memory Map of the image
 
   Image Entry point : 0x000000c5
 
-  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00002848, Max: 0x00040000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00002698, Max: 0x00040000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Base: 0x00000000, Size: 0x00002768, Max: 0x00040000, ABSOLUTE)
+    Execution Region ER_IROM1 (Base: 0x00000000, Size: 0x000025b8, Max: 0x00040000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -445,10 +445,10 @@ Memory Map of the image
     0x000002d0   0x0000002c   PAD
     0x000002fc   0x00000004   Code   RO            4    .ARM.__at_0x02FC    startup_lpc17xx.o
     0x00000300   0x00000220   Code   RO           23    .text               system_lpc17xx.o
-    0x00000520   0x00000e94   Code   RO           47    .text               main.o
-    0x000013b4   0x000003b4   Code   RO          132    .text               uart0.o
-    0x00001768   0x00000658   Code   RO          191    .text               full_can.o
-    0x00001dc0   0x000009a8   Code   RO          260    .text               power_cnt.o
+    0x00000520   0x00000ce4   Code   RO           47    .text               main.o
+    0x00001204   0x000003b4   Code   RO          132    .text               uart0.o
+    0x000015b8   0x00000658   Code   RO          191    .text               full_can.o
+    0x00001c10   0x000009a8   Code   RO          260    .text               power_cnt.o
 
 
     Execution Region RW_IRAM1 (Base: 0x10000000, Size: 0x00001540, Max: 0x00008000, ABSOLUTE)
@@ -479,14 +479,14 @@ Image component sizes
          0          0          0          0          0       4156   core_cm3.o
       1624        158          0         16        292      26006   full_can.o
         44          0          0          0          0        653   gran.o
-      3732        358         40        135       1602      34902   main.o
+      3300        330         40        135       1602      34446   main.o
       2472        204        256         40        510      11191   power_cnt.o
         32          8        196          0        512        896   startup_lpc17xx.o
        544         64          0          4          0        687   system_lpc17xx.o
        948         58          0         28       2298      20213   uart0.o
 
     ----------------------------------------------------------------------
-      9396        850        568        224       5216      98704   Object Totals
+      8964        822        568        224       5216      98248   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          0          0         44          1          2          0   (incl. Padding)
 
@@ -522,15 +522,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      9520        866        568        224       5216      98372   Grand Totals
-      9520        866        568        224       5216      98372   ELF Image Totals
-      9520        866        568        224          0          0   ROM Totals
+      9088        838        568        224       5216      97916   Grand Totals
+      9088        838        568        224       5216      97916   ELF Image Totals
+      9088        838        568        224          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                10088 (   9.85kB)
+    Total RO  Size (Code + RO Data)                 9656 (   9.43kB)
     Total RW  Size (RW Data + ZI Data)              5440 (   5.31kB)
-    Total ROM Size (Code + RO Data + RW Data)      10312 (  10.07kB)
+    Total ROM Size (Code + RO Data + RW Data)       9880 (   9.65kB)
 
 ==============================================================================
 

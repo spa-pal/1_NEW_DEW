@@ -846,7 +846,7 @@ LPC_GPIO4->FIODIR |= (1<<29);           /* LEDs on PORT2 defined as Output    */
 rtc_init();
 pwm_init();
 //UARTInit(0, 9600);	/* baud rate setting */
-UARTInit(1, 9600);	/* baud rate setting */
+UARTInit(1, 19200);	/* baud rate setting */
 UARTInit(0, 9600);	/* baud rate setting */
 can1_init(BITRATE62_5K6_25MHZ);
 FullCAN_SetFilter(0,0x09e);
@@ -940,7 +940,7 @@ while (1)
 			{
 			//LPC_GPIO0->FIODIR|=(1<<19);
 			//LPC_GPIO0->FIOPIN|=(1<<19);
-			Delay (100);
+			//Delay (100);
           	if(ppp==0)
                	{
                	read_summary_power();
@@ -972,133 +972,33 @@ while (1)
 	if(b1Hz)
 		{
 		static _1hz_cnt;
+		char bbb[100];
+		
 		b1Hz=0;
-          vent_drv();
-          tr_buff[0]=0x33;
-          //uart_out_adr1(tr_buff,6);
-          //read_summary_power();
-		if(ppp==2/*++_1hz_cnt>3*/)
-			{
-			_1hz_cnt=0;
-			rx_read_power_cnt_phase=0;  
-			ppp=3;
-			}
+		
+		bbb[0]=0x7e;
+		bbb[1]=0x31;
+		bbb[2]=0x31;
+		bbb[3]=0x30;
+		bbb[4]=0x31;
+		bbb[5]=0x44;
+		bbb[6]=0x30;
+		bbb[7]=0x38;
+		bbb[8]=0x32;
+		bbb[9]=0x45;
+		bbb[10]=0x30;
+		bbb[11]=0x30;
+		bbb[12]=0x32;
+		bbb[13]=0x30;
+		bbb[14]=0x31;
+		bbb[15]=0x46;
+		bbb[16]=0x44;
+		bbb[17]=0x32;
+		bbb[18]=0x37;
+		bbb[19]=0x02;
+
+		uart_out_adr1(bbb, 20);
           }
-
-	if (rx_read_power_cnt_phase==0)
-		{
-		char command_with_crc[20];
-
-		command_with_crc[0]=0xaf;  // /
-		command_with_crc[1]=0x3f;  // ?
-		command_with_crc[2]=0x21;  // !
-		command_with_crc[3]=0x8d;  // CR
-		command_with_crc[4]=0x0a;  // LF
-
-		uart_out_adr1(command_with_crc,5);
-
-		rx_wr_index1=0;
-		rx_read_power_cnt_phase=1;
-		}
-	if (rx_read_power_cnt_phase==2)
-		{
-		char command_with_crc[20];
-	
-		command_with_crc[0]=0x06;  //  
-		command_with_crc[1]=0x30;  // 0
-		command_with_crc[2]=0x35;  // 5
-		command_with_crc[3]=0xb1;  // 1
-		command_with_crc[4]=0x8d;  // CR
-		command_with_crc[5]=0x0a;  // LF
-	
-		uart_out_adr1(command_with_crc,6);
-	
-		rx_wr_index1=0;
-		rx_read_power_cnt_phase=3;
-		}  
-
-/*	if (rx_read_power_cnt_phase==2)
-		{
-				char command_with_crc[20];
-
-				command_with_crc[0]=0x06;  //  
-				command_with_crc[1]=0x30;  // 0
-				command_with_crc[2]=0x35;  // 5
-				command_with_crc[3]=0xb1;  // 1
-				command_with_crc[4]=0x8d;  // CR
-				command_with_crc[5]=0x0a;  // LF
-
-				uart_out_adr1(command_with_crc,6);
-
-				rx_wr_index1=0;
-				rx_read_power_cnt_phase=3;
-		} */
-	if (rx_read_power_cnt_phase==5)
-		{
-				char command_with_crc[20];
-
-				command_with_crc[0]=0x81;  //  
-				command_with_crc[1]=0xD2;  // R
-				command_with_crc[2]=0xb1;  // 1
-				command_with_crc[3]=0x82;  // 
-				command_with_crc[4]=0xC5;  // E 
-				command_with_crc[5]=0xD4;  // T
-				command_with_crc[6]=0x30;  // 0
-				command_with_crc[7]=0x50;  // P
-				command_with_crc[8]=0xC5;  // E 
-				command_with_crc[9]=0x28;  // (
-				command_with_crc[10]=0xA9;  // )
-				command_with_crc[11]=0x03;  // 
-				command_with_crc[12]=0xb7;  // bcc
-
-
-				uart_out_adr1(command_with_crc,13);
-
-				rx_wr_index1=0;
-				rx_read_power_cnt_phase=6;
-		}
-
-	if (rx_read_power_cnt_phase==10)
-		{
-				char command_with_crc[20];
-
-		command_with_crc[0]=0x81;  //  
-		command_with_crc[1]=0xD2;  // R
-		command_with_crc[2]=0xb1;  // 1
-		command_with_crc[3]=0x82;  // 
-		command_with_crc[4]=0x50;  // P 
-		command_with_crc[5]=0xCF;  // O
-		command_with_crc[6]=0xd7;  // W
-		command_with_crc[7]=0xc5;  // E
-		command_with_crc[8]=0x50;  // P 
-		command_with_crc[9]=0x28;  // (
-		command_with_crc[10]=0xA9;  // )
-		command_with_crc[11]=0x03;  // 
-		command_with_crc[12]=0xe4;  // bcc
-	
-		uart_out_adr1(command_with_crc,13);
-
-				rx_wr_index1=0;
-				rx_read_power_cnt_phase=11;
-		}
-
-	if (rx_read_power_cnt_phase==14)
-		{
-		char command_with_crc[20];
-
-		command_with_crc[0]=0x81;  //  
-		command_with_crc[1]=0x42;  // B
-		command_with_crc[2]=0x30;  // 0
-		command_with_crc[3]=0x03;  // 
-		command_with_crc[4]=0xf5;  // u 
-	
-		uart_out_adr1(command_with_crc,5);
-
-				rx_wr_index1=0;
-				rx_read_power_cnt_phase=20;
-
-		ppp=3;
-		}
 	}
 }
 
