@@ -1,0 +1,25 @@
+*** Creating Trace Output File '.\exe\UKU20202_1_MK.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '".\exe\startup_lpc17xx.o"'
+### List of Objects: adding '".\exe\core_cm3.o"'
+### List of Objects: adding '".\exe\system_lpc17xx.o"'
+### List of Objects: adding '".\exe\main.o"'
+### List of Objects: adding '".\exe\gran.o"'
+### List of Objects: adding '".\exe\uart0.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 ".\exe\startup_lpc17xx.o" ".\exe\core_cm3.o" ".\exe\system_lpc17xx.o" ".\exe\main.o" ".\exe\gran.o" ".\exe\uart0.o" --library_type=microlib --feedback ".\exe\UKU20202_1_MK.fed" 
+--strict --scatter ".\exe\UKU20202_1_MK.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\UKU20202_1_MK.map" -o ".\exe\UKU20202_1_MK.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: '.\exe\UKU20202_1_MK.axf'
+### ADS-LD Command File: '.\exe\UKU20202_1_MK.lnp'
+### Checking for dirty Components...
+### Creating CmdFile '.\exe\UKU20202_1_MK.lnp', Handle=0x00000364
+### Writing '.lnp' file
+### ADS-LD Command file '.\exe\UKU20202_1_MK.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

@@ -1,0 +1,10 @@
+.\exe\main.o: main.c
+.\exe\main.o: LPC17xx.H
+.\exe\main.o: C:\Keil\ARM\RV31\INC\core_cm3.h
+.\exe\main.o: C:\Keil\ARM\RV31\INC\stdint.h
+.\exe\main.o: system_LPC17xx.h
+.\exe\main.o: gran.h
+.\exe\main.o: main.h
+.\exe\main.o: uart0.h
+.\exe\main.o: full_can.h
+.\exe\main.o: power_cnt.h

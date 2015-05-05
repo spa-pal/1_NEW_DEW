@@ -1,0 +1,2098 @@
+Build target 'FAT30_1'
+assembling startup_LPC17xx.s...
+compiling core_cm3.c...
+compiling system_LPC17xx.c...
+compiling main.c...
+main.c(3): error:  #5: cannot open source input file "simbols.h": No such file or directory
+main.c:   #include "simbols.h"
+main.c:                       ^
+main.c: main.c: 0 warnings, 1 error
+compiling gran.c...
+main.h(350): warning:  #1-D: last line of file ends without a newline
+main.h:   void SysTick_Handler (void);
+main.h:                               ^
+main.h: gran.c: 1 warning, 0 errors
+compiling ret.c...
+ret.c: Error:  #5: cannot open source input file "ret.c": No such file or directory
+ret.c: ret.c: 0 warnings, 1 error
+Target not created
+Build target 'FAT30_1'
+assembling startup_LPC17xx.s...
+compiling core_cm3.c...
+compiling system_LPC17xx.c...
+compiling main.c...
+main.h(350): warning:  #1-D: last line of file ends without a newline
+main.h:   void SysTick_Handler (void);
+main.h:                               ^
+main.c(5): error:  #5: cannot open source input file "uart0.h": No such file or directory
+main.c:   #include "uart0.h"
+main.c:                     ^
+main.c: main.c: 1 warning, 1 error
+compiling gran.c...
+main.h(350): warning:  #1-D: last line of file ends without a newline
+main.h:   void SysTick_Handler (void);
+main.h:                               ^
+main.h: gran.c: 1 warning, 0 errors
+compiling ret.c...
+ret.c: Error:  #5: cannot open source input file "ret.c": No such file or directory
+ret.c: ret.c: 0 warnings, 1 error
+Target not created
+Build target 'FAT30_1'
+assembling startup_LPC17xx.s...
+compiling core_cm3.c...
+compiling system_LPC17xx.c...
+compiling main.c...
+main.h(350): warning:  #1-D: last line of file ends without a newline
+main.h:   void SysTick_Handler (void);
+main.h:                               ^
+main.c(5): error:  #5: cannot open source input file "uart0.h": No such file or directory
+main.c:   #include "uart0.h"
+main.c:                     ^
+main.c: main.c: 1 warning, 1 error
+compiling gran.c...
+main.h(350): warning:  #1-D: last line of file ends without a newline
+main.h:   void SysTick_Handler (void);
+main.h:                               ^
+main.h: gran.c: 1 warning, 0 errors
+compiling uart0.c...
+uart0.c: Error:  #5: cannot open source input file "uart0.c": No such file or directory
+uart0.c: uart0.c: 0 warnings, 1 error
+Target not created
+Build target 'FAT30_1'
+assembling startup_LPC17xx.s...
+compiling core_cm3.c...
+compiling system_LPC17xx.c...
+compiling main.c...
+main.h(350): warning:  #1-D: last line of file ends without a newline
+main.h:   void SysTick_Handler (void);
+main.h:                               ^
+main.c(284): warning:  #223-D: function "graphic_print" declared implicitly
+main.c:                         graphic_print(3,3,50,24,50,3,sAVNET,0);
+main.c:                         ^
+main.c(284): error:  #20: identifier "sAVNET" is undefined
+main.c:                         graphic_print(3,3,50,24,50,3,sAVNET,0);
+main.c:                                                      ^
+main.c(285): error:  #20: identifier "sAVNET1" is undefined
+main.c:                         graphic_print(3,3,50,24,50,3,sAVNET1,0);
+main.c:                                                      ^
+main.c(293): warning:  #223-D: function "draw_rectangle" declared implicitly
+main.c:                         draw_rectangle(0,0,20,20,0,0);
+main.c:                         ^
+main.c(297): warning:  #223-D: function "graphic_print" declared implicitly
+main.c:                                 graphic_print(3,2,15,15,15,2,sBPS1,0);
+main.c:                                 ^
+main.c(297): error:  #20: identifier "sBPS1" is undefined
+main.c:                                 graphic_print(3,2,15,15,15,2,sBPS1,0);
+main.c:                                                              ^
+main.c(301): warning:  #223-D: function "graphic_print" declared implicitly
+main.c:                                 if(bFL2)graphic_print(3,2,15,15,15,2,sAVT,0);
+main.c:                                         ^
+main.c(301): error:  #20: identifier "sAVT" is undefined
+main.c:                                 if(bFL2)graphic_print(3,2,15,15,15,2,sAVT,0);
+main.c:                                                                      ^
+main.c(305): warning:  #223-D: function "graphic_print" declared implicitly
+main.c:                                 if(bFL2)graphic_print(2,2,15,15,15,2,sAVU,0);
+main.c:                                         ^
+main.c(305): error:  #20: identifier "sAVU" is undefined
+main.c:                                 if(bFL2)graphic_print(2,2,15,15,15,2,sAVU,0);
+main.c:                                                                      ^
+main.c(310): warning:  #223-D: function "draw" declared implicitly
+main.c:                                 draw(9,20,0,11,0);
+main.c:                                 ^
+main.c(312): warning:  #223-D: function "draw_ptr" declared implicitly
+main.c:                                 draw_ptr(9,19+ptr_cnt1,0,4);
+main.c:                                 ^
+main.c(317): warning:  #223-D: function "draw_rectangle" declared implicitly
+main.c:                         draw_rectangle(23,0,20,20,0,0);
+main.c:                         ^
+main.c(321): warning:  #223-D: function "graphic_print" declared implicitly
+main.c:                                 graphic_print(25,2,15,15,15,2,sBPS2,0);
+main.c:                                 ^
+main.c(321): error:  #20: identifier "sBPS2" is undefined
+main.c:                                 graphic_print(25,2,15,15,15,2,sBPS2,0);
+main.c:                                                               ^
+main.c(325): warning:  #223-D: function "graphic_print" declared implicitly
+main.c:                                 if(bFL2)graphic_print(25,2,15,15,15,2,sAVT,0);
+main.c:                                         ^
+main.c(325): error:  #20: identifier "sAVT" is undefined
+main.c:                                 if(bFL2)graphic_print(25,2,15,15,15,2,sAVT,0);
+main.c:                                                                       ^
+main.c(329): warning:  #223-D: function "graphic_print" declared implicitly
+main.c:                                 if(bFL2)graphic_print(25,2,15,15,15,2,sAVU,0);
+main.c:                                         ^
+main.c(329): error:  #20: identifier "sAVU" is undefined
+main.c:                                 if(bFL2)graphic_print(25,2,15,15,15,2,sAVU,0);
+main.c:                                                                       ^
+main.c(334): warning:  #223-D: function "draw" declared implicitly
+main.c:                                 draw(32,20,0,11,0);
+main.c:                                 ^
+main.c(336): warning:  #223-D: function "draw_ptr" declared implicitly
+main.c:                                 draw_ptr(32,19+ptr_cnt1,0,4);
+main.c:                                 ^
+main.c(342): warning:  #223-D: function "draw_rectangle" declared implicitly
+main.c:                 draw_rectangle(50,0,35,20,0,0);
+main.c:                 ^
+main.c(347): warning:  #223-D: function "graphic_print" declared implicitly
+main.c:                         if(bFL2)graphic_print(43,0,50,24,50,3,sAVNET1,0);
+main.c:                                 ^
+main.c(347): error:  #20: identifier "sAVNET1" is undefined
+main.c:                         if(bFL2)graphic_print(43,0,50,24,50,3,sAVNET1,0);
+main.c:                                                               ^
+main.c(351): warning:  #223-D: function "draw" declared implicitly
+main.c:                         draw(66,20,0,11,0);
+main.c:                         ^
+main.c(353): warning:  #223-D: function "draw_ptr" declared implicitly
+main.c:                         if(Ibat<0)draw_ptr(66,19+ptr_cnt1,0,4);
+main.c:                                   ^
+main.c(368): warning:  #223-D: function "graphic_print_text" declared implicitly
+main.c:                                              graphic_print_text(61,5," %",2,zar_percent,0,1,1);
+main.c:                                              ^
+main.c(373): warning:  #223-D: function "graphic_print_text" declared implicitly
+main.c:                                              graphic_print_text(58,5,"  %",3,zar_percent,0,2,1);
+main.c:                                              ^
+main.c(378): warning:  #223-D: function "graphic_print_text" declared implicitly
+main.c:                                              graphic_print_text(55,5,"   %",4,zar_percent,0,3,1);
+main.c:                                              ^
+main.c(383): warning:  #223-D: function "graphic_print_text" declared implicitly
+main.c:                       else graphic_print_text(58,5,"   A",4,Ibat/10,1,3,1);
+main.c:                            ^
+main.c(388): warning:  #223-D: function "graphic_print_text" declared implicitly
+main.c:                                 graphic_print_text(58,5,"   A",4,Ibat/10,1,3,1);
+main.c:                                 ^
+main.c(395): warning:  #223-D: function "draw_rectangle" declared implicitly
+main.c:         draw_rectangle(92,2,27,14,0,0);
+main.c:         ^
+main.c(396): warning:  #223-D: function "draw" declared implicitly
+main.c:         draw(92,8,-4,0,0);
+main.c:         ^
+main.c(400): warning:  #223-D: function "draw_ptr" declared implicitly
+main.c:         draw_ptr(105,34-ptr_cnt3,2,4);
+main.c:         ^
+main.c(402): warning:  #223-D: function "graphic_print_text" declared implicitly
+main.c:         graphic_print_text(70,22,"    B",5,Uload,1,4,1);
+main.c:         ^
+main.c(443): error:  #20: identifier "caracter" is undefined
+main.c:                         lcd_bitmap[ptr_bitmap++]=caracter[(unsigned)lcd_buffer[x]*6];
+main.c:                                                  ^
+main.c(466): error:  #20: identifier "spc_stat" is undefined
+main.c:   if(spc_stat==spc_VZ)
+main.c:      ^
+main.c(466): error:  #20: identifier "spc_VZ" is undefined
+main.c:   if(spc_stat==spc_VZ)
+main.c:                ^
+main.c(471): error:  #20: identifier "spc_KE" is undefined
+main.c:   else if((spc_stat==spc_KE))
+main.c:                      ^
+main.c(544): warning:  #223-D: function "bgnd_par" declared implicitly
+main.c:         bgnd_par("                    ",
+main.c:         ^
+main.c(550): warning:  #223-D: function "int2lcdyx" declared implicitly
+main.c:                 int2lcdyx(bat_ver_cnt,0,3,0);
+main.c:                 ^
+main.c(550): error:  #20: identifier "bat_ver_cnt" is undefined
+main.c:                 int2lcdyx(bat_ver_cnt,0,3,0);
+main.c:                           ^
+main.c(551): error:  #20: identifier "cntrl_stat" is undefined
+main.c:                 int2lcdyx(cntrl_stat,1,3,0);
+main.c:                           ^
+main.c(554): error:  #20: identifier "u_necc_up" is undefined
+main.c:                 int2lcdyx(u_necc_up,0,7,0);
+main.c:                           ^
+main.c(555): error:  #20: identifier "u_necc" is undefined
+main.c:                 int2lcdyx(u_necc,1,7,0);
+main.c:                           ^
+main.c(556): error:  #20: identifier "u_necc_dn" is undefined
+main.c:                 int2lcdyx(u_necc_dn,2,7,0);
+main.c:                           ^
+main.c(559): error:  #20: identifier "sign_U" is undefined
+main.c:                 int2lcdyx(sign_U,0,10,0);
+main.c:                           ^
+main.c(560): error:  #20: identifier "sign_I" is undefined
+main.c:                 int2lcdyx(sign_I,1,10,0);
+main.c:                           ^
+main.c(561): error:  #20: identifier "superviser_cnt" is undefined
+main.c:                 int2lcdyx(superviser_cnt,2,10,0);       
+main.c:                           ^
+main.c(596): warning:  #223-D: function "bgnd_par" declared implicitly
+main.c:         bgnd_par(       "2                   ",
+main.c:         ^
+main.c(599): warning:  #223-D: function "int2lcdyx" declared implicitly
+main.c:             int2lcdyx(cntrl_stat,0,4,0);
+main.c:             ^
+main.c(599): error:  #20: identifier "cntrl_stat" is undefined
+main.c:             int2lcdyx(cntrl_stat,0,4,0);
+main.c:                       ^
+main.c(600): error:  #20: identifier "num_necc" is undefined
+main.c:             int2lcdyx(num_necc,1,0,0);
+main.c:                       ^
+main.c(606): warning:  #223-D: function "char2lcdhyx" declared implicitly
+main.c:         char2lcdhyx(St_[0],0,10);
+main.c:         ^
+main.c(618): warning:  #223-D: function "bgnd_par" declared implicitly
+main.c:         bgnd_par("                    ",
+main.c:         ^
+main.c(623): warning:  #223-D: function "int2lcdyx" declared implicitly
+main.c:         int2lcdyx(adc_buff_[0],0,3,0);
+main.c:         ^
+main.c(642): warning:  #223-D: function "bgnd_par" declared implicitly
+main.c:         bgnd_par("Un    ( Ø1   !Ø2   @",
+main.c:         ^
+main.c(651): warning:  #223-D: function "int2lcd" declared implicitly
+main.c:         int2lcd(u_necc,'(',1);
+main.c:         ^
+main.c(651): error:  #20: identifier "u_necc" is undefined
+main.c:         int2lcd(u_necc,'(',1);
+main.c:                 ^
+main.c(652): error:  #20: identifier "cntrl_stat1" is undefined
+main.c:         int2lcd(cntrl_stat1,'!',0);
+main.c:                 ^
+main.c(653): error:  #20: identifier "cntrl_stat2" is undefined
+main.c:         int2lcd(cntrl_stat2,'@',0);
+main.c:                 ^
+main.c(659): warning:  #223-D: function "int2lcd_mmm" declared implicitly
+main.c:         int2lcd_mmm(Ibat,'>',2);
+main.c:         ^
+main.c(660): warning:  #223-D: function "char2lcdhyx" declared implicitly
+main.c:         char2lcdhyx(St_[0],3,13);
+main.c:         ^
+main.c(717): warning:  #223-D: function "bgnd_par" declared implicitly
+main.c:         bgnd_par("pl    ( Ø1   !Ø2   @",
+main.c:         ^
+main.c(727): warning:  #223-D: function "int2lcd" declared implicitly
+main.c:         int2lcd(cntrl_stat1,'!',0);
+main.c:         ^
+main.c(727): error:  #20: identifier "cntrl_stat1" is undefined
+main.c:         int2lcd(cntrl_stat1,'!',0);
+main.c:                 ^
+main.c(728): error:  #20: identifier "cntrl_stat2" is undefined
+main.c:         int2lcd(cntrl_stat2,'@',0);
+main.c:                 ^
+main.c(734): warning:  #223-D: function "int2lcd_mmm" declared implicitly
+main.c:         int2lcd_mmm(Ibat,'>',2);
+main.c:         ^
+main.c(735): warning:  #223-D: function "char2lcdhyx" declared implicitly
+main.c:         char2lcdhyx(St_[0],3,13);
+main.c:         ^
+main.c(742): warning:  #223-D: function "bgnd_par" declared implicitly
+main.c:         bgnd_par(sm_,sm_,sm_,sm_);
+main.c:         ^
+main.c(746): warning:  #223-D: function "int2lcdyx" declared implicitly
+main.c:                 int2lcdyx(adc_buff_[5],0,19,0);
+main.c:                 ^
+main.c(748): warning:  #223-D: function "char2lcdhyx" declared implicitly
+main.c:                 char2lcdhyx(wrk,0,3);
+main.c:                 ^
+main.c(762): warning:  #223-D: function "bgnd_par" declared implicitly
+main.c:         bgnd_par("                    ",
+main.c:         ^
+main.c(766): warning:  #223-D: function "int2lcdyx" declared implicitly
+main.c:         int2lcdyx(tout_max_cnt[0],0,1,0);       
+main.c:         ^
+main.c(801): warning:  #223-D: function "bgnd_par" declared implicitly
+main.c:         bgnd_par(ptrs[index_set],
+main.c:         ^
+main.c(806): warning:  #223-D: function "int2lcd_mmm" declared implicitly
+main.c:         int2lcd_mmm(Ibat,'?',2); 
+main.c:         ^
+main.c(807): warning:  #223-D: function "int2lcd" declared implicitly
+main.c:         int2lcd(OFFBP1,'$',0);
+main.c:         ^
+main.c(808): warning:  #223-D: function "char2lcdh" declared implicitly
+main.c:         char2lcdh(St_[0],'#');
+main.c:         ^
+main.c(813): error:  #20: identifier "cnt_src" is undefined
+main.c:                 int2lcd(cnt_src[0],'Y',0);
+main.c:                         ^
+main.c(815): error:  #20: identifier "hour_apv_cnt" is undefined
+main.c:         int2lcd(hour_apv_cnt[0],'h',0);
+main.c:                 ^
+main.c: main.c: 51 warnings, 30 errors
+compiling gran.c...
+main.h(350): warning:  #1-D: last line of file ends without a newline
+main.h:   void SysTick_Handler (void);
+main.h:                               ^
+main.h: gran.c: 1 warning, 0 errors
+compiling uart0.c...
+main.h(350): warning:  #1-D: last line of file ends without a newline
+main.h:   void SysTick_Handler (void);
+main.h:                               ^
+cmd.c(26): warning:  #1-D: last line of file ends without a newline
+cmd.c:   #define PUTTM 0xDE
+cmd.c:                     ^
+uart0.c(6): error:  #5: cannot open source input file "eeprom_map.h": No such file or directory
+uart0.c:   #include "eeprom_map.h"
+uart0.c:                          ^
+uart0.c: uart0.c: 2 warnings, 1 error
+Target not created
+Build target 'FAT30_1'
+assembling startup_LPC17xx.s...
+compiling core_cm3.c...
+compiling system_LPC17xx.c...
+compiling main.c...
+main.h(350): warning:  #1-D: last line of file ends without a newline
+main.h:   void SysTick_Handler (void);
+main.h:                               ^
+main.c(284): warning:  #223-D: function "graphic_print" declared implicitly
+main.c:                         graphic_print(3,3,50,24,50,3,sAVNET,0);
+main.c:                         ^
+main.c(284): error:  #20: identifier "sAVNET" is undefined
+main.c:                         graphic_print(3,3,50,24,50,3,sAVNET,0);
+main.c:                                                      ^
+main.c(285): error:  #20: identifier "sAVNET1" is undefined
+main.c:                         graphic_print(3,3,50,24,50,3,sAVNET1,0);
+main.c:                                                      ^
+main.c(293): warning:  #223-D: function "draw_rectangle" declared implicitly
+main.c:                         draw_rectangle(0,0,20,20,0,0);
+main.c:                         ^
+main.c(297): warning:  #223-D: function "graphic_print" declared implicitly
+main.c:                                 graphic_print(3,2,15,15,15,2,sBPS1,0);
+main.c:                                 ^
+main.c(297): error:  #20: identifier "sBPS1" is undefined
+main.c:                                 graphic_print(3,2,15,15,15,2,sBPS1,0);
+main.c:                                                              ^
+main.c(301): warning:  #223-D: function "graphic_print" declared implicitly
+main.c:                                 if(bFL2)graphic_print(3,2,15,15,15,2,sAVT,0);
+main.c:                                         ^
+main.c(301): error:  #20: identifier "sAVT" is undefined
+main.c:                                 if(bFL2)graphic_print(3,2,15,15,15,2,sAVT,0);
+main.c:                                                                      ^
+main.c(305): warning:  #223-D: function "graphic_print" declared implicitly
+main.c:                                 if(bFL2)graphic_print(2,2,15,15,15,2,sAVU,0);
+main.c:                                         ^
+main.c(305): error:  #20: identifier "sAVU" is undefined
+main.c:                                 if(bFL2)graphic_print(2,2,15,15,15,2,sAVU,0);
+main.c:                                                                      ^
+main.c(310): warning:  #223-D: function "draw" declared implicitly
+main.c:                                 draw(9,20,0,11,0);
+main.c:                                 ^
+main.c(312): warning:  #223-D: function "draw_ptr" declared implicitly
+main.c:                                 draw_ptr(9,19+ptr_cnt1,0,4);
+main.c:                                 ^
+main.c(317): warning:  #223-D: function "draw_rectangle" declared implicitly
+main.c:                         draw_rectangle(23,0,20,20,0,0);
+main.c:                         ^
+main.c(321): warning:  #223-D: function "graphic_print" declared implicitly
+main.c:                                 graphic_print(25,2,15,15,15,2,sBPS2,0);
+main.c:                                 ^
+main.c(321): error:  #20: identifier "sBPS2" is undefined
+main.c:                                 graphic_print(25,2,15,15,15,2,sBPS2,0);
+main.c:                                                               ^
+main.c(325): warning:  #223-D: function "graphic_print" declared implicitly
+main.c:                                 if(bFL2)graphic_print(25,2,15,15,15,2,sAVT,0);
+main.c:                                         ^
+main.c(325): error:  #20: identifier "sAVT" is undefined
+main.c:                                 if(bFL2)graphic_print(25,2,15,15,15,2,sAVT,0);
+main.c:                                                                       ^
+main.c(329): warning:  #223-D: function "graphic_print" declared implicitly
+main.c:                                 if(bFL2)graphic_print(25,2,15,15,15,2,sAVU,0);
+main.c:                                         ^
+main.c(329): error:  #20: identifier "sAVU" is undefined
+main.c:                                 if(bFL2)graphic_print(25,2,15,15,15,2,sAVU,0);
+main.c:                                                                       ^
+main.c(334): warning:  #223-D: function "draw" declared implicitly
+main.c:                                 draw(32,20,0,11,0);
+main.c:                                 ^
+main.c(336): warning:  #223-D: function "draw_ptr" declared implicitly
+main.c:                                 draw_ptr(32,19+ptr_cnt1,0,4);
+main.c:                                 ^
+main.c(342): warning:  #223-D: function "draw_rectangle" declared implicitly
+main.c:                 draw_rectangle(50,0,35,20,0,0);
+main.c:                 ^
+main.c(347): warning:  #223-D: function "graphic_print" declared implicitly
+main.c:                         if(bFL2)graphic_print(43,0,50,24,50,3,sAVNET1,0);
+main.c:                                 ^
+main.c(347): error:  #20: identifier "sAVNET1" is undefined
+main.c:                         if(bFL2)graphic_print(43,0,50,24,50,3,sAVNET1,0);
+main.c:                                                               ^
+main.c(351): warning:  #223-D: function "draw" declared implicitly
+main.c:                         draw(66,20,0,11,0);
+main.c:                         ^
+main.c(353): warning:  #223-D: function "draw_ptr" declared implicitly
+main.c:                         if(Ibat<0)draw_ptr(66,19+ptr_cnt1,0,4);
+main.c:                                   ^
+main.c(368): warning:  #223-D: function "graphic_print_text" declared implicitly
+main.c:                                              graphic_print_text(61,5," %",2,zar_percent,0,1,1);
+main.c:                                              ^
+main.c(373): warning:  #223-D: function "graphic_print_text" declared implicitly
+main.c:                                              graphic_print_text(58,5,"  %",3,zar_percent,0,2,1);
+main.c:                                              ^
+main.c(378): warning:  #223-D: function "graphic_print_text" declared implicitly
+main.c:                                              graphic_print_text(55,5,"   %",4,zar_percent,0,3,1);
+main.c:                                              ^
+main.c(383): warning:  #223-D: function "graphic_print_text" declared implicitly
+main.c:                       else graphic_print_text(58,5,"   A",4,Ibat/10,1,3,1);
+main.c:                            ^
+main.c(388): warning:  #223-D: function "graphic_print_text" declared implicitly
+main.c:                                 graphic_print_text(58,5,"   A",4,Ibat/10,1,3,1);
+main.c:                                 ^
+main.c(395): warning:  #223-D: function "draw_rectangle" declared implicitly
+main.c:         draw_rectangle(92,2,27,14,0,0);
+main.c:         ^
+main.c(396): warning:  #223-D: function "draw" declared implicitly
+main.c:         draw(92,8,-4,0,0);
+main.c:         ^
+main.c(400): warning:  #223-D: function "draw_ptr" declared implicitly
+main.c:         draw_ptr(105,34-ptr_cnt3,2,4);
+main.c:         ^
+main.c(402): warning:  #223-D: function "graphic_print_text" declared implicitly
+main.c:         graphic_print_text(70,22,"    B",5,Uload,1,4,1);
+main.c:         ^
+main.c(443): error:  #20: identifier "caracter" is undefined
+main.c:                         lcd_bitmap[ptr_bitmap++]=caracter[(unsigned)lcd_buffer[x]*6];
+main.c:                                                  ^
+main.c(466): error:  #20: identifier "spc_stat" is undefined
+main.c:   if(spc_stat==spc_VZ)
+main.c:      ^
+main.c(466): error:  #20: identifier "spc_VZ" is undefined
+main.c:   if(spc_stat==spc_VZ)
+main.c:                ^
+main.c(471): error:  #20: identifier "spc_KE" is undefined
+main.c:   else if((spc_stat==spc_KE))
+main.c:                      ^
+main.c(544): warning:  #223-D: function "bgnd_par" declared implicitly
+main.c:         bgnd_par("                    ",
+main.c:         ^
+main.c(550): warning:  #223-D: function "int2lcdyx" declared implicitly
+main.c:                 int2lcdyx(bat_ver_cnt,0,3,0);
+main.c:                 ^
+main.c(550): error:  #20: identifier "bat_ver_cnt" is undefined
+main.c:                 int2lcdyx(bat_ver_cnt,0,3,0);
+main.c:                           ^
+main.c(551): error:  #20: identifier "cntrl_stat" is undefined
+main.c:                 int2lcdyx(cntrl_stat,1,3,0);
+main.c:                           ^
+main.c(554): error:  #20: identifier "u_necc_up" is undefined
+main.c:                 int2lcdyx(u_necc_up,0,7,0);
+main.c:                           ^
+main.c(555): error:  #20: identifier "u_necc" is undefined
+main.c:                 int2lcdyx(u_necc,1,7,0);
+main.c:                           ^
+main.c(556): error:  #20: identifier "u_necc_dn" is undefined
+main.c:                 int2lcdyx(u_necc_dn,2,7,0);
+main.c:                           ^
+main.c(559): error:  #20: identifier "sign_U" is undefined
+main.c:                 int2lcdyx(sign_U,0,10,0);
+main.c:                           ^
+main.c(560): error:  #20: identifier "sign_I" is undefined
+main.c:                 int2lcdyx(sign_I,1,10,0);
+main.c:                           ^
+main.c(561): error:  #20: identifier "superviser_cnt" is undefined
+main.c:                 int2lcdyx(superviser_cnt,2,10,0);       
+main.c:                           ^
+main.c(596): warning:  #223-D: function "bgnd_par" declared implicitly
+main.c:         bgnd_par(       "2                   ",
+main.c:         ^
+main.c(599): warning:  #223-D: function "int2lcdyx" declared implicitly
+main.c:             int2lcdyx(cntrl_stat,0,4,0);
+main.c:             ^
+main.c(599): error:  #20: identifier "cntrl_stat" is undefined
+main.c:             int2lcdyx(cntrl_stat,0,4,0);
+main.c:                       ^
+main.c(600): error:  #20: identifier "num_necc" is undefined
+main.c:             int2lcdyx(num_necc,1,0,0);
+main.c:                       ^
+main.c(606): warning:  #223-D: function "char2lcdhyx" declared implicitly
+main.c:         char2lcdhyx(St_[0],0,10);
+main.c:         ^
+main.c(618): warning:  #223-D: function "bgnd_par" declared implicitly
+main.c:         bgnd_par("                    ",
+main.c:         ^
+main.c(623): warning:  #223-D: function "int2lcdyx" declared implicitly
+main.c:         int2lcdyx(adc_buff_[0],0,3,0);
+main.c:         ^
+main.c(642): warning:  #223-D: function "bgnd_par" declared implicitly
+main.c:         bgnd_par("Un    ( Ø1   !Ø2   @",
+main.c:         ^
+main.c(651): warning:  #223-D: function "int2lcd" declared implicitly
+main.c:         int2lcd(u_necc,'(',1);
+main.c:         ^
+main.c(651): error:  #20: identifier "u_necc" is undefined
+main.c:         int2lcd(u_necc,'(',1);
+main.c:                 ^
+main.c(652): error:  #20: identifier "cntrl_stat1" is undefined
+main.c:         int2lcd(cntrl_stat1,'!',0);
+main.c:                 ^
+main.c(653): error:  #20: identifier "cntrl_stat2" is undefined
+main.c:         int2lcd(cntrl_stat2,'@',0);
+main.c:                 ^
+main.c(659): warning:  #223-D: function "int2lcd_mmm" declared implicitly
+main.c:         int2lcd_mmm(Ibat,'>',2);
+main.c:         ^
+main.c(660): warning:  #223-D: function "char2lcdhyx" declared implicitly
+main.c:         char2lcdhyx(St_[0],3,13);
+main.c:         ^
+main.c(717): warning:  #223-D: function "bgnd_par" declared implicitly
+main.c:         bgnd_par("pl    ( Ø1   !Ø2   @",
+main.c:         ^
+main.c(727): warning:  #223-D: function "int2lcd" declared implicitly
+main.c:         int2lcd(cntrl_stat1,'!',0);
+main.c:         ^
+main.c(727): error:  #20: identifier "cntrl_stat1" is undefined
+main.c:         int2lcd(cntrl_stat1,'!',0);
+main.c:                 ^
+main.c(728): error:  #20: identifier "cntrl_stat2" is undefined
+main.c:         int2lcd(cntrl_stat2,'@',0);
+main.c:                 ^
+main.c(734): warning:  #223-D: function "int2lcd_mmm" declared implicitly
+main.c:         int2lcd_mmm(Ibat,'>',2);
+main.c:         ^
+main.c(735): warning:  #223-D: function "char2lcdhyx" declared implicitly
+main.c:         char2lcdhyx(St_[0],3,13);
+main.c:         ^
+main.c(742): warning:  #223-D: function "bgnd_par" declared implicitly
+main.c:         bgnd_par(sm_,sm_,sm_,sm_);
+main.c:         ^
+main.c(746): warning:  #223-D: function "int2lcdyx" declared implicitly
+main.c:                 int2lcdyx(adc_buff_[5],0,19,0);
+main.c:                 ^
+main.c(748): warning:  #223-D: function "char2lcdhyx" declared implicitly
+main.c:                 char2lcdhyx(wrk,0,3);
+main.c:                 ^
+main.c(762): warning:  #223-D: function "bgnd_par" declared implicitly
+main.c:         bgnd_par("                    ",
+main.c:         ^
+main.c(766): warning:  #223-D: function "int2lcdyx" declared implicitly
+main.c:         int2lcdyx(tout_max_cnt[0],0,1,0);       
+main.c:         ^
+main.c(801): warning:  #223-D: function "bgnd_par" declared implicitly
+main.c:         bgnd_par(ptrs[index_set],
+main.c:         ^
+main.c(806): warning:  #223-D: function "int2lcd_mmm" declared implicitly
+main.c:         int2lcd_mmm(Ibat,'?',2); 
+main.c:         ^
+main.c(807): warning:  #223-D: function "int2lcd" declared implicitly
+main.c:         int2lcd(OFFBP1,'$',0);
+main.c:         ^
+main.c(808): warning:  #223-D: function "char2lcdh" declared implicitly
+main.c:         char2lcdh(St_[0],'#');
+main.c:         ^
+main.c(813): error:  #20: identifier "cnt_src" is undefined
+main.c:                 int2lcd(cnt_src[0],'Y',0);
+main.c:                         ^
+main.c(815): error:  #20: identifier "hour_apv_cnt" is undefined
+main.c:         int2lcd(hour_apv_cnt[0],'h',0);
+main.c:                 ^
+main.c: main.c: 51 warnings, 30 errors
+compiling gran.c...
+main.h(350): warning:  #1-D: last line of file ends without a newline
+main.h:   void SysTick_Handler (void);
+main.h:                               ^
+main.h: gran.c: 1 warning, 0 errors
+compiling uart0.c...
+main.h(350): warning:  #1-D: last line of file ends without a newline
+main.h:   void SysTick_Handler (void);
+main.h:                               ^
+uart0.c(127): error:  #20: identifier "END" is undefined
+uart0.c:   UOB0[num+2]=END;
+uart0.c:               ^
+uart0.c(150): error:  #20: identifier "END" is undefined
+uart0.c:   UOB[len+2]=END;
+uart0.c:              ^
+uart0.c(171): error:  #20: identifier "CMND" is undefined
+uart0.c:   temp11=CMND;
+uart0.c:          ^
+uart0.c(166): warning:  #177-D: variable "UOB" was declared but never referenced
+uart0.c:   char UOB[100]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+uart0.c:        ^
+uart0.c(167): warning:  #177-D: variable "i" was declared but never referenced
+uart0.c:   char i,temp11,t=0;
+uart0.c:        ^
+uart0.c(383): warning:  #9-D: nested comment is not allowed
+uart0.c:                        UART0Count = 0;         /* buffer overflow */
+uart0.c:                                                ^
+uart0.c(405): warning:  #9-D: nested comment is not allowed
+uart0.c:                UART0Count = 0;         /* buffer overflow */
+uart0.c:                                        ^
+uart0.c(344): warning:  #177-D: variable "status" was declared but never referenced
+uart0.c:   char status,u0iir,data;
+uart0.c:        ^
+uart0.c(344): warning:  #177-D: variable "u0iir" was declared but never referenced
+uart0.c:   char status,u0iir,data;
+uart0.c:               ^
+uart0.c(437): warning:  #9-D: nested comment is not allowed
+uart0.c:   //***********************************************
+uart0.c:    ^
+uart0.c(482): warning:  #223-D: function "lc640_read_long" declared implicitly
+uart0.c:        data1=lc640_read_long(ptr);
+uart0.c:              ^
+uart0.c(518): warning:  #223-D: function "lc640_write_long" declared implicitly
+uart0.c:        lc640_write_long(ptr,data1);
+uart0.c:        ^
+uart0.c(560): warning:  #223-D: function "lc640_write_int" declared implicitly
+uart0.c:                        lc640_write_int(EE_MAIN_IST,0);
+uart0.c:                        ^
+uart0.c(560): error:  #20: identifier "EE_MAIN_IST" is undefined
+uart0.c:                        lc640_write_int(EE_MAIN_IST,0);
+uart0.c:                                        ^
+uart0.c(561): error:  #20: identifier "cnt_src" is undefined
+uart0.c:                        cnt_src[1]=10;
+uart0.c:                        ^
+uart0.c(567): warning:  #223-D: function "lc640_write_int" declared implicitly
+uart0.c:                        lc640_write_int(EE_MAIN_IST,1);
+uart0.c:                        ^
+uart0.c(567): error:  #20: identifier "EE_MAIN_IST" is undefined
+uart0.c:                        lc640_write_int(EE_MAIN_IST,1);
+uart0.c:                                        ^
+uart0.c(568): error:  #20: identifier "cnt_src" is undefined
+uart0.c:                        cnt_src[0]=10;
+uart0.c:                        ^
+uart0.c(593): error:  #20: identifier "spc_stat" is undefined
+uart0.c:                        spc_stat=spc_VZ;
+uart0.c:                        ^
+uart0.c(593): error:  #20: identifier "spc_VZ" is undefined
+uart0.c:                        spc_stat=spc_VZ;
+uart0.c:                                 ^
+uart0.c(594): error:  #20: identifier "cnt_vz_sec_" is undefined
+uart0.c:                        cnt_vz_sec_=3600UL*UIB0[7];
+uart0.c:                        ^
+uart0.c(620): error:  #20: identifier "spc_stat" is undefined
+uart0.c:                spc_stat=spc_OFF;
+uart0.c:                ^
+uart0.c(620): error:  #20: identifier "spc_OFF" is undefined
+uart0.c:                spc_stat=spc_OFF;
+uart0.c:                         ^
+uart0.c(638): warning:  #223-D: function "ke_start" declared implicitly
+uart0.c:                if(!ke_start()) memo_out[6]=0xff;
+uart0.c:                    ^
+uart0.c(656): error:  #20: identifier "spc_stat" is undefined
+uart0.c:                spc_stat=spc_OFF;
+uart0.c:                ^
+uart0.c(656): error:  #20: identifier "spc_OFF" is undefined
+uart0.c:                spc_stat=spc_OFF;
+uart0.c:                         ^
+uart0.c(695): error:  #20: identifier "cnt_src" is undefined
+uart0.c:                cnt_src[0]=10;
+uart0.c:                ^
+uart0.c(721): error:  #20: identifier "cnt_src" is undefined
+uart0.c:                cnt_src[0]=10;
+uart0.c:                ^
+uart0.c(835): error:  #20: identifier "END" is undefined
+uart0.c:   if(rx_buffer0[index]!=END) goto error_cc;
+uart0.c:                         ^
+uart0.c(846): warning:  #177-D: label "success_cc" was declared but never referenced
+uart0.c:   success_cc:
+uart0.c:   ^
+uart0.c(868): error:  #20: identifier "END" is undefined
+uart0.c:   if(rx_counter0&&(rx_buffer0[index_offset0(rx_wr_index0,-1)])==END)
+uart0.c:                                                                 ^
+uart0.c: uart0.c: 14 warnings, 18 errors
+Target not created
+Build target 'FAT30_1'
+assembling startup_LPC17xx.s...
+compiling core_cm3.c...
+compiling system_LPC17xx.c...
+compiling main.c...
+main.h(350): warning:  #1-D: last line of file ends without a newline
+main.h:   void SysTick_Handler (void);
+main.h:                               ^
+main.c(284): warning:  #223-D: function "graphic_print" declared implicitly
+main.c:                         graphic_print(3,3,50,24,50,3,sAVNET,0);
+main.c:                         ^
+main.c(284): error:  #20: identifier "sAVNET" is undefined
+main.c:                         graphic_print(3,3,50,24,50,3,sAVNET,0);
+main.c:                                                      ^
+main.c(285): error:  #20: identifier "sAVNET1" is undefined
+main.c:                         graphic_print(3,3,50,24,50,3,sAVNET1,0);
+main.c:                                                      ^
+main.c(293): warning:  #223-D: function "draw_rectangle" declared implicitly
+main.c:                         draw_rectangle(0,0,20,20,0,0);
+main.c:                         ^
+main.c(297): warning:  #223-D: function "graphic_print" declared implicitly
+main.c:                                 graphic_print(3,2,15,15,15,2,sBPS1,0);
+main.c:                                 ^
+main.c(297): error:  #20: identifier "sBPS1" is undefined
+main.c:                                 graphic_print(3,2,15,15,15,2,sBPS1,0);
+main.c:                                                              ^
+main.c(301): warning:  #223-D: function "graphic_print" declared implicitly
+main.c:                                 if(bFL2)graphic_print(3,2,15,15,15,2,sAVT,0);
+main.c:                                         ^
+main.c(301): error:  #20: identifier "sAVT" is undefined
+main.c:                                 if(bFL2)graphic_print(3,2,15,15,15,2,sAVT,0);
+main.c:                                                                      ^
+main.c(305): warning:  #223-D: function "graphic_print" declared implicitly
+main.c:                                 if(bFL2)graphic_print(2,2,15,15,15,2,sAVU,0);
+main.c:                                         ^
+main.c(305): error:  #20: identifier "sAVU" is undefined
+main.c:                                 if(bFL2)graphic_print(2,2,15,15,15,2,sAVU,0);
+main.c:                                                                      ^
+main.c(310): warning:  #223-D: function "draw" declared implicitly
+main.c:                                 draw(9,20,0,11,0);
+main.c:                                 ^
+main.c(312): warning:  #223-D: function "draw_ptr" declared implicitly
+main.c:                                 draw_ptr(9,19+ptr_cnt1,0,4);
+main.c:                                 ^
+main.c(317): warning:  #223-D: function "draw_rectangle" declared implicitly
+main.c:                         draw_rectangle(23,0,20,20,0,0);
+main.c:                         ^
+main.c(321): warning:  #223-D: function "graphic_print" declared implicitly
+main.c:                                 graphic_print(25,2,15,15,15,2,sBPS2,0);
+main.c:                                 ^
+main.c(321): error:  #20: identifier "sBPS2" is undefined
+main.c:                                 graphic_print(25,2,15,15,15,2,sBPS2,0);
+main.c:                                                               ^
+main.c(325): warning:  #223-D: function "graphic_print" declared implicitly
+main.c:                                 if(bFL2)graphic_print(25,2,15,15,15,2,sAVT,0);
+main.c:                                         ^
+main.c(325): error:  #20: identifier "sAVT" is undefined
+main.c:                                 if(bFL2)graphic_print(25,2,15,15,15,2,sAVT,0);
+main.c:                                                                       ^
+main.c(329): warning:  #223-D: function "graphic_print" declared implicitly
+main.c:                                 if(bFL2)graphic_print(25,2,15,15,15,2,sAVU,0);
+main.c:                                         ^
+main.c(329): error:  #20: identifier "sAVU" is undefined
+main.c:                                 if(bFL2)graphic_print(25,2,15,15,15,2,sAVU,0);
+main.c:                                                                       ^
+main.c(334): warning:  #223-D: function "draw" declared implicitly
+main.c:                                 draw(32,20,0,11,0);
+main.c:                                 ^
+main.c(336): warning:  #223-D: function "draw_ptr" declared implicitly
+main.c:                                 draw_ptr(32,19+ptr_cnt1,0,4);
+main.c:                                 ^
+main.c(342): warning:  #223-D: function "draw_rectangle" declared implicitly
+main.c:                 draw_rectangle(50,0,35,20,0,0);
+main.c:                 ^
+main.c(347): warning:  #223-D: function "graphic_print" declared implicitly
+main.c:                         if(bFL2)graphic_print(43,0,50,24,50,3,sAVNET1,0);
+main.c:                                 ^
+main.c(347): error:  #20: identifier "sAVNET1" is undefined
+main.c:                         if(bFL2)graphic_print(43,0,50,24,50,3,sAVNET1,0);
+main.c:                                                               ^
+main.c(351): warning:  #223-D: function "draw" declared implicitly
+main.c:                         draw(66,20,0,11,0);
+main.c:                         ^
+main.c(353): warning:  #223-D: function "draw_ptr" declared implicitly
+main.c:                         if(Ibat<0)draw_ptr(66,19+ptr_cnt1,0,4);
+main.c:                                   ^
+main.c(368): warning:  #223-D: function "graphic_print_text" declared implicitly
+main.c:                                              graphic_print_text(61,5," %",2,zar_percent,0,1,1);
+main.c:                                              ^
+main.c(373): warning:  #223-D: function "graphic_print_text" declared implicitly
+main.c:                                              graphic_print_text(58,5,"  %",3,zar_percent,0,2,1);
+main.c:                                              ^
+main.c(378): warning:  #223-D: function "graphic_print_text" declared implicitly
+main.c:                                              graphic_print_text(55,5,"   %",4,zar_percent,0,3,1);
+main.c:                                              ^
+main.c(383): warning:  #223-D: function "graphic_print_text" declared implicitly
+main.c:                       else graphic_print_text(58,5,"   A",4,Ibat/10,1,3,1);
+main.c:                            ^
+main.c(388): warning:  #223-D: function "graphic_print_text" declared implicitly
+main.c:                                 graphic_print_text(58,5,"   A",4,Ibat/10,1,3,1);
+main.c:                                 ^
+main.c(395): warning:  #223-D: function "draw_rectangle" declared implicitly
+main.c:         draw_rectangle(92,2,27,14,0,0);
+main.c:         ^
+main.c(396): warning:  #223-D: function "draw" declared implicitly
+main.c:         draw(92,8,-4,0,0);
+main.c:         ^
+main.c(400): warning:  #223-D: function "draw_ptr" declared implicitly
+main.c:         draw_ptr(105,34-ptr_cnt3,2,4);
+main.c:         ^
+main.c(402): warning:  #223-D: function "graphic_print_text" declared implicitly
+main.c:         graphic_print_text(70,22,"    B",5,Uload,1,4,1);
+main.c:         ^
+main.c(443): error:  #20: identifier "caracter" is undefined
+main.c:                         lcd_bitmap[ptr_bitmap++]=caracter[(unsigned)lcd_buffer[x]*6];
+main.c:                                                  ^
+main.c(466): error:  #20: identifier "spc_stat" is undefined
+main.c:   if(spc_stat==spc_VZ)
+main.c:      ^
+main.c(466): error:  #20: identifier "spc_VZ" is undefined
+main.c:   if(spc_stat==spc_VZ)
+main.c:                ^
+main.c(471): error:  #20: identifier "spc_KE" is undefined
+main.c:   else if((spc_stat==spc_KE))
+main.c:                      ^
+main.c(544): warning:  #223-D: function "bgnd_par" declared implicitly
+main.c:         bgnd_par("                    ",
+main.c:         ^
+main.c(550): warning:  #223-D: function "int2lcdyx" declared implicitly
+main.c:                 int2lcdyx(bat_ver_cnt,0,3,0);
+main.c:                 ^
+main.c(550): error:  #20: identifier "bat_ver_cnt" is undefined
+main.c:                 int2lcdyx(bat_ver_cnt,0,3,0);
+main.c:                           ^
+main.c(551): error:  #20: identifier "cntrl_stat" is undefined
+main.c:                 int2lcdyx(cntrl_stat,1,3,0);
+main.c:                           ^
+main.c(554): error:  #20: identifier "u_necc_up" is undefined
+main.c:                 int2lcdyx(u_necc_up,0,7,0);
+main.c:                           ^
+main.c(555): error:  #20: identifier "u_necc" is undefined
+main.c:                 int2lcdyx(u_necc,1,7,0);
+main.c:                           ^
+main.c(556): error:  #20: identifier "u_necc_dn" is undefined
+main.c:                 int2lcdyx(u_necc_dn,2,7,0);
+main.c:                           ^
+main.c(559): error:  #20: identifier "sign_U" is undefined
+main.c:                 int2lcdyx(sign_U,0,10,0);
+main.c:                           ^
+main.c(560): error:  #20: identifier "sign_I" is undefined
+main.c:                 int2lcdyx(sign_I,1,10,0);
+main.c:                           ^
+main.c(561): error:  #20: identifier "superviser_cnt" is undefined
+main.c:                 int2lcdyx(superviser_cnt,2,10,0);       
+main.c:                           ^
+main.c(596): warning:  #223-D: function "bgnd_par" declared implicitly
+main.c:         bgnd_par(       "2                   ",
+main.c:         ^
+main.c(599): warning:  #223-D: function "int2lcdyx" declared implicitly
+main.c:             int2lcdyx(cntrl_stat,0,4,0);
+main.c:             ^
+main.c(599): error:  #20: identifier "cntrl_stat" is undefined
+main.c:             int2lcdyx(cntrl_stat,0,4,0);
+main.c:                       ^
+main.c(600): error:  #20: identifier "num_necc" is undefined
+main.c:             int2lcdyx(num_necc,1,0,0);
+main.c:                       ^
+main.c(606): warning:  #223-D: function "char2lcdhyx" declared implicitly
+main.c:         char2lcdhyx(St_[0],0,10);
+main.c:         ^
+main.c(618): warning:  #223-D: function "bgnd_par" declared implicitly
+main.c:         bgnd_par("                    ",
+main.c:         ^
+main.c(623): warning:  #223-D: function "int2lcdyx" declared implicitly
+main.c:         int2lcdyx(adc_buff_[0],0,3,0);
+main.c:         ^
+main.c(642): warning:  #223-D: function "bgnd_par" declared implicitly
+main.c:         bgnd_par("Un    ( Ø1   !Ø2   @",
+main.c:         ^
+main.c(651): warning:  #223-D: function "int2lcd" declared implicitly
+main.c:         int2lcd(u_necc,'(',1);
+main.c:         ^
+main.c(651): error:  #20: identifier "u_necc" is undefined
+main.c:         int2lcd(u_necc,'(',1);
+main.c:                 ^
+main.c(652): error:  #20: identifier "cntrl_stat1" is undefined
+main.c:         int2lcd(cntrl_stat1,'!',0);
+main.c:                 ^
+main.c(653): error:  #20: identifier "cntrl_stat2" is undefined
+main.c:         int2lcd(cntrl_stat2,'@',0);
+main.c:                 ^
+main.c(659): warning:  #223-D: function "int2lcd_mmm" declared implicitly
+main.c:         int2lcd_mmm(Ibat,'>',2);
+main.c:         ^
+main.c(660): warning:  #223-D: function "char2lcdhyx" declared implicitly
+main.c:         char2lcdhyx(St_[0],3,13);
+main.c:         ^
+main.c(717): warning:  #223-D: function "bgnd_par" declared implicitly
+main.c:         bgnd_par("pl    ( Ø1   !Ø2   @",
+main.c:         ^
+main.c(727): warning:  #223-D: function "int2lcd" declared implicitly
+main.c:         int2lcd(cntrl_stat1,'!',0);
+main.c:         ^
+main.c(727): error:  #20: identifier "cntrl_stat1" is undefined
+main.c:         int2lcd(cntrl_stat1,'!',0);
+main.c:                 ^
+main.c(728): error:  #20: identifier "cntrl_stat2" is undefined
+main.c:         int2lcd(cntrl_stat2,'@',0);
+main.c:                 ^
+main.c(734): warning:  #223-D: function "int2lcd_mmm" declared implicitly
+main.c:         int2lcd_mmm(Ibat,'>',2);
+main.c:         ^
+main.c(735): warning:  #223-D: function "char2lcdhyx" declared implicitly
+main.c:         char2lcdhyx(St_[0],3,13);
+main.c:         ^
+main.c(742): warning:  #223-D: function "bgnd_par" declared implicitly
+main.c:         bgnd_par(sm_,sm_,sm_,sm_);
+main.c:         ^
+main.c(746): warning:  #223-D: function "int2lcdyx" declared implicitly
+main.c:                 int2lcdyx(adc_buff_[5],0,19,0);
+main.c:                 ^
+main.c(748): warning:  #223-D: function "char2lcdhyx" declared implicitly
+main.c:                 char2lcdhyx(wrk,0,3);
+main.c:                 ^
+main.c(762): warning:  #223-D: function "bgnd_par" declared implicitly
+main.c:         bgnd_par("                    ",
+main.c:         ^
+main.c(766): warning:  #223-D: function "int2lcdyx" declared implicitly
+main.c:         int2lcdyx(tout_max_cnt[0],0,1,0);       
+main.c:         ^
+main.c(801): warning:  #223-D: function "bgnd_par" declared implicitly
+main.c:         bgnd_par(ptrs[index_set],
+main.c:         ^
+main.c(806): warning:  #223-D: function "int2lcd_mmm" declared implicitly
+main.c:         int2lcd_mmm(Ibat,'?',2); 
+main.c:         ^
+main.c(807): warning:  #223-D: function "int2lcd" declared implicitly
+main.c:         int2lcd(OFFBP1,'$',0);
+main.c:         ^
+main.c(808): warning:  #223-D: function "char2lcdh" declared implicitly
+main.c:         char2lcdh(St_[0],'#');
+main.c:         ^
+main.c(813): error:  #20: identifier "cnt_src" is undefined
+main.c:                 int2lcd(cnt_src[0],'Y',0);
+main.c:                         ^
+main.c(815): error:  #20: identifier "hour_apv_cnt" is undefined
+main.c:         int2lcd(hour_apv_cnt[0],'h',0);
+main.c:                 ^
+main.c: main.c: 51 warnings, 30 errors
+compiling gran.c...
+main.h(350): warning:  #1-D: last line of file ends without a newline
+main.h:   void SysTick_Handler (void);
+main.h:                               ^
+main.h: gran.c: 1 warning, 0 errors
+compiling uart0.c...
+main.h(350): warning:  #1-D: last line of file ends without a newline
+main.h:   void SysTick_Handler (void);
+main.h:                               ^
+cmd.c(26): warning:  #1-D: last line of file ends without a newline
+cmd.c:   #define PUTTM 0xDE
+cmd.c:                     ^
+uart0.c(167): warning:  #177-D: variable "UOB" was declared but never referenced
+uart0.c:   char UOB[100]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+uart0.c:        ^
+uart0.c(168): warning:  #177-D: variable "i" was declared but never referenced
+uart0.c:   char i,temp11,t=0;
+uart0.c:        ^
+uart0.c(384): warning:  #9-D: nested comment is not allowed
+uart0.c:                        UART0Count = 0;         /* buffer overflow */
+uart0.c:                                                ^
+uart0.c(406): warning:  #9-D: nested comment is not allowed
+uart0.c:                UART0Count = 0;         /* buffer overflow */
+uart0.c:                                        ^
+uart0.c(345): warning:  #177-D: variable "status" was declared but never referenced
+uart0.c:   char status,u0iir,data;
+uart0.c:        ^
+uart0.c(345): warning:  #177-D: variable "u0iir" was declared but never referenced
+uart0.c:   char status,u0iir,data;
+uart0.c:               ^
+uart0.c(438): warning:  #9-D: nested comment is not allowed
+uart0.c:   //***********************************************
+uart0.c:    ^
+uart0.c(483): warning:  #223-D: function "lc640_read_long" declared implicitly
+uart0.c:        data1=lc640_read_long(ptr);
+uart0.c:              ^
+uart0.c(519): warning:  #223-D: function "lc640_write_long" declared implicitly
+uart0.c:        lc640_write_long(ptr,data1);
+uart0.c:        ^
+uart0.c(561): warning:  #223-D: function "lc640_write_int" declared implicitly
+uart0.c:                        lc640_write_int(EE_MAIN_IST,0);
+uart0.c:                        ^
+uart0.c(561): error:  #20: identifier "EE_MAIN_IST" is undefined
+uart0.c:                        lc640_write_int(EE_MAIN_IST,0);
+uart0.c:                                        ^
+uart0.c(562): error:  #20: identifier "cnt_src" is undefined
+uart0.c:                        cnt_src[1]=10;
+uart0.c:                        ^
+uart0.c(568): warning:  #223-D: function "lc640_write_int" declared implicitly
+uart0.c:                        lc640_write_int(EE_MAIN_IST,1);
+uart0.c:                        ^
+uart0.c(568): error:  #20: identifier "EE_MAIN_IST" is undefined
+uart0.c:                        lc640_write_int(EE_MAIN_IST,1);
+uart0.c:                                        ^
+uart0.c(569): error:  #20: identifier "cnt_src" is undefined
+uart0.c:                        cnt_src[0]=10;
+uart0.c:                        ^
+uart0.c(594): error:  #20: identifier "spc_stat" is undefined
+uart0.c:                        spc_stat=spc_VZ;
+uart0.c:                        ^
+uart0.c(594): error:  #20: identifier "spc_VZ" is undefined
+uart0.c:                        spc_stat=spc_VZ;
+uart0.c:                                 ^
+uart0.c(595): error:  #20: identifier "cnt_vz_sec_" is undefined
+uart0.c:                        cnt_vz_sec_=3600UL*UIB0[7];
+uart0.c:                        ^
+uart0.c(621): error:  #20: identifier "spc_stat" is undefined
+uart0.c:                spc_stat=spc_OFF;
+uart0.c:                ^
+uart0.c(621): error:  #20: identifier "spc_OFF" is undefined
+uart0.c:                spc_stat=spc_OFF;
+uart0.c:                         ^
+uart0.c(639): warning:  #223-D: function "ke_start" declared implicitly
+uart0.c:                if(!ke_start()) memo_out[6]=0xff;
+uart0.c:                    ^
+uart0.c(657): error:  #20: identifier "spc_stat" is undefined
+uart0.c:                spc_stat=spc_OFF;
+uart0.c:                ^
+uart0.c(657): error:  #20: identifier "spc_OFF" is undefined
+uart0.c:                spc_stat=spc_OFF;
+uart0.c:                         ^
+uart0.c(696): error:  #20: identifier "cnt_src" is undefined
+uart0.c:                cnt_src[0]=10;
+uart0.c:                ^
+uart0.c(722): error:  #20: identifier "cnt_src" is undefined
+uart0.c:                cnt_src[0]=10;
+uart0.c:                ^
+uart0.c(847): warning:  #177-D: label "success_cc" was declared but never referenced
+uart0.c:   success_cc:
+uart0.c:   ^
+uart0.c: uart0.c: 15 warnings, 13 errors
+Target not created
+Build target 'FAT30_1'
+assembling startup_LPC17xx.s...
+compiling core_cm3.c...
+compiling system_LPC17xx.c...
+compiling main.c...
+main.c(284): warning:  #223-D: function "graphic_print" declared implicitly
+main.c:                         graphic_print(3,3,50,24,50,3,sAVNET,0);
+main.c:                         ^
+main.c(284): error:  #20: identifier "sAVNET" is undefined
+main.c:                         graphic_print(3,3,50,24,50,3,sAVNET,0);
+main.c:                                                      ^
+main.c(285): error:  #20: identifier "sAVNET1" is undefined
+main.c:                         graphic_print(3,3,50,24,50,3,sAVNET1,0);
+main.c:                                                      ^
+main.c(293): warning:  #223-D: function "draw_rectangle" declared implicitly
+main.c:                         draw_rectangle(0,0,20,20,0,0);
+main.c:                         ^
+main.c(297): warning:  #223-D: function "graphic_print" declared implicitly
+main.c:                                 graphic_print(3,2,15,15,15,2,sBPS1,0);
+main.c:                                 ^
+main.c(297): error:  #20: identifier "sBPS1" is undefined
+main.c:                                 graphic_print(3,2,15,15,15,2,sBPS1,0);
+main.c:                                                              ^
+main.c(301): warning:  #223-D: function "graphic_print" declared implicitly
+main.c:                                 if(bFL2)graphic_print(3,2,15,15,15,2,sAVT,0);
+main.c:                                         ^
+main.c(301): error:  #20: identifier "sAVT" is undefined
+main.c:                                 if(bFL2)graphic_print(3,2,15,15,15,2,sAVT,0);
+main.c:                                                                      ^
+main.c(305): warning:  #223-D: function "graphic_print" declared implicitly
+main.c:                                 if(bFL2)graphic_print(2,2,15,15,15,2,sAVU,0);
+main.c:                                         ^
+main.c(305): error:  #20: identifier "sAVU" is undefined
+main.c:                                 if(bFL2)graphic_print(2,2,15,15,15,2,sAVU,0);
+main.c:                                                                      ^
+main.c(310): warning:  #223-D: function "draw" declared implicitly
+main.c:                                 draw(9,20,0,11,0);
+main.c:                                 ^
+main.c(312): warning:  #223-D: function "draw_ptr" declared implicitly
+main.c:                                 draw_ptr(9,19+ptr_cnt1,0,4);
+main.c:                                 ^
+main.c(317): warning:  #223-D: function "draw_rectangle" declared implicitly
+main.c:                         draw_rectangle(23,0,20,20,0,0);
+main.c:                         ^
+main.c(321): warning:  #223-D: function "graphic_print" declared implicitly
+main.c:                                 graphic_print(25,2,15,15,15,2,sBPS2,0);
+main.c:                                 ^
+main.c(321): error:  #20: identifier "sBPS2" is undefined
+main.c:                                 graphic_print(25,2,15,15,15,2,sBPS2,0);
+main.c:                                                               ^
+main.c(325): warning:  #223-D: function "graphic_print" declared implicitly
+main.c:                                 if(bFL2)graphic_print(25,2,15,15,15,2,sAVT,0);
+main.c:                                         ^
+main.c(325): error:  #20: identifier "sAVT" is undefined
+main.c:                                 if(bFL2)graphic_print(25,2,15,15,15,2,sAVT,0);
+main.c:                                                                       ^
+main.c(329): warning:  #223-D: function "graphic_print" declared implicitly
+main.c:                                 if(bFL2)graphic_print(25,2,15,15,15,2,sAVU,0);
+main.c:                                         ^
+main.c(329): error:  #20: identifier "sAVU" is undefined
+main.c:                                 if(bFL2)graphic_print(25,2,15,15,15,2,sAVU,0);
+main.c:                                                                       ^
+main.c(334): warning:  #223-D: function "draw" declared implicitly
+main.c:                                 draw(32,20,0,11,0);
+main.c:                                 ^
+main.c(336): warning:  #223-D: function "draw_ptr" declared implicitly
+main.c:                                 draw_ptr(32,19+ptr_cnt1,0,4);
+main.c:                                 ^
+main.c(342): warning:  #223-D: function "draw_rectangle" declared implicitly
+main.c:                 draw_rectangle(50,0,35,20,0,0);
+main.c:                 ^
+main.c(347): warning:  #223-D: function "graphic_print" declared implicitly
+main.c:                         if(bFL2)graphic_print(43,0,50,24,50,3,sAVNET1,0);
+main.c:                                 ^
+main.c(347): error:  #20: identifier "sAVNET1" is undefined
+main.c:                         if(bFL2)graphic_print(43,0,50,24,50,3,sAVNET1,0);
+main.c:                                                               ^
+main.c(351): warning:  #223-D: function "draw" declared implicitly
+main.c:                         draw(66,20,0,11,0);
+main.c:                         ^
+main.c(353): warning:  #223-D: function "draw_ptr" declared implicitly
+main.c:                         if(Ibat<0)draw_ptr(66,19+ptr_cnt1,0,4);
+main.c:                                   ^
+main.c(368): warning:  #223-D: function "graphic_print_text" declared implicitly
+main.c:                                              graphic_print_text(61,5," %",2,zar_percent,0,1,1);
+main.c:                                              ^
+main.c(373): warning:  #223-D: function "graphic_print_text" declared implicitly
+main.c:                                              graphic_print_text(58,5,"  %",3,zar_percent,0,2,1);
+main.c:                                              ^
+main.c(378): warning:  #223-D: function "graphic_print_text" declared implicitly
+main.c:                                              graphic_print_text(55,5,"   %",4,zar_percent,0,3,1);
+main.c:                                              ^
+main.c(383): warning:  #223-D: function "graphic_print_text" declared implicitly
+main.c:                       else graphic_print_text(58,5,"   A",4,Ibat/10,1,3,1);
+main.c:                            ^
+main.c(388): warning:  #223-D: function "graphic_print_text" declared implicitly
+main.c:                                 graphic_print_text(58,5,"   A",4,Ibat/10,1,3,1);
+main.c:                                 ^
+main.c(395): warning:  #223-D: function "draw_rectangle" declared implicitly
+main.c:         draw_rectangle(92,2,27,14,0,0);
+main.c:         ^
+main.c(396): warning:  #223-D: function "draw" declared implicitly
+main.c:         draw(92,8,-4,0,0);
+main.c:         ^
+main.c(400): warning:  #223-D: function "draw_ptr" declared implicitly
+main.c:         draw_ptr(105,34-ptr_cnt3,2,4);
+main.c:         ^
+main.c(402): warning:  #223-D: function "graphic_print_text" declared implicitly
+main.c:         graphic_print_text(70,22,"    B",5,Uload,1,4,1);
+main.c:         ^
+main.c(443): error:  #20: identifier "caracter" is undefined
+main.c:                         lcd_bitmap[ptr_bitmap++]=caracter[(unsigned)lcd_buffer[x]*6];
+main.c:                                                  ^
+main.c(466): error:  #20: identifier "spc_stat" is undefined
+main.c:   if(spc_stat==spc_VZ)
+main.c:      ^
+main.c(466): error:  #20: identifier "spc_VZ" is undefined
+main.c:   if(spc_stat==spc_VZ)
+main.c:                ^
+main.c(471): error:  #20: identifier "spc_KE" is undefined
+main.c:   else if((spc_stat==spc_KE))
+main.c:                      ^
+main.c(544): warning:  #223-D: function "bgnd_par" declared implicitly
+main.c:         bgnd_par("                    ",
+main.c:         ^
+main.c(550): warning:  #223-D: function "int2lcdyx" declared implicitly
+main.c:                 int2lcdyx(bat_ver_cnt,0,3,0);
+main.c:                 ^
+main.c(550): error:  #20: identifier "bat_ver_cnt" is undefined
+main.c:                 int2lcdyx(bat_ver_cnt,0,3,0);
+main.c:                           ^
+main.c(551): error:  #20: identifier "cntrl_stat" is undefined
+main.c:                 int2lcdyx(cntrl_stat,1,3,0);
+main.c:                           ^
+main.c(554): error:  #20: identifier "u_necc_up" is undefined
+main.c:                 int2lcdyx(u_necc_up,0,7,0);
+main.c:                           ^
+main.c(555): error:  #20: identifier "u_necc" is undefined
+main.c:                 int2lcdyx(u_necc,1,7,0);
+main.c:                           ^
+main.c(556): error:  #20: identifier "u_necc_dn" is undefined
+main.c:                 int2lcdyx(u_necc_dn,2,7,0);
+main.c:                           ^
+main.c(559): error:  #20: identifier "sign_U" is undefined
+main.c:                 int2lcdyx(sign_U,0,10,0);
+main.c:                           ^
+main.c(560): error:  #20: identifier "sign_I" is undefined
+main.c:                 int2lcdyx(sign_I,1,10,0);
+main.c:                           ^
+main.c(561): error:  #20: identifier "superviser_cnt" is undefined
+main.c:                 int2lcdyx(superviser_cnt,2,10,0);       
+main.c:                           ^
+main.c(596): warning:  #223-D: function "bgnd_par" declared implicitly
+main.c:         bgnd_par(       "2                   ",
+main.c:         ^
+main.c(599): warning:  #223-D: function "int2lcdyx" declared implicitly
+main.c:             int2lcdyx(cntrl_stat,0,4,0);
+main.c:             ^
+main.c(599): error:  #20: identifier "cntrl_stat" is undefined
+main.c:             int2lcdyx(cntrl_stat,0,4,0);
+main.c:                       ^
+main.c(600): error:  #20: identifier "num_necc" is undefined
+main.c:             int2lcdyx(num_necc,1,0,0);
+main.c:                       ^
+main.c(606): warning:  #223-D: function "char2lcdhyx" declared implicitly
+main.c:         char2lcdhyx(St_[0],0,10);
+main.c:         ^
+main.c(618): warning:  #223-D: function "bgnd_par" declared implicitly
+main.c:         bgnd_par("                    ",
+main.c:         ^
+main.c(623): warning:  #223-D: function "int2lcdyx" declared implicitly
+main.c:         int2lcdyx(adc_buff_[0],0,3,0);
+main.c:         ^
+main.c(642): warning:  #223-D: function "bgnd_par" declared implicitly
+main.c:         bgnd_par("Un    ( Ø1   !Ø2   @",
+main.c:         ^
+main.c(651): warning:  #223-D: function "int2lcd" declared implicitly
+main.c:         int2lcd(u_necc,'(',1);
+main.c:         ^
+main.c(651): error:  #20: identifier "u_necc" is undefined
+main.c:         int2lcd(u_necc,'(',1);
+main.c:                 ^
+main.c(652): error:  #20: identifier "cntrl_stat1" is undefined
+main.c:         int2lcd(cntrl_stat1,'!',0);
+main.c:                 ^
+main.c(653): error:  #20: identifier "cntrl_stat2" is undefined
+main.c:         int2lcd(cntrl_stat2,'@',0);
+main.c:                 ^
+main.c(659): warning:  #223-D: function "int2lcd_mmm" declared implicitly
+main.c:         int2lcd_mmm(Ibat,'>',2);
+main.c:         ^
+main.c(660): warning:  #223-D: function "char2lcdhyx" declared implicitly
+main.c:         char2lcdhyx(St_[0],3,13);
+main.c:         ^
+main.c(717): warning:  #223-D: function "bgnd_par" declared implicitly
+main.c:         bgnd_par("pl    ( Ø1   !Ø2   @",
+main.c:         ^
+main.c(727): warning:  #223-D: function "int2lcd" declared implicitly
+main.c:         int2lcd(cntrl_stat1,'!',0);
+main.c:         ^
+main.c(727): error:  #20: identifier "cntrl_stat1" is undefined
+main.c:         int2lcd(cntrl_stat1,'!',0);
+main.c:                 ^
+main.c(728): error:  #20: identifier "cntrl_stat2" is undefined
+main.c:         int2lcd(cntrl_stat2,'@',0);
+main.c:                 ^
+main.c(734): warning:  #223-D: function "int2lcd_mmm" declared implicitly
+main.c:         int2lcd_mmm(Ibat,'>',2);
+main.c:         ^
+main.c(735): warning:  #223-D: function "char2lcdhyx" declared implicitly
+main.c:         char2lcdhyx(St_[0],3,13);
+main.c:         ^
+main.c(742): warning:  #223-D: function "bgnd_par" declared implicitly
+main.c:         bgnd_par(sm_,sm_,sm_,sm_);
+main.c:         ^
+main.c(746): warning:  #223-D: function "int2lcdyx" declared implicitly
+main.c:                 int2lcdyx(adc_buff_[5],0,19,0);
+main.c:                 ^
+main.c(748): warning:  #223-D: function "char2lcdhyx" declared implicitly
+main.c:                 char2lcdhyx(wrk,0,3);
+main.c:                 ^
+main.c(762): warning:  #223-D: function "bgnd_par" declared implicitly
+main.c:         bgnd_par("                    ",
+main.c:         ^
+main.c(766): warning:  #223-D: function "int2lcdyx" declared implicitly
+main.c:         int2lcdyx(tout_max_cnt[0],0,1,0);       
+main.c:         ^
+main.c(801): warning:  #223-D: function "bgnd_par" declared implicitly
+main.c:         bgnd_par(ptrs[index_set],
+main.c:         ^
+main.c(806): warning:  #223-D: function "int2lcd_mmm" declared implicitly
+main.c:         int2lcd_mmm(Ibat,'?',2); 
+main.c:         ^
+main.c(807): warning:  #223-D: function "int2lcd" declared implicitly
+main.c:         int2lcd(OFFBP1,'$',0);
+main.c:         ^
+main.c(808): warning:  #223-D: function "char2lcdh" declared implicitly
+main.c:         char2lcdh(St_[0],'#');
+main.c:         ^
+main.c(813): error:  #20: identifier "cnt_src" is undefined
+main.c:                 int2lcd(cnt_src[0],'Y',0);
+main.c:                         ^
+main.c(815): error:  #20: identifier "hour_apv_cnt" is undefined
+main.c:         int2lcd(hour_apv_cnt[0],'h',0);
+main.c:                 ^
+main.c: main.c: 50 warnings, 30 errors
+compiling gran.c...
+compiling uart0.c...
+cmd.c(26): warning:  #1-D: last line of file ends without a newline
+cmd.c:   #define PUTTM 0xDE
+cmd.c:                     ^
+uart0.c(167): warning:  #177-D: variable "UOB" was declared but never referenced
+uart0.c:   char UOB[100]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+uart0.c:        ^
+uart0.c(168): warning:  #177-D: variable "i" was declared but never referenced
+uart0.c:   char i,temp11,t=0;
+uart0.c:        ^
+uart0.c(384): warning:  #9-D: nested comment is not allowed
+uart0.c:                        UART0Count = 0;         /* buffer overflow */
+uart0.c:                                                ^
+uart0.c(406): warning:  #9-D: nested comment is not allowed
+uart0.c:                UART0Count = 0;         /* buffer overflow */
+uart0.c:                                        ^
+uart0.c(345): warning:  #177-D: variable "status" was declared but never referenced
+uart0.c:   char status,u0iir,data;
+uart0.c:        ^
+uart0.c(345): warning:  #177-D: variable "u0iir" was declared but never referenced
+uart0.c:   char status,u0iir,data;
+uart0.c:               ^
+uart0.c(438): warning:  #9-D: nested comment is not allowed
+uart0.c:   //***********************************************
+uart0.c:    ^
+uart0.c(483): warning:  #223-D: function "lc640_read_long" declared implicitly
+uart0.c:        data1=lc640_read_long(ptr);
+uart0.c:              ^
+uart0.c(519): warning:  #223-D: function "lc640_write_long" declared implicitly
+uart0.c:        lc640_write_long(ptr,data1);
+uart0.c:        ^
+uart0.c(561): warning:  #223-D: function "lc640_write_int" declared implicitly
+uart0.c:                        lc640_write_int(EE_MAIN_IST,0);
+uart0.c:                        ^
+uart0.c(561): error:  #20: identifier "EE_MAIN_IST" is undefined
+uart0.c:                        lc640_write_int(EE_MAIN_IST,0);
+uart0.c:                                        ^
+uart0.c(562): error:  #20: identifier "cnt_src" is undefined
+uart0.c:                        cnt_src[1]=10;
+uart0.c:                        ^
+uart0.c(568): warning:  #223-D: function "lc640_write_int" declared implicitly
+uart0.c:                        lc640_write_int(EE_MAIN_IST,1);
+uart0.c:                        ^
+uart0.c(568): error:  #20: identifier "EE_MAIN_IST" is undefined
+uart0.c:                        lc640_write_int(EE_MAIN_IST,1);
+uart0.c:                                        ^
+uart0.c(569): error:  #20: identifier "cnt_src" is undefined
+uart0.c:                        cnt_src[0]=10;
+uart0.c:                        ^
+uart0.c(594): error:  #20: identifier "spc_stat" is undefined
+uart0.c:                        spc_stat=spc_VZ;
+uart0.c:                        ^
+uart0.c(594): error:  #20: identifier "spc_VZ" is undefined
+uart0.c:                        spc_stat=spc_VZ;
+uart0.c:                                 ^
+uart0.c(595): error:  #20: identifier "cnt_vz_sec_" is undefined
+uart0.c:                        cnt_vz_sec_=3600UL*UIB0[7];
+uart0.c:                        ^
+uart0.c(621): error:  #20: identifier "spc_stat" is undefined
+uart0.c:                spc_stat=spc_OFF;
+uart0.c:                ^
+uart0.c(621): error:  #20: identifier "spc_OFF" is undefined
+uart0.c:                spc_stat=spc_OFF;
+uart0.c:                         ^
+uart0.c(639): warning:  #223-D: function "ke_start" declared implicitly
+uart0.c:                if(!ke_start()) memo_out[6]=0xff;
+uart0.c:                    ^
+uart0.c(657): error:  #20: identifier "spc_stat" is undefined
+uart0.c:                spc_stat=spc_OFF;
+uart0.c:                ^
+uart0.c(657): error:  #20: identifier "spc_OFF" is undefined
+uart0.c:                spc_stat=spc_OFF;
+uart0.c:                         ^
+uart0.c(696): error:  #20: identifier "cnt_src" is undefined
+uart0.c:                cnt_src[0]=10;
+uart0.c:                ^
+uart0.c(722): error:  #20: identifier "cnt_src" is undefined
+uart0.c:                cnt_src[0]=10;
+uart0.c:                ^
+uart0.c(847): warning:  #177-D: label "success_cc" was declared but never referenced
+uart0.c:   success_cc:
+uart0.c:   ^
+uart0.c: uart0.c: 14 warnings, 13 errors
+Target not created
+Build target 'FAT30_1'
+assembling startup_LPC17xx.s...
+compiling core_cm3.c...
+compiling system_LPC17xx.c...
+compiling main.c...
+main.c(319): warning:  #223-D: function "beep_drv" declared implicitly
+main.c:                 beep_drv();
+main.c:                 ^
+main.c(324): warning:  #223-D: function "beep_drv" declared implicitly
+main.c:                 beep_drv();
+main.c:                 ^
+main.c(373): warning:  #223-D: function "lcd_init" declared implicitly
+main.c:   lcd_init();
+main.c:   ^
+main.c(374): warning:  #223-D: function "lcd_on" declared implicitly
+main.c:   lcd_on();
+main.c:   ^
+main.c(375): warning:  #223-D: function "lcd_clear" declared implicitly
+main.c:   lcd_clear();
+main.c:   ^
+main.c(382): warning:  #223-D: function "UARTInit" declared implicitly
+main.c:   UARTInit(0, 9600);    /* baud rate setting */
+main.c:   ^
+main.c(398): warning:  #223-D: function "adc_drv" declared implicitly
+main.c:                 adc_drv();
+main.c:                 ^
+main.c(399): warning:  #223-D: function "but_drv" declared implicitly
+main.c:                 but_drv();
+main.c:                 ^
+main.c(400): warning:  #223-D: function "but_an" declared implicitly
+main.c:                 but_an(); 
+main.c:                 ^
+main.c(414): warning:  #223-D: function "unet_drv" declared implicitly
+main.c:              unet_drv();
+main.c:              ^
+main.c(415): warning:  #223-D: function "src_drv" declared implicitly
+main.c:              src_drv(0);
+main.c:              ^
+main.c(417): warning:  #223-D: function "ind_hndl" declared implicitly
+main.c:              ind_hndl(); 
+main.c:              ^
+main.c(418): warning:  #223-D: function "bitmap_hndl" declared implicitly
+main.c:                 bitmap_hndl();
+main.c:                 ^
+main.c(419): warning:  #223-D: function "lcd_out" declared implicitly
+main.c:                 lcd_out(lcd_bitmap);
+main.c:                 ^
+main.c(420): warning:  #223-D: function "ret_hndl" declared implicitly
+main.c:                 ret_hndl(); 
+main.c:                 ^
+main.c(429): warning:  #223-D: function "samokalibr_drv" declared implicitly
+main.c:                 samokalibr_drv();
+main.c:                 ^
+main.c(430): warning:  #223-D: function "ret_ind_hndl" declared implicitly
+main.c:                 ret_ind_hndl();
+main.c:                 ^
+main.c(431): warning:  #223-D: function "matemat" declared implicitly
+main.c:                 matemat();
+main.c:                 ^
+main.c(432): warning:  #223-D: function "time_drv" declared implicitly
+main.c:                 time_drv();
+main.c:                 ^
+main.c(433): warning:  #223-D: function "kb_drv" declared implicitly
+main.c:                 kb_drv();
+main.c:                 ^
+main.c(434): warning:  #223-D: function "zar_superviser_drv" declared implicitly
+main.c:                 zar_superviser_drv();
+main.c:                 ^
+main.c(435): warning:  #223-D: function "u_necc_hndl" declared implicitly
+main.c:                 u_necc_hndl();
+main.c:                 ^
+main.c(436): warning:  #223-D: function "out_out" declared implicitly
+main.c:                 out_out();   
+main.c:                 ^
+main.c(437): warning:  #223-D: function "bat_drv" declared implicitly
+main.c:                 bat_drv();   
+main.c:                 ^
+main.c(438): warning:  #223-D: function "rele_drv" declared implicitly
+main.c:                 rele_drv();  
+main.c:                 ^
+main.c(439): warning:  #223-D: function "beep_hndl" declared implicitly
+main.c:                 beep_hndl();  
+main.c:                 ^
+main.c(440): warning:  #223-D: function "memo_read" declared implicitly
+main.c:                 memo_read(); 
+main.c:                 ^
+main.c(452): warning:  #223-D: function "cntrl_hndl" declared implicitly
+main.c:                 cntrl_hndl();
+main.c:                 ^
+main.c(453): warning:  #223-D: function "cntrl_drv" declared implicitly
+main.c:                 cntrl_drv();
+main.c:                 ^
+main.c(454): warning:  #223-D: function "ret_ind_sec_hndl" declared implicitly
+main.c:                 ret_ind_sec_hndl();  
+main.c:                 ^
+main.c(455): warning:  #223-D: function "spc_drv" declared implicitly
+main.c:                 spc_drv();
+main.c:                 ^
+main.c(456): warning:  #223-D: function "zar_drv" declared implicitly
+main.c:                 zar_drv();
+main.c:                 ^
+main.c(457): warning:  #223-D: function "cntrl_blok_hndl" declared implicitly
+main.c:         cntrl_blok_hndl(); 
+main.c:         ^
+main.c(458): warning:  #223-D: function "avg_hndl" declared implicitly
+main.c:             avg_hndl();
+main.c:             ^
+main.c(459): warning:  #223-D: function "apv_drv" declared implicitly
+main.c:                 apv_drv();
+main.c:                 ^
+main.c(460): warning:  #223-D: function "ubat_old_drv" declared implicitly
+main.c:                 ubat_old_drv();
+main.c:                 ^
+main.c(461): warning:  #223-D: function "avz_hndl" declared implicitly
+main.c:                 avz_hndl();
+main.c:                 ^
+main.c(462): warning:  #223-D: function "mnemo_hndl" declared implicitly
+main.c:                 mnemo_hndl();   
+main.c:                 ^
+main.c(388): warning:  #177-D: variable "temp" was declared but never referenced
+main.c:         static char temp;
+main.c:                     ^
+main.c: main.c: 39 warnings, 0 errors
+compiling gran.c...
+compiling uart0.c...
+cmd.c(26): warning:  #1-D: last line of file ends without a newline
+cmd.c:   #define PUTTM 0xDE
+cmd.c:                     ^
+uart0.c(167): warning:  #177-D: variable "UOB" was declared but never referenced
+uart0.c:   char UOB[100]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+uart0.c:        ^
+uart0.c(168): warning:  #177-D: variable "i" was declared but never referenced
+uart0.c:   char i,temp11,t=0;
+uart0.c:        ^
+uart0.c(384): warning:  #9-D: nested comment is not allowed
+uart0.c:                        UART0Count = 0;         /* buffer overflow */
+uart0.c:                                                ^
+uart0.c(406): warning:  #9-D: nested comment is not allowed
+uart0.c:                UART0Count = 0;         /* buffer overflow */
+uart0.c:                                        ^
+uart0.c(345): warning:  #177-D: variable "status" was declared but never referenced
+uart0.c:   char status,u0iir,data;
+uart0.c:        ^
+uart0.c(345): warning:  #177-D: variable "u0iir" was declared but never referenced
+uart0.c:   char status,u0iir,data;
+uart0.c:               ^
+uart0.c(438): warning:  #9-D: nested comment is not allowed
+uart0.c:   //***********************************************
+uart0.c:    ^
+uart0.c(483): warning:  #223-D: function "lc640_read_long" declared implicitly
+uart0.c:        data1=lc640_read_long(ptr);
+uart0.c:              ^
+uart0.c(519): warning:  #223-D: function "lc640_write_long" declared implicitly
+uart0.c:        lc640_write_long(ptr,data1);
+uart0.c:        ^
+uart0.c(561): warning:  #223-D: function "lc640_write_int" declared implicitly
+uart0.c:                        lc640_write_int(EE_MAIN_IST,0);
+uart0.c:                        ^
+uart0.c(561): error:  #20: identifier "EE_MAIN_IST" is undefined
+uart0.c:                        lc640_write_int(EE_MAIN_IST,0);
+uart0.c:                                        ^
+uart0.c(562): error:  #20: identifier "cnt_src" is undefined
+uart0.c:                        cnt_src[1]=10;
+uart0.c:                        ^
+uart0.c(568): warning:  #223-D: function "lc640_write_int" declared implicitly
+uart0.c:                        lc640_write_int(EE_MAIN_IST,1);
+uart0.c:                        ^
+uart0.c(568): error:  #20: identifier "EE_MAIN_IST" is undefined
+uart0.c:                        lc640_write_int(EE_MAIN_IST,1);
+uart0.c:                                        ^
+uart0.c(569): error:  #20: identifier "cnt_src" is undefined
+uart0.c:                        cnt_src[0]=10;
+uart0.c:                        ^
+uart0.c(594): error:  #20: identifier "spc_stat" is undefined
+uart0.c:                        spc_stat=spc_VZ;
+uart0.c:                        ^
+uart0.c(594): error:  #20: identifier "spc_VZ" is undefined
+uart0.c:                        spc_stat=spc_VZ;
+uart0.c:                                 ^
+uart0.c(595): error:  #20: identifier "cnt_vz_sec_" is undefined
+uart0.c:                        cnt_vz_sec_=3600UL*UIB0[7];
+uart0.c:                        ^
+uart0.c(621): error:  #20: identifier "spc_stat" is undefined
+uart0.c:                spc_stat=spc_OFF;
+uart0.c:                ^
+uart0.c(621): error:  #20: identifier "spc_OFF" is undefined
+uart0.c:                spc_stat=spc_OFF;
+uart0.c:                         ^
+uart0.c(639): warning:  #223-D: function "ke_start" declared implicitly
+uart0.c:                if(!ke_start()) memo_out[6]=0xff;
+uart0.c:                    ^
+uart0.c(657): error:  #20: identifier "spc_stat" is undefined
+uart0.c:                spc_stat=spc_OFF;
+uart0.c:                ^
+uart0.c(657): error:  #20: identifier "spc_OFF" is undefined
+uart0.c:                spc_stat=spc_OFF;
+uart0.c:                         ^
+uart0.c(696): error:  #20: identifier "cnt_src" is undefined
+uart0.c:                cnt_src[0]=10;
+uart0.c:                ^
+uart0.c(722): error:  #20: identifier "cnt_src" is undefined
+uart0.c:                cnt_src[0]=10;
+uart0.c:                ^
+uart0.c(847): warning:  #177-D: label "success_cc" was declared but never referenced
+uart0.c:   success_cc:
+uart0.c:   ^
+uart0.c: uart0.c: 14 warnings, 13 errors
+Target not created
+Build target 'FAT30_1'
+assembling startup_LPC17xx.s...
+compiling core_cm3.c...
+compiling system_LPC17xx.c...
+compiling main.c...
+main.c(362): warning:  #223-D: function "UARTInit" declared implicitly
+main.c:   UARTInit(0, 9600);    /* baud rate setting */
+main.c:   ^
+main.c(378): warning:  #223-D: function "adc_drv" declared implicitly
+main.c:                 adc_drv();
+main.c:                 ^
+main.c(368): warning:  #177-D: variable "temp" was declared but never referenced
+main.c:         static char temp;
+main.c:                     ^
+main.c: main.c: 3 warnings, 0 errors
+compiling gran.c...
+compiling uart0.c...
+cmd.c(26): warning:  #1-D: last line of file ends without a newline
+cmd.c:   #define PUTTM 0xDE
+cmd.c:                     ^
+uart0.c(167): warning:  #177-D: variable "UOB" was declared but never referenced
+uart0.c:   char UOB[100]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+uart0.c:        ^
+uart0.c(168): warning:  #177-D: variable "i" was declared but never referenced
+uart0.c:   char i,temp11,t=0;
+uart0.c:        ^
+uart0.c(384): warning:  #9-D: nested comment is not allowed
+uart0.c:                        UART0Count = 0;         /* buffer overflow */
+uart0.c:                                                ^
+uart0.c(406): warning:  #9-D: nested comment is not allowed
+uart0.c:                UART0Count = 0;         /* buffer overflow */
+uart0.c:                                        ^
+uart0.c(345): warning:  #177-D: variable "status" was declared but never referenced
+uart0.c:   char status,u0iir,data;
+uart0.c:        ^
+uart0.c(345): warning:  #177-D: variable "u0iir" was declared but never referenced
+uart0.c:   char status,u0iir,data;
+uart0.c:               ^
+uart0.c(438): warning:  #9-D: nested comment is not allowed
+uart0.c:   //***********************************************
+uart0.c:    ^
+uart0.c(483): warning:  #223-D: function "lc640_read_long" declared implicitly
+uart0.c:        data1=lc640_read_long(ptr);
+uart0.c:              ^
+uart0.c(519): warning:  #223-D: function "lc640_write_long" declared implicitly
+uart0.c:        lc640_write_long(ptr,data1);
+uart0.c:        ^
+uart0.c(561): warning:  #223-D: function "lc640_write_int" declared implicitly
+uart0.c:                        lc640_write_int(EE_MAIN_IST,0);
+uart0.c:                        ^
+uart0.c(561): error:  #20: identifier "EE_MAIN_IST" is undefined
+uart0.c:                        lc640_write_int(EE_MAIN_IST,0);
+uart0.c:                                        ^
+uart0.c(562): error:  #20: identifier "cnt_src" is undefined
+uart0.c:                        cnt_src[1]=10;
+uart0.c:                        ^
+uart0.c(568): warning:  #223-D: function "lc640_write_int" declared implicitly
+uart0.c:                        lc640_write_int(EE_MAIN_IST,1);
+uart0.c:                        ^
+uart0.c(568): error:  #20: identifier "EE_MAIN_IST" is undefined
+uart0.c:                        lc640_write_int(EE_MAIN_IST,1);
+uart0.c:                                        ^
+uart0.c(569): error:  #20: identifier "cnt_src" is undefined
+uart0.c:                        cnt_src[0]=10;
+uart0.c:                        ^
+uart0.c(594): error:  #20: identifier "spc_stat" is undefined
+uart0.c:                        spc_stat=spc_VZ;
+uart0.c:                        ^
+uart0.c(594): error:  #20: identifier "spc_VZ" is undefined
+uart0.c:                        spc_stat=spc_VZ;
+uart0.c:                                 ^
+uart0.c(595): error:  #20: identifier "cnt_vz_sec_" is undefined
+uart0.c:                        cnt_vz_sec_=3600UL*UIB0[7];
+uart0.c:                        ^
+uart0.c(621): error:  #20: identifier "spc_stat" is undefined
+uart0.c:                spc_stat=spc_OFF;
+uart0.c:                ^
+uart0.c(621): error:  #20: identifier "spc_OFF" is undefined
+uart0.c:                spc_stat=spc_OFF;
+uart0.c:                         ^
+uart0.c(639): warning:  #223-D: function "ke_start" declared implicitly
+uart0.c:                if(!ke_start()) memo_out[6]=0xff;
+uart0.c:                    ^
+uart0.c(657): error:  #20: identifier "spc_stat" is undefined
+uart0.c:                spc_stat=spc_OFF;
+uart0.c:                ^
+uart0.c(657): error:  #20: identifier "spc_OFF" is undefined
+uart0.c:                spc_stat=spc_OFF;
+uart0.c:                         ^
+uart0.c(696): error:  #20: identifier "cnt_src" is undefined
+uart0.c:                cnt_src[0]=10;
+uart0.c:                ^
+uart0.c(722): error:  #20: identifier "cnt_src" is undefined
+uart0.c:                cnt_src[0]=10;
+uart0.c:                ^
+uart0.c(847): warning:  #177-D: label "success_cc" was declared but never referenced
+uart0.c:   success_cc:
+uart0.c:   ^
+uart0.c: uart0.c: 14 warnings, 13 errors
+Target not created
+Build target 'FAT30_1'
+assembling startup_LPC17xx.s...
+compiling core_cm3.c...
+compiling system_LPC17xx.c...
+compiling main.c...
+main.c(378): warning:  #223-D: function "adc_drv" declared implicitly
+main.c:                 adc_drv();
+main.c:                 ^
+main.c(368): warning:  #177-D: variable "temp" was declared but never referenced
+main.c:         static char temp;
+main.c:                     ^
+main.c: main.c: 2 warnings, 0 errors
+compiling gran.c...
+compiling uart0.c...
+uart0.h(60): error:  #20: identifier "uint32_t" is undefined
+uart0.h:   uint32_t UARTInit( uint32_t PortNum, uint32_t baudrate );
+uart0.h:   ^
+uart0.h(60): error:  #20: identifier "uint32_t" is undefined
+uart0.h:   uint32_t UARTInit( uint32_t PortNum, uint32_t baudrate );
+uart0.h:                      ^
+uart0.h(60): error:  #20: identifier "uint32_t" is undefined
+uart0.h:   uint32_t UARTInit( uint32_t PortNum, uint32_t baudrate );
+uart0.h:                                        ^
+cmd.c(26): warning:  #1-D: last line of file ends without a newline
+cmd.c:   #define PUTTM 0xDE
+cmd.c:                     ^
+uart0.c(167): warning:  #177-D: variable "UOB" was declared but never referenced
+uart0.c:   char UOB[100]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+uart0.c:        ^
+uart0.c(168): warning:  #177-D: variable "i" was declared but never referenced
+uart0.c:   char i,temp11,t=0;
+uart0.c:        ^
+uart0.c(384): warning:  #9-D: nested comment is not allowed
+uart0.c:                        UART0Count = 0;         /* buffer overflow */
+uart0.c:                                                ^
+uart0.c(406): warning:  #9-D: nested comment is not allowed
+uart0.c:                UART0Count = 0;         /* buffer overflow */
+uart0.c:                                        ^
+uart0.c(345): warning:  #177-D: variable "status" was declared but never referenced
+uart0.c:   char status,u0iir,data;
+uart0.c:        ^
+uart0.c(345): warning:  #177-D: variable "u0iir" was declared but never referenced
+uart0.c:   char status,u0iir,data;
+uart0.c:               ^
+uart0.c(438): warning:  #9-D: nested comment is not allowed
+uart0.c:   //***********************************************
+uart0.c:    ^
+uart0.c(483): warning:  #223-D: function "lc640_read_long" declared implicitly
+uart0.c:        data1=lc640_read_long(ptr);
+uart0.c:              ^
+uart0.c(519): warning:  #223-D: function "lc640_write_long" declared implicitly
+uart0.c:        lc640_write_long(ptr,data1);
+uart0.c:        ^
+uart0.c(561): warning:  #223-D: function "lc640_write_int" declared implicitly
+uart0.c:                        lc640_write_int(EE_MAIN_IST,0);
+uart0.c:                        ^
+uart0.c(561): error:  #20: identifier "EE_MAIN_IST" is undefined
+uart0.c:                        lc640_write_int(EE_MAIN_IST,0);
+uart0.c:                                        ^
+uart0.c(562): error:  #20: identifier "cnt_src" is undefined
+uart0.c:                        cnt_src[1]=10;
+uart0.c:                        ^
+uart0.c(568): warning:  #223-D: function "lc640_write_int" declared implicitly
+uart0.c:                        lc640_write_int(EE_MAIN_IST,1);
+uart0.c:                        ^
+uart0.c(568): error:  #20: identifier "EE_MAIN_IST" is undefined
+uart0.c:                        lc640_write_int(EE_MAIN_IST,1);
+uart0.c:                                        ^
+uart0.c(569): error:  #20: identifier "cnt_src" is undefined
+uart0.c:                        cnt_src[0]=10;
+uart0.c:                        ^
+uart0.c(594): error:  #20: identifier "spc_stat" is undefined
+uart0.c:                        spc_stat=spc_VZ;
+uart0.c:                        ^
+uart0.c(594): error:  #20: identifier "spc_VZ" is undefined
+uart0.c:                        spc_stat=spc_VZ;
+uart0.c:                                 ^
+uart0.c(595): error:  #20: identifier "cnt_vz_sec_" is undefined
+uart0.c:                        cnt_vz_sec_=3600UL*UIB0[7];
+uart0.c:                        ^
+uart0.c(621): error:  #20: identifier "spc_stat" is undefined
+uart0.c:                spc_stat=spc_OFF;
+uart0.c:                ^
+uart0.c(621): error:  #20: identifier "spc_OFF" is undefined
+uart0.c:                spc_stat=spc_OFF;
+uart0.c:                         ^
+uart0.c(639): warning:  #223-D: function "ke_start" declared implicitly
+uart0.c:                if(!ke_start()) memo_out[6]=0xff;
+uart0.c:                    ^
+uart0.c(657): error:  #20: identifier "spc_stat" is undefined
+uart0.c:                spc_stat=spc_OFF;
+uart0.c:                ^
+uart0.c(657): error:  #20: identifier "spc_OFF" is undefined
+uart0.c:                spc_stat=spc_OFF;
+uart0.c:                         ^
+uart0.c(696): error:  #20: identifier "cnt_src" is undefined
+uart0.c:                cnt_src[0]=10;
+uart0.c:                ^
+uart0.c(722): error:  #20: identifier "cnt_src" is undefined
+uart0.c:                cnt_src[0]=10;
+uart0.c:                ^
+uart0.c(847): warning:  #177-D: label "success_cc" was declared but never referenced
+uart0.c:   success_cc:
+uart0.c:   ^
+uart0.c: uart0.c: 14 warnings, 16 errors
+Target not created
+Build target 'FAT30_1'
+assembling startup_LPC17xx.s...
+compiling core_cm3.c...
+compiling system_LPC17xx.c...
+compiling main.c...
+compiling gran.c...
+compiling uart0.c...
+cmd.c(26): warning:  #1-D: last line of file ends without a newline
+cmd.c:   #define PUTTM 0xDE
+cmd.c:                     ^
+uart0.c(167): warning:  #177-D: variable "UOB" was declared but never referenced
+uart0.c:   char UOB[100]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+uart0.c:        ^
+uart0.c(168): warning:  #177-D: variable "i" was declared but never referenced
+uart0.c:   char i,temp11,t=0;
+uart0.c:        ^
+uart0.c(384): warning:  #9-D: nested comment is not allowed
+uart0.c:                        UART0Count = 0;         /* buffer overflow */
+uart0.c:                                                ^
+uart0.c(406): warning:  #9-D: nested comment is not allowed
+uart0.c:                UART0Count = 0;         /* buffer overflow */
+uart0.c:                                        ^
+uart0.c(345): warning:  #177-D: variable "status" was declared but never referenced
+uart0.c:   char status,u0iir,data;
+uart0.c:        ^
+uart0.c(345): warning:  #177-D: variable "u0iir" was declared but never referenced
+uart0.c:   char status,u0iir,data;
+uart0.c:               ^
+uart0.c(438): warning:  #9-D: nested comment is not allowed
+uart0.c:   //***********************************************
+uart0.c:    ^
+uart0.c(483): warning:  #223-D: function "lc640_read_long" declared implicitly
+uart0.c:        data1=lc640_read_long(ptr);
+uart0.c:              ^
+uart0.c(519): warning:  #223-D: function "lc640_write_long" declared implicitly
+uart0.c:        lc640_write_long(ptr,data1);
+uart0.c:        ^
+uart0.c(561): warning:  #223-D: function "lc640_write_int" declared implicitly
+uart0.c:                        lc640_write_int(EE_MAIN_IST,0);
+uart0.c:                        ^
+uart0.c(561): error:  #20: identifier "EE_MAIN_IST" is undefined
+uart0.c:                        lc640_write_int(EE_MAIN_IST,0);
+uart0.c:                                        ^
+uart0.c(562): error:  #20: identifier "cnt_src" is undefined
+uart0.c:                        cnt_src[1]=10;
+uart0.c:                        ^
+uart0.c(568): warning:  #223-D: function "lc640_write_int" declared implicitly
+uart0.c:                        lc640_write_int(EE_MAIN_IST,1);
+uart0.c:                        ^
+uart0.c(568): error:  #20: identifier "EE_MAIN_IST" is undefined
+uart0.c:                        lc640_write_int(EE_MAIN_IST,1);
+uart0.c:                                        ^
+uart0.c(569): error:  #20: identifier "cnt_src" is undefined
+uart0.c:                        cnt_src[0]=10;
+uart0.c:                        ^
+uart0.c(594): error:  #20: identifier "spc_stat" is undefined
+uart0.c:                        spc_stat=spc_VZ;
+uart0.c:                        ^
+uart0.c(594): error:  #20: identifier "spc_VZ" is undefined
+uart0.c:                        spc_stat=spc_VZ;
+uart0.c:                                 ^
+uart0.c(595): error:  #20: identifier "cnt_vz_sec_" is undefined
+uart0.c:                        cnt_vz_sec_=3600UL*UIB0[7];
+uart0.c:                        ^
+uart0.c(621): error:  #20: identifier "spc_stat" is undefined
+uart0.c:                spc_stat=spc_OFF;
+uart0.c:                ^
+uart0.c(621): error:  #20: identifier "spc_OFF" is undefined
+uart0.c:                spc_stat=spc_OFF;
+uart0.c:                         ^
+uart0.c(639): warning:  #223-D: function "ke_start" declared implicitly
+uart0.c:                if(!ke_start()) memo_out[6]=0xff;
+uart0.c:                    ^
+uart0.c(657): error:  #20: identifier "spc_stat" is undefined
+uart0.c:                spc_stat=spc_OFF;
+uart0.c:                ^
+uart0.c(657): error:  #20: identifier "spc_OFF" is undefined
+uart0.c:                spc_stat=spc_OFF;
+uart0.c:                         ^
+uart0.c(696): error:  #20: identifier "cnt_src" is undefined
+uart0.c:                cnt_src[0]=10;
+uart0.c:                ^
+uart0.c(722): error:  #20: identifier "cnt_src" is undefined
+uart0.c:                cnt_src[0]=10;
+uart0.c:                ^
+uart0.c(847): warning:  #177-D: label "success_cc" was declared but never referenced
+uart0.c:   success_cc:
+uart0.c:   ^
+uart0.c: uart0.c: 14 warnings, 13 errors
+Target not created
+Build target 'FAT30_1'
+assembling startup_LPC17xx.s...
+compiling core_cm3.c...
+compiling system_LPC17xx.c...
+compiling main.c...
+compiling gran.c...
+compiling uart0.c...
+cmd.c(29): warning:  #1-D: last line of file ends without a newline
+cmd.c:   ******************************************************************************/
+cmd.c:                                                                                  ^
+uart0.c(168): warning:  #177-D: variable "i" was declared but never referenced
+uart0.c:   char i,temp11,t=0;
+uart0.c:        ^
+uart0.c(399): warning:  #9-D: nested comment is not allowed
+uart0.c:                UART0Count = 0;         /* buffer overflow */
+uart0.c:                                        ^
+uart0.c(345): warning:  #177-D: variable "status" was declared but never referenced
+uart0.c:   char status,u0iir,data;
+uart0.c:        ^
+uart0.c(345): warning:  #177-D: variable "u0iir" was declared but never referenced
+uart0.c:   char status,u0iir,data;
+uart0.c:               ^
+uart0.c(431): warning:  #9-D: nested comment is not allowed
+uart0.c:   //***********************************************
+uart0.c:    ^
+uart0.c(476): warning:  #223-D: function "lc640_read_long" declared implicitly
+uart0.c:        data1=lc640_read_long(ptr);
+uart0.c:              ^
+uart0.c(512): warning:  #223-D: function "lc640_write_long" declared implicitly
+uart0.c:        lc640_write_long(ptr,data1);
+uart0.c:        ^
+uart0.c(554): warning:  #223-D: function "lc640_write_int" declared implicitly
+uart0.c:                        lc640_write_int(EE_MAIN_IST,0);
+uart0.c:                        ^
+uart0.c(554): error:  #20: identifier "EE_MAIN_IST" is undefined
+uart0.c:                        lc640_write_int(EE_MAIN_IST,0);
+uart0.c:                                        ^
+uart0.c(555): error:  #20: identifier "cnt_src" is undefined
+uart0.c:                        cnt_src[1]=10;
+uart0.c:                        ^
+uart0.c(561): warning:  #223-D: function "lc640_write_int" declared implicitly
+uart0.c:                        lc640_write_int(EE_MAIN_IST,1);
+uart0.c:                        ^
+uart0.c(561): error:  #20: identifier "EE_MAIN_IST" is undefined
+uart0.c:                        lc640_write_int(EE_MAIN_IST,1);
+uart0.c:                                        ^
+uart0.c(562): error:  #20: identifier "cnt_src" is undefined
+uart0.c:                        cnt_src[0]=10;
+uart0.c:                        ^
+uart0.c(587): error:  #20: identifier "spc_stat" is undefined
+uart0.c:                        spc_stat=spc_VZ;
+uart0.c:                        ^
+uart0.c(587): error:  #20: identifier "spc_VZ" is undefined
+uart0.c:                        spc_stat=spc_VZ;
+uart0.c:                                 ^
+uart0.c(588): error:  #20: identifier "cnt_vz_sec_" is undefined
+uart0.c:                        cnt_vz_sec_=3600UL*UIB0[7];
+uart0.c:                        ^
+uart0.c(614): error:  #20: identifier "spc_stat" is undefined
+uart0.c:                spc_stat=spc_OFF;
+uart0.c:                ^
+uart0.c(614): error:  #20: identifier "spc_OFF" is undefined
+uart0.c:                spc_stat=spc_OFF;
+uart0.c:                         ^
+uart0.c(632): warning:  #223-D: function "ke_start" declared implicitly
+uart0.c:                if(!ke_start()) memo_out[6]=0xff;
+uart0.c:                    ^
+uart0.c(650): error:  #20: identifier "spc_stat" is undefined
+uart0.c:                spc_stat=spc_OFF;
+uart0.c:                ^
+uart0.c(650): error:  #20: identifier "spc_OFF" is undefined
+uart0.c:                spc_stat=spc_OFF;
+uart0.c:                         ^
+uart0.c(689): error:  #20: identifier "cnt_src" is undefined
+uart0.c:                cnt_src[0]=10;
+uart0.c:                ^
+uart0.c(715): error:  #20: identifier "cnt_src" is undefined
+uart0.c:                cnt_src[0]=10;
+uart0.c:                ^
+uart0.c(840): warning:  #177-D: label "success_cc" was declared but never referenced
+uart0.c:   success_cc:
+uart0.c:   ^
+uart0.c: uart0.c: 12 warnings, 13 errors
+Target not created
+Build target 'FAT30_1'
+assembling startup_LPC17xx.s...
+compiling core_cm3.c...
+compiling system_LPC17xx.c...
+compiling main.c...
+compiling gran.c...
+compiling uart0.c...
+cmd.c(29): warning:  #1-D: last line of file ends without a newline
+cmd.c:   ******************************************************************************/
+cmd.c:                                                                                  ^
+uart0.c(345): warning:  #177-D: variable "u0iir" was declared but never referenced
+uart0.c:   char u0iir,data;
+uart0.c:        ^
+uart0.c(425): warning:  #9-D: nested comment is not allowed
+uart0.c:   //***********************************************
+uart0.c:    ^
+uart0.c(470): warning:  #223-D: function "lc640_read_long" declared implicitly
+uart0.c:        data1=lc640_read_long(ptr);
+uart0.c:              ^
+uart0.c(506): warning:  #223-D: function "lc640_write_long" declared implicitly
+uart0.c:        lc640_write_long(ptr,data1);
+uart0.c:        ^
+uart0.c(548): warning:  #223-D: function "lc640_write_int" declared implicitly
+uart0.c:                        lc640_write_int(EE_MAIN_IST,0);
+uart0.c:                        ^
+uart0.c(548): error:  #20: identifier "EE_MAIN_IST" is undefined
+uart0.c:                        lc640_write_int(EE_MAIN_IST,0);
+uart0.c:                                        ^
+uart0.c(549): error:  #20: identifier "cnt_src" is undefined
+uart0.c:                        cnt_src[1]=10;
+uart0.c:                        ^
+uart0.c(555): warning:  #223-D: function "lc640_write_int" declared implicitly
+uart0.c:                        lc640_write_int(EE_MAIN_IST,1);
+uart0.c:                        ^
+uart0.c(555): error:  #20: identifier "EE_MAIN_IST" is undefined
+uart0.c:                        lc640_write_int(EE_MAIN_IST,1);
+uart0.c:                                        ^
+uart0.c(556): error:  #20: identifier "cnt_src" is undefined
+uart0.c:                        cnt_src[0]=10;
+uart0.c:                        ^
+uart0.c(581): error:  #20: identifier "spc_stat" is undefined
+uart0.c:                        spc_stat=spc_VZ;
+uart0.c:                        ^
+uart0.c(581): error:  #20: identifier "spc_VZ" is undefined
+uart0.c:                        spc_stat=spc_VZ;
+uart0.c:                                 ^
+uart0.c(582): error:  #20: identifier "cnt_vz_sec_" is undefined
+uart0.c:                        cnt_vz_sec_=3600UL*UIB0[7];
+uart0.c:                        ^
+uart0.c(608): error:  #20: identifier "spc_stat" is undefined
+uart0.c:                spc_stat=spc_OFF;
+uart0.c:                ^
+uart0.c(608): error:  #20: identifier "spc_OFF" is undefined
+uart0.c:                spc_stat=spc_OFF;
+uart0.c:                         ^
+uart0.c(626): warning:  #223-D: function "ke_start" declared implicitly
+uart0.c:                if(!ke_start()) memo_out[6]=0xff;
+uart0.c:                    ^
+uart0.c(644): error:  #20: identifier "spc_stat" is undefined
+uart0.c:                spc_stat=spc_OFF;
+uart0.c:                ^
+uart0.c(644): error:  #20: identifier "spc_OFF" is undefined
+uart0.c:                spc_stat=spc_OFF;
+uart0.c:                         ^
+uart0.c(683): error:  #20: identifier "cnt_src" is undefined
+uart0.c:                cnt_src[0]=10;
+uart0.c:                ^
+uart0.c(709): error:  #20: identifier "cnt_src" is undefined
+uart0.c:                cnt_src[0]=10;
+uart0.c:                ^
+uart0.c(834): warning:  #177-D: label "success_cc" was declared but never referenced
+uart0.c:   success_cc:
+uart0.c:   ^
+uart0.c: uart0.c: 9 warnings, 13 errors
+Target not created
+Build target 'FAT30_1'
+assembling startup_LPC17xx.s...
+compiling core_cm3.c...
+compiling system_LPC17xx.c...
+compiling main.c...
+compiling gran.c...
+compiling uart0.c...
+cmd.c(29): warning:  #1-D: last line of file ends without a newline
+cmd.c:   ******************************************************************************/
+cmd.c:                                                                                  ^
+uart0.c(461): warning:  #177-D: label "success_cc" was declared but never referenced
+uart0.c:   success_cc:
+uart0.c:   ^
+uart0.c: uart0.c: 2 warnings, 0 errors
+linking...
+Program Size: Code=2996 RO-data=1104 RW-data=512 ZI-data=2816  
+FromELF: creating hex file...
+".\exe\UKU20202_1_MK.axf" - 0 Error(s), 2 Warning(s).
+Build target 'FAT30_1'
+assembling startup_LPC17xx.s...
+compiling core_cm3.c...
+compiling system_LPC17xx.c...
+compiling main.c...
+compiling gran.c...
+compiling uart0.c...
+linking...
+Program Size: Code=2408 RO-data=592 RW-data=512 ZI-data=2816  
+FromELF: creating hex file...
+".\exe\UKU20202_1_MK.axf" - 0 Error(s), 0 Warning(s).
+Build target 'FAT30_1'
+assembling startup_LPC17xx.s...
+compiling core_cm3.c...
+compiling system_LPC17xx.c...
+compiling main.c...
+compiling gran.c...
+compiling uart0.c...
+linking...
+Program Size: Code=2980 RO-data=740 RW-data=512 ZI-data=2816  
+FromELF: creating hex file...
+".\exe\FAT30_1.axf" - 0 Error(s), 0 Warning(s).
+Build target 'FAT30_1'
+assembling startup_LPC17xx.s...
+compiling core_cm3.c...
+compiling system_LPC17xx.c...
+compiling main.c...
+compiling gran.c...
+compiling uart0.c...
+linking...
+Program Size: Code=2416 RO-data=228 RW-data=512 ZI-data=2816  
+FromELF: creating hex file...
+".\exe\FAT30_1.axf" - 0 Error(s), 0 Warning(s).
+Build target 'FAT30_1'
+assembling startup_LPC17xx.s...
+compiling core_cm3.c...
+compiling system_LPC17xx.c...
+compiling main.c...
+compiling gran.c...
+compiling uart0.c...
+linking...
+Program Size: Code=2396 RO-data=228 RW-data=512 ZI-data=2816  
+FromELF: creating hex file...
+".\exe\FAT30_1.axf" - 0 Error(s), 0 Warning(s).
+Build target 'FAT30_1'
+assembling startup_LPC17xx.s...
+compiling core_cm3.c...
+compiling system_LPC17xx.c...
+compiling main.c...
+compiling gran.c...
+compiling uart0.c...
+linking...
+Program Size: Code=2396 RO-data=228 RW-data=512 ZI-data=2816  
+FromELF: creating hex file...
+".\exe\FAT30_1.axf" - 0 Error(s), 0 Warning(s).
+Build target 'FAT30_1'
+assembling startup_LPC17xx.s...
+compiling core_cm3.c...
+compiling system_LPC17xx.c...
+compiling main.c...
+compiling gran.c...
+compiling uart0.c...
+linking...
+Program Size: Code=2392 RO-data=228 RW-data=512 ZI-data=2816  
+FromELF: creating hex file...
+".\exe\FAT30_1.axf" - 0 Error(s), 0 Warning(s).
