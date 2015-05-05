@@ -477,16 +477,16 @@ Image component sizes
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
          0          0          0          0          0       4156   core_cm3.o
-      1624        158          0         16        292      25962   full_can.o
-        44          0          0          0          0        641   gran.o
-      3732        358         40        135       1602      34746   main.o
-      2472        204        256         40        510      11151   power_cnt.o
-        32          8        196          0        512        880   startup_lpc17xx.o
-       544         64          0          4          0        671   system_lpc17xx.o
-       948         58          0         28       2298      20181   uart0.o
+      1624        158          0         16        292      26006   full_can.o
+        44          0          0          0          0        653   gran.o
+      3732        358         40        135       1602      34902   main.o
+      2472        204        256         40        510      11191   power_cnt.o
+        32          8        196          0        512        896   startup_lpc17xx.o
+       544         64          0          4          0        687   system_lpc17xx.o
+       948         58          0         28       2298      20213   uart0.o
 
     ----------------------------------------------------------------------
-      9396        850        568        224       5216      98388   Object Totals
+      9396        850        568        224       5216      98704   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          0          0         44          1          2          0   (incl. Padding)
 
@@ -522,8 +522,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      9520        866        568        224       5216      98056   Grand Totals
-      9520        866        568        224       5216      98056   ELF Image Totals
+      9520        866        568        224       5216      98372   Grand Totals
+      9520        866        568        224       5216      98372   ELF Image Totals
       9520        866        568        224          0          0   ROM Totals
 
 ==============================================================================
