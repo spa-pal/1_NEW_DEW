@@ -12,6 +12,20 @@ SeparateFolders=0
 AllowPortNetNames=0
 AllowSheetEntryNetNames=1
 AppendSheetNumberToLocalNets=0
+[Document1]
+DocumentPath=cpu.SchDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotateSuffix=
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+[Document2]
+DocumentPath=FAT52.PCBDOC
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotateSuffix=
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
 [OutputGroup1]
 Name=Netlist Outputs
 Description=
