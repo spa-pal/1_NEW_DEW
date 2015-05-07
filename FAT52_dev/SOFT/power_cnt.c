@@ -123,7 +123,7 @@ else if ( PortNum == 1 )
 
     	LPC_UART1->LCR = 0x83;		/* 8 bits, no Parity, 1 Stop bit */
 	Fdiv = ( pclk / 16 ) / baudrate ;	/*baud rate */
-	Fdiv=6;
+	//Fdiv=6;
     	LPC_UART1->DLM = Fdiv / 256;							
     	LPC_UART1->DLL = Fdiv % 256;
 	LPC_UART1->FDR = 0xc1;
@@ -192,6 +192,9 @@ else if ( IIRValue == IIR_RDA )	/* Receive Data Available */
      {
      char temp;
    
+
+	uart1_rx_plazma++;
+
 	//LPC_GPIO0->FIOPIN|=(1<<2);
 
 	temp = LPC_UART1->RBR;

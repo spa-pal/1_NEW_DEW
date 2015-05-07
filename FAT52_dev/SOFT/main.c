@@ -101,6 +101,9 @@ char tttttt;
 char tx_stat_off_cnt;
 char plazma_ppp;
 
+
+short uart1_rx_plazma;
+
 //-----------------------------------------------
 void Delay (unsigned long tick) 
 {       
@@ -845,9 +848,9 @@ LPC_GPIO4->FIODIR |= (1<<29);           /* LEDs on PORT2 defined as Output    */
 
 rtc_init();
 pwm_init();
-//UARTInit(0, 9600);	/* baud rate setting */
-UARTInit(1, 19200);	/* baud rate setting */
 UARTInit(0, 9600);	/* baud rate setting */
+UARTInit(1, 19200);	/* baud rate setting */
+//UARTInit(0, 9600);	/* baud rate setting */
 can1_init(BITRATE62_5K6_25MHZ);
 FullCAN_SetFilter(0,0x09e);
 vent_drv();
@@ -967,6 +970,9 @@ while (1)
 			
 			}
 		
+		LPC_UART0->THR=0x55;
+		//uart_out0 (2,uart1_rx_plazma/256,uart1_rx_plazma%256,0,0,0,0);
+
 		}
 										
 	if(b1Hz)
@@ -976,6 +982,12 @@ while (1)
 		
 		b1Hz=0;
 		
+	/*	bbb[0]=uart1_rx_plazma/256;
+		bbb[1]=uart1_rx_plazma%256;
+		uart_out_adr1(bbb, 2);*/
+
+	/*	Delay(100); */
+
 		bbb[0]=0x7e;
 		bbb[1]=0x31;
 		bbb[2]=0x31;
@@ -995,9 +1007,13 @@ while (1)
 		bbb[16]=0x44;
 		bbb[17]=0x32;
 		bbb[18]=0x37;
-		bbb[19]=0x02;
+		bbb[19]=0x0d;
 
 		uart_out_adr1(bbb, 20);
+	/*	SET_REG(LPC_PINCON->PINSEL1,0,(18-16)*2,2); //¬ход PV у 485
+LPC_GPIO0->FIODIR|=(1<<18);
+LPC_GPIO0->FIOSET|=(1<<18);
+		putchar1(0x55); */
           }
 	}
 }

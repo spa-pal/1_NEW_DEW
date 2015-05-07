@@ -327,6 +327,8 @@ extern char bCP;
 extern long cur_pow_102m;
 extern char plazma_ppp;
 
+extern short uart1_rx_plazma;
+
 //-----------------------------------------------
 void Delay (unsigned long tick); 
 void SysTick_Handler (void);

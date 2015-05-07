@@ -580,10 +580,10 @@
       <FileType>1</FileType>
       <tvExp>1</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>15</ColumnNumber>
+      <ColumnNumber>26</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>827</TopLine>
-      <CurrentLine>849</CurrentLine>
+      <TopLine>970</TopLine>
+      <CurrentLine>987</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
@@ -636,10 +636,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>15</ColumnNumber>
+      <ColumnNumber>5</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>96</TopLine>
-      <CurrentLine>109</CurrentLine>
+      <TopLine>388</TopLine>
+      <CurrentLine>388</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\uart0.c</PathWithFileName>
       <FilenameWithoutPath>uart0.c</FilenameWithoutPath>
@@ -664,10 +664,10 @@
       <FileType>1</FileType>
       <tvExp>1</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>9</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>456</TopLine>
-      <CurrentLine>457</CurrentLine>
+      <TopLine>687</TopLine>
+      <CurrentLine>687</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\power_cnt.c</PathWithFileName>
       <FilenameWithoutPath>power_cnt.c</FilenameWithoutPath>
@@ -729,7 +729,7 @@
   <AlienFiles>
     <PathWithFilename>E:\Users\Pal\DEVICES\1_NEW_DEW\FAT52_dev\SOFT\main.h</PathWithFilename>
     <TopLine>299</TopLine>
-    <CurrentLine>308</CurrentLine>
+    <CurrentLine>330</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -895,21 +895,21 @@
         </Doc>
         <Doc>
           <Name>main.h</Name>
-          <ColumnNumber>7</ColumnNumber>
+          <ColumnNumber>29</ColumnNumber>
           <TopLine>299</TopLine>
-          <CurrentLine>308</CurrentLine>
+          <CurrentLine>330</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\main.c</Name>
-          <ColumnNumber>15</ColumnNumber>
-          <TopLine>827</TopLine>
-          <CurrentLine>849</CurrentLine>
+          <ColumnNumber>26</ColumnNumber>
+          <TopLine>970</TopLine>
+          <CurrentLine>987</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\power_cnt.c</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>456</TopLine>
-          <CurrentLine>457</CurrentLine>
+          <ColumnNumber>9</ColumnNumber>
+          <TopLine>687</TopLine>
+          <CurrentLine>687</CurrentLine>
         </Doc>
         <Doc>
           <Name>power_cnt.h</Name>
@@ -919,9 +919,9 @@
         </Doc>
         <Doc>
           <Name>.\uart0.c</Name>
-          <ColumnNumber>15</ColumnNumber>
-          <TopLine>96</TopLine>
-          <CurrentLine>109</CurrentLine>
+          <ColumnNumber>5</ColumnNumber>
+          <TopLine>388</TopLine>
+          <CurrentLine>388</CurrentLine>
         </Doc>
         <Doc>
           <Name>LPC17xx.h</Name>

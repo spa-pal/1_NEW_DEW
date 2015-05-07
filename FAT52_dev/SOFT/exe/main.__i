@@ -1,0 +1,1 @@
+--feedback ".\exe\FAT31_3_20.fed" -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\common\inc -I "C:\Keil\ARM\CMSIS\Include" -I "C:\Keil\ARM\INC\NXP" -DVENT_3WIRE -o ".\exe\main.o" --omf_browse ".\exe\main.crf" --depend ".\exe\main.d" "main.c"

@@ -127,10 +127,10 @@ t^=UOB0[num];
 UOB0[num+1]=t;
 UOB0[num+2]=END;
 
-for (i=0;i<num+3;i++)
+for (i=0;i<num/*+3*/;i++)
 	{
-	putchar0(UOB0[i]);
-	}   	
+	
+	}  putchar0(0x55/*UOB0[i]*/); 	
 }
 
 //-----------------------------------------------

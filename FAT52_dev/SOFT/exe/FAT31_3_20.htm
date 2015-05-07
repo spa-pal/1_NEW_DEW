@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\exe\FAT31_3_20.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\exe\FAT31_3_20.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 4.1 [Build 644]: Last Updated: Tue May 05 14:31:56 2015
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 4.1 [Build 644]: Last Updated: Wed May 06 16:54:11 2015
 <BR><P>
 <H3>Maximum Stack Usage =        280 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -353,7 +353,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
 </UL>
-<P><STRONG><a name="[2b]"></a>main</STRONG> (Thumb, 806 bytes, Stack size 104 bytes, main.o(.text))
+<P><STRONG><a name="[2b]"></a>main</STRONG> (Thumb, 814 bytes, Stack size 104 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 280<LI>Call Chain = main &rArr; read_summary_power &rArr; uart_out_adr1
 </UL>
 <BR>[Calls]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_out_adr1
@@ -384,7 +384,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_out0
 </UL>
 
-<P><STRONG><a name="[45]"></a>uart_out0</STRONG> (Thumb, 146 bytes, Stack size 52 bytes, uart0.o(.text))
+<P><STRONG><a name="[45]"></a>uart_out0</STRONG> (Thumb, 140 bytes, Stack size 52 bytes, uart0.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = uart_out0
 </UL>
 <BR>[Calls]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;putchar0
@@ -470,7 +470,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
 </UL>
-<P><STRONG><a name="[3a]"></a>UARTInit</STRONG> (Thumb, 330 bytes, Stack size 24 bytes, power_cnt.o(.text))
+<P><STRONG><a name="[3a]"></a>UARTInit</STRONG> (Thumb, 320 bytes, Stack size 24 bytes, power_cnt.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = UARTInit
 </UL>
 <BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_EnableIRQ
@@ -478,7 +478,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[2b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[10]"></a>UART1_IRQHandler</STRONG> (Thumb, 1028 bytes, Stack size 16 bytes, power_cnt.o(.text))
+<P><STRONG><a name="[10]"></a>UART1_IRQHandler</STRONG> (Thumb, 1044 bytes, Stack size 16 bytes, power_cnt.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = UART1_IRQHandler
 </UL>
 <BR>[Calls]<UL><LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gran_char
@@ -534,7 +534,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[2b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[41]"></a>sleep_an</STRONG> (Thumb, 380 bytes, Stack size 68 bytes, power_cnt.o(.text))
+<P><STRONG><a name="[41]"></a>sleep_an</STRONG> (Thumb, 378 bytes, Stack size 68 bytes, power_cnt.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = sleep_an &rArr; power_cnt_crc
 </UL>
 <BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;power_cnt_crc
