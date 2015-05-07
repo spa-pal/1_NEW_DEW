@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=GND Pin=C103-1
+Removed Pin From Net: NetName=+3V3 Pin=J100-1
+Removed Pin From Net: NetName=RST Pin=J100-2
+Removed Pin From Net: NetName=GND Pin=J100-7
+Removed Pin From Net: NetName=+3V3 Pin=R113-2
+Removed Member From Class: ClassName=cpu Member=C103
+Removed Member From Class: ClassName=cpu Member=J100
+Removed Member From Class: ClassName=cpu Member=R113
+Change Net Name : Old Net Name=P0_15 New Net Name=PA5
+Change Net Name : Old Net Name=P0_16 New Net Name=PA4
+Change Net Name : Old Net Name=P0_17 New Net Name=PB6
+Change Net Name : Old Net Name=P0_18 New Net Name=PB7
+Change Net Name : Old Net Name=XTAL1 New Net Name=PA1
+Change Net Name : Old Net Name=XTAL2 New Net Name=PA2

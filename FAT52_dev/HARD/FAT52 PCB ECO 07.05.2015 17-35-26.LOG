@@ -1,0 +1,21 @@
+Removed Pin From Net: NetName=GND Pin=C106-1
+Removed Pin From Net: NetName=+3V3 Pin=C106-2
+Removed Pin From Net: NetName=+3V3 Pin=C107-1
+Removed Pin From Net: NetName=GND Pin=C107-2
+Removed Pin From Net: NetName=+5V Pin=JP?-7
+Removed Pin From Net: NetName=+5V Pin=JP?-8
+Removed Pin From Net: NetName=GND Pin=U103-1
+Removed Pin From Net: NetName=+5V Pin=U103-3
+Removed Pin From Net: NetName=+3V3 Pin=U103-4
+Removed Member From Class: ClassName=cpu Member=C106
+Removed Member From Class: ClassName=cpu Member=C107
+Removed Member From Class: ClassName=cpu Member=U103
+Change Component Designator: OldDesignator=JP? NewDesignator=JP1
+Added Component: Designator=C1(_1206)
+Added Component: Designator=R1(_1206)
+Change Net Name : Old Net Name=+3V3 New Net Name=NetJP1_7
+Added Pin To Net: NetName=GND Pin=C1-1
+Added Pin To Net: NetName=+5V Pin=C1-2
+Added Pin To Net: NetName=+5V Pin=R1-1
+Added Member To Class: ClassName=cpu Member=Component C1 1.0
+Added Member To Class: ClassName=cpu Member=Component R1 10R

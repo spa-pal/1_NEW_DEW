@@ -1,0 +1,33 @@
+Removed Pin From Net: NetName=NetF200_1 Pin=F200-1
+Removed Pin From Net: NetName=NetF200_1 Pin=F200-1
+Removed Pin From Net: NetName=NetF200_1 Pin=F200-1
+Removed Pin From Net: NetName=NetF201_1 Pin=F201-1
+Removed Pin From Net: NetName=NetF201_1 Pin=F201-1
+Removed Pin From Net: NetName=NetF201_1 Pin=F201-1
+Removed Pin From Net: NetName=NetJP200_2 Pin=R201-1
+Removed Pin From Net: NetName=NetJP201_1 Pin=R203-1
+Removed Pin From Net: NetName=NetD200_1 Pin=T200-7
+Removed Pin From Net: NetName=GND Pin=T200-9
+Removed Pin From Net: NetName=NetD201_1 Pin=T201-7
+Removed Pin From Net: NetName=GND Pin=T201-9
+Removed Member From Class: ClassName=cpu Member=F200
+Removed Member From Class: ClassName=cpu Member=F200
+Removed Member From Class: ClassName=cpu Member=F201
+Removed Member From Class: ClassName=cpu Member=F201
+Removed Member From Class: ClassName=cpu Member=R200
+Removed Member From Class: ClassName=cpu Member=R200
+Removed Member From Class: ClassName=cpu Member=R201
+Removed Member From Class: ClassName=cpu Member=R201
+Removed Member From Class: ClassName=cpu Member=R202
+Removed Member From Class: ClassName=cpu Member=R202
+Removed Member From Class: ClassName=cpu Member=R203
+Removed Member From Class: ClassName=cpu Member=R203
+Removed Member From Class: ClassName=cpu Member=R206
+Removed Member From Class: ClassName=cpu Member=R206
+Removed Member From Class: ClassName=cpu Member=R207
+Removed Member From Class: ClassName=cpu Member=R207
+Removed Member From Class: ClassName=cpu Member=T200
+Removed Member From Class: ClassName=cpu Member=T201
+Change Net Name : Old Net Name=NetF200_1 New Net Name=NetJP200_1
+Change Net Name : Old Net Name=NetF201_1 New Net Name=NetJP201_2
+Added Room: Name=cpu

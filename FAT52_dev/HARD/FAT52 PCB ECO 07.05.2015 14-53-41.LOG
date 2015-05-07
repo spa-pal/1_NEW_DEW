@@ -1,0 +1,22 @@
+Added Component: Designator=U100(SO-G16/D10.4)
+Added Component: Designator=U101(SO-G8/D5)
+Added Pin To Net: NetName=+5V Pin=U100-1
+Added Pin To Net: NetName=GND Pin=U100-2
+Added Pin To Net: NetName=P0_16 Pin=U100-3
+Added Pin To Net: NetName=GND Pin=U100-4
+Added Pin To Net: NetName=P0_18 Pin=U100-5
+Added Pin To Net: NetName=P0_15 Pin=U100-6
+Added Pin To Net: NetName=P0_17 Pin=U100-7
+Added Pin To Net: NetName=GND Pin=U100-8
+Added Pin To Net: NetName=NetC101_1 Pin=U100-9
+Added Pin To Net: NetName=NetC101_1 Pin=U100-15
+Added Pin To Net: NetName=NetC101_2 Pin=U100-16
+Added Pin To Net: NetName=P0_1 Pin=U101-1
+Added Pin To Net: NetName=GND Pin=U101-2
+Added Pin To Net: NetName=+5V Pin=U101-3
+Added Pin To Net: NetName=P0_0 Pin=U101-4
+Added Pin To Net: NetName=CANL Pin=U101-6
+Added Pin To Net: NetName=CANH Pin=U101-7
+Added Pin To Net: NetName=GND Pin=U101-8
+Added Member To Class: ClassName=cpu Member=Component U100 ADM2483
+Added Member To Class: ClassName=cpu Member=Component U101 TJA1050
