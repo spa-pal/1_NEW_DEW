@@ -1,0 +1,38 @@
+Protel Design System Design Rule Check
+PCB File : \Users\Pal\DEVICES\1_NEW_DEW\FAT52_dev\HARD\FAT52.PCBDOC
+Date     : 08.05.2015
+Time     : 10:28:25
+
+Processing Rule : Clearance Constraint (Gap=0.4mm) (All),(InPoly)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Broken-Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.2mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.1mm) (Max=5mm) (Preferred=0.254mm) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=0.0254mm) (Max=5mm) (All)
+Rule Violations :0
+
+Processing Rule : Minimum Annular Ring (Minimum=0.25mm) (All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.25mm) (InComponent(U1)),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=2mm) (InPoly),(HasPad('Free-0'))
+Rule Violations :0
+
+
+Violations Detected : 0
+Time Elapsed        : 00:00:04

@@ -1,0 +1,23 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: FAT52.PCBDOC   08.05.2015  10:52:02
+---------------------------------------------------------------------------
+
+
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII File : NCDrillOutput.TXT
+EIA File   : NCDrillOutput.DRL
+
+Tool         Hole Size          Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        0.7mm (27.559mil)        60               336.13 mm (13.23 Inch)
+T2        0.85mm (33.465mil)       2                51.74 mm (2.04 Inch)
+T3        0.95mm (37.402mil)       4                59.56 mm (2.34 Inch)
+T4        1mm (39.37mil)           20               179.33 mm (7.06 Inch)
+T5        1.2mm (47.244mil)        2                72.89 mm (2.87 Inch)
+T6        1.3mm (51.181mil)        2                32.24 mm (1.27 Inch)
+T7        3.5mm (137.795mil)       4                122.80 mm (4.83 Inch)
+---------------------------------------------------------------------------
+Totals                             94               854.69 mm (33.65 Inch)
+
+Total Processing Time : 0:00:09

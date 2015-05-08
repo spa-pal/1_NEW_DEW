@@ -1,0 +1,9 @@
+DRC Rules Export File for PCB: E:\Users\Pal\DEVICES\1_NEW_DEW\FAT52_dev\HARD\FAT52.PCBDOC
+RuleKind=Clearance|RuleName=Clearance_2|Scope=Board|Minimum=15,75
+RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0
+RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=7,87
+RuleKind=Width|RuleName=Width|Scope=Board|Minimum=3,94
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=4,00
+RuleKind=MinimumAnnularRing|RuleName=MinimumAnnularRing|Scope=Board|Minimum=9,84
+RuleKind=Clearance|RuleName=Clearance_1|Scope=Board|Minimum=9,84
+RuleKind=Clearance|RuleName=Clearance_4|Scope=Board|Minimum=78,74
