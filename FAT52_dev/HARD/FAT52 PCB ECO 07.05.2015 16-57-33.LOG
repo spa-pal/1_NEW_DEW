@@ -1,4 +1,0 @@
-Change Component Footprint: Designator=JP200 Old Footprint=BT5-2-1 New Footprint=2EDGR-3.5-2P
-Added Pin To Net: NetName=PD1 Pin=JP2-3
-Added Pin To Net: NetName=RST Pin=JP2-4
-Added Pin To Net: NetName=GND Pin=JP2-5
