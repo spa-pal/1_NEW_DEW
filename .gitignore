@@ -1,3 +1,7 @@
 *.dep
 *.bak
 *.LOG
+FAT52_dev/SOFT/CAN_example1
+FAT52_dev/SOFT/CAN_example2
+FAT52_dev/SOFT/Debug
+FAT52_dev/SOFT/Release

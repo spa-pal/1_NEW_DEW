@@ -1,0 +1,4 @@
+
+<Project Header="Project 'stm8-can'" Path=".\stm8-can.rprj" Project="Yes" OutputFile="" sate="96" ActiveApp="stm8-can" >
+	<ApplicationBuild Header="stm8-can" Extern=".\stm8-can.rapp" Path=".\stm8-can.rapp" OutputFile=".\stm8-can.aof" sate="96" />
+</Project>

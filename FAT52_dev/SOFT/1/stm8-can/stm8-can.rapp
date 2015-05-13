@@ -1,0 +1,60 @@
+
+<ApplicationBuild Header="stm8-can" Extern=".\stm8-can.rapp" Path=".\stm8-can.rapp" OutputFile=".\stm8-can.aof" sate="96" >
+	<Group Header="Исходный код" Marker="-1" OutputFile="" sate="96" >
+		<NodeC Path=".\main.c" Header="main.c" Marker="-1" OutputFile=".\main.obj" sate="0" >
+			<Options>                                                             </Options>
+																																																									                                                                                                                                                                                                                                                                                                                                                                                                                                        																																				
+		</NodeC>
+		<NodeC Path=".\stm8s_it.c" Header="stm8s_it.c" Marker="-1" OutputFile=".\stm8s_it.obj" sate="0" />
+		<NodeH Path=".\stm8s_conf.h" Header="stm8s_conf.h" Marker="-1" OutputFile="" sate="0" />
+		<NodeH Path=".\stm8s_it.h" Header="stm8s_it.h" Marker="-1" OutputFile="" sate="0" />
+		<NodeH Path=".\main.h" Header="main.h" Marker="-1" OutputFile="" sate="0" />
+		<NodeC Path=".\counter.c" Header="counter.c" Marker="-1" OutputFile=".\counter.obj" sate="0" />
+		<NodeH Path=".\counter.h" Header="counter.h" Marker="-1" OutputFile="" sate="0" />
+		<NodeC Path=".\can.c" Header="can.c" Marker="-1" OutputFile=".\can.obj" sate="0" />
+		<NodeH Path=".\can.h" Header="can.h" Marker="-1" OutputFile="" sate="2" />
+																																						                                                                                                                                                                                                                                                                                                              																		
+	</Group>
+	<Group Header="Библиотека" Marker="-1" OutputFile="" sate="96" >
+		<NodeC Path="..\library\src\stm8s_gpio.c" Header="stm8s_gpio.c" Marker="-1" OutputFile=".\stm8s_gpio.obj" sate="0" />
+		<NodeC Path="..\library\src\stm8s_clk.c" Header="stm8s_clk.c" Marker="-1" OutputFile=".\stm8s_clk.obj" sate="0" />
+		<NodeC Path="..\library\src\stm8s_tim2.c" Header="stm8s_tim2.c" Marker="-1" OutputFile=".\stm8s_tim2.obj" sate="0" />
+		<NodeC Path="..\library\src\stm8s_uart1.c" Header="stm8s_uart1.c" Marker="-1" OutputFile=".\stm8s_uart1.obj" sate="0" />
+		<NodeC Path="..\library\src\stm8s_can.c" Header="stm8s_can.c" Marker="-1" OutputFile=".\stm8s_can.obj" sate="0" />
+																																						                                                                                                                                                                                                                                                                                                              																		
+	</Group>
+	<Options>
+		<Config Header="Standard" >
+			<Set Header="ApplicationBuild" >
+				<Section Header="General" >
+					<Property Header="TargetFamily" Value="ST7" />
+																																																																																															                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            																																																																								
+				</Section>
+				<Section Header="Directories" >
+					<Property Header="IncDir" Value="..\library\inc;$(RkitInc);$(RkitInc)\ST7" Removable="1" />
+																																																																																															                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          																																																																								
+				</Section>
+																																																																												                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            																																																						
+			</Set>
+			<Set Header="Target" >
+				<Section Header="ProcessorST7" >
+					<Property Header="Processor" Value="STM8S208MB" Removable="1" />
+																																																																																															                                                                                                                                                                                                                                                                                                                                                          																																																																								
+				</Section>
+				<Section Header="ToolSetST7" >
+					<Property Header="BuildToolSetST7" Value="ST7\RaisonanceTools.config" Removable="1" />
+					<Property Header="ArelocInfo" Value="" Removable="1" />
+							
+				</Section>
+					
+			</Set>
+			<Set Header="RCST7" >
+				<Section Header="Defines" >
+					<Property Header="Defines" Value="DEBUG_COM" Removable="1" />
+																																																																																															                                                          																																																																								
+				</Section>
+																																																																												                                            																																																						
+			</Set>
+		</Config>
+	</Options>
+</ApplicationBuild>
