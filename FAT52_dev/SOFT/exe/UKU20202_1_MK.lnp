@@ -1,5 +1,0 @@
---cpu Cortex-M3 ".\exe\startup_lpc17xx.o" ".\exe\core_cm3.o" ".\exe\system_lpc17xx.o" ".\exe\main.o" ".\exe\gran.o" ".\exe\uart0.o" --library_type=microlib --feedback ".\exe\UKU20202_1_MK.fed" 
---strict --scatter ".\exe\UKU20202_1_MK.sct" 
---autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
---info sizes --info totals --info unused --info veneers 
- --list ".\UKU20202_1_MK.map" -o ".\exe\UKU20202_1_MK.axf"
