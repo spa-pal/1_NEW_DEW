@@ -8,6 +8,11 @@ u8 mess[14];
 
 #define MY_MESS_STID	0x009e
 #define MY_MESS_STID_MASK	0x03ff
+
+
+char rs485_out_buff[20];
+
+
 /* -------------------------------------------------------------------------- */
 void init_CAN(void) {
 	CAN->MCR&=~CAN_MCR_SLEEP;					// CAN wake up request
@@ -206,6 +211,8 @@ enableInterrupts();
 	if(b1Hz)
 		{
 		b1Hz=0;
+		
+		uart_out_adr(rs485_out_buff,5);
 		
 		}
 
