@@ -139,7 +139,7 @@ if (tx_counter1 || ((UART1->SR & UART1_SR_TXE)==0))
    }
 else UART1->DR=c;
 
-UART1->CR2|= UART1_CR2_TIEN;
+UART1->CR2|= UART1_CR2_TIEN | UART1_CR2_TCIEN;
 }
 
 
@@ -150,7 +150,8 @@ void uart1_out_adr(char *ptr, char len)
 @near char i,t=0;
 @near short ii;
 
-for(ii=0;ii<1000;ii++)GPIOB->ODR|=(1<<7);
+//for(ii=0;ii<10;ii++)
+GPIOB->ODR|=(1<<7);
 
 
 for(i=0;i<len;i++)
@@ -397,7 +398,7 @@ if(tx_stat_cnt)
 	if(tx_stat_cnt==0)tx_stat=tsOFF;
 	
 	}
-
+/*
 if(tx_wd_cnt)
 	{
 	tx_wd_cnt--;
@@ -407,7 +408,7 @@ else
 	{
 	GPIOB->ODR&=~(1<<7);
 	}
-
+*/
 
 }
 
@@ -449,24 +450,31 @@ CAN->RFR|=(1<<5);
 //***********************************************
 @far @interrupt void UART1TxInterrupt (void) 
 {
-if (tx_counter1)
-	{
-   	--tx_counter1;
-	UART1->DR=tx_buffer1[tx_rd_index1];
-	if (++tx_rd_index1 == TX_BUFFER_SIZE1) tx_rd_index1=0;
-      
-    	
-	}
-else 
-	{
-	//GPIOD->ODR&=~(1<<4);	
-	tx_stat_cnt=3;
-	//tx_stat=tsOFF;
+@near char tx_status;
 
-		bOUT_FREE=1;
-		UART1->CR2&= ~UART1_CR2_TIEN;
+tx_status=UART1->SR;
+
+if (tx_status & (UART1_SR_TXE))
+{
+	if (tx_counter1)
+		{
+		--tx_counter1;
+		UART1->DR=tx_buffer1[tx_rd_index1];
+		if (++tx_rd_index1 == TX_BUFFER_SIZE1) tx_rd_index1=0;
+		}
+	else 
+		{
+		tx_stat_cnt=3;
+			bOUT_FREE=1;
+			UART1->CR2&= ~UART1_CR2_TIEN;
+			
+		}
+}
+if (tx_status & (UART1_SR_TC))
+	{		
+	GPIOB->ODR&=~(1<<7);
+	UART1->SR&=~UART1_SR_TC;
 	}
-tx_wd_cnt=3;
 }
 
 //***********************************************
