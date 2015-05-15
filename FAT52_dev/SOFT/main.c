@@ -489,6 +489,8 @@ if (rx_status & (UART1_SR_RXNE))
 {
 
 temp=rx_data;
+
+rx_buffer[rs485_rx_cnt++]=rx_data;
 /*if(tx_stat==tsOFF)
 	{
 	gran(&rx_wr_index,0,RX_BUFFER_SIZE); 
@@ -500,11 +502,12 @@ temp=rx_data;
 
 	}*/
 	
-	rs485_rx_cnt++;
-	if(temp==0x0d)
+	//;
+	if((rx_data==0x0d)&&(rs485_rx_cnt==298))
 	{
-			Ui=rs485_rx_cnt;
+			//Ui=rs485_rx_cnt;
 			rs485_rx_cnt=0;
+			bRX485=1;
 	}
 }
 
