@@ -52,6 +52,7 @@ ADC2_TDRH_RESET_VALUE	stm8s.h	251;"	macro
 ADC2_TDRL_RESET_VALUE	stm8s.h	250;"	macro
 ADC2_TypeDef	stm8s.h	241;"	typedef	typeref:struct:ADC2_struct
 ADC2_struct	stm8s.h	230;"	struct
+ALRM_RES	main.c	66;"	macro	file:
 APR	stm8s.h	285;"	member	struct:AWU_struct
 AREA	stm8s.h	2553;"	macro
 ARR	stm8s.h	1129;"	member	struct:TIM6_struct
@@ -91,21 +92,23 @@ BEEP_CSR_RESET_VALUE	stm8s.h	334;"	macro
 BEEP_TypeDef	stm8s.h	328;"	typedef	typeref:struct:BEEP_struct
 BEEP_struct	stm8s.h	324;"	struct
 BKR	stm8s.h	496;"	member	struct:TIM1_struct
+BPS_MESS_STID	main.c	54;"	macro	file:
+BPS_MESS_STID_MASK	main.c	55;"	macro	file:
 BRR1	stm8s.h	1645;"	member	struct:UART1_struct
 BRR1	stm8s.h	1743;"	member	struct:UART2_struct
 BRR1	stm8s.h	1851;"	member	struct:UART3_struct
 BRR2	stm8s.h	1646;"	member	struct:UART1_struct
 BRR2	stm8s.h	1744;"	member	struct:UART2_struct
 BRR2	stm8s.h	1852;"	member	struct:UART3_struct
-BTR1	stm8s.h	2069;"	member	struct:__anon1::__anon2::__anon8
-BTR2	stm8s.h	2070;"	member	struct:__anon1::__anon2::__anon8
+BTR1	stm8s.h	2069;"	member	struct:__anon2::__anon3::__anon9
+BTR2	stm8s.h	2070;"	member	struct:__anon2::__anon3::__anon9
 BYTE_0	stm8s.h	2534;"	macro
 BYTE_1	stm8s.h	2535;"	macro
 BYTE_2	stm8s.h	2536;"	macro
 BYTE_3	stm8s.h	2537;"	macro
 BitClr	stm8s.h	2555;"	macro
 BitSet	stm8s.h	2556;"	macro
-BitStatus	stm8s_type.h	71;"	typedef	typeref:enum:__anon11
+BitStatus	stm8s_type.h	71;"	typedef	typeref:enum:__anon12
 BitVal	stm8s.h	2557;"	macro
 CAN	stm8s.h	2401;"	macro
 CANCCR	stm8s.h	370;"	member	struct:CLK_struct
@@ -219,7 +222,7 @@ CAN_RFR_FOVR	stm8s.h	2144;"	macro
 CAN_RFR_FULL	stm8s.h	2143;"	macro
 CAN_RFR_RESET_VALUE	stm8s.h	2274;"	macro
 CAN_RFR_RFOM	stm8s.h	2145;"	macro
-CAN_RX_Interrupt	main.c	117;"	function	signature:(void)
+CAN_RX_Interrupt	main.c	413;"	function	signature:(void)
 CAN_RX_Interrupt	stm8_interrupt_vector.c	22;"	prototype	file:	signature:(void)
 CAN_TECR_RESET_VALUE	stm8s.h	2281;"	macro
 CAN_TECR_TEC0	stm8s.h	2202;"	macro
@@ -246,9 +249,9 @@ CAN_TSR_RQCP2	stm8s.h	2128;"	macro
 CAN_TSR_TXOK0	stm8s.h	2130;"	macro
 CAN_TSR_TXOK1	stm8s.h	2131;"	macro
 CAN_TSR_TXOK2	stm8s.h	2132;"	macro
-CAN_TX_Interrupt	main.c	124;"	function	signature:(void)
+CAN_TX_Interrupt	main.c	436;"	function	signature:(void)
 CAN_TX_Interrupt	stm8_interrupt_vector.c	23;"	prototype	file:	signature:(void)
-CAN_TypeDef	stm8s.h	2102;"	typedef	typeref:struct:__anon1
+CAN_TypeDef	stm8s.h	2102;"	typedef	typeref:struct:__anon2
 CCER1	stm8s.h	479;"	member	struct:TIM1_struct
 CCER1	stm8s.h	692;"	member	struct:TIM2_struct
 CCER1	stm8s.h	815;"	member	struct:TIM3_struct
@@ -362,6 +365,7 @@ CLK_SWR_RESET_VALUE	stm8s.h	383;"	macro
 CLK_SWR_SWI	stm8s.h	414;"	macro
 CLK_TypeDef	stm8s.h	374;"	typedef	typeref:struct:CLK_struct
 CLK_struct	stm8s.h	357;"	struct
+CMND	main.c	61;"	macro	file:
 CMSR	stm8s.h	362;"	member	struct:CLK_struct
 CNTR	stm8s.h	1127;"	member	struct:TIM6_struct
 CNTR	stm8s.h	923;"	member	struct:TIM4_struct
@@ -424,7 +428,7 @@ CSR	stm8s.h	326;"	member	struct:BEEP_struct
 CSSR	stm8s.h	367;"	member	struct:CLK_struct
 ChgBit	stm8s.h	2526;"	macro
 ClrBit	stm8s.h	2524;"	macro
-Config	stm8s.h	2079;"	member	union:__anon1::__anon2	typeref:struct:__anon1::__anon2::__anon8
+Config	stm8s.h	2079;"	member	union:__anon2::__anon3	typeref:struct:__anon2::__anon3::__anon9
 DB0RH	stm8s.h	137;"	member	struct:ADC1_struct
 DB0RL	stm8s.h	138;"	member	struct:ADC1_struct
 DB1RH	stm8s.h	139;"	member	struct:ADC1_struct
@@ -446,8 +450,8 @@ DB8RL	stm8s.h	154;"	member	struct:ADC1_struct
 DB9RH	stm8s.h	155;"	member	struct:ADC1_struct
 DB9RL	stm8s.h	156;"	member	struct:ADC1_struct
 DDR	stm8s.h	111;"	member	struct:GPIO_struct
-DGR	stm8s.h	1948;"	member	struct:__anon1
-DISABLE	stm8s_type.h	74;"	enumerator	enum:__anon12
+DGR	stm8s.h	1948;"	member	struct:__anon2
+DISABLE	stm8s_type.h	74;"	enumerator	enum:__anon13
 DM	stm8s.h	2478;"	macro
 DM_BaseAddress	stm8s.h	2378;"	macro
 DR	stm8s.h	1199;"	member	struct:I2C_struct
@@ -469,10 +473,10 @@ EGR	stm8s.h	688;"	member	struct:TIM2_struct
 EGR	stm8s.h	812;"	member	struct:TIM3_struct
 EGR	stm8s.h	922;"	member	struct:TIM4_struct
 EGR	stm8s.h	984;"	member	struct:TIM5_struct
-EIER	stm8s.h	2066;"	member	struct:__anon1::__anon2::__anon8
-ENABLE	stm8s_type.h	75;"	enumerator	enum:__anon12
-ERROR	stm8s_type.h	82;"	enumerator	enum:__anon13
-ESR	stm8s.h	2065;"	member	struct:__anon1::__anon2::__anon8
+EIER	stm8s.h	2066;"	member	struct:__anon2::__anon3::__anon9
+ENABLE	stm8s_type.h	75;"	enumerator	enum:__anon13
+ERROR	stm8s_type.h	82;"	enumerator	enum:__anon14
+ESR	stm8s.h	2065;"	member	struct:__anon2::__anon3::__anon9
 ETR	stm8s.h	470;"	member	struct:TIM1_struct
 EXTI	stm8s.h	2406;"	macro
 EXTI_BaseAddress	stm8s.h	2352;"	macro
@@ -486,61 +490,61 @@ EXTI_CR2_RESET_VALUE	stm8s.h	1348;"	macro
 EXTI_CR2_TLIS	stm8s.h	1363;"	macro
 EXTI_TypeDef	stm8s.h	1341;"	typedef	typeref:struct:EXTI_struct
 EXTI_struct	stm8s.h	1336;"	struct
-ErrorStatus	stm8s_type.h	85;"	typedef	typeref:enum:__anon13
-F0R1	stm8s.h	1999;"	member	struct:__anon1::__anon2::__anon5
-F0R2	stm8s.h	2000;"	member	struct:__anon1::__anon2::__anon5
-F0R3	stm8s.h	2001;"	member	struct:__anon1::__anon2::__anon5
-F0R4	stm8s.h	2002;"	member	struct:__anon1::__anon2::__anon5
-F0R5	stm8s.h	2003;"	member	struct:__anon1::__anon2::__anon5
-F0R6	stm8s.h	2004;"	member	struct:__anon1::__anon2::__anon5
-F0R7	stm8s.h	2005;"	member	struct:__anon1::__anon2::__anon5
-F0R8	stm8s.h	2006;"	member	struct:__anon1::__anon2::__anon5
-F1R1	stm8s.h	2008;"	member	struct:__anon1::__anon2::__anon5
-F1R2	stm8s.h	2009;"	member	struct:__anon1::__anon2::__anon5
-F1R3	stm8s.h	2010;"	member	struct:__anon1::__anon2::__anon5
-F1R4	stm8s.h	2011;"	member	struct:__anon1::__anon2::__anon5
-F1R5	stm8s.h	2012;"	member	struct:__anon1::__anon2::__anon5
-F1R6	stm8s.h	2013;"	member	struct:__anon1::__anon2::__anon5
-F1R7	stm8s.h	2014;"	member	struct:__anon1::__anon2::__anon5
-F1R8	stm8s.h	2015;"	member	struct:__anon1::__anon2::__anon5
-F2R1	stm8s.h	2021;"	member	struct:__anon1::__anon2::__anon6
-F2R2	stm8s.h	2022;"	member	struct:__anon1::__anon2::__anon6
-F2R3	stm8s.h	2023;"	member	struct:__anon1::__anon2::__anon6
-F2R4	stm8s.h	2024;"	member	struct:__anon1::__anon2::__anon6
-F2R5	stm8s.h	2025;"	member	struct:__anon1::__anon2::__anon6
-F2R6	stm8s.h	2026;"	member	struct:__anon1::__anon2::__anon6
-F2R7	stm8s.h	2027;"	member	struct:__anon1::__anon2::__anon6
-F2R8	stm8s.h	2028;"	member	struct:__anon1::__anon2::__anon6
-F3R1	stm8s.h	2030;"	member	struct:__anon1::__anon2::__anon6
-F3R2	stm8s.h	2031;"	member	struct:__anon1::__anon2::__anon6
-F3R3	stm8s.h	2032;"	member	struct:__anon1::__anon2::__anon6
-F3R4	stm8s.h	2033;"	member	struct:__anon1::__anon2::__anon6
-F3R5	stm8s.h	2034;"	member	struct:__anon1::__anon2::__anon6
-F3R6	stm8s.h	2035;"	member	struct:__anon1::__anon2::__anon6
-F3R7	stm8s.h	2036;"	member	struct:__anon1::__anon2::__anon6
-F3R8	stm8s.h	2037;"	member	struct:__anon1::__anon2::__anon6
-F4R1	stm8s.h	2043;"	member	struct:__anon1::__anon2::__anon7
-F4R2	stm8s.h	2044;"	member	struct:__anon1::__anon2::__anon7
-F4R3	stm8s.h	2045;"	member	struct:__anon1::__anon2::__anon7
-F4R4	stm8s.h	2046;"	member	struct:__anon1::__anon2::__anon7
-F4R5	stm8s.h	2047;"	member	struct:__anon1::__anon2::__anon7
-F4R6	stm8s.h	2048;"	member	struct:__anon1::__anon2::__anon7
-F4R7	stm8s.h	2049;"	member	struct:__anon1::__anon2::__anon7
-F4R8	stm8s.h	2050;"	member	struct:__anon1::__anon2::__anon7
-F5R1	stm8s.h	2052;"	member	struct:__anon1::__anon2::__anon7
-F5R2	stm8s.h	2053;"	member	struct:__anon1::__anon2::__anon7
-F5R3	stm8s.h	2054;"	member	struct:__anon1::__anon2::__anon7
-F5R4	stm8s.h	2055;"	member	struct:__anon1::__anon2::__anon7
-F5R5	stm8s.h	2056;"	member	struct:__anon1::__anon2::__anon7
-F5R6	stm8s.h	2057;"	member	struct:__anon1::__anon2::__anon7
-F5R7	stm8s.h	2058;"	member	struct:__anon1::__anon2::__anon7
-F5R8	stm8s.h	2059;"	member	struct:__anon1::__anon2::__anon7
-FALSE	stm8s_type.h	62;"	enumerator	enum:__anon10
+ErrorStatus	stm8s_type.h	85;"	typedef	typeref:enum:__anon14
+F0R1	stm8s.h	1999;"	member	struct:__anon2::__anon3::__anon6
+F0R2	stm8s.h	2000;"	member	struct:__anon2::__anon3::__anon6
+F0R3	stm8s.h	2001;"	member	struct:__anon2::__anon3::__anon6
+F0R4	stm8s.h	2002;"	member	struct:__anon2::__anon3::__anon6
+F0R5	stm8s.h	2003;"	member	struct:__anon2::__anon3::__anon6
+F0R6	stm8s.h	2004;"	member	struct:__anon2::__anon3::__anon6
+F0R7	stm8s.h	2005;"	member	struct:__anon2::__anon3::__anon6
+F0R8	stm8s.h	2006;"	member	struct:__anon2::__anon3::__anon6
+F1R1	stm8s.h	2008;"	member	struct:__anon2::__anon3::__anon6
+F1R2	stm8s.h	2009;"	member	struct:__anon2::__anon3::__anon6
+F1R3	stm8s.h	2010;"	member	struct:__anon2::__anon3::__anon6
+F1R4	stm8s.h	2011;"	member	struct:__anon2::__anon3::__anon6
+F1R5	stm8s.h	2012;"	member	struct:__anon2::__anon3::__anon6
+F1R6	stm8s.h	2013;"	member	struct:__anon2::__anon3::__anon6
+F1R7	stm8s.h	2014;"	member	struct:__anon2::__anon3::__anon6
+F1R8	stm8s.h	2015;"	member	struct:__anon2::__anon3::__anon6
+F2R1	stm8s.h	2021;"	member	struct:__anon2::__anon3::__anon7
+F2R2	stm8s.h	2022;"	member	struct:__anon2::__anon3::__anon7
+F2R3	stm8s.h	2023;"	member	struct:__anon2::__anon3::__anon7
+F2R4	stm8s.h	2024;"	member	struct:__anon2::__anon3::__anon7
+F2R5	stm8s.h	2025;"	member	struct:__anon2::__anon3::__anon7
+F2R6	stm8s.h	2026;"	member	struct:__anon2::__anon3::__anon7
+F2R7	stm8s.h	2027;"	member	struct:__anon2::__anon3::__anon7
+F2R8	stm8s.h	2028;"	member	struct:__anon2::__anon3::__anon7
+F3R1	stm8s.h	2030;"	member	struct:__anon2::__anon3::__anon7
+F3R2	stm8s.h	2031;"	member	struct:__anon2::__anon3::__anon7
+F3R3	stm8s.h	2032;"	member	struct:__anon2::__anon3::__anon7
+F3R4	stm8s.h	2033;"	member	struct:__anon2::__anon3::__anon7
+F3R5	stm8s.h	2034;"	member	struct:__anon2::__anon3::__anon7
+F3R6	stm8s.h	2035;"	member	struct:__anon2::__anon3::__anon7
+F3R7	stm8s.h	2036;"	member	struct:__anon2::__anon3::__anon7
+F3R8	stm8s.h	2037;"	member	struct:__anon2::__anon3::__anon7
+F4R1	stm8s.h	2043;"	member	struct:__anon2::__anon3::__anon8
+F4R2	stm8s.h	2044;"	member	struct:__anon2::__anon3::__anon8
+F4R3	stm8s.h	2045;"	member	struct:__anon2::__anon3::__anon8
+F4R4	stm8s.h	2046;"	member	struct:__anon2::__anon3::__anon8
+F4R5	stm8s.h	2047;"	member	struct:__anon2::__anon3::__anon8
+F4R6	stm8s.h	2048;"	member	struct:__anon2::__anon3::__anon8
+F4R7	stm8s.h	2049;"	member	struct:__anon2::__anon3::__anon8
+F4R8	stm8s.h	2050;"	member	struct:__anon2::__anon3::__anon8
+F5R1	stm8s.h	2052;"	member	struct:__anon2::__anon3::__anon8
+F5R2	stm8s.h	2053;"	member	struct:__anon2::__anon3::__anon8
+F5R3	stm8s.h	2054;"	member	struct:__anon2::__anon3::__anon8
+F5R4	stm8s.h	2055;"	member	struct:__anon2::__anon3::__anon8
+F5R5	stm8s.h	2056;"	member	struct:__anon2::__anon3::__anon8
+F5R6	stm8s.h	2057;"	member	struct:__anon2::__anon3::__anon8
+F5R7	stm8s.h	2058;"	member	struct:__anon2::__anon3::__anon8
+F5R8	stm8s.h	2059;"	member	struct:__anon2::__anon3::__anon8
+FALSE	stm8s_type.h	62;"	enumerator	enum:__anon11
 FAR	stm8s.h	66;"	macro
 FAR	stm8s.h	71;"	macro
-FCR1	stm8s.h	2074;"	member	struct:__anon1::__anon2::__anon8
-FCR2	stm8s.h	2075;"	member	struct:__anon1::__anon2::__anon8
-FCR3	stm8s.h	2076;"	member	struct:__anon1::__anon2::__anon8
+FCR1	stm8s.h	2074;"	member	struct:__anon2::__anon3::__anon9
+FCR2	stm8s.h	2075;"	member	struct:__anon2::__anon3::__anon9
+FCR3	stm8s.h	2076;"	member	struct:__anon2::__anon3::__anon9
 FLASH	stm8s.h	2408;"	macro
 FLASH_BaseAddress	stm8s.h	2350;"	macro
 FLASH_CR1_AHALT	stm8s.h	1413;"	macro
@@ -572,33 +576,35 @@ FLASH_PUKR_PUK	stm8s.h	1435;"	macro
 FLASH_PUKR_RESET_VALUE	stm8s.h	1401;"	macro
 FLASH_TypeDef	stm8s.h	1391;"	typedef	typeref:struct:FLASH_struct
 FLASH_struct	stm8s.h	1377;"	struct
-FMR1	stm8s.h	2072;"	member	struct:__anon1::__anon2::__anon8
-FMR2	stm8s.h	2073;"	member	struct:__anon1::__anon2::__anon8
+FMR1	stm8s.h	2072;"	member	struct:__anon2::__anon3::__anon9
+FMR2	stm8s.h	2073;"	member	struct:__anon2::__anon3::__anon9
 FPR	stm8s.h	1382;"	member	struct:FLASH_struct
-FR01	stm8s.h	1976;"	member	struct:__anon1::__anon2::__anon4
-FR02	stm8s.h	1977;"	member	struct:__anon1::__anon2::__anon4
-FR03	stm8s.h	1978;"	member	struct:__anon1::__anon2::__anon4
-FR04	stm8s.h	1979;"	member	struct:__anon1::__anon2::__anon4
-FR05	stm8s.h	1980;"	member	struct:__anon1::__anon2::__anon4
-FR06	stm8s.h	1981;"	member	struct:__anon1::__anon2::__anon4
-FR07	stm8s.h	1982;"	member	struct:__anon1::__anon2::__anon4
-FR08	stm8s.h	1983;"	member	struct:__anon1::__anon2::__anon4
-FR09	stm8s.h	1985;"	member	struct:__anon1::__anon2::__anon4
-FR10	stm8s.h	1986;"	member	struct:__anon1::__anon2::__anon4
-FR11	stm8s.h	1987;"	member	struct:__anon1::__anon2::__anon4
-FR12	stm8s.h	1988;"	member	struct:__anon1::__anon2::__anon4
-FR13	stm8s.h	1989;"	member	struct:__anon1::__anon2::__anon4
-FR14	stm8s.h	1990;"	member	struct:__anon1::__anon2::__anon4
-FR15	stm8s.h	1991;"	member	struct:__anon1::__anon2::__anon4
-FR16	stm8s.h	1992;"	member	struct:__anon1::__anon2::__anon4
+FR01	stm8s.h	1976;"	member	struct:__anon2::__anon3::__anon5
+FR02	stm8s.h	1977;"	member	struct:__anon2::__anon3::__anon5
+FR03	stm8s.h	1978;"	member	struct:__anon2::__anon3::__anon5
+FR04	stm8s.h	1979;"	member	struct:__anon2::__anon3::__anon5
+FR05	stm8s.h	1980;"	member	struct:__anon2::__anon3::__anon5
+FR06	stm8s.h	1981;"	member	struct:__anon2::__anon3::__anon5
+FR07	stm8s.h	1982;"	member	struct:__anon2::__anon3::__anon5
+FR08	stm8s.h	1983;"	member	struct:__anon2::__anon3::__anon5
+FR09	stm8s.h	1985;"	member	struct:__anon2::__anon3::__anon5
+FR10	stm8s.h	1986;"	member	struct:__anon2::__anon3::__anon5
+FR11	stm8s.h	1987;"	member	struct:__anon2::__anon3::__anon5
+FR12	stm8s.h	1988;"	member	struct:__anon2::__anon3::__anon5
+FR13	stm8s.h	1989;"	member	struct:__anon2::__anon3::__anon5
+FR14	stm8s.h	1990;"	member	struct:__anon2::__anon3::__anon5
+FR15	stm8s.h	1991;"	member	struct:__anon2::__anon3::__anon5
+FR16	stm8s.h	1992;"	member	struct:__anon2::__anon3::__anon5
 FREQR	stm8s.h	1195;"	member	struct:I2C_struct
-Filter	stm8s.h	1994;"	member	union:__anon1::__anon2	typeref:struct:__anon1::__anon2::__anon4
-Filter01	stm8s.h	2017;"	member	union:__anon1::__anon2	typeref:struct:__anon1::__anon2::__anon5
-Filter23	stm8s.h	2039;"	member	union:__anon1::__anon2	typeref:struct:__anon1::__anon2::__anon6
-Filter45	stm8s.h	2061;"	member	union:__anon1::__anon2	typeref:struct:__anon1::__anon2::__anon7
-FlagStatus	stm8s_type.h	71;"	typedef	typeref:enum:__anon11
-FunctionalState	stm8s_type.h	77;"	typedef	typeref:enum:__anon12
+Filter	stm8s.h	1994;"	member	union:__anon2::__anon3	typeref:struct:__anon2::__anon3::__anon5
+Filter01	stm8s.h	2017;"	member	union:__anon2::__anon3	typeref:struct:__anon2::__anon3::__anon6
+Filter23	stm8s.h	2039;"	member	union:__anon2::__anon3	typeref:struct:__anon2::__anon3::__anon7
+Filter45	stm8s.h	2061;"	member	union:__anon2::__anon3	typeref:struct:__anon2::__anon3::__anon8
+FlagStatus	stm8s_type.h	71;"	typedef	typeref:enum:__anon12
+FunctionalState	stm8s_type.h	77;"	typedef	typeref:enum:__anon13
 GCR	stm8s.h	2303;"	member	struct:CFG_struct
+GETID	main.c	67;"	macro	file:
+GETTM	main.c	72;"	macro	file:
 GPIOA	stm8s.h	2412;"	macro
 GPIOA_BaseAddress	stm8s.h	2340;"	macro
 GPIOB	stm8s.h	2414;"	macro
@@ -628,6 +634,7 @@ GTR	stm8s.h	1751;"	member	struct:UART2_struct
 HSITRIMR	stm8s.h	371;"	member	struct:CLK_struct
 HTRH	stm8s.h	166;"	member	struct:ADC1_struct
 HTRL	stm8s.h	167;"	member	struct:ADC1_struct
+I	main.c	39;"	variable
 I2C	stm8s.h	2439;"	macro
 I2C_BaseAddress	stm8s.h	2360;"	macro
 I2C_CCRH_CCR	stm8s.h	1285;"	macro
@@ -689,7 +696,7 @@ ICKR	stm8s.h	359;"	member	struct:CLK_struct
 ICR	stm8s.h	1563;"	member	struct:SPI_struct
 IDR	stm8s.h	110;"	member	struct:GPIO_struct
 IER	stm8s.h	1124;"	member	struct:TIM6_struct
-IER	stm8s.h	1947;"	member	struct:__anon1
+IER	stm8s.h	1947;"	member	struct:__anon2
 IER	stm8s.h	471;"	member	struct:TIM1_struct
 IER	stm8s.h	685;"	member	struct:TIM2_struct
 IER	stm8s.h	809;"	member	struct:TIM3_struct
@@ -711,52 +718,57 @@ ITC_SPRX_RESET_VALUE	stm8s.h	1315;"	macro
 ITC_TypeDef	stm8s.h	1309;"	typedef	typeref:struct:ITC_struct
 ITC_struct	stm8s.h	1298;"	struct
 ITR	stm8s.h	1203;"	member	struct:I2C_struct
-ITStatus	stm8s_type.h	71;"	typedef	typeref:enum:__anon11
+ITStatus	stm8s_type.h	71;"	typedef	typeref:enum:__anon12
 IWDG	stm8s.h	2436;"	macro
 IWDG_BaseAddress	stm8s.h	2356;"	macro
 IWDG_PR_RESET_VALUE	stm8s.h	1484;"	macro
 IWDG_RLR_RESET_VALUE	stm8s.h	1485;"	macro
 IWDG_TypeDef	stm8s.h	1478;"	typedef	typeref:struct:IWDG_struct
 IWDG_struct	stm8s.h	1472;"	struct
+KLBR	main.c	73;"	macro	file:
 KR	stm8s.h	1474;"	member	struct:IWDG_struct
 LTRH	stm8s.h	168;"	member	struct:ADC1_struct
 LTRL	stm8s.h	169;"	member	struct:ADC1_struct
-MCR	stm8s.h	1942;"	member	struct:__anon1
-MCSR	stm8s.h	1955;"	member	struct:__anon1::__anon2::__anon3
-MDAR1	stm8s.h	1961;"	member	struct:__anon1::__anon2::__anon3
-MDAR1	stm8s.h	2089;"	member	struct:__anon1::__anon2::__anon9
-MDAR2	stm8s.h	1962;"	member	struct:__anon1::__anon2::__anon3
-MDAR2	stm8s.h	2090;"	member	struct:__anon1::__anon2::__anon9
-MDAR3	stm8s.h	1963;"	member	struct:__anon1::__anon2::__anon3
-MDAR3	stm8s.h	2091;"	member	struct:__anon1::__anon2::__anon9
-MDAR4	stm8s.h	1964;"	member	struct:__anon1::__anon2::__anon3
-MDAR4	stm8s.h	2092;"	member	struct:__anon1::__anon2::__anon9
-MDAR5	stm8s.h	1965;"	member	struct:__anon1::__anon2::__anon3
-MDAR5	stm8s.h	2093;"	member	struct:__anon1::__anon2::__anon9
-MDAR6	stm8s.h	1966;"	member	struct:__anon1::__anon2::__anon3
-MDAR6	stm8s.h	2094;"	member	struct:__anon1::__anon2::__anon9
-MDAR7	stm8s.h	1967;"	member	struct:__anon1::__anon2::__anon3
-MDAR7	stm8s.h	2095;"	member	struct:__anon1::__anon2::__anon9
-MDAR8	stm8s.h	1968;"	member	struct:__anon1::__anon2::__anon3
-MDAR8	stm8s.h	2096;"	member	struct:__anon1::__anon2::__anon9
-MDLCR	stm8s.h	1956;"	member	struct:__anon1::__anon2::__anon3
-MDLCR	stm8s.h	2084;"	member	struct:__anon1::__anon2::__anon9
-MFMI	stm8s.h	2083;"	member	struct:__anon1::__anon2::__anon9
-MIDR1	stm8s.h	1957;"	member	struct:__anon1::__anon2::__anon3
-MIDR1	stm8s.h	2085;"	member	struct:__anon1::__anon2::__anon9
-MIDR2	stm8s.h	1958;"	member	struct:__anon1::__anon2::__anon3
-MIDR2	stm8s.h	2086;"	member	struct:__anon1::__anon2::__anon9
-MIDR3	stm8s.h	1959;"	member	struct:__anon1::__anon2::__anon3
-MIDR3	stm8s.h	2087;"	member	struct:__anon1::__anon2::__anon9
-MIDR4	stm8s.h	1960;"	member	struct:__anon1::__anon2::__anon3
-MIDR4	stm8s.h	2088;"	member	struct:__anon1::__anon2::__anon9
-MSR	stm8s.h	1943;"	member	struct:__anon1
-MTSRH	stm8s.h	1970;"	member	struct:__anon1::__anon2::__anon3
-MTSRH	stm8s.h	2098;"	member	struct:__anon1::__anon2::__anon9
-MTSRL	stm8s.h	1969;"	member	struct:__anon1::__anon2::__anon3
-MTSRL	stm8s.h	2097;"	member	struct:__anon1::__anon2::__anon9
-MY_MESS_STID	main.c	7;"	macro	file:
-MY_MESS_STID_MASK	main.c	8;"	macro	file:
+MCR	stm8s.h	1942;"	member	struct:__anon2
+MCSR	stm8s.h	1955;"	member	struct:__anon2::__anon3::__anon4
+MDAR1	stm8s.h	1961;"	member	struct:__anon2::__anon3::__anon4
+MDAR1	stm8s.h	2089;"	member	struct:__anon2::__anon3::__anon10
+MDAR2	stm8s.h	1962;"	member	struct:__anon2::__anon3::__anon4
+MDAR2	stm8s.h	2090;"	member	struct:__anon2::__anon3::__anon10
+MDAR3	stm8s.h	1963;"	member	struct:__anon2::__anon3::__anon4
+MDAR3	stm8s.h	2091;"	member	struct:__anon2::__anon3::__anon10
+MDAR4	stm8s.h	1964;"	member	struct:__anon2::__anon3::__anon4
+MDAR4	stm8s.h	2092;"	member	struct:__anon2::__anon3::__anon10
+MDAR5	stm8s.h	1965;"	member	struct:__anon2::__anon3::__anon4
+MDAR5	stm8s.h	2093;"	member	struct:__anon2::__anon3::__anon10
+MDAR6	stm8s.h	1966;"	member	struct:__anon2::__anon3::__anon4
+MDAR6	stm8s.h	2094;"	member	struct:__anon2::__anon3::__anon10
+MDAR7	stm8s.h	1967;"	member	struct:__anon2::__anon3::__anon4
+MDAR7	stm8s.h	2095;"	member	struct:__anon2::__anon3::__anon10
+MDAR8	stm8s.h	1968;"	member	struct:__anon2::__anon3::__anon4
+MDAR8	stm8s.h	2096;"	member	struct:__anon2::__anon3::__anon10
+MDLCR	stm8s.h	1956;"	member	struct:__anon2::__anon3::__anon4
+MDLCR	stm8s.h	2084;"	member	struct:__anon2::__anon3::__anon10
+MEM_KF	main.c	62;"	macro	file:
+MEM_KF1	main.c	63;"	macro	file:
+MEM_KF2	main.c	65;"	macro	file:
+MEM_KF4	main.c	64;"	macro	file:
+MFMI	stm8s.h	2083;"	member	struct:__anon2::__anon3::__anon10
+MIDR1	stm8s.h	1957;"	member	struct:__anon2::__anon3::__anon4
+MIDR1	stm8s.h	2085;"	member	struct:__anon2::__anon3::__anon10
+MIDR2	stm8s.h	1958;"	member	struct:__anon2::__anon3::__anon4
+MIDR2	stm8s.h	2086;"	member	struct:__anon2::__anon3::__anon10
+MIDR3	stm8s.h	1959;"	member	struct:__anon2::__anon3::__anon4
+MIDR3	stm8s.h	2087;"	member	struct:__anon2::__anon3::__anon10
+MIDR4	stm8s.h	1960;"	member	struct:__anon2::__anon3::__anon4
+MIDR4	stm8s.h	2088;"	member	struct:__anon2::__anon3::__anon10
+MSR	stm8s.h	1943;"	member	struct:__anon2
+MTSRH	stm8s.h	1970;"	member	struct:__anon2::__anon3::__anon4
+MTSRH	stm8s.h	2098;"	member	struct:__anon2::__anon3::__anon10
+MTSRL	stm8s.h	1969;"	member	struct:__anon2::__anon3::__anon4
+MTSRL	stm8s.h	2097;"	member	struct:__anon2::__anon3::__anon10
+MY_MESS_STID	main.c	10;"	macro	file:
+MY_MESS_STID_MASK	main.c	11;"	macro	file:
 MskBit	stm8s.h	2530;"	macro
 NCR2	stm8s.h	1381;"	member	struct:FLASH_struct
 NEAR	stm8s.h	67;"	macro
@@ -768,11 +780,14 @@ NOPT3	stm8s.h	1455;"	member	struct:OPT_struct
 NOPT4	stm8s.h	1457;"	member	struct:OPT_struct
 NOPT5	stm8s.h	1459;"	member	struct:OPT_struct
 NOPT7	stm8s.h	1463;"	member	struct:OPT_struct
+NULL	c:\program files\cosmic\cxstm8_32k\hstm8\string.h	9;"	macro
 NonHandledInterrupt	stm8_interrupt_vector.c	12;"	function	signature:(void)
 OARH	stm8s.h	1197;"	member	struct:I2C_struct
 OARL	stm8s.h	1196;"	member	struct:I2C_struct
 ODR	stm8s.h	109;"	member	struct:GPIO_struct
+OFF	main.c	76;"	macro	file:
 OISR	stm8s.h	498;"	member	struct:TIM1_struct
+ON	main.c	75;"	macro	file:
 OPT	stm8s.h	2410;"	macro
 OPT0	stm8s.h	1449;"	member	struct:OPT_struct
 OPT1	stm8s.h	1450;"	member	struct:OPT_struct
@@ -796,14 +811,18 @@ PSCR	stm8s.h	924;"	member	struct:TIM4_struct
 PSCR	stm8s.h	992;"	member	struct:TIM5_struct
 PSCRH	stm8s.h	483;"	member	struct:TIM1_struct
 PSCRL	stm8s.h	484;"	member	struct:TIM1_struct
-PSR	stm8s.h	1949;"	member	struct:__anon1
+PSR	stm8s.h	1949;"	member	struct:__anon2
 PUKR	stm8s.h	1387;"	member	struct:FLASH_struct
-Page	stm8s.h	2101;"	member	struct:__anon1	typeref:union:__anon1::__anon2
+PUTID	main.c	68;"	macro	file:
+PUTTM	main.c	71;"	macro	file:
+PUTTM1	main.c	69;"	macro	file:
+PUTTM2	main.c	70;"	macro	file:
+Page	stm8s.h	2101;"	member	struct:__anon2	typeref:union:__anon2::__anon3
 PointerAttr	stm8s.h	78;"	macro
 PointerAttr	stm8s.h	80;"	macro
 PointerAttr_Far	stm8s.h	63;"	macro
 RCR	stm8s.h	487;"	member	struct:TIM1_struct
-RECR	stm8s.h	2068;"	member	struct:__anon1::__anon2::__anon8
+RECR	stm8s.h	2068;"	member	struct:__anon2::__anon3::__anon9
 RESERVED	stm8s.h	157;"	member	struct:ADC1_struct
 RESERVED	stm8s.h	1857;"	member	struct:UART3_struct
 RESERVED	stm8s.h	235;"	member	struct:ADC2_struct
@@ -819,8 +838,8 @@ RESERVED2	stm8s.h	1461;"	member	struct:OPT_struct
 RESERVED2	stm8s.h	683;"	member	struct:TIM2_struct
 RESERVED2	stm8s.h	918;"	member	struct:TIM4_struct
 RESERVED3	stm8s.h	1388;"	member	struct:FLASH_struct
-RESET	stm8s_type.h	68;"	enumerator	enum:__anon11
-RFR	stm8s.h	1946;"	member	struct:__anon1
+RESET	stm8s_type.h	68;"	enumerator	enum:__anon12
+RFR	stm8s.h	1946;"	member	struct:__anon2
 RLR	stm8s.h	1476;"	member	struct:IWDG_struct
 RST	stm8s.h	2433;"	macro
 RST_BaseAddress	stm8s.h	2353;"	macro
@@ -832,16 +851,17 @@ RST_SR_WWDGF	stm8s.h	1548;"	macro
 RST_TypeDef	stm8s.h	1538;"	typedef	typeref:struct:RST_struct
 RST_struct	stm8s.h	1534;"	struct
 RXCRCR	stm8s.h	1567;"	member	struct:SPI_struct
-Reserved1	stm8s.h	2071;"	member	struct:__anon1::__anon2::__anon8
-Reserved2	stm8s.h	2077;"	member	struct:__anon1::__anon2::__anon8
-RxFIFO	stm8s.h	2100;"	member	union:__anon1::__anon2	typeref:struct:__anon1::__anon2::__anon9
+RX_BUFFER_SIZE1	main.c	17;"	macro	file:
+Reserved1	stm8s.h	2071;"	member	struct:__anon2::__anon3::__anon9
+Reserved2	stm8s.h	2077;"	member	struct:__anon2::__anon3::__anon9
+RxFIFO	stm8s.h	2100;"	member	union:__anon2::__anon3	typeref:struct:__anon2::__anon3::__anon10
 S16_MAX	stm8s_type.h	91;"	macro
 S16_MIN	stm8s_type.h	92;"	macro
 S32_MAX	stm8s_type.h	94;"	macro
 S32_MIN	stm8s_type.h	95;"	macro
 S8_MAX	stm8s_type.h	88;"	macro
 S8_MIN	stm8s_type.h	89;"	macro
-SET	stm8s_type.h	69;"	enumerator	enum:__anon11
+SET	stm8s_type.h	69;"	enumerator	enum:__anon12
 SMCR	stm8s.h	1123;"	member	struct:TIM6_struct
 SMCR	stm8s.h	469;"	member	struct:TIM1_struct
 SMCR	stm8s.h	980;"	member	struct:TIM5_struct
@@ -900,7 +920,7 @@ SR2	stm8s.h	811;"	member	struct:TIM3_struct
 SR2	stm8s.h	983;"	member	struct:TIM5_struct
 SR3	stm8s.h	1202;"	member	struct:I2C_struct
 STM8S208	stm8s.h	45;"	macro
-SUCCESS	stm8s_type.h	83;"	enumerator	enum:__anon13
+SUCCESS	stm8s_type.h	83;"	enumerator	enum:__anon14
 SWCR	stm8s.h	364;"	member	struct:CLK_struct
 SWIM	stm8s.h	2476;"	macro
 SWIMCCR	stm8s.h	372;"	member	struct:CLK_struct
@@ -909,12 +929,13 @@ SWIM_TypeDef	stm8s.h	1634;"	typedef	typeref:struct:SWIM_struct
 SWIM_struct	stm8s.h	1629;"	struct
 SWR	stm8s.h	363;"	member	struct:CLK_struct
 SetBit	stm8s.h	2523;"	macro
+T	main.c	40;"	variable
 TBR	stm8s.h	286;"	member	struct:AWU_struct
 TDRH	stm8s.h	164;"	member	struct:ADC1_struct
 TDRH	stm8s.h	238;"	member	struct:ADC2_struct
 TDRL	stm8s.h	165;"	member	struct:ADC1_struct
 TDRL	stm8s.h	239;"	member	struct:ADC2_struct
-TECR	stm8s.h	2067;"	member	struct:__anon1::__anon2::__anon8
+TECR	stm8s.h	2067;"	member	struct:__anon2::__anon3::__anon9
 TIM1	stm8s.h	2453;"	macro
 TIM1_ARRH_ARR	stm8s.h	634;"	macro
 TIM1_ARRH_RESET_VALUE	stm8s.h	524;"	macro
@@ -1190,7 +1211,7 @@ TIM4_PSCR_RESET_VALUE	stm8s.h	938;"	macro
 TIM4_SR1_RESET_VALUE	stm8s.h	935;"	macro
 TIM4_SR1_UIF	stm8s.h	957;"	macro
 TIM4_TypeDef	stm8s.h	927;"	typedef	typeref:struct:TIM4_struct
-TIM4_UPD_Interrupt	main.c	76;"	function	signature:(void)
+TIM4_UPD_Interrupt	main.c	353;"	function	signature:(void)
 TIM4_UPD_Interrupt	stm8_interrupt_vector.c	21;"	prototype	file:	signature:(void)
 TIM4_struct	stm8s.h	913;"	struct
 TIM5	stm8s.h	2468;"	macro
@@ -1304,16 +1325,21 @@ TIM6_TypeDef	stm8s.h	1131;"	typedef	typeref:struct:TIM6_struct
 TIM6_struct	stm8s.h	1119;"	struct
 TINY	stm8s.h	68;"	macro
 TINY	stm8s.h	73;"	macro
-TPR	stm8s.h	1945;"	member	struct:__anon1
+TPR	stm8s.h	1945;"	member	struct:__anon2
 TRISER	stm8s.h	1206;"	member	struct:I2C_struct
-TRUE	stm8s_type.h	63;"	enumerator	enum:__anon10
-TSR	stm8s.h	1944;"	member	struct:__anon1
+TRUE	stm8s_type.h	63;"	enumerator	enum:__anon11
+TSR	stm8s.h	1944;"	member	struct:__anon2
 TXCRCR	stm8s.h	1568;"	member	struct:SPI_struct
-TxMailbox	stm8s.h	1972;"	member	union:__anon1::__anon2	typeref:struct:__anon1::__anon2::__anon3
+TX_BUFFER_SIZE1	main.c	16;"	macro	file:
+TxMailbox	stm8s.h	1972;"	member	union:__anon2::__anon3	typeref:struct:__anon2::__anon3::__anon4
 U16_MAX	stm8s_type.h	90;"	macro
 U32_MAX	stm8s_type.h	93;"	macro
 U8_MAX	stm8s_type.h	87;"	macro
 UART1	stm8s.h	2442;"	macro
+UART1RxInterrupt	main.c	471;"	function	signature:(void)
+UART1RxInterrupt	stm8_interrupt_vector.c	25;"	prototype	file:	signature:(void)
+UART1TxInterrupt	main.c	448;"	function	signature:(void)
+UART1TxInterrupt	stm8_interrupt_vector.c	24;"	prototype	file:	signature:(void)
 UART1_BRR1_DIVM	stm8s.h	1689;"	macro
 UART1_BRR1_RESET_VALUE	stm8s.h	1662;"	macro
 UART1_BRR2_DIVF	stm8s.h	1692;"	macro
@@ -1483,6 +1509,11 @@ UART3_SR_TC	stm8s.h	1884;"	macro
 UART3_SR_TXE	stm8s.h	1883;"	macro
 UART3_TypeDef	stm8s.h	1860;"	typedef	typeref:struct:UART3_struct
 UART3_struct	stm8s.h	1847;"	struct
+UKU_MESS_STID	main.c	56;"	macro	file:
+UKU_MESS_STID_MASK	main.c	57;"	macro	file:
+Udb	main.c	39;"	variable
+Ui	main.c	39;"	variable
+Un	main.c	39;"	variable
 ValBit	stm8s.h	2532;"	macro
 WR	stm8s.h	1499;"	member	struct:WWDG_struct
 WWDG	stm8s.h	2435;"	macro
@@ -1496,6 +1527,7 @@ WWDG_WR_MSB	stm8s.h	1522;"	macro
 WWDG_WR_RESET_VALUE	stm8s.h	1508;"	macro
 WWDG_WR_W	stm8s.h	1523;"	macro
 WWDG_struct	stm8s.h	1496;"	struct
+XMAX	main.c	59;"	macro	file:
 _COSMIC_	stm8s.h	32;"	macro
 _COSMIC_	stm8s.h	34;"	macro
 _RAISONANCE_	stm8s.h	31;"	macro
@@ -1505,30 +1537,71 @@ __CONST	stm8s.h	74;"	macro
 __MODS0__	c:\program files\cosmic\cxstm8_32k\hstm8\mods0.h	11;"	macro
 __STM8S_H	stm8s.h	24;"	macro
 __STM8S_TYPE_H	stm8s_type.h	24;"	macro
+__STRING__	c:\program files\cosmic\cxstm8_32k\hstm8\string.h	6;"	macro
 _stext	stm8_interrupt_vector.c	20;"	prototype	file:
-_vectab	stm8_interrupt_vector.c	25;"	variable
-b100Hz	main.c	4;"	variable
-b10Hz	main.c	4;"	variable
-b1Hz	main.c	4;"	variable
-b2Hz	main.c	4;"	variable
-b5Hz	main.c	4;"	variable
-bool	stm8s_type.h	65;"	typedef	typeref:enum:__anon10
+_vectab	stm8_interrupt_vector.c	27;"	variable
+adc_buff	main.c	43;"	variable
+adc_buff_	main.c	43;"	variable
+adc_ch	main.c	44;"	variable
+adc_cnt	main.c	44;"	variable
+adc_plazma	main.c	45;"	variable
+adc_plazma_short	main.c	45;"	variable
+adr	main.c	49;"	variable
+adr_drv_stat	main.c	48;"	variable
+adress	main.c	49;"	variable
+adress_error	main.c	50;"	variable
+b100Hz	main.c	6;"	variable
+b10Hz	main.c	6;"	variable
+b1Hz	main.c	6;"	variable
+b2Hz	main.c	6;"	variable
+b5Hz	main.c	6;"	variable
+bCAN_RX	main.c	36;"	variable
+bOUT_FREE	main.c	28;"	variable
+bTX_FREE	main.c	34;"	variable
+bool	stm8s_type.h	65;"	typedef	typeref:enum:__anon11
+can_buff_rd_ptr	main.c	33;"	variable
+can_buff_wr_ptr	main.c	32;"	variable
+can_error_cnt	main.c	37;"	variable
+can_in_an	main.c	282;"	function	signature:(void)
+can_out_buff	main.c	31;"	variable
+can_transmit	main.c	225;"	function	signature:(unsigned short id_st,char data0,char data1,char data2,char data3,char data4,char data5,char data6,char data7)
+can_tx_hndl	main.c	247;"	function	signature:(void)
 disableInterrupts	stm8s.h	2491;"	macro
 disableInterrupts	stm8s.h	2500;"	macro
+eepera	c:\program files\cosmic\cxstm8_32k\hstm8\string.h	35;"	macro
 enableInterrupts	stm8s.h	2490;"	macro
 enableInterrupts	stm8s.h	2499;"	macro
+gran	main.c	87;"	function	signature:(signed short *adr, signed short min, signed short max)
+gran_char	main.c	80;"	function	signature:(signed char *adr, signed char min, signed char max)
 halt	stm8s.h	2497;"	macro
 halt	stm8s.h	2506;"	macro
-init_CAN	main.c	10;"	function	signature:(void)
+init_CAN	main.c	173;"	function	signature:(void)
 interrupt_handler	stm8_interrupt_vector.c	9;"	member	struct:interrupt_vector	file:
 interrupt_handler_t	stm8_interrupt_vector.c	5;"	typedef	file:
 interrupt_instruction	stm8_interrupt_vector.c	8;"	member	struct:interrupt_vector	file:
 interrupt_vector	stm8_interrupt_vector.c	7;"	struct	file:
-main	main.c	133;"	function
+led_ind	main.c	47;"	variable
+led_ind_cnt	main.c	46;"	variable
+link	main.c	52;"	variable
+link_cnt	main.c	52;"	variable
+main	main.c	504;"	function
+memchr	c:\program files\cosmic\cxstm8_32k\hstm8\string.h	28;"	prototype	signature:(void *s, char c, unsigned int n)
+memcmp	c:\program files\cosmic\cxstm8_32k\hstm8\string.h	22;"	prototype	signature:(void *s1, void *s2, unsigned int n)
+memcpy	c:\program files\cosmic\cxstm8_32k\hstm8\string.h	29;"	prototype	signature:(void *s1, void *s2, unsigned int n)
+memmove	c:\program files\cosmic\cxstm8_32k\hstm8\string.h	30;"	prototype	signature:(void *s1, void *s2, unsigned int n)
+memset	c:\program files\cosmic\cxstm8_32k\hstm8\string.h	31;"	prototype	signature:(void *s, char c, unsigned int n)
+mess	main.c	8;"	variable
 nop	stm8s.h	2494;"	macro
 nop	stm8s.h	2503;"	macro
+plazma_int	main.c	77;"	variable
+putchar1	main.c	128;"	function	signature:(char c)
 rim	stm8s.h	2492;"	macro
 rim	stm8s.h	2501;"	macro
+rs485_out_buff	main.c	14;"	variable
+rx_buffer	main.c	22;"	variable
+rx_counter1	main.c	23;"	variable
+rx_rd_index1	main.c	24;"	variable
+rx_wr_index1	main.c	24;"	variable
 s16	stm8s_type.h	29;"	typedef
 s32	stm8s_type.h	28;"	typedef
 s8	stm8s_type.h	30;"	typedef
@@ -1537,17 +1610,43 @@ sc32	stm8s_type.h	32;"	typedef
 sc8	stm8s_type.h	34;"	typedef
 sim	stm8s.h	2493;"	macro
 sim	stm8s.h	2502;"	macro
-t0_cnt0	main.c	3;"	variable
-t0_cnt1	main.c	3;"	variable
-t0_cnt2	main.c	3;"	variable
-t0_cnt3	main.c	3;"	variable
-t0_cnt4	main.c	3;"	variable
-t4_init	main.c	63;"	function	signature:(void)
+strcat	c:\program files\cosmic\cxstm8_32k\hstm8\string.h	14;"	prototype	signature:(char *s1, char *s2)
+strchr	c:\program files\cosmic\cxstm8_32k\hstm8\string.h	15;"	prototype	signature:(char *s, char c)
+strcmp	c:\program files\cosmic\cxstm8_32k\hstm8\string.h	23;"	prototype	signature:(char *s1, char *s2)
+strcpy	c:\program files\cosmic\cxstm8_32k\hstm8\string.h	16;"	prototype	signature:(char *s1, char *s2)
+strcspn	c:\program files\cosmic\cxstm8_32k\hstm8\string.h	25;"	prototype	signature:(char *s1, char *s2)
+strlen	c:\program files\cosmic\cxstm8_32k\hstm8\string.h	26;"	prototype	signature:(char *s)
+strncat	c:\program files\cosmic\cxstm8_32k\hstm8\string.h	17;"	prototype	signature:(char *s1, char *s2, unsigned int n)
+strncmp	c:\program files\cosmic\cxstm8_32k\hstm8\string.h	24;"	prototype	signature:(char *s1, char *s2, unsigned int n)
+strncpy	c:\program files\cosmic\cxstm8_32k\hstm8\string.h	18;"	prototype	signature:(char *s1, char *s2, unsigned int n)
+strpbrk	c:\program files\cosmic\cxstm8_32k\hstm8\string.h	19;"	prototype	signature:(char *s1, char *s2)
+strrchr	c:\program files\cosmic\cxstm8_32k\hstm8\string.h	20;"	prototype	signature:(char *s, char c)
+strspn	c:\program files\cosmic\cxstm8_32k\hstm8\string.h	27;"	prototype	signature:(char *s1, char *s2)
+strstr	c:\program files\cosmic\cxstm8_32k\hstm8\string.h	21;"	prototype	signature:(char *s1, char *s2)
+t0_cnt0	main.c	5;"	variable
+t0_cnt1	main.c	5;"	variable
+t0_cnt2	main.c	5;"	variable
+t0_cnt3	main.c	5;"	variable
+t0_cnt4	main.c	5;"	variable
+t4_init	main.c	340;"	function	signature:(void)
 trap	stm8s.h	2495;"	macro
 trap	stm8s.h	2504;"	macro
+tsOFF	main.h	2;"	enumerator	enum:__anon1
+tsON	main.h	2;"	enumerator	enum:__anon1
+tx_buffer1	main.c	19;"	variable
+tx_busy_cnt	main.c	35;"	variable
+tx_counter1	main.c	20;"	variable
+tx_rd_index1	main.c	21;"	variable
+tx_stat	main.c	25;"	variable
+tx_stat_cnt	main.c	26;"	variable
+tx_stat_enum	main.h	2;"	typedef	typeref:enum:__anon1
+tx_wd_cnt	main.c	27;"	variable
+tx_wr_index1	main.c	21;"	variable
 u16	stm8s_type.h	45;"	typedef
 u32	stm8s_type.h	44;"	typedef
 u8	stm8s_type.h	46;"	typedef
+uart1_init	main.c	97;"	function	signature:(void)
+uart1_out_adr	main.c	145;"	function	signature:(char *ptr, char len)
 uc16	stm8s_type.h	49;"	typedef
 uc32	stm8s_type.h	48;"	typedef
 uc8	stm8s_type.h	50;"	typedef

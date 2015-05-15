@@ -21,6 +21,8 @@ extern void _stext();     /* startup routine */
 extern @far @interrupt void TIM4_UPD_Interrupt (void);
 extern @far @interrupt void CAN_RX_Interrupt (void);
 extern @far @interrupt void CAN_TX_Interrupt (void);
+extern @far @interrupt void UART1TxInterrupt (void);
+extern @far @interrupt void UART1RxInterrupt (void);
 
 struct interrupt_vector const _vectab[] = {
 	{0x82, (interrupt_handler_t)_stext}, /* reset */
@@ -42,8 +44,8 @@ struct interrupt_vector const _vectab[] = {
 	{0x82, NonHandledInterrupt}, /* irq14 */
 	{0x82, NonHandledInterrupt}, /* irq15 */
 	{0x82, NonHandledInterrupt}, /* irq16 */
-	{0x82, NonHandledInterrupt}, /* irq17 */
-	{0x82, NonHandledInterrupt}, /* irq18 */
+	{0x82, UART1TxInterrupt}, 	 /* irq17 */
+	{0x82, UART1RxInterrupt}, /* irq18 */
 	{0x82, NonHandledInterrupt}, /* irq19 */
 	{0x82, NonHandledInterrupt}, /* irq20 */
 	{0x82, NonHandledInterrupt}, /* irq21 */

@@ -10,7 +10,7 @@ Dependencies=
 [Project1]
 Filename=..\..\..\kern_dev\soft2\stm\2\kern_stm_1.stp
 Dependencies=
-[Options]
-ActiveProject=fat52
-ActiveConfig=Debug
-AddSortedElements=1
+
+[Project2]
+Filename=..\..\..\fat42_dev\soft_v2\fat42_v2.stp
+Dependencies=
