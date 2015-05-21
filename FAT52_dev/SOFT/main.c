@@ -1,9 +1,11 @@
 #include "stm8s.h"
 #include "string.h"
 #include "main.h"
+#include <ctype.h>
+#include <math.h>
 
 char t0_cnt0=0,t0_cnt1=0,t0_cnt2=0,t0_cnt3=0,t0_cnt4=0;
-_Bool b100Hz, b10Hz, b5Hz, b2Hz, b1Hz;
+_Bool b100Hz, b10Hz, b5Hz, b2Hz, b1Hz,bBAT_REQ;
 
 u8 mess[14];
 
@@ -71,12 +73,31 @@ char link,link_cnt;
 #define PUTTM 		0xDE
 #define GETTM 		0xED 
 #define KLBR 		0xEE
+#define PUT_LB_TM1 	0xD1
+#define PUT_LB_TM2 	0xD2
+#define PUT_LB_TM3 	0xD3
+
 
 #define ON 0x55
 #define OFF 0xaa
 signed short plazma_int[3];
 
 short rs485_rx_cnt;
+char bRX485;
+
+short max_cell_volt;
+short min_cell_volt;
+short max_cell_temp;
+short min_cell_temp;
+short tot_bat_volt;
+short ch_curr;
+short dsch_curr;
+short s_o_c;
+short rat_cap;
+short	r_b_t;
+short	c_c_l_v;
+short	s_o_h;
+short	b_p_ser_num;
 
 //-----------------------------------------------
 void gran_char(signed char *adr, signed char min, signed char max)
@@ -170,7 +191,88 @@ for (i=0;i<len;i++)
 	}   
 }
 
+//-----------------------------------------------
+int str2int(char *ptr, char len)
+{
 
+
+@near char i;
+@near char temp[10]={0,0,0,0,0,0,0,0,0};
+@near int temp_out=0;
+@near char tt;
+//i=3;
+//disableInterrupts();
+for (i=0;i<len;i++)
+{
+	tt=*(ptr+i);
+	
+	if(isalnum(tt/**(ptr+i)*/))
+	{
+		if(isdigit(tt/**(ptr+i)*/))
+		{
+		temp[i]=tt/**(ptr+i)*/-'0';
+		}
+		if(islower(tt/**(ptr+i)*/))
+		{
+		temp[i]=tt/**(ptr+i)*/-'a'+10;
+		}
+		if(isupper(tt/**(ptr+i)*/))
+		{
+		temp[i]=tt;
+		temp[i]-=/**(ptr+i)*/'A';
+		temp[i]+=10;
+		}
+		//temp_out=temp[i];
+	}
+}
+
+for(i=len;i;i--)
+{
+	temp_out+= ((int)pow(16,len-i))*temp[i-1]; 
+}
+
+//temp_out+= temp[3]+(temp[2]*16)+(temp[1]*256);
+//enableInterrupts();
+return temp_out;
+}
+
+//-----------------------------------------------
+void rx485_in_an(void)
+{
+	if(bRX485==1)
+	{
+		max_cell_volt=str2int(&rx_buffer[13],4);
+		min_cell_volt=str2int(&rx_buffer[17],4);
+		max_cell_temp=str2int(&rx_buffer[21],2);
+		min_cell_temp=str2int(&rx_buffer[23],2);
+		tot_bat_volt=str2int(&rx_buffer[25],4);
+		ch_curr=str2int(&rx_buffer[29],4);
+		dsch_curr=str2int(&rx_buffer[33],4);
+		s_o_c=str2int(&rx_buffer[37],2);
+		rat_cap=str2int(&rx_buffer[39],4);
+		r_b_t=str2int(&rx_buffer[43],2);
+		c_c_l_v=str2int(&rx_buffer[45],4);
+		s_o_h=str2int(&rx_buffer[49],2);
+		b_p_ser_num=str2int(&rx_buffer[51],2);
+	}
+	else if(bRX485==1)
+	{
+		max_cell_volt=str2int(&rx_buffer[13],4);
+		min_cell_volt=str2int(&rx_buffer[17],4);
+		max_cell_temp=str2int(&rx_buffer[21],2);
+		min_cell_temp=str2int(&rx_buffer[23],2);
+		tot_bat_volt=str2int(&rx_buffer[25],4);
+		ch_curr=str2int(&rx_buffer[29],4);
+		dsch_curr=str2int(&rx_buffer[33],4);
+		s_o_c=str2int(&rx_buffer[37],2);
+		rat_cap=str2int(&rx_buffer[39],4);
+		r_b_t=str2int(&rx_buffer[43],2);
+		c_c_l_v=str2int(&rx_buffer[45],4);
+		s_o_h=str2int(&rx_buffer[49],2);
+		b_p_ser_num=str2int(&rx_buffer[51],2);
+	}
+bRX485=0;	
+}
 
 /* -------------------------------------------------------------------------- */
 void init_CAN(void) {
@@ -292,37 +394,25 @@ int tempI;
 
 //if((mess[0]==1)&&(mess[1]==2)&&(mess[2]==3)&&(mess[3]==4)&&(mess[4]==5)&&(mess[5]==6)&&(mess[6]==7)&&(mess[7]==8))can_transmit1(1,2,3,4,5,6,7//,8);
 
+//adress=1;
 
-if((mess[6]==adress)&&(mess[7]==adress)&&(mess[8]==GETTM))	
+if((mess[6]==19)&&(mess[7]==19)&&(mess[8]==GETTM))	
 	{ 
-	
+	GPIOD->DDR|=(1<<7);
+	GPIOD->CR1|=(1<<7);
+	GPIOD->CR2&=~(1<<7);	
+	GPIOD->ODR^=(1<<7);
 	can_error_cnt=0;
 	
-//	bMAIN=0;
-// 	flags_tu=mess[9];
-
- 		 
-// 	if(flags_tu&0b00000010) flags|=0b01000000;
- 	//else flags&=0b10111111; 
- 		
-// 	vol_u_temp=mess[10]+mess[11]*256;
- //	vol_i_temp=mess[12]+mess[13]*256;  
- 	
- 	//I=1234;
-    //	Un=6543;
- 	//Ui=6789;
- 	//T=246;
- 	//flags=0x55;
- 	//_x_=33;
- 	//rotor_int=1000;
-	//plazma_int[2]=T;
- 	//rotor_int=flags_tu+(((short)flags)<<8);
+	//T=tot_bat_volt;
 	
-	//Un=1000;
-	//Ui=500;
+	//max_cell_volt=s_o_c;
 	
-	can_transmit(0x18e,adress,PUTTM1,*(((char*)&I)+1),*((char*)&I),*(((char*)&Un)+1),*((char*)&Un),*(((char*)&Ui)+1),*((char*)&Ui));
-	can_transmit(0x18e,adress,PUTTM2,T,0,0,0,*(((char*)&plazma_int[2])+1),*((char*)&plazma_int[2]));
+	//max_cell_volt=35000;
+	
+	can_transmit(0x18e,PUT_LB_TM1,*(((char*)&max_cell_volt)+1),*((char*)&max_cell_volt),*(((char*)&min_cell_volt)+1),*((char*)&min_cell_volt),*(((char*)&tot_bat_volt)+1),*((char*)&tot_bat_volt),(unsigned char)max_cell_temp);
+	can_transmit(0x18e,PUT_LB_TM2,*(((char*)&ch_curr)+1),*((char*)&ch_curr),*(((char*)&dsch_curr)+1),*((char*)&dsch_curr),*(((char*)&rat_cap)+1),*((char*)&rat_cap),(unsigned char)min_cell_temp);
+	can_transmit(0x18e,PUT_LB_TM3,(unsigned char)s_o_h,(unsigned char)s_o_c,*(((char*)&c_c_l_v)+1),*((char*)&c_c_l_v),(unsigned char)r_b_t,(unsigned char)b_p_ser_num,0);
      link_cnt=0;
      link=ON;
      
@@ -415,7 +505,14 @@ else
 //***********************************************
 @far @interrupt void CAN_RX_Interrupt (void) 
 {
-	
+
+			
+
+		/*GPIOB->DDR|=(1<<1);
+		GPIOB->CR1|=(1<<1);
+		GPIOB->CR2&=~(1<<1);	
+		GPIOB->ODR^=(1<<1);	*/
+		
 	
 CAN->PSR= 7;									// page 7 - read messsage
 //while (CAN->RFR & CAN_RFR_FMP01) {				// make up all received messages
@@ -489,8 +586,11 @@ if (rx_status & (UART1_SR_RXNE))
 {
 
 temp=rx_data;
+rx_buffer[rs485_rx_cnt]=rx_data;
+rs485_rx_cnt++;
 
-rx_buffer[rs485_rx_cnt++]=rx_data;
+
+
 /*if(tx_stat==tsOFF)
 	{
 	gran(&rx_wr_index,0,RX_BUFFER_SIZE); 
@@ -503,12 +603,11 @@ rx_buffer[rs485_rx_cnt++]=rx_data;
 	}*/
 	
 	//;
-	if((rx_data==0x0d)&&(rs485_rx_cnt==298))
-	{
-			//Ui=rs485_rx_cnt;
-			rs485_rx_cnt=0;
-			bRX485=1;
-	}
+	if((rx_data==0x0d)&&(rs485_rx_cnt==298))bRX485=1;
+	if((rx_data==0x0d)&&(rs485_rx_cnt==264))bRX485=2;
+	
+	if(rx_data==0x0d)rs485_rx_cnt=0;	
+	
 }
 
 
@@ -550,17 +649,23 @@ GPIOA->CR2&=~(1<<5);*/
 
 uart1_init();
 
-adress=1;
+adress=19;
 
 enableInterrupts();
 	while (1)
 	{
-
+	
+	if(bRX485)
+	{
+		rx485_in_an();
+	}
 
 	if(bCAN_RX)
 		{
 		bCAN_RX=0;
-		can_in_an();	
+		can_in_an();
+
+
 		}
 	
 
@@ -574,19 +679,76 @@ enableInterrupts();
 		b10Hz=0;
 	
 			can_tx_hndl();
+			
+	
+			
       	}
       	
 	if(b2Hz)
 		{
 		b2Hz=0;
 		
+		if(bBAT_REQ)
+		{
+			bBAT_REQ=0;
+			
+			rs485_out_buff[0]=0x7e;
+			rs485_out_buff[1]=0x31;
+			rs485_out_buff[2]=0x31;
+			rs485_out_buff[3]=0x30;
+			rs485_out_buff[4]=0x31;
+			rs485_out_buff[5]=0x44;
+			rs485_out_buff[6]=0x30;
+			rs485_out_buff[7]=0x38;
+			rs485_out_buff[8]=0x32;
+			rs485_out_buff[9]=0x45;
+			rs485_out_buff[10]=0x30;
+			rs485_out_buff[11]=0x30;
+			rs485_out_buff[12]=0x32;
+			rs485_out_buff[13]=0x30;
+			rs485_out_buff[14]=0x31;
+			rs485_out_buff[15]=0x46;
+			rs485_out_buff[16]=0x44;
+			rs485_out_buff[17]=0x32;
+			rs485_out_buff[18]=0x37;
+			rs485_out_buff[19]=0x0d;
+			
+			uart1_out_adr(rs485_out_buff,20);
+		}
+		else
+		{
+			bBAT_REQ=1;
+			
+			rs485_out_buff[0]=0x7e;
+			rs485_out_buff[1]=0x31;
+			rs485_out_buff[2]=0x31;
+			rs485_out_buff[3]=0x30;
+			rs485_out_buff[4]=0x31;
+			rs485_out_buff[5]=0x44;
+			rs485_out_buff[6]=0x30;
+			rs485_out_buff[7]=0x38;
+			rs485_out_buff[8]=0x33;
+			rs485_out_buff[9]=0x45;
+			rs485_out_buff[10]=0x30;
+			rs485_out_buff[11]=0x30;
+			rs485_out_buff[12]=0x32;
+			rs485_out_buff[13]=0x30;
+			rs485_out_buff[14]=0x31;
+			rs485_out_buff[15]=0x46;
+			rs485_out_buff[16]=0x44;
+			rs485_out_buff[17]=0x32;
+			rs485_out_buff[18]=0x36;
+			rs485_out_buff[19]=0x0d;
+	
+			uart1_out_adr(rs485_out_buff,20);
+		}
 		}
       	
 	if(b1Hz)
 		{
 		b1Hz=0;
 		
-		rs485_out_buff[0]=0x7e;
+		/*rs485_out_buff[0]=0x7e;
 		rs485_out_buff[1]=0x31;
 		rs485_out_buff[2]=0x31;
 		rs485_out_buff[3]=0x30;
@@ -607,17 +769,9 @@ enableInterrupts();
 		rs485_out_buff[18]=0x37;
 		rs485_out_buff[19]=0x0d;
 		
-		uart1_out_adr(rs485_out_buff,20);
+		uart1_out_adr(rs485_out_buff,20);*/
 		
-		GPIOB->DDR|=(1<<0);
-		GPIOB->CR1|=(1<<0);
-		GPIOB->CR2&=~(1<<0);	
-		GPIOB->ODR^=(1<<0);			
 
-		GPIOB->DDR|=(1<<1);
-		GPIOB->CR1|=(1<<1);
-		GPIOB->CR2&=~(1<<1);	
-		GPIOB->ODR^=(1<<1);	
 		
 		}
 

@@ -14,3 +14,7 @@ Dependencies=
 [Project2]
 Filename=..\..\..\fat42_dev\soft_v2\fat42_v2.stp
 Dependencies=
+[Options]
+ActiveProject=fat52
+ActiveConfig=Debug
+AddSortedElements=1
