@@ -30,7 +30,7 @@ char tx_wd_cnt=100;
 char bOUT_FREE;
 
 // ¿Õ
-char can_out_buff[4][16];
+char can_out_buff[6][16];
 char can_buff_wr_ptr;
 char can_buff_rd_ptr;
 char bTX_FREE=1;
@@ -76,6 +76,7 @@ char link,link_cnt;
 #define PUT_LB_TM1 	0xD1
 #define PUT_LB_TM2 	0xD2
 #define PUT_LB_TM3 	0xD3
+#define PUT_LB_TM4 	0xD4
 
 
 #define ON 0x55
@@ -98,6 +99,10 @@ short	r_b_t;
 short	c_c_l_v;
 short	s_o_h;
 short	b_p_ser_num;
+unsigned char flags_byte0,flags_byte1;
+unsigned char rs485_cnt=0;
+_Bool bRS485ERR;
+//char plazma_cnt;
 
 //-----------------------------------------------
 void gran_char(signed char *adr, signed char min, signed char max)
@@ -188,7 +193,9 @@ tx_stat=tsON;
 for (i=0;i<len;i++)
 	{
 	putchar1(UOB1[i]);
-	}   
+	} 
+
+rs485_cnt++;
 }
 
 //-----------------------------------------------
@@ -254,22 +261,19 @@ void rx485_in_an(void)
 		c_c_l_v=str2int(&rx_buffer[45],4);
 		s_o_h=str2int(&rx_buffer[49],2);
 		b_p_ser_num=str2int(&rx_buffer[51],2);
+		
+		rs485_cnt=0;
+		bRS485ERR=0;
+
 	}
-	else if(bRX485==1)
+	else if(bRX485==2)
 	{
-		max_cell_volt=str2int(&rx_buffer[13],4);
-		min_cell_volt=str2int(&rx_buffer[17],4);
-		max_cell_temp=str2int(&rx_buffer[21],2);
-		min_cell_temp=str2int(&rx_buffer[23],2);
-		tot_bat_volt=str2int(&rx_buffer[25],4);
-		ch_curr=str2int(&rx_buffer[29],4);
-		dsch_curr=str2int(&rx_buffer[33],4);
-		s_o_c=str2int(&rx_buffer[37],2);
-		rat_cap=str2int(&rx_buffer[39],4);
-		r_b_t=str2int(&rx_buffer[43],2);
-		c_c_l_v=str2int(&rx_buffer[45],4);
-		s_o_h=str2int(&rx_buffer[49],2);
-		b_p_ser_num=str2int(&rx_buffer[51],2);
+		flags_byte0=str2int(&rx_buffer[49],2);
+		flags_byte1++;//=str2int(&rx_buffer[51],2);
+		
+		rs485_cnt=0;
+		bRS485ERR=0;
+
 	}
 bRX485=0;	
 }
@@ -330,7 +334,7 @@ void init_CAN(void) {
 void can_transmit(unsigned short id_st,char data0,char data1,char data2,char data3,char data4,char data5,char data6,char data7)
 {
 
-if((can_buff_wr_ptr<0)||(can_buff_wr_ptr>3))can_buff_wr_ptr=0;
+if((can_buff_wr_ptr<0)||(can_buff_wr_ptr>4))can_buff_wr_ptr=0;
 
 can_out_buff[can_buff_wr_ptr][0]=(char)(id_st>>6);
 can_out_buff[can_buff_wr_ptr][1]=(char)(id_st<<2);
@@ -345,7 +349,7 @@ can_out_buff[can_buff_wr_ptr][8]=data6;
 can_out_buff[can_buff_wr_ptr][9]=data7;
 
 can_buff_wr_ptr++;
-if(can_buff_wr_ptr>3)can_buff_wr_ptr=0;
+if(can_buff_wr_ptr>4)can_buff_wr_ptr=0;
 } 
 
 //-----------------------------------------------
@@ -412,7 +416,8 @@ if((mess[6]==19)&&(mess[7]==19)&&(mess[8]==GETTM))
 	
 	can_transmit(0x18e,PUT_LB_TM1,*(((char*)&max_cell_volt)+1),*((char*)&max_cell_volt),*(((char*)&min_cell_volt)+1),*((char*)&min_cell_volt),*(((char*)&tot_bat_volt)+1),*((char*)&tot_bat_volt),(unsigned char)max_cell_temp);
 	can_transmit(0x18e,PUT_LB_TM2,*(((char*)&ch_curr)+1),*((char*)&ch_curr),*(((char*)&dsch_curr)+1),*((char*)&dsch_curr),*(((char*)&rat_cap)+1),*((char*)&rat_cap),(unsigned char)min_cell_temp);
-	can_transmit(0x18e,PUT_LB_TM3,(unsigned char)s_o_h,(unsigned char)s_o_c,*(((char*)&c_c_l_v)+1),*((char*)&c_c_l_v),(unsigned char)r_b_t,(unsigned char)b_p_ser_num,0);
+	can_transmit(0x18e,PUT_LB_TM3,(unsigned char)s_o_h,(unsigned char)s_o_c,*(((char*)&c_c_l_v)+1),*((char*)&c_c_l_v),(unsigned char)r_b_t,(unsigned char)flags_byte0,(unsigned char)flags_byte1);
+	can_transmit(0x18e,PUT_LB_TM4,(unsigned char)bRS485ERR,(unsigned char)rs485_cnt,*(((char*)&c_c_l_v)+1),*((char*)&c_c_l_v),(unsigned char)r_b_t,(unsigned char)flags_byte0,(unsigned char)flags_byte1);
      link_cnt=0;
      link=ON;
      
@@ -748,6 +753,12 @@ enableInterrupts();
 		{
 		b1Hz=0;
 		
+		
+		if(rs485_cnt>=5)
+			{
+			rs485_cnt=5;
+			bRS485ERR=1;
+			}
 		/*rs485_out_buff[0]=0x7e;
 		rs485_out_buff[1]=0x31;
 		rs485_out_buff[2]=0x31;
@@ -772,7 +783,7 @@ enableInterrupts();
 		uart1_out_adr(rs485_out_buff,20);*/
 		
 
-		
+		//plazma_cnt++;
 		}
 
 	}
