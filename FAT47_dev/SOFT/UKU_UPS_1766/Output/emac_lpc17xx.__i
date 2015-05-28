@@ -1,0 +1,1 @@
+-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -IC:\Keil\ARM\RV31\INC -I "C:\Keil\ARM\CMSIS\Include" -I "C:\Keil\ARM\INC\NXP\LPC17xx" -o ".\Output\emac_lpc17xx.o" --omf_browse ".\Output\emac_lpc17xx.crf" --depend ".\Output\emac_lpc17xx.d" "C:\Keil\ARM\Boards\Keil\MCB1700\RL\TCPnet\Library\EMAC_LPC17xx.c"

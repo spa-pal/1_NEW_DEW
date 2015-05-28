@@ -1,0 +1,324 @@
+
+IBP DEFINITIONS ::= BEGIN
+
+IMPORTS
+	enterprises, IpAddress
+		FROM RFC1155-SMI
+	OBJECT-TYPE
+		FROM RFC-1212
+	TRAP-TYPE
+		FROM RFC-1215
+	DisplayString
+		FROM RFC-1213;
+
+
+-- Системы ПромАвтоматики
+
+entSPA-SIB           OBJECT IDENTIFIER ::= { enterprises 33183 }
+ibp                  OBJECT IDENTIFIER ::= { entSPA-SIB 25 }
+displayDeviceInfo    OBJECT IDENTIFIER ::= { ibp 1 }
+displayMainPower     OBJECT IDENTIFIER ::= { ibp 2 }
+displayInverter      OBJECT IDENTIFIER ::= { ibp 3 }
+displayBattery       OBJECT IDENTIFIER ::= { ibp 4 }
+displayEthernetSettings  OBJECT IDENTIFIER ::= { ibp 7 }
+displaySNMPSettings  OBJECT IDENTIFIER ::= { ibp 8 }
+displayTrapSettings  OBJECT IDENTIFIER ::= { ibp 9 }
+
+displayDeviceSerial  OBJECT-TYPE
+	SYNTAX     INTEGER (0..65535)
+	ACCESS     read-only
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displayDeviceInfo 1 }
+
+displayDeviceLocation  OBJECT-TYPE
+	SYNTAX     DisplayString (SIZE(69))
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displayDeviceInfo 2 }
+
+displayDeviceInfoResetCounter  OBJECT-TYPE
+	SYNTAX     INTEGER
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displayDeviceInfo 3 }
+
+displayMainVoltage  OBJECT-TYPE
+	SYNTAX     INTEGER (0..65535)
+	ACCESS     read-only
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displayMainPower 1 }
+
+displayMainPowerOnOff  OBJECT-TYPE
+	SYNTAX     INTEGER
+	ACCESS     read-only
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displayMainPower 2 }
+
+displayInverterVoltage  OBJECT-TYPE
+	SYNTAX     INTEGER (0..65535)
+	ACCESS     read-only
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displayInverter 1 }
+
+displayInverterCurrent  OBJECT-TYPE
+	SYNTAX     INTEGER (0..65535)
+	ACCESS     read-only
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displayInverter 2 }
+
+displayInverterTemperature  OBJECT-TYPE
+	SYNTAX     INTEGER (0..65535)
+	ACCESS     read-only
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displayInverter 3 }
+
+displayBatteryVoltage  OBJECT-TYPE
+	SYNTAX     INTEGER
+	ACCESS     read-only
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displayBattery 1 }
+
+displayBatteryCurrent  OBJECT-TYPE
+	SYNTAX     INTEGER
+	ACCESS     read-only
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displayBattery 2 }
+
+displayEthernetSettingsIPAddress  OBJECT-TYPE
+	SYNTAX     IpAddress
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displayEthernetSettings 1 }
+
+displayEthernetSettingsNetMask  OBJECT-TYPE
+	SYNTAX     IpAddress
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displayEthernetSettings 2 }
+
+displayEthernetSettingsDefGatw  OBJECT-TYPE
+	SYNTAX     IpAddress
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displayEthernetSettings 3 }
+
+displaySNMPSettingsReadPort  OBJECT-TYPE
+	SYNTAX     INTEGER
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displaySNMPSettings 1 }
+
+displaySNMPSettingsWritePort  OBJECT-TYPE
+	SYNTAX     INTEGER
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displaySNMPSettings 2 }
+
+displaySNMPSettingsReadCommunity  OBJECT-TYPE
+	SYNTAX     OCTET STRING
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displaySNMPSettings 3 }
+
+displaySNMPSettingsWriteCommunity  OBJECT-TYPE
+	SYNTAX     OCTET STRING
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displaySNMPSettings 4 }
+
+displaySNMPSettingsTrapServer1  OBJECT-TYPE
+	SYNTAX     IpAddress
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displaySNMPSettings 5 }
+
+displaySNMPSettingsTrapServer2  OBJECT-TYPE
+	SYNTAX     IpAddress
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displaySNMPSettings 6 }
+
+displaySNMPSettingsTrapServer3  OBJECT-TYPE
+	SYNTAX     IpAddress
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displaySNMPSettings 7 }
+
+displaySNMPSettingsTrapServer4  OBJECT-TYPE
+	SYNTAX     IpAddress
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displaySNMPSettings 8 }
+
+displaySNMPSettingsTrapServer5  OBJECT-TYPE
+	SYNTAX     IpAddress
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displaySNMPSettings 9 }
+
+displayMainPowerTrapSendOfAv  OBJECT-TYPE
+	SYNTAX     INTEGER
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displayTrapSettings 1 }
+
+displayMainPowerTrapSendOfNoAv  OBJECT-TYPE
+	SYNTAX     INTEGER
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displayTrapSettings 2 }
+
+displayInvTemperatureTrapSendOfAv  OBJECT-TYPE
+	SYNTAX     INTEGER
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displayTrapSettings 3 }
+
+displayInvTemperatureTrapSendOfNoAv  OBJECT-TYPE
+	SYNTAX     INTEGER
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displayTrapSettings 4 }
+
+displayLogIn5TrapSendOfAv  OBJECT-TYPE
+	SYNTAX     INTEGER
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displayTrapSettings 5 }
+
+displayLogIn6TrapSendOfAv  OBJECT-TYPE
+	SYNTAX     INTEGER
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displayTrapSettings 6 }
+
+displayLogIn1TrapSendOfNoAv  OBJECT-TYPE
+	SYNTAX     INTEGER
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displayTrapSettings 7 }
+
+displayLogIn2TrapSendOfNoAv  OBJECT-TYPE
+	SYNTAX     INTEGER
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displayTrapSettings 8 }
+
+displayLogIn3TrapSendOfNoAv  OBJECT-TYPE
+	SYNTAX     INTEGER
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displayTrapSettings 9 }
+
+displayLogIn4TrapSendOfNoAv  OBJECT-TYPE
+	SYNTAX     INTEGER
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displayTrapSettings 10 }
+
+displayLogIn5TrapSendOfNoAv  OBJECT-TYPE
+	SYNTAX     INTEGER
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displayTrapSettings 11 }
+
+displayLogIn6TrapSendOfNoAv  OBJECT-TYPE
+	SYNTAX     INTEGER
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displayTrapSettings 12 }
+
+displayHummidityTrapSendOfAv  OBJECT-TYPE
+	SYNTAX     INTEGER
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displayTrapSettings 13 }
+
+displayHummidityTrapSendOfNoAv  OBJECT-TYPE
+	SYNTAX     INTEGER
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displayTrapSettings 14 }
+
+alarmTrap  TRAP-TYPE
+	ENTERPRISE entSPA-SIB
+	DESCRIPTION 
+		""
+	::= 3
+END
+
+
+-- This MIB was created using NuDesign Team's Visual MIBuilder (Ver 4.7).
+

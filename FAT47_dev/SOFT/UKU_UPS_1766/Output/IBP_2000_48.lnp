@@ -1,0 +1,4 @@
+--cpu Cortex-M3 ".\output\startup_lpc17xx.o" ".\output\net_config_http.o" ".\output\core_cm3.o" ".\output\system_lpc17xx.o" ".\output\main.o" ".\output\ports_operations.o" ".\output\eeprom_map.o" ".\output\control.o" ".\output\gran.o" ".\output\memo.o" ".\output\avar_hndl.o" ".\output\snmp_data_file.o" ".\output\ind_drv.o" ".\output\beeper_drv.o" ".\output\25lc640.o" ".\output\full_can.o" ".\output\led_break_drv.o" "C:\Keil\ARM\RV31\LIB\TCP_CM3.lib" ".\output\emac_lpc17xx.o" ".\output\snmp_mib.o" --library_type=microlib --strict --scatter ".\Output\IBP_2000_48.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\IBP_2000_48.map" -o ".\Output\IBP_2000_48.axf"

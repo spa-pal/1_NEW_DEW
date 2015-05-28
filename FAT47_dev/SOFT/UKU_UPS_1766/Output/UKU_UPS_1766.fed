@@ -1,0 +1,148 @@
+;#<FEEDBACK># ARM Linker, 4.1 [Build 644]: Last Updated: Thu Nov 29 15:37:10 2012
+;VERSION 0.2
+;FILE 25lc640.o
+__asm___9_25lc640_c_spi1____REV16 <= USED 0
+__asm___9_25lc640_c_spi1____REVSH <= USED 0
+lc640_read_long <= USED 0
+lc640_read_long_ptr <= USED 0
+lc640_read_str <= USED 0
+lc640_write_long <= USED 0
+lc640_write_long_ptr <= USED 0
+;FILE at_arp.o
+arp_cache_ip <= USED 0
+arp_get_adr <= USED 0
+;FILE at_ethernet.o
+eth_get_adr <= USED 0
+;FILE at_icmp.o
+;FILE at_ip.o
+;FILE at_lib.o
+asc_to_b64 <= USED 0
+b64_to_asc <= USED 0
+bin_to_b64 <= USED 0
+get_crc <= USED 0
+get_u16 <= USED 0
+mem_rcopy <= USED 0
+str_crc <= USED 0
+str_pos <= USED 0
+str_scomp <= USED 0
+str_ucomp <= USED 0
+str_up_case <= USED 0
+;FILE at_mem.o
+;FILE at_snmp.o
+snmp_set_community <= USED 0
+snmp_trap <= USED 0
+;FILE at_system.o
+;FILE at_tcp.o
+tcp_abort <= USED 0
+tcp_check_send <= USED 0
+tcp_close <= USED 0
+tcp_connect <= USED 0
+tcp_get_adr <= USED 0
+tcp_get_buf <= USED 0
+tcp_get_free_port <= USED 0
+tcp_get_socket <= USED 0
+tcp_get_state <= USED 0
+tcp_listen <= USED 0
+tcp_max_dsize <= USED 0
+tcp_release_socket <= USED 0
+tcp_reset_tout <= USED 0
+tcp_reset_window <= USED 0
+tcp_send <= USED 0
+tcp_set_dack <= USED 0
+;FILE at_udp.o
+udp_close <= USED 0
+udp_mcast_ttl <= USED 0
+udp_release_socket <= USED 0
+;FILE avar_hndl.o
+__asm___11_avar_hndl_c_ef0810c9____REV16 <= USED 0
+__asm___11_avar_hndl_c_ef0810c9____REVSH <= USED 0
+;FILE beeper_drv.o
+__asm___12_beeper_drv_c_restart____REV16 <= USED 0
+__asm___12_beeper_drv_c_restart____REVSH <= USED 0
+;FILE button_action.o
+;FILE button_drv.o
+__asm___12_button_drv_c_but____REV16 <= USED 0
+__asm___12_button_drv_c_but____REVSH <= USED 0
+;FILE control.o
+__asm___9_control_c_fdaab152____REV16 <= USED 0
+__asm___9_control_c_fdaab152____REVSH <= USED 0
+samokalibr_hndl <= USED 0
+samokalibr_init <= USED 0
+;FILE emac_lpc17xx.o
+__asm___14_EMAC_LPC17xx_c_f63b8310____REV16 <= USED 0
+__asm___14_EMAC_LPC17xx_c_f63b8310____REVSH <= USED 0
+;FILE full_can.o
+CRC1_in <= USED 0
+CRC1_out <= USED 0
+__asm___10_full_can_c_0f077f62____REV16 <= USED 0
+__asm___10_full_can_c_0f077f62____REVSH <= USED 0
+can2_init <= USED 0
+can_adr_hndl <= USED 0
+can_isr_tx2 <= USED 0
+;FILE gran.o
+gran_char <= USED 0
+gran_long <= USED 0
+gran_ring <= USED 0
+gran_ring_char <= USED 0
+;FILE ind_drv.o
+__asm___9_ind_drv_c_channel____REV16 <= USED 0
+__asm___9_ind_drv_c_channel____REVSH <= USED 0
+;FILE led_break_drv.o
+__asm___15_led_break_drv_c_620fa19f____REV16 <= USED 0
+__asm___15_led_break_drv_c_620fa19f____REVSH <= USED 0
+;FILE main.o
+__asm___6_main_c_sm_mont____REV16 <= USED 0
+__asm___6_main_c_sm_mont____REVSH <= USED 0
+;FILE memo.o
+;FILE net_config_http.o
+;FILE ports_operations.o
+__asm___18_ports_operations_c_b265311c____REV16 <= USED 0
+__asm___18_ports_operations_c_b265311c____REVSH <= USED 0
+clr_p0 <= USED 0
+clr_p1 <= USED 0
+clr_p2 <= USED 0
+clr_p3 <= USED 0
+clr_p4 <= USED 0
+dir_in_p0 <= USED 0
+dir_in_p1 <= USED 0
+dir_in_p2 <= USED 0
+dir_in_p3 <= USED 0
+dir_in_p4 <= USED 0
+dir_out_p0 <= USED 0
+dir_out_p1 <= USED 0
+dir_out_p2 <= USED 0
+dir_out_p3 <= USED 0
+dir_out_p4 <= USED 0
+in_p0 <= USED 0
+in_p1 <= USED 0
+set_p0 <= USED 0
+set_p1 <= USED 0
+set_p2 <= USED 0
+set_p3 <= USED 0
+set_p4 <= USED 0
+;FILE snmp_data_file.o
+__asm___16_snmp_data_file_c_snmp_log____REV16 <= USED 0
+__asm___16_snmp_data_file_c_snmp_log____REVSH <= USED 0
+datatime2str <= USED 0
+event2snmp <= USED 0
+snmp_command_execute <= USED 0
+snmp_control_current_write <= USED 0
+snmp_location_write <= USED 0
+snmp_main_bps_write <= USED 0
+snmp_max_charge_current_write <= USED 0
+snmp_max_current_koef_write <= USED 0
+snmp_max_temperature_write <= USED 0
+snmp_trap_send <= USED 0
+snmp_u_0_grad_write <= USED 0
+snmp_u_20_grad_write <= USED 0
+snmp_u_min_power_write <= USED 0
+snmp_u_sign_write <= USED 0
+snmp_u_withouth_bat_write <= USED 0
+snmp_up_charge_koef_write <= USED 0
+;FILE snmp_mib.o
+__asm___10_SNMP_MIB_c_aaa____REV16 <= USED 0
+__asm___10_SNMP_MIB_c_aaa____REVSH <= USED 0
+;FILE startup_lpc17xx.o
+;FILE system_lpc17xx.o
+__asm___16_system_LPC17xx_c_6b61f0cc____REV16 <= USED 0
+__asm___16_system_LPC17xx_c_6b61f0cc____REVSH <= USED 0
