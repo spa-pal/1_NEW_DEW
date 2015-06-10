@@ -30,6 +30,6 @@
 
 
 
-//void ind(void);
+void ind_drv(void);
 
 #endif

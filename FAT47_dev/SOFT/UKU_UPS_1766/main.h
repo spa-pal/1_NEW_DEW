@@ -337,6 +337,7 @@ extern stuct_ind a,b[10];
 
 signed short abs_pal(signed short in);
 void ADC_IRQHandler(void);
+void delay_us(long del);
 
 
 #define OID_ENTERPRISE 	OID0(1,3), 6, 1, 4, 1, 130, 131, 31

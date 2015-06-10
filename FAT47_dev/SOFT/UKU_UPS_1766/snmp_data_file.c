@@ -708,7 +708,7 @@ temp_str[14]=(min/10)+0x30;
 
 temp_str[18]=(sec%10)+0x30;
 temp_str[17]=(sec/10)+0x30;
-return temp_str;
+return &temp_str[0];
 }
 
 //-----------------------------------------------

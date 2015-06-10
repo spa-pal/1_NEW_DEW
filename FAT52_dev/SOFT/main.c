@@ -754,9 +754,9 @@ enableInterrupts();
 		b1Hz=0;
 		
 		
-		if(rs485_cnt>=5)
+		if(rs485_cnt>=10)
 			{
-			rs485_cnt=5;
+			rs485_cnt=10;
 			bRS485ERR=1;
 			}
 		/*rs485_out_buff[0]=0x7e;

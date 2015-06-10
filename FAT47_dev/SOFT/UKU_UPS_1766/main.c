@@ -17,6 +17,10 @@
 #include "rtl.h"
 #include "snmp_data_file.h"
 #include "eeprom_map.h"
+#include "ssd1306.h"
+#include "i2c.h"
+#include "ssd_1306.h"
+#include "simbol.h"
 
 extern LOCALM localm[];
 extern U8 own_hw_adr[];
@@ -40,7 +44,8 @@ ind_mode level_U_mode,level_I_mode,level_Q_mode;
 //»ндикаци€
 stuct_ind a,b[10];
 short ind_out[3];
-
+char lcd_bitmap[1024];
+char lcd_buffer[LCD_SIZE+100]={	"01230000000000000000000000000000000000000000000000000000000000"};
 //-----—осто€ние
 //typedef enum work{power_net,acb} work;
 work work_at=power_net;
@@ -273,6 +278,16 @@ if(ind==iDef_net_set)
 }
 
 //-----------------------------------------------
+void delay_us(long del)
+{
+long temp;
+temp=5*del;
+
+while (--temp);
+return;
+}
+
+//-----------------------------------------------
 void Delay (unsigned long tick) 
 {       
 unsigned long syst;
@@ -292,6 +307,86 @@ while (--syst);
 #define butLR		250
 #define butE		247
 #define butE_		247-128
+
+
+//-----------------------------------------------
+void bitmap_hndl(void)
+{
+short x,ii,i;
+unsigned int ptr_bitmap;
+static char ptr_cnt,ptr_cnt1,ptr_cnt2,ptr_cnt3,ptr_cnt4;
+
+for(ii=0;ii<488;ii++)
+	{
+	lcd_bitmap[ii]=0x00;
+	}
+
+	{
+	for(i=0;i<4;i++)
+		{
+		ptr_bitmap=122*(unsigned)i;
+		for(x=(20*i);x<((20*i)+20);x++)
+	 		{
+			lcd_bitmap[ptr_bitmap++]=caracter[(unsigned)lcd_buffer[x]*6];
+			lcd_bitmap[ptr_bitmap++]=caracter[((unsigned)lcd_buffer[x]*6)+1];
+			lcd_bitmap[ptr_bitmap++]=caracter[((unsigned)lcd_buffer[x]*6)+2];
+			lcd_bitmap[ptr_bitmap++]=caracter[((unsigned)lcd_buffer[x]*6)+3];
+			lcd_bitmap[ptr_bitmap++]=caracter[((unsigned)lcd_buffer[x]*6)+4];
+			lcd_bitmap[ptr_bitmap++]=caracter[((unsigned)lcd_buffer[x]*6)+5];
+			} 
+		}
+	}	
+}
+
+//-----------------------------------------------
+void bitmap_hndl2(void)
+{
+short x,ii,i;
+unsigned int ptr_bitmap;
+static char ptr_cnt,ptr_cnt1,ptr_cnt2,ptr_cnt3,ptr_cnt4;
+
+for(ii=0;ii<1023;ii++)
+	{
+	lcd_bitmap[ii]=0x00;
+	}
+//lcd_bitmap[0]=caracter2[0];
+//lcd_bitmap[128]=caracter2[0];
+for(i=0;i<4;i++)
+	{
+	ptr_bitmap=4+(256*(unsigned)i);
+	
+//lcd_bitmap[ptr_bitmap++]=caracter2[0];
+
+	for(x=(12*i);x<((12*i)+12);x++)
+	 	{
+		lcd_bitmap[ptr_bitmap++]=caracter2[((unsigned)lcd_buffer[x])*20];
+		lcd_bitmap[ptr_bitmap++]=caracter2[(((unsigned)lcd_buffer[x])*20)+1];
+		lcd_bitmap[ptr_bitmap++]=caracter2[(((unsigned)lcd_buffer[x])*20)+2];
+		lcd_bitmap[ptr_bitmap++]=caracter2[(((unsigned)lcd_buffer[x])*20)+3];
+		lcd_bitmap[ptr_bitmap++]=caracter2[(((unsigned)lcd_buffer[x])*20)+4];
+		lcd_bitmap[ptr_bitmap++]=caracter2[(((unsigned)lcd_buffer[x])*20)+5];
+		lcd_bitmap[ptr_bitmap++]=caracter2[(((unsigned)lcd_buffer[x])*20)+6];
+		lcd_bitmap[ptr_bitmap++]=caracter2[(((unsigned)lcd_buffer[x])*20)+7];
+		lcd_bitmap[ptr_bitmap++]=caracter2[(((unsigned)lcd_buffer[x])*20)+8];
+		lcd_bitmap[ptr_bitmap++]=caracter2[(((unsigned)lcd_buffer[x])*20)+9];
+		}  
+	
+	ptr_bitmap=(256*(unsigned)i)+132;
+	for(x=(12*i);x<((12*i)+12);x++)
+		{
+		lcd_bitmap[ptr_bitmap++]=caracter2[(((unsigned)lcd_buffer[x])*20)+10];
+		lcd_bitmap[ptr_bitmap++]=caracter2[(((unsigned)lcd_buffer[x])*20)+11];
+		lcd_bitmap[ptr_bitmap++]=caracter2[(((unsigned)lcd_buffer[x])*20)+12];
+		lcd_bitmap[ptr_bitmap++]=caracter2[(((unsigned)lcd_buffer[x])*20)+13];
+		lcd_bitmap[ptr_bitmap++]=caracter2[(((unsigned)lcd_buffer[x])*20)+14];
+		lcd_bitmap[ptr_bitmap++]=caracter2[(((unsigned)lcd_buffer[x])*20)+15];
+		lcd_bitmap[ptr_bitmap++]=caracter2[(((unsigned)lcd_buffer[x])*20)+16];
+		lcd_bitmap[ptr_bitmap++]=caracter2[(((unsigned)lcd_buffer[x])*20)+17];
+		lcd_bitmap[ptr_bitmap++]=caracter2[(((unsigned)lcd_buffer[x])*20)+18];
+		lcd_bitmap[ptr_bitmap++]=caracter2[(((unsigned)lcd_buffer[x])*20)+19];
+		} 
+	}
+}
 
 //-----------------------------------------------
 void but_an(void)
@@ -858,7 +953,10 @@ if (++t1==1000)
 	}
 
 }
-
+//===============================================
+//===============================================
+//===============================================
+//===============================================
 int main (void)
 {
 
@@ -871,24 +969,24 @@ SysTick_Config(SystemFrequency/1000 - 1); /* Generate interrupt each 1 ms   */
 LPC_GPIO1->FIODIR|=(1<<20);	  // дл€ ресета
 LPC_GPIO1->FIODIR&=~(1<<28);	 // выход контрол€ наличи€ сети
 
-beep(0,0,0,0,0); //инициализаци€
-blink(0,0,0,0);
-rtc_init();
-LPC_GPIO0->FIODIR|=(1<<POWER_NET);
-LPC_GPIO0->FIOCLR|=(1<<POWER_NET);
-LPC_GPIO1->FIOPIN^=(1<<20);
+///beep(0,0,0,0,0); //инициализаци€
+///blink(0,0,0,0);
+///rtc_init();
+///LPC_GPIO0->FIODIR|=(1<<POWER_NET);
+///LPC_GPIO0->FIOCLR|=(1<<POWER_NET);
+///LPC_GPIO1->FIOPIN^=(1<<20);
 Delay(10000000);
-LPC_GPIO1->FIOPIN^=(1<<20);
-LPC_GPIO0->FIOSET|=(1<<POWER_NET);
+///LPC_GPIO1->FIOPIN^=(1<<20);
+///LPC_GPIO0->FIOSET|=(1<<POWER_NET);
 
 adc_init();
 
-can1_init(BITRATE62_5K6_25MHZ);
-FullCAN_SetFilter(0,0x18e);
+///can1_init(BITRATE62_5K6_25MHZ);
+///FullCAN_SetFilter(0,0x18e);
 
-memo_read();
-LPC_GPIO1->FIOPIN^=(1<<20);
-avar_bps_hndl(NUMB,3,1);
+///memo_read();
+///LPC_GPIO1->FIOPIN^=(1<<20);
+///avar_bps_hndl(NUMB,3,1);
 //  init=1;	  // дл€ тестов
 
 SERIAL_NUMBER=lc640_read_long(EE_SERIAL_NUMBER);
@@ -931,15 +1029,21 @@ snmp_Community[14]=(char)lc640_read(EE_SNMP_READ_COMMUNITY+14);
 if((snmp_Community[14]==0)||(snmp_Community[14]==' '))snmp_Community[14]=0;
 snmp_Community[15]=(char)lc640_read(EE_SNMP_READ_COMMUNITY+15); 
 if((snmp_Community[15]==0)||(snmp_Community[15]==' '))snmp_Community[15]=0;
-snmp_Community[16]=0; 
-LPC_GPIO1->FIOPIN^=(1<<20);
-snmp_PortNum  = lc640_read_int(EE_SNMP_READ_PORT);
-snmp_TrapPort = lc640_read_int(EE_SNMP_WRITE_PORT); 
-LPC_GPIO1->FIOPIN^=(1<<20);
-	init_TcpNet ();
- LPC_GPIO1->FIOPIN^=(1<<20);
-	init_ETH();
-LPC_GPIO1->FIOPIN^=(1<<20); 
+///snmp_Community[16]=0; 
+///LPC_GPIO1->FIOPIN^=(1<<20);
+///snmp_PortNum  = lc640_read_int(EE_SNMP_READ_PORT);
+///snmp_TrapPort = lc640_read_int(EE_SNMP_WRITE_PORT); 
+///LPC_GPIO1->FIOPIN^=(1<<20);
+///	init_TcpNet ();
+/// LPC_GPIO1->FIOPIN^=(1<<20);
+///	init_ETH();
+///LPC_GPIO1->FIOPIN^=(1<<20); 
+
+i2c_init();
+ssd1306_init(SSD1306_SWITCHCAPVCC); 
+//LPC_GPIO2->FIODIR|=(1<<9);
+//LPC_GPIO2->FIOPIN|=(1<<9);
+
 while(1)
 	{
 
@@ -947,7 +1051,7 @@ while(1)
 		{
 		f1000Hz=0;
 		adc_drv7();
-		ind_drv();
+		//ind_drv();
 		}
 	if(f100Hz)
 		{
@@ -1044,8 +1148,28 @@ snmp_TrapPort = lc640_read_int(EE_SNMP_WRITE_PORT);
 		}
 	if(f2Hz)
 		{
+		short iiii;
+		char data;
 		f2Hz=0;
 		if(level_U_mode==flash||level_I_mode==flash||level_Q_mode==flash) flash_=0;
+
+
+		bitmap_hndl2();
+
+
+		data++;
+		for(iiii=0;iiii<1024;iiii++)	ssd1306_data(lcd_bitmap[iiii]);
+		//ssd1306_command(SSD1306_DISPLAYOFF);
+	/*	ssd1306_command(SSD1306_DISPLAYALLON );
+		ssd1306_command(SSD1306_DISPLAYON);
+		ssd1306_command(SSD1306_INVERTDISPLAY);*/
+		//i2c_Start();
+		//delay_us(10);
+		//i2c_SendByte(0x78);
+		//i2c_ReadAcknowledge();
+		//i2c_Stop();
+
+		
 		}
 	if(f1Hz)
 		{

@@ -152,6 +152,38 @@
           <Name>-O463 -S0 -C0 -FO7 -FD10000000 -FC800 -FN1 -FF0LPC_IAP_256 -FS00 -FL040000)</Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
+      <Breakpoint>
+        <Bp>
+          <Number>0</Number>
+          <Type>0</Type>
+          <LineNumber>348</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>0</Address>
+          <ByteObject>0</ByteObject>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>0</BreakIfRCount>
+          <Filename>simbol.h</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression></Expression>
+        </Bp>
+        <Bp>
+          <Number>1</Number>
+          <Type>0</Type>
+          <LineNumber>199</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>0</Address>
+          <ByteObject>0</ByteObject>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>0</BreakIfRCount>
+          <Filename>simbol.h</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression></Expression>
+        </Bp>
+      </Breakpoint>
       <WatchWindow1>
         <Ww>
           <count>0</count>
@@ -449,19 +481,19 @@
 
   <Group>
     <GroupName>Code source</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <File>
       <GroupNumber>4</GroupNumber>
       <FileNumber>5</FileNumber>
       <FileType>1</FileType>
-      <tvExp>1</tvExp>
+      <tvExp>0</tvExp>
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1031</TopLine>
-      <CurrentLine>1031</CurrentLine>
+      <TopLine>347</TopLine>
+      <CurrentLine>347</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
@@ -484,7 +516,7 @@
       <GroupNumber>4</GroupNumber>
       <FileNumber>7</FileNumber>
       <FileType>1</FileType>
-      <tvExp>1</tvExp>
+      <tvExp>0</tvExp>
       <Focus>0</Focus>
       <ColumnNumber>82</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -512,11 +544,11 @@
       <GroupNumber>4</GroupNumber>
       <FileNumber>9</FileNumber>
       <FileType>1</FileType>
-      <tvExp>1</tvExp>
+      <tvExp>0</tvExp>
       <Focus>0</Focus>
       <ColumnNumber>1</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>20</TopLine>
+      <TopLine>10</TopLine>
       <CurrentLine>39</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\eeprom_map.c</PathWithFileName>
@@ -528,10 +560,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>18</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>802</TopLine>
-      <CurrentLine>817</CurrentLine>
+      <TopLine>885</TopLine>
+      <CurrentLine>898</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\control.c</PathWithFileName>
       <FilenameWithoutPath>control.c</FilenameWithoutPath>
@@ -570,10 +602,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>28</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>424</TopLine>
-      <CurrentLine>424</CurrentLine>
+      <TopLine>1</TopLine>
+      <CurrentLine>10</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\avar_hndl.c</PathWithFileName>
       <FilenameWithoutPath>avar_hndl.c</FilenameWithoutPath>
@@ -584,10 +616,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>28</ColumnNumber>
+      <ColumnNumber>19</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>169</TopLine>
-      <CurrentLine>180</CurrentLine>
+      <TopLine>682</TopLine>
+      <CurrentLine>711</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\snmp_data_file.c</PathWithFileName>
       <FilenameWithoutPath>snmp_data_file.c</FilenameWithoutPath>
@@ -621,8 +653,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>43</TopLine>
-      <CurrentLine>43</CurrentLine>
+      <TopLine>1</TopLine>
+      <CurrentLine>8</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\ind_drv.c</PathWithFileName>
       <FilenameWithoutPath>ind_drv.c</FilenameWithoutPath>
@@ -647,10 +679,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>5</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>19</TopLine>
+      <CurrentLine>30</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\25lc640.c</PathWithFileName>
       <FilenameWithoutPath>25lc640.c</FilenameWithoutPath>
@@ -683,6 +715,48 @@
       <PathWithFileName>.\led_break_drv.c</PathWithFileName>
       <FilenameWithoutPath>led_break_drv.c</FilenameWithoutPath>
     </File>
+    <File>
+      <GroupNumber>5</GroupNumber>
+      <FileNumber>21</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>17</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>1</TopLine>
+      <CurrentLine>1</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\ssd1306.c</PathWithFileName>
+      <FilenameWithoutPath>ssd1306.c</FilenameWithoutPath>
+    </File>
+    <File>
+      <GroupNumber>5</GroupNumber>
+      <FileNumber>22</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>2</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>64</TopLine>
+      <CurrentLine>77</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\24c01.c</PathWithFileName>
+      <FilenameWithoutPath>24c01.c</FilenameWithoutPath>
+    </File>
+    <File>
+      <GroupNumber>5</GroupNumber>
+      <FileNumber>23</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>3</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>91</TopLine>
+      <CurrentLine>110</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\i2c.c</PathWithFileName>
+      <FilenameWithoutPath>i2c.c</FilenameWithoutPath>
+    </File>
   </Group>
 
   <Group>
@@ -692,7 +766,7 @@
     <cbSel>0</cbSel>
     <File>
       <GroupNumber>6</GroupNumber>
-      <FileNumber>21</FileNumber>
+      <FileNumber>24</FileNumber>
       <FileType>4</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -706,7 +780,7 @@
     </File>
     <File>
       <GroupNumber>6</GroupNumber>
-      <FileNumber>22</FileNumber>
+      <FileNumber>25</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -720,9 +794,9 @@
     </File>
     <File>
       <GroupNumber>6</GroupNumber>
-      <FileNumber>23</FileNumber>
+      <FileNumber>26</FileNumber>
       <FileType>1</FileType>
-      <tvExp>1</tvExp>
+      <tvExp>0</tvExp>
       <Focus>0</Focus>
       <ColumnNumber>117</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -732,37 +806,25 @@
       <PathWithFileName>.\SNMP_MIB.c</PathWithFileName>
       <FilenameWithoutPath>SNMP_MIB.c</FilenameWithoutPath>
     </File>
+    <File>
+      <GroupNumber>6</GroupNumber>
+      <FileNumber>27</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>0</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\simbols.c</PathWithFileName>
+      <FilenameWithoutPath>simbols.c</FilenameWithoutPath>
+    </File>
   </Group>
 
   <AlienFiles>
-    <PathWithFilename>E:\Users\Pal\DEVICES\FAT47\SOFT\UKU_UPS_1766\eeprom_map.h</PathWithFilename>
+    <PathWithFilename>E:\Users\Pal\DEVICES\1_NEW_DEV\FAT47_dev\SOFT\UKU_UPS_1766\button_drv.h</PathWithFilename>
     <TopLine>1</TopLine>
-    <CurrentLine>17</CurrentLine>
-    <Constant>0</Constant>
-    <WindowPosition>
-      <length>0</length>
-      <flags>0</flags>
-      <showCmd>0</showCmd>
-      <MinPosition>
-        <xPos>0</xPos>
-        <yPos>0</yPos>
-      </MinPosition>
-      <MaxPosition>
-        <xPos>0</xPos>
-        <yPos>0</yPos>
-      </MaxPosition>
-      <NormalPosition>
-        <Top>0</Top>
-        <Left>0</Left>
-        <Right>0</Right>
-        <Bottom>0</Bottom>
-      </NormalPosition>
-    </WindowPosition>
-  </AlienFiles>
-
-  <AlienFiles>
-    <PathWithFilename>E:\Users\Pal\DEVICES\FAT47\SOFT\UKU_UPS_1766\button_drv.h</PathWithFilename>
-    <TopLine>10</TopLine>
     <CurrentLine>29</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
@@ -813,61 +875,9 @@
   </AlienFiles>
 
   <AlienFiles>
-    <PathWithFilename>E:\Users\Pal\DEVICES\FAT47\SOFT\UKU_UPS_1766\control.h</PathWithFilename>
+    <PathWithFilename>E:\Users\Pal\DEVICES\1_NEW_DEV\FAT47_dev\SOFT\UKU_UPS_1766\control.h</PathWithFilename>
     <TopLine>16</TopLine>
     <CurrentLine>22</CurrentLine>
-    <Constant>0</Constant>
-    <WindowPosition>
-      <length>0</length>
-      <flags>0</flags>
-      <showCmd>0</showCmd>
-      <MinPosition>
-        <xPos>0</xPos>
-        <yPos>0</yPos>
-      </MinPosition>
-      <MaxPosition>
-        <xPos>0</xPos>
-        <yPos>0</yPos>
-      </MaxPosition>
-      <NormalPosition>
-        <Top>0</Top>
-        <Left>0</Left>
-        <Right>0</Right>
-        <Bottom>0</Bottom>
-      </NormalPosition>
-    </WindowPosition>
-  </AlienFiles>
-
-  <AlienFiles>
-    <PathWithFilename>E:\Users\Pal\DEVICES\FAT47\SOFT\UKU_UPS_1766\snmp_data_file.h</PathWithFilename>
-    <TopLine>81</TopLine>
-    <CurrentLine>99</CurrentLine>
-    <Constant>0</Constant>
-    <WindowPosition>
-      <length>0</length>
-      <flags>0</flags>
-      <showCmd>0</showCmd>
-      <MinPosition>
-        <xPos>0</xPos>
-        <yPos>0</yPos>
-      </MinPosition>
-      <MaxPosition>
-        <xPos>0</xPos>
-        <yPos>0</yPos>
-      </MaxPosition>
-      <NormalPosition>
-        <Top>0</Top>
-        <Left>0</Left>
-        <Right>0</Right>
-        <Bottom>0</Bottom>
-      </NormalPosition>
-    </WindowPosition>
-  </AlienFiles>
-
-  <AlienFiles>
-    <PathWithFilename>E:\Users\Pal\DEVICES\FAT47\SOFT\UKU_UPS_1766\ind_drv.h</PathWithFilename>
-    <TopLine>1</TopLine>
-    <CurrentLine>18</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -917,7 +927,7 @@
   </AlienFiles>
 
   <AlienFiles>
-    <PathWithFilename>E:\Users\Pal\DEVICES\FAT47\SOFT\UKU_UPS_1766\led_break_drv.h</PathWithFilename>
+    <PathWithFilename>E:\Users\Pal\DEVICES\1_NEW_DEV\FAT47_dev\SOFT\UKU_UPS_1766\led_break_drv.h</PathWithFilename>
     <TopLine>1</TopLine>
     <CurrentLine>7</CurrentLine>
     <Constant>0</Constant>
@@ -943,9 +953,321 @@
   </AlienFiles>
 
   <AlienFiles>
-    <PathWithFilename>E:\Users\Pal\DEVICES\FAT47\SOFT\UKU_UPS_1766\main.h</PathWithFilename>
+    <PathWithFilename>E:\Users\Pal\DEVICES\1_NEW_DEV\FAT47_dev\SOFT\UKU_UPS_1766\ind_drv.h</PathWithFilename>
+    <TopLine>4</TopLine>
+    <CurrentLine>33</CurrentLine>
+    <Constant>0</Constant>
+    <WindowPosition>
+      <length>0</length>
+      <flags>0</flags>
+      <showCmd>0</showCmd>
+      <MinPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MinPosition>
+      <MaxPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MaxPosition>
+      <NormalPosition>
+        <Top>0</Top>
+        <Left>0</Left>
+        <Right>0</Right>
+        <Bottom>0</Bottom>
+      </NormalPosition>
+    </WindowPosition>
+  </AlienFiles>
+
+  <AlienFiles>
+    <PathWithFilename>E:\Users\Pal\DEVICES\1_NEW_DEV\FAT47_dev\SOFT\UKU_UPS_1766\eeprom_map.h</PathWithFilename>
     <TopLine>1</TopLine>
-    <CurrentLine>1</CurrentLine>
+    <CurrentLine>17</CurrentLine>
+    <Constant>0</Constant>
+    <WindowPosition>
+      <length>0</length>
+      <flags>0</flags>
+      <showCmd>0</showCmd>
+      <MinPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MinPosition>
+      <MaxPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MaxPosition>
+      <NormalPosition>
+        <Top>0</Top>
+        <Left>0</Left>
+        <Right>0</Right>
+        <Bottom>0</Bottom>
+      </NormalPosition>
+    </WindowPosition>
+  </AlienFiles>
+
+  <AlienFiles>
+    <PathWithFilename>E:\Users\Pal\DEVICES\1_NEW_DEV\FAT47_dev\SOFT\UKU_UPS_1766\ssd_1306.h</PathWithFilename>
+    <TopLine>28</TopLine>
+    <CurrentLine>43</CurrentLine>
+    <Constant>0</Constant>
+    <WindowPosition>
+      <length>0</length>
+      <flags>0</flags>
+      <showCmd>0</showCmd>
+      <MinPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MinPosition>
+      <MaxPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MaxPosition>
+      <NormalPosition>
+        <Top>0</Top>
+        <Left>0</Left>
+        <Right>0</Right>
+        <Bottom>0</Bottom>
+      </NormalPosition>
+    </WindowPosition>
+  </AlienFiles>
+
+  <AlienFiles>
+    <PathWithFilename>E:\Users\Pal\DEVICES\1_NEW_DEV\FAT47_dev\SOFT\UKU_UPS_1766\projectconfig.h</PathWithFilename>
+    <TopLine>31</TopLine>
+    <CurrentLine>39</CurrentLine>
+    <Constant>0</Constant>
+    <WindowPosition>
+      <length>0</length>
+      <flags>0</flags>
+      <showCmd>0</showCmd>
+      <MinPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MinPosition>
+      <MaxPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MaxPosition>
+      <NormalPosition>
+        <Top>0</Top>
+        <Left>0</Left>
+        <Right>0</Right>
+        <Bottom>0</Bottom>
+      </NormalPosition>
+    </WindowPosition>
+  </AlienFiles>
+
+  <AlienFiles>
+    <PathWithFilename>E:\Users\Pal\DEVICES\1_NEW_DEV\FAT47_dev\SOFT\UKU_UPS_1766\gpio.h</PathWithFilename>
+    <TopLine>85</TopLine>
+    <CurrentLine>114</CurrentLine>
+    <Constant>0</Constant>
+    <WindowPosition>
+      <length>0</length>
+      <flags>0</flags>
+      <showCmd>0</showCmd>
+      <MinPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MinPosition>
+      <MaxPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MaxPosition>
+      <NormalPosition>
+        <Top>0</Top>
+        <Left>0</Left>
+        <Right>0</Right>
+        <Bottom>0</Bottom>
+      </NormalPosition>
+    </WindowPosition>
+  </AlienFiles>
+
+  <AlienFiles>
+    <PathWithFilename>E:\Users\Pal\DEVICES\1_NEW_DEV\FAT47_dev\SOFT\UKU_UPS_1766\main.h</PathWithFilename>
+    <TopLine>277</TopLine>
+    <CurrentLine>277</CurrentLine>
+    <Constant>0</Constant>
+    <WindowPosition>
+      <length>0</length>
+      <flags>0</flags>
+      <showCmd>0</showCmd>
+      <MinPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MinPosition>
+      <MaxPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MaxPosition>
+      <NormalPosition>
+        <Top>0</Top>
+        <Left>0</Left>
+        <Right>0</Right>
+        <Bottom>0</Bottom>
+      </NormalPosition>
+    </WindowPosition>
+  </AlienFiles>
+
+  <AlienFiles>
+    <PathWithFilename>E:\Users\Pal\DEVICES\1_NEW_DEV\FAT47_dev\SOFT\UKU_UPS_1766\gpio.c</PathWithFilename>
+    <TopLine>160</TopLine>
+    <CurrentLine>173</CurrentLine>
+    <Constant>0</Constant>
+    <WindowPosition>
+      <length>0</length>
+      <flags>0</flags>
+      <showCmd>0</showCmd>
+      <MinPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MinPosition>
+      <MaxPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MaxPosition>
+      <NormalPosition>
+        <Top>0</Top>
+        <Left>0</Left>
+        <Right>0</Right>
+        <Bottom>0</Bottom>
+      </NormalPosition>
+    </WindowPosition>
+  </AlienFiles>
+
+  <AlienFiles>
+    <PathWithFilename>E:\Users\Pal\DEVICES\1_NEW_DEV\FAT47_dev\SOFT\UKU_UPS_1766\LPC17xx.h</PathWithFilename>
+    <TopLine>844</TopLine>
+    <CurrentLine>857</CurrentLine>
+    <Constant>0</Constant>
+    <WindowPosition>
+      <length>0</length>
+      <flags>0</flags>
+      <showCmd>0</showCmd>
+      <MinPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MinPosition>
+      <MaxPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MaxPosition>
+      <NormalPosition>
+        <Top>0</Top>
+        <Left>0</Left>
+        <Right>0</Right>
+        <Bottom>0</Bottom>
+      </NormalPosition>
+    </WindowPosition>
+  </AlienFiles>
+
+  <AlienFiles>
+    <PathWithFilename>E:\Users\Pal\DEVICES\1_NEW_DEV\FAT47_dev\SOFT\UKU_UPS_1766\ssd1306.h</PathWithFilename>
+    <TopLine>15</TopLine>
+    <CurrentLine>37</CurrentLine>
+    <Constant>0</Constant>
+    <WindowPosition>
+      <length>0</length>
+      <flags>0</flags>
+      <showCmd>0</showCmd>
+      <MinPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MinPosition>
+      <MaxPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MaxPosition>
+      <NormalPosition>
+        <Top>0</Top>
+        <Left>0</Left>
+        <Right>0</Right>
+        <Bottom>0</Bottom>
+      </NormalPosition>
+    </WindowPosition>
+  </AlienFiles>
+
+  <AlienFiles>
+    <PathWithFilename>C:\Keil\ARM\RV31\INC\stdint.h</PathWithFilename>
+    <TopLine>43</TopLine>
+    <CurrentLine>43</CurrentLine>
+    <Constant>0</Constant>
+    <WindowPosition>
+      <length>0</length>
+      <flags>0</flags>
+      <showCmd>0</showCmd>
+      <MinPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MinPosition>
+      <MaxPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MaxPosition>
+      <NormalPosition>
+        <Top>0</Top>
+        <Left>0</Left>
+        <Right>0</Right>
+        <Bottom>0</Bottom>
+      </NormalPosition>
+    </WindowPosition>
+  </AlienFiles>
+
+  <AlienFiles>
+    <PathWithFilename>E:\Users\Pal\DEVICES\1_NEW_DEV\FAT47_dev\SOFT\UKU_UPS_1766\i2c.h</PathWithFilename>
+    <TopLine>1</TopLine>
+    <CurrentLine>7</CurrentLine>
+    <Constant>0</Constant>
+    <WindowPosition>
+      <length>0</length>
+      <flags>0</flags>
+      <showCmd>0</showCmd>
+      <MinPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MinPosition>
+      <MaxPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MaxPosition>
+      <NormalPosition>
+        <Top>0</Top>
+        <Left>0</Left>
+        <Right>0</Right>
+        <Bottom>0</Bottom>
+      </NormalPosition>
+    </WindowPosition>
+  </AlienFiles>
+
+  <AlienFiles>
+    <PathWithFilename>E:\Users\Pal\DEVICES\1_NEW_DEV\FAT47_dev\SOFT\UKU_UPS_1766\ssd_1306.c</PathWithFilename>
+    <TopLine>109</TopLine>
+    <CurrentLine>109</CurrentLine>
+    <Constant>0</Constant>
+    <WindowPosition>
+      <length>0</length>
+      <flags>0</flags>
+      <showCmd>0</showCmd>
+      <MinPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MinPosition>
+      <MaxPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MaxPosition>
+      <NormalPosition>
+        <Top>0</Top>
+        <Left>0</Left>
+        <Right>0</Right>
+        <Bottom>0</Bottom>
+      </NormalPosition>
+    </WindowPosition>
+  </AlienFiles>
+
+  <AlienFiles>
+    <PathWithFilename>E:\Users\Pal\DEVICES\1_NEW_DEV\FAT47_dev\SOFT\UKU_UPS_1766\simbol.h</PathWithFilename>
+    <TopLine>1308</TopLine>
+    <CurrentLine>1308</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -973,8 +1295,140 @@
     <ActiveMDIGroup>0</ActiveMDIGroup>
     <MDIGroup>
       <Size>100</Size>
-      <ActiveTab>5</ActiveTab>
+      <ActiveTab>0</ActiveTab>
       <Documents>
+        <Doc>
+          <Name>simbol.h</Name>
+          <ColumnNumber>35</ColumnNumber>
+          <TopLine>1308</TopLine>
+          <CurrentLine>1308</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>E:\Users\Pal\DEVICES\1_NEW_DEV\FAT47_dev\SOFT\UKU_UPS_1766\ssd_1306.c</Name>
+          <ColumnNumber>27</ColumnNumber>
+          <TopLine>109</TopLine>
+          <CurrentLine>109</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>i2c.h</Name>
+          <ColumnNumber>17</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>7</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\i2c.c</Name>
+          <ColumnNumber>3</ColumnNumber>
+          <TopLine>91</TopLine>
+          <CurrentLine>110</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>C:\Keil\\ARM\RV31\INC\stdint.h</Name>
+          <ColumnNumber>31</ColumnNumber>
+          <TopLine>43</TopLine>
+          <CurrentLine>43</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>ssd1306.h</Name>
+          <ColumnNumber>8</ColumnNumber>
+          <TopLine>15</TopLine>
+          <CurrentLine>37</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\ssd1306.c</Name>
+          <ColumnNumber>17</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>1</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>LPC17xx.h</Name>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>844</TopLine>
+          <CurrentLine>857</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>E:\Users\Pal\DEVICES\1_NEW_DEV\FAT47_dev\SOFT\UKU_UPS_1766\gpio.c</Name>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>160</TopLine>
+          <CurrentLine>173</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>main.h</Name>
+          <ColumnNumber>8</ColumnNumber>
+          <TopLine>277</TopLine>
+          <CurrentLine>277</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>E:\Users\Pal\DEVICES\1_NEW_DEV\FAT47_dev\SOFT\UKU_UPS_1766\gpio.h</Name>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>85</TopLine>
+          <CurrentLine>114</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\main.c</Name>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>347</TopLine>
+          <CurrentLine>347</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>projectconfig.h</Name>
+          <ColumnNumber>26</ColumnNumber>
+          <TopLine>31</TopLine>
+          <CurrentLine>39</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>ssd_1306.h</Name>
+          <ColumnNumber>10</ColumnNumber>
+          <TopLine>28</TopLine>
+          <CurrentLine>43</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>eeprom_map.h</Name>
+          <ColumnNumber>2</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>17</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\25lc640.c</Name>
+          <ColumnNumber>5</ColumnNumber>
+          <TopLine>19</TopLine>
+          <CurrentLine>30</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\snmp_data_file.c</Name>
+          <ColumnNumber>19</ColumnNumber>
+          <TopLine>682</TopLine>
+          <CurrentLine>711</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\avar_hndl.c</Name>
+          <ColumnNumber>28</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>10</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\control.c</Name>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>885</TopLine>
+          <CurrentLine>898</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>ind_drv.h</Name>
+          <ColumnNumber>12</ColumnNumber>
+          <TopLine>4</TopLine>
+          <CurrentLine>33</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\ind_drv.c</Name>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>8</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\24c01.c</Name>
+          <ColumnNumber>2</ColumnNumber>
+          <TopLine>64</TopLine>
+          <CurrentLine>77</CurrentLine>
+        </Doc>
         <Doc>
           <Name>.\button_action.c</Name>
           <ColumnNumber>82</ColumnNumber>
@@ -988,52 +1442,16 @@
           <CurrentLine>74</CurrentLine>
         </Doc>
         <Doc>
-          <Name>.\snmp_data_file.c</Name>
-          <ColumnNumber>28</ColumnNumber>
-          <TopLine>169</TopLine>
-          <CurrentLine>180</CurrentLine>
-        </Doc>
-        <Doc>
           <Name>.\ports_operations.c</Name>
           <ColumnNumber>29</ColumnNumber>
           <TopLine>1</TopLine>
           <CurrentLine>2</CurrentLine>
         </Doc>
         <Doc>
-          <Name>.\control.c</Name>
-          <ColumnNumber>18</ColumnNumber>
-          <TopLine>802</TopLine>
-          <CurrentLine>817</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\avar_hndl.c</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>424</TopLine>
-          <CurrentLine>424</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\main.c</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>1031</TopLine>
-          <CurrentLine>1031</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>main.h</Name>
-          <ColumnNumber>7</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>1</CurrentLine>
-        </Doc>
-        <Doc>
           <Name>led_break_drv.h</Name>
           <ColumnNumber>8</ColumnNumber>
           <TopLine>1</TopLine>
           <CurrentLine>7</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\ind_drv.c</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>43</TopLine>
-          <CurrentLine>43</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\led_break_drv.c</Name>
@@ -1052,18 +1470,6 @@
           <ColumnNumber>20</ColumnNumber>
           <TopLine>1348</TopLine>
           <CurrentLine>1348</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>ind_drv.h</Name>
-          <ColumnNumber>46</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>18</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>snmp_data_file.h</Name>
-          <ColumnNumber>7</ColumnNumber>
-          <TopLine>81</TopLine>
-          <CurrentLine>99</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\beeper_drv.c</Name>
@@ -1098,7 +1504,7 @@
         <Doc>
           <Name>.\eeprom_map.c</Name>
           <ColumnNumber>1</ColumnNumber>
-          <TopLine>20</TopLine>
+          <TopLine>10</TopLine>
           <CurrentLine>39</CurrentLine>
         </Doc>
         <Doc>
@@ -1116,7 +1522,7 @@
         <Doc>
           <Name>button_drv.h</Name>
           <ColumnNumber>2</ColumnNumber>
-          <TopLine>10</TopLine>
+          <TopLine>1</TopLine>
           <CurrentLine>29</CurrentLine>
         </Doc>
         <Doc>
@@ -1130,12 +1536,6 @@
           <ColumnNumber>4</ColumnNumber>
           <TopLine>7</TopLine>
           <CurrentLine>25</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>eeprom_map.h</Name>
-          <ColumnNumber>2</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>17</CurrentLine>
         </Doc>
       </Documents>
     </MDIGroup>
