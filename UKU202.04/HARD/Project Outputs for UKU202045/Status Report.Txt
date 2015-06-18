@@ -1,0 +1,13 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [UKU202045.PRJPCB]
+   Generated File[UKU202045.TXT]
+   Generated File[UKU202045.DRL]
+   Generated File[UKU202045.LDP]
+   Generated File[UKU202045.DRR]
+
+
+Files Generated   : 4
+Documents Printed : 0
+
+Finished Output Generation At 10:55:59 On 27.05.2014

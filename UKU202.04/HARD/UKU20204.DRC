@@ -1,0 +1,95 @@
+Protel Design System Design Rule Check
+PCB File : \Users\Pal\DEVICES\UKU202.04\HARD\UKU20204.PcbDoc
+Date     : 10.01.2011
+Time     : 13:56:34
+
+WARNING: Unplated multi-layer pad(s) detected
+   Pad T100-7(94.9mm,44.05mm)  Multi-Layer on Net NetD105_1
+Total: 1
+
+Processing Rule : Hole Size Constraint (Min=0.0254mm) (Max=5mm) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.2mm) (Max=2mm) (Preferred=0.254mm) (All)
+Rule Violations :0
+
+Processing Rule : Broken-Net Constraint ( (All) )
+   Violation         Net NetD105_1       Warning - net contains unplated pads
+Rule Violations :1
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=1mm) (OnLayer('Keep-Out Layer')),(Not InNet('NetJ2_5'))
+   Violation between Track (60.7999mm,44.5mm)(70.7999mm,44.5mm)  Keep-Out Layer and                      Pad R45-2(63.7912mm,46.2962mm)  Top Layer   
+   Violation between Track (60.7999mm,44.5mm)(70.7999mm,44.5mm)  Keep-Out Layer and                      Pad R45-1(60.9912mm,46.2962mm)  Top Layer   
+   Violation between Track (60.7999mm,29mm)(60.7999mm,44.5mm)  Keep-Out Layer and                      Pad R45-1(60.9912mm,46.2962mm)  Top Layer   
+   Violation between Track (60.7999mm,44.5mm)(70.7999mm,44.5mm)  Keep-Out Layer and                      Pad R32-2(66.6962mm,46.2088mm)  Top Layer   
+   Violation between Track (60.7999mm,29mm)(60.7999mm,44.5mm)  Keep-Out Layer and                      Track (59.1mm,30.9mm)(59.8mm,31.6mm)  Top Layer   
+   Violation between Track (60.7999mm,44.5mm)(70.7999mm,44.5mm)  Keep-Out Layer and                      Track (59.8mm,31.6mm)(59.8mm,44.8mm)  Top Layer   
+   Violation between Track (60.7999mm,29mm)(60.7999mm,44.5mm)  Keep-Out Layer and                      Track (59.8mm,31.6mm)(59.8mm,44.8mm)  Top Layer   
+   Violation between Track (60.7999mm,44.5mm)(70.7999mm,44.5mm)  Keep-Out Layer and                      Track (58.7303mm,45.8697mm)(59.8mm,44.8mm)  Top Layer   
+   Violation between Track (60.7999mm,29mm)(60.7999mm,44.5mm)  Keep-Out Layer and                      Track (58.7303mm,45.8697mm)(59.8mm,44.8mm)  Top Layer   
+   Violation between Arc (171.2967mm,99.9mm)  Keep-Out Layer and                      Track (174.25mm,98.2mm)(174.25mm,100.8mm)  Top Layer   
+   Violation between Track (172.85mm,100mm)(172.85mm,110.5mm)  Keep-Out Layer and                      Track (174.25mm,98.2mm)(174.25mm,100.8mm)  Top Layer   
+   Violation between Track (55.0499mm,25.95mm)(55.0499mm,28.95mm)  Keep-Out Layer and                      Track (55.35mm,25.3mm)(57.8501mm,25.3mm)  Bottom Layer   
+   Violation between Track (55.0999mm,25.95mm)(60.8499mm,25.95mm)  Keep-Out Layer and                      Track (55.35mm,25.3mm)(57.8501mm,25.3mm)  Bottom Layer   
+   Violation between Track (60.7999mm,44.5mm)(70.7999mm,44.5mm)  Keep-Out Layer and                      Track (59.6mm,45.45mm)(73.95mm,45.45mm)  Bottom Layer   
+   Violation between Track (70.7499mm,44.5mm)(80.7999mm,44.5mm)  Keep-Out Layer and                      Track (59.6mm,45.45mm)(73.95mm,45.45mm)  Bottom Layer   
+   Violation between Track (60.7999mm,29mm)(60.7999mm,44.5mm)  Keep-Out Layer and                      Track (59.6mm,45.45mm)(73.95mm,45.45mm)  Bottom Layer   
+   Violation between Track (55.0499mm,25.95mm)(55.0499mm,28.95mm)  Keep-Out Layer and                      Track (53.75mm,23.7mm)(55.35mm,25.3mm)  Bottom Layer   
+   Violation between Track (55.0999mm,25.95mm)(60.8499mm,25.95mm)  Keep-Out Layer and                      Track (53.75mm,23.7mm)(55.35mm,25.3mm)  Bottom Layer   
+   Violation between Track (55.0999mm,25.95mm)(60.8499mm,25.95mm)  Keep-Out Layer and                      Track (57.8501mm,25.3mm)(59.1mm,24.0501mm)  Bottom Layer   
+   Violation between Pad X306-1(174.25mm,100.8mm)  Multi-Layer and                      Arc (171.2967mm,99.9mm)  Keep-Out Layer   
+   Violation between Pad X306-1(174.25mm,100.8mm)  Multi-Layer and                      Track (172.85mm,100mm)(172.85mm,110.5mm)  Keep-Out Layer   
+   Violation between Pad X303-1(174.25mm,103.6mm)  Multi-Layer and                      Track (172.85mm,100mm)(172.85mm,110.5mm)  Keep-Out Layer   
+   Violation between Pad X23-1(174.5501mm,47.45mm)  Multi-Layer and                      Track (172.9mm,37.5mm)(172.9mm,51.55mm)  Keep-Out Layer   
+   Violation between Pad X7-1(188.65mm,72.6mm)  Multi-Layer and                      Track (172.85mm,74.45mm)(194.8mm,74.45mm)  Keep-Out Layer   
+   Violation between Pad X16-1(56.6mm,30.8mm)  Multi-Layer and                      Track (55.0999mm,28.95mm)(60.7999mm,28.95mm)  Keep-Out Layer   
+   Violation between Pad X3-1(59.1mm,30.8mm)  Multi-Layer and                      Track (55.0999mm,28.95mm)(60.7999mm,28.95mm)  Keep-Out Layer   
+   Violation between Pad X2-1(82.4mm,30.8mm)  Multi-Layer and                      Track (80.8499mm,28.95mm)(86.4999mm,28.95mm)  Keep-Out Layer   
+   Violation between Pad X1-1(84.9mm,30.8mm)  Multi-Layer and                      Track (80.8499mm,28.95mm)(86.4999mm,28.95mm)  Keep-Out Layer   
+   Violation between Pad X18-1(82.4mm,24.0501mm)  Multi-Layer and                      Track (80.7999mm,25.95mm)(86.4999mm,25.95mm)  Keep-Out Layer   
+   Violation between Pad X20-1(56.6mm,24.0501mm)  Multi-Layer and                      Track (55.0999mm,25.95mm)(60.8499mm,25.95mm)  Keep-Out Layer   
+   Violation between Pad X19-1(59.1mm,24.0501mm)  Multi-Layer and                      Track (55.0999mm,25.95mm)(60.8499mm,25.95mm)  Keep-Out Layer   
+   Violation between Pad X19-1(59.1mm,24.0501mm)  Multi-Layer and                      Track (60.8499mm,24mm)(60.8499mm,25.95mm)  Keep-Out Layer   
+   Violation between Pad X18-1(82.4mm,24.0501mm)  Multi-Layer and                      Track (60.7999mm,24mm)(80.7999mm,24mm)  Keep-Out Layer   
+   Violation between Pad X19-1(59.1mm,24.0501mm)  Multi-Layer and                      Track (60.7999mm,24mm)(80.7999mm,24mm)  Keep-Out Layer   
+   Violation between Pad X18-1(82.4mm,24.0501mm)  Multi-Layer and                      Track (80.7999mm,24mm)(80.7999mm,25.95mm)  Keep-Out Layer   
+   Violation between Pad X3-1(59.1mm,30.8mm)  Multi-Layer and                      Track (60.7999mm,29mm)(60.7999mm,44.5mm)  Keep-Out Layer   
+   Violation between Via (73.95mm,45.8mm) Top Layer to Bottom Layer and                      Track (70.7499mm,44.5mm)(80.7999mm,44.5mm)  Keep-Out Layer   
+   Violation between Pad X2-1(82.4mm,30.8mm)  Multi-Layer and                      Track (80.7999mm,28.95mm)(80.7999mm,44.5mm)  Keep-Out Layer   
+   Violation between Pad X308-1(202.45mm,100.8mm)  Multi-Layer and                      Track (203.85mm,84.95mm)(203.85mm,110.5mm)  Keep-Out Layer   
+   Violation between Pad X305-1(202.45mm,103.6mm)  Multi-Layer and                      Track (203.85mm,84.95mm)(203.85mm,110.5mm)  Keep-Out Layer   
+   Violation between Pad C19-2(2mm,79mm)  Multi-Layer and                      Track (0mm,0mm)(0mm,110.5mm)  Keep-Out Layer   
+Rule Violations :41
+
+Processing Rule : Clearance Constraint (Gap=2mm) (InPoly),(HasPad('Free-0')  Or HasPad('J2-10')  Or HasPad('J2-11'))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=1mm) (InPoly),(InPoly)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.4mm) (InPoly),(All)
+   Violation between Polygon Track (93.05mm,85.45mm)(95.95mm,85.45mm)  Top Layer and                      Pad C114-1(94.5032mm,86.7972mm)  Top Layer   
+Rule Violations :1
+
+Processing Rule : Clearance Constraint (Gap=0.6mm) (InNet('+UOUT') or
+InNet('U1') or
+InNet('U2') or
+InNet('UAKB') or
+InNet('-UOUT')),(InPoly)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.3mm) (InComponent(JP1) or InComponent(U2)),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.15mm) (All),(All)
+Rule Violations :0
+
+
+Violations Detected : 43
+Time Elapsed        : 00:00:52

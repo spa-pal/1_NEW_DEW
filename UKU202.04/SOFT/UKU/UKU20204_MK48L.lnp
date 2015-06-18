@@ -1,0 +1,4 @@
+--cpu Cortex-M3 "startup_lpc17xx.o" "net_config_http.o" "core_cm3.o" "system_lpc17xx.o" "timer.o" "C:\Keil\ARM\RV31\LIB\TCP_CM3.lib" "emac_lpc17xx.o" "25lc640.o" "lcd_agm1232_uku203.o" "simbols.o" "ret.o" "beep.o" "common_func.o" "gran.o" "graphic.o" "cmd.o" "main.o" "avar.o" "control.o" "eeprom_map.o" "memo.o" "web.o" "snmp_mib.o" "snmp_data_file.o" "uart0.o" --strict --scatter "UKU20204_mk48L.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\UKU20204_mk48L.map" -o "UKU20204_mk48L.axf"

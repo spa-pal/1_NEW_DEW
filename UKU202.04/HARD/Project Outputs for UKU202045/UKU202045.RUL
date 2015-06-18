@@ -1,0 +1,12 @@
+DRC Rules Export File for PCB: E:\Users\Pal\DEVICES\UKU202.04_dev\HARD5\UKU202045.PcbDoc
+RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=5,91
+RuleKind=Clearance|RuleName=Для разъёма и индикатора|Scope=Board|Minimum=11,81
+RuleKind=Clearance|RuleName=Высоковольтное|Scope=Board|Minimum=23,62
+RuleKind=Clearance|RuleName=Poly|Scope=Board|Minimum=15,75
+RuleKind=Clearance|RuleName=Poly_Poly|Scope=Board|Minimum=39,37
+RuleKind=Clearance|RuleName=Holes|Scope=Board|Minimum=78,74
+RuleKind=Clearance|RuleName=Keep_Out|Scope=Board|Minimum=39,37
+RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0
+RuleKind=Width|RuleName=Width|Scope=Board|Minimum=7,87
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=4,00
+RuleKind=Clearance|RuleName=Clearance_1|Scope=Board|Minimum=39,37

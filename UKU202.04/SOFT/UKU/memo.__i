@@ -1,0 +1,1 @@
+-c --cpu Cortex-M3 -D__MICROLIB -g -O1 --apcs=interwork -I "C:\Keil\ARM\CMSIS\Include" -I "C:\Keil\ARM\INC\NXP\LPC17xx" -DUKU_VERSION="300" -DNEW_MOSKOW_BPS -DMS48L -o "memo.o" --omf_browse "memo.crf" --depend "memo.d" "memo.c"
