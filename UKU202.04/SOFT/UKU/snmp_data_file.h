@@ -5,10 +5,11 @@ extern signed short snmp_device_code;
 extern signed 	   snmp_sernum;
 extern signed short snmp_sernum_lsb;
 extern signed short snmp_sernum_msb;
-extern char 	   snmp_location[100];
+extern char 	   	snmp_location[100];
 extern signed short snmp_numofbat;
 extern signed short snmp_numofbps;
 extern signed short snmp_numofevents;
+extern char 	   	snmp_model[30];   	//Модель ИБЭПа
 
 //Состояние первичной сети
 extern signed short snmp_mains_power_voltage;
@@ -28,6 +29,7 @@ extern signed short snmp_bps_temperature[2];
 extern signed short snmp_bps_stat[2];
 
 //Состояние Батареи
+extern signed short snmp_bat_number;
 extern signed short snmp_bat_voltage;
 extern signed short snmp_bat_current;
 extern signed short snmp_bat_temperature;
@@ -71,7 +73,11 @@ extern signed short snmp_max_temperature;
 void snmp_data (void);
 void snmp_sernum_write (int mode); 
 void snmp_location_write (int mode);
+void snmp_model_write (int mode);
 void snmp_command_execute (int mode);
+void snmp_set_primary (int mode);
+void snmp_disable (int mode);
+void snmp_unlock (int mode);
 void event2snmp(char num);
 void snmp_main_bps_write (int mode);
 void snmp_zv_on_write (int mode);

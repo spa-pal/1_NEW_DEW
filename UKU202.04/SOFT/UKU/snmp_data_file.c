@@ -20,7 +20,7 @@ char 	   snmp_location[100];
 signed short snmp_numofbat;
 signed short snmp_numofbps;
 signed short snmp_numofevents;
-
+char 	   snmp_model[30];		//Модель ИБЭПа
 
 //Состояние первичной сети
 signed short snmp_mains_power_voltage;
@@ -40,6 +40,7 @@ signed short snmp_bps_temperature[2];
 signed short snmp_bps_stat[2];
 
 //Состояние Батареи
+signed short snmp_bat_number;
 signed short snmp_bat_voltage;
 signed short snmp_bat_current;
 signed short snmp_bat_temperature;
@@ -143,6 +144,8 @@ snmp_device_code=AUSW_MAIN;
 
 //memcpy(snmp_location,"lkhg;la",);
 
+//memcpy(snmp_model,"ИБЭП220/48",10);
+
 
 snmp_numofbat=1;
 
@@ -172,6 +175,7 @@ else if(St_[1]&(1<<4))snmp_bps_stat[1]=(1<<1); 						//авария по Tmax
 else if(St_[1]&(1<<5))snmp_bps_stat[1]=(1<<5); 						//заблокирован
 else if((!(St_[1]&0x3c))&&(!St&0x01)&&(!OFFBP2))snmp_bps_stat[1]=1; 		//Работает
 
+snmp_bat_number=1;
 snmp_bat_voltage=Ubat;
 snmp_bat_current=Ibat;
 snmp_bat_temperature=t_b;
@@ -232,6 +236,19 @@ if(mode==MIB_WRITE)
 	for(i=0;i<64;i++)
 		{
 		lc640_write(EE_LOCATION+i,snmp_location[i]);
+		}
+	}
+}
+
+//-----------------------------------------------
+void snmp_model_write (int mode) 
+{
+char i;
+if(mode==MIB_WRITE)
+	{
+	for(i=0;i<30;i++)
+		{
+		lc640_write(EE_MODEL+i,snmp_model[i]);
 		}
 	}
 }
@@ -383,6 +400,51 @@ void snmp_max_temperature_write (int mode)
 if(mode==MIB_WRITE)
 	{
      lc640_write_int(EE_TMAX,snmp_max_temperature);
+	}
+}
+
+
+//-----------------------------------------------
+void snmp_set_primary (int mode)
+{
+if(mode==MIB_WRITE)
+	{
+	}
+}
+
+//-----------------------------------------------
+void snmp_disable (int mode)
+{
+if(mode==MIB_WRITE)
+	{
+	if(snmp_command_parametr==1) 
+		{
+		St_[0]|=0x20;
+		St_[1]&=0xdf;
+		St&=0xfb;
+		cnt_src[1]=10;
+		snmp_plazma++;
+		snmp_plazma++;
+		//snmp_command_parametr=COMMAND_OK;
+		}
+	
+	else if(snmp_command_parametr==2)
+		{
+		St_[1]|=0x20;
+		St_[0]&=0xdf;
+		St&=0xfb;
+		cnt_src[0]=10;	
+		snmp_plazma++;
+		//snmp_command_parametr=COMMAND_OK;
+		}	
+	}
+}
+
+//-----------------------------------------------
+void snmp_unlock (int mode)
+{
+if(mode==MIB_WRITE)
+	{
 	}
 }
 

@@ -163,6 +163,10 @@ for(i=0;i<10;i++)
 	{
 	snmp_community[i]=lc640_read(EE_COMMUNITY+(i*2));
 	}
+for(i=0;i<30;i++)
+	{
+	snmp_model[i]=lc640_read(EE_MODEL+i);
+	}
 }
 
 

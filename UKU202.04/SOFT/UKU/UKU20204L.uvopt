@@ -3082,10 +3082,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>29</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>140</TopLine>
+      <CurrentLine>160</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\memo.c</PathWithFileName>
       <FilenameWithoutPath>memo.c</FilenameWithoutPath>
@@ -3108,12 +3108,12 @@
       <GroupNumber>7</GroupNumber>
       <FileNumber>28</FileNumber>
       <FileType>1</FileType>
-      <tvExp>0</tvExp>
+      <tvExp>1</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>48</ColumnNumber>
+      <ColumnNumber>129</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>64</TopLine>
+      <CurrentLine>81</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\SNMP_MIB.c</PathWithFileName>
       <FilenameWithoutPath>SNMP_MIB.c</FilenameWithoutPath>
@@ -3124,10 +3124,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>22</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>130</TopLine>
+      <CurrentLine>130</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\snmp_data_file.c</PathWithFileName>
       <FilenameWithoutPath>snmp_data_file.c</FilenameWithoutPath>
@@ -3169,13 +3169,97 @@
     </File>
   </Group>
 
+  <AlienFiles>
+    <PathWithFilename>E:\Users\Pal\DEVICES\1_NEW_DEV\UKU202.04\SOFT\UKU\snmp_data_file.h</PathWithFilename>
+    <TopLine>1</TopLine>
+    <CurrentLine>12</CurrentLine>
+    <Constant>0</Constant>
+    <WindowPosition>
+      <length>0</length>
+      <flags>0</flags>
+      <showCmd>0</showCmd>
+      <MinPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MinPosition>
+      <MaxPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MaxPosition>
+      <NormalPosition>
+        <Top>0</Top>
+        <Left>0</Left>
+        <Right>0</Right>
+        <Bottom>0</Bottom>
+      </NormalPosition>
+    </WindowPosition>
+  </AlienFiles>
+
+  <AlienFiles>
+    <PathWithFilename>E:\Users\Pal\DEVICES\1_NEW_DEV\UKU202.04\SOFT\UKU\main.h</PathWithFilename>
+    <TopLine>1</TopLine>
+    <CurrentLine>28</CurrentLine>
+    <Constant>0</Constant>
+    <WindowPosition>
+      <length>0</length>
+      <flags>0</flags>
+      <showCmd>0</showCmd>
+      <MinPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MinPosition>
+      <MaxPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MaxPosition>
+      <NormalPosition>
+        <Top>0</Top>
+        <Left>0</Left>
+        <Right>0</Right>
+        <Bottom>0</Bottom>
+      </NormalPosition>
+    </WindowPosition>
+  </AlienFiles>
+
+  <AlienFiles>
+    <PathWithFilename>E:\Users\Pal\DEVICES\1_NEW_DEV\UKU202.04\SOFT\UKU\eeprom_map.h</PathWithFilename>
+    <TopLine>169</TopLine>
+    <CurrentLine>185</CurrentLine>
+    <Constant>0</Constant>
+    <WindowPosition>
+      <length>0</length>
+      <flags>0</flags>
+      <showCmd>0</showCmd>
+      <MinPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MinPosition>
+      <MaxPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MaxPosition>
+      <NormalPosition>
+        <Top>0</Top>
+        <Left>0</Left>
+        <Right>0</Right>
+        <Bottom>0</Bottom>
+      </NormalPosition>
+    </WindowPosition>
+  </AlienFiles>
+
   <MDIGroups>
     <Orientation>1</Orientation>
     <ActiveMDIGroup>0</ActiveMDIGroup>
     <MDIGroup>
       <Size>100</Size>
-      <ActiveTab>2</ActiveTab>
+      <ActiveTab>0</ActiveTab>
       <Documents>
+        <Doc>
+          <Name>eeprom_map.h</Name>
+          <ColumnNumber>31</ColumnNumber>
+          <TopLine>169</TopLine>
+          <CurrentLine>185</CurrentLine>
+        </Doc>
         <Doc>
           <Name>.\main.c</Name>
           <ColumnNumber>59</ColumnNumber>
@@ -3201,10 +3285,34 @@
           <CurrentLine>1</CurrentLine>
         </Doc>
         <Doc>
-          <Name>..\Победа\UKU_Control\UKU_Control\output\UKU_202-04-L.jar</Name>
-          <ColumnNumber>0</ColumnNumber>
+          <Name>.\SNMP_MIB.c</Name>
+          <ColumnNumber>129</ColumnNumber>
+          <TopLine>64</TopLine>
+          <CurrentLine>81</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>main.h</Name>
+          <ColumnNumber>37</ColumnNumber>
           <TopLine>1</TopLine>
-          <CurrentLine>1</CurrentLine>
+          <CurrentLine>28</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\snmp_data_file.c</Name>
+          <ColumnNumber>22</ColumnNumber>
+          <TopLine>130</TopLine>
+          <CurrentLine>130</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>snmp_data_file.h</Name>
+          <ColumnNumber>36</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>12</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\memo.c</Name>
+          <ColumnNumber>29</ColumnNumber>
+          <TopLine>140</TopLine>
+          <CurrentLine>160</CurrentLine>
         </Doc>
       </Documents>
     </MDIGroup>
