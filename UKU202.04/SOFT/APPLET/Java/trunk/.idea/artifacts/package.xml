@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact build-on-make="true" name="package">
+    <output-path>$PROJECT_DIR$/out/artifacts/package</output-path>
+    <root id="root">
+      <element id="artifact" artifact-name="ukuApplet" />
+      <element id="dir-copy" path="$PROJECT_DIR$/web_big/source_snmp" />
+    </root>
+  </artifact>
+</component>

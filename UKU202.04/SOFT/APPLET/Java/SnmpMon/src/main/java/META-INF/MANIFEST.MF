@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Class-Path: commons-logging-1.1.1.jar snmp4j-agent-2.1.0.jar spring-co
+ re-4.0.0.RELEASE.jar spring-aop-4.0.0.RELEASE.jar aopalliance-1.0.jar
+  spring-context-4.0.0.RELEASE.jar spring-beans-4.0.0.RELEASE.jar spri
+ ng-expression-4.0.0.RELEASE.jar log4j-1.2.14.jar snmp4j-2.2.3.jar
+Main-Class: uku.StartMonitoring
+

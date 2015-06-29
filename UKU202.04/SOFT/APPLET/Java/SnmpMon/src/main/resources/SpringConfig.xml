@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config/>
+
+    <bean id="connector" class="uku.SnmpConnector" init-method="init"
+          p:socketTimeout="500"
+          p:host="127.0.0.1"
+          p:autostart="false"
+            />
+    <bean id="presenter" class="uku.OidPresenter" init-method="init"/>
+
+    <bean id="mainsTable" class="uku.OidsTable" p:x="20" p:y="50" p:title="Сеть">
+        <property name="oidParameters">
+            <list>
+                <ref bean="dipslayMainsPhaseA"/>
+                <ref bean="dipslayMainsPhaseB"/>
+                <ref bean="dipslayMainsPhaseC"/>
+                <ref bean="dipslayMainsFrequency"/>
+            </list>
+        </property>
+    </bean>
+
+
+    <bean id="loadTable" class="uku.OidsTable" p:x="20" p:y="250" p:title="Нагрузка">
+        <property name="oidParameters">
+            <list>
+                <ref bean="LoadVoltage"/>
+                <ref bean="LoadCurrent"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="akb1_1" class="uku.OidsTable" p:x="400" p:y="50" p:title="АКБ1-1">
+        <property name="oidParameters">
+            <list>
+                <ref bean="BatteriesMassVoltage_1"/>
+                <ref bean="BatteriesMassCurrent_1"/>
+                <ref bean="BatteriesMassTemperature_1"/>
+                <ref bean="BatteriesMassCapacity_1"/>
+                <ref bean="BatteriesMassCharge_1"/>
+                <ref bean="MakbVoltage1_1"/>
+                <ref bean="MakbVoltage2_1"/>
+                <ref bean="MakbVoltage3_1"/>
+                <ref bean="MakbVoltage4_1"/>
+                <ref bean="MakbVoltage5_1"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="akb1_2" class="uku.OidsTable" p:x="400" p:y="350" p:title="АКБ1-2">
+        <property name="oidParameters">
+            <list>
+                <ref bean="BatteriesMassVoltage_1"/>
+                <ref bean="BatteriesMassCurrent_1"/>
+                <ref bean="BatteriesMassTemperature_1"/>
+                <ref bean="BatteriesMassCapacity_1"/>
+                <ref bean="BatteriesMassCharge_1"/>
+                <ref bean="MakbVoltage1_2"/>
+                <ref bean="MakbVoltage2_2"/>
+                <ref bean="MakbVoltage3_2"/>
+                <ref bean="MakbVoltage4_2"/>
+                <ref bean="MakbVoltage5_2"/>
+            </list>
+        </property>
+    </bean>
+
+
+    <bean id="akb2_1" class="uku.OidsTable" p:x="800" p:y="50" p:title="АКБ2-1">
+        <property name="oidParameters">
+            <list>
+                <ref bean="BatteriesMassVoltage_2"/>
+                <ref bean="BatteriesMassCurrent_2"/>
+                <ref bean="BatteriesMassTemperature_2"/>
+                <ref bean="BatteriesMassCapacity_2"/>
+                <ref bean="BatteriesMassCharge_2"/>
+                <ref bean="MakbVoltage1_3"/>
+                <ref bean="MakbVoltage2_3"/>
+                <ref bean="MakbVoltage3_3"/>
+                <ref bean="MakbVoltage4_3"/>
+                <ref bean="MakbVoltage5_3"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="akb2_2" class="uku.OidsTable" p:x="800" p:y="350" p:title="АКБ2-2">
+        <property name="oidParameters">
+            <list>
+                <ref bean="BatteriesMassVoltage_2"/>
+                <ref bean="BatteriesMassCurrent_2"/>
+                <ref bean="BatteriesMassTemperature_2"/>
+                <ref bean="BatteriesMassCapacity_2"/>
+                <ref bean="BatteriesMassCharge_2"/>
+                <ref bean="MakbVoltage1_4"/>
+                <ref bean="MakbVoltage2_4"/>
+                <ref bean="MakbVoltage3_4"/>
+                <ref bean="MakbVoltage4_4"/>
+                <ref bean="MakbVoltage5_4"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="sk" class="uku.OidsTable" p:x="20" p:y="350" p:title="Сухие Контакты">
+        <property name="oidParameters">
+            <list>
+                <ref bean="skAktivity_1"/>
+                <ref bean="skAktivity_2"/>
+                <ref bean="skAktivity_3"/>
+                <ref bean="skAktivity_4"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="tempSensors" class="uku.OidsTable" p:x="20" p:y="500" p:title="Датчики температуры внешние">
+        <property name="oidParameters">
+            <list>
+                <ref bean="tempSensor_1"/>
+                <ref bean="tempSensor_2"/>
+                <ref bean="tempSensor_3"/>
+                <ref bean="tempSensor_4"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="psus" class="uku.TransposedOidsTable" p:x="20" p:y="650" p:title="Блоки питания">
+        <property name="oidParameters">
+            <list>
+                <ref bean="PSUVoltage_1"/>
+                <ref bean="PSUCurrent_1"/>
+                <ref bean="PSUTemperature_1"/>
+                <ref bean="PSUVoltage_2"/>
+                <ref bean="PSUCurrent_2"/>
+                <ref bean="PSUTemperature_2"/>
+                <ref bean="PSUVoltage_3"/>
+                <ref bean="PSUCurrent_3"/>
+                <ref bean="PSUTemperature_3"/>
+                <ref bean="PSUVoltage_4"/>
+                <ref bean="PSUCurrent_4"/>
+                <ref bean="PSUTemperature_4"/>
+
+            </list>
+        </property>
+    </bean>
+
+    <bean id="psus5_8" class="uku.TransposedOidsTable" p:x="400" p:y="650" p:title="Блоки питания 5 - 8">
+        <property name="oidParameters">
+            <list>
+                <ref bean="PSUVoltage_5"/>
+                <ref bean="PSUCurrent_5"/>
+                <ref bean="PSUTemperature_5"/>
+                <ref bean="PSUVoltage_6"/>
+                <ref bean="PSUCurrent_6"/>
+                <ref bean="PSUTemperature_6"/>
+                <ref bean="PSUVoltage_7"/>
+                <ref bean="PSUCurrent_7"/>
+                <ref bean="PSUTemperature_7"/>
+                <ref bean="PSUVoltage_8"/>
+                <ref bean="PSUCurrent_8"/>
+                <ref bean="PSUTemperature_8"/>
+
+            </list>
+        </property>
+    </bean>
+
+
+    <bean id="dipslayMainsPhaseA" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.2.5.0" p:displayName="Напряжение Фазы A" p:units="В"/>
+    <bean id="dipslayMainsPhaseB" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.2.6.0" p:displayName="Напряжение Фазы B" p:units="В"/>
+    <bean id="dipslayMainsPhaseC" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.2.7.0" p:displayName="Напряжение Фазы C" p:units="В"/>
+    <bean id="dipslayMainsFrequency" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.2.2.0" p:displayName="Частота в сети" p:units="Гц"/>
+
+    <bean id="LoadVoltage" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.3.1.0" p:displayName="Напряжение нагрузки" p:units="В" p:decimalPlaces="1"/>
+    <bean id="LoadCurrent" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.3.2.0" p:displayName="Ток нагрузки" p:units="А" p:decimalPlaces="1"/>
+
+    <bean id="BatteriesMassVoltage_1" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.5.1.2.1" p:displayName="Напряжение батареи" p:decimalPlaces="1" p:units="В"/>
+    <bean id="BatteriesMassCurrent_1" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.5.1.3.1" p:displayName="Ток батареи" p:decimalPlaces="2" p:units="А"/>
+    <bean id="BatteriesMassTemperature_1" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.5.1.4.1" p:displayName="Температура батареи" p:units="◦С"/>
+    <bean id="BatteriesMassCapacity_1" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.5.1.5.1" p:displayName="Ёмкость батареи" p:units="А*ч"/>
+    <bean id="BatteriesMassCharge_1" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.5.1.6.1" p:displayName="Заряд" p:units="%"/>
+
+    <bean id="BatteriesMassVoltage_2" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.5.1.2.2" p:displayName="Напряжение батареи" p:decimalPlaces="1" p:units="В"/>
+    <bean id="BatteriesMassCurrent_2" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.5.1.3.2" p:displayName="Ток батареи" p:decimalPlaces="2" p:units="А"/>
+    <bean id="BatteriesMassTemperature_2" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.5.1.4.2" p:displayName="Температура батареи" p:units="◦С"/>
+    <bean id="BatteriesMassCapacity_2" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.5.1.5.2" p:displayName="Ёмкость батареи" p:units="А*ч"/>
+    <bean id="BatteriesMassCharge_2" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.5.1.6.2" p:displayName="Заряд" p:units="%"/>
+
+    <bean id="MakbVoltage1_1" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.16.1.3.1" p:displayName="Uб1" p:units="В" p:decimalPlaces="1"/>
+    <bean id="MakbVoltage2_1" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.16.1.4.1" p:displayName="Uб2" p:units="В" p:decimalPlaces="1"/>
+    <bean id="MakbVoltage3_1" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.16.1.5.1" p:displayName="Uб3" p:units="В" p:decimalPlaces="1"/>
+    <bean id="MakbVoltage4_1" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.16.1.6.1" p:displayName="Uб4" p:units="В" p:decimalPlaces="1"/>
+    <bean id="MakbVoltage5_1" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.16.1.7.1" p:displayName="Uб5" p:units="В" p:decimalPlaces="1"/>
+
+    <bean id="MakbVoltage1_2" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.16.1.3.2" p:displayName="Uб1" p:units="В" p:decimalPlaces="1"/>
+    <bean id="MakbVoltage2_2" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.16.1.4.2" p:displayName="Uб2" p:units="В" p:decimalPlaces="1"/>
+    <bean id="MakbVoltage3_2" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.16.1.5.2" p:displayName="Uб3" p:units="В" p:decimalPlaces="1"/>
+    <bean id="MakbVoltage4_2" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.16.1.6.2" p:displayName="Uб4" p:units="В" p:decimalPlaces="1"/>
+    <bean id="MakbVoltage5_2" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.16.1.7.2" p:displayName="Uб5" p:units="В" p:decimalPlaces="1"/>
+
+    <bean id="MakbVoltage1_3" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.16.1.3.3" p:displayName="Uб1" p:units="В" p:decimalPlaces="1"/>
+    <bean id="MakbVoltage2_3" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.16.1.4.3" p:displayName="Uб2" p:units="В" p:decimalPlaces="1"/>
+    <bean id="MakbVoltage3_3" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.16.1.5.3" p:displayName="Uб3" p:units="В" p:decimalPlaces="1"/>
+    <bean id="MakbVoltage4_3" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.16.1.6.3" p:displayName="Uб4" p:units="В" p:decimalPlaces="1"/>
+    <bean id="MakbVoltage5_3" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.16.1.7.3" p:displayName="Uб5" p:units="В" p:decimalPlaces="1"/>
+
+    <bean id="MakbVoltage1_4" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.16.1.3.4" p:displayName="Uб1" p:units="В" p:decimalPlaces="1"/>
+    <bean id="MakbVoltage2_4" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.16.1.4.4" p:displayName="Uб2" p:units="В" p:decimalPlaces="1"/>
+    <bean id="MakbVoltage3_4" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.16.1.5.4" p:displayName="Uб3" p:units="В" p:decimalPlaces="1"/>
+    <bean id="MakbVoltage4_4" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.16.1.6.4" p:displayName="Uб4" p:units="В" p:decimalPlaces="1"/>
+    <bean id="MakbVoltage5_4" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.16.1.7.4" p:displayName="Uб5" p:units="В" p:decimalPlaces="1"/>
+
+
+    <bean id="PSUVoltage_1" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.4.1.2.1" p:displayName="Напряжение блока питания 1" p:decimalPlaces="1" p:units="В"/>
+    <bean id="PSUCurrent_1" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.4.1.3.1" p:displayName="Ток блока питания 1" p:decimalPlaces="1" p:units="А"/>
+    <bean id="PSUTemperature_1" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.4.1.4.1" p:displayName="Температура блока 1" p:units="◦С"/>
+
+    <bean id="PSUVoltage_2" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.4.1.2.2" p:displayName="Напряжение блока питания 2" p:decimalPlaces="1" p:units="В"/>
+    <bean id="PSUCurrent_2" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.4.1.3.2" p:displayName="Ток блока питания 2" p:decimalPlaces="1" p:units="А"/>
+    <bean id="PSUTemperature_2" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.4.1.4.2" p:displayName="Температура блока 2" p:units="◦С"/>
+
+    <bean id="PSUVoltage_3" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.4.1.2.3" p:displayName="Напряжение блока питания 3" p:decimalPlaces="1" p:units="В"/>
+    <bean id="PSUCurrent_3" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.4.1.3.3" p:displayName="Ток блока питания 3" p:decimalPlaces="1" p:units="А"/>
+    <bean id="PSUTemperature_3" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.4.1.4.3" p:displayName="Температура блока 3" p:units="◦С"/>
+
+    <bean id="PSUVoltage_4" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.4.1.2.4" p:displayName="Напряжение блока питания 4" p:decimalPlaces="1" p:units="В"/>
+    <bean id="PSUCurrent_4" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.4.1.3.4" p:displayName="Ток блока питания 4" p:decimalPlaces="1" p:units="А"/>
+    <bean id="PSUTemperature_4" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.4.1.4.4" p:displayName="Температура блока 4" p:units="◦С"/>
+
+    <bean id="PSUVoltage_5" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.4.1.2.5" p:displayName="Напряжение блока питания 5" p:decimalPlaces="1" p:units="В"/>
+    <bean id="PSUCurrent_5" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.4.1.3.5" p:displayName="Ток блока питания 5" p:decimalPlaces="1" p:units="А"/>
+    <bean id="PSUTemperature_5" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.4.1.4.5" p:displayName="Температура блока 5" p:units="◦С"/>
+
+    <bean id="PSUVoltage_6" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.4.1.2.6" p:displayName="Напряжение блока питания 6" p:decimalPlaces="1" p:units="В"/>
+    <bean id="PSUCurrent_6" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.4.1.3.6" p:displayName="Ток блока питания 6" p:decimalPlaces="1" p:units="А"/>
+    <bean id="PSUTemperature_6" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.4.1.4.6" p:displayName="Температура блока 6" p:units="◦С"/>
+
+    <bean id="PSUVoltage_7" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.4.1.2.7" p:displayName="Напряжение блока питания 7" p:decimalPlaces="1" p:units="В"/>
+    <bean id="PSUCurrent_7" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.4.1.3.7" p:displayName="Ток блока питания 7" p:decimalPlaces="1" p:units="А"/>
+    <bean id="PSUTemperature_7" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.4.1.4.7" p:displayName="Температура блока 7" p:units="◦С"/>
+
+    <bean id="PSUVoltage_8" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.4.1.2.8" p:displayName="Напряжение блока питания 8" p:decimalPlaces="1" p:units="В"/>
+    <bean id="PSUCurrent_8" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.4.1.3.8" p:displayName="Ток блока питания 8" p:decimalPlaces="1" p:units="А"/>
+    <bean id="PSUTemperature_8" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.4.1.4.8" p:displayName="Температура блока 8" p:units="◦С"/>
+
+
+    <bean id="skAktivity_1" class="uku.snmp.SKOIDParameter" p:oid="1.3.6.1.4.1.33183.14.15.1.2.1" p:displayName="Состояние контакта 1" p:case0="Разомкнут" p:case1="Замкнут"/>
+    <bean id="skAktivity_2" class="uku.snmp.SKOIDParameter" p:oid="1.3.6.1.4.1.33183.14.15.1.2.2" p:displayName="Состояние контакта 2" p:case0="Разомкнут" p:case1="Замкнут"/>
+    <bean id="skAktivity_3" class="uku.snmp.SKOIDParameter" p:oid="1.3.6.1.4.1.33183.14.15.1.2.3" p:displayName="Состояние контакта 3" p:case0="Разомкнут" p:case1="Замкнут"/>
+    <bean id="skAktivity_4" class="uku.snmp.SKOIDParameter" p:oid="1.3.6.1.4.1.33183.14.15.1.2.4" p:displayName="Состояние контакта 4" p:case0="Разомкнут" p:case1="Замкнут"/>
+
+    <bean id="tempSensor_1" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.17.1.2.1" p:displayName="Датчик температуры 1" p:units="◦С"/>
+    <bean id="tempSensor_2" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.17.1.2.2" p:displayName="Датчик температуры 2" p:units="◦С"/>
+    <bean id="tempSensor_3" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.17.1.2.3" p:displayName="Датчик температуры 3" p:units="◦С"/>
+    <bean id="tempSensor_4" class="uku.snmp.OIDParameter" p:oid="1.3.6.1.4.1.33183.14.17.1.2.4" p:displayName="Датчик температуры 4" p:units="◦С"/>
+
+</beans>
