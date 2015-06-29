@@ -47,10 +47,15 @@ public class Settings {
 
     public Collection<? extends Parameter> getAllParameters() {
         List<Parameter> parameters = new ArrayList<Parameter>(this.parameters);
+        for (SettingParameter parameter : this.parameters)
+            if (parameter.getReference() != null)
+                parameters.add(parameter.getReference());
+
         if (psu != null)
             parameters.add(psu.getQuantityPsu());
         if (battery != null)
             parameters.add(battery.getQuantityBatteries());
+
 
         return parameters;
     }

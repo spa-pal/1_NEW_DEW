@@ -22,7 +22,7 @@ public class SettingParameter extends Parameter<Object> {
     private Integer onValue;
     private Integer offValue;
     private Integer step = 1;
-
+    private Parameter<Integer> reference;
 
     public JComponent getView() {
         if (dinamic_parameter != null)
@@ -122,5 +122,14 @@ public class SettingParameter extends Parameter<Object> {
 
     public void setStep(Integer step) {
         this.step = step;
+    }
+
+    @XmlElement(name = "reference")
+    public Parameter<Integer> getReference() {
+        return reference;
+    }
+
+    public void setReference(Parameter<Integer> reference) {
+        this.reference = reference;
     }
 }

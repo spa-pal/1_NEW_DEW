@@ -1,5 +1,6 @@
 package uku_control;
 
+import uku_control.config.Parameter;
 import uku_control.config.SettingParameter;
 import uku_control.config.StatusMapping;
 
@@ -18,7 +19,7 @@ import java.util.List;
 public enum SettingsView {
     Simple {
         @Override
-        public Component getView(final SettingParameter settingParameter) {
+        public JComponent getView(final SettingParameter settingParameter) {
             final Box horizontalBox = Box.createHorizontalBox();
             final JTextField valueHolder = new JTextField("");
 
@@ -75,9 +76,112 @@ public enum SettingsView {
             return horizontalBox;
         }
     },
+    ComboBox {
+        @Override
+        public JComponent getView(final SettingParameter settingParameter) {
+            final Box horizontalBox = Box.createHorizontalBox();
+            final JComboBox valueHolder = new JComboBox();
+            valueHolder.setBounds(new Rectangle(166, 91, 55, 23));
+            valueHolder.setForeground(new Color(117, 177, 217));
+            valueHolder.setUI(new User_ComboBoxUI());
+//            valueHolder.setFont(new Font("Times New Roman", Font.BOLD, 14));
+            valueHolder.setForeground(new Color(117, 177, 217));
+            valueHolder.setBorder(BorderFactory.createLineBorder(Color.BLUE));
+
+            valueHolder.setAutoscrolls(true);
+            valueHolder.setEditable(false);
+            valueHolder.setEnabled(false);
+            final Parameter<Integer> reference = settingParameter.getReference();
+            if (reference == null)
+                return new JLabel("Invalid config. missing reference oid");
+
+            reference.addChangeListener(new ChangeListener() {
+                @Override
+                public void stateChanged(final ChangeEvent e) {
+                    SwingUtilities.invokeLater(new Runnable() {
+                        @Override
+                        public void run() {
+                            Object selectedItem = valueHolder.getSelectedItem();
+                            if (reference.getValue() == null) {
+                                return;
+                            }
+                            resetCombobox(valueHolder, reference.getValue());
+                            valueHolder.setEnabled(true);
+                            valueHolder.setSelectedItem(selectedItem);
+
+                        }
+                    });
+                }
+            });
+            valueHolder.setMaximumSize(new Dimension(54, 23));
+            valueHolder.setMinimumSize(valueHolder.getMaximumSize());
+            valueHolder.setPreferredSize(valueHolder.getMaximumSize());
+
+            valueHolder.setBorder(BorderFactory.createLineBorder(Color.BLUE));
+
+            JButton applyChanges = new JButton("Применить");
+            applyChanges.setBackground(Util.BACKGROUND);
+            applyChanges.setForeground(Color.white);
+            applyChanges.setBorder(BorderFactory.createLineBorder(Color.BLUE));
+            applyChanges.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    String newValue = String.valueOf(valueHolder.getSelectedItem());
+                    if (newValue == null)
+                        return;
+                    int result = JOptionPane.showConfirmDialog(horizontalBox, "Установить новое значение: " + newValue + " ?");
+                    if (result != JOptionPane.OK_OPTION)
+                        return;
+
+                    try {
+                        UKU_Connection_SNMP.writeParameter(settingParameter, Integer.parseInt(newValue.trim()));
+                        UKU_Connection_SNMP.readParameter(settingParameter);
+                    } catch (Exception e1) {
+                        e1.printStackTrace();
+                        JOptionPane.showMessageDialog(horizontalBox, "Невозможно выполнить команду: " + e1.getMessage(), "Ошибка команды", JOptionPane.ERROR_MESSAGE);
+                    }
+                }
+            });
+
+            settingParameter.addChangeListener(new ChangeListener() {
+                @Override
+                public void stateChanged(final ChangeEvent e) {
+                    SwingUtilities.invokeLater(new Runnable() {
+                        public void run() {
+                            Object source = e.getSource();
+                            if (source != settingParameter)
+                                return;
+
+
+                            Integer selectedIndex = (Integer) settingParameter.getValue();
+                            if (selectedIndex == null)
+                                return;
+
+                            if (valueHolder.getItemCount() < (selectedIndex))
+                                resetCombobox(valueHolder, selectedIndex);
+                            valueHolder.setSelectedItem(selectedIndex);
+                        }
+                    });
+                }
+            });
+
+            horizontalBox.add(valueHolder);
+
+            horizontalBox.add(Box.createHorizontalStrut(10));
+            horizontalBox.add(applyChanges);
+            return horizontalBox;
+        }
+
+        private void resetCombobox(JComboBox valueHolder, Integer newSize) {
+            valueHolder.removeAllItems();
+            for (int i = 1; i <= newSize; i++) {
+                valueHolder.addItem(" " + String.valueOf(i));
+            }
+        }
+    },
     LittleStep {
         @Override
-        public Component getView(final SettingParameter settingParameter) {
+        public JComponent getView(final SettingParameter settingParameter) {
             final Box horizontalBox = Box.createHorizontalBox();
             final JTextField value = new JTextField("");
 
@@ -136,7 +240,7 @@ public enum SettingsView {
     },
     Toggle {
         @Override
-        public Component getView(final SettingParameter settingParameter) {
+        public JComponent getView(final SettingParameter settingParameter) {
             final Box horizontalBox = Box.createHorizontalBox();
 
             List<StatusMapping> statusMappings = settingParameter.getStatusMappings();
@@ -203,7 +307,7 @@ public enum SettingsView {
 
     };
 
-    public abstract Component getView(SettingParameter settingParameter);
+    public abstract JComponent getView(SettingParameter settingParameter);
 
     private static class StepListener implements ActionListener {
         private final SettingParameter settingParameter;
