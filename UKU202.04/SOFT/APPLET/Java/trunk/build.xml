@@ -1,0 +1,39 @@
+<project>
+
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="build/classes"/>
+        <javac srcdir="src" destdir="build/classes"/>
+        <copy todir="build/classes">
+            <fileset dir="src" includes="**/*.xml,**/*.properties,**/*.txt,**/*.wav"/>
+        </copy>
+    </target>
+
+    <target name="jar" depends="compile">
+        <mkdir dir="build/jar"/>
+        <jar destfile="build/jar/ukuControl.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Permissions" value="all-permissions"/>
+                <attribute name="Application-Name" value="Power Supply Units Control"/>
+                <attribute name="Main-Class" value="uku_control.UKU_Applet_SNMP"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="signjar" depends="jar">
+        <mkdir dir="build/signed"/>
+        <signjar jar="build/jar/ukuControl.jar" alias="SPA" storepass="spapass" keystore=".keystorespa" destdir="build/signed"/>
+    </target>
+
+    <target name="prepare-for-deploy" depends="signjar">
+        <mkdir dir="build/deploy"/>
+
+        <copyfile src="build/signed/ukuControl.jar" dest="miniweb/htdocs/ukuControl.jar"/>
+        <copyfile src="web_big/source_snmp/index.html" dest="miniweb/htdocs/index.html"/>
+
+    </target>
+
+</project>
