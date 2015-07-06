@@ -193,8 +193,26 @@ public enum SettingsView {
 
             value.setFont(new Font("SanSerif", Font.PLAIN, 12));
             value.setBorder(BorderFactory.createLineBorder(Color.BLUE));
-            value.setEditable(false);
+            value.setEditable(true);
+            value.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    String newValueAsText = value.getText();
+                    int result = JOptionPane.showConfirmDialog(horizontalBox, "Установить новое значение: " + newValueAsText + " ?");
+                    if (result != JOptionPane.OK_OPTION)
+                        return;
 
+                    int valueToSet = (int) (Double.parseDouble(newValueAsText) / settingParameter.getMultiplier());
+
+                    try {
+                        UKU_Connection_SNMP.writeParameter(settingParameter, valueToSet);
+                        UKU_Connection_SNMP.readParameter(settingParameter);
+                    } catch (Exception e1) {
+                        e1.printStackTrace();
+                        JOptionPane.showMessageDialog(horizontalBox, "Невозможно выполнить команду: " + e1.getMessage(), "Ошибка команды", JOptionPane.ERROR_MESSAGE);
+                    }
+                }
+            });
             JButton decrement = new JButton("<");
             decrement.setBackground(new Color(112, 177, 217));
             decrement.setForeground(Color.white);

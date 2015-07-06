@@ -8,15 +8,15 @@
     <serialNumber name="Серийный №" oid="1.3.6.1.4.1.33183.10.1.2.0" type="INTEGER"/>
 
     <alarm name="Первичная сеть" oid="1.3.6.1.4.1.33183.10.2.3.0" type="INTEGER" mask="01"/>
-    <!--
-   <alarm name="Блоки питания" oid="1.3.6.1.4.1.33183.10.4.1.2" type="INTEGER" mask="1E">
-       <index name="psu_index" oid="1.3.6.1.4.1.33183.10.1.5.0" type="INTEGER"/>
-   </alarm>
-    
-    <alarm name="Аккумуляторные батареи" oid="1.3.6.1.4.1.33183.10.5.1.7" type="INTEGER" mask="01">
-        <index name="batteries_index" oid="1.3.6.1.4.1.33183.10.1.4.0" type="INTEGER"/>
+
+    <alarm name="Блоки питания" oid="1.3.6.1.4.1.33183.10.4.1.5" type="INTEGER" mask="1E">
+        <index name="psu_index" oid="1.3.6.1.4.1.33183.10.1.7.0" type="INTEGER"/>
     </alarm>
-	-->
+
+
+    <alarm name="Аккумуляторная батарея" oid="1.3.6.1.4.1.33183.10.5.1.7.1" type="INTEGER" mask="01">
+        <!--<index name="batteries_index" oid="1.3.6.1.4.1.33183.10.1.4.0" type="INTEGER"/>-->
+    </alarm>
 
     <view tableCaption="Параметры нагрузки" tableType="TWO_COLUMNS">
         <parameter name="Напряжение нагрузки, В (Uн)" oid="1.3.6.1.4.1.33183.10.3.1.0" type="DOUBLE" multiplier="0.1"/>
@@ -81,9 +81,9 @@
 
 
     <journal width="600" height="400">
-        <size name="@количество сообщений" oid="1.3.6.1.4.1.33183.10.45.1.1.0" type="INTEGER"/>
+        <size name="@количество сообщений" oid="1.3.6.1.4.1.33183.10.1.8.0" type="INTEGER"/>
         <!-- указатель на первый элемент таблицы сообщений -->
-        <event oid="1.3.6.1.4.1.33183.10.45.1.1" type="OCTET_STRING"/>
+        <event oid="1.3.6.1.4.1.33183.10.9.1.1" type="OCTET_STRING"/>
     </journal>
 
 
@@ -117,11 +117,24 @@
 
         <parameter name="Расположение" oid="1.3.6.1.4.1.33183.10.1.5.0" type="OCTET_STRING"/>
         <parameter name="Модель" oid="1.3.6.1.4.1.33183.10.1.9.0" type="OCTET_STRING"/>
-        <parameter name="Основной источник" oid="1.3.6.1.4.1.33183.10.10.1.0" view="LittleStep" step="1" type="INTEGER"/>
+        <!--<parameter name="Основной источник" oid="1.3.6.1.4.1.33183.10.10.1.0" view="LittleStep" step="1" type="INTEGER"/>-->
+        <parameter name="Установить основной БПУ" oid="1.3.6.1.4.1.33183.10.10.1.0" view="ComboBox" type="INTEGER">
+            <reference name="@psu_table_size" oid="1.3.6.1.4.1.33183.10.1.7.0" type="INTEGER"/>
+        </parameter>
+
+
         <parameter name="Звуковая сигнализация" oid="1.3.6.1.4.1.33183.10.10.2.0" view="Toggle" type="STATUS">
         <status mask="0">ВЫКЛ.</status>
         <status mask="1">ВКЛ.</status>
         </parameter>
+
+        <parameter name="Отключение сигнала аварии" oid="1.3.6.1.4.1.33183.10.10.3.0" view="Toggle" type="STATUS">
+            <status mask="0">РУЧН.</status>
+            <status mask="1">АВТОМ.</status>
+        </parameter>
+
+        <parameter name="T проверки цепи батареи, мин" oid="1.3.6.1.4.1.33183.10.10.4.0" view="LittleStep" step="1" type="INTEGER"/>
+
         <!--<parameter name="Опасный параметр" oid="1.3.6.1.4.1.33183.14.1.12.0" view="LittleStep" step="2" type="INTEGER"/>-->
 
         <!--<parameter name="Регулировка мощщи" oid="1.3.6.1.4.1.33183.14.1.13.0" view="Toggle" type="STATUS">-->
@@ -129,14 +142,22 @@
             <!--<status mask="1">РУЧКОЙ</status>-->
         <!--</parameter>-->
         <!---->
-        <parameter name="Uб20º,В" oid="1.3.6.1.4.1.33183.10.10.6.0" view="LittleStep" step="1" type="DOUBLE" multiplier="0.1"/>
-
-        <parameter name="T.З.А.С., сек." oid="1.3.6.1.4.1.33183.10.10.16.0" view="LittleStep" step="1" type="INTEGER"/>
+        <parameter name="Umax,В" oid="1.3.6.1.4.1.33183.10.10.5.0" view="LittleStep" step="1" type="DOUBLE" multiplier="0.1"/>
+        <parameter name="Uб0ºС,В" oid="1.3.6.1.4.1.33183.10.10.6.0" view="LittleStep" step="1" type="DOUBLE" multiplier="0.1"/>
+        <parameter name="Uб20ºС,В" oid="1.3.6.1.4.1.33183.10.10.7.0" view="LittleStep" step="1" type="DOUBLE" multiplier="0.1"/>
+        <parameter name="Uсигн,В" oid="1.3.6.1.4.1.33183.10.10.8.0" view="LittleStep" step="1" type="DOUBLE" multiplier="0.1"/>
+        <parameter name="Umin,В" oid="1.3.6.1.4.1.33183.10.10.9.0" view="LittleStep" step="1" type="INTEGER"/>
+        <parameter name="U0б,В" oid="1.3.6.1.4.1.33183.10.10.10.0" view="LittleStep" step="1" type="DOUBLE" multiplier="0.1"/>
+        <parameter name="Iбк,A" oid="1.3.6.1.4.1.33183.10.10.11.0" view="LittleStep" step="1" type="DOUBLE" multiplier="0.01"/>
+        <parameter name="Iз.max,A" oid="1.3.6.1.4.1.33183.10.10.12.0" view="LittleStep" step="1" type="DOUBLE" multiplier="0.1"/>
+        <parameter name="Imax,A" oid="1.3.6.1.4.1.33183.10.10.13.0" view="LittleStep" step="1" type="DOUBLE" multiplier="0.1"/>
+        <parameter name="KImax" oid="1.3.6.1.4.1.33183.10.10.14.0" view="LittleStep" step="1" type="DOUBLE" multiplier="0.1"/>
+        <parameter name="T.З.А.С.,сек." oid="1.3.6.1.4.1.33183.10.10.16.0" view="LittleStep" step="1" type="INTEGER"/>
         <parameter name="tmax,ºC" oid="1.3.6.1.4.1.33183.10.10.17.0" view="LittleStep" step="1" type="INTEGER"/>
 
-        <parameter name="Установить основной БПУ" oid="1.3.6.1.4.1.33183.14.1.12.0" view="ComboBox" type="INTEGER">
-            <reference name="@psu_table_size" oid="1.3.6.1.4.1.33183.10.1.7.0" type="INTEGER"/>
-        </parameter>
+
+
+
 
 
     </settings>

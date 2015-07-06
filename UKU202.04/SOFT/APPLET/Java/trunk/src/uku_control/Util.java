@@ -21,7 +21,7 @@ public class Util {
     private static String color;
     private static String codeBase;
 
-    public static Configuration loadConfiguration() {
+    public static synchronized Configuration loadConfiguration() {
         if (configuration != null)
             return configuration;
 
