@@ -31,6 +31,10 @@
     <target name="prepare-for-deploy" depends="signjar">
         <mkdir dir="build/deploy"/>
 
+        <copyfile src="build/signed/ukuControl.jar" dest="build/deploy/ukuControl.jar"/>
+        <copyfile src="web_big/source_snmp/index.html" dest="build/deploy/index.html"/>
+
+        <!-- this is чтобы проверять запускабельность апплета!!! -->
         <copyfile src="build/signed/ukuControl.jar" dest="miniweb/htdocs/ukuControl.jar"/>
         <copyfile src="web_big/source_snmp/index.html" dest="miniweb/htdocs/index.html"/>
 
