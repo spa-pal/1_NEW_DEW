@@ -1,0 +1,123 @@
+#																	 
+# This makefile is generic.										
+# The following variables must be defined on the commandline:		
+#	BCBIN	- path to the Borland tools								
+#	CFLAG	- one of MODS_XPT MODS_XPTEX MODS_WPT_AGR etc			
+#	PROD	- one of xpt xptex wpt_agr etc							
+#	KEY		- one of X4 X5 W4 etc									
+# For example: make -DPROD=xptex -DKEY=X5 -DCFLAG=MODS_XPTEX 				
+#	CFLAG1	- (optional) is used to locate the code segment to TXT1	
+# For example: -DCFLAG1=-zC_TXT1									
+#																	
+
+C_FLAGS = -1 -d -O -Oc -Ol -Z -c -ms -a- -I..\ -I..\inc -D$(CFLAG) $(CFLAG1) -DWEB   
+G_FLAGS = -1 -d -O -Oc -Ol -Z -c -ms -a- -I..\ -I..\inc -D$(CFLAG) -DWEB   
+A_FLAGS = -mx -w2  -m2 	
+
+CC   = $(BCBIN)\bcc 		
+LINK = $(BCBIN)\tlink		
+TASM = $(BCBIN)\tasm 		
+LIB  = ..\lib
+BIN  = ..\bin				
+E2I  = $(BIN)\e2i.exe		
+C2P  = $(BIN)\call2proxy	
+
+PRODM = $(PROD)\mod		
+
+LKFILE  = $(PROD).lk		
+MAPFILE = $(PROD).map		
+EXEFILE = $(PROD).exe		
+ROMFILE = $(PROD).rom		
+
+$(ROMFILE): $(EXEFILE) Version		
+ $(E2I) $(PROD) $(KEY) nix Version	
+
+LIBLOC = ..\lib 					
+PROJOBJS =  $(PROD)\main.obj  $(PROD)\setpar.obj  $(PROD)\demo.obj $(PROD)\tools.obj $(PROD)\snmp.obj 
+LIBOBJS =  $(LIBLOC)\root.obj $(LIBLOC)\rootram.obj 					
+EXTOBJS =  $(LIBLOC)\promhdr.obj $(PROD)\x_man.obj $(PROD)\x_proxy.obj 
+
+!if $d(CFLAG1) 							
+	LIBOBJS = $(LIBOBJS) $(EXTOBJS)			
+	LKSIZE = linkbig						
+!else	 									
+	LKSIZE = link64							
+!endif 									
+
+
+$(EXEFILE):  buildclean $(PROJOBJS) $(LIBOBJS) copyobjs $(LKSIZE)	
+
+
+buildclean:														
+	- rmdir /S /Q $(PRODM)	2> nul
+	mkdir $(PRODM)			
+	del /Q x_proxy.lst		2> nul
+	del $(PROD)\x_proxy.obj	2> nul
+	del $(PROD)\x_man.obj	2> nul
+
+copyobjs:															
+#	copy libs to the module directory for module relocation			
+  xcopy /Y ..\lib\*.lib $(PRODM)										
+#	copy the "other" library objects to the module directory		
+  xcopy /Y ..\lib\*.obj $(PRODM)									
+#	copy the project objects to the module directory				
+  xcopy /Y $(PROD)\*.obj $(PRODM)									
+
+
+linkbig:															
+#	Let's try to link - expect failure								
+  - $(LINK) /j$(PRODM) /L$(PRODM) @$(PROD)\$(LKFILE)				
+#	Use the map file to rename labels and generate proxy code		
+  cd $(PRODM)														
+  ..\..\$(C2P) ..\..\$(MAPFILE) ..\$(LKFILE)				 		
+  cd ..\..
+#	Recompile the new proxy code									
+  $(TASM) $(A_FLAGS) /la $(PROD)\x_proxy.asm,$(PRODM)\x_proxy		
+#	Let's really link this time please								
+  $(LINK) /j$(PRODM) /L$(PRODM) @$(PROD)\$(LKFILE)					
+
+
+link64:															
+#	Let's really link this time please								
+  $(LINK) /j$(PRODM) /L$(PRODM) @$(PROD)\$(LKFILE)					
+
+
+########################################################			
+#	Normal compile process of project below here					
+########################################################			
+
+#	build the proxy code											
+$(PROD)\x_proxy.obj: ..\xcodeman\x_prox_e.asm  $(a_i) 				
+ $(TASM) $(A_FLAGS) ..\xcodeman\x_prox_e.asm,$(PROD)\x_proxy		
+
+$(PROD)\x_man.obj: ..\xcodeman\x_man.asm  $(a_i) 					
+ $(TASM) $(A_FLAGS) ..\xcodeman\x_man.asm,$(PROD)\x_man			
+
+$(PROD)\setpar.obj: setpar.c ..\stdf\stdpar.h						
+ $(CC) $(C_FLAGS) -DDEMO11 -o$(PROD)\setpar setpar.c				
+
+$(PROD)\main.obj: main.c											
+ $(CC) $(G_FLAGS) -o$(PROD)\main main.c							
+
+$(PROD)\demo.obj: demo.c demo.h 							
+ $(CC) $(C_FLAGS) -o$(PROD)\demo demo.c							
+
+$(PROD)\tools.obj: tools.c											
+ $(CC) $(C_FLAGS) -o$(PROD)\tools tools.c							
+
+$(PROD)\snmp.obj: snmp.c											
+ $(CC) $(G_FLAGS) -o$(PROD)\snmp snmp.c							
+
+
+sauber: 									
+ make clean 								
+
+clean: 									
+	- rmdir /S /Q $(PRODM) 2> nul					
+	del $(PROD)\*.obj 2> nul					
+	del $(PROD)\*.asm	2> nul					
+	del $(PROD).map 2> nul					
+	del $(PROD).exe 2> nul					
+	del $(PROD).rom 2> nul					
+	del x_proxy.lst 2> nul					
+

@@ -129,6 +129,10 @@ char* aaa_="abc";
 	{ MIB_INTEGER,  			12, {OID_ENTERPRISE, OID_DEVICE, SNMP_COMMAND, COMMAND_SET_PRIMARY, 0},				MIB_INT(snmp_command_parametr),  	snmp_set_primary},
 	{ MIB_INTEGER,  			12, {OID_ENTERPRISE, OID_DEVICE, SNMP_COMMAND, COMMAND_DISABLE, 0},					MIB_INT(snmp_command_parametr),  	snmp_disable},
 	{ MIB_INTEGER,  			12, {OID_ENTERPRISE, OID_DEVICE, SNMP_COMMAND, COMMAND_UNLOCK, 0},					MIB_INT(snmp_command_parametr),  	snmp_unlock},
+	{ MIB_INTEGER,  			12, {OID_ENTERPRISE, OID_DEVICE, SNMP_COMMAND, COMMAND_PARALLEL, 0},					MIB_INT(snmp_command_parametr),  	snmp_parallel_switch},
+	{ MIB_INTEGER,  			12, {OID_ENTERPRISE, OID_DEVICE, SNMP_COMMAND, COMMAND_COMP_CHARG, 0},				MIB_INT(snmp_command_parametr),  	snmp_vz_start},
+	{ MIB_INTEGER,  			12, {OID_ENTERPRISE, OID_DEVICE, SNMP_COMMAND, COMMAND_CAP_CONTR, 0},					MIB_INT(snmp_command_parametr),  	snmp_ke_start},
+	{ MIB_INTEGER,  			12, {OID_ENTERPRISE, OID_DEVICE, SNMP_COMMAND, COMMAND_DISABLE_SPEC, 0},				MIB_INT(snmp_command_parametr),  	snmp_spc_stop},
 
 
 //	{ MIB_INTEGER, 			12, {OID_ENTERPRISE, OID_DEVICE, 8, 3, 0},   MIB_INT(snmp_bpsnumber[0]),    NULL},

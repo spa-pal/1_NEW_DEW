@@ -1,0 +1,21 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Unnamed" type="Applet" factoryName="Applet">
+    <module name="trunk" />
+    <option name="MAIN_CLASS_NAME" value="uku_control.UKU_Applet_SNMP" />
+    <option name="HTML_FILE_NAME" />
+    <option name="HTML_USED" value="false" />
+    <option name="WIDTH" value="400" />
+    <option name="HEIGHT" value="300" />
+    <option name="POLICY_FILE" value="file://$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+    <option name="VM_PARAMETERS" />
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+    <option name="ALTERNATIVE_JRE_PATH" value="" />
+    <RunnerSettings RunnerId="Debug">
+      <option name="DEBUG_PORT" value="" />
+      <option name="TRANSPORT" value="0" />
+      <option name="LOCAL" value="true" />
+    </RunnerSettings>
+    <ConfigurationWrapper RunnerId="Debug" />
+    <method />
+  </configuration>
+</component>

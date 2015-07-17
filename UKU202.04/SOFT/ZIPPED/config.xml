@@ -100,9 +100,9 @@
     <settings>
         <psu>
             <quantity-psu name="@psu_table_size" oid="1.3.6.1.4.1.33183.10.1.7.0" type="INTEGER"/>
-            <set-primary oid="1.3.6.1.4.1.33183.10.3.1.0" type="INTEGER"/>
+            <set-primary oid="1.3.6.1.4.1.33183.10.8.1.0" type="INTEGER"/>
             <disable oid="1.3.6.1.4.1.33183.10.8.2.0" type="INTEGER"/>
-            <unlock oid="1.3.6.1.4.1.33183.10.3.1.0" type="INTEGER" value-to-set="1"/>
+            <unlock oid="1.3.6.1.4.1.33183.10.8.3.0" type="INTEGER" value-to-set="1"/>
             <enable-parallel oid="1.3.6.1.4.1.33183.10.3.1.0" type="INTEGER" value-to-set="1"/>
             <disable-parallel oid="1.3.6.1.4.1.33183.10.3.1.0" type="INTEGER" value-to-set="0"/>
         </psu>

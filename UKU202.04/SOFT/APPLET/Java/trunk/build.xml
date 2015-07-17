@@ -4,7 +4,7 @@
         <delete dir="build"/>
     </target>
 
-    <target name="compile">
+    <target name="compile" depends="clean">
         <mkdir dir="build/classes"/>
         <javac srcdir="src" destdir="build/classes"/>
         <copy todir="build/classes">
@@ -32,11 +32,11 @@
         <mkdir dir="build/deploy"/>
 
         <copyfile src="build/signed/ukuControl.jar" dest="build/deploy/ukuControl.jar"/>
-        <copyfile src="web_big/source_snmp/index.html" dest="build/deploy/index.html"/>
+        <copyfile src="web_big/source_snmp/index.htm" dest="build/deploy/index.htm"/>
 
         <!-- this is чтобы проверять запускабельность апплета!!! -->
         <copyfile src="build/signed/ukuControl.jar" dest="miniweb/htdocs/ukuControl.jar"/>
-        <copyfile src="web_big/source_snmp/index.html" dest="miniweb/htdocs/index.html"/>
+        <copyfile src="web_big/source_snmp/index.htm" dest="miniweb/htdocs/index.htm"/>
 
     </target>
 

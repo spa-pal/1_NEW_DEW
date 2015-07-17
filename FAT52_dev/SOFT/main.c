@@ -86,23 +86,24 @@ signed short plazma_int[3];
 short rs485_rx_cnt;
 char bRX485;
 
-short max_cell_volt;
-short min_cell_volt;
-short max_cell_temp;
-short min_cell_temp;
-short tot_bat_volt;
-short ch_curr;
-short dsch_curr;
-short s_o_c;
-short rat_cap;
-short	r_b_t;
-short	c_c_l_v;
-short	s_o_h;
-short	b_p_ser_num;
-unsigned char flags_byte0,flags_byte1;
+@near short max_cell_volt[7];
+@near short min_cell_volt[7];
+@near short max_cell_temp[7];
+@near short min_cell_temp[7];
+@near short tot_bat_volt[7];
+@near short ch_curr[7];
+@near short dsch_curr[7];
+@near short s_o_c[7];
+@near short rat_cap[7];
+@near short	r_b_t[7];
+@near short	c_c_l_v[7];
+short	s_o_h[7];
+short	b_p_ser_num[7];
+unsigned char flags_byte0[7],flags_byte1[7];
 unsigned char rs485_cnt=0;
 _Bool bRS485ERR;
 //char plazma_cnt;
+char transmit_cnt_number; 	//—четчик батарей на передачу, считает от 0 до 6 (7 батарей)
 
 //-----------------------------------------------
 void gran_char(signed char *adr, signed char min, signed char max)
@@ -248,19 +249,19 @@ void rx485_in_an(void)
 {
 	if(bRX485==1)
 	{
-		max_cell_volt=str2int(&rx_buffer[13],4);
-		min_cell_volt=str2int(&rx_buffer[17],4);
-		max_cell_temp=str2int(&rx_buffer[21],2);
-		min_cell_temp=str2int(&rx_buffer[23],2);
-		tot_bat_volt=str2int(&rx_buffer[25],4);
-		ch_curr=str2int(&rx_buffer[29],4);
-		dsch_curr=str2int(&rx_buffer[33],4);
-		s_o_c=str2int(&rx_buffer[37],2);
-		rat_cap=str2int(&rx_buffer[39],4);
-		r_b_t=str2int(&rx_buffer[43],2);
-		c_c_l_v=str2int(&rx_buffer[45],4);
-		s_o_h=str2int(&rx_buffer[49],2);
-		b_p_ser_num=str2int(&rx_buffer[51],2);
+		max_cell_volt[0]=str2int(&rx_buffer[13],4);
+		min_cell_volt[0]=str2int(&rx_buffer[17],4);
+		max_cell_temp[0]=str2int(&rx_buffer[21],2);
+		min_cell_temp[0]=str2int(&rx_buffer[23],2);
+		tot_bat_volt[0]=str2int(&rx_buffer[25],4);
+		ch_curr[0]=str2int(&rx_buffer[29],4);
+		dsch_curr[0]=str2int(&rx_buffer[33],4);
+		s_o_c[0]=str2int(&rx_buffer[37],2);
+		rat_cap[0]=str2int(&rx_buffer[39],4);
+		r_b_t[0]=str2int(&rx_buffer[43],2);
+		c_c_l_v[0]=str2int(&rx_buffer[45],4);
+		s_o_h[0]=str2int(&rx_buffer[49],2);
+		b_p_ser_num[0]=str2int(&rx_buffer[51],2);
 		
 		rs485_cnt=0;
 		bRS485ERR=0;
@@ -268,8 +269,8 @@ void rx485_in_an(void)
 	}
 	else if(bRX485==2)
 	{
-		flags_byte0=str2int(&rx_buffer[49],2);
-		flags_byte1++;//=str2int(&rx_buffer[51],2);
+		flags_byte0[0]=str2int(&rx_buffer[49],2);
+		flags_byte1[0]++;//=str2int(&rx_buffer[51],2);
 		
 		rs485_cnt=0;
 		bRS485ERR=0;
@@ -414,10 +415,10 @@ if((mess[6]==19)&&(mess[7]==19)&&(mess[8]==GETTM))
 	
 	//max_cell_volt=35000;
 	
-	can_transmit(0x18e,PUT_LB_TM1,*(((char*)&max_cell_volt)+1),*((char*)&max_cell_volt),*(((char*)&min_cell_volt)+1),*((char*)&min_cell_volt),*(((char*)&tot_bat_volt)+1),*((char*)&tot_bat_volt),(unsigned char)max_cell_temp);
-	can_transmit(0x18e,PUT_LB_TM2,*(((char*)&ch_curr)+1),*((char*)&ch_curr),*(((char*)&dsch_curr)+1),*((char*)&dsch_curr),*(((char*)&rat_cap)+1),*((char*)&rat_cap),(unsigned char)min_cell_temp);
-	can_transmit(0x18e,PUT_LB_TM3,(unsigned char)s_o_h,(unsigned char)s_o_c,*(((char*)&c_c_l_v)+1),*((char*)&c_c_l_v),(unsigned char)r_b_t,(unsigned char)flags_byte0,(unsigned char)flags_byte1);
-	can_transmit(0x18e,PUT_LB_TM4,(unsigned char)bRS485ERR,(unsigned char)rs485_cnt,*(((char*)&c_c_l_v)+1),*((char*)&c_c_l_v),(unsigned char)r_b_t,(unsigned char)flags_byte0,(unsigned char)flags_byte1);
+	can_transmit(0x18e,PUT_LB_TM1,transmit_cnt_number,*(((char*)&max_cell_volt[transmit_cnt_number])+1),*((char*)&max_cell_volt[transmit_cnt_number]),*(((char*)&min_cell_volt[transmit_cnt_number])+1),*((char*)&min_cell_volt[transmit_cnt_number]),*(((char*)&tot_bat_volt[transmit_cnt_number])+1),*((char*)&tot_bat_volt[transmit_cnt_number]));
+	can_transmit(0x18e,PUT_LB_TM2,transmit_cnt_number,*(((char*)&ch_curr[transmit_cnt_number])+1),*((char*)&ch_curr[transmit_cnt_number]),*(((char*)&dsch_curr[transmit_cnt_number])+1),*((char*)&dsch_curr[transmit_cnt_number]),*(((char*)&rat_cap[transmit_cnt_number])+1),*((char*)&rat_cap[transmit_cnt_number]));
+	can_transmit(0x18e,PUT_LB_TM3,transmit_cnt_number,(unsigned char)s_o_h[transmit_cnt_number],(unsigned char)s_o_c[transmit_cnt_number],*(((char*)&c_c_l_v[transmit_cnt_number])+1),*((char*)&c_c_l_v[transmit_cnt_number]),(unsigned char)r_b_t[transmit_cnt_number],(unsigned char)flags_byte0[transmit_cnt_number]);
+	can_transmit(0x18e,PUT_LB_TM4,transmit_cnt_number,(unsigned char)bRS485ERR,(unsigned char)rs485_cnt,(unsigned char)max_cell_temp[transmit_cnt_number],(unsigned char)min_cell_temp[transmit_cnt_number],(unsigned char)flags_byte1[transmit_cnt_number],0);
      link_cnt=0;
      link=ON;
      

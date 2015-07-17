@@ -1,0 +1,20 @@
+ip_taken equ  0
+ip_port  equ  2
+ip_addr equ   4
+ip_nmsk equ   8
+ip_gway equ   12
+ip_ns   equ   16
+ip_bcst equ   20
+ip_id   equ   24
+ip_arpcachetime equ 26
+
+ad_ipa  equ   0
+ad_hwa  equ   4
+ad_sta  equ   10
+ad_port equ   11
+
+AD_S_HW equ   1         ; hw address is present
+AD_S_BC equ   2         ; use broadcast to send out
+AD_S_SPKG equ 4         ; skip gw check
+AD_S_TCP equ  8
+AD_S_INTF equ 64

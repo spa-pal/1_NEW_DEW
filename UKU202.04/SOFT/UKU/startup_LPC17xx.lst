@@ -192,7 +192,7 @@ NLY
   122 00000000                 EXPORT           Reset_Handler             [WEAK
 ]
   123 00000000                 IMPORT           __main
-  124 00000000 4805            LDR              R0, =__main
+  124 00000000 4808            LDR              R0, =__main
 
 
 
@@ -400,21 +400,30 @@ ARM Macro Assembler    Page 7
   255 00000018         ; User Initial Stack & Heap
   256 00000018         
   257 00000018                 IF               :DEF:__MICROLIB
-  258 00000018         
-  259 00000018                 EXPORT           __initial_sp
-  260 00000018                 EXPORT           __heap_base
-  261 00000018                 EXPORT           __heap_limit
-  262 00000018         
-  263 00000018                 ELSE
-  277                          ENDIF
-  278 00000018         
-  279 00000018         
-  280 00000018                 END
+  264 00000018         
+  265 00000018                 IMPORT           __use_two_region_memory
+  266 00000018                 EXPORT           __user_initial_stackheap
+  267 00000018         __user_initial_stackheap
+  268 00000018         
+  269 00000018 4803            LDR              R0, =  Heap_Mem
+  270 0000001A 4904            LDR              R1, =(Stack_Mem + Stack_Size)
+  271 0000001C 4A02            LDR              R2, = (Heap_Mem +  Heap_Size)
+  272 0000001E 4B04            LDR              R3, = Stack_Mem
+  273 00000020 4770            BX               LR
+  274 00000022         
+  275 00000022 00 00           ALIGN
+  276 00000024         
+  277 00000024                 ENDIF
+  278 00000024         
+  279 00000024         
+  280 00000024                 END
+              00000000 
+              00000000 
+              00000200 
               00000000 
 Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=startup_
 LPC17xx.d -ostartup_LPC17xx.o -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\INC\NXP
-\LPC17xx --predefine="__MICROLIB SETA 1" --list=startup_LPC17xx.lst startup_LPC
-17xx.s
+\LPC17xx --list=startup_LPC17xx.lst startup_LPC17xx.s
 
 
 
@@ -435,8 +444,9 @@ Symbol: Stack_Mem
    Definitions
       At line 30 in file startup_LPC17xx.s
    Uses
-      None
-Comment: Stack_Mem unused
+      At line 270 in file startup_LPC17xx.s
+      At line 272 in file startup_LPC17xx.s
+
 __initial_sp 00000200
 
 Symbol: __initial_sp
@@ -444,8 +454,7 @@ Symbol: __initial_sp
       At line 31 in file startup_LPC17xx.s
    Uses
       At line 55 in file startup_LPC17xx.s
-      At line 259 in file startup_LPC17xx.s
-
+Comment: __initial_sp used once
 3 symbols
 
 
@@ -467,24 +476,25 @@ Symbol: Heap_Mem
    Definitions
       At line 42 in file startup_LPC17xx.s
    Uses
-      None
-Comment: Heap_Mem unused
+      At line 269 in file startup_LPC17xx.s
+      At line 271 in file startup_LPC17xx.s
+
 __heap_base 00000000
 
 Symbol: __heap_base
    Definitions
       At line 41 in file startup_LPC17xx.s
    Uses
-      At line 260 in file startup_LPC17xx.s
-Comment: __heap_base used once
+      None
+Comment: __heap_base unused
 __heap_limit 00000000
 
 Symbol: __heap_limit
    Definitions
       At line 43 in file startup_LPC17xx.s
    Uses
-      At line 261 in file startup_LPC17xx.s
-Comment: __heap_limit used once
+      None
+Comment: __heap_limit unused
 4 symbols
 
 
@@ -1001,7 +1011,15 @@ Symbol: WDT_IRQHandler
       At line 73 in file startup_LPC17xx.s
       At line 175 in file startup_LPC17xx.s
 
-47 symbols
+__user_initial_stackheap 00000018
+
+Symbol: __user_initial_stackheap
+   Definitions
+      At line 267 in file startup_LPC17xx.s
+   Uses
+      At line 266 in file startup_LPC17xx.s
+Comment: __user_initial_stackheap used once
+48 symbols
 
 
 
@@ -1015,7 +1033,8 @@ Symbol: Heap_Size
       At line 38 in file startup_LPC17xx.s
    Uses
       At line 42 in file startup_LPC17xx.s
-Comment: Heap_Size used once
+      At line 271 in file startup_LPC17xx.s
+
 Stack_Size 00000200
 
 Symbol: Stack_Size
@@ -1023,7 +1042,8 @@ Symbol: Stack_Size
       At line 27 in file startup_LPC17xx.s
    Uses
       At line 30 in file startup_LPC17xx.s
-Comment: Stack_Size used once
+      At line 270 in file startup_LPC17xx.s
+
 2 symbols
 
 
@@ -1039,5 +1059,13 @@ Symbol: __main
    Uses
       At line 124 in file startup_LPC17xx.s
 Comment: __main used once
-1 symbol
-389 symbols in table
+__use_two_region_memory 00000000
+
+Symbol: __use_two_region_memory
+   Definitions
+      At line 265 in file startup_LPC17xx.s
+   Uses
+      None
+Comment: __use_two_region_memory unused
+2 symbols
+392 symbols in table

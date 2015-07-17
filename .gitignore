@@ -15,3 +15,4 @@ FAT52_dev/SOFT/1
 *.plg
 *.__
 *.*~*
+*.class

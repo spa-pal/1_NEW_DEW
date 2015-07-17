@@ -292,6 +292,10 @@ public class UKU_Control_Panel_SNMP extends Abstract_spanel implements ChangeLis
             this.set_bps_combo.addItem(" " + Integer.toString(i));
         for (int i = 1; i <= quantity; i++)
             this.disable_bps_combo.addItem(" " + Integer.toString(i));
+        if (quantity > 0) {
+            set_bps_combo.setSelectedIndex(0);
+            disable_bps_combo.setSelectedIndex(0);
+        }
     }
 
     private void configureJournal() {

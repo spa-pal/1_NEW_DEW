@@ -8079,6 +8079,7 @@ if((snmp_Community[8]==0)||(snmp_Community[8]==' '))snmp_Community[8]=0;
 snmp_Community[9]=0;
 
 bRESET_RESET=1;
+#ifdef LAN_OFF
 if(lc640_read_int(EE_ETH_IS_ON)==1)
 	{
 	bgnd_par(		"                    ",
@@ -8095,7 +8096,7 @@ if(lc640_read_int(EE_ETH_IS_ON)==1)
 	}
 bRESET_RESET=0;
 //event2snmp(2);
-
+#endif
 reload_hndl();
 adc_init();
 
@@ -8111,9 +8112,10 @@ watchdog_enable();
 
 while(1)
      {
+	#ifdef LAN_OFF
      timer_poll ();
      main_TcpNet ();
-     
+     #endif
 	if(bRXIN0)
      	{
 		bRXIN0=0;

@@ -1,0 +1,3 @@
+//
+
+#DEFINE errortype 3

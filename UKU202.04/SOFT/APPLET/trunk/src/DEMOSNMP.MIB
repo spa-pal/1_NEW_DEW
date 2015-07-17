@@ -1,0 +1,226 @@
+--
+--defines M7DEMO-MIB for sample SNMP agent extension
+--Contents:	Global Registration Module
+--		Magic 7 OIDs - Enterprise 7777
+--Version:	1.2 
+--Date:		19 July, 2001
+--Developed By: Kees van de Kreeke
+--              sr. application engineer
+--              Magic 7  Virtual Company
+
+--
+--Copyright (c) 2001 Magic 7 Inc.
+--
+
+DEMOSNMP-MIB DEFINITIONS ::= BEGIN
+
+
+IMPORTS
+	enterprises, IpAddress, Counter, TimeTicks
+		FROM RFC1155-SMI
+	OBJECT-TYPE
+		FROM RFC-1212
+	DisplayString
+		FROM RFC-1213;
+
+
+magic7        OBJECT IDENTIFIER ::= { enterprises 7777 }
+products      OBJECT IDENTIFIER ::= { magic7 1 }
+powersrc      OBJECT IDENTIFIER ::= { products 2 }
+readings      OBJECT IDENTIFIER ::= { powersrc 1 }
+settings      OBJECT IDENTIFIER ::= { powersrc 2 }
+traps         OBJECT IDENTIFIER ::= { powersrc 3 }
+tables	      OBJECT IDENTIFIER ::= { powersrc 4 }
+ 
+-- Power Source MIB
+-- Parameters (Prefix ps)         
+
+psPowerReading OBJECT-TYPE
+	SYNTAX  	INTEGER(0..400000000)
+	ACCESS		read-only
+	STATUS		mandatory
+	DESCRIPTION	"Power output"
+::= { readings 1 }
+
+psVoltageReading OBJECT-TYPE
+	SYNTAX  	INTEGER(0..65535)
+	ACCESS		read-only
+	STATUS		mandatory
+	DESCRIPTION	"Voltage output"
+::= { readings 2 }
+
+psCurrentReading OBJECT-TYPE
+	SYNTAX  	INTEGER(0..65535)
+	ACCESS		read-only
+	STATUS		mandatory
+	DESCRIPTION	"Current output"
+::= { readings 3 }
+
+
+psTempReading OBJECT-TYPE
+	SYNTAX  	INTEGER(0..65535)
+	ACCESS		read-only
+	STATUS		mandatory
+	DESCRIPTION	"Temperature"
+::= { readings 4 }
+
+psPowerUpperLimit OBJECT-TYPE
+	SYNTAX  	INTEGER(0..65535)
+	ACCESS		read-write
+	STATUS		mandatory
+	DESCRIPTION	"max 1800"
+::= { settings 1 }
+
+psPowerLowerLimit OBJECT-TYPE
+	SYNTAX  	INTEGER(0..65535)
+	ACCESS		read-write
+	STATUS		mandatory
+	DESCRIPTION	"min 300"
+::= { settings 2 }
+
+psVoltageUpperLimit OBJECT-TYPE
+	SYNTAX  	INTEGER(0..65535)
+	ACCESS		read-write
+	STATUS		mandatory
+	DESCRIPTION	"max 48 +10%   *10"
+::= { settings 3 }
+
+psVoltageLowerLimit OBJECT-TYPE
+	SYNTAX  	INTEGER(0..65535)
+	ACCESS		read-write
+	STATUS		mandatory
+	DESCRIPTION	"min 48 -10%    *10"
+::= { settings 4 }
+
+psTempUpperLimit OBJECT-TYPE
+	SYNTAX  	INTEGER(0..65535)
+	ACCESS		read-write
+	STATUS		mandatory
+	DESCRIPTION	"max 50"
+::= { settings 5 }
+
+psTempLowerLimit OBJECT-TYPE
+	SYNTAX  	INTEGER(0..65535)
+	ACCESS		read-write
+	STATUS		mandatory
+	DESCRIPTION	"min 0"
+::= { settings 6 }
+
+psSendCommand OBJECT-TYPE
+	SYNTAX		DisplayString (SIZE (0..30))
+	ACCESS		read-write
+	STATUS		mandatory
+	DESCRIPTION	"Set to string value for serial port output."
+::= { settings 7 }
+
+psMessageString OBJECT-TYPE
+	SYNTAX		DisplayString (SIZE (0..30))
+	ACCESS		read-only
+	STATUS		mandatory
+	DESCRIPTION	"Message giving more detailed information on alarms."
+::= { traps 1 } 
+
+
+psAlarmPower OBJECT-TYPE
+	SYNTAX  	INTEGER(0..2)
+	ACCESS		read-only
+	STATUS		mandatory
+	DESCRIPTION	"Alarm for power usage 
+0 = power usage OK
+1 = power usage too high
+2 = power usage too low"
+::= { traps 2 }
+
+
+psAlarmVoltage OBJECT-TYPE
+	SYNTAX  	INTEGER(0..2)
+	ACCESS		read-only
+	STATUS		mandatory
+	DESCRIPTION	"Alarm for output voltage
+0 = output voltage OK
+1 = output voltage too high
+2 = output voltage too low"
+::= { traps 3 }
+
+
+psAlarmTemp OBJECT-TYPE
+	SYNTAX  	INTEGER(0..2)
+	ACCESS		read-only
+	STATUS		mandatory
+	DESCRIPTION	"Alarm for temperature
+0 = temperature OK
+1 = temperature too high
+2 = temperature too low"
+	::= { traps 4 }
+
+
+psAlarmSerialComm OBJECT-TYPE
+	SYNTAX  	INTEGER(0..2)
+	ACCESS		read-only
+	STATUS		mandatory
+	DESCRIPTION	
+"Alarm for serial connection to PowerSrc.
+0 = Connection OK
+1 = Connection broken (inactive for 30 seconds)
+2 = Received the RESET command back from device "
+::= { traps 5 }
+
+
+
+historyTable OBJECT-TYPE
+	SYNTAX  SEQUENCE OF HistoryEntry
+	ACCESS  not-accessible
+	STATUS  mandatory
+	DESCRIPTION	"Table of the history values."
+::= { tables 1 }
+
+historyEntry OBJECT-TYPE
+	SYNTAX  HistoryEntry
+	ACCESS  not-accessible
+	STATUS  optional
+	DESCRIPTION	"History values entries."
+	INDEX   { index }
+::= { historyTable 1 }
+
+HistoryEntry ::=
+	SEQUENCE {
+		voltage
+			INTEGER,
+		mcurrent
+			INTEGER,
+		temp
+			INTEGER,
+		timeStamp
+			TimeTicks
+		}
+
+
+voltage OBJECT-TYPE
+	SYNTAX  INTEGER (1..65535)
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION	"Voltage reading."
+::= { historyEntry 1 }
+
+mcurrent OBJECT-TYPE
+	SYNTAX  INTEGER (1..65535)
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION	"Current reading."
+::= { historyEntry 2 }
+
+temp OBJECT-TYPE
+	SYNTAX  INTEGER (1..65535)
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION	"Temperature reading."
+::= { historyEntry 3 }
+
+timeStamp OBJECT-TYPE
+	SYNTAX  TimeTicks
+	ACCESS  read-only
+	STATUS  mandatory
+	DESCRIPTION	"Time since startup in 5msec parts."
+::= { historyEntry 4 }
+
+END

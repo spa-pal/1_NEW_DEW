@@ -1,0 +1,1342 @@
+ARM Linker, 4.1 [Build 644] [Standard]
+
+==============================================================================
+
+Section Cross References
+
+    startup_lpc17xx.o(RESET) refers to startup_lpc17xx.o(STACK) for __initial_sp
+    startup_lpc17xx.o(RESET) refers to startup_lpc17xx.o(.text) for Reset_Handler
+    startup_lpc17xx.o(RESET) refers to main.o(.text) for SysTick_Handler
+    startup_lpc17xx.o(RESET) refers to timer.o(.text) for TIMER0_IRQHandler
+    startup_lpc17xx.o(RESET) refers to uart0.o(.text) for UART0_IRQHandler
+    startup_lpc17xx.o(RESET) refers to uart2.o(.text) for UART2_IRQHandler
+    startup_lpc17xx.o(RESET) refers to full_can.o(.text) for CAN_IRQHandler
+    startup_lpc17xx.o(RESET) refers to emac_lpc17xx.o(.text) for ENET_IRQHandler
+    startup_lpc17xx.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    net_config_http.o(.text) refers to at_ethernet.o(i.init_eth_link) for init_eth_link
+    net_config_http.o(.text) refers to at_udp.o(i.init_udp) for init_udp
+    net_config_http.o(.text) refers to at_tcp.o(i.init_tcp) for init_tcp
+    net_config_http.o(.text) refers to at_http.o(i.init_http) for init_http
+    net_config_http.o(.text) refers to at_snmp.o(i.init_snmp) for init_snmp
+    net_config_http.o(.text) refers to at_ethernet.o(i.run_eth_link) for run_eth_link
+    net_config_http.o(.text) refers to at_tcp.o(i.tcp_poll_sockets) for tcp_poll_sockets
+    net_config_http.o(.text) refers to at_http.o(i.run_http_server) for run_http_server
+    net_config_http.o(.text) refers to at_snmp.o(i.run_snmp_agent) for run_snmp_agent
+    net_config_http.o(.text) refers to at_udp.o(i.process_udp) for process_udp
+    net_config_http.o(.text) refers to at_tcp.o(i.process_tcp) for process_tcp
+    net_config_http.o(.text) refers to at_ethernet.o(i.eth_send_frame) for eth_send_frame
+    common_func.o(.text) refers to 25lc640.o(.text) for lc640_read_int
+    common_func.o(.text) refers to main.o(.data) for lcd_buffer
+    common_func.o(.text) refers to main.o(.data) for dig
+    common_func.o(.text) refers to main.o(.data) for zero_on
+    common_func.o(.text) refers to main.o(.constdata) for sm_mont
+    common_func.o(.text) refers to ret.o(.text) for ret
+    common_func.o(.text) refers to main.o(.constdata) for ABCDEF
+    common_func.o(.text) refers to main.o(.bss) for b_ind
+    common_func.o(.text) refers to common_func.o(.text) for bin2bcd_int
+    common_func.o(.text) refers to main.o(.data) for dig
+    common_func.o(.text) refers to main.o(.data) for lcd_buffer
+    common_func.o(.text) refers to common_func.o(.text) for bin2bcd_int
+    common_func.o(.text) refers to main.o(.data) for dig
+    common_func.o(.text) refers to main.o(.data) for lcd_buffer
+    common_func.o(.text) refers to common_func.o(.text) for find
+    common_func.o(.text) refers to main.o(.constdata) for ABCDEF
+    common_func.o(.text) refers to main.o(.data) for lcd_buffer
+    common_func.o(.text) refers to main.o(.constdata) for ABCDEF
+    common_func.o(.text) refers to main.o(.data) for lcd_buffer
+    common_func.o(.text) refers to main.o(.constdata) for ABCDEF
+    common_func.o(.text) refers to main.o(.data) for lcd_buffer
+    control.o(.text) refers to 25lc640.o(.text) for lc640_write_int
+    control.o(.text) refers to gran.o(.text) for gran_char
+    control.o(.text) refers to mess.o(.text) for mess_send
+    control.o(.text) refers to common_func.o(.text) for abs
+    control.o(.text) refers to avar_hndl.o(.text) for ke_mem_hndl
+    control.o(.text) refers to control.o(.data) for .data
+    control.o(.text) refers to main.o(.data) for BAT_IS_ON
+    control.o(.text) refers to main.o(.bss) for bat
+    control.o(.text) refers to eeprom_map.o(.constdata) for ADR_EE_BAT_ZAR_CNT_KE
+    control.o(.text) refers to eeprom_map.o(.constdata) for ADR_EE_BAT_C_REAL
+    control.o(.text) refers to eeprom_map.o(.constdata) for ADR_EE_BAT_ZAR_CNT
+    control.o(.text) refers to mess.o(.data) for mess_data
+    control.o(.text) refers to main.o(.data) for Kibat0
+    control.o(.text) refers to ad7705.o(.data) for ad7705_buff_
+    control.o(.text) refers to eeprom_map.o(.constdata) for ADR_KI0BAT
+    control.o(.text) refers to main.o(.data) for unet_drv_cnt
+    control.o(.text) refers to main.o(.data) for net_Ustore
+    control.o(.text) refers to main.o(.data) for Kunet
+    control.o(.text) refers to control.o(.bss) for .bss
+    control.o(.text) refers to main.o(.data) for Kubat
+    control.o(.text) refers to main.o(.data) for Kubatm
+    control.o(.text) refers to main.o(.data) for Kibat1
+    control.o(.text) refers to main.o(.data) for Ktbat
+    control.o(.text) refers to main.o(.data) for Kuload
+    control.o(.text) refers to main.o(.data) for Ktext
+    control.o(.text) refers to main.o(.data) for Kunet_ext
+    control.o(.text) refers to main.o(.bss) for eb2_data_short
+    control.o(.text) refers to main.o(.data) for Kvv_eb2
+    control.o(.text) refers to main.o(.text) for abs_pal
+    control.o(.text) refers to main.o(.data) for Kpes_eb2
+    control.o(.text) refers to main.o(.data) for Isumm
+    control.o(.text) refers to main.o(.data) for tbatdisable_stat
+    control.o(.text) refers to avar_hndl.o(.data) for avar_ind_stat
+    control.o(.text) refers to main.o(.data) for tloaddisable_stat
+    control.o(.text) refers to main.o(.data) for warm_stat_k
+    control.o(.text) refers to main.o(.data) for vent_stat_k
+    control.o(.text) refers to snmp_data_file.o(.text) for snmp_trap_send
+    control.o(.text) refers to main.o(.data) for num_necc
+    control.o(.text) refers to main.o(.bss) for avt_stat_old
+    control.o(.text) refers to main.o(.data) for av_tbox_cnt
+    control.o(.text) refers to main.o(.data) for av_tbox_stat
+    control.o(.text) refers to main.o(.data) for t_box_cnt
+    control.o(.text) refers to main.o(.data) for t_box_warm_on_cnt
+    control.o(.text) refers to main.o(.data) for tbatdisable_cnt
+    control.o(.text) refers to main.o(.data) for tloaddisable_cnt
+    control.o(.text) refers to eeprom_map.o(.constdata) for ADR_EE_BAT_RESURS
+    control.o(.text) refers to main.o(.data) for mat_temper
+    control.o(.text) refers to main.o(.data) for u_necc_dn
+    control.o(.text) refers to main.o(.data) for u_necc_up
+    control.o(.text) refers to main.o(.data) for Isumm_
+    control.o(.text) refers to main.o(.data) for sk_cnt
+    control.o(.text) refers to control.o(.constdata) for .constdata
+    control.o(.text) refers to main.o(.data) for sk_av_cnt
+    control.o(.text) refers to main.o(.data) for sk_av_stat_old
+    control.o(.text) refers to main.o(.data) for sign_U
+    control.o(.text) refers to main.o(.data) for sign_I
+    control.o(.text) refers to main.o(.data) for superviser_cnt
+    control.o(.text) refers to main.o(.data) for npn_stat
+    control.o(.text) refers to main.o(.data) for npn_tz_cnt
+    control.o(.text) refers to control.o(.data) for .data
+    control.o(.text) refers to main.o(.text) for abs_pal
+    control.o(.text) refers to control.o(.data) for .data
+    control.o(.text) refers to control.o(.bss) for .bss
+    control.o(.text) refers to gran.o(.text) for gran_char
+    control.o(.text) refers to snmp_data_file.o(.text) for snmp_trap_send
+    control.o(.text) refers to main.o(.data) for first_inv_slot
+    control.o(.text) refers to main.o(.bss) for inv
+    control.o(.text) refers to control.o(.data) for .data
+    mess.o(.text) refers to mess.o(.bss) for .bss
+    mess.o(.text) refers to mess.o(.data) for .data
+    ret.o(.text) refers to common_func.o(.text) for tree_down
+    ret.o(.text) refers to ret.o(.data) for .data
+    ret.o(.text) refers to ret.o(.data) for .data
+    ret.o(.text) refers to main.o(.data) for a_ind
+    ret.o(.text) refers to ret.o(.data) for .data
+    ret.o(.text) refers to main.o(.data) for a_ind
+    avar_hndl.o(.text) refers to 25lc640.o(.text) for lc640_read_int
+    avar_hndl.o(.text) refers to main.o(.data) for net_av
+    avar_hndl.o(.text) refers to avar_hndl.o(.data) for .data
+    avar_hndl.o(.text) refers to main.o(.bss) for bat
+    avar_hndl.o(.text) refers to snmp_data_file.o(.text) for snmp_trap_send
+    avar_hndl.o(.text) refers to main.o(.data) for net_Ustore
+    avar_hndl.o(.text) refers to control.o(.data) for ke_date
+    main.o(.text) refers to main.o(.data) for .data
+    main.o(.text) refers to main.o(.bss) for .bss
+    main.o(.text) refers to 25lc640.o(.text) for lc640_read_int
+    main.o(.text) refers to at_system.o(.bss) for localm
+    main.o(.text) refers to control.o(.data) for adc_self_ch_buff
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_SK_SIGN
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_SK_REL_EN
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_SK_LCD_EN
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_EE_BAT_IS_ON
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_EE_BAT_DAY_OF_ON
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_EE_BAT_MONTH_OF_ON
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_EE_BAT_YEAR_OF_ON
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_EE_BAT_C_NOM
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_EE_BAT_RESURS
+    main.o(.text) refers to full_can.o(.data) for can_reset_cnt
+    main.o(.text) refers to mess.o(.text) for mess_find_unvol
+    main.o(.text) refers to full_can.o(.text) for can1_out
+    main.o(.text) refers to avar_hndl.o(.text) for avar_bps_hndl
+    main.o(.text) refers to main.o(.data) for .data
+    main.o(.text) refers to avar_hndl.o(.data) for avar_stat
+    main.o(.text) refers to main.o(.bss) for .bss
+    main.o(.text) refers to mess.o(.data) for mess_data
+    main.o(.text) refers to graphic.o(.text) for graphic_print
+    main.o(.text) refers to gran.o(.text) for gran
+    main.o(.text) refers to simbols.o(.constdata) for sAVNET
+    main.o(.text) refers to simbols.o(.constdata) for sAVNET1
+    main.o(.text) refers to simbols.o(.constdata) for sAVT
+    main.o(.text) refers to simbols.o(.constdata) for sBPS1
+    main.o(.text) refers to simbols.o(.constdata) for sAVU
+    main.o(.text) refers to simbols.o(.constdata) for sBPS2
+    main.o(.text) refers to main.o(.constdata) for .constdata
+    main.o(.text) refers to common_func.o(.text) for bgnd_par
+    main.o(.text) refers to full_can.o(.bss) for can_rotor
+    main.o(.text) refers to snmp_data_file.o(.bss) for snmp_community
+    main.o(.text) refers to control.o(.data) for net_metr_buff_
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_EE_BAT_ZAR_CNT_KE
+    main.o(.text) refers to control.o(.data) for rele_stat
+    main.o(.text) refers to beep.o(.text) for beep_init
+    main.o(.text) refers to ret.o(.text) for ret
+    main.o(.text) refers to snmp_data_file.o(.text) for snmp_trap_send
+    main.o(.text) refers to uart0.o(.text) for putchar0
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_EE_BAT_C_REAL
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_EE_BAT_ZAR_CNT
+    main.o(.text) refers to control.o(.text) for vz_start
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_TMAX_EXT_EN
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_TMAX_EXT
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_TMIN_EXT_EN
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_TMIN_EXT
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_T_EXT_REL_EN
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_T_EXT_ZVUK_EN
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_T_EXT_LCD_EN
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_T_EXT_RS_EN
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_SK_RS_EN
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_SK_ZVUK_EN
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_KI1BAT
+    main.o(.text) refers to ad7705.o(.data) for ad7705_buff_
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_KI0BAT
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_KUBATM
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_KUBAT
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_KTBAT
+    main.o(.text) refers to system_lpc17xx.o(.text) for SystemInit
+    main.o(.text) refers to ad7705.o(.text) for ad7705_reset
+    main.o(.text) refers to lcd_agm1232_uku207_3.o(.text) for lcd_init
+    main.o(.text) refers to memo.o(.text) for memo_read
+    main.o(.text) refers to at_lib.o(i.mem_copy) for mem_copy
+    main.o(.text) refers to modbus.o(.data) for modbus_timeout_cnt
+    main.o(.text) refers to modbus.o(.data) for bMODBUS_TIMEOUT
+    main.o(.text) refers to system_lpc17xx.o(.data) for SystemFrequency
+    main.o(.text) refers to ad7705.o(.bss) for ad7705_buff
+    main.o(.text) refers to net_config_http.o(.data) for own_hw_adr
+    main.o(.text) refers to net_config_http.o(.data) for snmp_Community
+    main.o(.text) refers to at_system.o(i.init_TcpNet) for init_TcpNet
+    main.o(.text) refers to at_system.o(i.main_TcpNet) for main_TcpNet
+    main.o(.text) refers to modbus.o(.text) for modbus_in
+    main.o(.text) refers to at_system.o(i.timer_tick) for timer_tick
+    main.o(.text) refers to uart0.o(.data) for bRXIN0
+    graphic.o(.text) refers to main.o(.bss) for lcd_bitmap
+    graphic.o(.text) refers to main.o(.constdata) for caracter
+    snmp_data_file.o(.text) refers to 25lc640.o(.text) for lc640_read_int
+    snmp_data_file.o(.text) refers to main.o(.data) for net_U
+    snmp_data_file.o(.text) refers to snmp_data_file.o(.data) for .data
+    snmp_data_file.o(.text) refers to main.o(.bss) for bat
+    snmp_data_file.o(.text) refers to snmp_data_file.o(.bss) for .bss
+    snmp_data_file.o(.text) refers to main.o(.data) for TBOXVENTON
+    snmp_data_file.o(.text) refers to main.o(.data) for TBOXVENTOFF
+    snmp_data_file.o(.text) refers to at_snmp.o(i.snmp_trap) for snmp_trap
+    snmp_data_file.o(.text) refers to 25lc640.o(.text) for lc640_write_long
+    snmp_data_file.o(.text) refers to snmp_data_file.o(.data) for .data
+    snmp_data_file.o(.text) refers to 25lc640.o(.text) for lc640_write_int
+    snmp_data_file.o(.text) refers to snmp_data_file.o(.data) for .data
+    snmp_data_file.o(.text) refers to eeprom_map.o(.constdata) for ADR_SK_SIGN
+    snmp_data_file.o(.text) refers to 25lc640.o(.text) for lc640_write_int
+    snmp_data_file.o(.text) refers to snmp_data_file.o(.data) for .data
+    snmp_data_file.o(.text) refers to eeprom_map.o(.constdata) for ADR_SK_SIGN
+    snmp_data_file.o(.text) refers to 25lc640.o(.text) for lc640_write_int
+    snmp_data_file.o(.text) refers to snmp_data_file.o(.data) for .data
+    snmp_data_file.o(.text) refers to eeprom_map.o(.constdata) for ADR_SK_SIGN
+    snmp_data_file.o(.text) refers to 25lc640.o(.text) for lc640_write_int
+    snmp_data_file.o(.text) refers to snmp_data_file.o(.data) for .data
+    snmp_data_file.o(.text) refers to eeprom_map.o(.constdata) for ADR_SK_SIGN
+    snmp_data_file.o(.text) refers to memcpya.o(.text) for __aeabi_memcpy4
+    snmp_data_file.o(.text) refers to main.o(.constdata) for sm_mont
+    snmp_data_file.o(.text) refers to memcpya.o(.text) for __aeabi_memcpy
+    snmp_data_file.o(.text) refers to 25lc640.o(.text) for lc640_read_int
+    snmp_data_file.o(.text) refers to common_func.o(.text) for ptr_carry
+    snmp_data_file.o(.text) refers to snmp_data_file.o(.text) for datatime2str
+    snmp_data_file.o(.text) refers to snmp_data_file.o(.data) for .data
+    snmp_data_file.o(.text) refers to snmp_data_file.o(.constdata) for .constdata
+    snmp_mib.o(.constdata) refers to snmp_mib.o(.conststring) for .conststring
+    snmp_mib.o(.data) refers to snmp_mib.o(.conststring) for .conststring
+    snmp_mib.o(.data) refers to snmp_mib.o(.conststring) for .conststring
+    snmp_mib.o(.data) refers to at_snmp.o(.data) for snmp_SysUpTime
+    snmp_mib.o(.data) refers to snmp_mib.o(.constdata) for sysServices
+    snmp_mib.o(.data) refers to snmp_data_file.o(.bss) for snmp_spc_trap_message
+    snmp_mib.o(.data) refers to snmp_data_file.o(.data) for snmp_spc_trap_value_0
+    snmp_mib.o(.data) refers to snmp_data_file.o(.data) for snmp_device_code
+    snmp_mib.o(.data) refers to snmp_data_file.o(.text) for snmp_location_write
+    snmp_mib.o(.data) refers to snmp_data_file.o(.data) for snmp_mains_power_status
+    snmp_mib.o(.data) refers to main.o(.data) for NUMBAT
+    snmp_mib.o(.data) refers to snmp_mib.o(.constdata) for displayPsuQauntity
+    memo.o(.text) refers to 25lc640.o(.text) for lc640_read_int
+    memo.o(.text) refers to gran.o(.text) for gran
+    memo.o(.text) refers to main.o(.data) for Kubat
+    memo.o(.text) refers to main.o(.data) for Kubatm
+    memo.o(.text) refers to main.o(.data) for Kibat0
+    memo.o(.text) refers to main.o(.data) for Kibat1
+    memo.o(.text) refers to main.o(.data) for Ktbat
+    memo.o(.text) refers to main.o(.data) for Kunet
+    memo.o(.text) refers to main.o(.data) for Kuload
+    memo.o(.text) refers to main.o(.data) for Kunet_ext
+    memo.o(.text) refers to main.o(.data) for Kvv_eb2
+    memo.o(.text) refers to main.o(.data) for Kpes_eb2
+    memo.o(.text) refers to main.o(.data) for KunetA
+    memo.o(.text) refers to main.o(.data) for KunetB
+    memo.o(.text) refers to main.o(.data) for KunetC
+    memo.o(.text) refers to main.o(.data) for Ktext
+    memo.o(.text) refers to main.o(.data) for MAIN_IST
+    memo.o(.text) refers to main.o(.data) for UMAX
+    memo.o(.text) refers to main.o(.data) for APV_ON
+    memo.o(.text) refers to main.o(.data) for TWARMON
+    memo.o(.text) refers to main.o(.data) for TWARMOFF
+    memo.o(.text) refers to main.o(.data) for TBOXVENTON
+    memo.o(.text) refers to main.o(.data) for TBOXVENTOFF
+    memo.o(.text) refers to main.o(.data) for AUSW_DAY
+    memo.o(.text) refers to main.o(.data) for AUSW_MONTH
+    memo.o(.text) refers to main.o(.data) for AUSW_YEAR
+    memo.o(.text) refers to main.o(.data) for AUSW_BPS1_NUMBER
+    memo.o(.text) refers to main.o(.data) for AUSW_BPS2_NUMBER
+    memo.o(.text) refers to main.o(.data) for AUSW_RS232
+    memo.o(.text) refers to main.o(.data) for AUSW_PDH
+    memo.o(.text) refers to main.o(.data) for AUSW_SDH
+    memo.o(.text) refers to main.o(.data) for AUSW_ETH
+    memo.o(.text) refers to main.o(.data) for AUSW_UKU
+    memo.o(.text) refers to main.o(.data) for AUSW_UKU_SUB
+    memo.o(.text) refers to main.o(.data) for AUSW_UKU_NUMBER
+    memo.o(.text) refers to snmp_data_file.o(.bss) for snmp_location
+    memo.o(.text) refers to snmp_data_file.o(.bss) for snmp_community
+    memo.o(.text) refers to control.o(.data) for __ee_vz_cnt
+    system_lpc17xx.o(.text) refers to system_lpc17xx.o(.data) for .data
+    timer.o(.text) refers to timer.o(.data) for .data
+    timer.o(.text) refers to control.o(.data) for adc_self_ch_cnt
+    timer.o(.text) refers to timer.o(.text) for NVIC_EnableIRQ
+    timer.o(.text) refers to timer.o(.data) for .data
+    beep.o(.text) refers to beep.o(.data) for .data
+    beep.o(.text) refers to main.o(.data) for ZV_ON
+    beep.o(.text) refers to avar_hndl.o(.data) for avar_ind_stat
+    beep.o(.text) refers to main.o(.bss) for bat
+    ad7705.o(.text) refers to 25lc640.o(.text) for spi1
+    ad7705.o(.text) refers to ad7705.o(.data) for .data
+    ad7705.o(.text) refers to ad7705.o(.bss) for .bss
+    ad7705.o(.text) refers to ad7705.o(.text) for ad7705_write
+    ad7705.o(.text) refers to ad7705.o(.data) for .data
+    lcd_agm1232_uku207_3.o(.text) refers to lcd_agm1232_uku207_3.o(.text) for status
+    lcd_agm1232_uku207_3.o(.text) refers to lcd_agm1232_uku207_3.o(.text) for ltstrobe
+    lcd_agm1232_uku207_3.o(.text) refers to lcd_agm1232_uku207_3.o(.text) for lcd1_wr
+    25lc640.o(.text) refers to 25lc640.o(.text) for lc640_rdsr
+    web.o(.constdata) refers to web.o(.constdata) for Web
+    full_can.o(.text) refers to full_can.o(.bss) for .bss
+    full_can.o(.text) refers to full_can.o(.constdata) for .constdata
+    full_can.o(.text) refers to full_can.o(.data) for .data
+    full_can.o(.text) refers to main.o(.data) for net_U
+    full_can.o(.text) refers to avar_hndl.o(.data) for avar_stat
+    full_can.o(.text) refers to main.o(.bss) for bat
+    full_can.o(.text) refers to control.o(.data) for spc_stat
+    full_can.o(.text) refers to control.o(.text) for vz_start
+    full_can.o(.text) refers to 25lc640.o(.text) for lc640_write_int
+    full_can.o(.text) refers to mess.o(.text) for mess_send
+    full_can.o(.text) refers to avar_hndl.o(.text) for avar_bps_hndl
+    full_can.o(.text) refers to main.o(.data) for plazma_can_inv
+    full_can.o(.text) refers to main.o(.data) for vvod_pos
+    full_can.o(.text) refers to main.o(.bss) for eb2_data
+    full_can.o(.text) refers to main.o(.bss) for eb2_data_short
+    uart0.o(.text) refers to 25lc640.o(.text) for lc640_read_long
+    uart0.o(.text) refers to full_can.o(.constdata) for Table87
+    uart0.o(.text) refers to uart0.o(.data) for .data
+    uart0.o(.text) refers to uart0.o(.bss) for .bss
+    uart0.o(.text) refers to system_lpc17xx.o(.data) for SystemFrequency
+    uart0.o(.text) refers to main.o(.data) for plazma_bat_drv1
+    uart0.o(.text) refers to modbus.o(.data) for modbus_plazma
+    uart0.o(.text) refers to modbus.o(.bss) for modbus_rx_buffer
+    uart0.o(.text) refers to modbus.o(.data) for modbus_timeout_cnt
+    uart0.o(.text) refers to main.o(.bss) for bat_drv_rx_buff
+    uart0.o(.text) refers to uart0.o(.text) for putchar0
+    uart0.o(.text) refers to memseta.o(.text) for __aeabi_memclr4
+    uart0.o(.text) refers to uart0.o(.text) for putchar0
+    uart0.o(.text) refers to uart0.o(.text) for uart_out_adr0
+    uart0.o(.text) refers to avar_hndl.o(.data) for avar_stat
+    uart0.o(.text) refers to control.o(.data) for spc_stat
+    uart0.o(.text) refers to main.o(.data) for load_U
+    uart0.o(.text) refers to main.o(.bss) for bps
+    uart0.o(.text) refers to uart0.o(.text) for uart_out_adr0
+    uart0.o(.text) refers to avar_hndl.o(.data) for avar_stat
+    uart0.o(.text) refers to control.o(.data) for spc_stat
+    uart0.o(.text) refers to main.o(.data) for load_U
+    uart0.o(.text) refers to main.o(.data) for net_F3
+    uart0.o(.text) refers to main.o(.bss) for bps
+    uart0.o(.text) refers to uart0.o(.text) for uart_out_adr0
+    uart0.o(.text) refers to avar_hndl.o(.data) for avar_stat
+    uart0.o(.text) refers to control.o(.data) for spc_stat
+    uart0.o(.text) refers to main.o(.data) for load_U
+    uart0.o(.text) refers to main.o(.data) for net_F3
+    uart0.o(.text) refers to main.o(.bss) for bps
+    uart0.o(.text) refers to uart0.o(.data) for .data
+    uart0.o(.text) refers to uart0.o(.bss) for .bss
+    modbus.o(.text) refers to at_lib.o(i.mem_copy) for mem_copy
+    modbus.o(.text) refers to uart0.o(.text) for putchar0
+    modbus.o(.text) refers to main.o(.data) for NUMIST
+    modbus.o(.text) refers to main.o(.bss) for bat
+    modbus.o(.text) refers to modbus.o(.data) for .data
+    modbus.o(.text) refers to modbus.o(.bss) for .bss
+    modbus.o(.text) refers to 25lc640.o(.text) for lc640_write_int
+    modbus.o(.text) refers to main.o(.data) for net_F3
+    uart2.o(.text) refers to uart2.o(.data) for .data
+    uart2.o(.text) refers to uart2.o(.bss) for .bss
+    uart2.o(.text) refers to system_lpc17xx.o(.data) for SystemFrequency
+    uart2.o(.text) refers to modbus.o(.bss) for modbus_rx_buffer
+    uart2.o(.text) refers to modbus.o(.data) for modbus_rx_buffer_ptr
+    uart2.o(.text) refers to modbus.o(.data) for modbus_timeout_cnt
+    bat_driver.o(.text) refers to 25lc640.o(.text) for lc640_read_int
+    bat_driver.o(.text) refers to uart0.o(.text) for uart_out_buff0
+    emac_lpc17xx.o(.text) refers to at_mem.o(i.alloc_mem) for alloc_mem
+    emac_lpc17xx.o(.text) refers to at_ethernet.o(i.put_in_queue) for put_in_queue
+    emac_lpc17xx.o(.text) refers to emac_lpc17xx.o(.data) for .data
+    emac_lpc17xx.o(.text) refers to net_config_http.o(.data) for own_hw_adr
+    emac_lpc17xx.o(.text) refers to emac_lpc17xx.o(.bss) for .bss
+    at_tcp.o(i.init_tcp) refers to at_lib.o(i.mem_set) for mem_set
+    at_tcp.o(i.init_tcp) refers to net_config_http.o(.constdata) for tcp_NumSocks
+    at_tcp.o(i.init_tcp) refers to net_config_http.o(.bss) for tcp_socket
+    at_tcp.o(i.process_tcp) refers to at_tcp.o(i.tcp_map_socket) for tcp_map_socket
+    at_tcp.o(i.process_tcp) refers to at_lib.o(i.CalcChksumBuf) for CalcChksumBuf
+    at_tcp.o(i.process_tcp) refers to at_lib.o(i.CalcChksumVal) for CalcChksumVal
+    at_tcp.o(i.process_tcp) refers to at_lib.o(i.get_u32) for get_u32
+    at_tcp.o(i.process_tcp) refers to at_tcp.o(i.tcp_set_retransmit) for tcp_set_retransmit
+    at_tcp.o(i.process_tcp) refers to at_lib.o(i.mem_copy) for mem_copy
+    at_tcp.o(i.process_tcp) refers to at_mem.o(i.resize_mem) for resize_mem
+    at_tcp.o(i.process_tcp) refers to at_tcp.o(i.tcp_send_ctrl) for tcp_send_ctrl
+    at_tcp.o(i.process_tcp) refers to at_tcp.o(i.tcp_send_reset) for tcp_send_reset
+    at_tcp.o(i.process_tcp) refers to at_tcp.o(i.tcp_process_opt) for tcp_process_opt
+    at_tcp.o(i.process_tcp) refers to at_tcp.o(i.tcp_init_seq) for tcp_init_seq
+    at_tcp.o(i.process_tcp) refers to at_tcp.o(i.tcp_transit) for tcp_transit
+    at_tcp.o(i.process_tcp) refers to net_config_http.o(.text) for sys_error
+    at_tcp.o(i.process_tcp) refers to net_config_http.o(.bss) for tcp_socket
+    at_tcp.o(i.tcp_abort) refers to at_tcp.o(i.tcp_transit) for tcp_transit
+    at_tcp.o(i.tcp_abort) refers to at_tcp.o(i.tcp_send_ctrl) for tcp_send_ctrl
+    at_tcp.o(i.tcp_abort) refers to net_config_http.o(.constdata) for tcp_NumSocks
+    at_tcp.o(i.tcp_abort) refers to net_config_http.o(.bss) for tcp_socket
+    at_tcp.o(i.tcp_check_send) refers to net_config_http.o(.constdata) for tcp_NumSocks
+    at_tcp.o(i.tcp_check_send) refers to net_config_http.o(.bss) for tcp_socket
+    at_tcp.o(i.tcp_close) refers to at_tcp.o(i.tcp_transit) for tcp_transit
+    at_tcp.o(i.tcp_close) refers to at_tcp.o(i.tcp_send_ctrl) for tcp_send_ctrl
+    at_tcp.o(i.tcp_close) refers to net_config_http.o(.constdata) for tcp_NumSocks
+    at_tcp.o(i.tcp_close) refers to net_config_http.o(.bss) for tcp_socket
+    at_tcp.o(i.tcp_connect) refers to at_tcp.o(i.tcp_get_free_port) for tcp_get_free_port
+    at_tcp.o(i.tcp_connect) refers to at_lib.o(i.mem_test) for mem_test
+    at_tcp.o(i.tcp_connect) refers to at_lib.o(i.mem_copy) for mem_copy
+    at_tcp.o(i.tcp_connect) refers to at_tcp.o(i.tcp_init_seq) for tcp_init_seq
+    at_tcp.o(i.tcp_connect) refers to at_tcp.o(i.tcp_send_ctrl) for tcp_send_ctrl
+    at_tcp.o(i.tcp_connect) refers to at_tcp.o(i.tcp_transit) for tcp_transit
+    at_tcp.o(i.tcp_connect) refers to net_config_http.o(.constdata) for tcp_NumSocks
+    at_tcp.o(i.tcp_connect) refers to net_config_http.o(.bss) for tcp_socket
+    at_tcp.o(i.tcp_get_adr) refers to net_config_http.o(.bss) for tcp_socket
+    at_tcp.o(i.tcp_get_buf) refers to at_mem.o(i.alloc_mem) for alloc_mem
+    at_tcp.o(i.tcp_get_free_port) refers to at_tcp.o(.data) for .data
+    at_tcp.o(i.tcp_get_free_port) refers to net_config_http.o(.constdata) for tcp_NumSocks
+    at_tcp.o(i.tcp_get_free_port) refers to net_config_http.o(.bss) for tcp_socket
+    at_tcp.o(i.tcp_get_socket) refers to net_config_http.o(.text) for sys_error
+    at_tcp.o(i.tcp_get_socket) refers to net_config_http.o(.bss) for tcp_socket
+    at_tcp.o(i.tcp_get_socket) refers to net_config_http.o(.constdata) for tcp_NumSocks
+    at_tcp.o(i.tcp_get_state) refers to net_config_http.o(.constdata) for tcp_NumSocks
+    at_tcp.o(i.tcp_get_state) refers to net_config_http.o(.bss) for tcp_socket
+    at_tcp.o(i.tcp_init_seq) refers to at_system.o(.data) for timer_cnt
+    at_tcp.o(i.tcp_listen) refers to at_lib.o(i.mem_set) for mem_set
+    at_tcp.o(i.tcp_listen) refers to net_config_http.o(.constdata) for tcp_NumSocks
+    at_tcp.o(i.tcp_listen) refers to net_config_http.o(.bss) for tcp_socket
+    at_tcp.o(i.tcp_map_socket) refers to at_lib.o(i.SwapB) for SwapB
+    at_tcp.o(i.tcp_map_socket) refers to at_lib.o(i.mem_comp) for mem_comp
+    at_tcp.o(i.tcp_map_socket) refers to at_lib.o(i.mem_copy) for mem_copy
+    at_tcp.o(i.tcp_map_socket) refers to net_config_http.o(.bss) for tcp_socket
+    at_tcp.o(i.tcp_map_socket) refers to net_config_http.o(.constdata) for tcp_NumSocks
+    at_tcp.o(i.tcp_max_dsize) refers to net_config_http.o(.bss) for tcp_socket
+    at_tcp.o(i.tcp_poll_sockets) refers to at_tcp.o(i.tcp_send_ctrl) for tcp_send_ctrl
+    at_tcp.o(i.tcp_poll_sockets) refers to at_tcp.o(i.tcp_send_frame) for tcp_send_frame
+    at_tcp.o(i.tcp_poll_sockets) refers to at_tcp.o(i.tcp_set_retransmit) for tcp_set_retransmit
+    at_tcp.o(i.tcp_poll_sockets) refers to at_tcp.o(i.tcp_transit) for tcp_transit
+    at_tcp.o(i.tcp_poll_sockets) refers to at_system.o(.data) for sys_tick
+    at_tcp.o(i.tcp_poll_sockets) refers to net_config_http.o(.constdata) for tcp_NumSocks
+    at_tcp.o(i.tcp_poll_sockets) refers to net_config_http.o(.bss) for tcp_socket
+    at_tcp.o(i.tcp_poll_sockets) refers to net_config_http.o(.constdata) for tcp_RetryTout
+    at_tcp.o(i.tcp_poll_sockets) refers to at_tcp.o(.data) for .data
+    at_tcp.o(i.tcp_poll_sockets) refers to net_config_http.o(.constdata) for tcp_SynRetryTout
+    at_tcp.o(i.tcp_process_opt) refers to net_config_http.o(.bss) for tcp_socket
+    at_tcp.o(i.tcp_release_socket) refers to at_lib.o(i.mem_set) for mem_set
+    at_tcp.o(i.tcp_release_socket) refers to net_config_http.o(.constdata) for tcp_NumSocks
+    at_tcp.o(i.tcp_release_socket) refers to net_config_http.o(.bss) for tcp_socket
+    at_tcp.o(i.tcp_reset_tout) refers to net_config_http.o(.constdata) for tcp_NumSocks
+    at_tcp.o(i.tcp_reset_tout) refers to net_config_http.o(.bss) for tcp_socket
+    at_tcp.o(i.tcp_reset_window) refers to at_tcp.o(i.tcp_send_ctrl) for tcp_send_ctrl
+    at_tcp.o(i.tcp_reset_window) refers to net_config_http.o(.constdata) for tcp_NumSocks
+    at_tcp.o(i.tcp_reset_window) refers to net_config_http.o(.bss) for tcp_socket
+    at_tcp.o(i.tcp_send) refers to at_mem.o(i.resize_mem) for resize_mem
+    at_tcp.o(i.tcp_send) refers to at_tcp.o(i.tcp_set_retransmit) for tcp_set_retransmit
+    at_tcp.o(i.tcp_send) refers to at_mem.o(i.alloc_mem) for alloc_mem
+    at_tcp.o(i.tcp_send) refers to at_lib.o(i.mem_copy) for mem_copy
+    at_tcp.o(i.tcp_send) refers to at_tcp.o(i.tcp_send_frame) for tcp_send_frame
+    at_tcp.o(i.tcp_send) refers to at_mem.o(i.free_mem) for free_mem
+    at_tcp.o(i.tcp_send) refers to net_config_http.o(.constdata) for tcp_NumSocks
+    at_tcp.o(i.tcp_send) refers to net_config_http.o(.bss) for tcp_socket
+    at_tcp.o(i.tcp_send) refers to net_config_http.o(.constdata) for tcp_RetryTout
+    at_tcp.o(i.tcp_send) refers to net_config_http.o(.constdata) for tcp_MaxRetry
+    at_tcp.o(i.tcp_send_ctrl) refers to at_mem.o(i.alloc_mem) for alloc_mem
+    at_tcp.o(i.tcp_send_ctrl) refers to at_tcp.o(i.tcp_send_frame) for tcp_send_frame
+    at_tcp.o(i.tcp_send_ctrl) refers to at_mem.o(i.free_mem) for free_mem
+    at_tcp.o(i.tcp_send_frame) refers to at_lib.o(i.SwapB) for SwapB
+    at_tcp.o(i.tcp_send_frame) refers to at_lib.o(i.set_u32) for set_u32
+    at_tcp.o(i.tcp_send_frame) refers to at_ip.o(i.ip_get_locadr) for ip_get_locadr
+    at_tcp.o(i.tcp_send_frame) refers to at_lib.o(i.CalcChksumBuf) for CalcChksumBuf
+    at_tcp.o(i.tcp_send_frame) refers to at_lib.o(i.CalcChksumVal) for CalcChksumVal
+    at_tcp.o(i.tcp_send_frame) refers to at_ip.o(i.ip_send_frame) for ip_send_frame
+    at_tcp.o(i.tcp_send_frame) refers to net_config_http.o(.constdata) for tcp_NumSocks
+    at_tcp.o(i.tcp_send_frame) refers to net_config_http.o(.bss) for tcp_socket
+    at_tcp.o(i.tcp_send_reset) refers to at_lib.o(i.mem_copy) for mem_copy
+    at_tcp.o(i.tcp_send_reset) refers to at_lib.o(i.SwapB) for SwapB
+    at_tcp.o(i.tcp_send_reset) refers to at_lib.o(i.get_u32) for get_u32
+    at_tcp.o(i.tcp_send_reset) refers to at_tcp.o(i.tcp_send_ctrl) for tcp_send_ctrl
+    at_tcp.o(i.tcp_send_reset) refers to net_config_http.o(.constdata) for tcp_NumSocks
+    at_tcp.o(i.tcp_send_reset) refers to net_config_http.o(.bss) for tcp_socket
+    at_tcp.o(i.tcp_set_dack) refers to net_config_http.o(.constdata) for tcp_NumSocks
+    at_tcp.o(i.tcp_set_dack) refers to net_config_http.o(.bss) for tcp_socket
+    at_tcp.o(i.tcp_set_retransmit) refers to at_mem.o(i.free_mem) for free_mem
+    at_tcp.o(i.tcp_transit) refers to at_tcp.o(i.tcp_set_retransmit) for tcp_set_retransmit
+    at_tcp.o(i.tcp_transit) refers to net_config_http.o(.constdata) for tcp_RetryTout
+    at_tcp.o(i.tcp_transit) refers to net_config_http.o(.constdata) for tcp_2MSSTout
+    at_tcp.o(i.tcp_transit) refers to net_config_http.o(.constdata) for tcp_InitRetryTout
+    at_tcp.o(i.tcp_transit) refers to net_config_http.o(.constdata) for tcp_ConRetry
+    at_tcp.o(i.tcp_transit) refers to net_config_http.o(.constdata) for tcp_MaxRetry
+    at_udp.o(i.init_udp) refers to at_lib.o(i.mem_set) for mem_set
+    at_udp.o(i.init_udp) refers to net_config_http.o(.constdata) for udp_NumSocks
+    at_udp.o(i.init_udp) refers to net_config_http.o(.bss) for udp_socket
+    at_udp.o(i.process_udp) refers to at_lib.o(i.SwapB) for SwapB
+    at_udp.o(i.process_udp) refers to at_lib.o(i.CalcChksumBuf) for CalcChksumBuf
+    at_udp.o(i.process_udp) refers to at_lib.o(i.CalcChksumVal) for CalcChksumVal
+    at_udp.o(i.process_udp) refers to net_config_http.o(.bss) for udp_socket
+    at_udp.o(i.process_udp) refers to net_config_http.o(.constdata) for udp_NumSocks
+    at_udp.o(i.udp_close) refers to net_config_http.o(.constdata) for udp_NumSocks
+    at_udp.o(i.udp_close) refers to net_config_http.o(.bss) for udp_socket
+    at_udp.o(i.udp_get_buf) refers to at_mem.o(i.alloc_mem) for alloc_mem
+    at_udp.o(i.udp_get_socket) refers to net_config_http.o(.text) for sys_error
+    at_udp.o(i.udp_get_socket) refers to net_config_http.o(.bss) for udp_socket
+    at_udp.o(i.udp_get_socket) refers to net_config_http.o(.constdata) for udp_NumSocks
+    at_udp.o(i.udp_mcast_ttl) refers to net_config_http.o(.constdata) for udp_NumSocks
+    at_udp.o(i.udp_mcast_ttl) refers to net_config_http.o(.bss) for udp_socket
+    at_udp.o(i.udp_open) refers to net_config_http.o(.constdata) for udp_NumSocks
+    at_udp.o(i.udp_open) refers to net_config_http.o(.bss) for udp_socket
+    at_udp.o(i.udp_open) refers to at_udp.o(.data) for .data
+    at_udp.o(i.udp_release_socket) refers to at_lib.o(i.mem_set) for mem_set
+    at_udp.o(i.udp_release_socket) refers to net_config_http.o(.constdata) for udp_NumSocks
+    at_udp.o(i.udp_release_socket) refers to net_config_http.o(.bss) for udp_socket
+    at_udp.o(i.udp_send) refers to at_lib.o(i.mem_test) for mem_test
+    at_udp.o(i.udp_send) refers to at_lib.o(i.SwapB) for SwapB
+    at_udp.o(i.udp_send) refers to at_ip.o(i.ip_get_locadr) for ip_get_locadr
+    at_udp.o(i.udp_send) refers to at_lib.o(i.CalcChksumBuf) for CalcChksumBuf
+    at_udp.o(i.udp_send) refers to at_lib.o(i.CalcChksumVal) for CalcChksumVal
+    at_udp.o(i.udp_send) refers to at_mem.o(i.free_mem) for free_mem
+    at_udp.o(i.udp_send) refers to at_ip.o(i.ip_send_frame) for ip_send_frame
+    at_udp.o(i.udp_send) refers to net_config_http.o(.constdata) for udp_NumSocks
+    at_udp.o(i.udp_send) refers to net_config_http.o(.bss) for udp_socket
+    at_http.o(i.chk_post_rq) refers to at_http.o(i.cmp_header) for cmp_header
+    at_http.o(i.chk_post_rq) refers to at_lib.o(i.str_scomp) for str_scomp
+    at_http.o(i.chk_post_rq) refers to at_mem.o(i.alloc_mem) for alloc_mem
+    at_http.o(i.chk_post_rq) refers to at_http.o(i.http_strcpy) for http_strcpy
+    at_http.o(i.chk_post_rq) refers to at_http.o(i.get_next_par) for get_next_par
+    at_http.o(i.chk_post_rq) refers to atoi.o(.text) for atoi
+    at_http.o(i.chk_post_rq) refers to at_http.o(i.get_next_field) for get_next_field
+    at_http.o(i.http_add_header) refers to at_http.o(i.cgx_content_type) for cgx_content_type
+    at_http.o(i.http_add_header) refers to at_lib.o(i.str_copy) for str_copy
+    at_http.o(i.http_add_header) refers to at_http.o(i.utc_to_http) for utc_to_http
+    at_http.o(i.http_date) refers to at_http.o(.constdata) for .constdata
+    at_http.o(i.http_error_msg) refers to at_lib.o(i.str_copy) for str_copy
+    at_http.o(i.http_error_msg) refers to net_config_http.o(.constdata) for http_auth_dev
+    at_http.o(i.http_error_msg) refers to http_err.o(.constdata) for http_err_head
+    at_http.o(i.http_error_msg) refers to http_err.o(.constdata) for http_err_501
+    at_http.o(i.http_error_msg) refers to http_err.o(.constdata) for http_err_foot
+    at_http.o(i.http_error_msg) refers to http_err.o(.constdata) for http_err_401
+    at_http.o(i.http_error_msg) refers to http_err.o(.constdata) for http_err_404
+    at_http.o(i.http_file_type) refers to at_lib.o(i.str_scomp) for str_scomp
+    at_http.o(i.http_file_type) refers to at_http.o(.constdata) for .constdata
+    at_http.o(i.http_get_content_type) refers to at_http.o(.data) for .data
+    at_http.o(i.http_get_content_type) refers to net_config_http.o(.bss) for http_session
+    at_http.o(i.http_get_info) refers to at_tcp.o(i.tcp_get_adr) for tcp_get_adr
+    at_http.o(i.http_get_info) refers to at_lib.o(i.mem_copy) for mem_copy
+    at_http.o(i.http_get_info) refers to at_ethernet.o(i.eth_get_adr) for eth_get_adr
+    at_http.o(i.http_get_info) refers to at_lib.o(i.mem_set) for mem_set
+    at_http.o(i.http_get_info) refers to at_http.o(.data) for .data
+    at_http.o(i.http_get_info) refers to net_config_http.o(.bss) for http_session
+    at_http.o(i.http_get_lang) refers to at_http.o(.data) for .data
+    at_http.o(i.http_get_lang) refers to net_config_http.o(.bss) for http_session
+    at_http.o(i.http_get_session) refers to at_http.o(.data) for .data
+    at_http.o(i.http_get_var) refers to at_http.o(i.hex2byte) for hex2byte
+    at_http.o(i.http_get_var) refers to at_http.o(.data) for .data
+    at_http.o(i.http_kill_session) refers to at_http_uif.o(i.http_fclose) for http_fclose
+    at_http.o(i.http_kill_session) refers to at_http_cgi.o(i.cgi_process_data) for cgi_process_data
+    at_http.o(i.http_kill_session) refers to at_mem.o(i.free_mem) for free_mem
+    at_http.o(i.http_listener) refers to at_http.o(i.http_accept_host) for http_accept_host
+    at_http.o(i.http_listener) refers to at_http.o(i.http_kill_session) for http_kill_session
+    at_http.o(i.http_listener) refers to at_lib.o(i.str_scomp) for str_scomp
+    at_http.o(i.http_listener) refers to at_http.o(i.http_proc_header) for http_proc_header
+    at_http.o(i.http_listener) refers to at_http.o(i.http_strchr) for http_strchr
+    at_http.o(i.http_listener) refers to at_http.o(i.http_file_type) for http_file_type
+    at_http.o(i.http_listener) refers to at_http.o(i.http_open_file) for http_open_file
+    at_http.o(i.http_listener) refers to at_http_cgi.o(i.cgi_process_var) for cgi_process_var
+    at_http.o(i.http_listener) refers to at_http.o(i.chk_post_rq) for chk_post_rq
+    at_http.o(i.http_listener) refers to at_http.o(i.http_proc_post) for http_proc_post
+    at_http.o(i.http_listener) refers to at_mem.o(i.alloc_mem) for alloc_mem
+    at_http.o(i.http_listener) refers to at_http.o(i.read_script_line) for read_script_line
+    at_http.o(i.http_listener) refers to at_http.o(i.http_proc_multipart) for http_proc_multipart
+    at_http.o(i.http_listener) refers to net_config_http.o(.bss) for http_session
+    at_http.o(i.http_listener) refers to net_config_http.o(.constdata) for http_NumSess
+    at_http.o(i.http_listener) refers to at_http.o(.data) for .data
+    at_http.o(i.http_open_file) refers to at_mem.o(i.alloc_mem) for alloc_mem
+    at_http.o(i.http_open_file) refers to at_http_uif.o(i.http_fopen) for http_fopen
+    at_http.o(i.http_open_file) refers to at_http_uif.o(i.http_finfo) for http_finfo
+    at_http.o(i.http_open_file) refers to at_lib.o(i.str_crc) for str_crc
+    at_http.o(i.http_open_file) refers to at_mem.o(i.free_mem) for free_mem
+    at_http.o(i.http_open_file) refers to web.o(.constdata) for FileTab
+    at_http.o(i.http_open_file) refers to web.o(.constdata) for FileMD
+    at_http.o(i.http_proc_header) refers to at_http.o(i.cmp_header) for cmp_header
+    at_http.o(i.http_proc_header) refers to at_lib.o(i.b64_to_asc) for b64_to_asc
+    at_http.o(i.http_proc_header) refers to at_lib.o(i.str_scomp) for str_scomp
+    at_http.o(i.http_proc_header) refers to strlen.o(.text) for strlen
+    at_http.o(i.http_proc_header) refers to strcmp.o(.text) for strcmp
+    at_http.o(i.http_proc_header) refers to at_http.o(i.http_to_utc) for http_to_utc
+    at_http.o(i.http_proc_header) refers to at_http.o(i.get_next_field) for get_next_field
+    at_http.o(i.http_proc_header) refers to net_config_http.o(.constdata) for http_EnAuth
+    at_http.o(i.http_proc_header) refers to net_config_http.o(.constdata) for http_auth_user
+    at_http.o(i.http_proc_header) refers to net_config_http.o(.bss) for http_auth_passw
+    at_http.o(i.http_proc_multipart) refers to at_http.o(i.search_delim) for search_delim
+    at_http.o(i.http_proc_multipart) refers to at_http.o(i.cmp_header) for cmp_header
+    at_http.o(i.http_proc_multipart) refers to at_lib.o(i.str_scomp) for str_scomp
+    at_http.o(i.http_proc_multipart) refers to at_http.o(i.get_next_par) for get_next_par
+    at_http.o(i.http_proc_multipart) refers to at_http.o(i.get_next_field) for get_next_field
+    at_http.o(i.http_proc_multipart) refers to at_http.o(i.http_strchr) for http_strchr
+    at_http.o(i.http_proc_multipart) refers to at_http_cgi.o(i.cgi_process_data) for cgi_process_data
+    at_http.o(i.http_proc_multipart) refers to at_http.o(.data) for .data
+    at_http.o(i.http_proc_post) refers to at_http_cgi.o(i.cgi_process_data) for cgi_process_data
+    at_http.o(i.http_proc_post) refers to at_mem.o(i.alloc_mem) for alloc_mem
+    at_http.o(i.http_proc_post) refers to at_lib.o(i.mem_copy) for mem_copy
+    at_http.o(i.http_proc_post) refers to at_mem.o(i.free_mem) for free_mem
+    at_http.o(i.http_proc_post) refers to at_http.o(.data) for .data
+    at_http.o(i.http_proc_post) refers to net_config_http.o(.constdata) for MPool_Size
+    at_http.o(i.http_to_utc) refers to atoi.o(.text) for atoi
+    at_http.o(i.http_to_utc) refers to at_lib.o(i.str_scomp) for str_scomp
+    at_http.o(i.http_to_utc) refers to at_http.o(.constdata) for .constdata
+    at_http.o(i.init_http) refers to at_tcp.o(i.tcp_get_socket) for tcp_get_socket
+    at_http.o(i.init_http) refers to at_tcp.o(i.tcp_listen) for tcp_listen
+    at_http.o(i.init_http) refers to net_config_http.o(.bss) for http_session
+    at_http.o(i.init_http) refers to net_config_http.o(.constdata) for http_NumSess
+    at_http.o(i.init_http) refers to at_http.o(i.http_listener) for http_listener
+    at_http.o(i.init_http) refers to net_config_http.o(.constdata) for tcp_DefTout
+    at_http.o(i.init_http) refers to net_config_http.o(.constdata) for http_PortNum
+    at_http.o(i.read_script_line) refers to at_http_uif.o(i.http_fgets) for http_fgets
+    at_http.o(i.read_script_line) refers to strlen.o(.text) for strlen
+    at_http.o(i.run_http_server) refers to at_tcp.o(i.tcp_get_state) for tcp_get_state
+    at_http.o(i.run_http_server) refers to at_tcp.o(i.tcp_listen) for tcp_listen
+    at_http.o(i.run_http_server) refers to at_http_uif.o(i.http_fclose) for http_fclose
+    at_http.o(i.run_http_server) refers to at_http.o(i.read_script_line) for read_script_line
+    at_http.o(i.run_http_server) refers to at_tcp.o(i.tcp_close) for tcp_close
+    at_http.o(i.run_http_server) refers to at_http.o(i.http_kill_session) for http_kill_session
+    at_http.o(i.run_http_server) refers to at_tcp.o(i.tcp_max_dsize) for tcp_max_dsize
+    at_http.o(i.run_http_server) refers to at_tcp.o(i.tcp_get_buf) for tcp_get_buf
+    at_http.o(i.run_http_server) refers to at_http.o(i.http_add_header) for http_add_header
+    at_http.o(i.run_http_server) refers to at_http_uif.o(i.http_fread) for http_fread
+    at_http.o(i.run_http_server) refers to at_lib.o(i.mem_copy) for mem_copy
+    at_http.o(i.run_http_server) refers to at_tcp.o(i.tcp_send) for tcp_send
+    at_http.o(i.run_http_server) refers to at_tcp.o(i.tcp_abort) for tcp_abort
+    at_http.o(i.run_http_server) refers to at_http.o(i.http_strcpy) for http_strcpy
+    at_http.o(i.run_http_server) refers to at_http_cgi.o(i.cgi_func) for cgi_func
+    at_http.o(i.run_http_server) refers to at_http.o(i.http_open_file) for http_open_file
+    at_http.o(i.run_http_server) refers to at_http.o(i.http_error_msg) for http_error_msg
+    at_http.o(i.run_http_server) refers to at_http.o(.data) for .data
+    at_http.o(i.run_http_server) refers to net_config_http.o(.constdata) for http_NumSess
+    at_http.o(i.run_http_server) refers to net_config_http.o(.bss) for http_session
+    at_http.o(i.run_http_server) refers to net_config_http.o(.constdata) for http_PortNum
+    at_http.o(i.search_delim) refers to at_lib.o(i.str_scomp) for str_scomp
+    at_http.o(i.utc_to_http) refers to printf6.o(i.__0sprintf$6) for __2sprintf
+    at_http.o(i.utc_to_http) refers to at_http.o(.constdata) for .constdata
+    at_snmp.o(i.add_object) refers to at_lib.o(i.mem_copy) for mem_copy
+    at_snmp.o(i.add_object) refers to strlen.o(.text) for strlen
+    at_snmp.o(i.add_object) refers to at_snmp.o(i.set_value) for set_value
+    at_snmp.o(i.add_object) refers to snmp_mib.o(.data) for snmp_mib
+    at_snmp.o(i.bind_val) refers to at_snmp.o(i.ulen) for ulen
+    at_snmp.o(i.bind_val) refers to at_snmp.o(i.set_value) for set_value
+    at_snmp.o(i.bind_val) refers to at_snmp.o(i.ilen) for ilen
+    at_snmp.o(i.ilen) refers to at_snmp.o(i.ulen) for ulen
+    at_snmp.o(i.init_snmp) refers to at_lib.o(i.str_copy) for str_copy
+    at_snmp.o(i.init_snmp) refers to at_udp.o(i.udp_get_socket) for udp_get_socket
+    at_snmp.o(i.init_snmp) refers to at_udp.o(i.udp_open) for udp_open
+    at_snmp.o(i.init_snmp) refers to at_snmp.o(.bss) for .bss
+    at_snmp.o(i.init_snmp) refers to net_config_http.o(.constdata) for snmp_TickItv
+    at_snmp.o(i.init_snmp) refers to net_config_http.o(.data) for snmp_Community
+    at_snmp.o(i.init_snmp) refers to at_snmp.o(i.snmp_listener) for snmp_listener
+    at_snmp.o(i.init_snmp) refers to net_config_http.o(.data) for snmp_PortNum
+    at_snmp.o(i.init_snmp) refers to at_snmp.o(.data) for .data
+    at_snmp.o(i.mib_find) refers to at_lib.o(i.mem_comp) for mem_comp
+    at_snmp.o(i.mib_find) refers to snmp_mib.o(.data) for snmp_mib
+    at_snmp.o(i.mib_find) refers to snmp_mib.o(.constdata) for snmp_mib_size
+    at_snmp.o(i.mib_find) refers to at_snmp.o(.bss) for .bss
+    at_snmp.o(i.mib_write) refers to at_snmp.o(i.get_value) for get_value
+    at_snmp.o(i.mib_write) refers to at_lib.o(i.mem_copy) for mem_copy
+    at_snmp.o(i.mib_write) refers to snmp_mib.o(.data) for snmp_mib
+    at_snmp.o(i.run_snmp_agent) refers to at_system.o(.data) for sys_tick
+    at_snmp.o(i.run_snmp_agent) refers to at_snmp.o(.bss) for .bss
+    at_snmp.o(i.run_snmp_agent) refers to at_snmp.o(.data) for .data
+    at_snmp.o(i.set_value) refers to at_snmp.o(i.ulen) for ulen
+    at_snmp.o(i.set_value) refers to at_snmp.o(i.ilen) for ilen
+    at_snmp.o(i.snmp_listener) refers to at_snmp.o(i.parse_tlv) for parse_tlv
+    at_snmp.o(i.snmp_listener) refers to at_snmp.o(i.get_value) for get_value
+    at_snmp.o(i.snmp_listener) refers to at_lib.o(i.mem_comp) for mem_comp
+    at_snmp.o(i.snmp_listener) refers to at_snmp.o(i.mib_find) for mib_find
+    at_snmp.o(i.snmp_listener) refers to at_udp.o(i.udp_get_buf) for udp_get_buf
+    at_snmp.o(i.snmp_listener) refers to at_lib.o(i.mem_copy) for mem_copy
+    at_snmp.o(i.snmp_listener) refers to at_snmp.o(i.mib_write) for mib_write
+    at_snmp.o(i.snmp_listener) refers to at_snmp.o(i.add_object) for add_object
+    at_snmp.o(i.snmp_listener) refers to at_snmp.o(i.bind_tlv) for bind_tlv
+    at_snmp.o(i.snmp_listener) refers to at_snmp.o(i.ilen) for ilen
+    at_snmp.o(i.snmp_listener) refers to at_udp.o(i.udp_send) for udp_send
+    at_snmp.o(i.snmp_listener) refers to at_snmp.o(.bss) for .bss
+    at_snmp.o(i.snmp_listener) refers to snmp_mib.o(.data) for snmp_mib
+    at_snmp.o(i.snmp_set_community) refers to strlen.o(.text) for strlen
+    at_snmp.o(i.snmp_set_community) refers to at_lib.o(i.mem_copy) for mem_copy
+    at_snmp.o(i.snmp_set_community) refers to at_snmp.o(.bss) for .bss
+    at_snmp.o(i.snmp_trap) refers to at_lib.o(i.mem_comp) for mem_comp
+    at_snmp.o(i.snmp_trap) refers to at_udp.o(i.udp_get_buf) for udp_get_buf
+    at_snmp.o(i.snmp_trap) refers to at_snmp.o(i.add_object) for add_object
+    at_snmp.o(i.snmp_trap) refers to at_snmp.o(i.bind_tlv) for bind_tlv
+    at_snmp.o(i.snmp_trap) refers to at_snmp.o(i.bind_val) for bind_val
+    at_snmp.o(i.snmp_trap) refers to at_ip.o(i.ip_get_locadr) for ip_get_locadr
+    at_snmp.o(i.snmp_trap) refers to at_lib.o(i.mem_copy) for mem_copy
+    at_snmp.o(i.snmp_trap) refers to at_udp.o(i.udp_send) for udp_send
+    at_snmp.o(i.snmp_trap) refers to snmp_mib.o(.data) for snmp_mib
+    at_snmp.o(i.snmp_trap) refers to snmp_mib.o(.constdata) for snmp_mib_size
+    at_snmp.o(i.snmp_trap) refers to net_config_http.o(.constdata) for snmp_TrapIp
+    at_snmp.o(i.snmp_trap) refers to at_snmp.o(.bss) for .bss
+    at_snmp.o(i.snmp_trap) refers to at_snmp.o(.data) for .data
+    at_snmp.o(i.snmp_trap) refers to net_config_http.o(.data) for snmp_TrapPort
+    at_ethernet.o(i.eth_chk_adr) refers to at_lib.o(i.mem_comp) for mem_comp
+    at_ethernet.o(i.eth_chk_adr) refers to net_config_http.o(.data) for own_hw_adr
+    at_ethernet.o(i.eth_get_adr) refers to at_arp.o(i.arp_get_adr) for arp_get_adr
+    at_ethernet.o(i.eth_send_frame) refers to at_lib.o(i.mem_comp) for mem_comp
+    at_ethernet.o(i.eth_send_frame) refers to at_lib.o(i.mem_test) for mem_test
+    at_ethernet.o(i.eth_send_frame) refers to at_arp.o(i.is_subnet_bcast) for is_subnet_bcast
+    at_ethernet.o(i.eth_send_frame) refers to at_arp.o(i.arp_cache_find) for arp_cache_find
+    at_ethernet.o(i.eth_send_frame) refers to at_lib.o(i.mem_copy) for mem_copy
+    at_ethernet.o(i.eth_send_frame) refers to emac_lpc17xx.o(.text) for send_frame
+    at_ethernet.o(i.eth_send_frame) refers to at_ethernet.o(.constdata) for .constdata
+    at_ethernet.o(i.eth_send_frame) refers to at_ip.o(.constdata) for IP_Broadcast
+    at_ethernet.o(i.eth_send_frame) refers to net_config_http.o(.data) for own_hw_adr
+    at_ethernet.o(i.init_eth_link) refers to emac_lpc17xx.o(.text) for int_disable_eth
+    at_ethernet.o(i.init_eth_link) refers to at_arp.o(i.init_arp) for init_arp
+    at_ethernet.o(i.init_eth_link) refers to at_ethernet.o(.data) for .data
+    at_ethernet.o(i.put_in_queue) refers to at_mem.o(i.free_mem) for free_mem
+    at_ethernet.o(i.put_in_queue) refers to at_ethernet.o(.data) for .data
+    at_ethernet.o(i.put_in_queue) refers to at_ethernet.o(.bss) for .bss
+    at_ethernet.o(i.run_eth_link) refers to at_ethernet.o(i.poll_ethernet) for poll_ethernet
+    at_ethernet.o(i.run_eth_link) refers to at_arp.o(i.arp_cache_update) for arp_cache_update
+    at_ethernet.o(i.run_eth_link) refers to at_arp.o(i.process_arp) for process_arp
+    at_ethernet.o(i.run_eth_link) refers to at_ip.o(i.ip_chk_frame) for ip_chk_frame
+    at_ethernet.o(i.run_eth_link) refers to at_lib.o(i.mem_test) for mem_test
+    at_ethernet.o(i.run_eth_link) refers to at_arp.o(i.arp_cache_add) for arp_cache_add
+    at_ethernet.o(i.run_eth_link) refers to at_icmp.o(i.process_icmp) for process_icmp
+    at_ethernet.o(i.run_eth_link) refers to at_ethernet.o(i.process_hl_igmp) for process_hl_igmp
+    at_ethernet.o(i.run_eth_link) refers to net_config_http.o(.text) for process_hl_udp
+    at_ethernet.o(i.run_eth_link) refers to at_mem.o(i.free_mem) for free_mem
+    at_ethernet.o(i.run_eth_link) refers to at_system.o(.data) for sec_tick
+    at_ethernet.o(i.run_eth_link) refers to at_ethernet.o(.data) for .data
+    at_ethernet.o(i.run_eth_link) refers to at_ethernet.o(.bss) for .bss
+    at_lib.o(i.CalcChksum) refers to at_lib.o(i.CalcChksumBuf) for CalcChksumBuf
+    at_lib.o(i.asc_to_b64) refers to at_lib.o(i.encode_b64) for encode_b64
+    at_lib.o(i.bin_to_b64) refers to at_lib.o(i.encode_b64) for encode_b64
+    at_lib.o(i.is_subnet) refers to at_lib.o(i.mem_copy) for mem_copy
+    at_lib.o(i.str_crc) refers to at_lib.o(i.get_crc) for get_crc
+    at_mem.o(i.alloc_mem) refers to emac_lpc17xx.o(.text) for int_disable_eth
+    at_mem.o(i.alloc_mem) refers to net_config_http.o(.text) for sys_error
+    at_mem.o(i.alloc_mem) refers to at_mem.o(.data) for .data
+    at_mem.o(i.alloc_mem) refers to net_config_http.o(.constdata) for MPool_Size
+    at_mem.o(i.alloc_mem) refers to net_config_http.o(.bss) for Mem_Pool
+    at_mem.o(i.free_mem) refers to emac_lpc17xx.o(.text) for int_disable_eth
+    at_mem.o(i.free_mem) refers to net_config_http.o(.text) for sys_error
+    at_mem.o(i.free_mem) refers to net_config_http.o(.bss) for Mem_Pool
+    at_mem.o(i.free_mem) refers to at_mem.o(.data) for .data
+    at_mem.o(i.init_mem) refers to net_config_http.o(.bss) for Mem_Pool
+    at_mem.o(i.init_mem) refers to net_config_http.o(.constdata) for MPool_Size
+    at_mem.o(i.init_mem) refers to at_mem.o(.data) for .data
+    at_mem.o(i.resize_mem) refers to emac_lpc17xx.o(.text) for int_disable_eth
+    at_mem.o(i.resize_mem) refers to at_mem.o(.data) for .data
+    at_system.o(i.init_TcpNet) refers to emac_lpc17xx.o(.text) for int_disable_eth
+    at_system.o(i.init_TcpNet) refers to at_mem.o(i.init_mem) for init_mem
+    at_system.o(i.init_TcpNet) refers to at_lib.o(i.mem_copy) for mem_copy
+    at_system.o(i.init_TcpNet) refers to net_config_http.o(.text) for init_system
+    at_system.o(i.init_TcpNet) refers to at_system.o(.data) for .data
+    at_system.o(i.init_TcpNet) refers to net_config_http.o(.constdata) for tick_rate
+    at_system.o(i.init_TcpNet) refers to net_config_http.o(.constdata) for nlocalm
+    at_system.o(i.init_TcpNet) refers to at_system.o(.bss) for .bss
+    at_system.o(i.main_TcpNet) refers to net_config_http.o(.text) for run_system
+    at_system.o(i.main_TcpNet) refers to at_system.o(.data) for .data
+    at_system.o(i.main_TcpNet) refers to net_config_http.o(.constdata) for tick_rate
+    at_system.o(i.timer_tick) refers to at_system.o(.data) for .data
+    at_arp.o(i.arp_cache_add) refers to at_lib.o(i.mem_comp) for mem_comp
+    at_arp.o(i.arp_cache_add) refers to at_lib.o(i.is_subnet) for is_subnet
+    at_arp.o(i.arp_cache_add) refers to at_lib.o(i.mem_test) for mem_test
+    at_arp.o(i.arp_cache_add) refers to at_arp.o(i.arp_cache_alloc) for arp_cache_alloc
+    at_arp.o(i.arp_cache_add) refers to at_lib.o(i.mem_copy) for mem_copy
+    at_arp.o(i.arp_cache_add) refers to net_config_http.o(.bss) for arp_table
+    at_arp.o(i.arp_cache_add) refers to net_config_http.o(.constdata) for arp_TabSize
+    at_arp.o(i.arp_cache_add) refers to at_system.o(.bss) for localm
+    at_arp.o(i.arp_cache_add) refers to net_config_http.o(.constdata) for arp_TimeOut
+    at_arp.o(i.arp_cache_add) refers to net_config_http.o(.constdata) for arp_MaxRetry
+    at_arp.o(i.arp_cache_alloc) refers to net_config_http.o(.bss) for arp_table
+    at_arp.o(i.arp_cache_alloc) refers to net_config_http.o(.constdata) for arp_TabSize
+    at_arp.o(i.arp_cache_alloc) refers to net_config_http.o(.constdata) for arp_TimeOut
+    at_arp.o(i.arp_cache_find) refers to at_lib.o(i.mem_comp) for mem_comp
+    at_arp.o(i.arp_cache_find) refers to at_lib.o(i.is_subnet) for is_subnet
+    at_arp.o(i.arp_cache_find) refers to at_lib.o(i.mem_test) for mem_test
+    at_arp.o(i.arp_cache_find) refers to at_arp.o(i.arp_cache_alloc) for arp_cache_alloc
+    at_arp.o(i.arp_cache_find) refers to at_lib.o(i.mem_copy) for mem_copy
+    at_arp.o(i.arp_cache_find) refers to at_arp.o(i.arp_send_req) for arp_send_req
+    at_arp.o(i.arp_cache_find) refers to net_config_http.o(.bss) for arp_table
+    at_arp.o(i.arp_cache_find) refers to net_config_http.o(.constdata) for arp_TabSize
+    at_arp.o(i.arp_cache_find) refers to at_system.o(.bss) for localm
+    at_arp.o(i.arp_cache_find) refers to at_ethernet.o(.constdata) for MAC_Broadcast
+    at_arp.o(i.arp_cache_find) refers to net_config_http.o(.constdata) for arp_MaxRetry
+    at_arp.o(i.arp_cache_find) refers to net_config_http.o(.constdata) for arp_Resend
+    at_arp.o(i.arp_cache_ip) refers to at_lib.o(i.mem_comp) for mem_comp
+    at_arp.o(i.arp_cache_ip) refers to at_arp.o(i.is_subnet_bcast) for is_subnet_bcast
+    at_arp.o(i.arp_cache_ip) refers to at_arp.o(i.arp_cache_find) for arp_cache_find
+    at_arp.o(i.arp_cache_ip) refers to at_ip.o(.constdata) for IP_Broadcast
+    at_arp.o(i.arp_cache_update) refers to at_lib.o(i.mem_comp) for mem_comp
+    at_arp.o(i.arp_cache_update) refers to at_arp.o(i.arp_send_req) for arp_send_req
+    at_arp.o(i.arp_cache_update) refers to net_config_http.o(.constdata) for arp_Resend
+    at_arp.o(i.arp_cache_update) refers to at_arp.o(.data) for .data
+    at_arp.o(i.arp_cache_update) refers to net_config_http.o(.constdata) for arp_TabSize
+    at_arp.o(i.arp_cache_update) refers to net_config_http.o(.bss) for arp_table
+    at_arp.o(i.arp_cache_update) refers to at_system.o(.bss) for localm
+    at_arp.o(i.arp_cache_update) refers to at_ip.o(.constdata) for IP_Broadcast
+    at_arp.o(i.arp_cache_update) refers to net_config_http.o(.constdata) for arp_TimeOut
+    at_arp.o(i.arp_get_adr) refers to at_lib.o(i.mem_comp) for mem_comp
+    at_arp.o(i.arp_get_adr) refers to net_config_http.o(.bss) for arp_table
+    at_arp.o(i.arp_get_adr) refers to net_config_http.o(.constdata) for arp_TabSize
+    at_arp.o(i.arp_get_response) refers to at_lib.o(i.mem_comp) for mem_comp
+    at_arp.o(i.arp_get_response) refers to at_lib.o(i.mem_copy) for mem_copy
+    at_arp.o(i.arp_get_response) refers to net_config_http.o(.bss) for arp_table
+    at_arp.o(i.arp_get_response) refers to net_config_http.o(.constdata) for arp_TabSize
+    at_arp.o(i.arp_get_response) refers to net_config_http.o(.constdata) for arp_TimeOut
+    at_arp.o(i.arp_get_response) refers to net_config_http.o(.constdata) for arp_MaxRetry
+    at_arp.o(i.arp_send_reply) refers to at_mem.o(i.alloc_mem) for alloc_mem
+    at_arp.o(i.arp_send_reply) refers to at_lib.o(i.mem_copy) for mem_copy
+    at_arp.o(i.arp_send_reply) refers to at_arp.o(i.arp_cache_add) for arp_cache_add
+    at_arp.o(i.arp_send_reply) refers to emac_lpc17xx.o(.text) for send_frame
+    at_arp.o(i.arp_send_reply) refers to at_mem.o(i.free_mem) for free_mem
+    at_arp.o(i.arp_send_reply) refers to net_config_http.o(.data) for own_hw_adr
+    at_arp.o(i.arp_send_reply) refers to at_system.o(.bss) for localm
+    at_arp.o(i.arp_send_req) refers to at_mem.o(i.alloc_mem) for alloc_mem
+    at_arp.o(i.arp_send_req) refers to at_lib.o(i.mem_copy) for mem_copy
+    at_arp.o(i.arp_send_req) refers to at_lib.o(i.mem_set) for mem_set
+    at_arp.o(i.arp_send_req) refers to emac_lpc17xx.o(.text) for send_frame
+    at_arp.o(i.arp_send_req) refers to at_mem.o(i.free_mem) for free_mem
+    at_arp.o(i.arp_send_req) refers to at_ethernet.o(.constdata) for MAC_Broadcast
+    at_arp.o(i.arp_send_req) refers to net_config_http.o(.data) for own_hw_adr
+    at_arp.o(i.arp_send_req) refers to at_system.o(.bss) for localm
+    at_arp.o(i.arp_send_req) refers to net_config_http.o(.bss) for arp_table
+    at_arp.o(i.init_arp) refers to net_config_http.o(.bss) for arp_table
+    at_arp.o(i.init_arp) refers to net_config_http.o(.constdata) for arp_TabSize
+    at_arp.o(i.is_subnet_bcast) refers to at_lib.o(i.mem_copy) for mem_copy
+    at_arp.o(i.is_subnet_bcast) refers to at_lib.o(i.is_subnet) for is_subnet
+    at_arp.o(i.is_subnet_bcast) refers to at_system.o(.bss) for localm
+    at_arp.o(i.process_arp) refers to at_lib.o(i.mem_comp) for mem_comp
+    at_arp.o(i.process_arp) refers to at_arp.o(i.arp_get_response) for arp_get_response
+    at_arp.o(i.process_arp) refers to at_arp.o(i.arp_send_reply) for arp_send_reply
+    at_arp.o(i.process_arp) refers to at_system.o(.bss) for localm
+    at_arp.o(i.process_arp) refers to net_config_http.o(.data) for own_hw_adr
+    at_ip.o(i.ip_chk_frame) refers to at_lib.o(i.SwapB) for SwapB
+    at_ip.o(i.ip_chk_frame) refers to at_lib.o(i.mem_comp) for mem_comp
+    at_ip.o(i.ip_chk_frame) refers to net_config_http.o(.text) for igmp_is_member
+    at_ip.o(i.ip_chk_frame) refers to at_lib.o(i.mem_copy) for mem_copy
+    at_ip.o(i.ip_chk_frame) refers to at_ethernet.o(i.eth_chk_adr) for eth_chk_adr
+    at_ip.o(i.ip_chk_frame) refers to at_ip.o(i.ip_get_chksum) for ip_get_chksum
+    at_ip.o(i.ip_chk_frame) refers to at_system.o(.bss) for localm
+    at_ip.o(i.ip_chk_frame) refers to at_ip.o(.constdata) for .constdata
+    at_ip.o(i.ip_get_chksum) refers to at_lib.o(i.CalcChksum) for CalcChksum
+    at_ip.o(i.ip_get_locadr) refers to at_lib.o(i.is_subnet) for is_subnet
+    at_ip.o(i.ip_get_locadr) refers to at_lib.o(i.mem_test) for mem_test
+    at_ip.o(i.ip_get_locadr) refers to net_config_http.o(.constdata) for netif_cfg
+    at_ip.o(i.ip_get_locadr) refers to at_ip.o(.data) for .data
+    at_ip.o(i.ip_get_locadr) refers to at_system.o(.bss) for localm
+    at_ip.o(i.ip_send_frame) refers to at_lib.o(i.SwapB) for SwapB
+    at_ip.o(i.ip_send_frame) refers to at_ip.o(i.ip_get_locadr) for ip_get_locadr
+    at_ip.o(i.ip_send_frame) refers to at_lib.o(i.mem_copy) for mem_copy
+    at_ip.o(i.ip_send_frame) refers to at_ip.o(i.ip_get_chksum) for ip_get_chksum
+    at_ip.o(i.ip_send_frame) refers to net_config_http.o(.text) for dispatch_frame
+    at_ip.o(i.ip_send_frame) refers to at_ip.o(.data) for .data
+    at_icmp.o(i.process_icmp) refers to at_lib.o(i.CalcChksum) for CalcChksum
+    at_icmp.o(i.process_icmp) refers to at_mem.o(i.alloc_mem) for alloc_mem
+    at_icmp.o(i.process_icmp) refers to at_lib.o(i.mem_copy) for mem_copy
+    at_icmp.o(i.process_icmp) refers to at_ip.o(i.ip_send_frame) for ip_send_frame
+    at_icmp.o(i.process_icmp) refers to at_mem.o(i.free_mem) for free_mem
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7.o(.ARM.Collect$$$$00000007) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    printfb.o(i.__0fprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0fprintf$bare) refers to fputc.o(i.fputc) for fputc
+    printfb.o(i.__0printf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0printf$bare) refers to fputc.o(i.fputc) for fputc
+    printfb.o(i.__0printf$bare) refers to stdout.o(.data) for __stdout
+    printfb.o(i.__0snprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0snprintf$bare) refers to printfb.o(i._snputc) for _snputc
+    printfb.o(i.__0sprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0sprintf$bare) refers to printfb.o(i._sputc) for _sputc
+    printfb.o(i.__0vfprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vfprintf$bare) refers to fputc.o(i.fputc) for fputc
+    printfb.o(i.__0vprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vprintf$bare) refers to fputc.o(i.fputc) for fputc
+    printfb.o(i.__0vprintf$bare) refers to stdout.o(.data) for __stdout
+    printfb.o(i.__0vsnprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vsnprintf$bare) refers to printfb.o(i._snputc) for _snputc
+    printfb.o(i.__0vsprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vsprintf$bare) refers to printfb.o(i._sputc) for _sputc
+    printf0.o(i.__0fprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0fprintf$0) refers to fputc.o(i.fputc) for fputc
+    printf0.o(i.__0printf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0printf$0) refers to fputc.o(i.fputc) for fputc
+    printf0.o(i.__0printf$0) refers to stdout.o(.data) for __stdout
+    printf0.o(i.__0snprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0snprintf$0) refers to printf0.o(i._snputc) for _snputc
+    printf0.o(i.__0sprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0sprintf$0) refers to printf0.o(i._sputc) for _sputc
+    printf0.o(i.__0vfprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vfprintf$0) refers to fputc.o(i.fputc) for fputc
+    printf0.o(i.__0vprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vprintf$0) refers to fputc.o(i.fputc) for fputc
+    printf0.o(i.__0vprintf$0) refers to stdout.o(.data) for __stdout
+    printf0.o(i.__0vsnprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vsnprintf$0) refers to printf0.o(i._snputc) for _snputc
+    printf0.o(i.__0vsprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vsprintf$0) refers to printf0.o(i._sputc) for _sputc
+    printf1.o(i.__0fprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0fprintf$1) refers to fputc.o(i.fputc) for fputc
+    printf1.o(i.__0printf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0printf$1) refers to fputc.o(i.fputc) for fputc
+    printf1.o(i.__0printf$1) refers to stdout.o(.data) for __stdout
+    printf1.o(i.__0snprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0snprintf$1) refers to printf1.o(i._snputc) for _snputc
+    printf1.o(i.__0sprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0sprintf$1) refers to printf1.o(i._sputc) for _sputc
+    printf1.o(i.__0vfprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vfprintf$1) refers to fputc.o(i.fputc) for fputc
+    printf1.o(i.__0vprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vprintf$1) refers to fputc.o(i.fputc) for fputc
+    printf1.o(i.__0vprintf$1) refers to stdout.o(.data) for __stdout
+    printf1.o(i.__0vsnprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vsnprintf$1) refers to printf1.o(i._snputc) for _snputc
+    printf1.o(i.__0vsprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vsprintf$1) refers to printf1.o(i._sputc) for _sputc
+    printf1.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printf2.o(i.__0fprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0fprintf$2) refers to fputc.o(i.fputc) for fputc
+    printf2.o(i.__0printf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0printf$2) refers to fputc.o(i.fputc) for fputc
+    printf2.o(i.__0printf$2) refers to stdout.o(.data) for __stdout
+    printf2.o(i.__0snprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0snprintf$2) refers to printf2.o(i._snputc) for _snputc
+    printf2.o(i.__0sprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0sprintf$2) refers to printf2.o(i._sputc) for _sputc
+    printf2.o(i.__0vfprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vfprintf$2) refers to fputc.o(i.fputc) for fputc
+    printf2.o(i.__0vprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vprintf$2) refers to fputc.o(i.fputc) for fputc
+    printf2.o(i.__0vprintf$2) refers to stdout.o(.data) for __stdout
+    printf2.o(i.__0vsnprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vsnprintf$2) refers to printf2.o(i._snputc) for _snputc
+    printf2.o(i.__0vsprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vsprintf$2) refers to printf2.o(i._sputc) for _sputc
+    printf3.o(i.__0fprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0fprintf$3) refers to fputc.o(i.fputc) for fputc
+    printf3.o(i.__0printf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0printf$3) refers to fputc.o(i.fputc) for fputc
+    printf3.o(i.__0printf$3) refers to stdout.o(.data) for __stdout
+    printf3.o(i.__0snprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0snprintf$3) refers to printf3.o(i._snputc) for _snputc
+    printf3.o(i.__0sprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0sprintf$3) refers to printf3.o(i._sputc) for _sputc
+    printf3.o(i.__0vfprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vfprintf$3) refers to fputc.o(i.fputc) for fputc
+    printf3.o(i.__0vprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vprintf$3) refers to fputc.o(i.fputc) for fputc
+    printf3.o(i.__0vprintf$3) refers to stdout.o(.data) for __stdout
+    printf3.o(i.__0vsnprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vsnprintf$3) refers to printf3.o(i._snputc) for _snputc
+    printf3.o(i.__0vsprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vsprintf$3) refers to printf3.o(i._sputc) for _sputc
+    printf3.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printf4.o(i.__0fprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0fprintf$4) refers to fputc.o(i.fputc) for fputc
+    printf4.o(i.__0printf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0printf$4) refers to fputc.o(i.fputc) for fputc
+    printf4.o(i.__0printf$4) refers to stdout.o(.data) for __stdout
+    printf4.o(i.__0snprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0snprintf$4) refers to printf4.o(i._snputc) for _snputc
+    printf4.o(i.__0sprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0sprintf$4) refers to printf4.o(i._sputc) for _sputc
+    printf4.o(i.__0vfprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vfprintf$4) refers to fputc.o(i.fputc) for fputc
+    printf4.o(i.__0vprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vprintf$4) refers to fputc.o(i.fputc) for fputc
+    printf4.o(i.__0vprintf$4) refers to stdout.o(.data) for __stdout
+    printf4.o(i.__0vsnprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vsnprintf$4) refers to printf4.o(i._snputc) for _snputc
+    printf4.o(i.__0vsprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vsprintf$4) refers to printf4.o(i._sputc) for _sputc
+    printf4.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf5.o(i.__0fprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0fprintf$5) refers to fputc.o(i.fputc) for fputc
+    printf5.o(i.__0printf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0printf$5) refers to fputc.o(i.fputc) for fputc
+    printf5.o(i.__0printf$5) refers to stdout.o(.data) for __stdout
+    printf5.o(i.__0snprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0snprintf$5) refers to printf5.o(i._snputc) for _snputc
+    printf5.o(i.__0sprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0sprintf$5) refers to printf5.o(i._sputc) for _sputc
+    printf5.o(i.__0vfprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vfprintf$5) refers to fputc.o(i.fputc) for fputc
+    printf5.o(i.__0vprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vprintf$5) refers to fputc.o(i.fputc) for fputc
+    printf5.o(i.__0vprintf$5) refers to stdout.o(.data) for __stdout
+    printf5.o(i.__0vsnprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vsnprintf$5) refers to printf5.o(i._snputc) for _snputc
+    printf5.o(i.__0vsprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vsprintf$5) refers to printf5.o(i._sputc) for _sputc
+    printf5.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf6.o(i.__0fprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0fprintf$6) refers to fputc.o(i.fputc) for fputc
+    printf6.o(i.__0printf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0printf$6) refers to fputc.o(i.fputc) for fputc
+    printf6.o(i.__0printf$6) refers to stdout.o(.data) for __stdout
+    printf6.o(i.__0snprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0snprintf$6) refers to printf6.o(i._snputc) for _snputc
+    printf6.o(i.__0sprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0sprintf$6) refers to printf6.o(i._sputc) for _sputc
+    printf6.o(i.__0vfprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vfprintf$6) refers to fputc.o(i.fputc) for fputc
+    printf6.o(i.__0vprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vprintf$6) refers to fputc.o(i.fputc) for fputc
+    printf6.o(i.__0vprintf$6) refers to stdout.o(.data) for __stdout
+    printf6.o(i.__0vsnprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vsnprintf$6) refers to printf6.o(i._snputc) for _snputc
+    printf6.o(i.__0vsprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vsprintf$6) refers to printf6.o(i._sputc) for _sputc
+    printf6.o(i._printf_core) refers to printf6.o(i._printf_pre_padding) for _printf_pre_padding
+    printf6.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printf6.o(i._printf_core) refers to printf6.o(i._printf_post_padding) for _printf_post_padding
+    printf7.o(i.__0fprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0fprintf$7) refers to fputc.o(i.fputc) for fputc
+    printf7.o(i.__0printf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0printf$7) refers to fputc.o(i.fputc) for fputc
+    printf7.o(i.__0printf$7) refers to stdout.o(.data) for __stdout
+    printf7.o(i.__0snprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0snprintf$7) refers to printf7.o(i._snputc) for _snputc
+    printf7.o(i.__0sprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0sprintf$7) refers to printf7.o(i._sputc) for _sputc
+    printf7.o(i.__0vfprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vfprintf$7) refers to fputc.o(i.fputc) for fputc
+    printf7.o(i.__0vprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vprintf$7) refers to fputc.o(i.fputc) for fputc
+    printf7.o(i.__0vprintf$7) refers to stdout.o(.data) for __stdout
+    printf7.o(i.__0vsnprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vsnprintf$7) refers to printf7.o(i._snputc) for _snputc
+    printf7.o(i.__0vsprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vsprintf$7) refers to printf7.o(i._sputc) for _sputc
+    printf7.o(i._printf_core) refers to printf7.o(i._printf_pre_padding) for _printf_pre_padding
+    printf7.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf7.o(i._printf_core) refers to printf7.o(i._printf_post_padding) for _printf_post_padding
+    printf8.o(i.__0fprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0fprintf$8) refers to fputc.o(i.fputc) for fputc
+    printf8.o(i.__0printf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0printf$8) refers to fputc.o(i.fputc) for fputc
+    printf8.o(i.__0printf$8) refers to stdout.o(.data) for __stdout
+    printf8.o(i.__0snprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0snprintf$8) refers to printf8.o(i._snputc) for _snputc
+    printf8.o(i.__0sprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0sprintf$8) refers to printf8.o(i._sputc) for _sputc
+    printf8.o(i.__0vfprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vfprintf$8) refers to fputc.o(i.fputc) for fputc
+    printf8.o(i.__0vprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vprintf$8) refers to fputc.o(i.fputc) for fputc
+    printf8.o(i.__0vprintf$8) refers to stdout.o(.data) for __stdout
+    printf8.o(i.__0vsnprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vsnprintf$8) refers to printf8.o(i._snputc) for _snputc
+    printf8.o(i.__0vsprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vsprintf$8) refers to printf8.o(i._sputc) for _sputc
+    printf8.o(i._printf_core) refers to printf8.o(i._printf_pre_padding) for _printf_pre_padding
+    printf8.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf8.o(i._printf_core) refers to printf8.o(i._printf_post_padding) for _printf_post_padding
+    printfa.o(i.__0fprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0fprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0fprintf) refers to fputc.o(i.fputc) for fputc
+    printfa.o(i.__0printf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0printf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0printf) refers to fputc.o(i.fputc) for fputc
+    printfa.o(i.__0printf) refers to stdout.o(.data) for __stdout
+    printfa.o(i.__0snprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0snprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0snprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0sprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0sprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0sprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i.__0vfprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vfprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vfprintf) refers to fputc.o(i.fputc) for fputc
+    printfa.o(i.__0vprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vprintf) refers to fputc.o(i.fputc) for fputc
+    printfa.o(i.__0vprintf) refers to stdout.o(.data) for __stdout
+    printfa.o(i.__0vsnprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0vsprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i._fp_digits) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._fp_digits) refers to dmul.o(.text) for __aeabi_dmul
+    printfa.o(i._fp_digits) refers to ddiv.o(.text) for __aeabi_ddiv
+    printfa.o(i._fp_digits) refers to cdrcmple.o(.text) for __aeabi_cdrcmple
+    printfa.o(i._fp_digits) refers to dadd.o(.text) for __aeabi_dadd
+    printfa.o(i._fp_digits) refers to dfixul.o(.text) for __aeabi_d2ulz
+    printfa.o(i._fp_digits) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_pre_padding) for _printf_pre_padding
+    printfa.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_post_padding) for _printf_post_padding
+    printfa.o(i._printf_core) refers to printfa.o(i._fp_digits) for _fp_digits
+    printfa.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printfa.o(i._printf_post_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_pre_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._snputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._sputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    atoi.o(.text) refers to errno.o(i.__aeabi_errno_addr) for __aeabi_errno_addr
+    atoi.o(.text) refers to strtol.o(.text) for strtol
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_lpc17xx.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_lpc17xx.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry7.o(.ARM.Collect$$$$00000007) refers to main.o(.text) for main
+    fputc.o(i.fputc) refers (Special) to iusesemip.o(.text) for __I$use$semihosting$fputc
+    uldiv.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    uldiv.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    errno.o(i.__aeabi_errno_addr) refers to errno.o(.data) for .data
+    errno.o(i.__read_errno) refers to errno.o(.data) for .data
+    errno.o(i.__set_errno) refers to errno.o(.data) for .data
+    strtol.o(.text) refers to ctype_o.o(.text) for __rt_ctype_table
+    strtol.o(.text) refers to _strtoul.o(.text) for _strtoul
+    strtol.o(.text) refers to errno.o(i.__aeabi_errno_addr) for __aeabi_errno_addr
+    dadd.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers to llsshr.o(.text) for __aeabi_lasr
+    dadd.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dmul.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    ddiv.o(.text) refers to depilogue.o(.text) for _double_round
+    dfixul.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    dfixul.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+    ctype_o.o(.text) refers to ctype_o.o(.constdata) for .constdata
+    ctype_o.o(.constdata) refers to ctype_o.o(.constdata) for __ctype_table
+    isalnum_o.o(.text) refers to ctype_o.o(.text) for __rt_ctype_table
+    isalpha_o.o(.text) refers to ctype_o.o(.text) for __rt_ctype_table
+    isblank_o.o(.text) refers to ctype_o.o(.constdata) for __ctype_table
+    iscntrl_o.o(.text) refers to ctype_o.o(.text) for __rt_ctype_table
+    isdigit_o.o(.text) refers to ctype_o.o(.text) for __rt_ctype_table
+    isgraph_o.o(.text) refers to ctype_o.o(.text) for __rt_ctype_table
+    islower_o.o(.text) refers to ctype_o.o(.text) for __rt_ctype_table
+    isprint_o.o(.text) refers to ctype_o.o(.text) for __rt_ctype_table
+    ispunct_o.o(.text) refers to ctype_o.o(.text) for __rt_ctype_table
+    isspace_o.o(.text) refers to ctype_o.o(.text) for __rt_ctype_table
+    isupper_o.o(.text) refers to ctype_o.o(.text) for __rt_ctype_table
+    isxdigit_o.o(.text) refers to ctype_o.o(.text) for __rt_ctype_table
+    _strtoul.o(.text) refers to _chval.o(.text) for _chval
+    _strtoul.o(.text) refers to errno.o(i.__aeabi_errno_addr) for __aeabi_errno_addr
+    depilogue.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    depilogue.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing startup_lpc17xx.o(HEAP), (2048 bytes).
+    Removing net_config_http.o(.data), (16 bytes).
+    Removing common_func.o(.text), (104 bytes).
+    Removing common_func.o(.text), (136 bytes).
+    Removing common_func.o(.text), (44 bytes).
+    Removing common_func.o(.text), (72 bytes).
+    Removing common_func.o(.text), (128 bytes).
+    Removing control.o(.text), (16 bytes).
+    Removing control.o(.text), (500 bytes).
+    Removing control.o(.text), (1404 bytes).
+    Removing control.o(.bss), (24 bytes).
+    Removing control.o(.bss), (64 bytes).
+    Removing control.o(.constdata), (4 bytes).
+    Removing control.o(.constdata), (4 bytes).
+    Removing control.o(.constdata), (4 bytes).
+    Removing control.o(.constdata), (4 bytes).
+    Removing control.o(.constdata), (4 bytes).
+    Removing control.o(.data), (24 bytes).
+    Removing control.o(.data), (2 bytes).
+    Removing control.o(.data), (1 bytes).
+    Removing control.o(.data), (2 bytes).
+    Removing control.o(.data), (2 bytes).
+    Removing control.o(.data), (1 bytes).
+    Removing control.o(.data), (1 bytes).
+    Removing control.o(.data), (2 bytes).
+    Removing control.o(.data), (1 bytes).
+    Removing control.o(.data), (2 bytes).
+    Removing control.o(.data), (2 bytes).
+    Removing control.o(.data), (2 bytes).
+    Removing control.o(.data), (1 bytes).
+    Removing control.o(.data), (4 bytes).
+    Removing control.o(.data), (2 bytes).
+    Removing control.o(.data), (6 bytes).
+    Removing control.o(.data), (2 bytes).
+    Removing control.o(.data), (1 bytes).
+    Removing control.o(.data), (1 bytes).
+    Removing control.o(.data), (1 bytes).
+    Removing control.o(.data), (1 bytes).
+    Removing control.o(.data), (1 bytes).
+    Removing control.o(.data), (1 bytes).
+    Removing ret.o(.text), (48 bytes).
+    Removing ret.o(.text), (44 bytes).
+    Removing gran.o(.text), (18 bytes).
+    Removing main.o(.text), (12 bytes).
+    Removing main.o(.text), (48 bytes).
+    Removing main.o(.text), (2 bytes).
+    Removing main.o(.bss), (76 bytes).
+    Removing main.o(.bss), (192 bytes).
+    Removing main.o(.bss), (20 bytes).
+    Removing main.o(.bss), (20 bytes).
+    Removing main.o(.data), (2 bytes).
+    Removing main.o(.data), (1 bytes).
+    Removing main.o(.data), (1 bytes).
+    Removing main.o(.data), (2 bytes).
+    Removing main.o(.data), (2 bytes).
+    Removing main.o(.data), (2 bytes).
+    Removing main.o(.data), (4 bytes).
+    Removing main.o(.data), (4 bytes).
+    Removing main.o(.data), (4 bytes).
+    Removing main.o(.data), (4 bytes).
+    Removing main.o(.data), (4 bytes).
+    Removing main.o(.data), (4 bytes).
+    Removing main.o(.data), (4 bytes).
+    Removing main.o(.data), (4 bytes).
+    Removing main.o(.data), (2 bytes).
+    Removing main.o(.data), (2 bytes).
+    Removing main.o(.data), (2 bytes).
+    Removing main.o(.data), (2 bytes).
+    Removing main.o(.data), (2 bytes).
+    Removing main.o(.data), (4 bytes).
+    Removing main.o(.data), (8 bytes).
+    Removing main.o(.data), (8 bytes).
+    Removing main.o(.data), (4 bytes).
+    Removing main.o(.data), (4 bytes).
+    Removing main.o(.data), (1 bytes).
+    Removing main.o(.data), (1 bytes).
+    Removing main.o(.data), (2 bytes).
+    Removing main.o(.data), (2 bytes).
+    Removing main.o(.data), (3 bytes).
+    Removing main.o(.data), (1 bytes).
+    Removing main.o(.data), (2 bytes).
+    Removing main.o(.data), (1 bytes).
+    Removing main.o(.data), (8 bytes).
+    Removing main.o(.data), (1 bytes).
+    Removing main.o(.data), (1 bytes).
+    Removing main.o(.data), (1 bytes).
+    Removing main.o(.data), (1 bytes).
+    Removing snmp_data_file.o(.text), (40 bytes).
+    Removing snmp_data_file.o(.text), (32 bytes).
+    Removing snmp_data_file.o(.text), (32 bytes).
+    Removing snmp_data_file.o(.text), (32 bytes).
+    Removing snmp_data_file.o(.text), (32 bytes).
+    Removing snmp_data_file.o(.text), (2 bytes).
+    Removing snmp_data_file.o(.text), (2 bytes).
+    Removing snmp_data_file.o(.text), (2 bytes).
+    Removing snmp_data_file.o(.text), (2 bytes).
+    Removing snmp_data_file.o(.text), (188 bytes).
+    Removing snmp_data_file.o(.text), (1868 bytes).
+    Removing snmp_data_file.o(.constdata), (81 bytes).
+    Removing snmp_data_file.o(.data), (2 bytes).
+    Removing snmp_data_file.o(.data), (2 bytes).
+    Removing snmp_data_file.o(.data), (2 bytes).
+    Removing snmp_data_file.o(.data), (8 bytes).
+    Removing snmp_data_file.o(.data), (2 bytes).
+    Removing snmp_data_file.o(.data), (3 bytes).
+    Removing snmp_data_file.o(.data), (3 bytes).
+    Removing snmp_data_file.o(.data), (2 bytes).
+    Removing snmp_data_file.o(.data), (2 bytes).
+    Removing snmp_data_file.o(.data), (2 bytes).
+    Removing snmp_mib.o(.constdata), (4 bytes).
+    Removing snmp_mib.o(.conststring), (20 bytes).
+    Removing snmp_mib.o(.conststring), (4 bytes).
+    Removing snmp_mib.o(.data), (4 bytes).
+    Removing snmp_mib.o(.data), (4 bytes).
+    Removing snmp_mib.o(.data), (1 bytes).
+    Removing timer.o(.text), (76 bytes).
+    Removing timer.o(.text), (20 bytes).
+    Removing timer.o(.text), (20 bytes).
+    Removing timer.o(.text), (24 bytes).
+    Removing timer.o(.text), (60 bytes).
+    Removing timer.o(.text), (24 bytes).
+    Removing ad7705.o(.text), (88 bytes).
+    Removing ad7705.o(.data), (2 bytes).
+    Removing ad7705.o(.data), (2 bytes).
+    Removing lcd_agm1232_uku207_3.o(.text), (44 bytes).
+    Removing lcd_agm1232_uku207_3.o(.text), (16 bytes).
+    Removing lcd_agm1232_uku207_3.o(.text), (60 bytes).
+    Removing lcd_agm1232_uku207_3.o(.text), (196 bytes).
+    Removing lcd_agm1232_uku207_3.o(.text), (18 bytes).
+    Removing 25lc640.o(.text), (124 bytes).
+    Removing full_can.o(.bss), (25 bytes).
+    Removing full_can.o(.bss), (25 bytes).
+    Removing full_can.o(.bss), (40 bytes).
+    Removing full_can.o(.bss), (40 bytes).
+    Removing full_can.o(.data), (2 bytes).
+    Removing uart0.o(.text), (86 bytes).
+    Removing uart0.o(.text), (114 bytes).
+    Removing uart0.o(.text), (156 bytes).
+    Removing uart0.o(.text), (180 bytes).
+    Removing uart0.o(.text), (256 bytes).
+    Removing uart0.o(.text), (44 bytes).
+    Removing uart0.o(.bss), (50 bytes).
+    Removing uart0.o(.bss), (50 bytes).
+    Removing uart0.o(.bss), (50 bytes).
+    Removing uart0.o(.bss), (60 bytes).
+    Removing uart0.o(.data), (4 bytes).
+    Removing uart0.o(.data), (1 bytes).
+    Removing modbus.o(.bss), (20 bytes).
+    Removing modbus.o(.data), (2 bytes).
+    Removing modbus.o(.data), (2 bytes).
+    Removing modbus.o(.data), (2 bytes).
+    Removing modbus.o(.data), (2 bytes).
+    Removing modbus.o(.data), (2 bytes).
+    Removing uart2.o(.bss), (30 bytes).
+    Removing uart2.o(.bss), (50 bytes).
+    Removing uart2.o(.bss), (50 bytes).
+    Removing uart2.o(.bss), (50 bytes).
+    Removing uart2.o(.data), (4 bytes).
+    Removing uart2.o(.data), (1 bytes).
+    Removing bat_driver.o(.text), (156 bytes).
+    Removing at_tcp.o(i.tcp_check_send), (56 bytes).
+    Removing at_tcp.o(i.tcp_connect), (172 bytes).
+    Removing at_tcp.o(i.tcp_get_adr), (24 bytes).
+    Removing at_tcp.o(i.tcp_get_free_port), (88 bytes).
+    Removing at_tcp.o(i.tcp_release_socket), (60 bytes).
+    Removing at_tcp.o(i.tcp_reset_tout), (48 bytes).
+    Removing at_tcp.o(i.tcp_reset_window), (80 bytes).
+    Removing at_tcp.o(i.tcp_set_dack), (64 bytes).
+    Removing at_udp.o(i.udp_close), (44 bytes).
+    Removing at_udp.o(i.udp_mcast_ttl), (44 bytes).
+    Removing at_udp.o(i.udp_release_socket), (48 bytes).
+    Removing at_http.o(i.hex2byte), (18 bytes).
+    Removing at_http.o(i.http_date), (116 bytes).
+    Removing at_http.o(i.http_get_content_type), (28 bytes).
+    Removing at_http.o(i.http_get_info), (80 bytes).
+    Removing at_http.o(i.http_get_lang), (28 bytes).
+    Removing at_http.o(i.http_get_session), (16 bytes).
+    Removing at_http.o(i.http_get_var), (108 bytes).
+    Removing at_snmp.o(i.snmp_set_community), (48 bytes).
+    Removing at_ethernet.o(i.eth_get_adr), (4 bytes).
+    Removing at_lib.o(i.asc_to_b64), (64 bytes).
+    Removing at_lib.o(i.bin_to_b64), (68 bytes).
+    Removing at_lib.o(i.encode_b64), (70 bytes).
+    Removing at_lib.o(i.get_u16), (10 bytes).
+    Removing at_lib.o(i.mem_rcopy), (54 bytes).
+    Removing at_lib.o(i.str_pos), (26 bytes).
+    Removing at_lib.o(i.str_ucomp), (40 bytes).
+    Removing at_lib.o(i.str_up_case), (26 bytes).
+    Removing at_system.o(.emb_text), (0 bytes).
+    Removing at_arp.o(i.arp_cache_ip), (72 bytes).
+    Removing at_arp.o(i.arp_get_adr), (68 bytes).
+    Removing dadd.o(.text), (336 bytes).
+    Removing dmul.o(.text), (226 bytes).
+    Removing ddiv.o(.text), (226 bytes).
+    Removing dfixul.o(.text), (48 bytes).
+    Removing cdrcmple.o(.text), (40 bytes).
+    Removing depilogue.o(.text), (198 bytes).
+
+197 unused section(s) (total 12676 bytes) removed from the image.

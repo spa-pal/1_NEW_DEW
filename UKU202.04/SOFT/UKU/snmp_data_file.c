@@ -121,9 +121,9 @@ char i;
 snmp_mains_power_voltage=Unet;
 snmp_mains_power_frequency=fnet;
 snmp_mains_power_status=0;
-#if(UKU_VERSION==900)
+/*#if(UKU_VERSION==900)
 snmp_mains_power_status=2;
-#endif
+#endif*/
 if(St&0x01)snmp_mains_power_status|=0x01;
 if(St&0x01)snmp_mains_power_alarm=1;
 
@@ -285,6 +285,7 @@ void snmp_bat_test_time_write (int mode)
 {
 if(mode==MIB_WRITE)
 	{
+	gran(&snmp_bat_test_time,0,60);
      lc640_write_int(EE_TBAT,snmp_bat_test_time);
 	}
 }
@@ -294,6 +295,7 @@ void snmp_u_max_write (int mode)
 {
 if(mode==MIB_WRITE)
 	{
+	gran(&snmp_u_max,10,1000);
      lc640_write_int(EE_UMAX,snmp_u_max);
 	}
 }
@@ -303,6 +305,7 @@ void snmp_u_0_grad_write (int mode)
 {
 if(mode==MIB_WRITE)
 	{
+	gran(&snmp_u_0_grad,10,1000);
      lc640_write_int(EE_UB0,snmp_u_0_grad);
 	}
 }
@@ -311,6 +314,7 @@ void snmp_u_20_grad_write (int mode)
 {
 if(mode==MIB_WRITE)
 	{
+	gran(&snmp_u_20_grad,10,1000);
      lc640_write_int(EE_UB20,snmp_u_20_grad);
 	}
 }
@@ -320,6 +324,7 @@ void snmp_u_sign_write (int mode)
 {
 if(mode==MIB_WRITE)
 	{
+	gran(&snmp_u_sign,10,1000);
      lc640_write_int(EE_USIGN,snmp_u_sign);
 	}
 }
@@ -328,6 +333,7 @@ void snmp_u_min_power_write (int mode)
 {
 if(mode==MIB_WRITE)
 	{
+	gran(&snmp_u_min_power,1,220);
      lc640_write_int(EE_UMN,snmp_u_min_power);
 	}
 }
@@ -336,6 +342,7 @@ void snmp_u_withouth_bat_write (int mode)
 {
 if(mode==MIB_WRITE)
 	{
+	gran(&snmp_u_withouth_bat,10,1000);
      lc640_write_int(EE_U0B,snmp_u_withouth_bat);
 	}
 }
@@ -345,6 +352,7 @@ void snmp_control_current_write (int mode)
 {
 if(mode==MIB_WRITE)
 	{
+	gran(&snmp_control_current,1,500);
      lc640_write_int(EE_IKB,snmp_control_current);
 	}
 }
@@ -354,6 +362,7 @@ void snmp_max_charge_current_write (int mode)
 {
 if(mode==MIB_WRITE)
 	{
+	gran(&snmp_max_charge_current,5,10);
      lc640_write_int(EE_IZMAX,snmp_max_charge_current);
 	}
 }
@@ -363,6 +372,7 @@ void snmp_max_current_write (int mode)
 {
 if(mode==MIB_WRITE)
 	{
+	gran(&snmp_max_current,1,500);
      lc640_write_int(EE_IMAX,snmp_max_current);
 	}
 }
@@ -372,7 +382,8 @@ void snmp_max_current_koef_write (int mode)
 {
 if(mode==MIB_WRITE)
 	{
-     lc640_write_int(EE_KIMAX,snmp_max_current_koef);
+	gran(&snmp_max_current_koef,5,10);
+	lc640_write_int(EE_KIMAX,snmp_max_current_koef);
 	}
 }
 
@@ -390,6 +401,7 @@ void snmp_powerup_psu_timeout_write (int mode)
 {
 if(mode==MIB_WRITE)
 	{
+	gran(&snmp_powerup_psu_timeout,0,3);
      lc640_write_int(EE_TZAS,snmp_powerup_psu_timeout);
 	}
 }
@@ -399,6 +411,7 @@ void snmp_max_temperature_write (int mode)
 {
 if(mode==MIB_WRITE)
 	{
+	gran(&snmp_max_temperature,10,100);
      lc640_write_int(EE_TMAX,snmp_max_temperature);
 	}
 }
@@ -407,8 +420,22 @@ if(mode==MIB_WRITE)
 //-----------------------------------------------
 void snmp_set_primary (int mode)
 {
+
 if(mode==MIB_WRITE)
 	{
+	if(snmp_command_parametr==1) 
+		{
+		lc640_write_int(EE_MAIN_BPS,0);
+	     cnt_src[1]=10;
+		snmp_command_parametr=COMMAND_OK;
+		}
+	
+	else if(snmp_command_parametr==2)
+		{
+	     lc640_write_int(EE_MAIN_BPS,1);
+		snmp_command_parametr=COMMAND_OK;
+		}	
+	else snmp_command_parametr=WRONG_PARAMETER;
 	}
 }
 
@@ -425,7 +452,7 @@ if(mode==MIB_WRITE)
 		cnt_src[1]=10;
 		snmp_plazma++;
 		snmp_plazma++;
-		//snmp_command_parametr=COMMAND_OK;
+		snmp_command_parametr=COMMAND_OK;
 		}
 	
 	else if(snmp_command_parametr==2)
@@ -435,8 +462,9 @@ if(mode==MIB_WRITE)
 		St&=0xfb;
 		cnt_src[0]=10;	
 		snmp_plazma++;
-		//snmp_command_parametr=COMMAND_OK;
+		snmp_command_parametr=COMMAND_OK;
 		}	
+	else snmp_command_parametr=WRONG_PARAMETER;
 	}
 }
 
@@ -445,6 +473,80 @@ void snmp_unlock (int mode)
 {
 if(mode==MIB_WRITE)
 	{
+	if(snmp_command_parametr==1) 
+		{
+		snmp_command=COMMAND_OK;
+		St_[0]&=0xdf;
+		St_[1]&=0xdf;
+		}
+	
+	else snmp_command_parametr=WRONG_PARAMETER;
+	}
+}
+
+//-----------------------------------------------
+void snmp_parallel_switch (int mode)
+{
+if(mode==MIB_WRITE)
+	{
+	if(snmp_command_parametr==1) 
+		{
+		snmp_command=COMMAND_OK;
+	//	lc640_write_int(EE_PAR,1);
+		}
+	else if(snmp_command_parametr==0) 
+		{
+		snmp_command=COMMAND_OK;
+	//	lc640_write_int(EE_PAR,0);
+		}
+	
+	else snmp_command_parametr=WRONG_PARAMETER;
+	}
+}
+
+//-----------------------------------------------
+void snmp_vz_start (int mode)
+{
+if(mode==MIB_WRITE)
+	{
+	if((snmp_command_parametr>=1)&&(snmp_command_parametr<=10)) 
+		{
+		if(!(St&0x03)&&(spc_stat==spc_OFF))
+			{
+			spc_stat=spc_VZ;
+			cnt_vz_sec=0L;
+			cnt_vz_sec_=(4000L*(signed long)snmp_command_parametr);
+			vz_mem_hndl(1);
+			}
+		else snmp_command_parametr=COMMAND_FAIL;
+		}
+	
+	else snmp_command_parametr=WRONG_PARAMETER;
+	}
+}
+
+//-----------------------------------------------
+void snmp_ke_start (int mode)
+{
+if(mode==MIB_WRITE)
+	{
+	if(snmp_command_parametr==0) 
+		{
+		if(ke_start()==0)snmp_command=COMMAND_OK;
+		else snmp_command=COMMAND_FAIL;
+		}
+	
+	else snmp_command_parametr=WRONG_PARAMETER;
+	}
+}
+
+//-----------------------------------------------
+void snmp_spc_stop (int mode)
+{
+if(mode==MIB_WRITE)
+	{
+	spc_stat=spc_OFF;
+	snmp_command=COMMAND_OK;
 	}
 }
 
@@ -530,7 +632,7 @@ if(mode==MIB_WRITE)
 					}
 				else
  					{
-					snmp_command=COMAND_FAIL;	
+					snmp_command=COMMAND_FAIL;	
  					}
 				}
 			else 
@@ -548,7 +650,7 @@ if(mode==MIB_WRITE)
 				}
 			else
 				{
-				snmp_command=COMAND_FAIL;	
+				snmp_command=COMMAND_FAIL;	
 				}
 			break;
 			}

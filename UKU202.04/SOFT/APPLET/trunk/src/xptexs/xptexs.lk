@@ -1,0 +1,4 @@
+  root main setpar demo tools snmp  websetup  		 
+xptexs.exe /n						
+xptexs.map /s 						
+serflex std  xportex web_fsm webM tcpip snmpM kernMAC romlib stubs /n 							
