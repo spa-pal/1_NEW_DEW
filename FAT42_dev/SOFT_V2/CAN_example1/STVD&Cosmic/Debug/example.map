@@ -1,0 +1,146 @@
+
+Map of Debug\example.sm8 from link file Debug\example.lkf - Sun Dec 09 00:08:56 2012
+
+
+                               --------
+                               Segments
+                               --------
+
+start 00008080 end 00008089 length     9 segment .const
+start 0000808c end 00008264 length   472 segment .text
+start 00004000 end 00004000 length     0 segment .eeprom
+start 00000000 end 00000000 length     0 segment .bsct
+start 00000000 end 0000001b length    27 segment .ubsct
+start 0000001b end 0000001b length     0 segment .bit
+start 0000001b end 0000001b length     0 segment .share
+start 00000100 end 00000100 length     0 segment .data
+start 00000100 end 00000100 length     0 segment .bss
+start 00000000 end 00000283 length   643 segment .info.
+start 00000000 end 00000371 length   881 segment .debug
+start 00008000 end 00008080 length   128 segment .const
+start 00008089 end 0000808c length     3 segment .init
+
+
+                               -------
+                               Modules
+                               -------
+
+C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8:
+start 0000808c end 000080d7 length    75 section .text
+start 00000100 end 00000100 length     0 section .bss
+start 00000000 end 00000000 length     0 section .ubsct
+start 00000000 end 0000002f length    47 section .info.
+
+Debug\main.o:
+start 000080d7 end 00008228 length   337 section .text
+start 00000000 end 00000011 length    17 section .ubsct
+start 00000000 end 00000213 length   531 section .debug
+start 0000002f end 000000b1 length   130 section .info.
+start 00008080 end 00008089 length     9 section .const
+
+(C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)lgsbc.o:
+start 00008228 end 0000823e length    22 section .text
+start 000000b1 end 000000e0 length    47 section .info.
+
+(C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)lrzmp.o:
+start 0000823e end 00008251 length    19 section .text
+start 000000e0 end 0000010f length    47 section .info.
+
+(C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)lreg.o:
+start 00000011 end 00000015 length     4 section .ubsct
+start 0000010f end 0000013d length    46 section .info.
+
+(C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)ltor.o:
+start 00008251 end 00008263 length    18 section .text
+start 0000013d end 0000016b length    46 section .info.
+
+(C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)xreg.o:
+start 00000015 end 00000018 length     3 section .ubsct
+start 0000016b end 00000199 length    46 section .info.
+
+(C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)yreg.o:
+start 00000018 end 0000001b length     3 section .ubsct
+start 00000199 end 000001c7 length    46 section .info.
+
+Debug\stm8s_it.o:
+start 00008263 end 00008264 length     1 section .text
+start 00000213 end 00000371 length   350 section .debug
+start 000001c7 end 0000024d length   134 section .info.
+start 00008000 end 00008080 length   128 section .const
+
+
+                             -----------
+                             Stack usage
+                             -----------
+
+Debug\main.o:
+_delay_loop                 8   (6)
+_init_CAN                   2   (2)
+_main                  >   13   (5)
+
+Debug\stm8s_it.o:
+f_NonHandledInterrupt  >    5   (5)
+
+Stack size: 18
+
+
+                              ---------
+                              Call tree
+                              ---------
+   1 > __stext: (0)
+
+   2 > _main: (5)
+   3      + _delay_loop: (6)
+   4      + _init_CAN: (2)
+       
+   5 > f_NonHandledInterrupt: (5)
+
+   6   _delay_loop --> 3
+
+   7   _init_CAN --> 4
+
+
+
+                               -------
+                               Symbols
+                               -------
+
+_MY_MESS                00008080   defined in Debug\main.o section .const
+__endmem                000013ff   defined in command file
+                                   *** not used ***
+__endzp                 0000001b   defined in command file section .ubsct
+                                   used in C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8
+__idesc__               00008089   defined in linker section .init
+                                   used in C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8
+__memory                00000100   defined in command file section .bss
+                                   used in C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8
+__stack                 000017ff   defined in command file
+                                   used in C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8
+__startmem              00000100   defined in command file section .bss
+                                   *** not used ***
+__stext                 0000808c   defined in C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8 section .text
+                                   used in Debug\stm8s_it.o
+__vectab                00008000   defined in Debug\stm8s_it.o section .const
+_byte_counter           00000001   defined in Debug\main.o section .ubsct
+_delay_loop             000080d7   defined in Debug\main.o section .text
+_exit                   000080d5   defined in C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8 section .text
+_id_offset              00000010   defined in Debug\main.o section .ubsct
+_init_CAN               000080ed   defined in Debug\main.o section .text
+_leds                   00000000   defined in Debug\main.o section .ubsct
+_main                   00008134   defined in Debug\main.o section .text
+                                   used in C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8
+_mess                   00000002   defined in Debug\main.o section .ubsct
+c_lgsbc                 00008228   defined in (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)lgsbc.o section .text
+                                   used in Debug\main.o
+c_lreg                  00000011   defined in (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)lreg.o section .ubsct
+                                   used in (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)lrzmp.o
+                                           (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)ltor.o
+c_lrzmp                 0000823e   defined in (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)lrzmp.o section .text
+                                   used in Debug\main.o
+c_ltor                  00008251   defined in (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)ltor.o section .text
+                                   used in Debug\main.o
+c_x                     00000015   defined in (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)xreg.o section .ubsct
+                                   used in C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8
+c_y                     00000018   defined in (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)yreg.o section .ubsct
+                                   used in C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8
+f_NonHandledInterrupt   00008263   defined in Debug\stm8s_it.o section .text

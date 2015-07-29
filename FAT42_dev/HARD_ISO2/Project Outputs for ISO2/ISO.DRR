@@ -1,0 +1,18 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: ISO.PcbDoc   01.10.2014  11:36:25
+---------------------------------------------------------------------------
+
+
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII File : NCDrillOutput.TXT
+EIA File   : NCDrillOutput.DRL
+
+Tool         Hole Size          Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        0.8mm (31.496mil)        3                68.59 mm (2.70 Inch)
+T2        0.9mm (35.433mil)        8                86.30 mm (3.40 Inch)
+---------------------------------------------------------------------------
+Totals                             11               154.90 mm (6.10 Inch)
+
+Total Processing Time : 0:00:06

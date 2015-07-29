@@ -222,7 +222,7 @@ CAN_RFR_FOVR	stm8s.h	2144;"	macro
 CAN_RFR_FULL	stm8s.h	2143;"	macro
 CAN_RFR_RESET_VALUE	stm8s.h	2274;"	macro
 CAN_RFR_RFOM	stm8s.h	2145;"	macro
-CAN_RX_Interrupt	main.c	512;"	function	signature:(void)
+CAN_RX_Interrupt	main.c	596;"	function	signature:(void)
 CAN_RX_Interrupt	stm8_interrupt_vector.c	22;"	prototype	file:	signature:(void)
 CAN_TECR_RESET_VALUE	stm8s.h	2281;"	macro
 CAN_TECR_TEC0	stm8s.h	2202;"	macro
@@ -249,7 +249,7 @@ CAN_TSR_RQCP2	stm8s.h	2128;"	macro
 CAN_TSR_TXOK0	stm8s.h	2130;"	macro
 CAN_TSR_TXOK1	stm8s.h	2131;"	macro
 CAN_TSR_TXOK2	stm8s.h	2132;"	macro
-CAN_TX_Interrupt	main.c	542;"	function	signature:(void)
+CAN_TX_Interrupt	main.c	626;"	function	signature:(void)
 CAN_TX_Interrupt	stm8_interrupt_vector.c	23;"	prototype	file:	signature:(void)
 CAN_TypeDef	stm8s.h	2102;"	typedef	typeref:struct:__anon2
 CCER1	stm8s.h	479;"	member	struct:TIM1_struct
@@ -1216,7 +1216,7 @@ TIM4_PSCR_RESET_VALUE	stm8s.h	938;"	macro
 TIM4_SR1_RESET_VALUE	stm8s.h	935;"	macro
 TIM4_SR1_UIF	stm8s.h	957;"	macro
 TIM4_TypeDef	stm8s.h	927;"	typedef	typeref:struct:TIM4_struct
-TIM4_UPD_Interrupt	main.c	452;"	function	signature:(void)
+TIM4_UPD_Interrupt	main.c	536;"	function	signature:(void)
 TIM4_UPD_Interrupt	stm8_interrupt_vector.c	21;"	prototype	file:	signature:(void)
 TIM4_struct	stm8s.h	913;"	struct
 TIM5	stm8s.h	2468;"	macro
@@ -1341,9 +1341,9 @@ U16_MAX	stm8s_type.h	90;"	macro
 U32_MAX	stm8s_type.h	93;"	macro
 U8_MAX	stm8s_type.h	87;"	macro
 UART1	stm8s.h	2442;"	macro
-UART1RxInterrupt	main.c	584;"	function	signature:(void)
+UART1RxInterrupt	main.c	668;"	function	signature:(void)
 UART1RxInterrupt	stm8_interrupt_vector.c	25;"	prototype	file:	signature:(void)
-UART1TxInterrupt	main.c	554;"	function	signature:(void)
+UART1TxInterrupt	main.c	638;"	function	signature:(void)
 UART1TxInterrupt	stm8_interrupt_vector.c	24;"	prototype	file:	signature:(void)
 UART1_BRR1_DIVM	stm8s.h	1689;"	macro
 UART1_BRR1_RESET_VALUE	stm8s.h	1662;"	macro
@@ -1578,10 +1578,10 @@ c_c_l_v	main.c	99;"	variable
 can_buff_rd_ptr	main.c	35;"	variable
 can_buff_wr_ptr	main.c	34;"	variable
 can_error_cnt	main.c	39;"	variable
-can_in_an	main.c	392;"	function	signature:(void)
+can_in_an	main.c	476;"	function	signature:(void)
 can_out_buff	main.c	33;"	variable
-can_transmit	main.c	335;"	function	signature:(unsigned short id_st,char data0,char data1,char data2,char data3,char data4,char data5,char data6,char data7)
-can_tx_hndl	main.c	357;"	function	signature:(void)
+can_transmit	main.c	419;"	function	signature:(unsigned short id_st,char data0,char data1,char data2,char data3,char data4,char data5,char data6,char data7)
+can_tx_hndl	main.c	441;"	function	signature:(void)
 ceil	c:\program files\cosmic\cxstm8_32k\hstm8\math.h	13;"	prototype	signature:(double x)
 ch_curr	main.c	94;"	variable
 cos	c:\program files\cosmic\cxstm8_32k\hstm8\math.h	14;"	prototype	signature:(double x)
@@ -1603,7 +1603,7 @@ gran	main.c	116;"	function	signature:(signed short *adr, signed short min, signe
 gran_char	main.c	109;"	function	signature:(signed char *adr, signed char min, signed char max)
 halt	stm8s.h	2497;"	macro
 halt	stm8s.h	2506;"	macro
-init_CAN	main.c	283;"	function	signature:(void)
+init_CAN	main.c	367;"	function	signature:(void)
 interrupt_handler	stm8_interrupt_vector.c	9;"	member	struct:interrupt_vector	file:
 interrupt_handler_t	stm8_interrupt_vector.c	5;"	typedef	file:
 interrupt_instruction	stm8_interrupt_vector.c	8;"	member	struct:interrupt_vector	file:
@@ -1629,7 +1629,7 @@ link	main.c	54;"	variable
 link_cnt	main.c	54;"	variable
 log	c:\program files\cosmic\cxstm8_32k\hstm8\math.h	22;"	prototype	signature:(double x)
 log10	c:\program files\cosmic\cxstm8_32k\hstm8\math.h	23;"	prototype	signature:(double x)
-main	main.c	629;"	function
+main	main.c	713;"	function
 max_cell_temp	main.c	91;"	variable
 max_cell_volt	main.c	89;"	variable
 memchr	c:\program files\cosmic\cxstm8_32k\hstm8\string.h	28;"	prototype	signature:(void *s, char c, unsigned int n)
@@ -1690,7 +1690,7 @@ t0_cnt1	main.c	7;"	variable
 t0_cnt2	main.c	7;"	variable
 t0_cnt3	main.c	7;"	variable
 t0_cnt4	main.c	7;"	variable
-t4_init	main.c	439;"	function	signature:(void)
+t4_init	main.c	523;"	function	signature:(void)
 tan	c:\program files\cosmic\cxstm8_32k\hstm8\math.h	29;"	prototype	signature:(double x)
 tanh	c:\program files\cosmic\cxstm8_32k\hstm8\math.h	30;"	prototype	signature:(double x)
 tolower	c:\program files\cosmic\cxstm8_32k\hstm8\ctype.h	21;"	prototype	signature:(char c)

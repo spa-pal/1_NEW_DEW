@@ -1,0 +1,26 @@
+Field=Comment,String,Comment,100|Field=Designator,String,Designator,372|Field=Footprint,String,Footprint,100|Field=Quantity,String,Quantity,100|ReportField=ProjectFileName,FAT42V4.PrjPCB|ReportField=ProjectFullPath,E:\Users\Pal\DEVICES\FAT42_dev\HARD4\FAT42V4.PrjPCB|ReportField=Title,Bill of Materials For Project [FAT42V4.PrjPCB]|ReportField=TotalQuantity,72|ReportField=ReportTime,14:34:51|ReportField=ReportDate,21.11.2014|ReportField=ReportDateTime,21.11.2014 14:34:51|ReportField=OutputName,Bill of Materials|ReportField=OutputType,BOM_PartType|ReportField=GeneratorName,ReportComponents|ReportField=GeneratorDescription,Component Reports|ReportField=VariantName,None|ReportField=DataSourceFileName,FAT42V4.PrjPCB|ReportField=DataSourceFullPath,E:\Users\Pal\DEVICES\FAT42_dev\HARD4\FAT42V4.PrjPCB
+|1, 2, 3, J1, J2, JP2|HDR1X5_uart, PIN2R, jmp|6
+10pF|C1, C2|_1206|2
+1.0|C3, C4, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15, C16, C17|_1206|14
+22.0|C5, C18, C20, C21, C22|_1206|5
+22.0x50|C19|el3|1
+100n|C23|_1206|1
+0.1|C24|_1206|1
+C5v6|D1, D2, D3|_1206d|3
+TL431ACD|D4|SO-G8|1
+PLSR19|JP1|HDR1X19|1
+PLS2|JP3|HDR1X2|1
+BC847|Q1|SO-G3|1
+JVR07N|R1, R2|JVR07N|2
+60R|R3, R25|_1206|2
+1K0|R4, R5, R26, R27, R28|_1206|5
+10K|R6, R7, R10, R12, R14, R29|_1206|6
+39K|R8, R16, R17, R18, R19|_1206|5
+2K0|R9, R20, R21, R22, R23, R24|_1206|6
+100R|R11, R13, R15|_1206|3
+STM8S208S6|U1|QFP10X10-G44/G10N|1
+TJA1050|U2|SO-G8/D5|1
+ISO7231|U3|SO-G16/D10.4|1
+TPS3823-50|U4|SO-G5/P.95|1
+SBT01L-05|U5|SBT01DET01|1
+10MHz|Y1|QWARZ1|1

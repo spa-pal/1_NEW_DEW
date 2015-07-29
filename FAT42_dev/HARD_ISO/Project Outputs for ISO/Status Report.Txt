@@ -1,0 +1,13 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [ISO.PrjPCB]
+   Generated File[ISO.TXT]
+   Generated File[ISO.DRL]
+   Generated File[ISO.LDP]
+   Generated File[ISO.DRR]
+
+
+Files Generated   : 4
+Documents Printed : 0
+
+Finished Output Generation At 15:41:33 On 11.09.2014

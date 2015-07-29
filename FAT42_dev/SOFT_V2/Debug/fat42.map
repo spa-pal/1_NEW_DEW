@@ -1,0 +1,128 @@
+
+Map of Debug\fat42.sm8 from link file Debug\fat42.lkf - Wed Sep 19 18:21:53 2012
+
+
+                               --------
+                               Segments
+                               --------
+
+start 00008080 end 00008080 length     0 segment .const
+start 00008093 end 000081a0 length   269 segment .text
+start 00004000 end 00004000 length     0 segment .eeprom
+start 00000000 end 00000005 length     5 segment .bsct, initialized
+start 0000808d end 00008092 length     5 segment .bsct, from
+start 00000005 end 0000000b length     6 segment .ubsct
+start 00000b:0 end 00000b:5 length     5 segment .bit, initialized
+start 00008092 end 00008093 length     1 segment .bit, from
+start 0000000c end 0000000c length     0 segment .share
+start 00000100 end 00000100 length     0 segment .data
+start 00000100 end 00000100 length     0 segment .bss
+start 00000000 end 000001ac length   428 segment .info.
+start 00000000 end 000003c4 length   964 segment .debug
+start 00008000 end 00008080 length   128 segment .const
+start 00008080 end 0000808d length    13 segment .init
+
+
+                               -------
+                               Modules
+                               -------
+
+C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8:
+start 00008093 end 000080de length    75 section .text
+start 00000100 end 00000100 length     0 section .bss
+start 00000005 end 00000005 length     0 section .ubsct
+start 00000000 end 0000002f length    47 section .info.
+
+Debug\main.o:
+start 000080de end 0000819f length   193 section .text
+start 00000000 end 00000005 length     5 section .bsct
+start 00000000 end 00000259 length   601 section .debug
+start 0000002f end 0000009d length   110 section .info.
+start 00000b:0 end 00000b:5 length     5 section .bit
+
+(C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)xreg.o:
+start 00000005 end 00000008 length     3 section .ubsct
+start 0000009d end 000000cb length    46 section .info.
+
+(C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)yreg.o:
+start 00000008 end 0000000b length     3 section .ubsct
+start 000000cb end 000000f9 length    46 section .info.
+
+Debug\stm8_interrupt_vector.o:
+start 0000819f end 000081a0 length     1 section .text
+start 00000259 end 000003c4 length   363 section .debug
+start 000000f9 end 00000178 length   127 section .info.
+start 00008000 end 00008080 length   128 section .const
+
+
+                             -----------
+                             Stack usage
+                             -----------
+
+Debug\main.o:
+_main                  >    4   (2)
+_t4_init                    2   (2)
+f_TIM4_UPD_Interrupt   >    5   (5)
+
+Debug\stm8_interrupt_vector.o:
+f_NonHandledInterrupt  >    5   (5)
+
+Stack size: 9
+
+
+                              ---------
+                              Call tree
+                              ---------
+   1 > __stext: (0)
+
+   2 > _main: (2)
+   3      + _t4_init: (2)
+       
+   4 > f_NonHandledInterrupt: (5)
+
+   5 > f_TIM4_UPD_Interrupt: (5)
+
+   6   _t4_init --> 3
+
+
+
+                               -------
+                               Symbols
+                               -------
+
+__endmem                000013ff   defined in command file
+                                   *** not used ***
+__endzp                 0000000b   defined in command file section .ubsct
+                                   used in C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8
+__idesc__               00008080   defined in linker section .init
+                                   used in C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8
+__memory                00000100   defined in command file section .bss
+                                   used in C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8
+__stack                 000017ff   defined in command file
+                                   used in C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8
+__startmem              00000100   defined in command file section .bss
+                                   *** not used ***
+__stext                 00008093   defined in C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8 section .text
+                                   used in Debug\stm8_interrupt_vector.o
+__vectab                00008000   defined in Debug\stm8_interrupt_vector.o section .const
+_b100Hz                 00000b:4   defined in Debug\main.o section .bit, initialized
+_b10Hz                  00000b:3   defined in Debug\main.o section .bit, initialized
+_b1Hz                   00000b:0   defined in Debug\main.o section .bit, initialized
+_b2Hz                   00000b:1   defined in Debug\main.o section .bit, initialized
+_b5Hz                   00000b:2   defined in Debug\main.o section .bit, initialized
+_exit                   000080dc   defined in C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8 section .text
+_main                   0000814e   defined in Debug\main.o section .text
+                                   used in C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8
+_t0_cnt0                00000000   defined in Debug\main.o section .bsct, initialized
+_t0_cnt1                00000001   defined in Debug\main.o section .bsct, initialized
+_t0_cnt2                00000002   defined in Debug\main.o section .bsct, initialized
+_t0_cnt3                00000003   defined in Debug\main.o section .bsct, initialized
+_t0_cnt4                00000004   defined in Debug\main.o section .bsct, initialized
+_t4_init                000080de   defined in Debug\main.o section .text
+c_x                     00000005   defined in (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)xreg.o section .ubsct
+                                   used in C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8
+c_y                     00000008   defined in (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)yreg.o section .ubsct
+                                   used in C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8
+f_NonHandledInterrupt   0000819f   defined in Debug\stm8_interrupt_vector.o section .text
+f_TIM4_UPD_Interrupt    000080ef   defined in Debug\main.o section .text
+                                   used in Debug\stm8_interrupt_vector.o

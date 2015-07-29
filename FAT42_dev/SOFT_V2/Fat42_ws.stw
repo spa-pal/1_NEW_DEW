@@ -1,0 +1,24 @@
+;	STMicroelectronics Workspace file
+
+[Version]
+Keyword=ST7Workspace-V0.7
+
+[Project0]
+Filename=can_example1\stvd&cosmic\example.stp
+Dependencies=
+
+[Project1]
+Filename=1.stp
+Dependencies=
+
+[Project2]
+Filename=..\..\fat32\soft\fat32_5\fat32_5.stp
+Dependencies=
+
+[Project3]
+Filename=fat42_v2.stp
+Dependencies=
+[Options]
+ActiveProject=fat42_1
+ActiveConfig=Debug
+AddSortedElements=1

@@ -262,6 +262,90 @@ void rx485_in_an(void)
 		c_c_l_v[0]=str2int(&rx_buffer[45],4);
 		s_o_h[0]=str2int(&rx_buffer[49],2);
 		b_p_ser_num[0]=str2int(&rx_buffer[51],2);
+
+		max_cell_volt[1]=str2int(&rx_buffer[13+40],4);
+		min_cell_volt[1]=str2int(&rx_buffer[17+40],4);
+		max_cell_temp[1]=str2int(&rx_buffer[21+40],2);
+		min_cell_temp[1]=str2int(&rx_buffer[23+40],2);
+		tot_bat_volt[1]=str2int(&rx_buffer[25+40],4);
+		ch_curr[1]=str2int(&rx_buffer[29+40],4);
+		dsch_curr[1]=str2int(&rx_buffer[33+40],4);
+		s_o_c[1]=str2int(&rx_buffer[37+40],2);
+		rat_cap[1]=str2int(&rx_buffer[39+40],4);
+		r_b_t[1]=str2int(&rx_buffer[43+40],2);
+		c_c_l_v[1]=str2int(&rx_buffer[45+40],4);
+		s_o_h[1]=str2int(&rx_buffer[49+40],2);
+		b_p_ser_num[1]=str2int(&rx_buffer[51+40],2);
+		
+		max_cell_volt[2]=str2int(&rx_buffer[13+80],4);
+		min_cell_volt[2]=str2int(&rx_buffer[17+80],4);
+		max_cell_temp[2]=str2int(&rx_buffer[21+80],2);
+		min_cell_temp[2]=str2int(&rx_buffer[23+80],2);
+		tot_bat_volt[2]=str2int(&rx_buffer[25+80],4);
+		ch_curr[2]=str2int(&rx_buffer[29+80],4);
+		dsch_curr[2]=str2int(&rx_buffer[33+80],4);
+		s_o_c[2]=str2int(&rx_buffer[37+80],2);
+		rat_cap[2]=str2int(&rx_buffer[39+80],4);
+		r_b_t[2]=str2int(&rx_buffer[43+80],2);
+		c_c_l_v[2]=str2int(&rx_buffer[45+80],4);
+		s_o_h[2]=str2int(&rx_buffer[49+80],2);
+		b_p_ser_num[2]=str2int(&rx_buffer[51+80],2);		
+
+		max_cell_volt[3]=str2int(&rx_buffer[13+120],4);
+		min_cell_volt[3]=str2int(&rx_buffer[17+120],4);
+		max_cell_temp[3]=str2int(&rx_buffer[21+120],2);
+		min_cell_temp[3]=str2int(&rx_buffer[23+120],2);
+		tot_bat_volt[3]=str2int(&rx_buffer[25+120],4);
+		ch_curr[3]=str2int(&rx_buffer[29+120],4);
+		dsch_curr[3]=str2int(&rx_buffer[33+120],4);
+		s_o_c[3]=str2int(&rx_buffer[37+120],2);
+		rat_cap[3]=str2int(&rx_buffer[39+120],4);
+		r_b_t[3]=str2int(&rx_buffer[43+120],2);
+		c_c_l_v[3]=str2int(&rx_buffer[45+120],4);
+		s_o_h[3]=str2int(&rx_buffer[49+120],2);
+		b_p_ser_num[3]=str2int(&rx_buffer[51+120],2);
+
+		max_cell_volt[4]=str2int(&rx_buffer[13+160],4);
+		min_cell_volt[4]=str2int(&rx_buffer[17+160],4);
+		max_cell_temp[4]=str2int(&rx_buffer[21+160],2);
+		min_cell_temp[4]=str2int(&rx_buffer[23+160],2);
+		tot_bat_volt[4]=str2int(&rx_buffer[25+160],4);
+		ch_curr[4]=str2int(&rx_buffer[29+160],4);
+		dsch_curr[4]=str2int(&rx_buffer[33+160],4);
+		s_o_c[4]=str2int(&rx_buffer[37+160],2);
+		rat_cap[4]=str2int(&rx_buffer[39+160],4);
+		r_b_t[4]=str2int(&rx_buffer[43+160],2);
+		c_c_l_v[4]=str2int(&rx_buffer[45+160],4);
+		s_o_h[4]=str2int(&rx_buffer[49+160],2);
+		b_p_ser_num[4]=str2int(&rx_buffer[51+160],2);
+
+		max_cell_volt[5]=str2int(&rx_buffer[13+200],4);
+		min_cell_volt[5]=str2int(&rx_buffer[17+200],4);
+		max_cell_temp[5]=str2int(&rx_buffer[21+200],2);
+		min_cell_temp[5]=str2int(&rx_buffer[23+200],2);
+		tot_bat_volt[5]=str2int(&rx_buffer[25+200],4);
+		ch_curr[5]=str2int(&rx_buffer[29+200],4);
+		dsch_curr[5]=str2int(&rx_buffer[33+200],4);
+		s_o_c[5]=str2int(&rx_buffer[37+200],2);
+		rat_cap[5]=str2int(&rx_buffer[39+200],4);
+		r_b_t[5]=str2int(&rx_buffer[43+200],2);
+		c_c_l_v[5]=str2int(&rx_buffer[45+200],4);
+		s_o_h[5]=str2int(&rx_buffer[49+200],2);
+		b_p_ser_num[5]=str2int(&rx_buffer[51+200],2);
+
+		max_cell_volt[6]=str2int(&rx_buffer[13+240],4);
+		min_cell_volt[6]=str2int(&rx_buffer[17+240],4);
+		max_cell_temp[6]=str2int(&rx_buffer[21+240],2);
+		min_cell_temp[6]=str2int(&rx_buffer[23+240],2);
+		tot_bat_volt[6]=str2int(&rx_buffer[25+240],4);
+		ch_curr[6]=str2int(&rx_buffer[29+240],4);
+		dsch_curr[6]=str2int(&rx_buffer[33+240],4);
+		s_o_c[6]=str2int(&rx_buffer[37+240],2);
+		rat_cap[6]=str2int(&rx_buffer[39+240],4);
+		r_b_t[6]=str2int(&rx_buffer[43+240],2);
+		c_c_l_v[6]=str2int(&rx_buffer[45+240],4);
+		s_o_h[6]=str2int(&rx_buffer[49+240],2);
+		b_p_ser_num[6]=str2int(&rx_buffer[51+240],2);
 		
 		rs485_cnt=0;
 		bRS485ERR=0;
@@ -271,7 +355,24 @@ void rx485_in_an(void)
 	{
 		flags_byte0[0]=str2int(&rx_buffer[49],2);
 		flags_byte1[0]++;//=str2int(&rx_buffer[51],2);
+
+		flags_byte0[1]=str2int(&rx_buffer[49+34],2);
+		flags_byte1[1]++;//=str2int(&rx_buffer[51],2);
 		
+		flags_byte0[2]=str2int(&rx_buffer[49+68],2);
+		flags_byte1[2]++;//=str2int(&rx_buffer[51],2);
+
+		flags_byte0[3]=str2int(&rx_buffer[49+102],2);
+		flags_byte1[3]++;//=str2int(&rx_buffer[51],2);
+		
+		flags_byte0[4]=str2int(&rx_buffer[49+136],2);
+		flags_byte1[4]++;//=str2int(&rx_buffer[51],2);
+
+		flags_byte0[5]=str2int(&rx_buffer[49+170],2);
+		flags_byte1[5]++;//=str2int(&rx_buffer[51],2);
+		
+		flags_byte0[6]=str2int(&rx_buffer[49+204],2);
+		flags_byte1[6]++;//=str2int(&rx_buffer[51],2);		
 		rs485_cnt=0;
 		bRS485ERR=0;
 
