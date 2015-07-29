@@ -1,0 +1,258 @@
+
+IBEP-3U DEFINITIONS ::= BEGIN
+
+IMPORTS
+	enterprises
+		FROM RFC1155-SMI
+	OBJECT-TYPE
+		FROM RFC-1212
+	DisplayString
+		FROM RFC-1213;
+
+
+-- Системы ПромАвтоматики
+
+entSPA-SIB           OBJECT IDENTIFIER ::= { enterprises 33183 }
+lbp                  OBJECT IDENTIFIER ::= { entSPA-SIB 40 }
+displayDeviceInfo    OBJECT IDENTIFIER ::= { lbp 1 }
+dipslayOutParameters  OBJECT IDENTIFIER ::= { lbp 2 }
+settedParameters     OBJECT IDENTIFIER ::= { lbp 5 }
+wrkParameters     OBJECT IDENTIFIER ::= { lbp 6 }
+displayReversSettings       OBJECT IDENTIFIER ::= { lbp 7 }
+displayFactorySet    OBJECT IDENTIFIER ::= { lbp 8 }
+commands             OBJECT IDENTIFIER ::= { lbp 9 }
+
+displayDeviceSerial  OBJECT-TYPE
+	SYNTAX     INTEGER (0..65535)
+	ACCESS     read-only
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displayDeviceInfo 1 }
+
+displayDeviceLocation  OBJECT-TYPE
+	SYNTAX     DisplayString (SIZE(69))
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displayDeviceInfo 2 }
+
+displayOutVoltage  OBJECT-TYPE
+	SYNTAX     INTEGER (0..65535)
+	ACCESS     read-only
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { dipslayOutParameters 1 }
+
+displayOutCurrent  OBJECT-TYPE
+	SYNTAX     INTEGER (0..65535)
+	ACCESS     read-only
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { dipslayOutParameters 2 }
+
+displayPSUTable  OBJECT-TYPE
+	SYNTAX SEQUENCE OF DisplayPSUEntry
+	ACCESS     not-accessible
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { lbp 3 }
+
+displayPSUEntry  OBJECT-TYPE
+	SYNTAX 	DisplayPSUEntry
+	ACCESS     not-accessible
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	INDEX { displayPSUNumber }
+	::= { displayPSUTable 1 }
+
+DisplayPSUEntry ::= SEQUENCE {
+	displayPSUNumber
+		INTEGER,
+	displayPSUVoltage
+		INTEGER,
+	displayPSUCurrent
+		INTEGER,
+	displayPSUTemperature
+		INTEGER,
+	displayPSUStatus
+		INTEGER
+}
+
+displayPSUNumber  OBJECT-TYPE
+	SYNTAX     INTEGER
+	ACCESS     read-only
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displayPSUEntry 1 }
+
+displayPSUVoltage  OBJECT-TYPE
+	SYNTAX     INTEGER
+	ACCESS     read-only
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displayPSUEntry 2 }
+
+displayPSUCurrent  OBJECT-TYPE
+	SYNTAX     INTEGER
+	ACCESS     read-only
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displayPSUEntry 3 }
+
+displayPSUTemperature  OBJECT-TYPE
+	SYNTAX     INTEGER
+	ACCESS     read-only
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displayPSUEntry 4 }
+
+displayPSUStatus  OBJECT-TYPE
+	SYNTAX     INTEGER
+	ACCESS     read-only
+	STATUS     mandatory
+	DESCRIPTION 
+		""
+	::= { displayPSUEntry 5 }
+
+displayNumOfPsu  OBJECT-TYPE
+	SYNTAX     INTEGER (0..65535)
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		"kollichestvo vipramiteley v izdelii"
+	::= { settedParameters 1 }
+
+displayMaxTimeOfProcess  OBJECT-TYPE
+	SYNTAX     INTEGER (0..65535)
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		"maksimalnoe vremya processa v minutax"
+	::= { settedParameters 2 }
+
+displayTimeVisualisation  OBJECT-TYPE
+	SYNTAX     INTEGER (0..65535)
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		"otobrajenie vremeni processa 1 - pryamoe, 0 - obratnoe"
+	::= { settedParameters 3 }
+
+displayPultTimeMode  OBJECT-TYPE
+	SYNTAX     INTEGER (0..65535)
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		"otobrajenie vremeni na pulte 1-hh:mm, 0-mm:cc"
+	::= { settedParameters 4 }
+
+displayLoadCurrentMeasureMode  OBJECT-TYPE
+	SYNTAX     INTEGER (0..65535)
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		"sposob izmereniya toka nagruzki: 1-schunt, 0-summarniy njr vipryamiteley"
+	::= { settedParameters 5 }
+
+displayMainMenuMode  OBJECT-TYPE
+	SYNTAX     INTEGER (0..65535)
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		"rejim glavnogo menyu: 0-istochnik toka, 1-istochnik napryajenia, 2-istochnik toka/istochnik napryajenia, 3-istochnik napryajenia/istochnik toka"
+	::= { settedParameters 6 }
+
+displayRestartEnabled  OBJECT-TYPE
+	SYNTAX     INTEGER (0..65535)
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		" "
+	::= { settedParameters 7 }
+
+displayModbasAdress  OBJECT-TYPE
+	SYNTAX     INTEGER (0..65535)
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		" "
+	::= { settedParameters 8 }
+
+displayModbasBitrate  OBJECT-TYPE
+	SYNTAX     INTEGER (0..65535)
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		" "
+	::= { settedParameters 9 }
+	
+displayStabilityVoltage  OBJECT-TYPE
+	SYNTAX     INTEGER (0..65535)
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		"naprjagenie stabilizacii dlja rejima stabilizacii napryajenia"
+	::= { wrkParameters 1 }	
+
+displayStabilityCurrent  OBJECT-TYPE
+	SYNTAX     INTEGER (0..65535)
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		"tok stabilizacii dlja rejima stabilizacii toka"
+	::= { wrkParameters 2 }	
+
+displayMaxVoltage  OBJECT-TYPE
+	SYNTAX     INTEGER (0..65535)
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		"maximalnoe naprjagenie dlja rejima stabilizacii toka"
+	::= { wrkParameters 3 }	
+
+displayMaxCurrent  OBJECT-TYPE
+	SYNTAX     INTEGER (0..65535)
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		"maximalniy tok dlja rejima stabilizacii napryajenia"
+	::= { wrkParameters 4 }	
+
+displayVoltageStabilityProcessDuration  OBJECT-TYPE
+	SYNTAX     INTEGER (0..65535)
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		"dlitel'nost' processa dlja rejima stabilizacii napryajenia"
+	::= { wrkParameters 5 }	
+
+displayCurrentStabilityProcessDuration  OBJECT-TYPE
+	SYNTAX     INTEGER (0..65535)
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		"dlitel'nost' processa dlja rejima stabilizacii toka"
+	::= { wrkParameters 6 }	
+
+
+reversState     OBJECT-TYPE
+	SYNTAX     INTEGER (0..65535)
+	ACCESS     read-write
+	STATUS     mandatory
+	DESCRIPTION 
+		"положение переключателЯ реверса"
+	::= { displayReversSettings 1 }		
+	
+END
+
+-- This MIB was created using NuDesign Team's Visual MIBuilder (Ver 4.7).

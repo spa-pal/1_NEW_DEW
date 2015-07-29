@@ -1,0 +1,54 @@
+;#<FEEDBACK># ARM Linker, RVCT4.0 [Build 524]: Last Updated: Wed Mar 10 11:23:48 2010
+;VERSION 0.2
+;FILE 25lc640.o
+lc640_read <= USED 0
+lc640_read_str <= USED 0
+;FILE ad7705.o
+;FILE avar_hndl.o
+;FILE beep.o
+;FILE common_func.o
+char2lcdbyx <= USED 0
+char2lcdh <= USED 0
+int2lcd_m <= USED 0
+int2lcd_mm <= USED 0
+int2lcdhyx <= USED 0
+long2lcd_mmm <= USED 0
+long2lcdyx_mmm <= USED 0
+;FILE control.o
+zar_superviser_drv <= USED 0
+zar_superviser_start <= USED 0
+;FILE full_can.o
+CRC1_out <= USED 0
+CRC2_out <= USED 0
+can1_init <= USED 0
+can_adr_hndl <= USED 0
+;FILE gran.o
+gran_long <= USED 0
+;FILE i2c.o
+;FILE lcd_agm1232_uku206.o
+delay <= USED 0
+lcd_off <= USED 0
+lcd_set_col <= USED 0
+ltstrobe <= USED 0
+status <= USED 0
+;FILE main.o
+timer0_interrupt <= USED 0
+;FILE memo.o
+;FILE mess.o
+;FILE pcf8563.o
+i2c_init_soft <= USED 0
+i2c_start_soft <= USED 0
+i2c_stop_soft <= USED 0
+pcf8563_read_bytes_soft <= USED 0
+;FILE ret.o
+ret_ind_hndl <= USED 0
+ret_ind_sec_hndl <= USED 0
+;FILE timer.o
+init_timer0 <= USED 0
+tc0 <= USED 0
+;FILE uart0.o
+getchar0 <= USED 0
+uart_out0 <= USED 0
+;FILE uart1.o
+getchar1 <= USED 0
+;FILE watchdog.o

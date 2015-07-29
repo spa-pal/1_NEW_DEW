@@ -1,0 +1,20 @@
+;	STMicroelectronics Workspace file
+
+[Version]
+Keyword=ST7Workspace-V0.7
+
+[Project0]
+Filename=gppr.stp
+Dependencies=
+
+[Project1]
+Filename=..\..\..\fat40_dev\soft\fat40.stp
+Dependencies=
+
+[Project2]
+Filename=..\..\..\fat32\soft\fat32_5\fat32_5.stp
+Dependencies=
+[Options]
+ActiveProject=gppr
+ActiveConfig=Debug
+AddSortedElements=1

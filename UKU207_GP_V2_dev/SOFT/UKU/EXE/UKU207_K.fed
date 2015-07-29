@@ -1,0 +1,51 @@
+;#<FEEDBACK># ARM Linker, 4.1 [Build 481]: Last Updated: Tue Apr 03 10:04:09 2012
+;VERSION 0.2
+;FILE 25lc640.o
+lc640_read <= USED 0
+lc640_read_str <= USED 0
+;FILE ad7705.o
+;FILE avar_hndl.o
+;FILE beep.o
+;FILE common_func.o
+char2lcdh <= USED 0
+int2lcd_m <= USED 0
+int2lcd_mm <= USED 0
+;FILE control.o
+;FILE full_can.o
+FullCAN_SetFilter_ <= USED 0
+;FILE gran.o
+gran_long <= USED 0
+;FILE graphic.o
+draw <= USED 0
+draw_ptr <= USED 0
+draw_rectangle <= USED 0
+graphic_print <= USED 0
+graphic_print_text <= USED 0
+plot <= USED 0
+;FILE i2c.o
+;FILE lcd_agm1232_uku206.o
+delay <= USED 0
+lcd_off <= USED 0
+ltstrobe <= USED 0
+status <= USED 0
+;FILE main.o
+timer0_interrupt <= USED 0
+;FILE memo.o
+;FILE mess.o
+;FILE pcf8563.o
+i2c_init_soft <= USED 0
+i2c_start_soft <= USED 0
+i2c_stop_soft <= USED 0
+pcf8563_read_bytes_soft <= USED 0
+;FILE ret.o
+ret_ind_hndl <= USED 0
+ret_ind_sec_hndl <= USED 0
+;FILE timer.o
+init_timer0 <= USED 0
+tc0 <= USED 0
+;FILE uart0.o
+getchar0 <= USED 0
+uart_out0 <= USED 0
+;FILE uart1.o
+getchar1 <= USED 0
+;FILE watchdog.o
