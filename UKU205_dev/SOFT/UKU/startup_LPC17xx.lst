@@ -409,8 +409,8 @@ ARM Macro Assembler    Page 7
               00000000 
               00000200 
               00000000 
-Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=..\..\st
-artup_LPC17xx.d -o..\..\startup_LPC17xx.o -I..\common\inc -IC:\Keil\ARM\INC\NXP
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\exe\st
+artup_LPC17xx.d -o.\exe\startup_LPC17xx.o -I..\common\inc -IC:\Keil\ARM\INC\NXP
 \LPC17xx -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\INC\NXP --list=startup_LPC17
 xx.lst startup_LPC17xx.s
 

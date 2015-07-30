@@ -1,0 +1,4 @@
+--cpu Cortex-M3 ".\exe\startup_lpc17xx.o" ".\exe\net_config_http.o" ".\exe\core_cm3.o" ".\exe\system_lpc17xx.o" ".\exe\main.o" ".\exe\control.o" ".\exe\avar.o" ".\exe\common_func.o" ".\exe\simbols.o" ".\exe\gran.o" ".\exe\graphic.o" ".\exe\ret.o" ".\exe\eeprom_map.o" ".\exe\memo.o" ".\exe\beep.o" ".\exe\25lc640.o" ".\exe\lcd_agm1232_uku203.o" ".\exe\uart2.o" ".\exe\uart0.o" "C:\Keil\ARM\RV31\LIB\TCP_CM3.lib" ".\exe\emac_lpc17xx.o" ".\exe\snmp_data_file.o" ".\exe\snmp_mib.o" --strict --scatter ".\exe\UKU205.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\UKU205.map" -o ".\exe\UKU205.axf"
