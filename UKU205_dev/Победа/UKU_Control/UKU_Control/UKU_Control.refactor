@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE refactor PUBLIC "-//Borland Software Corporation//Refactor 1.0//EN" "http://www.borland.com/devsupport/jbuilder/dtds/refactor_1_0.dtd">
+
+<refactor>
+  <rename-class id="7AP0XVZD4I6F6W47ITLFK8Z" creation-time="Thu Sep 13 00:41:58.109 NOVST 2007">
+    <old-class-name>uku_control.User_Packae</old-class-name>
+    <new-class-name>uku_control.User_Package</new-class-name>
+  </rename-class>
+  <rename-class id="7AP0FMYR8N6FF3KQETLFK8Z" creation-time="Sun Sep 16 14:43:39.015 NOVST 2007">
+    <old-class-name>uku_control.abstract_panel</old-class-name>
+    <new-class-name>uku_control.Abstract_spanel</new-class-name>
+  </rename-class>
+  <rename-field id="7AP0BRG5E9FF4CNF1TLFK8Z" creation-time="Sun Apr 20 16:02:41.500 NOVST 2008">
+    <declaring-class-name>uku_control.UKU_Data</declaring-class-name>
+    <old-field-name>externatl_temperature_array</old-field-name>
+    <declared-field-type>[Luku_control/Temperature_Value;</declared-field-type>
+    <new-field-name>external_temperature_array</new-field-name>
+  </rename-field>
+  <rename-class id="6AP00H7O4RHF404B4TLFK8Z" creation-time="Sun Jun 22 11:17:22.500 NOVST 2008">
+    <old-class-name>uku_control.Alarm_Event_class</old-class-name>
+    <new-class-name>uku_control.Alarm_Event</new-class-name>
+  </rename-class>
+  <rename-class id="7AP0MCS6J1IF1PVVATLFK8Z" creation-time="Sun Jun 29 18:00:39.031 NOVST 2008">
+    <old-class-name>uku_control.event_viewer</old-class-name>
+    <new-class-name>uku_control.event_viewer_1</new-class-name>
+  </rename-class>
+  <rename-class id="6AP0MCS6J1IF1PVVATLFK8Z" creation-time="Sun Jun 29 18:00:56.328 NOVST 2008">
+    <old-class-name>uku_control.event_viewer_1</old-class-name>
+    <new-class-name>uku_control.Event_Viewer</new-class-name>
+  </rename-class>
+  <rename-class id="7AP0B1OA5BIFPMR59VXOHW2" creation-time="Sun Jul 06 11:29:27.200 NOVST 2008">
+    <old-class-name>uku_control.Iceberg_Data</old-class-name>
+    <new-class-name>uku_control.UKU_Data_Big</new-class-name>
+  </rename-class>
+  <rename-class id="6AP0B1OA5BIFPMR59VXOHW2" creation-time="Sun Jul 06 12:00:08.200 NOVST 2008">
+    <old-class-name>uku_control.Power_Main_Value</old-class-name>
+    <new-class-name>uku_control.Power_Main_Data</new-class-name>
+  </rename-class>
+  <rename-class id="5AP0B1OA5BIFPMR59VXOHW2" creation-time="Sun Jul 06 17:50:17.387 NOVST 2008">
+    <old-class-name>uku_control.Iceberg_Status_Panel</old-class-name>
+    <new-class-name>uku_control.UKU_Status_Panel_Big</new-class-name>
+  </rename-class>
+  <rename-class id="7AP02R7J4DIF0QPVBVXOHW2" creation-time="Mon Jul 07 20:43:38.750 NOVST 2008">
+    <old-class-name>uku_control.User_Package_Bih</old-class-name>
+    <new-class-name>uku_control.User_Package_Big</new-class-name>
+  </rename-class>
+  <rename-class id="6AP02R7J4DIF0QPVBVXOHW2" creation-time="Mon Jul 07 23:44:34.703 NOVST 2008">
+    <old-class-name>uku_control.Untitled1</old-class-name>
+    <new-class-name>uku_control.UKU_Applet_Big</new-class-name>
+  </rename-class>
+  <rename-class id="7AP0ZV67GVXFK2T35OV0QKH0" creation-time="Sun Aug 02 14:25:39.359 NOVST 2009">
+    <old-class-name>uku_control.ExIO_Data</old-class-name>
+    <new-class-name>uku_control.ExtIO_Data</new-class-name>
+  </rename-class>
+  <rename-field id="7AP0PVQJ80YFF3CQ3OV0QKH0" creation-time="Wed Aug 05 22:50:19.078 NOVST 2009">
+    <declaring-class-name>uku_control.UKU_Data_Big</declaring-class-name>
+    <old-field-name>need_extio_panel</old-field-name>
+    <declared-field-type>Luku_control/Integer_Value;</declared-field-type>
+    <new-field-name>need_update_extio_panel</new-field-name>
+  </rename-field>
+  <rename-class id="7AP0THQ6UDEGLIAE6TLFK8Z" creation-time="Wed Sep 22 13:52:21.265 NOVST 2010">
+    <old-class-name>uku_control.ExtBoard</old-class-name>
+    <new-class-name>uku_control.ExtBoardData</new-class-name>
+  </rename-class>
+</refactor>
+

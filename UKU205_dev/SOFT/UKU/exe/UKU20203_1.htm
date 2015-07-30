@@ -1,0 +1,1433 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+<title>Static Call Graph - [.\exe\UKU20203_1.axf]</title></head>
+<body><HR>
+<H1>Static Call Graph for image .\exe\UKU20203_1.axf</H1><HR>
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, RVCT4.0 [Build 728]: Last Updated: Mon Apr 02 10:21:32 2012
+<BR><P>
+<H3>Maximum Stack Usage =        360 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
+Call chain for Maximum Stack Depth:</H3>
+main &rArr; ind_hndl &rArr; event_data2ind &rArr; int2lcd &rArr; bcd2lcd_zero
+<P>
+<H3>
+Mutually Recursive functions
+</H3> <LI><a href="#[e025e0]">NMI_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[e025e0]">NMI_Handler</a><BR>
+ <LI><a href="#[e025a4]">HardFault_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[e025a4]">HardFault_Handler</a><BR>
+ <LI><a href="#[e02568]">MemManage_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[e02568]">MemManage_Handler</a><BR>
+ <LI><a href="#[e0252c]">BusFault_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[e0252c]">BusFault_Handler</a><BR>
+ <LI><a href="#[e024f0]">UsageFault_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[e024f0]">UsageFault_Handler</a><BR>
+ <LI><a href="#[e024b4]">SVC_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[e024b4]">SVC_Handler</a><BR>
+ <LI><a href="#[e02478]">DebugMon_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[e02478]">DebugMon_Handler</a><BR>
+ <LI><a href="#[e0243c]">PendSV_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[e0243c]">PendSV_Handler</a><BR>
+ <LI><a href="#[e023c4]">ADC_IRQHandler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[e023c4]">ADC_IRQHandler</a><BR>
+</UL>
+<P>
+<H3>
+Function Pointers
+</H3><UL>
+ <LI><a href="#[e0261c]">Reset_Handler</a>
+ <LI><a href="#[e025e0]">NMI_Handler</a>
+ <LI><a href="#[e025a4]">HardFault_Handler</a>
+ <LI><a href="#[e02568]">MemManage_Handler</a>
+ <LI><a href="#[e0252c]">BusFault_Handler</a>
+ <LI><a href="#[e024f0]">UsageFault_Handler</a>
+ <LI><a href="#[e024b4]">SVC_Handler</a>
+ <LI><a href="#[e02478]">DebugMon_Handler</a>
+ <LI><a href="#[e0243c]">PendSV_Handler</a>
+ <LI><a href="#[dfc550]">SysTick_Handler</a>
+ <LI><a href="#[e01c44]">WDT_IRQHandler</a>
+ <LI><a href="#[e01e60]">TIMER0_IRQHandler</a>
+ <LI><a href="#[e01e24]">TIMER1_IRQHandler</a>
+ <LI><a href="#[e01de8]">TIMER2_IRQHandler</a>
+ <LI><a href="#[e01dac]">TIMER3_IRQHandler</a>
+ <LI><a href="#[16aa788]">UART0_IRQHandler</a>
+ <LI><a href="#[e01d34]">UART1_IRQHandler</a>
+ <LI><a href="#[16ac1c8]">UART2_IRQHandler</a>
+ <LI><a href="#[e01cbc]">UART3_IRQHandler</a>
+ <LI><a href="#[e02004]">PWM1_IRQHandler</a>
+ <LI><a href="#[e021a8]">I2C0_IRQHandler</a>
+ <LI><a href="#[e0216c]">I2C1_IRQHandler</a>
+ <LI><a href="#[e02130]">I2C2_IRQHandler</a>
+ <LI><a href="#[e01f14]">SPI_IRQHandler</a>
+ <LI><a href="#[e01ed8]">SSP0_IRQHandler</a>
+ <LI><a href="#[e01e9c]">SSP1_IRQHandler</a>
+ <LI><a href="#[e0207c]">PLL0_IRQHandler</a>
+ <LI><a href="#[e01f50]">RTC_IRQHandler</a>
+ <LI><a href="#[e022d4]">EINT0_IRQHandler</a>
+ <LI><a href="#[e02298]">EINT1_IRQHandler</a>
+ <LI><a href="#[e0225c]">EINT2_IRQHandler</a>
+ <LI><a href="#[e02220]">EINT3_IRQHandler</a>
+ <LI><a href="#[e023c4]">ADC_IRQHandler</a>
+ <LI><a href="#[e02388]">BOD_IRQHandler</a>
+ <LI><a href="#[e01c80]">USB_IRQHandler</a>
+ <LI><a href="#[16adc08]">CAN_IRQHandler</a>
+ <LI><a href="#[e02310]">DMA_IRQHandler</a>
+ <LI><a href="#[e020f4]">I2S_IRQHandler</a>
+ <LI><a href="#[e021e4]">ENET_IRQHandler</a>
+ <LI><a href="#[e01f8c]">RIT_IRQHandler</a>
+ <LI><a href="#[e020b8]">MCPWM_IRQHandler</a>
+ <LI><a href="#[e01fc8]">QEI_IRQHandler</a>
+ <LI><a href="#[e02040]">PLL1_IRQHandler</a>
+ <LI><a href="#[dfc514]">main</a>
+ <LI><a href="#[16aa65c]">__main</a>
+</UL>
+<P>
+<H3>
+Global Symbols
+</H3>
+<P><STRONG><a name="[16aa65c]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(.text)
+</UL>
+<P><STRONG><a name="[16a9dec]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<BR><BR>[Calls]<UL><LI><a href="#[e0252c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BusFault_Handler
+</UL>
+
+<P><STRONG><a name="[16a9cc0]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
+<BR><BR>[Calls]<UL><LI><a href="#[16a9a68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
+</UL>
+
+<P><STRONG><a name="[16a9c84]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
+<BR><BR>[Called By]<UL><LI><a href="#[16a9a68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
+</UL>
+
+<P><STRONG><a name="[16a9b94]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7.o(.ARM.Collect$$$$00000007))
+
+<P><STRONG><a name="[e0261c]"></a>Reset_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e025e0]"></a>NMI_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[e025e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NMI_Handler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e025e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NMI_Handler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e025a4]"></a>HardFault_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[e025a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardFault_Handler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e025a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardFault_Handler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e02568]"></a>MemManage_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[e02568]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MemManage_Handler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e02568]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MemManage_Handler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e0252c]"></a>BusFault_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[e0252c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BusFault_Handler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e0252c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BusFault_Handler
+<LI><a href="#[16a9dec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_stk
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e024f0]"></a>UsageFault_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[e024f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UsageFault_Handler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e024f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UsageFault_Handler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e024b4]"></a>SVC_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[e024b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVC_Handler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e024b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVC_Handler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e02478]"></a>DebugMon_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[e02478]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DebugMon_Handler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e02478]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DebugMon_Handler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e0243c]"></a>PendSV_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[e0243c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PendSV_Handler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e0243c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PendSV_Handler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e023c4]"></a>ADC_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[e023c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_IRQHandler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e023c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_IRQHandler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e02388]"></a>BOD_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e02310]"></a>DMA_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e022d4]"></a>EINT0_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e02298]"></a>EINT1_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e0225c]"></a>EINT2_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e02220]"></a>EINT3_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e021e4]"></a>ENET_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e021a8]"></a>I2C0_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e0216c]"></a>I2C1_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e02130]"></a>I2C2_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e020f4]"></a>I2S_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e020b8]"></a>MCPWM_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e0207c]"></a>PLL0_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e02040]"></a>PLL1_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e02004]"></a>PWM1_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e01fc8]"></a>QEI_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e01f8c]"></a>RIT_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e01f50]"></a>RTC_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e01f14]"></a>SPI_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e01ed8]"></a>SSP0_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e01e9c]"></a>SSP1_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e01e60]"></a>TIMER0_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e01e24]"></a>TIMER1_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e01de8]"></a>TIMER2_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e01dac]"></a>TIMER3_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e01d34]"></a>UART1_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e01cbc]"></a>UART3_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e01c80]"></a>USB_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[e01c44]"></a>WDT_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[dfb77c]"></a>gran_ring_char</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, gran.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfc5c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
+</UL>
+
+<P><STRONG><a name="[dfb7f4]"></a>gran_char</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, gran.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfa69c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zar_drv
+<LI><a href="#[dfb524]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ke_start
+<LI><a href="#[dfc5c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
+<LI><a href="#[dfc604]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ind_hndl
+</UL>
+
+<P><STRONG><a name="[dfb830]"></a>gran</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, gran.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfb254]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;matemat
+<LI><a href="#[dfb59c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kb_drv
+<LI><a href="#[dfbb00]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cntrl_hndl
+<LI><a href="#[dfbb3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cntrl_drv
+<LI><a href="#[dfbf74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avg_hndl
+<LI><a href="#[dfc5c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
+<LI><a href="#[dfc640]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bitmap_hndl
+</UL>
+
+<P><STRONG><a name="[df8e00]"></a>gran_ring</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, gran.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfa750]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ubat_old_drv
+</UL>
+
+<P><STRONG><a name="[dfb7b8]"></a>gran_long</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, gran.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfc5c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
+</UL>
+
+<P><STRONG><a name="[dfad2c]"></a>ret_ind</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, ret.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfc5c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
+</UL>
+
+<P><STRONG><a name="[dfacf0]"></a>ret_ind_hndl</STRONG> (Thumb, 60 bytes, Stack size 0 bytes, ret.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[dfacb4]"></a>ret_ind_sec</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, ret.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfc5c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
+</UL>
+
+<P><STRONG><a name="[dfac78]"></a>ret_ind_sec_hndl</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, ret.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[dfada4]"></a>ret</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, ret.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfc5c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
+</UL>
+
+<P><STRONG><a name="[dfad68]"></a>ret_hndl</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, ret.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = ret_hndl &rArr; tree_down
+</UL>
+<BR>[Calls]<UL><LI><a href="#[dfa8b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tree_down
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[16aa38c]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfa87c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tree_up
+<LI><a href="#[dfa8b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tree_down
+<LI><a href="#[dfc5c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
+</UL>
+
+<P><STRONG><a name="[16aa350]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
+
+<P><STRONG><a name="[16aa314]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
+
+<P><STRONG><a name="[16a9a68]"></a>__scatterload</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, init.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[16a9c84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
+</UL>
+<BR>[Called By]<UL><LI><a href="#[16a9cc0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
+</UL>
+
+<P><STRONG><a name="[16a9a2c]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+
+<P><STRONG><a name="[16a9504]"></a>__decompress</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
+
+<P><STRONG><a name="[16a94c8]"></a>__decompress1</STRONG> (Thumb, 94 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
+
+<P><STRONG><a name="[16a966c]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+
+<P><STRONG><a name="[16a9630]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+
+<P><STRONG><a name="[e011f4]"></a>SystemInit</STRONG> (Thumb, 470 bytes, Stack size 0 bytes, system_lpc17xx.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[dfc6b8]"></a>rtc_init</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, main.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[dfc67c]"></a>pwm_init</STRONG> (Thumb, 66 bytes, Stack size 0 bytes, main.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[dfc640]"></a>bitmap_hndl</STRONG> (Thumb, 1708 bytes, Stack size 48 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 232<LI>Call Chain = bitmap_hndl &rArr; graphic_print_text &rArr; plot
+</UL>
+<BR>[Calls]<UL><LI><a href="#[dfb704]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;graphic_print_text
+<LI><a href="#[dfb740]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;graphic_print
+<LI><a href="#[dfb830]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gran
+<LI><a href="#[dfb95c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_rectangle
+<LI><a href="#[dfb998]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_ptr
+<LI><a href="#[dfb9d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[dfc604]"></a>ind_hndl</STRONG> (Thumb, 26286 bytes, Stack size 288 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 352<LI>Call Chain = ind_hndl &rArr; event_data2ind &rArr; int2lcd &rArr; bcd2lcd_zero
+</UL>
+<BR>[Calls]<UL><LI><a href="#[dfa96c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sub_bgnd
+<LI><a href="#[dfb074]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ptr_carry
+<LI><a href="#[dfb0b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pointer_set
+<LI><a href="#[dfb2cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;long2lcd_mmm
+<LI><a href="#[dfb4ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_long_ptr
+<LI><a href="#[dfb4e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_int
+<LI><a href="#[dfb5d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int2lcdyx
+<LI><a href="#[dfb614]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int2lcd_mmm
+<LI><a href="#[dfb650]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int2lcd_m
+<LI><a href="#[dfb68c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int2lcd
+<LI><a href="#[dfb7f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gran_char
+<LI><a href="#[dfb86c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fl_simv
+<LI><a href="#[dfb8a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find
+<LI><a href="#[dfb8e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;event_data2ind
+<LI><a href="#[dfb920]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;event2ind
+<LI><a href="#[dfbce0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;char2lcdhyx
+<LI><a href="#[dfbd1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;char2lcdh
+<LI><a href="#[dfbdd0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bgnd_par
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[dfc5c8]"></a>but_an</STRONG> (Thumb, 18276 bytes, Stack size 48 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 148<LI>Call Chain = but_an &rArr; avar_unet_hndl &rArr; uart_out_adr0
+</UL>
+<BR>[Calls]<UL><LI><a href="#[dfa6d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vz_mem_hndl
+<LI><a href="#[dfa87c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tree_up
+<LI><a href="#[dfa8b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tree_down
+<LI><a href="#[dfacb4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ret_ind_sec
+<LI><a href="#[dfad2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ret_ind
+<LI><a href="#[dfada4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ret
+<LI><a href="#[dfb074]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ptr_carry
+<LI><a href="#[dfb0ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parol_init
+<LI><a href="#[dfb1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;next_date_hndl
+<LI><a href="#[dfb3f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long
+<LI><a href="#[dfb434]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
+<LI><a href="#[dfb470]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write
+<LI><a href="#[dfb4ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_long_ptr
+<LI><a href="#[dfb4e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_int
+<LI><a href="#[dfb524]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ke_start
+<LI><a href="#[dfb560]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ke_mem_hndl
+<LI><a href="#[dfb77c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gran_ring_char
+<LI><a href="#[dfb7b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gran_long
+<LI><a href="#[dfb7f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gran_char
+<LI><a href="#[dfb830]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gran
+<LI><a href="#[dfb86c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fl_simv
+<LI><a href="#[dfba10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;def_set
+<LI><a href="#[dfbfb0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_unet_hndl
+<LI><a href="#[dfbfec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_src_reset
+<LI><a href="#[dfc028]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_bat_hndl
+<LI><a href="#[16aa38c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[dfc58c]"></a>but_drv</STRONG> (Thumb, 302 bytes, Stack size 0 bytes, main.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[dfc550]"></a>SysTick_Handler</STRONG> (Thumb, 340 bytes, Stack size 8 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SysTick_Handler
+</UL>
+<BR>[Calls]<UL><LI><a href="#[dfbe48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beep_drv
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[dfc514]"></a>main</STRONG> (Thumb, 570 bytes, Stack size 8 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 360<LI>Call Chain = main &rArr; ind_hndl &rArr; event_data2ind &rArr; int2lcd &rArr; bcd2lcd_zero
+</UL>
+<BR>[Calls]<UL><LI><a href="#[dfa660]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zar_superviser_drv
+<LI><a href="#[dfa69c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zar_drv
+<LI><a href="#[dfa714]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;unet_drv
+<LI><a href="#[dfa750]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ubat_old_drv
+<LI><a href="#[dfa7c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u_necc_hndl
+<LI><a href="#[dfa8f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_drv
+<LI><a href="#[dfa9a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;src_drv
+<LI><a href="#[dfaa20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spc_drv
+<LI><a href="#[dfaad4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;samokalibr_drv
+<LI><a href="#[dfac78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ret_ind_sec_hndl
+<LI><a href="#[dfacf0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ret_ind_hndl
+<LI><a href="#[dfad68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ret_hndl
+<LI><a href="#[dfae1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rele_drv
+<LI><a href="#[dfb128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;out_out
+<LI><a href="#[dfb1dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mnemo_hndl
+<LI><a href="#[dfb218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;memo_read
+<LI><a href="#[dfb254]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;matemat
+<LI><a href="#[dfb308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_out
+<LI><a href="#[dfb344]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_on
+<LI><a href="#[dfb380]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_init
+<LI><a href="#[dfb3bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_clear
+<LI><a href="#[dfb59c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kb_drv
+<LI><a href="#[dfbb00]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cntrl_hndl
+<LI><a href="#[dfbb3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cntrl_drv
+<LI><a href="#[dfbb78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cntrl_blok_hndl
+<LI><a href="#[dfbe0c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beep_hndl
+<LI><a href="#[dfbe84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bat_drv
+<LI><a href="#[dfbf38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avz_hndl
+<LI><a href="#[dfbf74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avg_hndl
+<LI><a href="#[dfc0dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;apv_drv
+<LI><a href="#[dfc190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_drv
+<LI><a href="#[dfc58c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_drv
+<LI><a href="#[dfc5c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
+<LI><a href="#[dfc604]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ind_hndl
+<LI><a href="#[dfc640]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bitmap_hndl
+<LI><a href="#[dfc67c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_init
+<LI><a href="#[dfc6b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_init
+<LI><a href="#[e011f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInit
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> entry7.o(.ARM.Collect$$$$00000007)
+</UL>
+<P><STRONG><a name="[dfc0dc]"></a>apv_drv</STRONG> (Thumb, 182 bytes, Stack size 8 bytes, control.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = apv_drv
+</UL>
+<BR>[Calls]<UL><LI><a href="#[dfbfec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_src_reset
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[dfbf74]"></a>avg_hndl</STRONG> (Thumb, 404 bytes, Stack size 8 bytes, control.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = avg_hndl
+</UL>
+<BR>[Calls]<UL><LI><a href="#[dfb830]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gran
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[dfbb3c]"></a>cntrl_drv</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, control.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = cntrl_drv
+</UL>
+<BR>[Calls]<UL><LI><a href="#[dfb830]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gran
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[dfbb00]"></a>cntrl_hndl</STRONG> (Thumb, 1446 bytes, Stack size 8 bytes, control.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = cntrl_hndl &rArr; avar_bat_hndl &rArr; lc640_write_long_ptr &rArr; lc640_rdsr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[dfb830]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gran
+<LI><a href="#[dfc028]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_bat_hndl
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[dfa69c]"></a>zar_drv</STRONG> (Thumb, 934 bytes, Stack size 24 bytes, control.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = zar_drv &rArr; wrk_mem_hndl &rArr; lc640_write_long_ptr &rArr; lc640_rdsr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df8dc4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wrk_mem_hndl
+<LI><a href="#[dfb434]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
+<LI><a href="#[dfb4e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_int
+<LI><a href="#[dfb7f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gran_char
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[df9184]"></a>zar_superviser_start</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, control.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfa660]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zar_superviser_drv
+</UL>
+
+<P><STRONG><a name="[dfa660]"></a>zar_superviser_drv</STRONG> (Thumb, 358 bytes, Stack size 8 bytes, control.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = zar_superviser_drv &rArr; lc640_write_int &rArr; lc640_rdsr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df9184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zar_superviser_start
+<LI><a href="#[dfb434]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
+<LI><a href="#[dfb4e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_int
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[dfaa20]"></a>spc_drv</STRONG> (Thumb, 200 bytes, Stack size 8 bytes, control.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = spc_drv &rArr; vz_mem_hndl &rArr; lc640_write_long_ptr &rArr; lc640_rdsr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[dfa6d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vz_mem_hndl
+<LI><a href="#[dfb434]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
+<LI><a href="#[dfb4e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_int
+<LI><a href="#[dfb560]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ke_mem_hndl
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[dfbb78]"></a>cntrl_blok_hndl</STRONG> (Thumb, 130 bytes, Stack size 0 bytes, control.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[dfbe84]"></a>bat_drv</STRONG> (Thumb, 384 bytes, Stack size 8 bytes, control.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = bat_drv &rArr; avar_bat_hndl &rArr; lc640_write_long_ptr &rArr; lc640_rdsr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[dfc028]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_bat_hndl
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[dfbe0c]"></a>beep_hndl</STRONG> (Thumb, 120 bytes, Stack size 8 bytes, control.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = beep_hndl
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df8ef0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beep_init
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[df9148]"></a>kb_start</STRONG> (Thumb, 126 bytes, Stack size 0 bytes, control.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfa8f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_drv
+<LI><a href="#[dfb59c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kb_drv
+</UL>
+
+<P><STRONG><a name="[dfb59c]"></a>kb_drv</STRONG> (Thumb, 434 bytes, Stack size 8 bytes, control.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = kb_drv &rArr; avar_bat_hndl &rArr; lc640_write_long_ptr &rArr; lc640_rdsr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df9148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kb_start
+<LI><a href="#[dfb830]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gran
+<LI><a href="#[dfc028]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_bat_hndl
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[dfb254]"></a>matemat</STRONG> (Thumb, 3904 bytes, Stack size 16 bytes, control.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = matemat &rArr; avar_bat_hndl &rArr; lc640_write_long_ptr &rArr; lc640_rdsr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[dfb830]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gran
+<LI><a href="#[dfc028]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_bat_hndl
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[df910c]"></a>bp_on</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, control.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfb128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;out_out
+</UL>
+
+<P><STRONG><a name="[df90d0]"></a>bp_off</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, control.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfb128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;out_out
+</UL>
+
+<P><STRONG><a name="[dfb128]"></a>out_out</STRONG> (Thumb, 922 bytes, Stack size 4 bytes, control.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = out_out
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df90d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bp_off
+<LI><a href="#[df910c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bp_on
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[dfae1c]"></a>rele_drv</STRONG> (Thumb, 76 bytes, Stack size 0 bytes, control.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[df9094]"></a>kz_on</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, control.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfaad4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;samokalibr_drv
+</UL>
+
+<P><STRONG><a name="[df9058]"></a>kz_off</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, control.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfaad4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;samokalibr_drv
+</UL>
+
+<P><STRONG><a name="[dfaad4]"></a>samokalibr_drv</STRONG> (Thumb, 134 bytes, Stack size 4 bytes, control.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = samokalibr_drv
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df9058]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kz_off
+<LI><a href="#[df9094]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kz_on
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[dfa8f4]"></a>time_drv</STRONG> (Thumb, 286 bytes, Stack size 4 bytes, control.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = time_drv
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df9148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kb_start
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[dfa7c8]"></a>u_necc_hndl</STRONG> (Thumb, 400 bytes, Stack size 0 bytes, control.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[dfa714]"></a>unet_drv</STRONG> (Thumb, 160 bytes, Stack size 8 bytes, control.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 108<LI>Call Chain = unet_drv &rArr; avar_unet_hndl &rArr; uart_out_adr0
+</UL>
+<BR>[Calls]<UL><LI><a href="#[dfbfb0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_unet_hndl
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[df901c]"></a>blok_src_reset</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, control.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfa9a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;src_drv
+<LI><a href="#[dfbfb0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_unet_hndl
+</UL>
+
+<P><STRONG><a name="[df8fe0]"></a>apv2_hndl</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, control.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfa9a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;src_drv
+</UL>
+
+<P><STRONG><a name="[dfa9a8]"></a>src_drv</STRONG> (Thumb, 1004 bytes, Stack size 16 bytes, control.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = src_drv &rArr; avar_bps_hndl &rArr; lc640_write_long_ptr &rArr; lc640_rdsr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df8f68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_bps_hndl
+<LI><a href="#[df8fe0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;apv2_hndl
+<LI><a href="#[df901c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;blok_src_reset
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[dfc190]"></a>adc_drv</STRONG> (Thumb, 1018 bytes, Stack size 8 bytes, control.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = adc_drv
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[dfb524]"></a>ke_start</STRONG> (Thumb, 306 bytes, Stack size 16 bytes, control.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = ke_start &rArr; lc640_write_int &rArr; lc640_rdsr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[dfb434]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
+<LI><a href="#[dfb7f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gran_char
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc5c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
+</UL>
+
+<P><STRONG><a name="[dfb1a0]"></a>next_date_hndl</STRONG> (Thumb, 130 bytes, Stack size 16 bytes, control.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = next_date_hndl &rArr; lc640_write_int &rArr; lc640_rdsr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[dfb434]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc5c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
+</UL>
+
+<P><STRONG><a name="[dfba10]"></a>def_set</STRONG> (Thumb, 200 bytes, Stack size 32 bytes, control.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = def_set &rArr; lc640_write_int &rArr; lc640_rdsr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[dfb434]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc5c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
+</UL>
+
+<P><STRONG><a name="[dfa750]"></a>ubat_old_drv</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, control.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = ubat_old_drv
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df8e00]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gran_ring
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[dfbf38]"></a>avz_hndl</STRONG> (Thumb, 260 bytes, Stack size 0 bytes, control.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[dfb1dc]"></a>mnemo_hndl</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, control.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[dfbfec]"></a>avar_src_reset</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, avar.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfbfb0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_unet_hndl
+<LI><a href="#[dfc0dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;apv_drv
+<LI><a href="#[dfc5c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
+</UL>
+
+<P><STRONG><a name="[dfc028]"></a>avar_bat_hndl</STRONG> (Thumb, 738 bytes, Stack size 32 bytes, avar.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = avar_bat_hndl &rArr; lc640_write_long_ptr &rArr; lc640_rdsr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df8734]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
+<LI><a href="#[dfb434]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
+<LI><a href="#[dfb4ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_long_ptr
+<LI><a href="#[dfb4e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_int
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfb254]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;matemat
+<LI><a href="#[dfb59c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kb_drv
+<LI><a href="#[dfbb00]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cntrl_hndl
+<LI><a href="#[dfbe84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bat_drv
+<LI><a href="#[dfc5c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
+</UL>
+
+<P><STRONG><a name="[df8dc4]"></a>wrk_mem_hndl</STRONG> (Thumb, 368 bytes, Stack size 32 bytes, avar.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = wrk_mem_hndl &rArr; lc640_write_long_ptr &rArr; lc640_rdsr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df8734]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
+<LI><a href="#[dfb434]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
+<LI><a href="#[dfb4e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_int
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfa69c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zar_drv
+</UL>
+
+<P><STRONG><a name="[dfa6d8]"></a>vz_mem_hndl</STRONG> (Thumb, 614 bytes, Stack size 32 bytes, avar.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = vz_mem_hndl &rArr; lc640_write_long_ptr &rArr; lc640_rdsr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df8734]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
+<LI><a href="#[dfb434]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
+<LI><a href="#[dfb4ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_long_ptr
+<LI><a href="#[dfb4e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_int
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfaa20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spc_drv
+<LI><a href="#[dfc5c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
+</UL>
+
+<P><STRONG><a name="[dfb560]"></a>ke_mem_hndl</STRONG> (Thumb, 276 bytes, Stack size 32 bytes, avar.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = ke_mem_hndl &rArr; lc640_write_long_ptr &rArr; lc640_rdsr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df8734]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
+<LI><a href="#[dfb434]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
+<LI><a href="#[dfb4e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_int
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfaa20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spc_drv
+<LI><a href="#[dfc5c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
+</UL>
+
+<P><STRONG><a name="[dfbfb0]"></a>avar_unet_hndl</STRONG> (Thumb, 998 bytes, Stack size 32 bytes, avar.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 100<LI>Call Chain = avar_unet_hndl &rArr; uart_out_adr0
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df86bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_out_adr0
+<LI><a href="#[df8734]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
+<LI><a href="#[df8770]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc_95
+<LI><a href="#[df87ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc_87
+<LI><a href="#[df901c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;blok_src_reset
+<LI><a href="#[dfb434]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
+<LI><a href="#[dfb4ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_long_ptr
+<LI><a href="#[dfb4e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_int
+<LI><a href="#[dfbfec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_src_reset
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfa714]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;unet_drv
+<LI><a href="#[dfc5c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
+</UL>
+
+<P><STRONG><a name="[df8f68]"></a>avar_bps_hndl</STRONG> (Thumb, 760 bytes, Stack size 40 bytes, avar.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = avar_bps_hndl &rArr; lc640_write_long_ptr &rArr; lc640_rdsr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df8734]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
+<LI><a href="#[dfb434]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
+<LI><a href="#[dfb4ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_long_ptr
+<LI><a href="#[dfb4e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_int
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfa9a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;src_drv
+</UL>
+
+<P><STRONG><a name="[df7bf4]"></a>clr_scrn</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, common_func.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfbdd0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bgnd_par
+</UL>
+
+<P><STRONG><a name="[dfb8a8]"></a>find</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, common_func.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfa96c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sub_bgnd
+<LI><a href="#[dfb2cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;long2lcd_mmm
+<LI><a href="#[dfb614]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int2lcd_mmm
+<LI><a href="#[dfb650]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int2lcd_m
+<LI><a href="#[dfb68c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int2lcd
+<LI><a href="#[dfb8e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;event_data2ind
+<LI><a href="#[dfb920]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;event2ind
+<LI><a href="#[dfbd1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;char2lcdh
+<LI><a href="#[dfc604]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ind_hndl
+</UL>
+
+<P><STRONG><a name="[df7ac8]"></a>bin2bcd_int</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, common_func.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfb5d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int2lcdyx
+<LI><a href="#[dfb650]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int2lcd_m
+<LI><a href="#[dfb68c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int2lcd
+</UL>
+
+<P><STRONG><a name="[df7a8c]"></a>bcd2lcd_zero</STRONG> (Thumb, 70 bytes, Stack size 8 bytes, common_func.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = bcd2lcd_zero
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfb5d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int2lcdyx
+<LI><a href="#[dfb650]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int2lcd_m
+<LI><a href="#[dfb68c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int2lcd
+</UL>
+
+<P><STRONG><a name="[dfb650]"></a>int2lcd_m</STRONG> (Thumb, 206 bytes, Stack size 28 bytes, common_func.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = int2lcd_m &rArr; bcd2lcd_zero
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df7a8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bcd2lcd_zero
+<LI><a href="#[df7ac8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bin2bcd_int
+<LI><a href="#[dfb8a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc604]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ind_hndl
+</UL>
+
+<P><STRONG><a name="[dfb614]"></a>int2lcd_mmm</STRONG> (Thumb, 222 bytes, Stack size 44 bytes, common_func.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = int2lcd_mmm
+</UL>
+<BR>[Calls]<UL><LI><a href="#[dfb8a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc604]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ind_hndl
+</UL>
+
+<P><STRONG><a name="[dfb2cc]"></a>long2lcd_mmm</STRONG> (Thumb, 218 bytes, Stack size 44 bytes, common_func.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = long2lcd_mmm
+</UL>
+<BR>[Calls]<UL><LI><a href="#[dfb8a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc604]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ind_hndl
+</UL>
+
+<P><STRONG><a name="[dfb5d8]"></a>int2lcdyx</STRONG> (Thumb, 130 bytes, Stack size 28 bytes, common_func.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = int2lcdyx &rArr; bcd2lcd_zero
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df7a8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bcd2lcd_zero
+<LI><a href="#[df7ac8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bin2bcd_int
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc604]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ind_hndl
+</UL>
+
+<P><STRONG><a name="[dfb68c]"></a>int2lcd</STRONG> (Thumb, 162 bytes, Stack size 24 bytes, common_func.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = int2lcd &rArr; bcd2lcd_zero
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df7a8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bcd2lcd_zero
+<LI><a href="#[df7ac8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bin2bcd_int
+<LI><a href="#[dfb8a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfb8e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;event_data2ind
+<LI><a href="#[dfb920]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;event2ind
+<LI><a href="#[dfc604]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ind_hndl
+</UL>
+
+<P><STRONG><a name="[dfbd1c]"></a>char2lcdh</STRONG> (Thumb, 64 bytes, Stack size 12 bytes, common_func.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = char2lcdh
+</UL>
+<BR>[Calls]<UL><LI><a href="#[dfb8a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc604]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ind_hndl
+</UL>
+
+<P><STRONG><a name="[dfbce0]"></a>char2lcdhyx</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, common_func.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = char2lcdhyx
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc604]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ind_hndl
+</UL>
+
+<P><STRONG><a name="[dfb074]"></a>ptr_carry</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, common_func.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = ptr_carry
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfb920]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;event2ind
+<LI><a href="#[dfc5c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
+<LI><a href="#[dfc604]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ind_hndl
+</UL>
+
+<P><STRONG><a name="[dfb0ec]"></a>parol_init</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, common_func.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfc5c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
+</UL>
+
+<P><STRONG><a name="[dfbdd0]"></a>bgnd_par</STRONG> (Thumb, 102 bytes, Stack size 24 bytes, common_func.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = bgnd_par
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df7bf4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clr_scrn
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc604]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ind_hndl
+</UL>
+
+<P><STRONG><a name="[dfa96c]"></a>sub_bgnd</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, common_func.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = sub_bgnd
+</UL>
+<BR>[Calls]<UL><LI><a href="#[dfb8a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfb8e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;event_data2ind
+<LI><a href="#[dfb920]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;event2ind
+<LI><a href="#[dfc604]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ind_hndl
+</UL>
+
+<P><STRONG><a name="[dfb86c]"></a>fl_simv</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, common_func.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = fl_simv
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc5c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
+<LI><a href="#[dfc604]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ind_hndl
+</UL>
+
+<P><STRONG><a name="[dfb8e4]"></a>event_data2ind</STRONG> (Thumb, 380 bytes, Stack size 32 bytes, common_func.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = event_data2ind &rArr; int2lcd &rArr; bcd2lcd_zero
+</UL>
+<BR>[Calls]<UL><LI><a href="#[dfa96c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sub_bgnd
+<LI><a href="#[dfb4ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_long_ptr
+<LI><a href="#[dfb68c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int2lcd
+<LI><a href="#[dfb8a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc604]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ind_hndl
+</UL>
+
+<P><STRONG><a name="[dfb920]"></a>event2ind</STRONG> (Thumb, 4050 bytes, Stack size 32 bytes, common_func.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = event2ind &rArr; int2lcd &rArr; bcd2lcd_zero
+</UL>
+<BR>[Calls]<UL><LI><a href="#[dfa96c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sub_bgnd
+<LI><a href="#[dfb074]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ptr_carry
+<LI><a href="#[dfb4ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_long_ptr
+<LI><a href="#[dfb4e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_int
+<LI><a href="#[dfb68c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int2lcd
+<LI><a href="#[dfb8a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc604]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ind_hndl
+</UL>
+
+<P><STRONG><a name="[dfa87c]"></a>tree_up</STRONG> (Thumb, 66 bytes, Stack size 24 bytes, common_func.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = tree_up
+</UL>
+<BR>[Calls]<UL><LI><a href="#[16aa38c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc5c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
+</UL>
+
+<P><STRONG><a name="[dfa8b8]"></a>tree_down</STRONG> (Thumb, 78 bytes, Stack size 16 bytes, common_func.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = tree_down
+</UL>
+<BR>[Calls]<UL><LI><a href="#[16aa38c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfad68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ret_hndl
+<LI><a href="#[dfc5c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
+</UL>
+
+<P><STRONG><a name="[dfb0b0]"></a>pointer_set</STRONG> (Thumb, 274 bytes, Stack size 0 bytes, common_func.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfc604]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ind_hndl
+</UL>
+
+<P><STRONG><a name="[dfb9d4]"></a>draw</STRONG> (Thumb, 2122 bytes, Stack size 44 bytes, graphic.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = draw
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfb95c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_rectangle
+<LI><a href="#[dfb998]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_ptr
+<LI><a href="#[dfc640]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bitmap_hndl
+</UL>
+
+<P><STRONG><a name="[dfb95c]"></a>draw_rectangle</STRONG> (Thumb, 144 bytes, Stack size 36 bytes, graphic.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = draw_rectangle &rArr; draw
+</UL>
+<BR>[Calls]<UL><LI><a href="#[dfb9d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc640]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bitmap_hndl
+</UL>
+
+<P><STRONG><a name="[dfb998]"></a>draw_ptr</STRONG> (Thumb, 132 bytes, Stack size 28 bytes, graphic.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = draw_ptr &rArr; draw
+</UL>
+<BR>[Calls]<UL><LI><a href="#[dfb9d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc640]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bitmap_hndl
+</UL>
+
+<P><STRONG><a name="[df6e98]"></a>plot</STRONG> (Thumb, 236 bytes, Stack size 36 bytes, graphic.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = plot
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfb704]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;graphic_print_text
+<LI><a href="#[dfb740]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;graphic_print
+</UL>
+
+<P><STRONG><a name="[dfb740]"></a>graphic_print</STRONG> (Thumb, 118 bytes, Stack size 44 bytes, graphic.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = graphic_print &rArr; plot
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df6e98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;plot
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc640]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bitmap_hndl
+</UL>
+
+<P><STRONG><a name="[dfb704]"></a>graphic_print_text</STRONG> (Thumb, 580 bytes, Stack size 148 bytes, graphic.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = graphic_print_text &rArr; plot
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df6e98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;plot
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc640]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bitmap_hndl
+</UL>
+
+<P><STRONG><a name="[dfb218]"></a>memo_read</STRONG> (Thumb, 1446 bytes, Stack size 8 bytes, memo.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = memo_read &rArr; lc640_read_long &rArr; lc640_rdsr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df6010]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_long
+<LI><a href="#[dfb4e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_int
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[dfbe48]"></a>beep_drv</STRONG> (Thumb, 98 bytes, Stack size 0 bytes, beep.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfc550]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
+</UL>
+
+<P><STRONG><a name="[df8ef0]"></a>beep_init</STRONG> (Thumb, 74 bytes, Stack size 0 bytes, beep.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfbe0c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beep_hndl
+</UL>
+
+<P><STRONG><a name="[df5458]"></a>spi1</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, 25lc640.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[df5368]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_rdsr
+<LI><a href="#[df53a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_wren
+<LI><a href="#[df6010]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_long
+<LI><a href="#[df8734]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
+<LI><a href="#[dfb3f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long
+<LI><a href="#[dfb434]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
+<LI><a href="#[dfb470]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write
+<LI><a href="#[dfb4ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_long_ptr
+<LI><a href="#[dfb4e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_int
+</UL>
+
+<P><STRONG><a name="[df541c]"></a>spi1_config</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, 25lc640.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[df5368]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_rdsr
+<LI><a href="#[df53a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_wren
+<LI><a href="#[df6010]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_long
+<LI><a href="#[df8734]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
+<LI><a href="#[dfb3f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long
+<LI><a href="#[dfb434]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
+<LI><a href="#[dfb470]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write
+<LI><a href="#[dfb4ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_long_ptr
+<LI><a href="#[dfb4e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_int
+</UL>
+
+<P><STRONG><a name="[df53e0]"></a>spi1_unconfig</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, 25lc640.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[df5368]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_rdsr
+<LI><a href="#[df53a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_wren
+<LI><a href="#[df6010]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_long
+<LI><a href="#[df8734]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
+<LI><a href="#[dfb3f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long
+<LI><a href="#[dfb434]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
+<LI><a href="#[dfb470]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write
+<LI><a href="#[dfb4ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_long_ptr
+<LI><a href="#[dfb4e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_int
+</UL>
+
+<P><STRONG><a name="[df53a4]"></a>lc640_wren</STRONG> (Thumb, 62 bytes, Stack size 4 bytes, 25lc640.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = lc640_wren
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df53e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_unconfig
+<LI><a href="#[df541c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_config
+<LI><a href="#[df5458]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1
+</UL>
+<BR>[Called By]<UL><LI><a href="#[df8734]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
+<LI><a href="#[dfb3f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long
+<LI><a href="#[dfb434]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
+<LI><a href="#[dfb470]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write
+</UL>
+
+<P><STRONG><a name="[df5368]"></a>lc640_rdsr</STRONG> (Thumb, 72 bytes, Stack size 4 bytes, 25lc640.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = lc640_rdsr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df53e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_unconfig
+<LI><a href="#[df541c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_config
+<LI><a href="#[df5458]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1
+</UL>
+<BR>[Called By]<UL><LI><a href="#[df6010]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_long
+<LI><a href="#[df8734]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
+<LI><a href="#[dfb3f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long
+<LI><a href="#[dfb434]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
+<LI><a href="#[dfb470]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write
+<LI><a href="#[dfb4ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_long_ptr
+<LI><a href="#[dfb4e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_int
+</UL>
+
+<P><STRONG><a name="[dfb4e8]"></a>lc640_read_int</STRONG> (Thumb, 136 bytes, Stack size 12 bytes, 25lc640.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = lc640_read_int &rArr; lc640_rdsr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df5368]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_rdsr
+<LI><a href="#[df53e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_unconfig
+<LI><a href="#[df541c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_config
+<LI><a href="#[df5458]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1
+</UL>
+<BR>[Called By]<UL><LI><a href="#[df8dc4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wrk_mem_hndl
+<LI><a href="#[df8f68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_bps_hndl
+<LI><a href="#[dfa660]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zar_superviser_drv
+<LI><a href="#[dfa69c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zar_drv
+<LI><a href="#[dfa6d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vz_mem_hndl
+<LI><a href="#[dfaa20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spc_drv
+<LI><a href="#[dfb218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;memo_read
+<LI><a href="#[dfb560]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ke_mem_hndl
+<LI><a href="#[dfb920]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;event2ind
+<LI><a href="#[dfbfb0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_unet_hndl
+<LI><a href="#[dfc028]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_bat_hndl
+<LI><a href="#[dfc5c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
+<LI><a href="#[dfc604]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ind_hndl
+</UL>
+
+<P><STRONG><a name="[df6010]"></a>lc640_read_long</STRONG> (Thumb, 160 bytes, Stack size 20 bytes, 25lc640.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = lc640_read_long &rArr; lc640_rdsr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df5368]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_rdsr
+<LI><a href="#[df53e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_unconfig
+<LI><a href="#[df541c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_config
+<LI><a href="#[df5458]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfb218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;memo_read
+</UL>
+
+<P><STRONG><a name="[dfb4ac]"></a>lc640_read_long_ptr</STRONG> (Thumb, 148 bytes, Stack size 16 bytes, 25lc640.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = lc640_read_long_ptr &rArr; lc640_rdsr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df5368]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_rdsr
+<LI><a href="#[df53e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_unconfig
+<LI><a href="#[df541c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_config
+<LI><a href="#[df5458]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1
+</UL>
+<BR>[Called By]<UL><LI><a href="#[df8f68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_bps_hndl
+<LI><a href="#[dfa6d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vz_mem_hndl
+<LI><a href="#[dfb8e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;event_data2ind
+<LI><a href="#[dfb920]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;event2ind
+<LI><a href="#[dfbfb0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_unet_hndl
+<LI><a href="#[dfc028]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_bat_hndl
+<LI><a href="#[dfc5c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
+<LI><a href="#[dfc604]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ind_hndl
+</UL>
+
+<P><STRONG><a name="[dfb470]"></a>lc640_write</STRONG> (Thumb, 130 bytes, Stack size 16 bytes, 25lc640.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = lc640_write &rArr; lc640_rdsr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df5368]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_rdsr
+<LI><a href="#[df53a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_wren
+<LI><a href="#[df53e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_unconfig
+<LI><a href="#[df541c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_config
+<LI><a href="#[df5458]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc5c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
+</UL>
+
+<P><STRONG><a name="[dfb434]"></a>lc640_write_int</STRONG> (Thumb, 140 bytes, Stack size 12 bytes, 25lc640.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = lc640_write_int &rArr; lc640_rdsr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df5368]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_rdsr
+<LI><a href="#[df53a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_wren
+<LI><a href="#[df53e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_unconfig
+<LI><a href="#[df541c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_config
+<LI><a href="#[df5458]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1
+</UL>
+<BR>[Called By]<UL><LI><a href="#[df8dc4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wrk_mem_hndl
+<LI><a href="#[df8f68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_bps_hndl
+<LI><a href="#[dfa660]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zar_superviser_drv
+<LI><a href="#[dfa69c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zar_drv
+<LI><a href="#[dfa6d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vz_mem_hndl
+<LI><a href="#[dfaa20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spc_drv
+<LI><a href="#[dfb1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;next_date_hndl
+<LI><a href="#[dfb524]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ke_start
+<LI><a href="#[dfb560]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ke_mem_hndl
+<LI><a href="#[dfba10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;def_set
+<LI><a href="#[dfbfb0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_unet_hndl
+<LI><a href="#[dfc028]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_bat_hndl
+<LI><a href="#[dfc5c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
+<LI><a href="#[16adcbc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_in_an
+</UL>
+
+<P><STRONG><a name="[dfb3f8]"></a>lc640_write_long</STRONG> (Thumb, 174 bytes, Stack size 12 bytes, 25lc640.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = lc640_write_long &rArr; lc640_rdsr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df5368]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_rdsr
+<LI><a href="#[df53a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_wren
+<LI><a href="#[df53e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_unconfig
+<LI><a href="#[df541c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_config
+<LI><a href="#[df5458]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc5c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
+</UL>
+
+<P><STRONG><a name="[df8734]"></a>lc640_write_long_ptr</STRONG> (Thumb, 154 bytes, Stack size 16 bytes, 25lc640.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = lc640_write_long_ptr &rArr; lc640_rdsr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df5368]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_rdsr
+<LI><a href="#[df53a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_wren
+<LI><a href="#[df53e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_unconfig
+<LI><a href="#[df541c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_config
+<LI><a href="#[df5458]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1
+</UL>
+<BR>[Called By]<UL><LI><a href="#[df8dc4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wrk_mem_hndl
+<LI><a href="#[df8f68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_bps_hndl
+<LI><a href="#[dfa6d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vz_mem_hndl
+<LI><a href="#[dfb560]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ke_mem_hndl
+<LI><a href="#[dfbfb0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_unet_hndl
+<LI><a href="#[dfc028]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_bat_hndl
+</UL>
+
+<P><STRONG><a name="[df4918]"></a>lcd1_chk</STRONG> (Thumb, 98 bytes, Stack size 0 bytes, lcd_agm1232_uku203.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[df4774]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;data1_wr
+<LI><a href="#[df47ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd1_wr
+</UL>
+
+<P><STRONG><a name="[df4828]"></a>lcd2_chk</STRONG> (Thumb, 98 bytes, Stack size 0 bytes, lcd_agm1232_uku203.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[df4738]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;data2_wr
+<LI><a href="#[df47b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd2_wr
+</UL>
+
+<P><STRONG><a name="[df47ec]"></a>lcd1_wr</STRONG> (Thumb, 204 bytes, Stack size 4 bytes, lcd_agm1232_uku203.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = lcd1_wr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df4918]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd1_chk
+</UL>
+<BR>[Called By]<UL><LI><a href="#[df4684]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_set_raw
+<LI><a href="#[df46c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_set_col
+<LI><a href="#[df46fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_set_page
+<LI><a href="#[dfb344]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_on
+</UL>
+
+<P><STRONG><a name="[df47b0]"></a>lcd2_wr</STRONG> (Thumb, 204 bytes, Stack size 4 bytes, lcd_agm1232_uku203.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = lcd2_wr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df4828]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd2_chk
+</UL>
+<BR>[Called By]<UL><LI><a href="#[df4684]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_set_raw
+<LI><a href="#[df46c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_set_col
+<LI><a href="#[df46fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_set_page
+<LI><a href="#[dfb344]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_on
+</UL>
+
+<P><STRONG><a name="[df4774]"></a>data1_wr</STRONG> (Thumb, 206 bytes, Stack size 4 bytes, lcd_agm1232_uku203.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = data1_wr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df4918]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd1_chk
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfb308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_out
+<LI><a href="#[dfb3bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_clear
+</UL>
+
+<P><STRONG><a name="[df4738]"></a>data2_wr</STRONG> (Thumb, 210 bytes, Stack size 4 bytes, lcd_agm1232_uku203.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = data2_wr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df4828]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd2_chk
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfb308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_out
+<LI><a href="#[dfb3bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_clear
+</UL>
+
+<P><STRONG><a name="[df46fc]"></a>lcd_set_page</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, lcd_agm1232_uku203.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = lcd_set_page &rArr; lcd2_wr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df47b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd2_wr
+<LI><a href="#[df47ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd1_wr
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfb308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_out
+<LI><a href="#[dfb3bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_clear
+</UL>
+
+<P><STRONG><a name="[df46c0]"></a>lcd_set_col</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, lcd_agm1232_uku203.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = lcd_set_col &rArr; lcd2_wr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df47b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd2_wr
+<LI><a href="#[df47ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd1_wr
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfb308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_out
+<LI><a href="#[dfb3bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_clear
+</UL>
+
+<P><STRONG><a name="[df4684]"></a>lcd_set_raw</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, lcd_agm1232_uku203.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = lcd_set_raw &rArr; lcd2_wr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df47b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd2_wr
+<LI><a href="#[df47ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd1_wr
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfb308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_out
+</UL>
+
+<P><STRONG><a name="[dfb380]"></a>lcd_init</STRONG> (Thumb, 160 bytes, Stack size 0 bytes, lcd_agm1232_uku203.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[dfb3bc]"></a>lcd_clear</STRONG> (Thumb, 52 bytes, Stack size 12 bytes, lcd_agm1232_uku203.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = lcd_clear &rArr; lcd_set_col &rArr; lcd2_wr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df46c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_set_col
+<LI><a href="#[df46fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_set_page
+<LI><a href="#[df4738]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;data2_wr
+<LI><a href="#[df4774]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;data1_wr
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[dfb344]"></a>lcd_on</STRONG> (Thumb, 16 bytes, Stack size 4 bytes, lcd_agm1232_uku203.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = lcd_on &rArr; lcd2_wr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df47b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd2_wr
+<LI><a href="#[df47ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd1_wr
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[dfb308]"></a>lcd_out</STRONG> (Thumb, 92 bytes, Stack size 24 bytes, lcd_agm1232_uku203.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = lcd_out &rArr; lcd_set_raw &rArr; lcd2_wr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df4684]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_set_raw
+<LI><a href="#[df46c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_set_col
+<LI><a href="#[df46fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_set_page
+<LI><a href="#[df4738]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;data2_wr
+<LI><a href="#[df4774]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;data1_wr
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfc514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[16ade9c]"></a>CRC1_in</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, full_can.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = CRC1_in
+</UL>
+<BR>[Called By]<UL><LI><a href="#[16adc44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_isr_rx1
+</UL>
+
+<P><STRONG><a name="[16adde8]"></a>CRC2_in</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, full_can.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = CRC2_in
+</UL>
+<BR>[Called By]<UL><LI><a href="#[16adc44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_isr_rx1
+</UL>
+
+<P><STRONG><a name="[16addac]"></a>CRC1_out</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, full_can.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = CRC1_out
+</UL>
+<BR>[Called By]<UL><LI><a href="#[16adcbc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_in_an
+</UL>
+
+<P><STRONG><a name="[16add70]"></a>CRC2_out</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, full_can.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = CRC2_out
+</UL>
+<BR>[Called By]<UL><LI><a href="#[16adcbc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_in_an
+</UL>
+
+<P><STRONG><a name="[16add34]"></a>can1_out_adr</STRONG> (Thumb, 1746 bytes, Stack size 8 bytes, full_can.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = can1_out_adr
+</UL>
+<BR>[Called By]<UL><LI><a href="#[16adcbc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_in_an
+</UL>
+
+<P><STRONG><a name="[16adcf8]"></a>can_adr_hndl</STRONG> (Thumb, 60 bytes, Stack size 0 bytes, full_can.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[16adcbc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_in_an
+</UL>
+
+<P><STRONG><a name="[16adcbc]"></a>can_in_an</STRONG> (Thumb, 1610 bytes, Stack size 8 bytes, full_can.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = can_in_an &rArr; lc640_write_int &rArr; lc640_rdsr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[dfb434]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
+<LI><a href="#[16adcf8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_adr_hndl
+<LI><a href="#[16add34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can1_out_adr
+<LI><a href="#[16add70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CRC2_out
+<LI><a href="#[16addac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CRC1_out
+</UL>
+<BR>[Called By]<UL><LI><a href="#[16adc44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_isr_rx1
+</UL>
+
+<P><STRONG><a name="[16adc80]"></a>can_isr_tx1</STRONG> (Thumb, 140 bytes, Stack size 0 bytes, full_can.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[16adc08]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CAN_IRQHandler
+</UL>
+
+<P><STRONG><a name="[16adc44]"></a>can_isr_rx1</STRONG> (Thumb, 272 bytes, Stack size 24 bytes, full_can.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = can_isr_rx1 &rArr; can_in_an &rArr; lc640_write_int &rArr; lc640_rdsr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[16adcbc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_in_an
+<LI><a href="#[16adde8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CRC2_in
+<LI><a href="#[16ade9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CRC1_in
+</UL>
+<BR>[Called By]<UL><LI><a href="#[16adc08]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CAN_IRQHandler
+</UL>
+
+<P><STRONG><a name="[16adc08]"></a>CAN_IRQHandler</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, full_can.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = CAN_IRQHandler &rArr; can_isr_rx1 &rArr; can_in_an &rArr; lc640_write_int &rArr; lc640_rdsr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[16adc44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_isr_rx1
+<LI><a href="#[16adc80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_isr_tx1
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[16ac1c8]"></a>UART2_IRQHandler</STRONG> (Thumb, 288 bytes, Stack size 12 bytes, uart2.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = UART2_IRQHandler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[df87ac]"></a>crc_87</STRONG> (Thumb, 32 bytes, Stack size 12 bytes, uart0.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = crc_87
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfbfb0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_unet_hndl
+</UL>
+
+<P><STRONG><a name="[df8770]"></a>crc_95</STRONG> (Thumb, 32 bytes, Stack size 12 bytes, uart0.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = crc_95
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfbfb0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_unet_hndl
+</UL>
+
+<P><STRONG><a name="[16aa7c4]"></a>putchar0</STRONG> (Thumb, 76 bytes, Stack size 0 bytes, uart0.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[df86bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_out_adr0
+</UL>
+
+<P><STRONG><a name="[df86bc]"></a>uart_out_adr0</STRONG> (Thumb, 80 bytes, Stack size 68 bytes, uart0.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = uart_out_adr0
+</UL>
+<BR>[Calls]<UL><LI><a href="#[16aa7c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;putchar0
+</UL>
+<BR>[Called By]<UL><LI><a href="#[dfbfb0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_unet_hndl
+</UL>
+
+<P><STRONG><a name="[16aa788]"></a>UART0_IRQHandler</STRONG> (Thumb, 298 bytes, Stack size 12 bytes, uart0.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = UART0_IRQHandler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[16a95f4]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P>
+<H3>
+Local Symbols
+</H3><P>
+<H3>
+Undefined Global Symbols
+</H3><HR></body></html>

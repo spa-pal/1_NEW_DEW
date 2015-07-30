@@ -1,0 +1,55 @@
+;#<FEEDBACK># ARM Linker, RVCT4.0 [Build 728]: Last Updated: Mon Apr 02 10:21:32 2012
+;VERSION 0.2
+;FILE 25lc640.o
+lc640_read <= USED 0
+lc640_read_str <= USED 0
+;FILE avar.o
+reload_hndl <= USED 0
+;FILE beep.o
+;FILE common_func.o
+char2lcdbyx <= USED 0
+int2lcd_mm <= USED 0
+int2lcdhyx <= USED 0
+long2lcdhyx <= USED 0
+long2lcdyx_mmm <= USED 0
+;FILE control.o
+ext_drv <= USED 0
+rs232_transmit_of_sk <= USED 0
+rs232_transmit_of_temper <= USED 0
+;FILE full_can.o
+CAN_ISR_Rx1 <= USED 0
+FullCAN_SetFilter <= USED 0
+can1_init <= USED 0
+;FILE gran.o
+;FILE graphic.o
+;FILE lcd_agm1232_uku203.o
+delay <= USED 0
+lcd_off <= USED 0
+ltstrobe <= USED 0
+status <= USED 0
+;FILE main.o
+Delay <= USED 0
+;FILE memo.o
+;FILE ret.o
+;FILE startup_lpc17xx.o
+;FILE system_lpc17xx.o
+;FILE uart0.o
+UARTInit <= USED 0
+control_check0 <= USED 0
+getchar0 <= USED 0
+index_offset0 <= USED 0
+uart_in0 <= USED 0
+uart_in_an0 <= USED 0
+uart_out0 <= USED 0
+uart_out_adr_block <= USED 0
+;FILE uart2.o
+UART_2_Init <= USED 0
+control_check2 <= USED 0
+getchar2 <= USED 0
+index_offset2 <= USED 0
+putchar2 <= USED 0
+uart_in2 <= USED 0
+uart_in_an2 <= USED 0
+uart_out2 <= USED 0
+uart_out_adr2 <= USED 0
+uart_out_adr2_block <= USED 0

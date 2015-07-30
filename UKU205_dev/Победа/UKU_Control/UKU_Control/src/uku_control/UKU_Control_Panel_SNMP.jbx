@@ -1,0 +1,37 @@
+[PropertyInfo]
+_bps_button_actionPerformed,java.awt.event.ActionEvent,false,false, , ,true,<default>
+alarm_journal,javax.swing.JLabel,false,false, , ,false,<default>
+buttonGroup1,javax.swing.ButtonGroup,false,false, , ,false,<default>
+call_alarm_journal_button,javax.swing.JButton,false,false, , ,false,<default>
+capacity_control_button,javax.swing.JButton,false,false, , ,false,<default>
+capacity_control_combo,javax.swing.JComboBox,false,false, , ,false,<default>
+compensation_charge_button,javax.swing.JButton,false,false, , ,false,<default>
+compensation_charge_combo,javax.swing.JComboBox,false,false, , ,false,<default>
+data,uku_control.UKU_Data_Big,false,false, , ,false,<default>
+disable_bps_button,javax.swing.JButton,false,false, , ,false,<default>
+disable_bps_combo,javax.swing.JComboBox,false,false, , ,false,<default>
+disable_parallel_button,javax.swing.JButton,false,false, , ,false,<default>
+disable_psu,javax.swing.JLabel,false,false, , ,false,<default>
+disable_specfunctions_button,javax.swing.JButton,false,false, , ,false,<default>
+enable_parallel_button,javax.swing.JButton,false,false, , ,false,<default>
+event_viewer,uku_control.Event_Viewer,false,false, , ,false,<default>
+extio_panel_button,javax.swing.JButton,false,false, , ,false,<default>
+JLabel1,javax.swing.JLabel,false,false, , ,false,<default>
+main_control_label,javax.swing.JLabel,false,false, , ,false,<default>
+primary_psu,javax.swing.JLabel,false,false, , ,false,<default>
+promo_label,javax.swing.JLabel,false,false, , ,false,<default>
+radio_detailed_view_select,javax.swing.JRadioButton,false,false, , ,false,<default>
+radio_false_button,javax.swing.JRadioButton,false,false, , ,false,<default>
+radio_status_view_select,javax.swing.JRadioButton,false,false, , ,false,<default>
+set_bps_button,javax.swing.JButton,false,false, , ,false,<default>
+set_bps_combo,javax.swing.JComboBox,false,false, , ,false,<default>
+settings_menu,javax.swing.JButton,false,false, , ,false,<default>
+specfunction_label,javax.swing.JLabel,false,false, , ,false,<default>
+tings_menu_actionPerformed,java.awt.event.ActionEvent,false,false, , ,true,<default>
+unlock_psu_button,javax.swing.JButton,false,false, , ,false,<default>
+viewer,uku_control.Event_Viewer,false,false, , ,false,<default>
+[IconNames]
+
+
+
+

@@ -1,0 +1,86 @@
+;#<FEEDBACK># ARM Linker, 4.1 [Build 644]: Last Updated: Mon Apr 22 16:44:02 2013
+;VERSION 0.2
+;FILE 25lc640.o
+__asm___9_25lc640_c_spi1____REV16 <= USED 0
+__asm___9_25lc640_c_spi1____REVSH <= USED 0
+lc640_read <= USED 0
+lc640_read_str <= USED 0
+;FILE avar.o
+__asm___6_avar_c_71bc6fa6____REV16 <= USED 0
+__asm___6_avar_c_71bc6fa6____REVSH <= USED 0
+reload_hndl <= USED 0
+;FILE beep.o
+__asm___6_beep_c_beep_drv____REV16 <= USED 0
+__asm___6_beep_c_beep_drv____REVSH <= USED 0
+;FILE common_func.o
+__asm___13_common_func_c_clr_scrn____REV16 <= USED 0
+__asm___13_common_func_c_clr_scrn____REVSH <= USED 0
+char2lcdbyx <= USED 0
+int2lcd_mm <= USED 0
+int2lcdhyx <= USED 0
+long2lcdhyx <= USED 0
+long2lcdyx_mmm <= USED 0
+;FILE control.o
+__asm___9_control_c_da9f645d____REV16 <= USED 0
+__asm___9_control_c_da9f645d____REVSH <= USED 0
+ext_drv <= USED 0
+rs232_transmit_of_sk <= USED 0
+rs232_transmit_of_temper <= USED 0
+;FILE full_can.o
+CAN_ISR_Rx1 <= USED 0
+FullCAN_SetFilter <= USED 0
+__asm___10_full_can_c_0f077f62____REV16 <= USED 0
+__asm___10_full_can_c_0f077f62____REVSH <= USED 0
+can1_init <= USED 0
+;FILE gran.o
+;FILE graphic.o
+__asm___9_graphic_c_caracter____REV16 <= USED 0
+__asm___9_graphic_c_caracter____REVSH <= USED 0
+;FILE lcd_agm1232_uku203.o
+__asm___20_lcd_agm1232_uku203_c_lcd1_chk____REV16 <= USED 0
+__asm___20_lcd_agm1232_uku203_c_lcd1_chk____REVSH <= USED 0
+delay <= USED 0
+lcd_off <= USED 0
+ltstrobe <= USED 0
+status <= USED 0
+;FILE main.o
+Delay <= USED 0
+__asm___6_main_c_ABCDEF____REV16 <= USED 0
+__asm___6_main_c_ABCDEF____REVSH <= USED 0
+;FILE memo.o
+__asm___6_memo_c_c3bd8a49____REV16 <= USED 0
+__asm___6_memo_c_c3bd8a49____REVSH <= USED 0
+;FILE ret.o
+__asm___5_ret_c_ret_ind____REV16 <= USED 0
+__asm___5_ret_c_ret_ind____REVSH <= USED 0
+;FILE simbols.o
+__asm___9_simbols_c_sAVNET____REV16 <= USED 0
+__asm___9_simbols_c_sAVNET____REVSH <= USED 0
+;FILE startup_lpc17xx.o
+;FILE system_lpc17xx.o
+__asm___16_system_LPC17xx_c_6b61f0cc____REV16 <= USED 0
+__asm___16_system_LPC17xx_c_6b61f0cc____REVSH <= USED 0
+;FILE uart0.o
+UARTInit <= USED 0
+__asm___7_uart0_c_UIB0____REV16 <= USED 0
+__asm___7_uart0_c_UIB0____REVSH <= USED 0
+control_check0 <= USED 0
+getchar0 <= USED 0
+index_offset0 <= USED 0
+uart_in0 <= USED 0
+uart_in_an0 <= USED 0
+uart_out0 <= USED 0
+uart_out_adr_block <= USED 0
+;FILE uart2.o
+UART_2_Init <= USED 0
+__asm___7_uart2_c_UIB2____REV16 <= USED 0
+__asm___7_uart2_c_UIB2____REVSH <= USED 0
+control_check2 <= USED 0
+getchar2 <= USED 0
+index_offset2 <= USED 0
+putchar2 <= USED 0
+uart_in2 <= USED 0
+uart_in_an2 <= USED 0
+uart_out2 <= USED 0
+uart_out_adr2 <= USED 0
+uart_out_adr2_block <= USED 0
