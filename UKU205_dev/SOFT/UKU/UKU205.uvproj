@@ -43,7 +43,7 @@
             <NotGenerated>0</NotGenerated>
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
-          <OutputDirectory>..\..\</OutputDirectory>
+          <OutputDirectory>.\exe\</OutputDirectory>
           <OutputName>UKU205</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
@@ -163,7 +163,7 @@
             <DriverSelection>4096</DriverSelection>
           </Flash1>
           <Flash2>BIN\UL2CM3.DLL</Flash2>
-          <Flash3>"FM.EXE" (DEVICE($D,$X,0) ERASE(DEVICE,PROTECTISP) HEXFILE(#H,NOCHECKSUMS,NOFILL,PROTECTISP) COM(3,9600) HARDWARE(BOOTEXEC,100,50))</Flash3>
+          <Flash3>"FM.EXE" (DEVICE($D,$X,0) ERASE(DEVICE,PROTECTISP) HEXFILE(#H,NOCHECKSUMS,NOFILL,PROTECTISP) COM(1,9600) HARDWARE(BOOTEXEC,100,50))</Flash3>
           <Flash4></Flash4>
         </Utilities>
         <TargetArmAds>
@@ -581,8 +581,8 @@
                   <RVCTZI>0</RVCTZI>
                   <RVCTOtherData>0</RVCTOtherData>
                   <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>0</AlwaysBuild>
+                  <IncludeInBuild>2</IncludeInBuild>
+                  <AlwaysBuild>2</AlwaysBuild>
                   <GenerateAssemblyFile>2</GenerateAssemblyFile>
                   <AssembleAssemblyFile>2</AssembleAssemblyFile>
                   <PublicsOnly>2</PublicsOnly>

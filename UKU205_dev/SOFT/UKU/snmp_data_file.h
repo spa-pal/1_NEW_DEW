@@ -2,13 +2,14 @@ extern char snmp_community[10];
 
 //Информация об устройстве
 extern signed short snmp_device_code;
-extern signed 	   snmp_sernum;
+extern signed 	   	snmp_sernum;
 extern signed short snmp_sernum_lsb;
 extern signed short snmp_sernum_msb;
-extern char 	   snmp_location[100];
+extern char 	   	snmp_location[100];
 extern signed short snmp_numofbat;
 extern signed short snmp_numofbps;
 extern signed short snmp_numofevents;
+extern char 	   	snmp_model[30];		//Модель ИБЭПа
 
 //Состояние первичной сети
 extern signed short snmp_mains_power_voltage;
@@ -28,6 +29,7 @@ extern signed short snmp_bps_temperature[2];
 extern signed short snmp_bps_stat[2];
 
 //Состояние Батареи
+extern signed short snmp_bat_number;
 extern signed short snmp_bat_voltage;
 extern signed short snmp_bat_current;
 extern signed short snmp_bat_temperature;
@@ -86,6 +88,7 @@ extern unsigned char temp_ip[4];
 void snmp_data (void);
 void snmp_sernum_write (int mode); 
 void snmp_location_write (int mode);
+void snmp_model_write (int mode); 
 void snmp_command_execute (int mode);
 void event2snmp(char num);
 void snmp_main_bps_write (int mode);
@@ -106,6 +109,13 @@ void snmp_up_charge_koef_write (int mode);
 void snmp_powerup_psu_timeout_write (int mode);
 void snmp_max_temperature_write (int mode);
 void event2snmp(char num);
+void snmp_set_primary (int mode);
+void snmp_disable (int mode);
+void snmp_unlock (int mode);
+void snmp_parallel_switch (int mode);
+void snmp_vz_start (int mode);
+void snmp_ke_start (int mode);
+void snmp_spc_stop (int mode);
 void snmp_trap_send(char* str, signed short in0, signed short in1, signed short in2);
 
  

@@ -20,6 +20,7 @@ char 	   snmp_location[100];
 signed short snmp_numofbat;
 signed short snmp_numofbps;
 signed short snmp_numofevents;
+char 	   snmp_model[30];		//Модель ИБЭПа
 
 
 //Состояние первичной сети
@@ -40,6 +41,7 @@ signed short snmp_bps_temperature[2];
 signed short snmp_bps_stat[2];
 
 //Состояние Батареи
+signed short snmp_bat_number;
 signed short snmp_bat_voltage;
 signed short snmp_bat_current;
 signed short snmp_bat_temperature;
@@ -133,9 +135,9 @@ char i;
 snmp_mains_power_voltage=Unet;
 snmp_mains_power_frequency=fnet;
 snmp_mains_power_status=0;
-#if(UKU_VERSION==900)
+/*#if(UKU_VERSION==900)
 snmp_mains_power_status=2;
-#endif
+#endif*/
 if(St&0x01)snmp_mains_power_status|=0x01;
 if(St&0x01)snmp_mains_power_alarm=1;
 
@@ -185,6 +187,7 @@ else if(St_[1]&(1<<4))snmp_bps_stat[1]=(1<<1); 						//авария по Tmax
 else if(St_[1]&(1<<5))snmp_bps_stat[1]=(1<<5); 						//заблокирован
 else if((!(St_[1]&0x3c))&&(!St&0x01)&&(!OFFBP2))snmp_bps_stat[1]=1; 		//Работает
 
+snmp_bat_number=1;
 snmp_bat_voltage=Ubat;
 snmp_bat_current=Ibat;
 snmp_bat_temperature=t_b;
@@ -267,6 +270,19 @@ if(mode==MIB_WRITE)
 	for(i=0;i<64;i++)
 		{
 		lc640_write(EE_LOCATION+i,snmp_location[i]);
+		}
+	}
+}
+
+//-----------------------------------------------
+void snmp_model_write (int mode) 
+{
+char i;
+if(mode==MIB_WRITE)
+	{
+	for(i=0;i<30;i++)
+		{
+		lc640_write(EE_MODEL+i,snmp_model[i]);
 		}
 	}
 }
@@ -422,6 +438,140 @@ if(mode==MIB_WRITE)
 }
 
 //-----------------------------------------------
+void snmp_set_primary (int mode)
+{
+
+if(mode==MIB_WRITE)
+	{
+	if(snmp_command_parametr==1) 
+		{
+		lc640_write_int(EE_MAIN_BPS,0);
+	     cnt_src[1]=10;
+		snmp_command_parametr=COMMAND_OK;
+		}
+	
+	else if(snmp_command_parametr==2)
+		{
+	     lc640_write_int(EE_MAIN_BPS,1);
+		snmp_command_parametr=COMMAND_OK;
+		}	
+	else snmp_command_parametr=WRONG_PARAMETER;
+	}
+}
+
+//-----------------------------------------------
+void snmp_disable (int mode)
+{
+if(mode==MIB_WRITE)
+	{
+	if(snmp_command_parametr==1) 
+		{
+		St_[0]|=0x20;
+		St_[1]&=0xdf;
+		St&=0xfb;
+		cnt_src[1]=10;
+		snmp_plazma++;
+		snmp_plazma++;
+		snmp_command_parametr=COMMAND_OK;
+		}
+	
+	else if(snmp_command_parametr==2)
+		{
+		St_[1]|=0x20;
+		St_[0]&=0xdf;
+		St&=0xfb;
+		cnt_src[0]=10;	
+		snmp_plazma++;
+		snmp_command_parametr=COMMAND_OK;
+		}	
+	else snmp_command_parametr=WRONG_PARAMETER;
+	}
+}
+
+//-----------------------------------------------
+void snmp_unlock (int mode)
+{
+if(mode==MIB_WRITE)
+	{
+	if(snmp_command_parametr==1) 
+		{
+		snmp_command=COMMAND_OK;
+		St_[0]&=0xdf;
+		St_[1]&=0xdf;
+		}
+	
+	else snmp_command_parametr=WRONG_PARAMETER;
+	}
+}
+
+//-----------------------------------------------
+void snmp_parallel_switch (int mode)
+{
+if(mode==MIB_WRITE)
+	{
+	if(snmp_command_parametr==1) 
+		{
+		snmp_command=COMMAND_OK;
+	//	lc640_write_int(EE_PAR,1);
+		}
+	else if(snmp_command_parametr==0) 
+		{
+		snmp_command=COMMAND_OK;
+	//	lc640_write_int(EE_PAR,0);
+		}
+	
+	else snmp_command_parametr=WRONG_PARAMETER;
+	}
+}
+
+//-----------------------------------------------
+void snmp_vz_start (int mode)
+{
+if(mode==MIB_WRITE)
+	{
+	if((snmp_command_parametr>=1)&&(snmp_command_parametr<=10)) 
+		{
+		if(!(St&0x03)&&(spc_stat==spc_OFF))
+			{
+			spc_stat=spc_VZ;
+			cnt_vz_sec=0L;
+			cnt_vz_sec_=(4000L*(signed long)snmp_command_parametr);
+			vz_mem_hndl(1);
+			}
+		else snmp_command_parametr=COMMAND_FAIL;
+		}
+	
+	else snmp_command_parametr=WRONG_PARAMETER;
+	}
+}
+
+//-----------------------------------------------
+void snmp_ke_start (int mode)
+{
+if(mode==MIB_WRITE)
+	{
+	if(snmp_command_parametr==0) 
+		{
+		if(ke_start()==0)snmp_command=COMMAND_OK;
+		else snmp_command=COMMAND_FAIL;
+		}
+	
+	else snmp_command_parametr=WRONG_PARAMETER;
+	}
+}
+
+//-----------------------------------------------
+void snmp_spc_stop (int mode)
+{
+if(mode==MIB_WRITE)
+	{
+	spc_stat=spc_OFF;
+	snmp_command=COMMAND_OK;
+	}
+}
+
+
+//-----------------------------------------------
 void snmp_command_execute (int mode)
 {
 if(mode==MIB_WRITE)
@@ -503,7 +653,7 @@ if(mode==MIB_WRITE)
 					}
 				else
  					{
-					snmp_command=COMAND_FAIL;	
+					snmp_command=COMMAND_FAIL;	
  					}
 				}
 			else 
@@ -524,7 +674,7 @@ if(mode==MIB_WRITE)
 				}
 			else
 				{
-				snmp_command=COMAND_FAIL;	
+				snmp_command=COMMAND_FAIL;	
 				}
 			break;
 			}
