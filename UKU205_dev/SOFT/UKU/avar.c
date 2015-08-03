@@ -99,6 +99,7 @@ if(in==1)
 	data[3]='A';
 	lc640_write_long_ptr(lc640_adr+28,data);				
 	
+	snmp_trap_send("Battery alarm, not founded",2);
 	}
 
 else if(in==0)
@@ -163,7 +164,7 @@ avar_bat_hndl_lbl1:
 	data[3]='B';
 	lc640_write_long_ptr(lc640_adr+28,data);
 	
-
+	snmp_trap_send("Battery alarm cleared",2);
 	
 	}
 	
@@ -320,7 +321,7 @@ unsigned short event_ptr,lc640_adr,event_ptr_find,event_cnt;
 	data[3]='A';
 	lc640_write_long_ptr(lc640_adr+28,data);				
 
-	//snmp_trap_send("BAT Alarm, assimetry",5,1,2);
+	snmp_trap_send("BAT Alarm assimetry cleared",5,1,2);
 	}
 
 
@@ -851,6 +852,10 @@ if(in==1)
 	data[2]='A';
 	data[3]='A';
 	lc640_write_long_ptr(lc640_adr+28,data);
+	
+	if(bps==0)snmp_trap_send("PSU ¹1 alarm, disabled",2);
+	if(bps==1)snmp_trap_send("PSU ¹2 alarm, disabled",2);
+
 	}
 
 else if(in==0)
@@ -921,6 +926,9 @@ avar_src_hndl_lbl1:
 	data[2]='B';
 	data[3]='B';
 	lc640_write_long_ptr(lc640_adr+28,data);
+
+	if(bps==0)snmp_trap_send("PSU ¹1 alarm cleared",2);
+	if(bps==1)snmp_trap_send("PSU ¹2 alarm cleared",2);
 	
 	}
 	
@@ -993,5 +1001,5 @@ data[2]='A';
 data[3]='A';
 lc640_write_long_ptr(lc640_adr+28,data);				
 	
-	
+snmp_trap_send("Power unit started",2);	
 }

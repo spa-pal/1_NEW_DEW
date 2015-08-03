@@ -3970,7 +3970,7 @@ else if(ind==iMn)
 		sub_ind++;
 		gran_char(&sub_ind,0,11);
 		//suz_temp=1;
-		snmp_trap_send("ABCDEFGHIJKLMN",15,0,0);
+		//snmp_trap_send("ABCDEFGHIJKLMN",15,0,0);
 		}
 	else if(but==butU)
 		{

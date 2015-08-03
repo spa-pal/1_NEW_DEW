@@ -1,0 +1,1 @@
+-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I..\common\inc -IC:\Keil\ARM\INC\NXP\LPC17xx -I "C:\Keil\ARM\CMSIS\Include" -I "C:\Keil\ARM\INC\NXP" -DUKU_VERSION="900" -o ".\exe\web.o" --omf_browse ".\exe\web.crf" --depend ".\exe\web.d" "Web\Web.c"
