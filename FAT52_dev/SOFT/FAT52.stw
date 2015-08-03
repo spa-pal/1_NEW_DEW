@@ -14,7 +14,7 @@ Dependencies=
 [Project2]
 Filename=..\..\..\fat42_dev\soft_v2\fat42_v2.stp
 Dependencies=
-[Options]
-ActiveProject=fat52
-ActiveConfig=Release
-AddSortedElements=1
+
+[Project3]
+Filename=fat52_lbi\fat52_lbi.stp
+Dependencies=
