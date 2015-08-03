@@ -15,8 +15,8 @@ u8 mess[14];
 
 char rs485_out_buff[20];
 
-#define TX_BUFFER_SIZE1 50
-#define RX_BUFFER_SIZE1 300
+#define TX_BUFFER_SIZE1 300
+#define RX_BUFFER_SIZE1 50
 
 @near char tx_buffer1[TX_BUFFER_SIZE1]={0};
 signed char tx_counter1;
@@ -86,20 +86,20 @@ signed short plazma_int[3];
 short rs485_rx_cnt;
 char bRX485;
 
-@near short max_cell_volt[7];
-@near short min_cell_volt[7];
-@near short max_cell_temp[7];
-@near short min_cell_temp[7];
-@near short tot_bat_volt[7];
-@near short ch_curr[7];
-@near short dsch_curr[7];
-@near short s_o_c[7];
-@near short rat_cap[7];
-@near short	r_b_t[7];
-@near short	c_c_l_v[7];
-short	s_o_h[7];
-short	b_p_ser_num[7];
-unsigned char flags_byte0[7],flags_byte1[7];
+//@near short max_cell_volt[7];
+//@near short min_cell_volt[7];
+//@near short max_cell_temp[7];
+//@near short min_cell_temp[7];
+//@near short tot_bat_volt[7];
+//@near short ch_curr[7];
+//@near short dsch_curr[7];
+//@near short s_o_c[7];
+//@near short rat_cap[7];
+//@near short	r_b_t[7];
+//@near short	c_c_l_v[7];
+//short	s_o_h[7];
+//short	b_p_ser_num[7];
+//unsigned char flags_byte0[7],flags_byte1[7];
 unsigned char rs485_cnt=0;
 _Bool bRS485ERR;
 //char plazma_cnt;
@@ -247,14 +247,194 @@ return temp_out;
 //-----------------------------------------------
 void rx485_in_an(void)
 {
+//@near char rs485_tx_buff[300];
+
 	if(bRX485==1)
 	{
-			GPIOD->DDR|=(1<<7);
+	GPIOD->DDR|=(1<<7);
 	GPIOD->CR1|=(1<<7);
 	GPIOD->CR2&=~(1<<7);	
 	GPIOD->ODR^=(1<<7);
-		
-		max_cell_volt[0]=str2int(&rx_buffer[13],4);
+
+	tx_buffer1[0]=0x7e;
+	tx_buffer1[1]=0x31;
+	tx_buffer1[2]=0x31;
+	tx_buffer1[3]=0x30;
+	tx_buffer1[4]=0x31;
+	tx_buffer1[5]=0x44;
+	tx_buffer1[6]=0x30;
+	tx_buffer1[7]=0x30;
+	tx_buffer1[8]=0x30;
+	tx_buffer1[9]=0x36;
+	tx_buffer1[10]=0x31;
+	tx_buffer1[11]=0x31;
+	tx_buffer1[12]=0x38;
+	
+	tx_buffer1[13]=0x30;
+	tx_buffer1[14]=0x44;
+	tx_buffer1[15]=0x37;
+	tx_buffer1[16]=0x41;
+	tx_buffer1[17]=0x30;
+	tx_buffer1[18]=0x44;
+	tx_buffer1[19]=0x33;
+	tx_buffer1[20]=0x43;
+	tx_buffer1[21]=0x31;
+	tx_buffer1[22]=0x38;
+	tx_buffer1[23]=0x31;
+	tx_buffer1[24]=0x38;
+	tx_buffer1[25]=0x31;
+	tx_buffer1[26]=0x34;
+	tx_buffer1[27]=0x31;
+	tx_buffer1[28]=0x32;
+	tx_buffer1[29]=0x30;
+	tx_buffer1[30]=0x30;
+	tx_buffer1[31]=0x30;
+	tx_buffer1[32]=0x30;
+	tx_buffer1[33]=0x30;
+	tx_buffer1[34]=0x30;
+	tx_buffer1[35]=0x35;
+	tx_buffer1[36]=0x35;
+	tx_buffer1[37]=0x36;
+	tx_buffer1[38]=0x33;
+	tx_buffer1[39]=0x31;
+	tx_buffer1[40]=0x44;
+	tx_buffer1[41]=0x34;
+	tx_buffer1[42]=0x43;
+	tx_buffer1[43]=0x46;
+	tx_buffer1[44]=0x46;
+	tx_buffer1[45]=0x30;
+	tx_buffer1[46]=0x45;
+	tx_buffer1[47]=0x41;
+	tx_buffer1[48]=0x36;
+	tx_buffer1[49]=0x36;
+	tx_buffer1[50]=0x34;
+	tx_buffer1[51]=0x30;
+	tx_buffer1[52]=0x31;	
+	
+	tx_buffer1[13+40]=0x30;
+	tx_buffer1[14+40]=0x44;
+	tx_buffer1[15+40]=0x37;
+	tx_buffer1[16+40]=0x41;
+	tx_buffer1[17+40]=0x30;
+	tx_buffer1[18+40]=0x44;
+	tx_buffer1[19+40]=0x33;
+	tx_buffer1[20+40]=0x43;
+	tx_buffer1[21+40]=0x31;
+	tx_buffer1[22+40]=0x38;
+	tx_buffer1[23+40]=0x31;
+	tx_buffer1[24+40]=0x38;
+	tx_buffer1[25+40]=0x31;
+	tx_buffer1[26+40]=0x34;
+	tx_buffer1[27+40]=0x31;
+	tx_buffer1[28+40]=0x32;
+	tx_buffer1[29+40]=0x30;
+	tx_buffer1[30+40]=0x30;
+	tx_buffer1[31+40]=0x30;
+	tx_buffer1[32+40]=0x30;
+	tx_buffer1[33+40]=0x30;
+	tx_buffer1[34+40]=0x30;
+	tx_buffer1[35+40]=0x35;
+	tx_buffer1[36+40]=0x35;
+	tx_buffer1[37+40]=0x36;
+	tx_buffer1[38+40]=0x33;
+	tx_buffer1[39+40]=0x31;
+	tx_buffer1[40+40]=0x44;
+	tx_buffer1[41+40]=0x34;
+	tx_buffer1[42+40]=0x43;
+	tx_buffer1[43+40]=0x46;
+	tx_buffer1[44+40]=0x46;
+	tx_buffer1[45+40]=0x30;
+	tx_buffer1[46+40]=0x45;
+	tx_buffer1[47+40]=0x41;
+	tx_buffer1[48+40]=0x36;
+	tx_buffer1[49+40]=0x36;
+	tx_buffer1[50+40]=0x34;
+	tx_buffer1[51+40]=0x30;
+	tx_buffer1[52+40]=0x32;	
+
+	tx_buffer1[13+80]=0x30;
+	tx_buffer1[14+80]=0x44;
+	tx_buffer1[15+80]=0x37;
+	tx_buffer1[16+80]=0x41;
+	tx_buffer1[17+80]=0x30;
+	tx_buffer1[18+80]=0x44;
+	tx_buffer1[19+80]=0x33;
+	tx_buffer1[20+80]=0x43;
+	tx_buffer1[21+80]=0x31;
+	tx_buffer1[22+80]=0x38;
+	tx_buffer1[23+80]=0x31;
+	tx_buffer1[24+80]=0x38;
+	tx_buffer1[25+80]=0x31;
+	tx_buffer1[26+80]=0x34;
+	tx_buffer1[27+80]=0x31;
+	tx_buffer1[28+80]=0x32;
+	tx_buffer1[29+80]=0x30;
+	tx_buffer1[30+80]=0x30;
+	tx_buffer1[31+80]=0x30;
+	tx_buffer1[32+80]=0x30;
+	tx_buffer1[33+80]=0x30;
+	tx_buffer1[34+80]=0x30;
+	tx_buffer1[35+80]=0x35;
+	tx_buffer1[36+80]=0x35;
+	tx_buffer1[37+80]=0x36;
+	tx_buffer1[38+80]=0x33;
+	tx_buffer1[39+80]=0x31;
+	tx_buffer1[40+80]=0x44;
+	tx_buffer1[41+80]=0x34;
+	tx_buffer1[42+80]=0x43;
+	tx_buffer1[43+80]=0x46;
+	tx_buffer1[44+80]=0x46;
+	tx_buffer1[45+80]=0x30;
+	tx_buffer1[46+80]=0x45;
+	tx_buffer1[47+80]=0x41;
+	tx_buffer1[48+80]=0x36;
+	tx_buffer1[49+80]=0x36;
+	tx_buffer1[50+80]=0x34;
+	tx_buffer1[51+80]=0x30;
+	tx_buffer1[52+80]=0x33;
+	
+	tx_buffer1[13+120]=0x30;
+	tx_buffer1[14+120]=0x44;
+	tx_buffer1[15+120]=0x37;
+	tx_buffer1[16+120]=0x41;
+	tx_buffer1[17+120]=0x30;
+	tx_buffer1[18+120]=0x44;
+	tx_buffer1[19+120]=0x33;
+	tx_buffer1[20+120]=0x43;
+	tx_buffer1[21+120]=0x31;
+	tx_buffer1[22+120]=0x38;
+	tx_buffer1[23+120]=0x31;
+	tx_buffer1[24+120]=0x38;
+	tx_buffer1[25+120]=0x31;
+	tx_buffer1[26+120]=0x34;
+	tx_buffer1[27+120]=0x31;
+	tx_buffer1[28+120]=0x32;
+	tx_buffer1[29+120]=0x30;
+	tx_buffer1[30+120]=0x30;
+	tx_buffer1[31+120]=0x30;
+	tx_buffer1[32+120]=0x30;
+	tx_buffer1[33+120]=0x30;
+	tx_buffer1[34+120]=0x30;
+	tx_buffer1[35+120]=0x35;
+	tx_buffer1[36+120]=0x35;
+	tx_buffer1[37+120]=0x36;
+	tx_buffer1[38+120]=0x33;
+	tx_buffer1[39+120]=0x31;
+	tx_buffer1[40+120]=0x44;
+	tx_buffer1[41+120]=0x34;
+	tx_buffer1[42+120]=0x43;
+	tx_buffer1[43+120]=0x46;
+	tx_buffer1[44+120]=0x46;
+	tx_buffer1[45+120]=0x30;
+	tx_buffer1[46+120]=0x45;
+	tx_buffer1[47+120]=0x41;
+	tx_buffer1[48+120]=0x36;
+	tx_buffer1[49+120]=0x36;
+	tx_buffer1[50+120]=0x34;
+	tx_buffer1[51+120]=0x30;
+	tx_buffer1[52+120]=0x31;	
+
+/*		max_cell_volt[0]=str2int(&rx_buffer[13],4);
 		min_cell_volt[0]=str2int(&rx_buffer[17],4);
 		max_cell_temp[0]=str2int(&rx_buffer[21],2);
 		min_cell_temp[0]=str2int(&rx_buffer[23],2);
@@ -350,7 +530,7 @@ void rx485_in_an(void)
 		r_b_t[6]=str2int(&rx_buffer[43+240],2);
 		c_c_l_v[6]=str2int(&rx_buffer[45+240],4);
 		s_o_h[6]=str2int(&rx_buffer[49+240],2);
-		b_p_ser_num[6]=str2int(&rx_buffer[51+240],2);
+		b_p_ser_num[6]=str2int(&rx_buffer[51+240],2);*/
 		
 		rs485_cnt=0;
 		bRS485ERR=0;
@@ -363,7 +543,7 @@ void rx485_in_an(void)
 	GPIOD->CR2&=~(1<<7);	
 	GPIOD->ODR^=(1<<7);
 	
-		flags_byte0[0]=str2int(&rx_buffer[49],2);
+/*		flags_byte0[0]=str2int(&rx_buffer[49],2);
 		flags_byte1[0]++;//=str2int(&rx_buffer[51],2);
 
 		flags_byte0[1]=str2int(&rx_buffer[49+34],2);
@@ -382,7 +562,7 @@ void rx485_in_an(void)
 		flags_byte1[5]++;//=str2int(&rx_buffer[51],2);
 		
 		flags_byte0[6]=str2int(&rx_buffer[49+204],2);
-		flags_byte1[6]++;//=str2int(&rx_buffer[51],2);		
+		flags_byte1[6]++;//=str2int(&rx_buffer[51],2);*/		
 		rs485_cnt=0;
 		bRS485ERR=0;
 
@@ -525,13 +705,13 @@ if((mess[6]==19)&&(mess[7]==19)&&(mess[8]==GETTM))
 	//max_cell_volt=s_o_c;
 	
 	//max_cell_volt=35000;
-	
+/*	
 	can_transmit(0x18e,PUT_LB_TM1,transmit_cnt_number,*(((char*)&max_cell_volt[transmit_cnt_number])+1),*((char*)&max_cell_volt[transmit_cnt_number]),*(((char*)&min_cell_volt[transmit_cnt_number])+1),*((char*)&min_cell_volt[transmit_cnt_number]),*(((char*)&tot_bat_volt[transmit_cnt_number])+1),*((char*)&tot_bat_volt[transmit_cnt_number]));
 	can_transmit(0x18e,PUT_LB_TM2,transmit_cnt_number,*(((char*)&ch_curr[transmit_cnt_number])+1),*((char*)&ch_curr[transmit_cnt_number]),*(((char*)&dsch_curr[transmit_cnt_number])+1),*((char*)&dsch_curr[transmit_cnt_number]),*(((char*)&rat_cap[transmit_cnt_number])+1),*((char*)&rat_cap[transmit_cnt_number]));
 	can_transmit(0x18e,PUT_LB_TM3,transmit_cnt_number,(unsigned char)s_o_h[transmit_cnt_number],(unsigned char)s_o_c[transmit_cnt_number],*(((char*)&c_c_l_v[transmit_cnt_number])+1),*((char*)&c_c_l_v[transmit_cnt_number]),(unsigned char)r_b_t[transmit_cnt_number],(unsigned char)flags_byte0[transmit_cnt_number]);
 	can_transmit(0x18e,PUT_LB_TM4,transmit_cnt_number,(unsigned char)bRS485ERR,(unsigned char)rs485_cnt,(unsigned char)max_cell_temp[transmit_cnt_number],(unsigned char)min_cell_temp[transmit_cnt_number],(unsigned char)flags_byte1[transmit_cnt_number],0);
      link_cnt=0;
-     link=ON;
+     link=ON;*/
      
      	
     	
@@ -708,6 +888,7 @@ rs485_rx_cnt++;
 
 
 
+
 /*if(tx_stat==tsOFF)
 	{
 	gran(&rx_wr_index,0,RX_BUFFER_SIZE); 
@@ -722,10 +903,14 @@ rs485_rx_cnt++;
 	//;
 	if((rx_data==0x0d)&&(rs485_rx_cnt==20))
 		{
-		if(rs485_out_buff[8]==0x32)bRX485=1;
-		if(rs485_out_buff[8]==0x33)bRX485=2;
+		if(rx_buffer[8]==0x32){
+		bRX485=1;
 		}
 	
+		if(rx_buffer[8]==0x33){
+		bRX485=2;
+		}
+	}
 	if(rx_data==0x0d)rs485_rx_cnt=0;	
 	
 }
@@ -808,60 +993,7 @@ enableInterrupts();
 		{
 		b2Hz=0;
 		
-		if(bBAT_REQ)
-		{
-			bBAT_REQ=0;
-			
-			rs485_out_buff[0]=0x7e;
-			rs485_out_buff[1]=0x31;
-			rs485_out_buff[2]=0x31;
-			rs485_out_buff[3]=0x30;
-			rs485_out_buff[4]=0x31;
-			rs485_out_buff[5]=0x44;
-			rs485_out_buff[6]=0x30;
-			rs485_out_buff[7]=0x38;
-			rs485_out_buff[8]=0x32;
-			rs485_out_buff[9]=0x45;
-			rs485_out_buff[10]=0x30;
-			rs485_out_buff[11]=0x30;
-			rs485_out_buff[12]=0x32;
-			rs485_out_buff[13]=0x30;
-			rs485_out_buff[14]=0x31;
-			rs485_out_buff[15]=0x46;
-			rs485_out_buff[16]=0x44;
-			rs485_out_buff[17]=0x32;
-			rs485_out_buff[18]=0x37;
-			rs485_out_buff[19]=0x0d;
-			
-			uart1_out_adr(rs485_out_buff,20);
-		}
-		else
-		{
-			bBAT_REQ=1;
-			
-			rs485_out_buff[0]=0x7e;
-			rs485_out_buff[1]=0x31;
-			rs485_out_buff[2]=0x31;
-			rs485_out_buff[3]=0x30;
-			rs485_out_buff[4]=0x31;
-			rs485_out_buff[5]=0x44;
-			rs485_out_buff[6]=0x30;
-			rs485_out_buff[7]=0x38;
-			rs485_out_buff[8]=0x33;
-			rs485_out_buff[9]=0x45;
-			rs485_out_buff[10]=0x30;
-			rs485_out_buff[11]=0x30;
-			rs485_out_buff[12]=0x32;
-			rs485_out_buff[13]=0x30;
-			rs485_out_buff[14]=0x31;
-			rs485_out_buff[15]=0x46;
-			rs485_out_buff[16]=0x44;
-			rs485_out_buff[17]=0x32;
-			rs485_out_buff[18]=0x36;
-			rs485_out_buff[19]=0x0d;
-	
-			uart1_out_adr(rs485_out_buff,20);
-		}
+
 		}
       	
 	if(b1Hz)
