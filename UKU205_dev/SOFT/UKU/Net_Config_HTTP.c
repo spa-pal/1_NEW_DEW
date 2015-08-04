@@ -33,7 +33,7 @@
 //                          <200=> 200 ms
 //   <i> System Tick Timer interval for software timers
 //   <i> Default: 100 ms
-#define TICK_INTERVAL  100
+#define TICK_INTERVAL  10
 
 // </h>
 // <e>Ethernet Network Interface

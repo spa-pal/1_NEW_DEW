@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\exe\UKU205.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\exe\UKU205.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 4.1 [Build 644]: Last Updated: Mon Aug 03 15:41:23 2015
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 4.1 [Build 644]: Last Updated: Tue Aug 04 15:54:48 2015
 <BR><P>
 <H3>Maximum Stack Usage =        468 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -468,7 +468,7 @@ Global Symbols
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_http_server
 <LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_eth_link
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_TcpNet
+<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_TcpNet
 </UL>
 
 <P><STRONG><a name="[71]"></a>process_hl_udp</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, net_config_http.o(.text))
@@ -504,7 +504,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[92]"></a>gran_char</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, gran.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zar_drv
+<BR><BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zar_drv
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ke_start
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ind_hndl
@@ -512,18 +512,18 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[83]"></a>gran</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, gran.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;matemat
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kb_drv
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cntrl_hndl
-<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cntrl_drv
-<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avg_hndl
+<BR><BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;matemat
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kb_drv
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cntrl_hndl
+<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cntrl_drv
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avg_hndl
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bitmap_hndl
 <LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_in_an2
 </UL>
 
 <P><STRONG><a name="[ad]"></a>gran_ring</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, gran.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ubat_old_drv
+<BR><BR>[Called By]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ubat_old_drv
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
 </UL>
 
@@ -571,8 +571,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[e8]"></a>abs_pal</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, main.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_drv
+<P><STRONG><a name="[ea]"></a>abs_pal</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, main.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_drv
 </UL>
 
 <P><STRONG><a name="[1be]"></a>Delay</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, main.o(.text), UNUSED)
@@ -657,7 +657,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[be]"></a>but_drv</STRONG> (Thumb, 260 bytes, Stack size 28 bytes, main.o(.text))
+<P><STRONG><a name="[bf]"></a>but_drv</STRONG> (Thumb, 260 bytes, Stack size 28 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = but_drv
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -670,54 +670,55 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
 </UL>
-<P><STRONG><a name="[5f]"></a>main</STRONG> (Thumb, 890 bytes, Stack size 16 bytes, main.o(.text))
+<P><STRONG><a name="[5f]"></a>main</STRONG> (Thumb, 896 bytes, Stack size 16 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 468 + Unknown Stack Size
 <LI>Call Chain = main &rArr; ind_hndl &rArr; event2ind &rArr; int2lcd &rArr; bcd2lcd_zero
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zar_superviser_drv
-<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zar_drv
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;unet_drv
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ubat_old_drv
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_in0
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u_necc_hndl
-<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_tick
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_drv
-<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;src_drv
-<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spc_drv
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;snmp_data
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;samokalibr_drv
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ret_ind_sec_hndl
-<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ret_ind_hndl
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ret_hndl
-<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rele_drv
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;out_out
-<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mnemo_hndl
-<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;memo_read
+<BR>[Calls]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zar_superviser_drv
+<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zar_drv
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;unet_drv
+<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ubat_old_drv
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_in0
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u_necc_hndl
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_tick
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_drv
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;src_drv
+<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spc_drv
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;snmp_data
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;samokalibr_drv
+<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ret_ind_sec_hndl
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ret_ind_hndl
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ret_hndl
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;reload_hndl
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rele_drv
+<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;out_out
+<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mnemo_hndl
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;memo_read
 <LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mem_copy
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;matemat
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_TcpNet
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;matemat
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_TcpNet
 <LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_out
 <LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_on
 <LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_init
 <LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_clear
 <LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_long
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_int
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kb_drv
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kb_drv
 <LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_TcpNet
-<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fuse_drv
-<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ext_drv
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cntrl_hndl
-<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cntrl_drv
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cntrl_blok_hndl
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fuse_drv
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ext_drv
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cntrl_hndl
+<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cntrl_drv
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cntrl_blok_hndl
 <LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bgnd_par
-<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beep_hndl
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bat_drv
-<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avz_hndl
-<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avg_hndl
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;apv_drv
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_drv
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beep_hndl
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bat_drv
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avz_hndl
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avg_hndl
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;apv_drv
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_drv
 <LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTInit
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_drv
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_drv
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ind_hndl
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bitmap_hndl
@@ -728,7 +729,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[d8]"></a>apv_drv</STRONG> (Thumb, 156 bytes, Stack size 32 bytes, control.o(.text))
+<P><STRONG><a name="[d9]"></a>apv_drv</STRONG> (Thumb, 156 bytes, Stack size 32 bytes, control.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = apv_drv
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_src_reset
@@ -736,7 +737,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[d7]"></a>avg_hndl</STRONG> (Thumb, 214 bytes, Stack size 16 bytes, control.o(.text))
+<P><STRONG><a name="[d8]"></a>avg_hndl</STRONG> (Thumb, 214 bytes, Stack size 16 bytes, control.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = avg_hndl
 </UL>
 <BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gran
@@ -744,7 +745,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[d2]"></a>cntrl_drv</STRONG> (Thumb, 74 bytes, Stack size 24 bytes, control.o(.text))
+<P><STRONG><a name="[d3]"></a>cntrl_drv</STRONG> (Thumb, 74 bytes, Stack size 24 bytes, control.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = cntrl_drv
 </UL>
 <BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gran
@@ -752,7 +753,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[d1]"></a>cntrl_hndl</STRONG> (Thumb, 778 bytes, Stack size 40 bytes, control.o(.text))
+<P><STRONG><a name="[d2]"></a>cntrl_hndl</STRONG> (Thumb, 778 bytes, Stack size 40 bytes, control.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 328<LI>Call Chain = cntrl_hndl &rArr; avar_bat_hndl &rArr; snmp_trap_send &rArr; snmp_trap &rArr; udp_send &rArr; ip_send_frame &rArr; dispatch_frame &rArr; eth_send_frame &rArr; arp_cache_find &rArr; arp_send_req &rArr; alloc_mem
 </UL>
 <BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gran
@@ -761,10 +762,10 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[d5]"></a>zar_drv</STRONG> (Thumb, 684 bytes, Stack size 48 bytes, control.o(.text))
+<P><STRONG><a name="[d6]"></a>zar_drv</STRONG> (Thumb, 684 bytes, Stack size 48 bytes, control.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 100<LI>Call Chain = zar_drv &rArr; wrk_mem_hndl &rArr; lc640_write_long_ptr &rArr; lc640_rdsr
 </UL>
-<BR>[Calls]<UL><LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wrk_mem_hndl
+<BR>[Calls]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wrk_mem_hndl
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_int
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gran_char
@@ -772,21 +773,21 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[dd]"></a>zar_superviser_start</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, control.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zar_superviser_drv
+<P><STRONG><a name="[de]"></a>zar_superviser_start</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, control.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zar_superviser_drv
 </UL>
 
-<P><STRONG><a name="[c7]"></a>zar_superviser_drv</STRONG> (Thumb, 178 bytes, Stack size 16 bytes, control.o(.text))
+<P><STRONG><a name="[c8]"></a>zar_superviser_drv</STRONG> (Thumb, 178 bytes, Stack size 16 bytes, control.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = zar_superviser_drv &rArr; lc640_write_int &rArr; lc640_rdsr
 </UL>
-<BR>[Calls]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zar_superviser_start
+<BR>[Calls]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zar_superviser_start
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_int
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[d4]"></a>spc_drv</STRONG> (Thumb, 278 bytes, Stack size 16 bytes, control.o(.text))
+<P><STRONG><a name="[d5]"></a>spc_drv</STRONG> (Thumb, 278 bytes, Stack size 16 bytes, control.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = spc_drv &rArr; vz_mem_hndl &rArr; lc640_write_long_ptr &rArr; lc640_rdsr
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vz_mem_hndl
@@ -797,12 +798,14 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[d6]"></a>cntrl_blok_hndl</STRONG> (Thumb, 68 bytes, Stack size 0 bytes, control.o(.text))
+<P><STRONG><a name="[d7]"></a>cntrl_blok_hndl</STRONG> (Thumb, 68 bytes, Stack size 0 bytes, control.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[d0]"></a>ext_drv</STRONG> (Thumb, 644 bytes, Stack size 40 bytes, control.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = ext_drv
+<P><STRONG><a name="[d1]"></a>ext_drv</STRONG> (Thumb, 802 bytes, Stack size 40 bytes, control.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 288<LI>Call Chain = ext_drv &rArr; snmp_trap_send &rArr; snmp_trap &rArr; udp_send &rArr; ip_send_frame &rArr; dispatch_frame &rArr; eth_send_frame &rArr; arp_cache_find &rArr; arp_send_req &rArr; alloc_mem
+</UL>
+<BR>[Calls]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;snmp_trap_send
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -811,7 +814,7 @@ Global Symbols
 
 <P><STRONG><a name="[1c1]"></a>rs232_transmit_of_sk</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, control.o(.text), UNUSED)
 
-<P><STRONG><a name="[ca]"></a>bat_drv</STRONG> (Thumb, 582 bytes, Stack size 24 bytes, control.o(.text))
+<P><STRONG><a name="[cb]"></a>bat_drv</STRONG> (Thumb, 732 bytes, Stack size 24 bytes, control.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 312<LI>Call Chain = bat_drv &rArr; avar_bat_hndl &rArr; snmp_trap_send &rArr; snmp_trap &rArr; udp_send &rArr; ip_send_frame &rArr; dispatch_frame &rArr; eth_send_frame &rArr; arp_cache_find &rArr; arp_send_req &rArr; alloc_mem
 </UL>
 <BR>[Calls]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_bat_hndl
@@ -820,32 +823,32 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[cc]"></a>beep_hndl</STRONG> (Thumb, 106 bytes, Stack size 0 bytes, control.o(.text))
+<P><STRONG><a name="[cd]"></a>beep_hndl</STRONG> (Thumb, 106 bytes, Stack size 0 bytes, control.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = beep_hndl &rArr; beep_init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beep_init
+<BR>[Calls]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beep_init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[df]"></a>kb_start</STRONG> (Thumb, 114 bytes, Stack size 8 bytes, control.o(.text))
+<P><STRONG><a name="[e1]"></a>kb_start</STRONG> (Thumb, 114 bytes, Stack size 8 bytes, control.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = kb_start
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_drv
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kb_drv
+<BR>[Called By]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_drv
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kb_drv
 </UL>
 
-<P><STRONG><a name="[c6]"></a>kb_drv</STRONG> (Thumb, 218 bytes, Stack size 24 bytes, control.o(.text))
+<P><STRONG><a name="[c7]"></a>kb_drv</STRONG> (Thumb, 218 bytes, Stack size 24 bytes, control.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 312<LI>Call Chain = kb_drv &rArr; avar_bat_hndl &rArr; snmp_trap_send &rArr; snmp_trap &rArr; udp_send &rArr; ip_send_frame &rArr; dispatch_frame &rArr; eth_send_frame &rArr; arp_cache_find &rArr; arp_send_req &rArr; alloc_mem
 </UL>
-<BR>[Calls]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kb_start
+<BR>[Calls]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kb_start
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gran
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_bat_hndl
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[c4]"></a>matemat</STRONG> (Thumb, 1896 bytes, Stack size 64 bytes, control.o(.text))
+<P><STRONG><a name="[c5]"></a>matemat</STRONG> (Thumb, 1904 bytes, Stack size 64 bytes, control.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 352<LI>Call Chain = matemat &rArr; avar_bat_hndl &rArr; snmp_trap_send &rArr; snmp_trap &rArr; udp_send &rArr; ip_send_frame &rArr; dispatch_frame &rArr; eth_send_frame &rArr; arp_cache_find &rArr; arp_send_req &rArr; alloc_mem
 </UL>
 <BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gran
@@ -854,61 +857,61 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[e0]"></a>bp_on</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, control.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;out_out
+<P><STRONG><a name="[e2]"></a>bp_on</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, control.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;out_out
 </UL>
 
-<P><STRONG><a name="[e1]"></a>bp_off</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, control.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;out_out
+<P><STRONG><a name="[e3]"></a>bp_off</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, control.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;out_out
 </UL>
 
-<P><STRONG><a name="[c9]"></a>out_out</STRONG> (Thumb, 644 bytes, Stack size 36 bytes, control.o(.text))
+<P><STRONG><a name="[ca]"></a>out_out</STRONG> (Thumb, 644 bytes, Stack size 36 bytes, control.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = out_out
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bp_off
-<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bp_on
+<BR>[Calls]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bp_off
+<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bp_on
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[cb]"></a>rele_drv</STRONG> (Thumb, 612 bytes, Stack size 36 bytes, control.o(.text))
+<P><STRONG><a name="[cc]"></a>rele_drv</STRONG> (Thumb, 614 bytes, Stack size 36 bytes, control.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = rele_drv
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[e2]"></a>kz_on</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, control.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;samokalibr_drv
+<P><STRONG><a name="[e4]"></a>kz_on</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, control.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;samokalibr_drv
 </UL>
 
-<P><STRONG><a name="[e3]"></a>kz_off</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, control.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;samokalibr_drv
+<P><STRONG><a name="[e5]"></a>kz_off</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, control.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;samokalibr_drv
 </UL>
 
-<P><STRONG><a name="[c2]"></a>samokalibr_drv</STRONG> (Thumb, 106 bytes, Stack size 4 bytes, control.o(.text))
+<P><STRONG><a name="[c3]"></a>samokalibr_drv</STRONG> (Thumb, 104 bytes, Stack size 4 bytes, control.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = samokalibr_drv
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kz_off
-<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kz_on
+<BR>[Calls]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kz_off
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kz_on
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[c5]"></a>time_drv</STRONG> (Thumb, 112 bytes, Stack size 0 bytes, control.o(.text))
+<P><STRONG><a name="[c6]"></a>time_drv</STRONG> (Thumb, 112 bytes, Stack size 0 bytes, control.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = time_drv &rArr; kb_start
 </UL>
-<BR>[Calls]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kb_start
+<BR>[Calls]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kb_start
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[c8]"></a>u_necc_hndl</STRONG> (Thumb, 200 bytes, Stack size 20 bytes, control.o(.text))
+<P><STRONG><a name="[c9]"></a>u_necc_hndl</STRONG> (Thumb, 200 bytes, Stack size 20 bytes, control.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = u_necc_hndl
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[bf]"></a>unet_drv</STRONG> (Thumb, 108 bytes, Stack size 16 bytes, control.o(.text))
+<P><STRONG><a name="[c0]"></a>unet_drv</STRONG> (Thumb, 108 bytes, Stack size 16 bytes, control.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 304<LI>Call Chain = unet_drv &rArr; avar_unet_hndl &rArr; snmp_trap_send &rArr; snmp_trap &rArr; udp_send &rArr; ip_send_frame &rArr; dispatch_frame &rArr; eth_send_frame &rArr; arp_cache_find &rArr; arp_send_req &rArr; alloc_mem
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_unet_hndl
@@ -916,37 +919,37 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[e5]"></a>blok_src_reset</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, control.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;src_drv
+<P><STRONG><a name="[e7]"></a>blok_src_reset</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, control.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;src_drv
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_unet_hndl
 </UL>
 
-<P><STRONG><a name="[e4]"></a>apv2_hndl</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, control.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;src_drv
+<P><STRONG><a name="[e6]"></a>apv2_hndl</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, control.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;src_drv
 </UL>
 
-<P><STRONG><a name="[c0]"></a>src_drv</STRONG> (Thumb, 882 bytes, Stack size 40 bytes, control.o(.text))
+<P><STRONG><a name="[c1]"></a>src_drv</STRONG> (Thumb, 882 bytes, Stack size 40 bytes, control.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 328<LI>Call Chain = src_drv &rArr; avar_bps_hndl &rArr; snmp_trap_send &rArr; snmp_trap &rArr; udp_send &rArr; ip_send_frame &rArr; dispatch_frame &rArr; eth_send_frame &rArr; arp_cache_find &rArr; arp_send_req &rArr; alloc_mem
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_bps_hndl
-<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;apv2_hndl
-<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;blok_src_reset
+<BR>[Calls]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_bps_hndl
+<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;apv2_hndl
+<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;blok_src_reset
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[cf]"></a>fuse_drv</STRONG> (Thumb, 120 bytes, Stack size 32 bytes, control.o(.text))
+<P><STRONG><a name="[d0]"></a>fuse_drv</STRONG> (Thumb, 120 bytes, Stack size 32 bytes, control.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 304<LI>Call Chain = fuse_drv &rArr; avar_fuse_hndl &rArr; snmp_trap_send &rArr; snmp_trap &rArr; udp_send &rArr; ip_send_frame &rArr; dispatch_frame &rArr; eth_send_frame &rArr; arp_cache_find &rArr; arp_send_req &rArr; alloc_mem
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_fuse_hndl
+<BR>[Calls]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_fuse_hndl
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[bd]"></a>adc_drv</STRONG> (Thumb, 606 bytes, Stack size 32 bytes, control.o(.text))
+<P><STRONG><a name="[be]"></a>adc_drv</STRONG> (Thumb, 606 bytes, Stack size 32 bytes, control.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = adc_drv
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;abs_pal
+<BR>[Calls]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;abs_pal
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -978,7 +981,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
 </UL>
 
-<P><STRONG><a name="[d9]"></a>ubat_old_drv</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, control.o(.text))
+<P><STRONG><a name="[da]"></a>ubat_old_drv</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, control.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = ubat_old_drv
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gran_ring
@@ -986,78 +989,78 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[da]"></a>avz_hndl</STRONG> (Thumb, 126 bytes, Stack size 0 bytes, control.o(.text))
+<P><STRONG><a name="[db]"></a>avz_hndl</STRONG> (Thumb, 126 bytes, Stack size 0 bytes, control.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[db]"></a>mnemo_hndl</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, control.o(.text))
+<P><STRONG><a name="[dc]"></a>mnemo_hndl</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, control.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[ac]"></a>avar_src_reset</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, avar.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_unet_hndl
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;apv_drv
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;apv_drv
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
 </UL>
 
-<P><STRONG><a name="[aa]"></a>avar_bat_hndl</STRONG> (Thumb, 644 bytes, Stack size 40 bytes, avar.o(.text))
+<P><STRONG><a name="[aa]"></a>avar_bat_hndl</STRONG> (Thumb, 652 bytes, Stack size 40 bytes, avar.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 288<LI>Call Chain = avar_bat_hndl &rArr; snmp_trap_send &rArr; snmp_trap &rArr; udp_send &rArr; ip_send_frame &rArr; dispatch_frame &rArr; eth_send_frame &rArr; arp_cache_find &rArr; arp_send_req &rArr; alloc_mem
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;snmp_trap_send
-<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
+<BR>[Calls]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;snmp_trap_send
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_long_ptr
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_int
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;matemat
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kb_drv
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cntrl_hndl
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bat_drv
+<BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;matemat
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kb_drv
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cntrl_hndl
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bat_drv
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
 </UL>
 
 <P><STRONG><a name="[9a]"></a>avar_bat_as_hndl</STRONG> (Thumb, 438 bytes, Stack size 24 bytes, avar.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 272<LI>Call Chain = avar_bat_as_hndl &rArr; snmp_trap_send &rArr; snmp_trap &rArr; udp_send &rArr; ip_send_frame &rArr; dispatch_frame &rArr; eth_send_frame &rArr; arp_cache_find &rArr; arp_send_req &rArr; alloc_mem
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;snmp_trap_send
-<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
+<BR>[Calls]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;snmp_trap_send
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_int
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bat_drv
+<BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bat_drv
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
 </UL>
 
-<P><STRONG><a name="[e7]"></a>avar_fuse_hndl</STRONG> (Thumb, 300 bytes, Stack size 24 bytes, avar.o(.text))
+<P><STRONG><a name="[e9]"></a>avar_fuse_hndl</STRONG> (Thumb, 300 bytes, Stack size 24 bytes, avar.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 272<LI>Call Chain = avar_fuse_hndl &rArr; snmp_trap_send &rArr; snmp_trap &rArr; udp_send &rArr; ip_send_frame &rArr; dispatch_frame &rArr; eth_send_frame &rArr; arp_cache_find &rArr; arp_send_req &rArr; alloc_mem
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;snmp_trap_send
-<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
+<BR>[Calls]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;snmp_trap_send
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_int
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fuse_drv
+<BR>[Called By]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fuse_drv
 </UL>
 
-<P><STRONG><a name="[dc]"></a>wrk_mem_hndl</STRONG> (Thumb, 260 bytes, Stack size 32 bytes, avar.o(.text))
+<P><STRONG><a name="[dd]"></a>wrk_mem_hndl</STRONG> (Thumb, 260 bytes, Stack size 32 bytes, avar.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = wrk_mem_hndl &rArr; lc640_write_long_ptr &rArr; lc640_rdsr
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
+<BR>[Calls]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_int
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zar_drv
+<BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zar_drv
 </UL>
 
 <P><STRONG><a name="[9f]"></a>vz_mem_hndl</STRONG> (Thumb, 474 bytes, Stack size 40 bytes, avar.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = vz_mem_hndl &rArr; lc640_write_long_ptr &rArr; lc640_rdsr
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
+<BR>[Calls]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_long_ptr
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_int
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spc_drv
+<BR>[Called By]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spc_drv
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
 <LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;snmp_vz_start
 </UL>
@@ -1065,49 +1068,53 @@ Global Symbols
 <P><STRONG><a name="[ae]"></a>ke_mem_hndl</STRONG> (Thumb, 298 bytes, Stack size 32 bytes, avar.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = ke_mem_hndl &rArr; lc640_write_long_ptr &rArr; lc640_rdsr
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
+<BR>[Calls]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_int
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spc_drv
+<BR>[Called By]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spc_drv
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
 </UL>
 
-<P><STRONG><a name="[ab]"></a>avar_unet_hndl</STRONG> (Thumb, 790 bytes, Stack size 40 bytes, avar.o(.text))
+<P><STRONG><a name="[ab]"></a>avar_unet_hndl</STRONG> (Thumb, 798 bytes, Stack size 40 bytes, avar.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 288<LI>Call Chain = avar_unet_hndl &rArr; snmp_trap_send &rArr; snmp_trap &rArr; udp_send &rArr; ip_send_frame &rArr; dispatch_frame &rArr; eth_send_frame &rArr; arp_cache_find &rArr; arp_send_req &rArr; alloc_mem
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_out_adr0
-<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;snmp_trap_send
-<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
-<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc_95
-<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc_87
-<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;blok_src_reset
+<BR>[Calls]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_out_adr0
+<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
+<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc_95
+<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc_87
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;snmp_trap_send
+<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;blok_src_reset
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_long_ptr
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_int
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_src_reset
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;unet_drv
+<BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;unet_drv
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
 </UL>
 
-<P><STRONG><a name="[e6]"></a>avar_bps_hndl</STRONG> (Thumb, 712 bytes, Stack size 40 bytes, avar.o(.text))
+<P><STRONG><a name="[e8]"></a>avar_bps_hndl</STRONG> (Thumb, 728 bytes, Stack size 40 bytes, avar.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 288<LI>Call Chain = avar_bps_hndl &rArr; snmp_trap_send &rArr; snmp_trap &rArr; udp_send &rArr; ip_send_frame &rArr; dispatch_frame &rArr; eth_send_frame &rArr; arp_cache_find &rArr; arp_send_req &rArr; alloc_mem
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;snmp_trap_send
-<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
+<BR>[Calls]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;snmp_trap_send
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_long_ptr
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_int
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;src_drv
+<BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;src_drv
 </UL>
 
-<P><STRONG><a name="[ee]"></a>reload_hndl</STRONG> (Thumb, 292 bytes, Stack size 24 bytes, avar.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;snmp_trap_send
-<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
+<P><STRONG><a name="[ba]"></a>reload_hndl</STRONG> (Thumb, 296 bytes, Stack size 24 bytes, avar.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 272<LI>Call Chain = reload_hndl &rArr; snmp_trap_send &rArr; snmp_trap &rArr; udp_send &rArr; ip_send_frame &rArr; dispatch_frame &rArr; eth_send_frame &rArr; arp_cache_find &rArr; arp_send_req &rArr; alloc_mem
+</UL>
+<BR>[Calls]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;snmp_trap_send
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_int
+</UL>
+<BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[f2]"></a>clr_scrn</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, common_func.o(.text))
@@ -1305,7 +1312,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[9e]"></a>tree_down</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, common_func.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ret_hndl
+<BR><BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ret_hndl
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
 </UL>
 
@@ -1366,7 +1373,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
 </UL>
 
-<P><STRONG><a name="[c3]"></a>ret_ind_hndl</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, ret.o(.text))
+<P><STRONG><a name="[c4]"></a>ret_ind_hndl</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, ret.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -1374,7 +1381,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
 </UL>
 
-<P><STRONG><a name="[d3]"></a>ret_ind_sec_hndl</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, ret.o(.text))
+<P><STRONG><a name="[d4]"></a>ret_ind_sec_hndl</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, ret.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -1382,13 +1389,13 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;but_an
 </UL>
 
-<P><STRONG><a name="[c1]"></a>ret_hndl</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, ret.o(.text))
+<P><STRONG><a name="[c2]"></a>ret_hndl</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, ret.o(.text))
 <BR><BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tree_down
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[cd]"></a>memo_read</STRONG> (Thumb, 2026 bytes, Stack size 32 bytes, memo.o(.text))
+<P><STRONG><a name="[ce]"></a>memo_read</STRONG> (Thumb, 2026 bytes, Stack size 32 bytes, memo.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = memo_read &rArr; lc640_read_long &rArr; lc640_rdsr
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_long
@@ -1402,14 +1409,14 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
 </UL>
 
-<P><STRONG><a name="[de]"></a>beep_init</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, beep.o(.text))
+<P><STRONG><a name="[e0]"></a>beep_init</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, beep.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = beep_init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beep_hndl
+<BR>[Called By]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beep_hndl
 </UL>
 
 <P><STRONG><a name="[f7]"></a>spi1</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, 25lc640.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
+<BR><BR>[Called By]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write
@@ -1423,7 +1430,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[f6]"></a>spi1_config</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, 25lc640.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
+<BR><BR>[Called By]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write
@@ -1437,7 +1444,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[f8]"></a>spi1_unconfig</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, 25lc640.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
+<BR><BR>[Called By]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write
@@ -1457,7 +1464,7 @@ Global Symbols
 <LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_config
 <LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
+<BR>[Called By]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write
@@ -1470,7 +1477,7 @@ Global Symbols
 <LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_config
 <LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
+<BR>[Called By]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long_ptr
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write
@@ -1489,7 +1496,7 @@ Global Symbols
 <LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_config
 <LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;memo_read
+<BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;memo_read
 </UL>
 
 <P><STRONG><a name="[7d]"></a>lc640_read_int</STRONG> (Thumb, 114 bytes, Stack size 8 bytes, 25lc640.o(.text))
@@ -1500,16 +1507,16 @@ Global Symbols
 <LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_config
 <LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;reload_hndl
-<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wrk_mem_hndl
-<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_fuse_hndl
-<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_bps_hndl
-<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zar_superviser_drv
-<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zar_drv
+<BR>[Called By]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wrk_mem_hndl
+<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_fuse_hndl
+<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_bps_hndl
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zar_superviser_drv
+<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zar_drv
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vz_mem_hndl
-<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spc_drv
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;snmp_data
-<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;memo_read
+<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spc_drv
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;snmp_data
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;reload_hndl
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;memo_read
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ke_mem_hndl
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;event2ind
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_unet_hndl
@@ -1531,7 +1538,7 @@ Global Symbols
 <LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_config
 <LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;memo_read
+<BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;memo_read
 <LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_in_an0
 </UL>
@@ -1544,7 +1551,7 @@ Global Symbols
 <LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_config
 <LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_bps_hndl
+<BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_bps_hndl
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vz_mem_hndl
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;event_data2ind
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;event2ind
@@ -1586,14 +1593,14 @@ Global Symbols
 <LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_config
 <LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;reload_hndl
-<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wrk_mem_hndl
-<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_fuse_hndl
-<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_bps_hndl
-<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zar_superviser_drv
-<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zar_drv
+<BR>[Called By]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wrk_mem_hndl
+<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_fuse_hndl
+<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_bps_hndl
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zar_superviser_drv
+<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zar_drv
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vz_mem_hndl
-<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spc_drv
+<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spc_drv
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;reload_hndl
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;next_date_hndl
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ke_start
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ke_mem_hndl
@@ -1638,7 +1645,7 @@ Global Symbols
 <LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_in_an0
 </UL>
 
-<P><STRONG><a name="[e9]"></a>lc640_write_long_ptr</STRONG> (Thumb, 128 bytes, Stack size 16 bytes, 25lc640.o(.text))
+<P><STRONG><a name="[eb]"></a>lc640_write_long_ptr</STRONG> (Thumb, 128 bytes, Stack size 16 bytes, 25lc640.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = lc640_write_long_ptr &rArr; lc640_rdsr
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_rdsr
@@ -1647,11 +1654,11 @@ Global Symbols
 <LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_config
 <LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;reload_hndl
-<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wrk_mem_hndl
-<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_fuse_hndl
-<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_bps_hndl
+<BR>[Called By]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wrk_mem_hndl
+<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_fuse_hndl
+<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_bps_hndl
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vz_mem_hndl
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;reload_hndl
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ke_mem_hndl
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_unet_hndl
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_bat_hndl
@@ -1821,8 +1828,8 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
 </UL>
 <P><STRONG><a name="[10c]"></a>uart_in_an2</STRONG> (Thumb, 4848 bytes, Stack size 40 bytes, uart2.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc_95
-<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc_87
+<BR><BR>[Calls]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc_95
+<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc_87
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ptr_carry
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_long_ptr
@@ -1851,7 +1858,7 @@ Global Symbols
 <LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_in_an2
 </UL>
 
-<P><STRONG><a name="[eb]"></a>crc_87</STRONG> (Thumb, 32 bytes, Stack size 12 bytes, uart0.o(.text))
+<P><STRONG><a name="[ec]"></a>crc_87</STRONG> (Thumb, 32 bytes, Stack size 12 bytes, uart0.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = crc_87
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_unet_hndl
@@ -1859,7 +1866,7 @@ Global Symbols
 <LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_in_an2
 </UL>
 
-<P><STRONG><a name="[ec]"></a>crc_95</STRONG> (Thumb, 32 bytes, Stack size 12 bytes, uart0.o(.text))
+<P><STRONG><a name="[ed]"></a>crc_95</STRONG> (Thumb, 32 bytes, Stack size 12 bytes, uart0.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = crc_95
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_unet_hndl
@@ -1870,7 +1877,7 @@ Global Symbols
 <P><STRONG><a name="[111]"></a>putchar0</STRONG> (Thumb, 56 bytes, Stack size 12 bytes, uart0.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = putchar0
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_out_adr0
+<BR>[Called By]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_out_adr0
 <LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_out_adr_block
 <LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_out0
 </UL>
@@ -1879,7 +1886,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;putchar0
 </UL>
 
-<P><STRONG><a name="[ed]"></a>uart_out_adr0</STRONG> (Thumb, 62 bytes, Stack size 68 bytes, uart0.o(.text))
+<P><STRONG><a name="[ee]"></a>uart_out_adr0</STRONG> (Thumb, 62 bytes, Stack size 68 bytes, uart0.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = uart_out_adr0 &rArr; putchar0
 </UL>
 <BR>[Calls]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;putchar0
@@ -1911,19 +1918,19 @@ Global Symbols
 <P><STRONG><a name="[114]"></a>uart_in_an0</STRONG> (Thumb, 1506 bytes, Stack size 72 bytes, uart0.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = uart_in_an0 &rArr; uart_out_adr0 &rArr; putchar0
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_out_adr0
-<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc_95
-<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc_87
+<BR>[Calls]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_out_adr0
+<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc_95
+<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc_87
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_long
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_write_int
 <LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_long
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ke_start
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_in0
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_in0
 </UL>
 
 <P><STRONG><a name="[116]"></a>index_offset0</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, uart0.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_in0
+<BR><BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_in0
 <LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;control_check0
 </UL>
 
@@ -1932,10 +1939,10 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;index_offset0
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_in0
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_in0
 </UL>
 
-<P><STRONG><a name="[bc]"></a>uart_in0</STRONG> (Thumb, 144 bytes, Stack size 24 bytes, uart0.o(.text))
+<P><STRONG><a name="[bd]"></a>uart_in0</STRONG> (Thumb, 144 bytes, Stack size 24 bytes, uart0.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = uart_in0 &rArr; uart_in_an0 &rArr; uart_out_adr0 &rArr; putchar0
 </UL>
 <BR>[Calls]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;control_check0
@@ -2002,10 +2009,10 @@ Global Symbols
 <LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;datatime2str
 <LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;snmp_data
+<BR>[Called By]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;snmp_data
 </UL>
 
-<P><STRONG><a name="[ce]"></a>snmp_data</STRONG> (Thumb, 1018 bytes, Stack size 40 bytes, snmp_data_file.o(.text))
+<P><STRONG><a name="[cf]"></a>snmp_data</STRONG> (Thumb, 1018 bytes, Stack size 40 bytes, snmp_data_file.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = snmp_data &rArr; event2snmp &rArr; datatime2str
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_int
@@ -2191,14 +2198,16 @@ Global Symbols
 </UL>
 <P><STRONG><a name="[1ca]"></a>snmp_command_execute</STRONG> (Thumb, 304 bytes, Stack size 36 bytes, snmp_data_file.o(.text), UNUSED)
 
-<P><STRONG><a name="[ea]"></a>snmp_trap_send</STRONG> (Thumb, 490 bytes, Stack size 24 bytes, snmp_data_file.o(.text))
+<P><STRONG><a name="[df]"></a>snmp_trap_send</STRONG> (Thumb, 394 bytes, Stack size 24 bytes, snmp_data_file.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 248<LI>Call Chain = snmp_trap_send &rArr; snmp_trap &rArr; udp_send &rArr; ip_send_frame &rArr; dispatch_frame &rArr; eth_send_frame &rArr; arp_cache_find &rArr; arp_send_req &rArr; alloc_mem
 </UL>
-<BR>[Calls]<UL><LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;snmp_trap
+<BR>[Calls]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mem_copy
+<LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;snmp_trap
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;reload_hndl
-<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_fuse_hndl
-<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_bps_hndl
+<BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_fuse_hndl
+<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_bps_hndl
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;reload_hndl
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ext_drv
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_unet_hndl
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_bat_hndl
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_bat_as_hndl
@@ -2747,7 +2756,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eth_send_frame
 </UL>
 
-<P><STRONG><a name="[bb]"></a>main_TcpNet</STRONG> (Thumb, 52 bytes, Stack size 0 bytes, at_system.o(i.main_TcpNet))
+<P><STRONG><a name="[bc]"></a>main_TcpNet</STRONG> (Thumb, 52 bytes, Stack size 0 bytes, at_system.o(i.main_TcpNet))
 <BR><BR>[Stack]<UL><LI>Max Depth = 248 + Unknown Stack Size
 <LI>Call Chain = main_TcpNet &rArr; run_system &rArr; run_http_server &rArr; http_add_header &rArr; utc_to_http &rArr; __2sprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
@@ -2776,7 +2785,8 @@ Global Symbols
 <P><STRONG><a name="[b7]"></a>mem_copy</STRONG> (Thumb, 28 bytes, Stack size 12 bytes, at_lib.o(i.mem_copy))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = mem_copy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_TcpNet
+<BR>[Called By]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;snmp_trap_send
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_TcpNet
 <LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_http_server
 <LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_tcp
@@ -2961,7 +2971,7 @@ Global Symbols
 <LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mem_comp
 <LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ip_get_locadr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;snmp_trap_send
+<BR>[Called By]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;snmp_trap_send
 </UL>
 
 <P><STRONG><a name="[154]"></a>str_copy</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, at_lib.o(i.str_copy))
@@ -3063,7 +3073,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_http_server
 </UL>
 
-<P><STRONG><a name="[ba]"></a>timer_tick</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, at_system.o(i.timer_tick))
+<P><STRONG><a name="[bb]"></a>timer_tick</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, at_system.o(i.timer_tick))
 <BR><BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 

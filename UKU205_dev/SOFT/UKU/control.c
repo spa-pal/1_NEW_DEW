@@ -705,6 +705,10 @@ for (i=0;i<1;i++)
 				tout_stat[i]=tMAX;
 				if(!T_EXT_SNMP_TRAP_EN[i])//rs232_transmit_of_temper(i,1,tout[i]);
 					{
+					if(i==0)snmp_trap_send("DT #1 is on",2,2,2);
+					if(i==1)snmp_trap_send("DT #2 is on",2,2,2);
+					if(i==2)snmp_trap_send("DT #3 is on",2,2,2);
+					if(i==3)snmp_trap_send("DT #4 is on",2,2,2);
 					}
 				if(!T_EXT_REL_EN[i])av_rele|=(1<<(8+i));
 				if(!T_EXT_ZVUK_EN[i])av_beep|=(1<<(8+i));
@@ -722,6 +726,10 @@ for (i=0;i<1;i++)
 				tout_stat[i]=tNORM;
 				if(!T_EXT_SNMP_TRAP_EN[i])//rs232_transmit_of_temper(i,0,tout[i]);
 					{
+					if(i==0)snmp_trap_send("DT #1 is off",2,2,2);
+					if(i==1)snmp_trap_send("DT #2 is off",2,2,2);
+					if(i==2)snmp_trap_send("DT #3 is off",2,2,2);
+					if(i==3)snmp_trap_send("DT #4 is off",2,2,2);
 					}
 				if(AV_OFF_AVT)
 					{
@@ -797,6 +805,10 @@ for(i=0;i<4;i++)
 			sk_stat[i]=skON;
 			if(!SK_SNMP_TRAP_EN[i])//rs232_transmit_of_sk(i,1);
 				{
+				if(i==0)snmp_trap_send("SK #1 is on",2,2,2);
+				if(i==1)snmp_trap_send("SK #2 is on",2,2,2);
+				if(i==2)snmp_trap_send("SK #3 is on",2,2,2);
+				if(i==3)snmp_trap_send("SK #4 is on",2,2,2);
 				}
 			if(!SK_REL_EN[i])av_rele|=(1<<(11+i));
 			if(!SK_ZVUK_EN[i])av_beep|=(1<<(11+i));
@@ -806,6 +818,10 @@ for(i=0;i<4;i++)
 			sk_stat[i]=skOFF;
 			if(!SK_SNMP_TRAP_EN[i])//rs232_transmit_of_sk(i,0);
 				{
+				if(i==0)snmp_trap_send("SK #1 is off",2,2,2);
+				if(i==1)snmp_trap_send("SK #2 is off",2,2,2);
+				if(i==2)snmp_trap_send("SK #3 is off",2,2,2);
+				if(i==3)snmp_trap_send("SK #4 is off",2,2,2);
 				}
 			if(AV_OFF_AVT)
 				{

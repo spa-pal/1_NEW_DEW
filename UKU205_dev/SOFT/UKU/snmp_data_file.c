@@ -1293,13 +1293,36 @@ else if(dt[0]=='I')
 //-----------------------------------------------
 void snmp_trap_send(char* str, signed short in0, signed short in1, signed short in2)
 {
+/*
 for(snmp_trap_send_i=0;snmp_trap_send_i<100;snmp_trap_send_i++)
 	{
 	snmp_spc_trap_message[snmp_trap_send_i]=0;
-	}
+	} */
+
+mem_copy(snmp_spc_trap_message,"                                                  ",50);
+mem_copy(snmp_spc_trap_message,str,50);
+
+obj[0]=4;
+obj[1]=0;
+obj[2]=1;
+obj[3]=2;
+obj[4]=3;
+
+snmp_spc_trap_value_0=in0;
+snmp_spc_trap_value_1=in1;
+snmp_spc_trap_value_2=in2;
+/*	temp_ip[0]= 192;
+	temp_ip[1]= 168;
+	temp_ip[2]= 1;
+	temp_ip[3]= 9;
+	__disable_irq();
+		snmp_trap (temp_ip, 6, 3, obj);
+	__enable_irq();*/			
 
 
-obj[0] = 0;
+
+//obj[0] = 0;
+/*
 snmp_trap_send_ii=1;
 if(str!=0)
 	{
@@ -1332,7 +1355,7 @@ if(in2!=0xffff)
 	obj[snmp_trap_send_ii] = 10;
 	snmp_trap_send_ii++;
 	}
-
+ */
 
 if((ETH_TRAP1_IP_1!=255)&&(ETH_TRAP1_IP_2!=255)&&(ETH_TRAP1_IP_3!=255)&&(ETH_TRAP1_IP_4!=255))
 	{
@@ -1376,7 +1399,33 @@ if((ETH_TRAP5_IP_1!=255)&&(ETH_TRAP5_IP_2!=255)&&(ETH_TRAP5_IP_3!=255)&&(ETH_TRA
 	temp_ip[2]= ETH_TRAP5_IP_3;
 	temp_ip[3]= ETH_TRAP5_IP_4;
 	snmp_trap (temp_ip, 6, 3, obj);
-	}			
+	}
+
+/*for(snmp_trap_send_i=0;snmp_trap_send_i<100;snmp_trap_send_i++)
+	{
+	snmp_spc_trap_message[snmp_trap_send_i]=0;
+	}*/
+/*
+mem_copy(snmp_spc_trap_message,"ADSFFHFGJHFGHKKY                              ",20);
+snmp_spc_trap_value_0=11;
+snmp_spc_trap_value_1=22;
+snmp_spc_trap_value_2=33;
+
+
+
+	obj[0]=4;
+	obj[1]=0;
+	obj[2]=1;
+	obj[3]=2;
+	obj[4]=3;
+
+	temp_ip[0]= 192;
+	temp_ip[1]= 168;
+	temp_ip[2]= 1;
+	temp_ip[3]= 9;
+	__disable_irq();
+		snmp_trap (temp_ip, 6, 3, obj);
+	__enable_irq();*/			
 }
 
 

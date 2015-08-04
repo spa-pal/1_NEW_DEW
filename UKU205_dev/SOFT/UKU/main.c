@@ -3971,6 +3971,8 @@ else if(ind==iMn)
 		gran_char(&sub_ind,0,11);
 		//suz_temp=1;
 		//snmp_trap_send("ABCDEFGHIJKLMN",15,0,0);
+		//snmp_trap_send("Main power is on",2,2,2);
+		//reload_hndl();
 		}
 	else if(but==butU)
 		{
@@ -8470,6 +8472,7 @@ if(lc640_read_int(EE_ETH_IS_ON)==1)
 
 	}
 bRESET_RESET=0;
+reload_hndl();
 
 while (1) 
 	{
