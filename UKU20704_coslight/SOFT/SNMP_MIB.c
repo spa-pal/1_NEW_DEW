@@ -483,10 +483,26 @@ char* aaa_="abc";
 
 	{ MIB_INTEGER | MIB_ATR_RO,  	13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_ENTRY_NUMBER, 1},  			MIB_INT(snmp_lakb_number[0]),  	NULL},	//Номер ЛАКБ
 	{ MIB_INTEGER | MIB_ATR_RO,  	13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_ENTRY_NUMBER, 2},  			MIB_INT(snmp_lakb_number[1]),  	NULL},	//Номер ЛАКБ
+	{ MIB_INTEGER | MIB_ATR_RO,  	13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_ENTRY_NUMBER, 3},  			MIB_INT(snmp_lakb_number[2]),  	NULL},	//Номер ЛАКБ
+	{ MIB_INTEGER | MIB_ATR_RO,  	13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_ENTRY_NUMBER, 4},  			MIB_INT(snmp_lakb_number[3]),  	NULL},	//Номер ЛАКБ
+	{ MIB_INTEGER | MIB_ATR_RO,  	13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_ENTRY_NUMBER, 5},  			MIB_INT(snmp_lakb_number[4]),  	NULL},	//Номер ЛАКБ
+	{ MIB_INTEGER | MIB_ATR_RO,  	13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_ENTRY_NUMBER, 6},  			MIB_INT(snmp_lakb_number[5]),  	NULL},	//Номер ЛАКБ
+	{ MIB_INTEGER | MIB_ATR_RO,  	13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_ENTRY_NUMBER, 7},  			MIB_INT(snmp_lakb_number[6]),  	NULL},	//Номер ЛАКБ
+
 	{ MIB_INTEGER | MIB_ATR_RO,  	13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_MAX_CELL_VOLTAGE, 1},  		MIB_INT(snmp_lakb_max_cell_voltage[0]),  	NULL},	//Максимальное напряжение ячейки ЛАКБ
 	{ MIB_INTEGER | MIB_ATR_RO,  	13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_MAX_CELL_VOLTAGE, 2},  		MIB_INT(snmp_lakb_max_cell_voltage[1]),  	NULL},	//Максимальное напряжение ячейки ЛАКБ
+	{ MIB_INTEGER | MIB_ATR_RO,  	13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_MAX_CELL_VOLTAGE, 3},  		MIB_INT(snmp_lakb_max_cell_voltage[2]),  	NULL},	//Максимальное напряжение ячейки ЛАКБ
+	{ MIB_INTEGER | MIB_ATR_RO,  	13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_MAX_CELL_VOLTAGE, 4},  		MIB_INT(snmp_lakb_max_cell_voltage[3]),  	NULL},	//Максимальное напряжение ячейки ЛАКБ
+	{ MIB_INTEGER | MIB_ATR_RO,  	13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_MAX_CELL_VOLTAGE, 5},  		MIB_INT(snmp_lakb_max_cell_voltage[4]),  	NULL},	//Максимальное напряжение ячейки ЛАКБ
+	{ MIB_INTEGER | MIB_ATR_RO,  	13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_MAX_CELL_VOLTAGE, 6},  		MIB_INT(snmp_lakb_max_cell_voltage[5]),  	NULL},	//Максимальное напряжение ячейки ЛАКБ
+	{ MIB_INTEGER | MIB_ATR_RO,  	13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_MAX_CELL_VOLTAGE, 7},  		MIB_INT(snmp_lakb_max_cell_voltage[6]),  	NULL},	//Максимальное напряжение ячейки ЛАКБ
 	{ MIB_INTEGER | MIB_ATR_RO,  	13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_MIN_CELL_VOLTAGE, 1},  		MIB_INT(snmp_lakb_min_cell_voltage[0]),  	NULL},	//Минимальное напряжение ячейки ЛАКБ
 	{ MIB_INTEGER | MIB_ATR_RO,  	13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_MIN_CELL_VOLTAGE, 2},  		MIB_INT(snmp_lakb_min_cell_voltage[1]),  	NULL},	//Минимальное напряжение ячейки ЛАКБ
+	{ MIB_INTEGER | MIB_ATR_RO,  	13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_MIN_CELL_VOLTAGE, 3},  		MIB_INT(snmp_lakb_min_cell_voltage[2]),  	NULL},	//Минимальное напряжение ячейки ЛАКБ
+	{ MIB_INTEGER | MIB_ATR_RO,  	13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_MIN_CELL_VOLTAGE, 4},  		MIB_INT(snmp_lakb_min_cell_voltage[3]),  	NULL},	//Минимальное напряжение ячейки ЛАКБ
+	{ MIB_INTEGER | MIB_ATR_RO,  	13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_MIN_CELL_VOLTAGE, 5},  		MIB_INT(snmp_lakb_min_cell_voltage[4]),  	NULL},	//Минимальное напряжение ячейки ЛАКБ
+	{ MIB_INTEGER | MIB_ATR_RO,  	13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_MIN_CELL_VOLTAGE, 6},  		MIB_INT(snmp_lakb_min_cell_voltage[5]),  	NULL},	//Минимальное напряжение ячейки ЛАКБ
+	{ MIB_INTEGER | MIB_ATR_RO,  	13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_MIN_CELL_VOLTAGE, 7},  		MIB_INT(snmp_lakb_min_cell_voltage[6]),  	NULL},	//Минимальное напряжение ячейки ЛАКБ
 	{ MIB_INTEGER | MIB_ATR_RO,  	13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_MAX_CELL_TEMPERATURE, 1},  	MIB_INT(snmp_lakb_max_cell_temperature[0]),  	NULL},	//Максимальная температура ячейки ЛАКБ
 	{ MIB_INTEGER | MIB_ATR_RO,  	13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_MAX_CELL_TEMPERATURE, 2},  	MIB_INT(snmp_lakb_max_cell_temperature[1]),  	NULL},	//Максимальная температура ячейки ЛАКБ
 	{ MIB_INTEGER | MIB_ATR_RO,  	13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_MIN_CELL_TEMPERATURE, 1},  	MIB_INT(snmp_lakb_min_cell_temperature[0]),  	NULL},	//Минимальная температура ячейки ЛАКБ
@@ -507,10 +523,59 @@ char* aaa_="abc";
 	{ MIB_INTEGER | MIB_ATR_RO,  	13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_CCLV, 2},  				MIB_INT(snmp_lakb_cclv[1]),  		NULL},	//Максимальный ток заряда ЛАКБ
 	{ MIB_INTEGER | MIB_ATR_RO,  	13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_RBT, 1},  				MIB_INT(snmp_lakb_rbt[0]),  		NULL},	//Оцениваемое время работы ЛАКБ
 	{ MIB_INTEGER | MIB_ATR_RO,  	13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_RBT, 2},  				MIB_INT(snmp_lakb_rbt[1]),  		NULL},	//Оцениваемое время работы ЛАКБ
-	{ MIB_INTEGER | MIB_ATR_RO,  	13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_FLAGS1, 1},  				MIB_INT(snmp_lakb_flags1),  		NULL},	//Первый флаг состояния ЛАКБ
-	{ MIB_INTEGER | MIB_ATR_RO,  	13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_FLAGS1, 2},  				MIB_INT(snmp_lakb_flags1),  		NULL},	//Первый флаг состояния ЛАКБ
-	{ MIB_INTEGER | MIB_ATR_RO,  	13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_FLAGS2, 1},  				MIB_INT(snmp_lakb_flags2),  		NULL},	//Второй флаг состояния ЛАКБ
-	{ MIB_INTEGER | MIB_ATR_RO,  	13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_FLAGS2, 2},  				MIB_INT(snmp_lakb_flags2),  		NULL},	//Второй флаг состояния ЛАКБ
+	{ MIB_INTEGER | MIB_ATR_RO,  	13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_FLAGS1, 1},  				MIB_INT(snmp_lakb_flags1[0]),  		NULL},	//Первый флаг состояния ЛАКБ
+	{ MIB_INTEGER | MIB_ATR_RO,  	13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_FLAGS1, 2},  				MIB_INT(snmp_lakb_flags1[1]),  		NULL},	//Первый флаг состояния ЛАКБ
+	{ MIB_INTEGER | MIB_ATR_RO,  	13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_FLAGS2, 1},  				MIB_INT(snmp_lakb_flags2[0]),  		NULL},	//Второй флаг состояния ЛАКБ
+	{ MIB_INTEGER | MIB_ATR_RO,  	13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_FLAGS2, 2},  				MIB_INT(snmp_lakb_flags2[1]),  		NULL},	//Второй флаг состояния ЛАКБ
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP1, 1},  				MIB_INT(snmp_lakb_damp1[0][0]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP1, 2},  				MIB_INT(snmp_lakb_damp1[1][0]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP1, 3},  				MIB_INT(snmp_lakb_damp1[2][0]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP1, 4},  				MIB_INT(snmp_lakb_damp1[3][0]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP1, 5},  				MIB_INT(snmp_lakb_damp1[4][0]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP1, 6},  				MIB_INT(snmp_lakb_damp1[5][0]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP1, 7},  				MIB_INT(snmp_lakb_damp1[6][0]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP2, 1},  				MIB_INT(snmp_lakb_damp1[0][30]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP2, 2},  				MIB_INT(snmp_lakb_damp1[1][30]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP2, 3},  				MIB_INT(snmp_lakb_damp1[2][30]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP2, 4},  				MIB_INT(snmp_lakb_damp1[3][30]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP2, 5},  				MIB_INT(snmp_lakb_damp1[4][30]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP2, 6},  				MIB_INT(snmp_lakb_damp1[5][30]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP2, 7},  				MIB_INT(snmp_lakb_damp1[6][30]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP3, 1},  				MIB_INT(snmp_lakb_damp1[0][60]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP3, 2},  				MIB_INT(snmp_lakb_damp1[1][60]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP3, 3},  				MIB_INT(snmp_lakb_damp1[2][60]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP3, 4},  				MIB_INT(snmp_lakb_damp1[3][60]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP3, 5},  				MIB_INT(snmp_lakb_damp1[4][60]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP3, 6},  				MIB_INT(snmp_lakb_damp1[5][60]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP3, 7},  				MIB_INT(snmp_lakb_damp1[6][60]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP4, 1},  				MIB_INT(snmp_lakb_damp1[0][90]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP4, 2},  				MIB_INT(snmp_lakb_damp1[1][90]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP4, 3},  				MIB_INT(snmp_lakb_damp1[2][90]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP4, 4},  				MIB_INT(snmp_lakb_damp1[3][90]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP4, 5},  				MIB_INT(snmp_lakb_damp1[4][90]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP4, 6},  				MIB_INT(snmp_lakb_damp1[5][90]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP4, 7},  				MIB_INT(snmp_lakb_damp1[6][90]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP5, 1},  				MIB_INT(snmp_lakb_damp1[0][120]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP5, 2},  				MIB_INT(snmp_lakb_damp1[1][120]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP5, 3},  				MIB_INT(snmp_lakb_damp1[2][120]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP5, 4},  				MIB_INT(snmp_lakb_damp1[3][120]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP5, 5},  				MIB_INT(snmp_lakb_damp1[4][120]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP5, 6},  				MIB_INT(snmp_lakb_damp1[5][120]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP5, 7},  				MIB_INT(snmp_lakb_damp1[6][120]),  		NULL},	//Отладка
+/*	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP6, 1},  				MIB_INT(snmp_lakb_damp1[0][120]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP6, 2},  				MIB_INT(snmp_lakb_damp1[1][120]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP6, 3},  				MIB_INT(snmp_lakb_damp1[2][0]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP6, 4},  				MIB_INT(snmp_lakb_damp1[3][0]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP6, 5},  				MIB_INT(snmp_lakb_damp1[4][0]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP6, 6},  				MIB_INT(snmp_lakb_damp1[5][0]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP6, 7},  				MIB_INT(snmp_lakb_damp1[6][0]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP7, 1},  				MIB_INT(snmp_lakb_damp1[0][0]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP7, 2},  				MIB_INT(snmp_lakb_damp1[1][0]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP7, 3},  				MIB_INT(snmp_lakb_damp1[2][0]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP7, 4},  				MIB_INT(snmp_lakb_damp1[3][0]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP7, 5},  				MIB_INT(snmp_lakb_damp1[4][0]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP7, 6},  				MIB_INT(snmp_lakb_damp1[5][0]),  		NULL},	//Отладка
+	{ MIB_OCTET_STR | MIB_ATR_RO, 13, {OID_ENTERPRISE, OID_DEVICE, DISPLAY_LAKB, DISPLAY_LAKB_DAMP7, 7},  				MIB_INT(snmp_lakb_damp1[6][0]),  		NULL},	//Отладка	*/
 
 
 

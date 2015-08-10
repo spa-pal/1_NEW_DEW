@@ -2446,8 +2446,8 @@
       <Focus>0</Focus>
       <ColumnNumber>121</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1</TopLine>
-      <CurrentLine>1</CurrentLine>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\WEB\web.inp</PathWithFileName>
       <FilenameWithoutPath>web.inp</FilenameWithoutPath>
@@ -2598,10 +2598,10 @@
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>17</ColumnNumber>
+      <ColumnNumber>23</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>32</TopLine>
-      <CurrentLine>51</CurrentLine>
+      <CurrentLine>56</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\cmd.h</PathWithFileName>
       <FilenameWithoutPath>cmd.h</FilenameWithoutPath>
@@ -2815,10 +2815,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>1</ColumnNumber>
+      <ColumnNumber>43</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1566</TopLine>
-      <CurrentLine>1571</CurrentLine>
+      <TopLine>1610</TopLine>
+      <CurrentLine>1647</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\full_can.c</PathWithFileName>
       <FilenameWithoutPath>full_can.c</FilenameWithoutPath>
@@ -2950,7 +2950,7 @@
   </AlienFiles>
 
   <AlienFiles>
-    <PathWithFilename>E:\Users\Pal\DEVICES\UKU_207_U_dev\SOFT\UKU\Coslight\eeprom_map.h</PathWithFilename>
+    <PathWithFilename>E:\Users\Pal\DEVICES\1_NEW_DEV\UKU20704_coslight\SOFT\eeprom_map.h</PathWithFilename>
     <TopLine>85</TopLine>
     <CurrentLine>104</CurrentLine>
     <Constant>0</Constant>
@@ -3002,7 +3002,7 @@
   </AlienFiles>
 
   <AlienFiles>
-    <PathWithFilename>E:\Users\Pal\DEVICES\UKU_207_U_dev\SOFT\UKU\Coslight\modbus.h</PathWithFilename>
+    <PathWithFilename>E:\Users\Pal\DEVICES\1_NEW_DEV\UKU20704_coslight\SOFT\modbus.h</PathWithFilename>
     <TopLine>1</TopLine>
     <CurrentLine>11</CurrentLine>
     <Constant>0</Constant>
@@ -3054,7 +3054,7 @@
   </AlienFiles>
 
   <AlienFiles>
-    <PathWithFilename>E:\Users\Pal\DEVICES\UKU_207_U_dev\SOFT\UKU\Coslight\main.h</PathWithFilename>
+    <PathWithFilename>E:\Users\Pal\DEVICES\1_NEW_DEV\UKU20704_coslight\SOFT\main.h</PathWithFilename>
     <TopLine>1009</TopLine>
     <CurrentLine>1025</CurrentLine>
     <Constant>0</Constant>
@@ -3136,8 +3136,14 @@
     <ActiveMDIGroup>0</ActiveMDIGroup>
     <MDIGroup>
       <Size>100</Size>
-      <ActiveTab>8</ActiveTab>
+      <ActiveTab>0</ActiveTab>
       <Documents>
+        <Doc>
+          <Name>.\cmd.h</Name>
+          <ColumnNumber>23</ColumnNumber>
+          <TopLine>32</TopLine>
+          <CurrentLine>56</CurrentLine>
+        </Doc>
         <Doc>
           <Name>.\snmp_data_file.c</Name>
           <ColumnNumber>16</ColumnNumber>
@@ -3164,9 +3170,9 @@
         </Doc>
         <Doc>
           <Name>.\full_can.c</Name>
-          <ColumnNumber>1</ColumnNumber>
-          <TopLine>1566</TopLine>
-          <CurrentLine>1571</CurrentLine>
+          <ColumnNumber>43</ColumnNumber>
+          <TopLine>1610</TopLine>
+          <CurrentLine>1647</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\control.c</Name>
@@ -3245,12 +3251,6 @@
           <ColumnNumber>0</ColumnNumber>
           <TopLine>7</TopLine>
           <CurrentLine>16</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\cmd.h</Name>
-          <ColumnNumber>17</ColumnNumber>
-          <TopLine>32</TopLine>
-          <CurrentLine>51</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\Timer.c</Name>

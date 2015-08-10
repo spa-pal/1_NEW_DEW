@@ -76,7 +76,7 @@ extern char bOUT_FREE;
 extern char can_rotor[10];
 extern char plazma_can;
 extern char plazma_can1,plazma_can2,plazma_can3,plazma_can4;
-
+extern char ccc_plazma[20];
 
 
 typedef struct

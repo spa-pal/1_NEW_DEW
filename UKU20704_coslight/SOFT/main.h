@@ -183,7 +183,11 @@
 #define DISPLAY_LAKB_RBT					1,13
 #define DISPLAY_LAKB_FLAGS1				1,14
 #define DISPLAY_LAKB_FLAGS2				1,15
-
+#define DISPLAY_LAKB_DAMP1				1,16
+#define DISPLAY_LAKB_DAMP2				1,17
+#define DISPLAY_LAKB_DAMP3				1,18
+#define DISPLAY_LAKB_DAMP4				1,19
+#define DISPLAY_LAKB_DAMP5				1,20
 
 
 
@@ -1033,6 +1037,7 @@ typedef struct
 	signed short 	_battCommState;	//0 - норма, 1 - отсутствует связь промежуточной платы и батареи(RS485), 2 - отсутствует связь с промежуточной платой (KAN) 	
 	} LAKB_STAT; 
 extern LAKB_STAT lakb[2];
+extern char lakb_damp[7][60];
 
 
 //***********************************************

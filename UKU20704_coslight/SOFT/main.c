@@ -250,6 +250,7 @@ MAKB_STAT makb[4];
 //***********************************************
 //Литиевые АКБ
 LAKB_STAT lakb[2];
+char lakb_damp[7][60];
 
 //***********************************************
 //Телеметрия по внутренней шине
@@ -7745,12 +7746,12 @@ if(ind==iDeb)
 
     else if(sub_ind==2)
      	{
-     	bgnd_par(	"КБ                  ",
+     	bgnd_par(	"CAN                 ",
      		    	"                    ",
      		    	"                    ",
      		    	"                    ");
 
-		int2lcdyx(main_kb_cnt,1,4,0);
+	/*	int2lcdyx(main_kb_cnt,1,4,0);
 		int2lcdyx(TBAT,2,4,0);
 		int2lcdyx(cntrl_stat,3,4,0); 
 
@@ -7764,7 +7765,7 @@ if(ind==iDeb)
 
 
 		int2lcdyx(ips_bat_av_vzvod,0,10,0);
-		int2lcdyx(ips_bat_av_stat,0,7,0);
+		int2lcdyx(ips_bat_av_stat,0,7,0);*/
 
 /*		int2lcdhyx(avar_ind_stat,0,7);
 		char2lcdbyx(rele_stat,1,7);
@@ -7776,11 +7777,24 @@ if(ind==iDeb)
 		int2lcdyx(SK_REL_EN[0]&0x000f,0,16,0);
 		int2lcdyx(SK_REL_EN[1]&0x000f,1,16,0);
 		int2lcdyx(SK_REL_EN[2]&0x000f,2,16,0);
+		*/
+		int2lcdyx(ccc_plazma[0],1,3,0);
+		int2lcdyx(ccc_plazma[1],1,7,0);
+		int2lcdyx(ccc_plazma[2],1,11,0);
 
-		int2lcdyx(SK_SIGN[0]&0x000f,0,10,0);
-		int2lcdyx(SK_SIGN[1]&0x000f,1,10,0);
-		int2lcdyx(SK_SIGN[2]&0x000f,2,10,0);
+		int2lcdyx(ccc_plazma[3],1,15,0);
+		int2lcdyx(ccc_plazma[4],1,19,0);
+		int2lcdyx(ccc_plazma[5],2,19,0);
 
+		int2lcdyx(ccc_plazma[7],3,2,0);
+		int2lcdyx(ccc_plazma[8],3,5,0);
+		int2lcdyx(ccc_plazma[9],3,8,0);
+
+		int2lcdyx(ccc_plazma[10],3,11,0);
+		int2lcdyx(ccc_plazma[11],3,14,0);
+		int2lcdyx(ccc_plazma[12],3,17,0);
+
+		/*
 		int2lcdyx(SK_LCD_EN[0]&0x000f,0,13,0);
 		int2lcdyx(SK_LCD_EN[1]&0x000f,1,13,0);
 		int2lcdyx(SK_LCD_EN[2]&0x000f,2,13,0);

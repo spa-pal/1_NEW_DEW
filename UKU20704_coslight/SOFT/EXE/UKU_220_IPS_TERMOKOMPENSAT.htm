@@ -3,9 +3,9 @@
 <title>Static Call Graph - [.\EXE\UKU_220_IPS_TERMOKOMPENSAT.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\EXE\UKU_220_IPS_TERMOKOMPENSAT.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 4.1 [Build 644]: Last Updated: Tue Jul 14 11:40:24 2015
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 4.1 [Build 644]: Last Updated: Wed Aug 05 16:57:16 2015
 <BR><P>
-<H3>Maximum Stack Usage =        724 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        732 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
 main &rArr; ind_hndl &rArr; event2ind &rArr; int2lcd &rArr; bcd2lcd_zero
 <P>
@@ -736,7 +736,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[8f]"></a>matemat</STRONG> (Thumb, 2456 bytes, Stack size 56 bytes, control.o(.text))
+<P><STRONG><a name="[8f]"></a>matemat</STRONG> (Thumb, 2522 bytes, Stack size 56 bytes, control.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = matemat
 </UL>
 <BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mess_find_unvol
@@ -766,7 +766,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[93]"></a>rele_hndl</STRONG> (Thumb, 1142 bytes, Stack size 24 bytes, control.o(.text))
+<P><STRONG><a name="[93]"></a>rele_hndl</STRONG> (Thumb, 1144 bytes, Stack size 24 bytes, control.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = rele_hndl
 </UL>
 <BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mess_find_unvol
@@ -1085,8 +1085,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[b6]"></a>ind_hndl</STRONG> (Thumb, 74768 bytes, Stack size 624 bytes, main.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 708<LI>Call Chain = ind_hndl &rArr; event2ind &rArr; int2lcd &rArr; bcd2lcd_zero
+<P><STRONG><a name="[b6]"></a>ind_hndl</STRONG> (Thumb, 74860 bytes, Stack size 632 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 716<LI>Call Chain = ind_hndl &rArr; event2ind &rArr; int2lcd &rArr; bcd2lcd_zero
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mess_send
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mess_find_unvol
@@ -1122,7 +1122,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[bb]"></a>but_an</STRONG> (Thumb, 85586 bytes, Stack size 160 bytes, main.o(.text))
+<P><STRONG><a name="[bb]"></a>but_an</STRONG> (Thumb, 85558 bytes, Stack size 160 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 448<LI>Call Chain = but_an &rArr; avar_bat_as_hndl &rArr; snmp_trap_send &rArr; snmp_trap &rArr; udp_send &rArr; ip_send_frame &rArr; dispatch_frame &rArr; eth_send_frame &rArr; arp_cache_find &rArr; arp_send_req &rArr; alloc_mem
 </UL>
 <BR>[Calls]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gran_ring_char
@@ -1176,7 +1176,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
 </UL>
 <P><STRONG><a name="[49]"></a>main</STRONG> (Thumb, 1492 bytes, Stack size 16 bytes, main.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 724<LI>Call Chain = main &rArr; ind_hndl &rArr; event2ind &rArr; int2lcd &rArr; bcd2lcd_zero
+<BR><BR>[Stack]<UL><LI>Max Depth = 732<LI>Call Chain = main &rArr; ind_hndl &rArr; event2ind &rArr; int2lcd &rArr; bcd2lcd_zero
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;reload_hndl
 <LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_hndl
@@ -1304,7 +1304,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bitmap_hndl
 </UL>
 
-<P><STRONG><a name="[e0]"></a>snmp_data</STRONG> (Thumb, 2502 bytes, Stack size 40 bytes, snmp_data_file.o(.text))
+<P><STRONG><a name="[e0]"></a>snmp_data</STRONG> (Thumb, 2610 bytes, Stack size 40 bytes, snmp_data_file.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = snmp_data &rArr; lc640_read_int &rArr; lc640_rdsr
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lc640_read_int
@@ -1498,7 +1498,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> snmp_mib.o(.data)
 </UL>
-<P><STRONG><a name="[99]"></a>snmp_trap_send</STRONG> (Thumb, 590 bytes, Stack size 24 bytes, snmp_data_file.o(.text))
+<P><STRONG><a name="[99]"></a>snmp_trap_send</STRONG> (Thumb, 554 bytes, Stack size 24 bytes, snmp_data_file.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 248<LI>Call Chain = snmp_trap_send &rArr; snmp_trap &rArr; udp_send &rArr; ip_send_frame &rArr; dispatch_frame &rArr; eth_send_frame &rArr; arp_cache_find &rArr; arp_send_req &rArr; alloc_mem
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;snmp_trap
@@ -2036,11 +2036,12 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CAN_ISR_Rx2
 </UL>
 
-<P><STRONG><a name="[ff]"></a>can_in_an1</STRONG> (Thumb, 1918 bytes, Stack size 40 bytes, full_can.o(.text))
+<P><STRONG><a name="[ff]"></a>can_in_an1</STRONG> (Thumb, 2140 bytes, Stack size 40 bytes, full_can.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 328<LI>Call Chain = can_in_an1 &rArr; avar_bps_hndl &rArr; snmp_trap_send &rArr; snmp_trap &rArr; udp_send &rArr; ip_send_frame &rArr; dispatch_frame &rArr; eth_send_frame &rArr; arp_cache_find &rArr; arp_send_req &rArr; alloc_mem
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mess_send
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;avar_bps_hndl
+<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mem_copy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CAN_ISR_Rx1
 </UL>
@@ -2053,7 +2054,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CAN_IRQHandler
 </UL>
 
-<P><STRONG><a name="[101]"></a>CAN_ISR_Rx2</STRONG> (Thumb, 474 bytes, Stack size 24 bytes, full_can.o(.text))
+<P><STRONG><a name="[101]"></a>CAN_ISR_Rx2</STRONG> (Thumb, 398 bytes, Stack size 24 bytes, full_can.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 140<LI>Call Chain = CAN_ISR_Rx2 &rArr; can_in_an2 &rArr; vz_start &rArr; vz_mem_hndl &rArr; lc640_write_long_ptr &rArr; lc640_rdsr
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_in_an2
@@ -2063,7 +2064,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CAN_IRQHandler
 </UL>
 
-<P><STRONG><a name="[105]"></a>can_isr_tx1</STRONG> (Thumb, 108 bytes, Stack size 0 bytes, full_can.o(.text))
+<P><STRONG><a name="[105]"></a>can_isr_tx1</STRONG> (Thumb, 104 bytes, Stack size 0 bytes, full_can.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CAN_IRQHandler
 </UL>
 
@@ -2088,7 +2089,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[c1]"></a>FullCAN_SetFilter</STRONG> (Thumb, 212 bytes, Stack size 20 bytes, full_can.o(.text))
+<P><STRONG><a name="[c1]"></a>FullCAN_SetFilter</STRONG> (Thumb, 256 bytes, Stack size 20 bytes, full_can.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = FullCAN_SetFilter
 </UL>
 <BR>[Called By]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -2735,6 +2736,7 @@ Global Symbols
 <LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;modbus_hold_registers_transmit
 <LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;modbus_input_registers_transmit
 <LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;modbus_hold_register_transmit
+<LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_in_an1
 </UL>
 
 <P><STRONG><a name="[13b]"></a>mem_set</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, at_lib.o(i.mem_set))

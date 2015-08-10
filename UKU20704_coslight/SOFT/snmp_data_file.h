@@ -164,21 +164,24 @@ extern signed short snmp_dt_msan;
 extern signed short snmp_dt_epu;
 
 //Литиевые батареи
-extern short snmp_lakb_number[2];				//Номер ЛАКБ
-extern short snmp_lakb_voltage[2];				//Напряжение ЛАКБ
-extern short snmp_lakb_max_cell_voltage[2];		//Максимальное напряжение ячейки ЛАКБ
-extern short snmp_lakb_min_cell_voltage[2];		//Минимальное напряжение ячейки ЛАКБ
-extern short snmp_lakb_max_cell_temperature[2];	//Максимальная температура ячейки ЛАКБ
-extern short snmp_lakb_min_cell_temperature[2];	//Минимальная температура ячейки ЛАКБ
-extern short snmp_lakb_ch_curr[2];				//Ток заряда ЛАКБ
-extern short snmp_lakb_dsch_curr[2];			//Ток разряда ЛАКБ
-extern short snmp_lakb_rat_cap[2];				//Номинальная емкость ЛАКБ
-extern short snmp_lakb_soh[2];				//Остаточная емкость ЛАКБ
-extern short snmp_lakb_soc[2];				//Заряд ЛАКБ
-extern short snmp_lakb_cclv[2];  				//Максимальный ток заряда ЛАКБ
-extern short snmp_lakb_rbt[2];				//Оцениваемое время работы ЛАКБ
-extern short snmp_lakb_flags1[2];				//Первый флаг состояния ЛАКБ
-extern short snmp_lakb_flags2[2];				//Второй флаг состояния ЛАКБ
+extern short snmp_lakb_number[7];				//Номер ЛАКБ
+extern short snmp_lakb_voltage[7];				//Напряжение ЛАКБ
+extern short snmp_lakb_max_cell_voltage[7];		//Максимальное напряжение ячейки ЛАКБ
+extern short snmp_lakb_min_cell_voltage[7];		//Минимальное напряжение ячейки ЛАКБ
+extern short snmp_lakb_max_cell_temperature[7];	//Максимальная температура ячейки ЛАКБ
+extern short snmp_lakb_min_cell_temperature[7];	//Минимальная температура ячейки ЛАКБ
+extern short snmp_lakb_ch_curr[7];				//Ток заряда ЛАКБ
+extern short snmp_lakb_dsch_curr[7];			//Ток разряда ЛАКБ
+extern short snmp_lakb_rat_cap[7];				//Номинальная емкость ЛАКБ
+extern short snmp_lakb_soh[7];				//Остаточная емкость ЛАКБ
+extern short snmp_lakb_soc[7];				//Заряд ЛАКБ
+extern short snmp_lakb_cclv[7];  				//Максимальный ток заряда ЛАКБ
+extern short snmp_lakb_rbt[7];				//Оцениваемое время работы ЛАКБ
+extern short snmp_lakb_flags1[7];				//Первый флаг состояния ЛАКБ
+extern short snmp_lakb_flags2[7];				//Второй флаг состояния ЛАКБ
+extern char snmp_lakb_damp1[7][150];				//Первая строка передаваемого дампа
+extern char snmp_lakb_damp2[100];				//Первая строка передаваемого дампа
+
 
   
 //-----------------------------------------------

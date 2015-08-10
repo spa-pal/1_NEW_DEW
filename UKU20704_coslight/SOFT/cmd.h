@@ -49,7 +49,9 @@
 #define ALRM_RES 0x63
 #define PUTTM1BYPS 0xD8
 #define PUTTM2BYPS 0xD9
-#define PUT_LB_TM1 	0xD1
-#define PUT_LB_TM2 	0xD2
-#define PUT_LB_TM3 	0xD3
-#define PUT_LB_TM4 	0xD4
+#define PUT_LB_TM1 	0x18
+#define PUT_LB_TM2 	0x78
+#define PUT_LB_TM3 	0x38
+#define PUT_LB_TM4 	0x48
+#define PUT_LB_TM5 	0x58
+#define PUT_LB_TM6 	0x68
