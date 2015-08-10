@@ -1,1 +1,1 @@
--c --cpu Cortex-M3 -g -O3 --apcs=interwork -I "C:\Keil\ARM\CMSIS\Include" -I "C:\Keil\ARM\INC\NXP\LPC17xx" -DUKU_VERSION="900" -D_24_ -DLAN_OFF -o "common_func.o" --omf_browse "common_func.crf" --depend "common_func.d" "common_func.c"
+-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I "C:\Keil\ARM\CMSIS\Include" -I "C:\Keil\ARM\INC\NXP\LPC17xx" -DUKU_VERSION="900" -DLAN_OFF -o "common_func.o" --omf_browse "common_func.crf" --depend "common_func.d" "common_func.c"

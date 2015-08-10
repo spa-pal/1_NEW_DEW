@@ -1,1 +1,1 @@
--c --cpu Cortex-M3 -g -O3 --apcs=interwork -I "C:\Keil\ARM\CMSIS\Include" -I "C:\Keil\ARM\INC\NXP\LPC17xx" -DUKU_VERSION="900" -D_24_ -DLAN_OFF -o "25lc640.o" --omf_browse "25lc640.crf" --depend "25lc640.d" "25lc640.c"
+-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I "C:\Keil\ARM\CMSIS\Include" -I "C:\Keil\ARM\INC\NXP\LPC17xx" -DUKU_VERSION="900" -DLAN_OFF -o "25lc640.o" --omf_browse "25lc640.crf" --depend "25lc640.d" "25lc640.c"

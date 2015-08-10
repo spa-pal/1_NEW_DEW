@@ -20,7 +20,7 @@
 //   <i> This is the name under which embedded host can be
 //   <i> accessed on a local area network.
 //   <i> Default: "mcb2100"
-#define LHOST_NAME     "SPA-UKU202"
+#define LHOST_NAME     "SPA-UKU205"
 
 //   <o>Memory Pool size <1500-32000:4><#/4>
 //   <i> This is the size of a memory pool in bytes. Buffers for
@@ -33,7 +33,7 @@
 //                          <200=> 200 ms
 //   <i> System Tick Timer interval for software timers
 //   <i> Default: 100 ms
-#define TICK_INTERVAL  100
+#define TICK_INTERVAL  10
 
 // </h>
 // <e>Ethernet Network Interface

@@ -1,1 +1,1 @@
--c --cpu Cortex-M3 -g -O3 --apcs=interwork -I "C:\Keil\ARM\CMSIS\Include" -I "C:\Keil\ARM\INC\NXP\LPC17xx" -DUKU_VERSION="900" -D_24_ -DLAN_OFF -o "full_can.o" --omf_browse "full_can.crf" --depend "full_can.d" "full_can.c"
+-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I "C:\Keil\ARM\CMSIS\Include" -I "C:\Keil\ARM\INC\NXP\LPC17xx" -DUKU_VERSION="900" -DLAN_OFF -o "full_can.o" --omf_browse "full_can.crf" --depend "full_can.d" "full_can.c"
