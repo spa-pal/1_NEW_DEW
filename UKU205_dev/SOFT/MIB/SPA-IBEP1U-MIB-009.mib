@@ -209,7 +209,7 @@ displayBatteriesMassVoltage  OBJECT-TYPE
 	STATUS     mandatory
 	DESCRIPTION 
 		""
-	::= { displayBatteriesMass 1 }
+	::= { displayBatteriesMass 2 }
 	
 	
 
@@ -219,7 +219,7 @@ displayBatteriesMassCurrent  OBJECT-TYPE
 	STATUS     mandatory
 	DESCRIPTION 
 		""
-	::= { displayBatteriesMass 2 }
+	::= { displayBatteriesMass 3 }
 
 displayBatteriesMassTemperature  OBJECT-TYPE
 	SYNTAX     INTEGER (0..65535)
@@ -227,7 +227,7 @@ displayBatteriesMassTemperature  OBJECT-TYPE
 	STATUS     mandatory
 	DESCRIPTION 
 		""
-	::= { displayBatteriesMass 3 }
+	::= { displayBatteriesMass 4 }
 
 displayBatteriesMassCapacity  OBJECT-TYPE
 	SYNTAX     INTEGER (0..65535)
@@ -235,7 +235,7 @@ displayBatteriesMassCapacity  OBJECT-TYPE
 	STATUS     mandatory
 	DESCRIPTION 
 		""
-	::= { displayBatteriesMass 4 }
+	::= { displayBatteriesMass 5 }
 
 displayBatteriesMassCharge  OBJECT-TYPE
 	SYNTAX     INTEGER (0..65535)
@@ -243,15 +243,9 @@ displayBatteriesMassCharge  OBJECT-TYPE
 	STATUS     mandatory
 	DESCRIPTION 
 		""
-	::= { displayBatteriesMass 5 }
-
-displayBatteriesMassAlarmBatteryLost  OBJECT-TYPE
-	SYNTAX     INTEGER (0..65535)
-	ACCESS     read-only
-	STATUS     mandatory
-	DESCRIPTION 
-		""
 	::= { displayBatteriesMass 6 }
+
+
 
 displayBatteriesMassStatus  OBJECT-TYPE
 	SYNTAX     INTEGER (0..65535)
