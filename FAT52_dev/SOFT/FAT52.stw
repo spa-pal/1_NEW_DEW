@@ -18,3 +18,7 @@ Dependencies=
 [Project3]
 Filename=fat52_lbi\fat52_lbi.stp
 Dependencies=
+[Options]
+ActiveProject=fat52
+ActiveConfig=Debug
+AddSortedElements=1

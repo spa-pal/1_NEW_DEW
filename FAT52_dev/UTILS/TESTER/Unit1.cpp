@@ -46,7 +46,17 @@ enum_requestStatus requestStatus = rsOFF;
 char modbusCnt=0;
 BOOL bmodbusIn=0;
 
+unsigned short rs485_rx_cnt;
+
+int tx_plazma;
+int rx_plazma;
+
 static short plazma;
+char bRX485;
+
+char rs485_out_buff[1000];
+
+#define MAXCELLVOLTAGE 
 //---------------------------------------------------------------------------
 __fastcall TForm1::TForm1(TComponent* Owner)
         : TForm(Owner)
@@ -63,7 +73,7 @@ try
     	{
      ComPort1->Port=ComboBox1->Text;
 
-     ComPort1->BaudRate=br9600;
+     ComPort1->BaudRate=br19200;
      ComPort1->DataBits=dbEight;
      ComPort1->Open();
 	}
@@ -236,6 +246,12 @@ ComPort1->Write(UOB,69);
 }
 
 //---------------------------------------------------------------------------
+void __fastcall TForm1::uart1_out_adr(char* ptr, int len)
+{
+ComPort1->Write(ptr,len);
+}
+
+//---------------------------------------------------------------------------
 void __fastcall TForm1::uart_out_out(unsigned short len, char data0, char data1, char data2, char data3, char data4, char data5, char data6, char data7)
 {
 char i,t=0;
@@ -273,18 +289,6 @@ void __fastcall TForm1::ind_hndl(void)
 
 
 
-if(!(Edit1->Focused()))Edit1->Text= IntToStr(CAP_ZAR_TIME/1000)+ (IntToStr(CAP_ZAR_TIME/100)%10) + (IntToStr(CAP_ZAR_TIME/10)%10) + ',' + (IntToStr(CAP_ZAR_TIME%10));
-if(!(Edit2->Focused()))Edit2->Text= IntToStr(CAP_PAUSE1_TIME/1000)+ (IntToStr(CAP_PAUSE1_TIME/100)%10) + (IntToStr(CAP_PAUSE1_TIME/10)%10) + ',' + (IntToStr(CAP_PAUSE1_TIME%10));
-if(!(Edit3->Focused()))Edit3->Text= IntToStr(CAP_RAZR_TIME/1000)+ (IntToStr(CAP_RAZR_TIME/100)%10) + (IntToStr(CAP_RAZR_TIME/10)%10) + ',' + (IntToStr(CAP_RAZR_TIME%10));
-if(!(Edit4->Focused()))Edit4->Text= IntToStr(CAP_PAUSE2_TIME/1000)+ (IntToStr(CAP_PAUSE2_TIME/100)%10) + (IntToStr(CAP_PAUSE2_TIME/10)%10) + ',' + (IntToStr(CAP_PAUSE2_TIME%10));
-if(!(Edit5->Focused()))Edit5->Text= IntToStr(CAP_MAX_VOLT/100) + (IntToStr(CAP_MAX_VOLT/10)%10) + (IntToStr(CAP_MAX_VOLT%10));
-if(!(Edit6->Focused()))Edit6->Text= IntToStr(CAP_WRK_CURR/100) + (IntToStr(CAP_WRK_CURR/10)%10) + (IntToStr(CAP_WRK_CURR%10));
-
-Edit7->Text= IntToStr(CAP_COUNTER/1000)+ (IntToStr(CAP_COUNTER/100)%10) + (IntToStr(CAP_COUNTER/10)%10) + (IntToStr(CAP_COUNTER%10));
-Edit8->Text= IntToStr(CAP_TIME_HOUR/10) + IntToStr(CAP_TIME_HOUR%10) + ":" + IntToStr(CAP_TIME_MIN/10) + IntToStr(CAP_TIME_MIN%10) + ":" + IntToStr(CAP_TIME_SEC/10) + IntToStr(CAP_TIME_SEC%10);
-
-//plazma=;
-
 Label16->Caption= IntToStr(CAP_MAX_VOLT);
 
 }
@@ -309,127 +313,607 @@ requestStatus = rsGETSETTED;
 //-----------------------------------------------
 void __fastcall TForm1::uart_in_an(void)
 {
-unsigned i;
-i=0;
 
-
-
-
-if(requestStatus == rsGETSETTED)
-        { 
-        requestStatus = rsOFF;
-        if((UIB[1]==0x03))
-                { plazma++;
-                
-                CAP_ZAR_TIME= ((unsigned short)UIB[4]) + (((unsigned short)UIB[3])<<8);
-                CAP_PAUSE1_TIME= (unsigned short)UIB[6] + (((unsigned short)UIB[5])*256);
-                CAP_RAZR_TIME= (unsigned short)UIB[8] + (((unsigned short)UIB[7])*256);
-                CAP_PAUSE2_TIME= (unsigned short)UIB[10] + (((unsigned short)UIB[9])*256);
-                CAP_MAX_VOLT= (unsigned short)UIB[12] + (((unsigned short)UIB[11])*256);
-                CAP_WRK_CURR= (unsigned short)UIB[14] + (((unsigned short)UIB[13])*256);
-                CAP_COUNTER= (unsigned short)UIB[16] + (((unsigned short)UIB[15])*256);
-                CAP_TIME_SEC= (unsigned short)UIB[18] + (((unsigned short)UIB[17])*256);
-                CAP_TIME_MIN= (unsigned short)UIB[20] + (((unsigned short)UIB[19])*256);
-                CAP_TIME_HOUR= (unsigned short)UIB[22] + (((unsigned short)UIB[21])*256);
-
-                //CAP_ZAR_TIME=1234;
-                }
-        }
-
-//plazma++;
-if((UIB[0]==0x11))
+	if(bRX485==1)
 	{
-    	//Memo1->Lines->Add(char2str_h(UIB[0])+"  "+char2str_h(UIB[1])+"  "+char2str_h(UIB[2])+"  "+char2str_h(UIB[3])+"  "+char2str_h(UIB[4])+"  "+char2str_h(UIB[5])+"  "+char2str_h(UIB[6]));
-
-     }
-
-else if((UIB[0]==CMND)&&(UIB[1]==1))
-	{
-    	//Memo1->Lines->Add(char2str_h(UIB[2])+"  "+char2str_h(UIB[3])+"  "+char2str_h(UIB[4])+"  "+char2str_h(UIB[5])+"  "+char2str_h(UIB[6]));
-
-     }
-else if((UIB[0]==CMND)&&(UIB[1]==2))
-	{
-    	//Memo1->Lines->Add(char2str_h(UIB[2]));
-
-     }
-else if((UIB[0]==CMND)&&(UIB[1]==3))
-	{
-    	//Memo1->Lines->Add(char2str_h(UIB[2]));
-
-     }
-/*
-else if((UIB[0]==CMND)&&(UIB[1]==10))
-	{
-	unsigned int adress;
-     adress=*((unsigned int*)&UIB[2]);
-     if((adress&0x000001ff)==0) Memo1->Lines->Add("Сектор №"+IntToStr(adress>>9));
-     Memo1->Lines->Add(long2str_h(adress)+"    "+char2str_h(UIB[6])+"  "+char2str_h(UIB[7])+"  "+char2str_h(UIB[8])+"  "+char2str_h(UIB[9])+"  "
-     								   +char2str_h(UIB[10])+"  "+char2str_h(UIB[11])+"  "+char2str_h(UIB[12])+"  "+char2str_h(UIB[13])+"  "
-                                                +char2str_h(UIB[14])+"  "+char2str_h(UIB[15])+"  "+char2str_h(UIB[16])+"  "+char2str_h(UIB[17])+"  "
-                                                +char2str_h(UIB[18])+"  "+char2str_h(UIB[19])+"  "+char2str_h(UIB[20])+"  "+char2str_h(UIB[21])+"  "
-                                                +UIB[6]+UIB[7]+UIB[8]+UIB[9]+UIB[10]+UIB[11]+UIB[12]+UIB[13]+UIB[14]+UIB[15]+UIB[16]+UIB[17]+UIB[18]+UIB[19]+UIB[20]+UIB[21]);
-
-     Memo1->Lines->Add(long2str_h(adress+16)+"    "+char2str_h(UIB[22])+"  "+char2str_h(UIB[23])+"  "+char2str_h(UIB[24])+"  "+char2str_h(UIB[25])+"  "
-     								   +char2str_h(UIB[26])+"  "+char2str_h(UIB[27])+"  "+char2str_h(UIB[28])+"  "+char2str_h(UIB[29])+"  "
-                                                +char2str_h(UIB[30])+"  "+char2str_h(UIB[31])+"  "+char2str_h(UIB[32])+"  "+char2str_h(UIB[33])+"  "
-                                                +char2str_h(UIB[34])+"  "+char2str_h(UIB[35])+"  "+char2str_h(UIB[36])+"  "+char2str_h(UIB[37])+"  "
-                                                +UIB[22]+UIB[23]+UIB[24]+UIB[25]+UIB[26]+UIB[27]+UIB[28]+UIB[29]+UIB[30]+UIB[31]+UIB[32]+UIB[33]+UIB[34]+UIB[35]+UIB[36]+UIB[37]);
-
-     Memo1->Lines->Add(long2str_h(adress+32)+"    "+char2str_h(UIB[38])+"  "+char2str_h(UIB[39])+"  "+char2str_h(UIB[40])+"  "+char2str_h(UIB[41])+"  "
-     								   +char2str_h(UIB[42])+"  "+char2str_h(UIB[43])+"  "+char2str_h(UIB[44])+"  "+char2str_h(UIB[45])+"  "
-                                                +char2str_h(UIB[46])+"  "+char2str_h(UIB[47])+"  "+char2str_h(UIB[48])+"  "+char2str_h(UIB[49])+"  "
-                                                +char2str_h(UIB[50])+"  "+char2str_h(UIB[51])+"  "+char2str_h(UIB[52])+"  "+char2str_h(UIB[53])+"  "
-                                                +UIB[38]+UIB[39]+UIB[40]+UIB[41]+UIB[42]+UIB[43]+UIB[44]+UIB[45]+UIB[46]+UIB[47]+UIB[48]+UIB[49]+UIB[50]+UIB[51]+UIB[52]+UIB[37]);
-
-     Memo1->Lines->Add(long2str_h(adress+48)+"    "+char2str_h(UIB[54])+"  "+char2str_h(UIB[55])+"  "+char2str_h(UIB[56])+"  "+char2str_h(UIB[57])+"  "
-     								   +char2str_h(UIB[58])+"  "+char2str_h(UIB[59])+"  "+char2str_h(UIB[60])+"  "+char2str_h(UIB[61])+"  "
-                                                +char2str_h(UIB[62])+"  "+char2str_h(UIB[63])+"  "+char2str_h(UIB[64])+"  "+char2str_h(UIB[65])+"  "
-                                                +char2str_h(UIB[66])+"  "+char2str_h(UIB[67])+"  "+char2str_h(UIB[68])+"  "+char2str_h(UIB[69])+"  "
-                                                +UIB[54]+UIB[55]+UIB[56]+UIB[57]+UIB[58]+UIB[59]+UIB[60]+UIB[61]+UIB[62]+UIB[63]+UIB[64]+UIB[65]+UIB[66]+UIB[67]+UIB[68]+UIB[69]);
-
-     } */
 
 
+	rs485_out_buff[0]=0x7e;
+	rs485_out_buff[1]=0x31;
+	rs485_out_buff[2]=0x31;
+	rs485_out_buff[3]=0x30;
+	rs485_out_buff[4]=0x31;
+	rs485_out_buff[5]=0x44;
+	rs485_out_buff[6]=0x30;
+	rs485_out_buff[7]=0x30;
+	rs485_out_buff[8]=0x30;
+	rs485_out_buff[9]=0x36;
+	rs485_out_buff[10]=0x31;
+	rs485_out_buff[11]=0x31;
+	rs485_out_buff[12]=0x38;
+	
+	rs485_out_buff[13]=0x30;
+	rs485_out_buff[14]=0x44;
+	rs485_out_buff[15]=0x37;
+	rs485_out_buff[16]=0x41;
+	rs485_out_buff[17]=0x30;
+	rs485_out_buff[18]=0x44;
+	rs485_out_buff[19]=0x33;
+	rs485_out_buff[20]=0x43;
+	rs485_out_buff[21]=0x31;
+	rs485_out_buff[22]=0x38;
+	rs485_out_buff[23]=0x31;
+	rs485_out_buff[24]=0x39;
+	rs485_out_buff[25]=0x31;
+	rs485_out_buff[26]=0x34;
+	rs485_out_buff[27]=0x31;
+	rs485_out_buff[28]=0x32;
+	rs485_out_buff[29]=0x30;
+	rs485_out_buff[30]=0x30;
+	rs485_out_buff[31]=0x30;
+	rs485_out_buff[32]=0x30;
+	rs485_out_buff[33]=0x30;
+	rs485_out_buff[34]=0x30;
+	rs485_out_buff[35]=0x35;
+	rs485_out_buff[36]=0x35;
+	rs485_out_buff[37]=0x36;
+	rs485_out_buff[38]=0x33;
+	rs485_out_buff[39]=0x31;
+	rs485_out_buff[40]=0x44;
+	rs485_out_buff[41]=0x34;
+	rs485_out_buff[42]=0x43;
+	rs485_out_buff[43]=0x46;
+	rs485_out_buff[44]=0x46;
+	rs485_out_buff[45]=0x30;
+	rs485_out_buff[46]=0x45;
+	rs485_out_buff[47]=0x41;
+	rs485_out_buff[48]=0x36;
+	rs485_out_buff[49]=0x36;
+	rs485_out_buff[50]=0x34;
+	rs485_out_buff[51]=0x30;
+	rs485_out_buff[52]=0x31;	
 
-if((UIB[0]==CMND)&&(UIB[1]==21))
-	{
-     short i;
+	rs485_out_buff[13+40]=0x30;
+	rs485_out_buff[14+40]=0x44;
+	rs485_out_buff[15+40]=0x37;
+	rs485_out_buff[16+40]=0x41;
+	rs485_out_buff[17+40]=0x30;
+	rs485_out_buff[18+40]=0x44;
+	rs485_out_buff[19+40]=0x33;
+	rs485_out_buff[20+40]=0x43;
+	rs485_out_buff[21+40]=0x31;
+	rs485_out_buff[22+40]=0x38;
+	rs485_out_buff[23+40]=0x31;
+	rs485_out_buff[24+40]=0x38;
+	rs485_out_buff[25+40]=0x31;
+	rs485_out_buff[26+40]=0x34;
+	rs485_out_buff[27+40]=0x31;
+	rs485_out_buff[28+40]=0x32;
+	rs485_out_buff[29+40]=0x30;
+	rs485_out_buff[30+40]=0x30;
+	rs485_out_buff[31+40]=0x30;
+	rs485_out_buff[32+40]=0x30;
+	rs485_out_buff[33+40]=0x30;
+	rs485_out_buff[34+40]=0x30;
+	rs485_out_buff[35+40]=0x35;
+	rs485_out_buff[36+40]=0x35;
+	rs485_out_buff[37+40]=0x36;
+	rs485_out_buff[38+40]=0x33;
+	rs485_out_buff[39+40]=0x31;
+	rs485_out_buff[40+40]=0x44;
+	rs485_out_buff[41+40]=0x34;
+	rs485_out_buff[42+40]=0x43;
+	rs485_out_buff[43+40]=0x46;
+	rs485_out_buff[44+40]=0x46;
+	rs485_out_buff[45+40]=0x30;
+	rs485_out_buff[46+40]=0x45;
+	rs485_out_buff[47+40]=0x41;
+	rs485_out_buff[48+40]=0x36;
+	rs485_out_buff[49+40]=0x36;
+	rs485_out_buff[50+40]=0x34;
+	rs485_out_buff[51+40]=0x30;
+	rs485_out_buff[52+40]=0x32;	
 
-  /*   for(i=0;i<128;i++)
-     	{
-          damp_[i]=i<<3;
-          }
+	rs485_out_buff[13+80]=0x30;
+	rs485_out_buff[14+80]=0x44;
+	rs485_out_buff[15+80]=0x37;
+	rs485_out_buff[16+80]=0x41;
+	rs485_out_buff[17+80]=0x30;
+	rs485_out_buff[18+80]=0x44;
+	rs485_out_buff[19+80]=0x33;
+	rs485_out_buff[20+80]=0x43;
+	rs485_out_buff[21+80]=0x31;
+	rs485_out_buff[22+80]=0x38;
+	rs485_out_buff[23+80]=0x31;
+	rs485_out_buff[24+80]=0x38;
+	rs485_out_buff[25+80]=0x31;
+	rs485_out_buff[26+80]=0x34;
+	rs485_out_buff[27+80]=0x31;
+	rs485_out_buff[28+80]=0x32;
+	rs485_out_buff[29+80]=0x30;
+	rs485_out_buff[30+80]=0x30;
+	rs485_out_buff[31+80]=0x30;
+	rs485_out_buff[32+80]=0x30;
+	rs485_out_buff[33+80]=0x30;
+	rs485_out_buff[34+80]=0x30;
+	rs485_out_buff[35+80]=0x35;
+	rs485_out_buff[36+80]=0x35;
+	rs485_out_buff[37+80]=0x36;
+	rs485_out_buff[38+80]=0x33;
+	rs485_out_buff[39+80]=0x31;
+	rs485_out_buff[40+80]=0x44;
+	rs485_out_buff[41+80]=0x34;
+	rs485_out_buff[42+80]=0x43;
+	rs485_out_buff[43+80]=0x46;
+	rs485_out_buff[44+80]=0x46;
+	rs485_out_buff[45+80]=0x30;
+	rs485_out_buff[46+80]=0x45;
+	rs485_out_buff[47+80]=0x41;
+	rs485_out_buff[48+80]=0x36;
+	rs485_out_buff[49+80]=0x36;
+	rs485_out_buff[50+80]=0x34;
+	rs485_out_buff[51+80]=0x30;
+	rs485_out_buff[52+80]=0x33;
+	
+	rs485_out_buff[13+120]=0x30;
+	rs485_out_buff[14+120]=0x44;
+	rs485_out_buff[15+120]=0x37;
+	rs485_out_buff[16+120]=0x41;
+	rs485_out_buff[17+120]=0x30;
+	rs485_out_buff[18+120]=0x44;
+	rs485_out_buff[19+120]=0x33;
+	rs485_out_buff[20+120]=0x43;
+	rs485_out_buff[21+120]=0x31;
+	rs485_out_buff[22+120]=0x38;
+	rs485_out_buff[23+120]=0x31;
+	rs485_out_buff[24+120]=0x38;
+	rs485_out_buff[25+120]=0x31;
+	rs485_out_buff[26+120]=0x34;
+	rs485_out_buff[27+120]=0x31;
+	rs485_out_buff[28+120]=0x32;
+	rs485_out_buff[29+120]=0x30;
+	rs485_out_buff[30+120]=0x30;
+	rs485_out_buff[31+120]=0x30;
+	rs485_out_buff[32+120]=0x30;
+	rs485_out_buff[33+120]=0x30;
+	rs485_out_buff[34+120]=0x30;
+	rs485_out_buff[35+120]=0x35;
+	rs485_out_buff[36+120]=0x35;
+	rs485_out_buff[37+120]=0x36;
+	rs485_out_buff[38+120]=0x33;
+	rs485_out_buff[39+120]=0x31;
+	rs485_out_buff[40+120]=0x44;
+	rs485_out_buff[41+120]=0x34;
+	rs485_out_buff[42+120]=0x43;
+	rs485_out_buff[43+120]=0x46;
+	rs485_out_buff[44+120]=0x46;
+	rs485_out_buff[45+120]=0x30;
+	rs485_out_buff[46+120]=0x45;
+	rs485_out_buff[47+120]=0x41;
+	rs485_out_buff[48+120]=0x36;
+	rs485_out_buff[49+120]=0x36;
+	rs485_out_buff[50+120]=0x34;
+	rs485_out_buff[51+120]=0x30;
+	rs485_out_buff[52+120]=0x34;	
+	
+	rs485_out_buff[13+160]=0x30;
+	rs485_out_buff[14+160]=0x44;
+	rs485_out_buff[15+160]=0x37;
+	rs485_out_buff[16+160]=0x41;
+	rs485_out_buff[17+160]=0x30;
+	rs485_out_buff[18+160]=0x44;
+	rs485_out_buff[19+160]=0x33;
+	rs485_out_buff[20+160]=0x43;
+	rs485_out_buff[21+160]=0x31;
+	rs485_out_buff[22+160]=0x38;
+	rs485_out_buff[23+160]=0x31;
+	rs485_out_buff[24+160]=0x38;
+	rs485_out_buff[25+160]=0x31;
+	rs485_out_buff[26+160]=0x34;
+	rs485_out_buff[27+160]=0x31;
+	rs485_out_buff[28+160]=0x32;
+	rs485_out_buff[29+160]=0x30;
+	rs485_out_buff[30+160]=0x30;
+	rs485_out_buff[31+160]=0x30;
+	rs485_out_buff[32+160]=0x30;
+	rs485_out_buff[33+160]=0x30;
+	rs485_out_buff[34+160]=0x30;
+	rs485_out_buff[35+160]=0x35;
+	rs485_out_buff[36+160]=0x35;
+	rs485_out_buff[37+160]=0x36;
+	rs485_out_buff[38+160]=0x33;
+	rs485_out_buff[39+160]=0x31;
+	rs485_out_buff[40+160]=0x44;
+	rs485_out_buff[41+160]=0x34;
+	rs485_out_buff[42+160]=0x43;
+	rs485_out_buff[43+160]=0x46;
+	rs485_out_buff[44+160]=0x46;
+	rs485_out_buff[45+160]=0x30;
+	rs485_out_buff[46+160]=0x45;
+	rs485_out_buff[47+160]=0x41;
+	rs485_out_buff[48+160]=0x36;
+	rs485_out_buff[49+160]=0x36;
+	rs485_out_buff[50+160]=0x34;
+	rs485_out_buff[51+160]=0x30;
+	rs485_out_buff[52+160]=0x35;
 
-	Memo1->Lines->Add("Запрос страницы " + IntToStr(*((short*)&UIB[2])));
-     out_adr_blok_to_page((char*)&damp_[ 0 ] );
-     Sleep(100);
-     out_adr_blok_to_page( (char*)&damp_[ 32 ]);
-     Sleep(100);
-     out_adr_blok_to_page( (char*)&damp_[ 64 ]);
-     Sleep(100);
-     out_adr_blok_to_page( (char*)&damp_[ 96 ]);   */
+	rs485_out_buff[13+200]=0x30;
+	rs485_out_buff[14+200]=0x44;
+	rs485_out_buff[15+200]=0x37;
+	rs485_out_buff[16+200]=0x41;
+	rs485_out_buff[17+200]=0x30;
+	rs485_out_buff[18+200]=0x44;
+	rs485_out_buff[19+200]=0x33;
+	rs485_out_buff[20+200]=0x43;
+	rs485_out_buff[21+200]=0x31;
+	rs485_out_buff[22+200]=0x38;
+	rs485_out_buff[23+200]=0x31;
+	rs485_out_buff[24+200]=0x38;
+	rs485_out_buff[25+200]=0x31;
+	rs485_out_buff[26+200]=0x34;
+	rs485_out_buff[27+200]=0x31;
+	rs485_out_buff[28+200]=0x32;
+	rs485_out_buff[29+200]=0x30;
+	rs485_out_buff[30+200]=0x30;
+	rs485_out_buff[31+200]=0x30;
+	rs485_out_buff[32+200]=0x30;
+	rs485_out_buff[33+200]=0x30;
+	rs485_out_buff[34+200]=0x30;
+	rs485_out_buff[35+200]=0x35;
+	rs485_out_buff[36+200]=0x35;
+	rs485_out_buff[37+200]=0x36;
+	rs485_out_buff[38+200]=0x33;
+	rs485_out_buff[39+200]=0x31;
+	rs485_out_buff[40+200]=0x44;
+	rs485_out_buff[41+200]=0x34;
+	rs485_out_buff[42+200]=0x43;
+	rs485_out_buff[43+200]=0x46;
+	rs485_out_buff[44+200]=0x46;
+	rs485_out_buff[45+200]=0x30;
+	rs485_out_buff[46+200]=0x45;
+	rs485_out_buff[47+200]=0x41;
+	rs485_out_buff[48+200]=0x36;
+	rs485_out_buff[49+200]=0x36;
+	rs485_out_buff[50+200]=0x34;
+	rs485_out_buff[51+200]=0x30;
+	rs485_out_buff[52+200]=0x36;	
+	
+	rs485_out_buff[13+240]=0x30;
+	rs485_out_buff[14+240]=0x44;
+	rs485_out_buff[15+240]=0x37;
+	rs485_out_buff[16+240]=0x41;
+	rs485_out_buff[17+240]=0x30;
+	rs485_out_buff[18+240]=0x44;
+	rs485_out_buff[19+240]=0x33;
+	rs485_out_buff[20+240]=0x43;
+	rs485_out_buff[21+240]=0x31;
+	rs485_out_buff[22+240]=0x38;
+	rs485_out_buff[23+240]=0x31;
+	rs485_out_buff[24+240]=0x38;
+	rs485_out_buff[25+240]=0x31;
+	rs485_out_buff[26+240]=0x34;
+	rs485_out_buff[27+240]=0x31;
+	rs485_out_buff[28+240]=0x32;
+	rs485_out_buff[29+240]=0x30;
+	rs485_out_buff[30+240]=0x30;
+	rs485_out_buff[31+240]=0x30;
+	rs485_out_buff[32+240]=0x30;
+	rs485_out_buff[33+240]=0x30;
+	rs485_out_buff[34+240]=0x30;
+	rs485_out_buff[35+240]=0x35;
+	rs485_out_buff[36+240]=0x35;
+	rs485_out_buff[37+240]=0x36;
+	rs485_out_buff[38+240]=0x33;
+	rs485_out_buff[39+240]=0x31;
+	rs485_out_buff[40+240]=0x44;
+	rs485_out_buff[41+240]=0x34;
+	rs485_out_buff[42+240]=0x43;
+	rs485_out_buff[43+240]=0x46;
+	rs485_out_buff[44+240]=0x46;
+	rs485_out_buff[45+240]=0x30;
+	rs485_out_buff[46+240]=0x45;
+	rs485_out_buff[47+240]=0x41;
+	rs485_out_buff[48+240]=0x36;
+	rs485_out_buff[49+240]=0x36;
+	rs485_out_buff[50+240]=0x34;
+	rs485_out_buff[51+240]=0x30;
+	rs485_out_buff[52+240]=0x37;	
 
+	rs485_out_buff[293]=0x43;
+	rs485_out_buff[294]=0x37;
+	rs485_out_buff[295]=0x45;
+	rs485_out_buff[296]=0x43;
+	rs485_out_buff[297]=0x0d;
 
+	uart1_out_adr(rs485_out_buff,298);
+     //uart_modbus_request();
+	
+		//rs485_cnt=0;
+		//bRS485ERR=0;
 
-     //Memo1->Lines->Add("Запрос страницы " + IntToStr(*((short*)&UIB[2])));
-     out_adr_blok_to_page( &damp[ (*((short*)&UIB[2]))*256 ] );
-     Sleep(20);
-     out_adr_blok_to_page( &damp[ ((*((short*)&UIB[2]))*256)+64 ]);
-     Sleep(20);
-     out_adr_blok_to_page( &damp[ ((*((short*)&UIB[2]))*256)+128 ]);
-     Sleep(20);
-     out_adr_blok_to_page( &damp[ ((*((short*)&UIB[2]))*256)+192 ]); 
-     }
-
-if((UIB[0]==CMND)&&(UIB[1]==11))
-	{
-     if(UIB[2]==1)
-          {
-     	//if(UIB[6]==0x0a)Memo1->Lines->Add("Поиск файла \"" + AnsiString(UIB[3]) + ".wav\"");
-          //else if(UIB[7]==0x0a)Memo1->Lines->Add("Поиск файла \"" + AnsiString(UIB[3]) + AnsiString(UIB[4]) + ".wav\"");
-          }
 	}
+	else if(bRX485==2)
+	{
+	rs485_out_buff[0]=0x7e;
+	rs485_out_buff[1]=0x31;
+	rs485_out_buff[2]=0x31;
+	rs485_out_buff[3]=0x30;
+	rs485_out_buff[4]=0x31;
+	rs485_out_buff[5]=0x44;
+	rs485_out_buff[6]=0x30;
+	rs485_out_buff[7]=0x30;
+	rs485_out_buff[8]=0x30;
+	rs485_out_buff[9]=0x36;
+	rs485_out_buff[10]=0x31;
+	rs485_out_buff[11]=0x31;
+	rs485_out_buff[12]=0x38;
+	
+	rs485_out_buff[13]=0x30;
+	rs485_out_buff[14]=0x31;
+	rs485_out_buff[15]=0x30;
+	rs485_out_buff[16]=0x36;
+	rs485_out_buff[17]=0x31;
+	rs485_out_buff[18]=0x31;
+	rs485_out_buff[19]=0x31;
+	rs485_out_buff[20]=0x31;	
+	
+	rs485_out_buff[21]=0x30;
+	rs485_out_buff[22]=0x30;
+	rs485_out_buff[23]=0x30;
+	rs485_out_buff[24]=0x30;
+	rs485_out_buff[25]=0x30;
+	rs485_out_buff[26]=0x30;
+	rs485_out_buff[27]=0x30;
+	rs485_out_buff[28]=0x30;
+	rs485_out_buff[29]=0x30;
+	rs485_out_buff[30]=0x30;
+	rs485_out_buff[31]=0x30;
+	rs485_out_buff[32]=0x30;
+	rs485_out_buff[33]=0x30;
+	rs485_out_buff[34]=0x30;
+	rs485_out_buff[35]=0x30;
+	rs485_out_buff[36]=0x30;
+	rs485_out_buff[37]=0x30;
+	rs485_out_buff[38]=0x30;
+	rs485_out_buff[39]=0x30;
+	rs485_out_buff[40]=0x30;
+	rs485_out_buff[41]=0x30;
+	rs485_out_buff[42]=0x30;
+	rs485_out_buff[43]=0x30;
+	rs485_out_buff[44]=0x30;
+	rs485_out_buff[45]=0x30;
+	rs485_out_buff[46]=0x30;
+	rs485_out_buff[47]=0x30;
+	rs485_out_buff[48]=0x30;
+	rs485_out_buff[49]=0x30;
+	rs485_out_buff[50]=0x30;
+	rs485_out_buff[51]=0x30;
+	rs485_out_buff[52]=0x30;
+	rs485_out_buff[53]=0x30;
+	rs485_out_buff[54]=0x31;	
+	
+	rs485_out_buff[21+34]=0x30;
+	rs485_out_buff[22+34]=0x30;
+	rs485_out_buff[23+34]=0x30;
+	rs485_out_buff[24+34]=0x30;
+	rs485_out_buff[25+34]=0x30;
+	rs485_out_buff[26+34]=0x30;
+	rs485_out_buff[27+34]=0x30;
+	rs485_out_buff[28+34]=0x30;
+	rs485_out_buff[29+34]=0x30;
+	rs485_out_buff[30+34]=0x30;
+	rs485_out_buff[31+34]=0x30;
+	rs485_out_buff[32+34]=0x30;
+	rs485_out_buff[33+34]=0x30;
+	rs485_out_buff[34+34]=0x30;
+	rs485_out_buff[35+34]=0x30;
+	rs485_out_buff[36+34]=0x30;
+	rs485_out_buff[37+34]=0x30;
+	rs485_out_buff[38+34]=0x30;
+	rs485_out_buff[39+34]=0x30;
+	rs485_out_buff[40+34]=0x30;
+	rs485_out_buff[41+34]=0x30;
+	rs485_out_buff[42+34]=0x30;
+	rs485_out_buff[43+34]=0x30;
+	rs485_out_buff[44+34]=0x30;
+	rs485_out_buff[45+34]=0x30;
+	rs485_out_buff[46+34]=0x30;
+	rs485_out_buff[47+34]=0x30;
+	rs485_out_buff[48+34]=0x30;
+	rs485_out_buff[49+34]=0x30;
+	rs485_out_buff[50+34]=0x30;
+	rs485_out_buff[51+34]=0x30;
+	rs485_out_buff[52+34]=0x30;
+	rs485_out_buff[53+34]=0x30;
+	rs485_out_buff[54+34]=0x32;
+
+	rs485_out_buff[21+68]=0x30;
+	rs485_out_buff[22+68]=0x30;
+	rs485_out_buff[23+68]=0x30;
+	rs485_out_buff[24+68]=0x30;
+	rs485_out_buff[25+68]=0x30;
+	rs485_out_buff[26+68]=0x30;
+	rs485_out_buff[27+68]=0x30;
+	rs485_out_buff[28+68]=0x30;
+	rs485_out_buff[29+68]=0x30;
+	rs485_out_buff[30+68]=0x30;
+	rs485_out_buff[31+68]=0x30;
+	rs485_out_buff[32+68]=0x30;
+	rs485_out_buff[33+68]=0x30;
+	rs485_out_buff[34+68]=0x30;
+	rs485_out_buff[35+68]=0x30;
+	rs485_out_buff[36+68]=0x30;
+	rs485_out_buff[37+68]=0x30;
+	rs485_out_buff[38+68]=0x30;
+	rs485_out_buff[39+68]=0x30;
+	rs485_out_buff[40+68]=0x30;
+	rs485_out_buff[41+68]=0x30;
+	rs485_out_buff[42+68]=0x30;
+	rs485_out_buff[43+68]=0x30;
+	rs485_out_buff[44+68]=0x30;
+	rs485_out_buff[45+68]=0x30;
+	rs485_out_buff[46+68]=0x30;
+	rs485_out_buff[47+68]=0x30;
+	rs485_out_buff[48+68]=0x30;
+	rs485_out_buff[49+68]=0x30;
+	rs485_out_buff[50+68]=0x30;
+	rs485_out_buff[51+68]=0x30;
+	rs485_out_buff[52+68]=0x30;
+	rs485_out_buff[53+68]=0x30;
+	rs485_out_buff[54+68]=0x33;	
+	
+	rs485_out_buff[21+102]=0x30;
+	rs485_out_buff[22+102]=0x30;
+	rs485_out_buff[23+102]=0x30;
+	rs485_out_buff[24+102]=0x30;
+	rs485_out_buff[25+102]=0x30;
+	rs485_out_buff[26+102]=0x30;
+	rs485_out_buff[27+102]=0x30;
+	rs485_out_buff[28+102]=0x30;
+	rs485_out_buff[29+102]=0x30;
+	rs485_out_buff[30+102]=0x30;
+	rs485_out_buff[31+102]=0x30;
+	rs485_out_buff[32+102]=0x30;
+	rs485_out_buff[33+102]=0x30;
+	rs485_out_buff[34+102]=0x30;
+	rs485_out_buff[35+102]=0x30;
+	rs485_out_buff[36+102]=0x30;
+	rs485_out_buff[37+102]=0x30;
+	rs485_out_buff[38+102]=0x30;
+	rs485_out_buff[39+102]=0x30;
+	rs485_out_buff[40+102]=0x30;
+	rs485_out_buff[41+102]=0x30;
+	rs485_out_buff[42+102]=0x30;
+	rs485_out_buff[43+102]=0x30;
+	rs485_out_buff[44+102]=0x30;
+	rs485_out_buff[45+102]=0x30;
+	rs485_out_buff[46+102]=0x30;
+	rs485_out_buff[47+102]=0x30;
+	rs485_out_buff[48+102]=0x30;
+	rs485_out_buff[49+102]=0x30;
+	rs485_out_buff[50+102]=0x30;
+	rs485_out_buff[51+102]=0x30;
+	rs485_out_buff[52+102]=0x30;
+	rs485_out_buff[53+102]=0x30;
+	rs485_out_buff[54+102]=0x34;
+
+	rs485_out_buff[21+136]=0x30;
+	rs485_out_buff[22+136]=0x30;
+	rs485_out_buff[23+136]=0x30;
+	rs485_out_buff[24+136]=0x30;
+	rs485_out_buff[25+136]=0x30;
+	rs485_out_buff[26+136]=0x30;
+	rs485_out_buff[27+136]=0x30;
+	rs485_out_buff[28+136]=0x30;
+	rs485_out_buff[29+136]=0x30;
+	rs485_out_buff[30+136]=0x30;
+	rs485_out_buff[31+136]=0x30;
+	rs485_out_buff[32+136]=0x30;
+	rs485_out_buff[33+136]=0x30;
+	rs485_out_buff[34+136]=0x30;
+	rs485_out_buff[35+136]=0x30;
+	rs485_out_buff[36+136]=0x30;
+	rs485_out_buff[37+136]=0x30;
+	rs485_out_buff[38+136]=0x30;
+	rs485_out_buff[39+136]=0x30;
+	rs485_out_buff[40+136]=0x30;
+	rs485_out_buff[41+136]=0x30;
+	rs485_out_buff[42+136]=0x30;
+	rs485_out_buff[43+136]=0x30;
+	rs485_out_buff[44+136]=0x30;
+	rs485_out_buff[45+136]=0x30;
+	rs485_out_buff[46+136]=0x30;
+	rs485_out_buff[47+136]=0x30;
+	rs485_out_buff[48+136]=0x30;
+	rs485_out_buff[49+136]=0x30;
+	rs485_out_buff[50+136]=0x30;
+	rs485_out_buff[51+136]=0x30;
+	rs485_out_buff[52+136]=0x30;
+	rs485_out_buff[53+136]=0x30;
+	rs485_out_buff[54+136]=0x35;	
+	
+	rs485_out_buff[21+170]=0x30;
+	rs485_out_buff[22+170]=0x30;
+	rs485_out_buff[23+170]=0x30;
+	rs485_out_buff[24+170]=0x30;
+	rs485_out_buff[25+170]=0x30;
+	rs485_out_buff[26+170]=0x30;
+	rs485_out_buff[27+170]=0x30;
+	rs485_out_buff[28+170]=0x30;
+	rs485_out_buff[29+170]=0x30;
+	rs485_out_buff[30+170]=0x30;
+	rs485_out_buff[31+170]=0x30;
+	rs485_out_buff[32+170]=0x30;
+	rs485_out_buff[33+170]=0x30;
+	rs485_out_buff[34+170]=0x30;
+	rs485_out_buff[35+170]=0x30;
+	rs485_out_buff[36+170]=0x30;
+	rs485_out_buff[37+170]=0x30;
+	rs485_out_buff[38+170]=0x30;
+	rs485_out_buff[39+170]=0x30;
+	rs485_out_buff[40+170]=0x30;
+	rs485_out_buff[41+170]=0x30;
+	rs485_out_buff[42+170]=0x30;
+	rs485_out_buff[43+170]=0x30;
+	rs485_out_buff[44+170]=0x30;
+	rs485_out_buff[45+170]=0x30;
+	rs485_out_buff[46+170]=0x30;
+	rs485_out_buff[47+170]=0x30;
+	rs485_out_buff[48+170]=0x30;
+	rs485_out_buff[49+170]=0x30;
+	rs485_out_buff[50+170]=0x30;
+	rs485_out_buff[51+170]=0x30;
+	rs485_out_buff[52+170]=0x30;
+	rs485_out_buff[53+170]=0x30;
+	rs485_out_buff[54+170]=0x36;
+	
+	rs485_out_buff[21+204]=0x30;
+	rs485_out_buff[22+204]=0x30;
+	rs485_out_buff[23+204]=0x30;
+	rs485_out_buff[24+204]=0x30;
+	rs485_out_buff[25+204]=0x30;
+	rs485_out_buff[26+204]=0x30;
+	rs485_out_buff[27+204]=0x30;
+	rs485_out_buff[28+204]=0x30;
+	rs485_out_buff[29+204]=0x30;
+	rs485_out_buff[30+204]=0x30;
+	rs485_out_buff[31+204]=0x30;
+	rs485_out_buff[32+204]=0x30;
+	rs485_out_buff[33+204]=0x30;
+	rs485_out_buff[34+204]=0x30;
+	rs485_out_buff[35+204]=0x30;
+	rs485_out_buff[36+204]=0x30;
+	rs485_out_buff[37+204]=0x30;
+	rs485_out_buff[38+204]=0x30;
+	rs485_out_buff[39+204]=0x30;
+	rs485_out_buff[40+204]=0x30;
+	rs485_out_buff[41+204]=0x30;
+	rs485_out_buff[42+204]=0x30;
+	rs485_out_buff[43+204]=0x30;
+	rs485_out_buff[44+204]=0x30;
+	rs485_out_buff[45+204]=0x30;
+	rs485_out_buff[46+204]=0x30;
+	rs485_out_buff[47+204]=0x30;
+	rs485_out_buff[48+204]=0x30;
+	rs485_out_buff[49+204]=0x30;
+	rs485_out_buff[50+204]=0x30;
+	rs485_out_buff[51+204]=0x30;
+	rs485_out_buff[52+204]=0x30;
+	rs485_out_buff[53+204]=0x30;
+	rs485_out_buff[54+204]=0x37;	
+	
+	rs485_out_buff[259]=0x43;
+	rs485_out_buff[260]=0x46;
+	rs485_out_buff[261]=0x31;
+	rs485_out_buff[262]=0x39;
+	rs485_out_buff[263]=0x0d;
+
+	uart1_out_adr(rs485_out_buff,264);
+
+	}
+bRX485=0;	
+
+
 }
 
 
@@ -446,51 +930,27 @@ char cnt;
 for(i=0;i<Count;i++)
  	{
      ComPort1->Read(&data,1);
-   	rx_buffer[rx_wr_index]=data;
-   	bRXIN=1;
-   	if (++rx_wr_index == RX_BUFFER_SIZE) rx_wr_index=0;
-   	if (++rx_counter == RX_BUFFER_SIZE)
-      	{
-      	rx_counter=0;
-      	rx_buffer_overflow=1;
-      	}
-     }
-
-modbusCnt=2;
+     temp=data;
+	rx_buffer[rs485_rx_cnt]=data;
+	rs485_rx_cnt++;
 
 
+	if((data==0x0d)&&(rs485_rx_cnt==20))
+		{
+		if(rx_buffer[8]==0x32){
+          rx_plazma++;
+     	Label1->Caption=IntToStr(rx_plazma);
+		bRX485=1;
+		}
 
-if(rx_buffer_overflow)
-	{
-	rx_wr_index=0;
-	rx_rd_index=0;
-	rx_counter=0;
-	rx_buffer_overflow=0;
+		if(rx_buffer[8]==0x33){
+          tx_plazma++;
+     	Label2->Caption=IntToStr(tx_plazma);
+		bRX485=2;
+		}
 	}
-
-//if(rx_counter&&(rx_buffer[index_offset(rx_wr_index,-1)])==END)
-//	{
-/*
-     temp=rx_buffer[index_offset(rx_wr_index,-3)];
-    	if(temp<150)
-    		{
-
-    		if(control_check(index_offset(rx_wr_index,-1)))
-    			{
-
-    			rx_rd_index=index_offset(rx_wr_index,-3-temp);
-    			for(i=0;i<(temp+3);i++)
-				{
-				UIB[i]=rx_buffer[index_offset(rx_rd_index,i)];
-				}
-			rx_rd_index=rx_wr_index;
-			rx_counter=0;
-			uart_in_an();
-
-    			}
-
-    		} */
-    //	}
+	if(data==0x0d)rs485_rx_cnt=0;
+     }
 
 }
 //---------------------------------------------------------------------------
@@ -754,7 +1214,7 @@ if(b5Hz)
         b5Hz=0;
         if(ComPort1->Connected)
                 {
-                uart_modbus_request();
+               // uart_modbus_request();
                 }
         }
 if(b1Hz)
@@ -762,24 +1222,8 @@ if(b1Hz)
         b1Hz=0;
 
         }
+uart_in_an();
 
-if(modbusCnt)
-        {
-        modbusCnt--;
-        if(modbusCnt==0)
-                {
-
-                bmodbusIn=1;
-
-                for(int i=0;i<rx_wr_index;i++)
-                        {
-			UIB[i]=rx_buffer[i];
-			}
-                rx_wr_index=0;
-		rx_counter=0;
-		uart_in_an();
-                }
-        }
 }
 //---------------------------------------------------------------------------
 
@@ -797,7 +1241,7 @@ if (Key==13)
         {
         try  {
 
-        tempD= Edit1->Text.ToDouble();
+
         //temp= (int)tempD;//Edit1->Text.ToInt();
 
         //tempF=FloatToStr(tempD);
@@ -879,7 +1323,7 @@ if (Key==13)
         {
         try  {
 
-        tempD= Edit2->Text.ToDouble();
+
         //temp= (int)tempD;//Edit1->Text.ToInt();
 
         //tempF=FloatToStr(tempD);
@@ -928,7 +1372,7 @@ if (Key==13)
         {
         try  {
 
-        tempD= Edit3->Text.ToDouble();
+
         //temp= (int)tempD;//Edit1->Text.ToInt();
 
         //tempF=FloatToStr(tempD);
@@ -977,17 +1421,7 @@ if (Key==13)
         {
         try  {
 
-        tempD= Edit4->Text.ToDouble();
-        //temp= (int)tempD;//Edit1->Text.ToInt();
 
-        //tempF=FloatToStr(tempD);
-
-        temp= (int)(((tempD)*10)+0.1);
-        if(temp>9999)temp=9999;
-        if(temp<0)temp=0;
-        Label16->Caption= IntToStr(temp);
-        Button9->SetFocus();
-        temp1=0x23;
 
 
         UOB_[0]=0x03;
@@ -1084,17 +1518,7 @@ if (Key==13)
         {
         try  {
 
-        temp= Edit5->Text.ToInt();
-        //temp= (int)tempD;//Edit1->Text.ToInt();
 
-        //tempF=FloatToStr(tempD);
-
-        //temp= (int)(((tempD)*10)+0.1);
-        if(temp>9999)temp=9999;
-        if(temp<0)temp=0;
-        Label16->Caption= IntToStr(temp);
-        Button9->SetFocus();
-        temp1=0x23;
 
 
         UOB_[0]=0x03;
@@ -1134,17 +1558,6 @@ if (Key==13)
         {
         try  {
 
-        temp= Edit6->Text.ToInt();
-        //temp= (int)tempD;//Edit1->Text.ToInt();
-
-        //tempF=FloatToStr(tempD);
-
-        //temp= (int)(((tempD)*10)+0.1);
-        if(temp>9999)temp=9999;
-        if(temp<0)temp=0;
-        Label16->Caption= IntToStr(temp);
-        Button9->SetFocus();
-        temp1=0x23;
 
 
         UOB_[0]=0x03;

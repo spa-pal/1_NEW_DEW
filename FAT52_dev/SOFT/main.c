@@ -30,7 +30,7 @@ char tx_wd_cnt=100;
 char bOUT_FREE;
 
 //КАН
-char can_out_buff[6][16];
+@near char can_out_buff[12][16];
 char can_buff_wr_ptr;
 char can_buff_rd_ptr;
 char bTX_FREE=1;
@@ -73,10 +73,12 @@ char link,link_cnt;
 #define PUTTM 		0xDE
 #define GETTM 		0xED 
 #define KLBR 		0xEE
-#define PUT_LB_TM1 	0xD1
-#define PUT_LB_TM2 	0xD2
-#define PUT_LB_TM3 	0xD3
-#define PUT_LB_TM4 	0xD4
+#define PUT_LB_TM1 	0x18
+#define PUT_LB_TM2 	0x78
+#define PUT_LB_TM3 	0x38
+#define PUT_LB_TM4 	0x48
+#define PUT_LB_TM5 	0x58
+#define PUT_LB_TM6 	0x68
 
 
 #define ON 0x55
@@ -86,24 +88,28 @@ signed short plazma_int[3];
 short rs485_rx_cnt;
 char bRX485;
 
-@near short max_cell_volt[7];
-@near short min_cell_volt[7];
-@near short max_cell_temp[7];
-@near short min_cell_temp[7];
-@near short tot_bat_volt[7];
-@near short ch_curr[7];
-@near short dsch_curr[7];
-@near short s_o_c[7];
-@near short rat_cap[7];
-@near short	r_b_t[7];
-@near short	c_c_l_v[7];
-short	s_o_h[7];
-short	b_p_ser_num[7];
-unsigned char flags_byte0[7],flags_byte1[7];
+//@near short max_cell_volt[7];
+//@near short min_cell_volt[7];
+//@near short max_cell_temp[7];
+//@near short min_cell_temp[7];
+//@near short tot_bat_volt[7];
+//@near short ch_curr[7];
+//@near short dsch_curr[7];
+//@near short s_o_c[7];
+//@near short rat_cap[7];
+//@near short	r_b_t[7];
+//@near short	c_c_l_v[7];
+//short	s_o_h[7];
+//short	b_p_ser_num[7];
+//unsigned char flags_byte0[7],flags_byte1[7];
 unsigned char rs485_cnt=0;
 _Bool bRS485ERR;
 //char plazma_cnt;
 char transmit_cnt_number; 	//Счетчик батарей на передачу, считает от 0 до 6 (7 батарей)
+
+@near char bat_mod_dump[7][40];
+
+
 
 //-----------------------------------------------
 void gran_char(signed char *adr, signed char min, signed char max)
@@ -199,6 +205,45 @@ for (i=0;i<len;i++)
 rs485_cnt++;
 }
 
+
+
+
+
+//-----------------------------------------------
+char ascii2halFhex(char in)
+{
+if(isalnum(in))
+	{
+	if(isdigit(in))
+		{
+		return in-'0';
+		}
+	if(islower(in))
+		{
+		return in-'a'+10;
+		}
+	if(isupper(in))
+		{
+		return in-'A'+10;
+		}
+	}
+}
+
+
+//-----------------------------------------------
+void ascii2hex(char *ptr_dst, char *ptr_src, short len)
+{
+short i;
+
+for(i=0;i<len/2;i++)
+	{
+	ptr_dst[i]=((ascii2halFhex(ptr_src[i*2]))<<4)+((ascii2halFhex(ptr_src[(i*2)+1])));
+	
+	}
+
+}
+
+
 //-----------------------------------------------
 int str2int(char *ptr, char len)
 {
@@ -247,9 +292,17 @@ return temp_out;
 //-----------------------------------------------
 void rx485_in_an(void)
 {
-	if(bRX485==1)
+if(bRX485==1)
 	{
-		max_cell_volt[0]=str2int(&rx_buffer[13],4);
+	ascii2hex(&bat_mod_dump[0][0],&rx_buffer[13],40);
+	ascii2hex(&bat_mod_dump[1][0],&rx_buffer[13+40],40);
+	ascii2hex(&bat_mod_dump[2][0],&rx_buffer[13+80],40);
+	ascii2hex(&bat_mod_dump[3][0],&rx_buffer[13+120],40);
+	ascii2hex(&bat_mod_dump[4][0],&rx_buffer[13+160],40);
+	ascii2hex(&bat_mod_dump[5][0],&rx_buffer[13+200],40);
+	ascii2hex(&bat_mod_dump[6][0],&rx_buffer[13+240],40);
+		
+		/*max_cell_volt[0]=str2int(&rx_buffer[13],4);
 		min_cell_volt[0]=str2int(&rx_buffer[17],4);
 		max_cell_temp[0]=str2int(&rx_buffer[21],2);
 		min_cell_temp[0]=str2int(&rx_buffer[23],2);
@@ -345,37 +398,21 @@ void rx485_in_an(void)
 		r_b_t[6]=str2int(&rx_buffer[43+240],2);
 		c_c_l_v[6]=str2int(&rx_buffer[45+240],4);
 		s_o_h[6]=str2int(&rx_buffer[49+240],2);
-		b_p_ser_num[6]=str2int(&rx_buffer[51+240],2);
+		b_p_ser_num[6]=str2int(&rx_buffer[51+240],2);*/
 		
-		rs485_cnt=0;
-		bRS485ERR=0;
+//	rs485_cnt=0;
+//	bRS485ERR=0;
 
 	}
-	else if(bRX485==2)
+else if(bRX485==2)
 	{
-		flags_byte0[0]=str2int(&rx_buffer[49],2);
-		flags_byte1[0]++;//=str2int(&rx_buffer[51],2);
-
-		flags_byte0[1]=str2int(&rx_buffer[49+34],2);
-		flags_byte1[1]++;//=str2int(&rx_buffer[51],2);
-		
-		flags_byte0[2]=str2int(&rx_buffer[49+68],2);
-		flags_byte1[2]++;//=str2int(&rx_buffer[51],2);
-
-		flags_byte0[3]=str2int(&rx_buffer[49+102],2);
-		flags_byte1[3]++;//=str2int(&rx_buffer[51],2);
-		
-		flags_byte0[4]=str2int(&rx_buffer[49+136],2);
-		flags_byte1[4]++;//=str2int(&rx_buffer[51],2);
-
-		flags_byte0[5]=str2int(&rx_buffer[49+170],2);
-		flags_byte1[5]++;//=str2int(&rx_buffer[51],2);
-		
-		flags_byte0[6]=str2int(&rx_buffer[49+204],2);
-		flags_byte1[6]++;//=str2int(&rx_buffer[51],2);		
-		rs485_cnt=0;
-		bRS485ERR=0;
-
+	ascii2hex(&bat_mod_dump[0][20],&rx_buffer[21],34);
+	ascii2hex(&bat_mod_dump[1][20],&rx_buffer[21+34],34);
+	ascii2hex(&bat_mod_dump[2][20],&rx_buffer[21+68],34);
+	ascii2hex(&bat_mod_dump[3][20],&rx_buffer[21+102],34);
+	ascii2hex(&bat_mod_dump[4][20],&rx_buffer[21+136],34);
+	ascii2hex(&bat_mod_dump[5][20],&rx_buffer[21+170],34);
+	ascii2hex(&bat_mod_dump[6][20],&rx_buffer[21+204],34);
 	}
 bRX485=0;	
 }
@@ -436,7 +473,7 @@ void init_CAN(void) {
 void can_transmit(unsigned short id_st,char data0,char data1,char data2,char data3,char data4,char data5,char data6,char data7)
 {
 
-if((can_buff_wr_ptr<0)||(can_buff_wr_ptr>4))can_buff_wr_ptr=0;
+if((can_buff_wr_ptr<0)||(can_buff_wr_ptr>9))can_buff_wr_ptr=0;
 
 can_out_buff[can_buff_wr_ptr][0]=(char)(id_st>>6);
 can_out_buff[can_buff_wr_ptr][1]=(char)(id_st<<2);
@@ -451,7 +488,7 @@ can_out_buff[can_buff_wr_ptr][8]=data6;
 can_out_buff[can_buff_wr_ptr][9]=data7;
 
 can_buff_wr_ptr++;
-if(can_buff_wr_ptr>4)can_buff_wr_ptr=0;
+if(can_buff_wr_ptr>9)can_buff_wr_ptr=0;
 } 
 
 //-----------------------------------------------
@@ -471,7 +508,7 @@ if(bTX_FREE)
 		memcpy(&CAN->Page.TxMailbox.MDAR1, &can_out_buff[can_buff_rd_ptr][2],8);
 
 		can_buff_rd_ptr++;
-		if(can_buff_rd_ptr>3)can_buff_rd_ptr=0;
+		if(can_buff_rd_ptr>9)can_buff_rd_ptr=0;
 
 		CAN->Page.TxMailbox.MCSR|= CAN_MCSR_TXRQ;
 		CAN->IER|=(1<<0);
@@ -516,12 +553,41 @@ if((mess[6]==19)&&(mess[7]==19)&&(mess[8]==GETTM))
 	
 	//max_cell_volt=35000;
 	
-	can_transmit(0x18e,PUT_LB_TM1,transmit_cnt_number,*(((char*)&max_cell_volt[transmit_cnt_number])+1),*((char*)&max_cell_volt[transmit_cnt_number]),*(((char*)&min_cell_volt[transmit_cnt_number])+1),*((char*)&min_cell_volt[transmit_cnt_number]),*(((char*)&tot_bat_volt[transmit_cnt_number])+1),*((char*)&tot_bat_volt[transmit_cnt_number]));
-	can_transmit(0x18e,PUT_LB_TM2,transmit_cnt_number,*(((char*)&ch_curr[transmit_cnt_number])+1),*((char*)&ch_curr[transmit_cnt_number]),*(((char*)&dsch_curr[transmit_cnt_number])+1),*((char*)&dsch_curr[transmit_cnt_number]),*(((char*)&rat_cap[transmit_cnt_number])+1),*((char*)&rat_cap[transmit_cnt_number]));
-	can_transmit(0x18e,PUT_LB_TM3,transmit_cnt_number,(unsigned char)s_o_h[transmit_cnt_number],(unsigned char)s_o_c[transmit_cnt_number],*(((char*)&c_c_l_v[transmit_cnt_number])+1),*((char*)&c_c_l_v[transmit_cnt_number]),(unsigned char)r_b_t[transmit_cnt_number],(unsigned char)flags_byte0[transmit_cnt_number]);
-	can_transmit(0x18e,PUT_LB_TM4,transmit_cnt_number,(unsigned char)bRS485ERR,(unsigned char)rs485_cnt,(unsigned char)max_cell_temp[transmit_cnt_number],(unsigned char)min_cell_temp[transmit_cnt_number],(unsigned char)flags_byte1[transmit_cnt_number],0);
+	can_transmit(0x18e,bat_mod_dump[transmit_cnt_number][0],PUT_LB_TM1+transmit_cnt_number,
+	bat_mod_dump[transmit_cnt_number][1],
+	bat_mod_dump[transmit_cnt_number][2],bat_mod_dump[transmit_cnt_number][3],
+	bat_mod_dump[transmit_cnt_number][4],bat_mod_dump[transmit_cnt_number][5],
+	bat_mod_dump[transmit_cnt_number][6]);
+	can_transmit(0x18e,bat_mod_dump[transmit_cnt_number][7],PUT_LB_TM2+transmit_cnt_number,
+	bat_mod_dump[transmit_cnt_number][8],
+	bat_mod_dump[transmit_cnt_number][9],bat_mod_dump[transmit_cnt_number][10],
+	bat_mod_dump[transmit_cnt_number][11],bat_mod_dump[transmit_cnt_number][12],
+	bat_mod_dump[transmit_cnt_number][13]);
+	can_transmit(0x18e,bat_mod_dump[transmit_cnt_number][14],PUT_LB_TM3+transmit_cnt_number,
+	bat_mod_dump[transmit_cnt_number][15],
+	bat_mod_dump[transmit_cnt_number][16],bat_mod_dump[transmit_cnt_number][17],
+	bat_mod_dump[transmit_cnt_number][18],bat_mod_dump[transmit_cnt_number][19],
+	bat_mod_dump[transmit_cnt_number][20]);
+	can_transmit(0x18e,bat_mod_dump[transmit_cnt_number][21],PUT_LB_TM4+transmit_cnt_number,
+	bat_mod_dump[transmit_cnt_number][22],
+	bat_mod_dump[transmit_cnt_number][23],bat_mod_dump[transmit_cnt_number][24],
+	bat_mod_dump[transmit_cnt_number][25],bat_mod_dump[transmit_cnt_number][26],
+	bat_mod_dump[transmit_cnt_number][27]);
+	can_transmit(0x18e,bat_mod_dump[transmit_cnt_number][28],PUT_LB_TM5+transmit_cnt_number,
+	bat_mod_dump[transmit_cnt_number][29],
+	bat_mod_dump[transmit_cnt_number][30],bat_mod_dump[transmit_cnt_number][31],
+	bat_mod_dump[transmit_cnt_number][32],bat_mod_dump[transmit_cnt_number][33],
+	bat_mod_dump[transmit_cnt_number][34]);
+	can_transmit(0x18e,bat_mod_dump[transmit_cnt_number][35],PUT_LB_TM6+transmit_cnt_number,
+	bat_mod_dump[transmit_cnt_number][36],
+	bat_mod_dump[transmit_cnt_number][37],bat_mod_dump[transmit_cnt_number][38],
+	bat_mod_dump[transmit_cnt_number][39],bat_mod_dump[transmit_cnt_number][40],
+	bat_mod_dump[transmit_cnt_number][41]);
      link_cnt=0;
      link=ON;
+	
+	transmit_cnt_number++;
+	if(transmit_cnt_number>=7)transmit_cnt_number=0;
      
      	
     	
@@ -757,6 +823,14 @@ GPIOA->CR2&=~(1<<5);*/
 uart1_init();
 
 adress=19;
+
+bat_mod_dump[0][5]=1;
+bat_mod_dump[1][5]=2;
+bat_mod_dump[2][5]=3;
+bat_mod_dump[3][5]=4;
+bat_mod_dump[4][5]=5;
+bat_mod_dump[5][5]=6;
+bat_mod_dump[6][5]=7;
 
 enableInterrupts();
 	while (1)
