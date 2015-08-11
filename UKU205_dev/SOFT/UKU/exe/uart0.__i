@@ -1,0 +1,1 @@
+-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I..\common\inc -IC:\Keil\ARM\INC\NXP\LPC17xx -I "C:\Keil\ARM\CMSIS\Include" -I "C:\Keil\ARM\INC\NXP" -DUKU_VERSION="900" -o ".\exe\uart0.o" --omf_browse ".\exe\uart0.crf" --depend ".\exe\uart0.d" "uart0.c"

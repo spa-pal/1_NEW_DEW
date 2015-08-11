@@ -1269,10 +1269,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>4</ColumnNumber>
+      <ColumnNumber>16</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>3965</TopLine>
-      <CurrentLine>3975</CurrentLine>
+      <TopLine>1167</TopLine>
+      <CurrentLine>1182</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
@@ -1549,9 +1549,9 @@
       <FileType>1</FileType>
       <tvExp>1</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>87</ColumnNumber>
+      <ColumnNumber>110</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>121</TopLine>
+      <TopLine>124</TopLine>
       <CurrentLine>134</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\SNMP_MIB.c</PathWithFileName>
@@ -1627,8 +1627,8 @@
 
   <AlienFiles>
     <PathWithFilename>E:\Users\Pal\DEVICES\1_NEW_DEV\UKU205_dev\SOFT\UKU\main.h</PathWithFilename>
-    <TopLine>449</TopLine>
-    <CurrentLine>449</CurrentLine>
+    <TopLine>112</TopLine>
+    <CurrentLine>124</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -1682,7 +1682,7 @@
     <ActiveMDIGroup>0</ActiveMDIGroup>
     <MDIGroup>
       <Size>100</Size>
-      <ActiveTab>5</ActiveTab>
+      <ActiveTab>3</ActiveTab>
       <Documents>
         <Doc>
           <Name>avar.h</Name>
@@ -1704,9 +1704,9 @@
         </Doc>
         <Doc>
           <Name>.\main.c</Name>
-          <ColumnNumber>4</ColumnNumber>
-          <TopLine>3965</TopLine>
-          <CurrentLine>3975</CurrentLine>
+          <ColumnNumber>16</ColumnNumber>
+          <TopLine>1167</TopLine>
+          <CurrentLine>1182</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\control.c</Name>
@@ -1716,14 +1716,14 @@
         </Doc>
         <Doc>
           <Name>main.h</Name>
-          <ColumnNumber>33</ColumnNumber>
-          <TopLine>449</TopLine>
-          <CurrentLine>449</CurrentLine>
+          <ColumnNumber>19</ColumnNumber>
+          <TopLine>112</TopLine>
+          <CurrentLine>124</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\SNMP_MIB.c</Name>
-          <ColumnNumber>87</ColumnNumber>
-          <TopLine>121</TopLine>
+          <ColumnNumber>110</ColumnNumber>
+          <TopLine>124</TopLine>
           <CurrentLine>134</CurrentLine>
         </Doc>
         <Doc>
