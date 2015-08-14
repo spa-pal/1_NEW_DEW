@@ -1332,7 +1332,7 @@ if(ind==iMn_INV)
 /*	int2lcdyx(makb[2]._cnt,0,10,0);*/
 	int2lcdyx(LPC_SC->RSID,0,3,0);	
  	int2lcdyx(reset_plazma,0,19,0);
-	//char2lcdbyx(GET_REG(LPC_GPIO0->FIOPIN,4,8),0,19);
+	char2lcdbyx(snmp_numofevents,0,16);
 	}
 
 #ifndef _DEBUG_
@@ -16703,7 +16703,7 @@ while (1)
 		{
 		b50Hz=0;
 
-		net_drv();
+		//net_drv();
 		}
 
 	if(b10Hz)

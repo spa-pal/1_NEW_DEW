@@ -233,16 +233,21 @@ snmp_mains_power_status=2;
 #endif
 if(St&0x01)snmp_mains_power_status|=0x01;
 if(St&0x01)snmp_mains_power_alarm=1;
+*/
 
 
 
 
 
+//for(i=0;i<snmp_numofevents;i++)event2snmp(i);
 
-for(i=0;i<snmp_numofevents;i++)event2snmp(i);
+snmp_log[0][0]='5';
+snmp_log[1][0]='6';
+
+
 //snmp_bpsnumber[0]=1;
 //snmp_bpsnumber[1]=2;
-
+/*
 snmp_sernum=AUSW_MAIN_NUMBER;
 snmp_sernum_lsb=0x1122;
 snmp_sernum_msb=0x3344;
