@@ -11,6 +11,16 @@
 #include <Dialogs.hpp>
 #include <ExtCtrls.hpp>
 
+
+//#define BAT1ISON
+//#define BAT2ISON
+#define BAT3ISON
+//#define BAT4ISON
+#define BAT5ISON
+#define BAT6ISON
+#define BAT7ISON
+
+
 typedef enum {rsOFF,rsGETSETTED}enum_requestStatus;
 extern enum_requestStatus requestStatus;
 extern char modbusCnt;
@@ -33,6 +43,13 @@ __published:	// IDE-managed Components
         TLabel *Label16;
 	TLabel *Label1;
 	TLabel *Label2;
+	TCheckBox *CheckBox1;
+	TCheckBox *CheckBox2;
+	TCheckBox *CheckBox3;
+	TCheckBox *CheckBox4;
+	TCheckBox *CheckBox5;
+	TCheckBox *CheckBox6;
+	TCheckBox *CheckBox7;
 	void __fastcall B1Click(TObject *Sender);
 	void __fastcall Button1Click(TObject *Sender);
 	void __fastcall FormCreate(TObject *Sender);

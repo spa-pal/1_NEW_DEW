@@ -56,6 +56,8 @@ char bRX485;
 
 char rs485_out_buff[1000];
 
+
+
 #define MAXCELLVOLTAGE 
 //---------------------------------------------------------------------------
 __fastcall TForm1::TForm1(TComponent* Owner)
@@ -313,6 +315,7 @@ requestStatus = rsGETSETTED;
 //-----------------------------------------------
 void __fastcall TForm1::uart_in_an(void)
 {
+short i;
 
 	if(bRX485==1)
 	{
@@ -331,16 +334,25 @@ void __fastcall TForm1::uart_in_an(void)
 	rs485_out_buff[10]=0x31;
 	rs485_out_buff[11]=0x31;
 	rs485_out_buff[12]=0x38;
-	
+
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+//Á1
+     for (i=(13);i<(52);i++)
+     	{
+          rs485_out_buff[i]=0x30;
+          }
+     rs485_out_buff[51]=0x30;
+     rs485_out_buff[52]=0x31;
+
 	rs485_out_buff[13]=0x30;
 	rs485_out_buff[14]=0x44;
 	rs485_out_buff[15]=0x37;
 	rs485_out_buff[16]=0x41;
-	rs485_out_buff[17]=0x30;
+     rs485_out_buff[17]=0x30;
 	rs485_out_buff[18]=0x44;
 	rs485_out_buff[19]=0x33;
 	rs485_out_buff[20]=0x43;
-	rs485_out_buff[21]=0x31;
+     rs485_out_buff[21]=0x31;
 	rs485_out_buff[22]=0x38;
 	rs485_out_buff[23]=0x31;
 	rs485_out_buff[24]=0x39;
@@ -358,10 +370,6 @@ void __fastcall TForm1::uart_in_an(void)
 	rs485_out_buff[36]=0x35;
 	rs485_out_buff[37]=0x36;
 	rs485_out_buff[38]=0x33;
-	rs485_out_buff[39]=0x31;
-	rs485_out_buff[40]=0x44;
-	rs485_out_buff[41]=0x34;
-	rs485_out_buff[42]=0x43;
 	rs485_out_buff[43]=0x46;
 	rs485_out_buff[44]=0x46;
 	rs485_out_buff[45]=0x30;
@@ -370,8 +378,25 @@ void __fastcall TForm1::uart_in_an(void)
 	rs485_out_buff[48]=0x36;
 	rs485_out_buff[49]=0x36;
 	rs485_out_buff[50]=0x34;
-	rs485_out_buff[51]=0x30;
-	rs485_out_buff[52]=0x31;	
+
+	if(CheckBox1->Checked) {
+	rs485_out_buff[39]=0x31;
+	rs485_out_buff[40]=0x44;
+	rs485_out_buff[41]=0x34;
+	rs485_out_buff[42]=0x43;
+     }
+
+/*
+	 */
+
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+//Á2
+     for (i=(13+40);i<(52+40);i++)
+     	{
+          rs485_out_buff[i]=0x30;
+          }
+	rs485_out_buff[51+40]=0x30;
+	rs485_out_buff[52+40]=0x32;
 
 	rs485_out_buff[13+40]=0x30;
 	rs485_out_buff[14+40]=0x44;
@@ -399,10 +424,6 @@ void __fastcall TForm1::uart_in_an(void)
 	rs485_out_buff[36+40]=0x35;
 	rs485_out_buff[37+40]=0x36;
 	rs485_out_buff[38+40]=0x33;
-	rs485_out_buff[39+40]=0x31;
-	rs485_out_buff[40+40]=0x44;
-	rs485_out_buff[41+40]=0x34;
-	rs485_out_buff[42+40]=0x43;
 	rs485_out_buff[43+40]=0x46;
 	rs485_out_buff[44+40]=0x46;
 	rs485_out_buff[45+40]=0x30;
@@ -411,8 +432,26 @@ void __fastcall TForm1::uart_in_an(void)
 	rs485_out_buff[48+40]=0x36;
 	rs485_out_buff[49+40]=0x36;
 	rs485_out_buff[50+40]=0x34;
-	rs485_out_buff[51+40]=0x30;
-	rs485_out_buff[52+40]=0x32;	
+
+
+     if(CheckBox2->Checked) {
+	rs485_out_buff[39+40]=0x31;
+	rs485_out_buff[40+40]=0x44;
+	rs485_out_buff[41+40]=0x34;
+	rs485_out_buff[42+40]=0x43;
+     }
+     /*
+
+*/
+
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+//Á3
+     for (i=(13+80);i<(52+80);i++)
+     	{
+          rs485_out_buff[i]=0x30;
+          }
+	rs485_out_buff[51+80]=0x30;
+	rs485_out_buff[52+80]=0x33;
 
 	rs485_out_buff[13+80]=0x30;
 	rs485_out_buff[14+80]=0x44;
@@ -440,10 +479,6 @@ void __fastcall TForm1::uart_in_an(void)
 	rs485_out_buff[36+80]=0x35;
 	rs485_out_buff[37+80]=0x36;
 	rs485_out_buff[38+80]=0x33;
-	rs485_out_buff[39+80]=0x31;
-	rs485_out_buff[40+80]=0x44;
-	rs485_out_buff[41+80]=0x34;
-	rs485_out_buff[42+80]=0x43;
 	rs485_out_buff[43+80]=0x46;
 	rs485_out_buff[44+80]=0x46;
 	rs485_out_buff[45+80]=0x30;
@@ -452,9 +487,28 @@ void __fastcall TForm1::uart_in_an(void)
 	rs485_out_buff[48+80]=0x36;
 	rs485_out_buff[49+80]=0x36;
 	rs485_out_buff[50+80]=0x34;
-	rs485_out_buff[51+80]=0x30;
-	rs485_out_buff[52+80]=0x33;
-	
+
+	if(CheckBox3->Checked) {
+	rs485_out_buff[39+80]=0x31;
+	rs485_out_buff[40+80]=0x44;
+	rs485_out_buff[41+80]=0x34;
+	rs485_out_buff[42+80]=0x43;
+	}
+
+/*
+
+
+*/
+
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+//Á4
+     for (i=(13+120);i<(52+120);i++)
+     	{
+          rs485_out_buff[i]=0x30;
+          }
+	rs485_out_buff[51+120]=0x30;
+	rs485_out_buff[52+120]=0x34;
+
 	rs485_out_buff[13+120]=0x30;
 	rs485_out_buff[14+120]=0x44;
 	rs485_out_buff[15+120]=0x37;
@@ -481,10 +535,6 @@ void __fastcall TForm1::uart_in_an(void)
 	rs485_out_buff[36+120]=0x35;
 	rs485_out_buff[37+120]=0x36;
 	rs485_out_buff[38+120]=0x33;
-	rs485_out_buff[39+120]=0x31;
-	rs485_out_buff[40+120]=0x44;
-	rs485_out_buff[41+120]=0x34;
-	rs485_out_buff[42+120]=0x43;
 	rs485_out_buff[43+120]=0x46;
 	rs485_out_buff[44+120]=0x46;
 	rs485_out_buff[45+120]=0x30;
@@ -493,9 +543,27 @@ void __fastcall TForm1::uart_in_an(void)
 	rs485_out_buff[48+120]=0x36;
 	rs485_out_buff[49+120]=0x36;
 	rs485_out_buff[50+120]=0x34;
-	rs485_out_buff[51+120]=0x30;
-	rs485_out_buff[52+120]=0x34;	
-	
+
+	if(CheckBox4->Checked) {
+	rs485_out_buff[39+120]=0x31;
+	rs485_out_buff[40+120]=0x44;
+	rs485_out_buff[41+120]=0x34;
+	rs485_out_buff[42+120]=0x43;
+	}
+/*
+
+
+*/
+
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+//Á5
+     for (i=(13+160);i<(52+160);i++)
+     	{
+          rs485_out_buff[i]=0x30;
+          }
+	rs485_out_buff[51+160]=0x30;
+	rs485_out_buff[52+160]=0x35;
+
 	rs485_out_buff[13+160]=0x30;
 	rs485_out_buff[14+160]=0x44;
 	rs485_out_buff[15+160]=0x37;
@@ -522,10 +590,6 @@ void __fastcall TForm1::uart_in_an(void)
 	rs485_out_buff[36+160]=0x35;
 	rs485_out_buff[37+160]=0x36;
 	rs485_out_buff[38+160]=0x33;
-	rs485_out_buff[39+160]=0x31;
-	rs485_out_buff[40+160]=0x44;
-	rs485_out_buff[41+160]=0x34;
-	rs485_out_buff[42+160]=0x43;
 	rs485_out_buff[43+160]=0x46;
 	rs485_out_buff[44+160]=0x46;
 	rs485_out_buff[45+160]=0x30;
@@ -534,10 +598,28 @@ void __fastcall TForm1::uart_in_an(void)
 	rs485_out_buff[48+160]=0x36;
 	rs485_out_buff[49+160]=0x36;
 	rs485_out_buff[50+160]=0x34;
-	rs485_out_buff[51+160]=0x30;
-	rs485_out_buff[52+160]=0x35;
 
-	rs485_out_buff[13+200]=0x30;
+	if(CheckBox5->Checked) {
+	rs485_out_buff[39+160]=0x31;
+	rs485_out_buff[40+160]=0x44;
+	rs485_out_buff[41+160]=0x34;
+	rs485_out_buff[42+160]=0x43;
+	}
+/*
+
+
+*/
+
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+//Á6
+     for (i=(13+200);i<(52+200);i++)
+     	{
+          rs485_out_buff[i]=0x30;
+          }
+	rs485_out_buff[51+200]=0x30;
+	rs485_out_buff[52+200]=0x36;
+
+ 	rs485_out_buff[13+200]=0x30;
 	rs485_out_buff[14+200]=0x44;
 	rs485_out_buff[15+200]=0x37;
 	rs485_out_buff[16+200]=0x41;
@@ -545,7 +627,7 @@ void __fastcall TForm1::uart_in_an(void)
 	rs485_out_buff[18+200]=0x44;
 	rs485_out_buff[19+200]=0x33;
 	rs485_out_buff[20+200]=0x43;
-	rs485_out_buff[21+200]=0x31;
+     rs485_out_buff[21+200]=0x31;
 	rs485_out_buff[22+200]=0x38;
 	rs485_out_buff[23+200]=0x31;
 	rs485_out_buff[24+200]=0x38;
@@ -563,10 +645,6 @@ void __fastcall TForm1::uart_in_an(void)
 	rs485_out_buff[36+200]=0x35;
 	rs485_out_buff[37+200]=0x36;
 	rs485_out_buff[38+200]=0x33;
-	rs485_out_buff[39+200]=0x31;
-	rs485_out_buff[40+200]=0x44;
-	rs485_out_buff[41+200]=0x34;
-	rs485_out_buff[42+200]=0x43;
 	rs485_out_buff[43+200]=0x46;
 	rs485_out_buff[44+200]=0x46;
 	rs485_out_buff[45+200]=0x30;
@@ -575,10 +653,28 @@ void __fastcall TForm1::uart_in_an(void)
 	rs485_out_buff[48+200]=0x36;
 	rs485_out_buff[49+200]=0x36;
 	rs485_out_buff[50+200]=0x34;
-	rs485_out_buff[51+200]=0x30;
-	rs485_out_buff[52+200]=0x36;	
-	
-	rs485_out_buff[13+240]=0x30;
+
+	if(CheckBox6->Checked) {
+	rs485_out_buff[39+200]=0x31;
+	rs485_out_buff[40+200]=0x44;
+	rs485_out_buff[41+200]=0x34;
+	rs485_out_buff[42+200]=0x43;
+     }
+/*
+
+
+ */
+
+ //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+//Á7
+     for (i=(13+240);i<(52+240);i++)
+     	{
+          rs485_out_buff[i]=0x30;
+          }
+	rs485_out_buff[51+240]=0x30;
+	rs485_out_buff[52+240]=0x37;
+
+ 	rs485_out_buff[13+240]=0x30;
 	rs485_out_buff[14+240]=0x44;
 	rs485_out_buff[15+240]=0x37;
 	rs485_out_buff[16+240]=0x41;
@@ -604,10 +700,6 @@ void __fastcall TForm1::uart_in_an(void)
 	rs485_out_buff[36+240]=0x35;
 	rs485_out_buff[37+240]=0x36;
 	rs485_out_buff[38+240]=0x33;
-	rs485_out_buff[39+240]=0x31;
-	rs485_out_buff[40+240]=0x44;
-	rs485_out_buff[41+240]=0x34;
-	rs485_out_buff[42+240]=0x43;
 	rs485_out_buff[43+240]=0x46;
 	rs485_out_buff[44+240]=0x46;
 	rs485_out_buff[45+240]=0x30;
@@ -616,9 +708,17 @@ void __fastcall TForm1::uart_in_an(void)
 	rs485_out_buff[48+240]=0x36;
 	rs485_out_buff[49+240]=0x36;
 	rs485_out_buff[50+240]=0x34;
-	rs485_out_buff[51+240]=0x30;
-	rs485_out_buff[52+240]=0x37;	
 
+	if(CheckBox7->Checked) {
+	rs485_out_buff[39+240]=0x31;
+	rs485_out_buff[40+240]=0x44;
+	rs485_out_buff[41+240]=0x34;
+	rs485_out_buff[42+240]=0x43;
+	}
+/*
+
+
+*/
 	rs485_out_buff[293]=0x43;
 	rs485_out_buff[294]=0x37;
 	rs485_out_buff[295]=0x45;
@@ -648,17 +748,17 @@ void __fastcall TForm1::uart_in_an(void)
 	rs485_out_buff[11]=0x31;
 	rs485_out_buff[12]=0x38;
 	
-	rs485_out_buff[13]=0x30;
-	rs485_out_buff[14]=0x31;
+	rs485_out_buff[13]=0x34;
+	rs485_out_buff[14]=0x35;
 	rs485_out_buff[15]=0x30;
 	rs485_out_buff[16]=0x36;
-	rs485_out_buff[17]=0x31;
+	rs485_out_buff[17]=0x41;
 	rs485_out_buff[18]=0x31;
-	rs485_out_buff[19]=0x31;
-	rs485_out_buff[20]=0x31;	
+	rs485_out_buff[19]=0x35;
+	rs485_out_buff[20]=0x34;
 	
-	rs485_out_buff[21]=0x30;
-	rs485_out_buff[22]=0x30;
+	rs485_out_buff[21]=0x31;
+	rs485_out_buff[22]=0x32;
 	rs485_out_buff[23]=0x30;
 	rs485_out_buff[24]=0x30;
 	rs485_out_buff[25]=0x30;
@@ -683,10 +783,10 @@ void __fastcall TForm1::uart_in_an(void)
 	rs485_out_buff[44]=0x30;
 	rs485_out_buff[45]=0x30;
 	rs485_out_buff[46]=0x30;
-	rs485_out_buff[47]=0x30;
-	rs485_out_buff[48]=0x30;
-	rs485_out_buff[49]=0x30;
-	rs485_out_buff[50]=0x30;
+	rs485_out_buff[47]=0x33;
+	rs485_out_buff[48]=0x32;
+	rs485_out_buff[49]=0x34;
+	rs485_out_buff[50]=0x35;
 	rs485_out_buff[51]=0x30;
 	rs485_out_buff[52]=0x30;
 	rs485_out_buff[53]=0x30;
@@ -694,8 +794,8 @@ void __fastcall TForm1::uart_in_an(void)
 	
 	rs485_out_buff[21+34]=0x30;
 	rs485_out_buff[22+34]=0x30;
-	rs485_out_buff[23+34]=0x30;
-	rs485_out_buff[24+34]=0x30;
+	rs485_out_buff[23+34]=0x33;
+	rs485_out_buff[24+34]=0x34;
 	rs485_out_buff[25+34]=0x30;
 	rs485_out_buff[26+34]=0x30;
 	rs485_out_buff[27+34]=0x30;
@@ -716,14 +816,14 @@ void __fastcall TForm1::uart_in_an(void)
 	rs485_out_buff[42+34]=0x30;
 	rs485_out_buff[43+34]=0x30;
 	rs485_out_buff[44+34]=0x30;
-	rs485_out_buff[45+34]=0x30;
-	rs485_out_buff[46+34]=0x30;
+	rs485_out_buff[45+34]=0x34;
+	rs485_out_buff[46+34]=0x33;
 	rs485_out_buff[47+34]=0x30;
 	rs485_out_buff[48+34]=0x30;
 	rs485_out_buff[49+34]=0x30;
 	rs485_out_buff[50+34]=0x30;
-	rs485_out_buff[51+34]=0x30;
-	rs485_out_buff[52+34]=0x30;
+	rs485_out_buff[51+34]=0x36;
+	rs485_out_buff[52+34]=0x37;
 	rs485_out_buff[53+34]=0x30;
 	rs485_out_buff[54+34]=0x32;
 
@@ -731,8 +831,8 @@ void __fastcall TForm1::uart_in_an(void)
 	rs485_out_buff[22+68]=0x30;
 	rs485_out_buff[23+68]=0x30;
 	rs485_out_buff[24+68]=0x30;
-	rs485_out_buff[25+68]=0x30;
-	rs485_out_buff[26+68]=0x30;
+	rs485_out_buff[25+68]=0x35;
+	rs485_out_buff[26+68]=0x36;
 	rs485_out_buff[27+68]=0x30;
 	rs485_out_buff[28+68]=0x30;
 	rs485_out_buff[29+68]=0x30;
@@ -749,8 +849,8 @@ void __fastcall TForm1::uart_in_an(void)
 	rs485_out_buff[40+68]=0x30;
 	rs485_out_buff[41+68]=0x30;
 	rs485_out_buff[42+68]=0x30;
-	rs485_out_buff[43+68]=0x30;
-	rs485_out_buff[44+68]=0x30;
+	rs485_out_buff[43+68]=0x36;
+	rs485_out_buff[44+68]=0x35;
 	rs485_out_buff[45+68]=0x30;
 	rs485_out_buff[46+68]=0x30;
 	rs485_out_buff[47+68]=0x30;
@@ -759,7 +859,7 @@ void __fastcall TForm1::uart_in_an(void)
 	rs485_out_buff[50+68]=0x30;
 	rs485_out_buff[51+68]=0x30;
 	rs485_out_buff[52+68]=0x30;
-	rs485_out_buff[53+68]=0x30;
+	rs485_out_buff[53+68]=0x38;
 	rs485_out_buff[54+68]=0x33;	
 	
 	rs485_out_buff[21+102]=0x30;
@@ -768,8 +868,8 @@ void __fastcall TForm1::uart_in_an(void)
 	rs485_out_buff[24+102]=0x30;
 	rs485_out_buff[25+102]=0x30;
 	rs485_out_buff[26+102]=0x30;
-	rs485_out_buff[27+102]=0x30;
-	rs485_out_buff[28+102]=0x30;
+	rs485_out_buff[27+102]=0x37;
+	rs485_out_buff[28+102]=0x38;
 	rs485_out_buff[29+102]=0x30;
 	rs485_out_buff[30+102]=0x30;
 	rs485_out_buff[31+102]=0x30;
@@ -782,8 +882,8 @@ void __fastcall TForm1::uart_in_an(void)
 	rs485_out_buff[38+102]=0x30;
 	rs485_out_buff[39+102]=0x30;
 	rs485_out_buff[40+102]=0x30;
-	rs485_out_buff[41+102]=0x30;
-	rs485_out_buff[42+102]=0x30;
+	rs485_out_buff[41+102]=0x38;
+	rs485_out_buff[42+102]=0x37;
 	rs485_out_buff[43+102]=0x30;
 	rs485_out_buff[44+102]=0x30;
 	rs485_out_buff[45+102]=0x30;
@@ -805,8 +905,8 @@ void __fastcall TForm1::uart_in_an(void)
 	rs485_out_buff[26+136]=0x30;
 	rs485_out_buff[27+136]=0x30;
 	rs485_out_buff[28+136]=0x30;
-	rs485_out_buff[29+136]=0x30;
-	rs485_out_buff[30+136]=0x30;
+	rs485_out_buff[29+136]=0x39;
+	rs485_out_buff[30+136]=0x41;
 	rs485_out_buff[31+136]=0x30;
 	rs485_out_buff[32+136]=0x30;
 	rs485_out_buff[33+136]=0x30;
@@ -815,8 +915,8 @@ void __fastcall TForm1::uart_in_an(void)
 	rs485_out_buff[36+136]=0x30;
 	rs485_out_buff[37+136]=0x30;
 	rs485_out_buff[38+136]=0x30;
-	rs485_out_buff[39+136]=0x30;
-	rs485_out_buff[40+136]=0x30;
+	rs485_out_buff[39+136]=0x41;
+	rs485_out_buff[40+136]=0x39;
 	rs485_out_buff[41+136]=0x30;
 	rs485_out_buff[42+136]=0x30;
 	rs485_out_buff[43+136]=0x30;
@@ -842,14 +942,14 @@ void __fastcall TForm1::uart_in_an(void)
 	rs485_out_buff[28+170]=0x30;
 	rs485_out_buff[29+170]=0x30;
 	rs485_out_buff[30+170]=0x30;
-	rs485_out_buff[31+170]=0x30;
-	rs485_out_buff[32+170]=0x30;
+	rs485_out_buff[31+170]=0x42;
+	rs485_out_buff[32+170]=0x43;
 	rs485_out_buff[33+170]=0x30;
 	rs485_out_buff[34+170]=0x30;
 	rs485_out_buff[35+170]=0x30;
 	rs485_out_buff[36+170]=0x30;
-	rs485_out_buff[37+170]=0x30;
-	rs485_out_buff[38+170]=0x30;
+	rs485_out_buff[37+170]=0x43;
+	rs485_out_buff[38+170]=0x42;
 	rs485_out_buff[39+170]=0x30;
 	rs485_out_buff[40+170]=0x30;
 	rs485_out_buff[41+170]=0x30;
@@ -866,7 +966,7 @@ void __fastcall TForm1::uart_in_an(void)
 	rs485_out_buff[52+170]=0x30;
 	rs485_out_buff[53+170]=0x30;
 	rs485_out_buff[54+170]=0x36;
-	
+
 	rs485_out_buff[21+204]=0x30;
 	rs485_out_buff[22+204]=0x30;
 	rs485_out_buff[23+204]=0x30;
@@ -879,10 +979,10 @@ void __fastcall TForm1::uart_in_an(void)
 	rs485_out_buff[30+204]=0x30;
 	rs485_out_buff[31+204]=0x30;
 	rs485_out_buff[32+204]=0x30;
-	rs485_out_buff[33+204]=0x30;
-	rs485_out_buff[34+204]=0x30;
-	rs485_out_buff[35+204]=0x30;
-	rs485_out_buff[36+204]=0x30;
+	rs485_out_buff[33+204]=0x44;
+	rs485_out_buff[34+204]=0x45;
+	rs485_out_buff[35+204]=0x45;
+	rs485_out_buff[36+204]=0x44;
 	rs485_out_buff[37+204]=0x30;
 	rs485_out_buff[38+204]=0x30;
 	rs485_out_buff[39+204]=0x30;
@@ -900,7 +1000,7 @@ void __fastcall TForm1::uart_in_an(void)
 	rs485_out_buff[51+204]=0x30;
 	rs485_out_buff[52+204]=0x30;
 	rs485_out_buff[53+204]=0x30;
-	rs485_out_buff[54+204]=0x37;	
+	rs485_out_buff[54+204]=0x37;
 	
 	rs485_out_buff[259]=0x43;
 	rs485_out_buff[260]=0x46;
@@ -1308,7 +1408,7 @@ void __fastcall TForm1::Button17Click(TObject *Sender)
         if(ComPort1->Connected)
                 {
                 uart_modbus_request();
-                }        
+                }
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm1::Edit2KeyPress(TObject *Sender, char &Key)

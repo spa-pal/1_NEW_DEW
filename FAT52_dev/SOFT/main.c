@@ -102,7 +102,7 @@ char bRX485;
 //short	s_o_h[7];
 //short	b_p_ser_num[7];
 //unsigned char flags_byte0[7],flags_byte1[7];
-unsigned char rs485_cnt=0;
+char rs485_cnt=0;
 _Bool bRS485ERR;
 //char plazma_cnt;
 char transmit_cnt_number; 	//—четчик батарей на передачу, считает от 0 до 6 (7 батарей)
@@ -202,7 +202,7 @@ for (i=0;i<len;i++)
 	putchar1(UOB1[i]);
 	} 
 
-rs485_cnt++;
+//rs485_cnt++;
 }
 
 
@@ -302,105 +302,9 @@ if(bRX485==1)
 	ascii2hex(&bat_mod_dump[5][0],&rx_buffer[13+200],40);
 	ascii2hex(&bat_mod_dump[6][0],&rx_buffer[13+240],40);
 		
-		/*max_cell_volt[0]=str2int(&rx_buffer[13],4);
-		min_cell_volt[0]=str2int(&rx_buffer[17],4);
-		max_cell_temp[0]=str2int(&rx_buffer[21],2);
-		min_cell_temp[0]=str2int(&rx_buffer[23],2);
-		tot_bat_volt[0]=str2int(&rx_buffer[25],4);
-		ch_curr[0]=str2int(&rx_buffer[29],4);
-		dsch_curr[0]=str2int(&rx_buffer[33],4);
-		s_o_c[0]=str2int(&rx_buffer[37],2);
-		rat_cap[0]=str2int(&rx_buffer[39],4);
-		r_b_t[0]=str2int(&rx_buffer[43],2);
-		c_c_l_v[0]=str2int(&rx_buffer[45],4);
-		s_o_h[0]=str2int(&rx_buffer[49],2);
-		b_p_ser_num[0]=str2int(&rx_buffer[51],2);
 
-		max_cell_volt[1]=str2int(&rx_buffer[13+40],4);
-		min_cell_volt[1]=str2int(&rx_buffer[17+40],4);
-		max_cell_temp[1]=str2int(&rx_buffer[21+40],2);
-		min_cell_temp[1]=str2int(&rx_buffer[23+40],2);
-		tot_bat_volt[1]=str2int(&rx_buffer[25+40],4);
-		ch_curr[1]=str2int(&rx_buffer[29+40],4);
-		dsch_curr[1]=str2int(&rx_buffer[33+40],4);
-		s_o_c[1]=str2int(&rx_buffer[37+40],2);
-		rat_cap[1]=str2int(&rx_buffer[39+40],4);
-		r_b_t[1]=str2int(&rx_buffer[43+40],2);
-		c_c_l_v[1]=str2int(&rx_buffer[45+40],4);
-		s_o_h[1]=str2int(&rx_buffer[49+40],2);
-		b_p_ser_num[1]=str2int(&rx_buffer[51+40],2);
 		
-		max_cell_volt[2]=str2int(&rx_buffer[13+80],4);
-		min_cell_volt[2]=str2int(&rx_buffer[17+80],4);
-		max_cell_temp[2]=str2int(&rx_buffer[21+80],2);
-		min_cell_temp[2]=str2int(&rx_buffer[23+80],2);
-		tot_bat_volt[2]=str2int(&rx_buffer[25+80],4);
-		ch_curr[2]=str2int(&rx_buffer[29+80],4);
-		dsch_curr[2]=str2int(&rx_buffer[33+80],4);
-		s_o_c[2]=str2int(&rx_buffer[37+80],2);
-		rat_cap[2]=str2int(&rx_buffer[39+80],4);
-		r_b_t[2]=str2int(&rx_buffer[43+80],2);
-		c_c_l_v[2]=str2int(&rx_buffer[45+80],4);
-		s_o_h[2]=str2int(&rx_buffer[49+80],2);
-		b_p_ser_num[2]=str2int(&rx_buffer[51+80],2);		
-
-		max_cell_volt[3]=str2int(&rx_buffer[13+120],4);
-		min_cell_volt[3]=str2int(&rx_buffer[17+120],4);
-		max_cell_temp[3]=str2int(&rx_buffer[21+120],2);
-		min_cell_temp[3]=str2int(&rx_buffer[23+120],2);
-		tot_bat_volt[3]=str2int(&rx_buffer[25+120],4);
-		ch_curr[3]=str2int(&rx_buffer[29+120],4);
-		dsch_curr[3]=str2int(&rx_buffer[33+120],4);
-		s_o_c[3]=str2int(&rx_buffer[37+120],2);
-		rat_cap[3]=str2int(&rx_buffer[39+120],4);
-		r_b_t[3]=str2int(&rx_buffer[43+120],2);
-		c_c_l_v[3]=str2int(&rx_buffer[45+120],4);
-		s_o_h[3]=str2int(&rx_buffer[49+120],2);
-		b_p_ser_num[3]=str2int(&rx_buffer[51+120],2);
-
-		max_cell_volt[4]=str2int(&rx_buffer[13+160],4);
-		min_cell_volt[4]=str2int(&rx_buffer[17+160],4);
-		max_cell_temp[4]=str2int(&rx_buffer[21+160],2);
-		min_cell_temp[4]=str2int(&rx_buffer[23+160],2);
-		tot_bat_volt[4]=str2int(&rx_buffer[25+160],4);
-		ch_curr[4]=str2int(&rx_buffer[29+160],4);
-		dsch_curr[4]=str2int(&rx_buffer[33+160],4);
-		s_o_c[4]=str2int(&rx_buffer[37+160],2);
-		rat_cap[4]=str2int(&rx_buffer[39+160],4);
-		r_b_t[4]=str2int(&rx_buffer[43+160],2);
-		c_c_l_v[4]=str2int(&rx_buffer[45+160],4);
-		s_o_h[4]=str2int(&rx_buffer[49+160],2);
-		b_p_ser_num[4]=str2int(&rx_buffer[51+160],2);
-
-		max_cell_volt[5]=str2int(&rx_buffer[13+200],4);
-		min_cell_volt[5]=str2int(&rx_buffer[17+200],4);
-		max_cell_temp[5]=str2int(&rx_buffer[21+200],2);
-		min_cell_temp[5]=str2int(&rx_buffer[23+200],2);
-		tot_bat_volt[5]=str2int(&rx_buffer[25+200],4);
-		ch_curr[5]=str2int(&rx_buffer[29+200],4);
-		dsch_curr[5]=str2int(&rx_buffer[33+200],4);
-		s_o_c[5]=str2int(&rx_buffer[37+200],2);
-		rat_cap[5]=str2int(&rx_buffer[39+200],4);
-		r_b_t[5]=str2int(&rx_buffer[43+200],2);
-		c_c_l_v[5]=str2int(&rx_buffer[45+200],4);
-		s_o_h[5]=str2int(&rx_buffer[49+200],2);
-		b_p_ser_num[5]=str2int(&rx_buffer[51+200],2);
-
-		max_cell_volt[6]=str2int(&rx_buffer[13+240],4);
-		min_cell_volt[6]=str2int(&rx_buffer[17+240],4);
-		max_cell_temp[6]=str2int(&rx_buffer[21+240],2);
-		min_cell_temp[6]=str2int(&rx_buffer[23+240],2);
-		tot_bat_volt[6]=str2int(&rx_buffer[25+240],4);
-		ch_curr[6]=str2int(&rx_buffer[29+240],4);
-		dsch_curr[6]=str2int(&rx_buffer[33+240],4);
-		s_o_c[6]=str2int(&rx_buffer[37+240],2);
-		rat_cap[6]=str2int(&rx_buffer[39+240],4);
-		r_b_t[6]=str2int(&rx_buffer[43+240],2);
-		c_c_l_v[6]=str2int(&rx_buffer[45+240],4);
-		s_o_h[6]=str2int(&rx_buffer[49+240],2);
-		b_p_ser_num[6]=str2int(&rx_buffer[51+240],2);*/
-		
-//	rs485_cnt=0;
+	rs485_cnt=0;
 //	bRS485ERR=0;
 
 	}
@@ -413,6 +317,11 @@ else if(bRX485==2)
 	ascii2hex(&bat_mod_dump[4][20],&rx_buffer[21+136],34);
 	ascii2hex(&bat_mod_dump[5][20],&rx_buffer[21+170],34);
 	ascii2hex(&bat_mod_dump[6][20],&rx_buffer[21+204],34);
+	
+
+	
+	
+	rs485_cnt=0;	
 	}
 bRX485=0;	
 }
@@ -553,6 +462,21 @@ if((mess[6]==19)&&(mess[7]==19)&&(mess[8]==GETTM))
 	
 	//max_cell_volt=35000;
 	
+	bat_mod_dump[0][37]=((ascii2halFhex(rx_buffer[13]))<<4)+((ascii2halFhex(rx_buffer[14])));
+	bat_mod_dump[0][38]=((ascii2halFhex(rx_buffer[15]))<<4)+((ascii2halFhex(rx_buffer[16])));
+	bat_mod_dump[0][39]=((ascii2halFhex(rx_buffer[17]))<<4)+((ascii2halFhex(rx_buffer[18])));
+	bat_mod_dump[0][40]=((ascii2halFhex(rx_buffer[19]))<<4)+((ascii2halFhex(rx_buffer[20])));
+	bat_mod_dump[0][41]=rs485_cnt;
+	//ascii2hex(&bat_mod_dump[0][37],&rx_buffer[13],2);
+	//ascii2hex(&bat_mod_dump[0][38],&rx_buffer[15],2);
+	//ascii2hex(&bat_mod_dump[3][40],&rx_buffer[17],2);
+	//ascii2hex(&bat_mod_dump[4][40],&rx_buffer[19],2);
+	//bat_mod_dump[1][40]=0x12;
+	//bat_mod_dump[2][40]=0x34;
+	//bat_mod_dump[3][40]=0x56;
+	//bat_mod_dump[4][40]=0x78;
+	
+	
 	can_transmit(0x18e,bat_mod_dump[transmit_cnt_number][0],PUT_LB_TM1+transmit_cnt_number,
 	bat_mod_dump[transmit_cnt_number][1],
 	bat_mod_dump[transmit_cnt_number][2],bat_mod_dump[transmit_cnt_number][3],
@@ -583,6 +507,8 @@ if((mess[6]==19)&&(mess[7]==19)&&(mess[8]==GETTM))
 	bat_mod_dump[transmit_cnt_number][37],bat_mod_dump[transmit_cnt_number][38],
 	bat_mod_dump[transmit_cnt_number][39],bat_mod_dump[transmit_cnt_number][40],
 	bat_mod_dump[transmit_cnt_number][41]);
+	
+	
      link_cnt=0;
      link=ON;
 	
@@ -930,9 +856,9 @@ enableInterrupts();
 		b1Hz=0;
 		
 		
-		if(rs485_cnt>=10)
+		if(++rs485_cnt>=100)
 			{
-			rs485_cnt=10;
+			rs485_cnt=100;
 			bRS485ERR=1;
 			}
 		/*rs485_out_buff[0]=0x7e;

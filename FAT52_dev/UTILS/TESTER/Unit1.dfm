@@ -1,7 +1,7 @@
 object Form1: TForm1
   Left = 438
   Top = 121
-  Width = 498
+  Width = 512
   Height = 534
   Caption = ' хоя-15000-380/100б-160ю'
   Color = clBtnFace
@@ -128,6 +128,62 @@ object Form1: TForm1
     TabOrder = 5
     Visible = False
     OnClick = Button12Click
+  end
+  object CheckBox1: TCheckBox
+    Left = 20
+    Top = 104
+    Width = 97
+    Height = 17
+    Caption = 'а1on'
+    TabOrder = 6
+  end
+  object CheckBox2: TCheckBox
+    Left = 20
+    Top = 128
+    Width = 97
+    Height = 17
+    Caption = 'а2on'
+    TabOrder = 7
+  end
+  object CheckBox3: TCheckBox
+    Left = 20
+    Top = 152
+    Width = 97
+    Height = 17
+    Caption = 'а3on'
+    TabOrder = 8
+  end
+  object CheckBox4: TCheckBox
+    Left = 20
+    Top = 176
+    Width = 97
+    Height = 17
+    Caption = 'а4on'
+    TabOrder = 9
+  end
+  object CheckBox5: TCheckBox
+    Left = 20
+    Top = 200
+    Width = 97
+    Height = 17
+    Caption = 'а5on'
+    TabOrder = 10
+  end
+  object CheckBox6: TCheckBox
+    Left = 20
+    Top = 224
+    Width = 97
+    Height = 17
+    Caption = 'а6on'
+    TabOrder = 11
+  end
+  object CheckBox7: TCheckBox
+    Left = 20
+    Top = 248
+    Width = 97
+    Height = 17
+    Caption = 'а7on'
+    TabOrder = 12
   end
   object ComPort1: TComPort
     BaudRate = br9600
