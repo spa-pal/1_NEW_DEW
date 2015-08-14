@@ -16,3 +16,5 @@ FAT52_dev/SOFT/1
 *.__
 *.*~*
 *.class
+*uvgui*
+*uvopt*
