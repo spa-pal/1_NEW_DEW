@@ -1,0 +1,5 @@
+--cpu ARM7TDMI ".\exe\startup.o" ".\exe\common_func.o" ".\exe\control.o" ".\exe\mess.o" ".\exe\ret.o" ".\exe\gran.o" ".\exe\avar_hndl.o" ".\exe\eeprom_map.o" ".\exe\main.o" ".\exe\simbols.o" ".\exe\graphic.o" ".\exe\i2c.o" ".\exe\watchdog.o" ".\exe\memo.o" ".\exe\timer.o" ".\exe\lcd_agm1232_uku206.o" ".\exe\pcf8563.o" ".\exe\25lc640.o" ".\exe\ad7705.o" ".\exe\beep.o" ".\exe\full_can.o" ".\exe\uart0.o" ".\exe\uart1.o" --library_type=microlib --feedback ".\EXE\UKU207_K.fed" 
+--strict --scatter ".\EXE\UKU207_K.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\UKU207_K.map" -o ".\EXE\UKU207_K.axf"

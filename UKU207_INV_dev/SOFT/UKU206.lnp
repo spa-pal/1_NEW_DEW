@@ -1,0 +1,5 @@
+--device DARMP "startup.o" "common_func.o" "control.o" "mess.o" "ret.o" "gran.o" "avar_hndl.o" "eeprom_map.o" "main.o" "i2c.o" "watchdog.o" "memo.o" "timer.o" "lcd_agm1232_uku206.o" "pcf8563.o" "25lc640.o" "ad7705.o" "beep.o" "full_can.o" "uart0.o" "uart1.o" --library_type=microlib --feedback "UKU206.fed" 
+--strict --scatter "UKU206.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\UKU206.map" -o "UKU206.axf"

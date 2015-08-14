@@ -1,0 +1,1 @@
+-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I "C:\Keil\ARM\CMSIS\Include" -I "C:\Keil\ARM\INC\NXP\LPC17xx" -DUKU_INV -o ".\EXE\main.o" --omf_browse ".\EXE\main.crf" --depend ".\EXE\main.d" "main.c"

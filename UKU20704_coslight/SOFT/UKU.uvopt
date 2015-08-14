@@ -2980,32 +2980,6 @@
   </AlienFiles>
 
   <AlienFiles>
-    <PathWithFilename>E:\Users\Pal\DEVICES\1_NEW_DEV\UKU20704_coslight\SOFT\eeprom_map.h</PathWithFilename>
-    <TopLine>85</TopLine>
-    <CurrentLine>107</CurrentLine>
-    <Constant>0</Constant>
-    <WindowPosition>
-      <length>0</length>
-      <flags>0</flags>
-      <showCmd>0</showCmd>
-      <MinPosition>
-        <xPos>0</xPos>
-        <yPos>0</yPos>
-      </MinPosition>
-      <MaxPosition>
-        <xPos>0</xPos>
-        <yPos>0</yPos>
-      </MaxPosition>
-      <NormalPosition>
-        <Top>0</Top>
-        <Left>0</Left>
-        <Right>0</Right>
-        <Bottom>0</Bottom>
-      </NormalPosition>
-    </WindowPosition>
-  </AlienFiles>
-
-  <AlienFiles>
     <PathWithFilename>E:\Users\Pal\DEVICES\UKU_207_U_dev\SOFT\UKU\2\uart2.h</PathWithFilename>
     <TopLine>1</TopLine>
     <CurrentLine>3</CurrentLine>
@@ -3191,6 +3165,32 @@
     <PathWithFilename>E:\Users\Pal\DEVICES\1_NEW_DEV\UKU20704_coslight\SOFT\main.h</PathWithFilename>
     <TopLine>1009</TopLine>
     <CurrentLine>1022</CurrentLine>
+    <Constant>0</Constant>
+    <WindowPosition>
+      <length>0</length>
+      <flags>0</flags>
+      <showCmd>0</showCmd>
+      <MinPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MinPosition>
+      <MaxPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MaxPosition>
+      <NormalPosition>
+        <Top>0</Top>
+        <Left>0</Left>
+        <Right>0</Right>
+        <Bottom>0</Bottom>
+      </NormalPosition>
+    </WindowPosition>
+  </AlienFiles>
+
+  <AlienFiles>
+    <PathWithFilename>E:\Users\Pal\DEVICES\1_NEW_DEV\UKU20704_coslight\SOFT\eeprom_map.h</PathWithFilename>
+    <TopLine>85</TopLine>
+    <CurrentLine>107</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>

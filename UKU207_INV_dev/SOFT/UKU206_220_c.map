@@ -1,0 +1,1423 @@
+ARM Linker, RVCT4.0 [Build 728] [Professional]
+
+==============================================================================
+
+Section Cross References
+
+    startup.o(RESET) refers to startup.o(STACK) for Stack_Top
+    startup.o(RESET) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    common_func.o(.text) refers to uidiv.o(.text) for __aeabi_uidivmod
+    common_func.o(.text) refers to idiv.o(.text) for __aeabi_idivmod
+    common_func.o(.text) refers to 25lc640.o(.text) for lc640_read_int
+    common_func.o(.text) refers to main.o(.data) for lcd_buffer
+    common_func.o(.text) refers to main.o(.data) for dig
+    common_func.o(.text) refers to main.o(.data) for zero_on
+    common_func.o(.text) refers to main.o(.constdata) for sm_mont
+    common_func.o(.text) refers to pcf8563.o(.data) for year__
+    common_func.o(.text) refers to memcpya.o(.text) for __aeabi_memcpy
+    common_func.o(.text) refers to main.o(.constdata) for ABCDEF
+    common_func.o(.text) refers to main.o(.data) for ind_pointer
+    common_func.o(.text) refers to main.o(.bss) for b_ind
+    common_func.o(.text) refers to ret.o(.text) for ret
+    common_func.o(.text) refers to common_func.o(.text) for bin2bcd_int
+    common_func.o(.text) refers to main.o(.data) for dig
+    common_func.o(.text) refers to main.o(.data) for lcd_buffer
+    common_func.o(.text) refers to common_func.o(.text) for bin2bcd_int
+    common_func.o(.text) refers to main.o(.data) for dig
+    common_func.o(.text) refers to main.o(.data) for lcd_buffer
+    common_func.o(.text) refers to idiv.o(.text) for __aeabi_idivmod
+    common_func.o(.text) refers to common_func.o(.text) for find
+    common_func.o(.text) refers to main.o(.data) for lcd_buffer
+    common_func.o(.text) refers to idiv.o(.text) for __aeabi_idivmod
+    common_func.o(.text) refers to main.o(.data) for lcd_buffer
+    common_func.o(.text) refers to common_func.o(.text) for find
+    common_func.o(.text) refers to main.o(.constdata) for ABCDEF
+    common_func.o(.text) refers to main.o(.data) for lcd_buffer
+    common_func.o(.text) refers to main.o(.constdata) for ABCDEF
+    common_func.o(.text) refers to main.o(.data) for lcd_buffer
+    common_func.o(.text) refers to main.o(.constdata) for ABCDEF
+    common_func.o(.text) refers to main.o(.data) for lcd_buffer
+    control.o(.text) refers to 25lc640.o(.text) for lc640_write_int
+    control.o(.text) refers to gran.o(.text) for gran_char
+    control.o(.text) refers to mess.o(.text) for mess_send
+    control.o(.text) refers to common_func.o(.text) for abs
+    control.o(.text) refers to avar_hndl.o(.text) for ke_mem_hndl
+    control.o(.text) refers to control.o(.data) for .data
+    control.o(.text) refers to main.o(.bss) for bat
+    control.o(.text) refers to eeprom_map.o(.constdata) for ADR_EE_BAT_ZAR_CNT_KE
+    control.o(.text) refers to main.o(.data) for bat_u_old_cnt
+    control.o(.text) refers to pcf8563.o(.data) for year__
+    control.o(.text) refers to main.o(.data) for USIGN
+    control.o(.text) refers to eeprom_map.o(.constdata) for ADR_EE_BAT_C_REAL
+    control.o(.text) refers to eeprom_map.o(.constdata) for ADR_EE_BAT_ZAR_CNT
+    control.o(.text) refers to idiv.o(.text) for __aeabi_idivmod
+    control.o(.text) refers to mess.o(.data) for mess_data
+    control.o(.text) refers to ad7705.o(.data) for ad7705_buff_
+    control.o(.text) refers to eeprom_map.o(.constdata) for ADR_KI0BAT
+    control.o(.text) refers to main.o(.data) for unet_drv_cnt
+    control.o(.text) refers to main.o(.data) for net_Ustore
+    control.o(.text) refers to main.o(.data) for Kunet
+    control.o(.text) refers to control.o(.bss) for .bss
+    control.o(.text) refers to main.o(.data) for Kubat
+    control.o(.text) refers to main.o(.data) for Ktbat
+    control.o(.text) refers to main.o(.data) for Kuload
+    control.o(.text) refers to main.o(.data) for Isumm
+    control.o(.text) refers to avar_hndl.o(.data) for avar_ind_stat
+    control.o(.text) refers to beep.o(.data) for bU_BAT2REL_AV_BAT
+    control.o(.text) refers to main.o(.data) for num_necc
+    control.o(.text) refers to uidiv.o(.text) for __aeabi_uidivmod
+    control.o(.text) refers to eeprom_map.o(.constdata) for ADR_EE_BAT_RESURS
+    control.o(.text) refers to main.o(.data) for mat_temper
+    control.o(.text) refers to main.o(.data) for u_necc_dn
+    control.o(.text) refers to main.o(.data) for u_necc_up
+    control.o(.text) refers to main.o(.data) for Isumm_
+    control.o(.text) refers to uart0.o(.text) for uart_out0
+    control.o(.text) refers to main.o(.data) for sk_cnt
+    control.o(.text) refers to main.o(.data) for sk_av_cnt
+    control.o(.text) refers to main.o(.data) for sign_U
+    control.o(.text) refers to main.o(.data) for sign_I
+    control.o(.text) refers to main.o(.data) for superviser_cnt
+    mess.o(.text) refers to mess.o(.bss) for .bss
+    mess.o(.text) refers to mess.o(.data) for .data
+    ret.o(.text) refers to common_func.o(.text) for tree_down
+    ret.o(.text) refers to ret.o(.data) for .data
+    ret.o(.text) refers to ret.o(.data) for .data
+    ret.o(.text) refers to main.o(.data) for a_ind
+    ret.o(.text) refers to ret.o(.data) for .data
+    ret.o(.text) refers to main.o(.data) for a_ind
+    avar_hndl.o(.text) refers to 25lc640.o(.text) for lc640_read_int
+    avar_hndl.o(.text) refers to main.o(.data) for net_av
+    avar_hndl.o(.text) refers to avar_hndl.o(.data) for .data
+    avar_hndl.o(.text) refers to main.o(.bss) for bat
+    avar_hndl.o(.text) refers to pcf8563.o(.data) for year__
+    avar_hndl.o(.text) refers to main.o(.data) for net_Ustore
+    avar_hndl.o(.text) refers to main.o(.data) for bat_u_old_cnt
+    avar_hndl.o(.text) refers to control.o(.data) for ke_date
+    main.o(.text) refers to 25lc640.o(.text) for lc640_write_int
+    main.o(.text) refers to full_can.o(.text) for can2_out
+    main.o(.text) refers to avar_hndl.o(.text) for avar_bps_hndl
+    main.o(.text) refers to graphic.o(.text) for graphic_print
+    main.o(.text) refers to main.o(.data) for .data
+    main.o(.text) refers to main.o(.bss) for .bss
+    main.o(.text) refers to avar_hndl.o(.data) for avar_stat
+    main.o(.text) refers to simbols.o(.constdata) for sAVNET
+    main.o(.text) refers to simbols.o(.constdata) for sAVNET1
+    main.o(.text) refers to simbols.o(.constdata) for sBPS1
+    main.o(.text) refers to simbols.o(.constdata) for sAVT
+    main.o(.text) refers to simbols.o(.constdata) for sAVU
+    main.o(.text) refers to simbols.o(.constdata) for sBPS2
+    main.o(.text) refers to idiv.o(.text) for __aeabi_idivmod
+    main.o(.text) refers to gran.o(.text) for gran
+    main.o(.text) refers to main.o(.constdata) for .constdata
+    main.o(.text) refers to control.o(.data) for spc_stat
+    main.o(.text) refers to common_func.o(.text) for bgnd_par
+    main.o(.text) refers to uidiv.o(.text) for __aeabi_uidivmod
+    main.o(.text) refers to mess.o(.text) for mess_find_unvol
+    main.o(.text) refers to pcf8563.o(.data) for hour__
+    main.o(.text) refers to mess.o(.data) for mess_data
+    main.o(.text) refers to control.o(.bss) for net_buff
+    main.o(.text) refers to ad7705.o(.data) for ad7705_buff_
+    main.o(.text) refers to uart1.o(.data) for plazma_suz
+    main.o(.text) refers to beep.o(.text) for beep_init
+    main.o(.text) refers to ret.o(.text) for ret
+    main.o(.text) refers to full_can.o(.bss) for TXBUFF
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_EE_BAT_IS_ON
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_EE_BAT_DAY_OF_ON
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_EE_BAT_MONTH_OF_ON
+    main.o(.text) refers to control.o(.text) for vz_start
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_EE_BAT_YEAR_OF_ON
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_EE_BAT_C_REAL
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_EE_BAT_RESURS
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_EE_BAT_ZAR_CNT
+    main.o(.text) refers to pcf8563.o(.text) for pcf8563_write
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_TMAX_EXT_EN
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_TMAX_EXT
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_TMIN_EXT_EN
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_TMIN_EXT
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_T_EXT_REL_EN
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_T_EXT_ZVUK_EN
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_T_EXT_LCD_EN
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_T_EXT_RS_EN
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_SK_SIGN
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_SK_ZVUK_EN
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_SK_LCD_EN
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_SK_RS_EN
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_KUBAT
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_KI0BAT
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_KI1BAT
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_KTBAT
+    main.o(.text) refers to eeprom_map.o(.constdata) for ADR_EE_BAT_C_NOM
+    main.o(.text) refers to lcd_agm1232_uku206.o(.text) for lcd_init
+    main.o(.text) refers to ad7705.o(.text) for ad7705_reset
+    main.o(.text) refers to memo.o(.text) for memo_read
+    main.o(.text) refers to uart0.o(.text) for uart0_init
+    main.o(.text) refers to uart1.o(.text) for uart1_init
+    main.o(.text) refers to timer.o(.text) for init_timer1
+    main.o(.text) refers to watchdog.o(.text) for watchdog_init
+    main.o(.text) refers to uart0.o(.data) for bRXIN0
+    main.o(.text) refers to control.o(.text) for adc_drv
+    main.o(.text) refers to beep.o(.text) for beep_drv
+    main.o(.text) refers to main.o(.data) for .data
+    main.o(.text) refers to beep.o(.data) for beep_cnt
+    graphic.o(.text) refers to main.o(.bss) for lcd_bitmap
+    graphic.o(.text) refers to idiv.o(.text) for __aeabi_idivmod
+    graphic.o(.text) refers to main.o(.constdata) for caracter
+    watchdog.o(.text) refers to uidiv.o(.text) for __aeabi_uidivmod
+    watchdog.o(.text) refers to watchdog.o(i.__ARM_common_disable_irq) for __ARM_common_disable_irq
+    watchdog.o(.text) refers to watchdog.o(i.__ARM_common_enable_irq) for __ARM_common_enable_irq
+    memo.o(.text) refers to 25lc640.o(.text) for lc640_read_int
+    memo.o(.text) refers to main.o(.data) for Kubat
+    memo.o(.text) refers to main.o(.data) for Kibat0
+    memo.o(.text) refers to main.o(.data) for Ktbat
+    memo.o(.text) refers to main.o(.data) for Kunet
+    memo.o(.text) refers to main.o(.data) for Kuload
+    memo.o(.text) refers to main.o(.data) for Ktext
+    memo.o(.text) refers to main.o(.data) for MAIN_IST
+    memo.o(.text) refers to main.o(.data) for APV_ON
+    memo.o(.text) refers to main.o(.data) for AUSW_MAIN
+    memo.o(.text) refers to main.o(.data) for AUSW_MAIN_NUMBER
+    memo.o(.text) refers to main.o(.data) for AUSW_DAY
+    memo.o(.text) refers to main.o(.data) for AUSW_MONTH
+    memo.o(.text) refers to main.o(.data) for AUSW_YEAR
+    memo.o(.text) refers to main.o(.data) for AUSW_BPS1_NUMBER
+    memo.o(.text) refers to main.o(.data) for AUSW_BPS2_NUMBER
+    memo.o(.text) refers to main.o(.data) for AUSW_RS232
+    memo.o(.text) refers to main.o(.data) for AUSW_PDH
+    memo.o(.text) refers to main.o(.data) for AUSW_SDH
+    memo.o(.text) refers to main.o(.data) for AUSW_ETH
+    memo.o(.text) refers to main.o(.data) for AUSW_UKU
+    memo.o(.text) refers to main.o(.data) for AUSW_UKU_SUB
+    memo.o(.text) refers to main.o(.data) for AUSW_UKU_NUMBER
+    timer.o(.text) refers to timer.o(.data) for .data
+    timer.o(.text) refers to main.o(.data) for flag
+    timer.o(.text) refers to main.o(.text) for timer0_interrupt
+    timer.o(.text) refers to main.o(.text) for timer1_interrupt
+    lcd_agm1232_uku206.o(.text) refers to lcd_agm1232_uku206.o(.text) for status
+    lcd_agm1232_uku206.o(.text) refers to lcd_agm1232_uku206.o(.text) for lcd1_wr
+    pcf8563.o(.text) refers to pcf8563.o(.text) for i2c_init_soft
+    pcf8563.o(.text) refers to pcf8563.o(.text) for i2c_start_soft
+    pcf8563.o(.text) refers to pcf8563.o(.text) for i2c_stop_soft
+    pcf8563.o(.text) refers to i2c.o(.text) for i2c_Start
+    pcf8563.o(.text) refers to gran.o(.text) for gran_char
+    pcf8563.o(.text) refers to watchdog.o(i.__ARM_common_disable_irq) for __ARM_common_disable_irq
+    pcf8563.o(.text) refers to watchdog.o(i.__ARM_common_enable_irq) for __ARM_common_enable_irq
+    pcf8563.o(.text) refers to pcf8563.o(.data) for .data
+    25lc640.o(.text) refers to 25lc640.o(.text) for lc640_rdsr
+    25lc640.o(.text) refers to 25lc640.o(.text) for lc640_rdsr
+    ad7705.o(.text) refers to 25lc640.o(.text) for spi1
+    ad7705.o(.text) refers to watchdog.o(i.__ARM_common_disable_irq) for __ARM_common_disable_irq
+    ad7705.o(.text) refers to watchdog.o(i.__ARM_common_enable_irq) for __ARM_common_enable_irq
+    ad7705.o(.text) refers to ad7705.o(.data) for .data
+    ad7705.o(.text) refers to ad7705.o(.bss) for .bss
+    beep.o(.text) refers to beep.o(.data) for .data
+    beep.o(.text) refers to avar_hndl.o(.data) for avar_ind_stat
+    beep.o(.text) refers to main.o(.bss) for bat
+    beep.o(.text) refers to main.o(.data) for USIGN
+    full_can.o(.text) refers to full_can.o(.bss) for .bss
+    full_can.o(.text) refers to full_can.o(.constdata) for .constdata
+    full_can.o(.text) refers to full_can.o(.data) for .data
+    full_can.o(.text) refers to uidiv.o(.text) for __aeabi_uidivmod
+    full_can.o(.text) refers to control.o(.text) for vz_start
+    full_can.o(.text) refers to main.o(.bss) for bps
+    full_can.o(.text) refers to main.o(.data) for net_U
+    full_can.o(.text) refers to avar_hndl.o(.data) for avar_stat
+    full_can.o(.text) refers to control.o(.data) for spc_stat
+    full_can.o(.text) refers to 25lc640.o(.text) for lc640_write_int
+    full_can.o(.text) refers to mess.o(.text) for mess_send
+    full_can.o(.text) refers to avar_hndl.o(.text) for avar_bps_hndl
+    full_can.o(.text) refers to full_can.o(.text) for can_isr_rx1
+    full_can.o(.text) refers to full_can.o(.text) for CRC1_in
+    full_can.o(.text) refers to full_can.o(.bss) for .bss
+    full_can.o(.text) refers to full_can.o(.data) for .data
+    full_can.o(.text) refers to full_can.o(.data) for .data
+    full_can.o(.text) refers to full_can.o(.bss) for .bss
+    uart0.o(.text) refers to 25lc640.o(.text) for lc640_read_long
+    uart0.o(.text) refers to full_can.o(.constdata) for Table87
+    uart0.o(.text) refers to uart0.o(.data) for .data
+    uart0.o(.text) refers to uart0.o(.bss) for .bss
+    uart0.o(.text) refers to uart0.o(.text) for uart0_interrupt
+    uart0.o(.text) refers to main.o(.bss) for bps
+    uart0.o(.text) refers to main.o(.data) for BAT_C_REAL
+    uart0.o(.text) refers to control.o(.text) for vz_start
+    uart0.o(.text) refers to full_can.o(.text) for can2_out
+    uart0.o(.text) refers to watchdog.o(i.__ARM_common_disable_irq) for __ARM_common_disable_irq
+    uart0.o(.text) refers to watchdog.o(i.__ARM_common_enable_irq) for __ARM_common_enable_irq
+    uart0.o(.text) refers to control.o(.data) for ke_start_stat
+    uart0.o(.text) refers to uart0.o(.data) for .data
+    uart0.o(.text) refers to uart0.o(.bss) for .bss
+    uart0.o(.text) refers to uart0.o(.data) for .data
+    uart0.o(.text) refers to uart0.o(.bss) for .bss
+    uart1.o(.text) refers to uart0.o(.text) for crc_87
+    uart1.o(.text) refers to 25lc640.o(.text) for lc640_write_int
+    uart1.o(.text) refers to uart1.o(.data) for .data
+    uart1.o(.text) refers to uart1.o(.bss) for .bss
+    uart1.o(.text) refers to uart1.o(.text) for uart1_interrupt
+    uart1.o(.text) refers to main.o(.data) for NUMIST
+    uart1.o(.text) refers to avar_hndl.o(.data) for avar_stat
+    uart1.o(.text) refers to main.o(.bss) for bat
+    uart1.o(.text) refers to control.o(.text) for vz_start
+    uart1.o(.text) refers to common_func.o(.text) for ptr_carry
+    uart1.o(.text) refers to main.o(.bss) for ND_EXT
+    uart1.o(.text) refers to control.o(.data) for spc_stat
+    uart1.o(.text) refers to main.o(.data) for MAIN_IST
+    uart1.o(.text) refers to gran.o(.text) for gran
+    uart1.o(.text) refers to main.o(.data) for AUSW_MAIN
+    uart1.o(.text) refers to watchdog.o(i.__ARM_common_disable_irq) for __ARM_common_disable_irq
+    uart1.o(.text) refers to watchdog.o(i.__ARM_common_enable_irq) for __ARM_common_enable_irq
+    uart1.o(.text) refers to uart1.o(.data) for .data
+    uart1.o(.text) refers to uart1.o(.bss) for .bss
+    uart1.o(.text) refers to uart1.o(.data) for .data
+    uart1.o(.text) refers to uart1.o(.bss) for .bss
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7.o(.ARM.Collect$$$$00000007) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    idiv.o(.text) refers to uidiv.o(.text) for __aeabi_uidivmod
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup.o(STACK) for __initial_sp
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry7.o(.ARM.Collect$$$$00000007) refers to main.o(.text) for main
+    init.o(.text) refers to init.o(i.__ARM_common_call_via_r3) for __ARM_common_call_via_r3
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing startup.o(HEAP), (0 bytes).
+    Removing common_func.o(.text), (120 bytes).
+    Removing common_func.o(.text), (144 bytes).
+    Removing common_func.o(.text), (176 bytes).
+    Removing common_func.o(.text), (184 bytes).
+    Removing common_func.o(.text), (48 bytes).
+    Removing common_func.o(.text), (80 bytes).
+    Removing common_func.o(.text), (144 bytes).
+    Removing control.o(.data), (2 bytes).
+    Removing control.o(.data), (1 bytes).
+    Removing control.o(.data), (6 bytes).
+    Removing control.o(.data), (1 bytes).
+    Removing control.o(.data), (1 bytes).
+    Removing control.o(.data), (1 bytes).
+    Removing control.o(.data), (1 bytes).
+    Removing control.o(.data), (1 bytes).
+    Removing ret.o(.text), (48 bytes).
+    Removing ret.o(.text), (44 bytes).
+    Removing gran.o(.text), (18 bytes).
+    Removing eeprom_map.o(.constdata), (8 bytes).
+    Removing main.o(.text), (4 bytes).
+    Removing main.o(.data), (2 bytes).
+    Removing main.o(.data), (2 bytes).
+    Removing main.o(.data), (2 bytes).
+    Removing main.o(.data), (4 bytes).
+    Removing main.o(.data), (4 bytes).
+    Removing main.o(.data), (4 bytes).
+    Removing main.o(.data), (4 bytes).
+    Removing main.o(.data), (4 bytes).
+    Removing main.o(.data), (4 bytes).
+    Removing main.o(.data), (4 bytes).
+    Removing main.o(.data), (2 bytes).
+    Removing main.o(.data), (2 bytes).
+    Removing main.o(.data), (2 bytes).
+    Removing main.o(.data), (2 bytes).
+    Removing main.o(.data), (2 bytes).
+    Removing main.o(.data), (4 bytes).
+    Removing main.o(.data), (8 bytes).
+    Removing main.o(.data), (8 bytes).
+    Removing main.o(.data), (4 bytes).
+    Removing main.o(.data), (4 bytes).
+    Removing main.o(.data), (1 bytes).
+    Removing main.o(.data), (1 bytes).
+    Removing main.o(.data), (2 bytes).
+    Removing main.o(.data), (2 bytes).
+    Removing main.o(.data), (3 bytes).
+    Removing main.o(.data), (1 bytes).
+    Removing timer.o(.text), (80 bytes).
+    Removing timer.o(.text), (60 bytes).
+    Removing timer.o(.data), (4 bytes).
+    Removing lcd_agm1232_uku206.o(.text), (68 bytes).
+    Removing lcd_agm1232_uku206.o(.text), (16 bytes).
+    Removing lcd_agm1232_uku206.o(.text), (64 bytes).
+    Removing lcd_agm1232_uku206.o(.text), (18 bytes).
+    Removing pcf8563.o(.text), (40 bytes).
+    Removing pcf8563.o(.text), (40 bytes).
+    Removing pcf8563.o(.text), (40 bytes).
+    Removing pcf8563.o(.text), (18 bytes).
+    Removing 25lc640.o(.text), (116 bytes).
+    Removing 25lc640.o(.text), (120 bytes).
+    Removing full_can.o(.text), (204 bytes).
+    Removing full_can.o(.bss), (25 bytes).
+    Removing full_can.o(.bss), (25 bytes).
+    Removing full_can.o(.bss), (40 bytes).
+    Removing full_can.o(.data), (2 bytes).
+    Removing uart0.o(.text), (48 bytes).
+    Removing uart0.o(.bss), (50 bytes).
+    Removing uart0.o(.bss), (50 bytes).
+    Removing uart0.o(.data), (1 bytes).
+    Removing uart0.o(.data), (1 bytes).
+    Removing uart1.o(.text), (48 bytes).
+    Removing uart1.o(.data), (1 bytes).
+    Removing uart1.o(.data), (1 bytes).
+
+73 unused section(s) (total 2294 bytes) removed from the image.
+
+==============================================================================
+
+Adding Veneers to the image
+
+    Adding AT veneer (8 bytes, Inline) for call to 'CRC1_in' from full_can.o(.text).
+    Adding AT veneer (8 bytes, Inline) for call to '__scatterload' from entry5.o(.ARM.Collect$$$$00000004).
+    Adding AT veneer (12 bytes, Long) for call to 'adc_drv' from main.o(.text).
+    Adding AT veneer (12 bytes, Long) for call to 'beep_drv' from main.o(.text).
+    Adding AT veneer (12 bytes, Long) for call to 'CRC2_in' from full_can.o(.text).
+    Adding AT veneer (12 bytes, Long) for call to 'can_in_an1' from full_can.o(.text).
+    Adding AT veneer (12 bytes, Long) for call to 'can_in_an2' from full_can.o(.text).
+    Adding TA veneer (8 bytes, Short) for call to '__main_after_scatterload' from init.o(.text).
+    Adding TA veneer (4 bytes, Inline) for call to '__ARM_common_disable_irq' from watchdog.o(.text).
+    Adding TA veneer (4 bytes, Inline) for call to '__ARM_common_enable_irq' from watchdog.o(.text).
+
+10 Veneer(s) (total 92 bytes) added to the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    RESET                                    0x00000000   Section      280  startup.o(RESET)
+    ../../../cmprslib/zerorunl.c             0x00000000   Number         0  __dczerorl.o ABSOLUTE
+    ../../microlib/division.c                0x00000000   Number         0  idiv.o ABSOLUTE
+    ../../microlib/division.c                0x00000000   Number         0  uidiv.o ABSOLUTE
+    ../../microlib/init/entry.s              0x00000000   Number         0  entry7.o ABSOLUTE
+    ../../microlib/init/entry.s              0x00000000   Number         0  entry2.o ABSOLUTE
+    ../../microlib/init/entry.s              0x00000000   Number         0  entry.o ABSOLUTE
+    ../../microlib/init/entry.s              0x00000000   Number         0  entry5.o ABSOLUTE
+    ../../microlib/string/memcpy.c           0x00000000   Number         0  memcpyb.o ABSOLUTE
+    ../../microlib/string/memcpy.c           0x00000000   Number         0  memcpya.o ABSOLUTE
+    25lc640.c                                0x00000000   Number         0  25lc640.o ABSOLUTE
+    Startup.s                                0x00000000   Number         0  startup.o ABSOLUTE
+    Timer.c                                  0x00000000   Number         0  timer.o ABSOLUTE
+    ad7705.c                                 0x00000000   Number         0  ad7705.o ABSOLUTE
+    avar_hndl.c                              0x00000000   Number         0  avar_hndl.o ABSOLUTE
+    beep.c                                   0x00000000   Number         0  beep.o ABSOLUTE
+    common_func.c                            0x00000000   Number         0  common_func.o ABSOLUTE
+    control.c                                0x00000000   Number         0  control.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    eeprom_map.c                             0x00000000   Number         0  eeprom_map.o ABSOLUTE
+    full_can.c                               0x00000000   Number         0  full_can.o ABSOLUTE
+    gran.c                                   0x00000000   Number         0  gran.o ABSOLUTE
+    graphic.c                                0x00000000   Number         0  graphic.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    i2c.c                                    0x00000000   Number         0  i2c.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    lcd_AGM1232_uku206.c                     0x00000000   Number         0  lcd_agm1232_uku206.o ABSOLUTE
+    main.c                                   0x00000000   Number         0  main.o ABSOLUTE
+    memo.c                                   0x00000000   Number         0  memo.o ABSOLUTE
+    mess.c                                   0x00000000   Number         0  mess.o ABSOLUTE
+    pcf8563.c                                0x00000000   Number         0  pcf8563.o ABSOLUTE
+    ret.c                                    0x00000000   Number         0  ret.o ABSOLUTE
+    simbols.c                                0x00000000   Number         0  simbols.o ABSOLUTE
+    uart0.c                                  0x00000000   Number         0  uart0.o ABSOLUTE
+    uart1.c                                  0x00000000   Number         0  uart1.o ABSOLUTE
+    watchdog.c                               0x00000000   Number         0  watchdog.o ABSOLUTE
+    Undef_Handler                            0x00000040   ARM Code       4  startup.o(RESET)
+    SWI_Handler                              0x00000044   ARM Code       4  startup.o(RESET)
+    PAbt_Handler                             0x00000048   ARM Code       4  startup.o(RESET)
+    DAbt_Handler                             0x0000004c   ARM Code       4  startup.o(RESET)
+    IRQ_Handler                              0x00000050   ARM Code       4  startup.o(RESET)
+    FIQ_Handler                              0x00000054   ARM Code       4  startup.o(RESET)
+    .ARM.Collect$$$$00000000                 0x00000118   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x00000118   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x0000011c   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000007                 0x00000120   Section       12  entry7.o(.ARM.Collect$$$$00000007)
+    .ARM.Collect$$$$00002712                 0x0000012c   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x0000012c   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .text                                    0x00000130   Section        0  common_func.o(.text)
+    .text                                    0x00000fd4   Section        0  control.o(.text)
+    .text                                    0x000031a4   Section        0  mess.o(.text)
+    .text                                    0x0000329c   Section        0  ret.o(.text)
+    .text                                    0x000032dc   Section        0  gran.o(.text)
+    .text                                    0x00003334   Section        0  avar_hndl.o(.text)
+    .text                                    0x00004000   Section        0  main.o(.text)
+    .text                                    0x0000c910   Section        0  main.o(.text)
+    .text                                    0x0000cb38   Section        0  graphic.o(.text)
+    .text                                    0x0000d234   Section        0  i2c.o(.text)
+    .text                                    0x0000d514   Section        0  watchdog.o(.text)
+    .text                                    0x0000d564   Section        0  memo.o(.text)
+    .text                                    0x0000db30   Section        0  timer.o(.text)
+    .text                                    0x0000db6c   Section        0  lcd_agm1232_uku206.o(.text)
+    .text                                    0x0000e158   Section        0  pcf8563.o(.text)
+    .text                                    0x0000e2e4   Section        0  25lc640.o(.text)
+    .text                                    0x0000e6f0   Section        0  ad7705.o(.text)
+    .text                                    0x0000e970   Section        0  beep.o(.text)
+    .text                                    0x0000eb0c   Section        0  full_can.o(.text)
+    .text                                    0x0000f7b0   Section        0  full_can.o(.text)
+    .text                                    0x0000fb9c   Section        0  uart0.o(.text)
+    .text                                    0x00010408   Section        0  uart0.o(.text)
+    .text                                    0x000104d4   Section        0  uart1.o(.text)
+    .text                                    0x00011bbc   Section        0  uart1.o(.text)
+    .text                                    0x00011c94   Section        0  uidiv.o(.text)
+    .text                                    0x00011cc2   Section        0  idiv.o(.text)
+    .text                                    0x00011cee   Section        0  memcpya.o(.text)
+    .text                                    0x00011d1c   Section       32  init.o(.text)
+    .text                                    0x00011d3c   Section        0  __dczerorl.o(.text)
+    i.__ARM_common_call_via_r3               0x00011dd0   Section        2  init.o(i.__ARM_common_call_via_r3)
+    i.__ARM_common_disable_irq               0x00011dd8   Section        0  watchdog.o(i.__ARM_common_disable_irq)
+    i.__ARM_common_enable_irq                0x00011df0   Section        0  watchdog.o(i.__ARM_common_enable_irq)
+    i.__scatterload_copy                     0x00011e00   Section       24  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x00011e18   Section        4  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x00011e1c   Section       24  handlers.o(i.__scatterload_zeroinit)
+    .constdata                               0x00011e34   Section        4  eeprom_map.o(.constdata)
+    .constdata                               0x00011e38   Section        4  eeprom_map.o(.constdata)
+    .constdata                               0x00011e3c   Section        4  eeprom_map.o(.constdata)
+    .constdata                               0x00011e40   Section        4  eeprom_map.o(.constdata)
+    .constdata                               0x00011e44   Section        4  eeprom_map.o(.constdata)
+    .constdata                               0x00011e48   Section        4  eeprom_map.o(.constdata)
+    .constdata                               0x00011e4c   Section        4  eeprom_map.o(.constdata)
+    .constdata                               0x00011e50   Section        4  eeprom_map.o(.constdata)
+    .constdata                               0x00011e54   Section        4  eeprom_map.o(.constdata)
+    .constdata                               0x00011e58   Section        4  eeprom_map.o(.constdata)
+    .constdata                               0x00011e5c   Section        4  eeprom_map.o(.constdata)
+    .constdata                               0x00011e60   Section        4  eeprom_map.o(.constdata)
+    .constdata                               0x00011e64   Section        4  eeprom_map.o(.constdata)
+    .constdata                               0x00011e68   Section        6  eeprom_map.o(.constdata)
+    .constdata                               0x00011e6e   Section        6  eeprom_map.o(.constdata)
+    .constdata                               0x00011e74   Section        6  eeprom_map.o(.constdata)
+    .constdata                               0x00011e7a   Section        6  eeprom_map.o(.constdata)
+    .constdata                               0x00011e80   Section        6  eeprom_map.o(.constdata)
+    .constdata                               0x00011e86   Section        6  eeprom_map.o(.constdata)
+    .constdata                               0x00011e8c   Section        6  eeprom_map.o(.constdata)
+    .constdata                               0x00011e92   Section        6  eeprom_map.o(.constdata)
+    .constdata                               0x00011e98   Section        8  eeprom_map.o(.constdata)
+    .constdata                               0x00011ea0   Section        8  eeprom_map.o(.constdata)
+    .constdata                               0x00011ea8   Section        8  eeprom_map.o(.constdata)
+    .constdata                               0x00011eb0   Section        8  eeprom_map.o(.constdata)
+    .constdata                               0x00011eb8   Section     1651  main.o(.constdata)
+    .constdata                               0x0001252b   Section       17  main.o(.constdata)
+    .constdata                               0x0001253c   Section      150  simbols.o(.constdata)
+    .constdata                               0x000125d2   Section      150  simbols.o(.constdata)
+    .constdata                               0x00012668   Section       30  simbols.o(.constdata)
+    .constdata                               0x00012686   Section       30  simbols.o(.constdata)
+    .constdata                               0x000126a4   Section       30  simbols.o(.constdata)
+    .constdata                               0x000126c2   Section       30  simbols.o(.constdata)
+    .constdata                               0x000126e0   Section      512  full_can.o(.constdata)
+    .data                                    0x40000000   Section      112  control.o(.data)
+    sh_cnt0                                  0x40000002   Data           1  control.o(.data)
+    b1Hz_sh                                  0x40000003   Data           1  control.o(.data)
+    unh_cnt0                                 0x40000004   Data           1  control.o(.data)
+    unh_cnt1                                 0x40000005   Data           1  control.o(.data)
+    b1Hz_unh                                 0x40000006   Data           1  control.o(.data)
+    ch_cnt0                                  0x40000007   Data           1  control.o(.data)
+    b1Hz_ch                                  0x40000008   Data           1  control.o(.data)
+    i                                        0x40000009   Data           1  control.o(.data)
+    iiii                                     0x4000000a   Data           1  control.o(.data)
+    num_necc_block_cnt                       0x40000020   Data           2  control.o(.data)
+    IZMAX_                                   0x40000022   Data           2  control.o(.data)
+    ibat                                     0x40000056   Data           4  control.o(.data)
+    ibat_                                    0x4000005a   Data           4  control.o(.data)
+    .data                                    0x40000070   Section        8  mess.o(.data)
+    .data                                    0x40000078   Section       20  ret.o(.data)
+    .data                                    0x4000008c   Section       26  avar_hndl.o(.data)
+    .data                                    0x400000a8   Section      616  main.o(.data)
+    ptr_cnt                                  0x400000ac   Data           1  main.o(.data)
+    ptr_cnt1                                 0x400000ad   Data           1  main.o(.data)
+    ptr_cnt2                                 0x400000ae   Data           1  main.o(.data)
+    ptr_cnt3                                 0x400000af   Data           1  main.o(.data)
+    ptr_cnt4                                 0x400000b0   Data           1  main.o(.data)
+    sub_cnt                                  0x400000b1   Data           1  main.o(.data)
+    sub_cnt1                                 0x400000b2   Data           1  main.o(.data)
+    ii_cnt                                   0x400000b3   Data           1  main.o(.data)
+    cnt_ind_bat                              0x400000b4   Data           1  main.o(.data)
+    phase_cnt                                0x400000b5   Data           1  main.o(.data)
+    .data                                    0x40000310   Section        2  main.o(.data)
+    .data                                    0x40000312   Section        4  main.o(.data)
+    .data                                    0x40000316   Section        4  main.o(.data)
+    .data                                    0x4000031a   Section        2  main.o(.data)
+    .data                                    0x4000031c   Section        6  main.o(.data)
+    .data                                    0x40000322   Section        2  main.o(.data)
+    .data                                    0x40000324   Section        2  main.o(.data)
+    .data                                    0x40000326   Section        2  main.o(.data)
+    .data                                    0x40000328   Section        2  main.o(.data)
+    .data                                    0x4000032c   Section        4  main.o(.data)
+    .data                                    0x40000330   Section        2  main.o(.data)
+    .data                                    0x40000332   Section        2  main.o(.data)
+    .data                                    0x40000334   Section        2  main.o(.data)
+    .data                                    0x40000336   Section        2  main.o(.data)
+    .data                                    0x40000338   Section        2  main.o(.data)
+    .data                                    0x4000033c   Section        4  main.o(.data)
+    .data                                    0x40000340   Section        4  main.o(.data)
+    .data                                    0x40000344   Section        4  main.o(.data)
+    .data                                    0x40000348   Section        2  main.o(.data)
+    .data                                    0x4000034a   Section        2  main.o(.data)
+    .data                                    0x4000034c   Section        2  main.o(.data)
+    .data                                    0x4000034e   Section        2  main.o(.data)
+    .data                                    0x40000350   Section        2  main.o(.data)
+    .data                                    0x40000352   Section        5  main.o(.data)
+    .data                                    0x40000357   Section        1  main.o(.data)
+    .data                                    0x40000358   Section        2  main.o(.data)
+    .data                                    0x4000035a   Section        1  main.o(.data)
+    .data                                    0x4000035b   Section        4  main.o(.data)
+    .data                                    0x4000035f   Section        4  main.o(.data)
+    .data                                    0x40000364   Section        2  main.o(.data)
+    .data                                    0x40000366   Section        2  main.o(.data)
+    .data                                    0x40000368   Section        2  main.o(.data)
+    .data                                    0x4000036c   Section        4  main.o(.data)
+    .data                                    0x40000370   Section        2  main.o(.data)
+    .data                                    0x40000372   Section        2  main.o(.data)
+    .data                                    0x40000374   Section        2  main.o(.data)
+    .data                                    0x40000376   Section        2  main.o(.data)
+    .data                                    0x40000378   Section        1  main.o(.data)
+    .data                                    0x40000379   Section       12  pcf8563.o(.data)
+    .data                                    0x40000386   Section       16  ad7705.o(.data)
+    .data                                    0x40000398   Section       12  beep.o(.data)
+    bcnt                                     0x40000398   Data           1  beep.o(.data)
+    .data                                    0x400003a4   Section       14  full_can.o(.data)
+    .data                                    0x400003b2   Section        8  uart0.o(.data)
+    .data                                    0x400003ba   Section       23  uart1.o(.data)
+    .bss                                     0x400003d4   Section      608  control.o(.bss)
+    .bss                                     0x40000634   Section      112  mess.o(.bss)
+    .bss                                     0x400006a4   Section     2193  main.o(.bss)
+    .bss                                     0x40000f35   Section       50  main.o(.bss)
+    .bss                                     0x40000f68   Section       12  main.o(.bss)
+    .bss                                     0x40000f74   Section       64  ad7705.o(.bss)
+    .bss                                     0x40000fb4   Section      432  full_can.o(.bss)
+    .bss                                     0x40001164   Section      302  uart0.o(.bss)
+    .bss                                     0x40001292   Section      600  uart1.o(.bss)
+    STACK                                    0x400014f0   Section     2568  startup.o(STACK)
+    Stack_Top                                0x40001ef8   Data           0  startup.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv1$ARM_ISAv4$S$PE$A:L22$X:L11$S22$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  main.o ABSOLUTE
+    Reset_Handler                            0x00000058   ARM Code       0  startup.o(RESET)
+    __main                                   0x00000118   ARM Code       0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x00000118   ARM Code       0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x0000011c   ARM Code       0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x00000120   ARM Code       0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_init                               0x00000120   ARM Code       0  entry7.o(.ARM.Collect$$$$00000007)
+    abs                                      0x00000131   Thumb Code    12  common_func.o(.text)
+    clr_scrn                                 0x0000013d   Thumb Code    20  common_func.o(.text)
+    find                                     0x00000151   Thumb Code    24  common_func.o(.text)
+    bin2bcd_int                              0x00000169   Thumb Code    30  common_func.o(.text)
+    bcd2lcd_zero                             0x00000187   Thumb Code    66  common_func.o(.text)
+    int2lcd_mmm                              0x000001c9   Thumb Code   180  common_func.o(.text)
+    int2lcdyx                                0x0000027d   Thumb Code    88  common_func.o(.text)
+    sub_bgnd                                 0x000002d5   Thumb Code    44  common_func.o(.text)
+    int2lcd                                  0x00000301   Thumb Code    96  common_func.o(.text)
+    ptr_carry                                0x00000361   Thumb Code    20  common_func.o(.text)
+    event2ind                                0x00000375   Thumb Code  2300  common_func.o(.text)
+    long2lcdhyx                              0x00000c71   Thumb Code   134  common_func.o(.text)
+    char2lcdhyx                              0x00000cf7   Thumb Code    40  common_func.o(.text)
+    pointer_set                              0x00000d1f   Thumb Code   134  common_func.o(.text)
+    tree_down                                0x00000da5   Thumb Code    48  common_func.o(.text)
+    tree_up                                  0x00000dd5   Thumb Code    52  common_func.o(.text)
+    bgnd_par                                 0x00000e09   Thumb Code   146  common_func.o(.text)
+    show_mess                                0x00000e9b   Thumb Code    40  common_func.o(.text)
+    event_data2ind                           0x00000ec3   Thumb Code   260  common_func.o(.text)
+    ke_start                                 0x00000fd5   Thumb Code   220  control.o(.text)
+    ke_drv                                   0x000010b1   Thumb Code   334  control.o(.text)
+    vz_start                                 0x000011ff   Thumb Code    32  control.o(.text)
+    vz_stop                                  0x0000121f   Thumb Code    36  control.o(.text)
+    avz_next_date_hndl                       0x00001243   Thumb Code   108  control.o(.text)
+    avz_drv                                  0x000012af   Thumb Code   138  control.o(.text)
+    vz_drv                                   0x00001339   Thumb Code    70  control.o(.text)
+    kb_init                                  0x0000137f   Thumb Code    16  control.o(.text)
+    kb_hndl                                  0x0000138f   Thumb Code   934  control.o(.text)
+    samokalibr_init                          0x00001735   Thumb Code     8  control.o(.text)
+    samokalibr_hndl                          0x0000173d   Thumb Code   130  control.o(.text)
+    ubat_old_drv                             0x000017bf   Thumb Code    48  control.o(.text)
+    unet_drv                                 0x000017ef   Thumb Code   174  control.o(.text)
+    matemat                                  0x0000189d   Thumb Code   512  control.o(.text)
+    mnemo_hndl                               0x00001a9d   Thumb Code    42  control.o(.text)
+    adc_init                                 0x00001ac7   Thumb Code   168  control.o(.text)
+    adc_drv                                  0x00001b6f   Thumb Code   934  control.o(.text)
+    avg_hndl                                 0x00001f15   Thumb Code   294  control.o(.text)
+    rele_hndl                                0x0000203b   Thumb Code   372  control.o(.text)
+    bps_hndl                                 0x000021af   Thumb Code   412  control.o(.text)
+    bps_drv                                  0x0000234b   Thumb Code   316  control.o(.text)
+    bat_hndl                                 0x00002487   Thumb Code   192  control.o(.text)
+    bat_drv                                  0x00002547   Thumb Code   988  control.o(.text)
+    u_necc_hndl                              0x00002923   Thumb Code   394  control.o(.text)
+    num_necc_hndl                            0x00002aad   Thumb Code   198  control.o(.text)
+    cntrl_hndl                               0x00002b73   Thumb Code   806  control.o(.text)
+    ext_drv                                  0x00002e99   Thumb Code   256  control.o(.text)
+    zar_superviser_start                     0x00002f99   Thumb Code    16  control.o(.text)
+    zar_superviser_drv                       0x00002fa9   Thumb Code   418  control.o(.text)
+    mess_hndl                                0x000031a5   Thumb Code    64  mess.o(.text)
+    mess_send                                0x000031e5   Thumb Code    50  mess.o(.text)
+    mess_find                                0x00003217   Thumb Code    68  mess.o(.text)
+    mess_find_unvol                          0x0000325b   Thumb Code    56  mess.o(.text)
+    ret_ind                                  0x0000329d   Thumb Code    10  ret.o(.text)
+    ret_ind_sec                              0x000032a7   Thumb Code     8  ret.o(.text)
+    ret                                      0x000032af   Thumb Code     6  ret.o(.text)
+    ret_hndl                                 0x000032b5   Thumb Code    36  ret.o(.text)
+    gran_ring_char                           0x000032dd   Thumb Code    22  gran.o(.text)
+    gran_char                                0x000032f3   Thumb Code    22  gran.o(.text)
+    gran                                     0x00003309   Thumb Code    22  gran.o(.text)
+    gran_ring                                0x0000331f   Thumb Code    22  gran.o(.text)
+    avar_hndl                                0x00003335   Thumb Code   350  avar_hndl.o(.text)
+    reload_hndl                              0x00003493   Thumb Code   254  avar_hndl.o(.text)
+    avar_unet_hndl                           0x00003591   Thumb Code   530  avar_hndl.o(.text)
+    avar_bps_hndl                            0x000037a3   Thumb Code   622  avar_hndl.o(.text)
+    wrk_mem_hndl                             0x00003a11   Thumb Code   256  avar_hndl.o(.text)
+    avar_bat_hndl                            0x00003b11   Thumb Code   544  avar_hndl.o(.text)
+    ke_mem_hndl                              0x00003d31   Thumb Code   234  avar_hndl.o(.text)
+    vz_mem_hndl                              0x00003e1b   Thumb Code   486  avar_hndl.o(.text)
+    def_set                                  0x00004001   Thumb Code   280  main.o(.text)
+    net_drv                                  0x00004119   Thumb Code   262  main.o(.text)
+    parol_init                               0x0000421f   Thumb Code    18  main.o(.text)
+    bitmap_hndl                              0x00004231   Thumb Code  1284  main.o(.text)
+    ind_hndl                                 0x00004735   Thumb Code 20896  main.o(.text)
+    but_drv                                  0x000098d5   Thumb Code   180  main.o(.text)
+    but_an                                   0x00009989   Thumb Code 11542  main.o(.text)
+    main                                     0x0000c69f   Thumb Code   618  main.o(.text)
+    timer1_interrupt                         0x0000c910   ARM Code     532  main.o(.text)
+    draw                                     0x0000cb39   Thumb Code   974  graphic.o(.text)
+    draw_rectangle                           0x0000cf07   Thumb Code   150  graphic.o(.text)
+    draw_ptr                                 0x0000cf9d   Thumb Code   118  graphic.o(.text)
+    plot                                     0x0000d013   Thumb Code   134  graphic.o(.text)
+    graphic_print                            0x0000d099   Thumb Code    82  graphic.o(.text)
+    graphic_print_text                       0x0000d0eb   Thumb Code   322  graphic.o(.text)
+    i2c_Start                                0x0000d235   Thumb Code    88  i2c.o(.text)
+    i2c_Restart                              0x0000d28d   Thumb Code   136  i2c.o(.text)
+    i2c_SendByte                             0x0000d315   Thumb Code   110  i2c.o(.text)
+    i2c_SendAddress                          0x0000d383   Thumb Code     8  i2c.o(.text)
+    i2c_ReadAcknowledge                      0x0000d38b   Thumb Code   104  i2c.o(.text)
+    i2c_ReadByte                             0x0000d3f3   Thumb Code    92  i2c.o(.text)
+    i2c_SendAcknowledge                      0x0000d44f   Thumb Code    90  i2c.o(.text)
+    i2c_Stop                                 0x0000d4a9   Thumb Code   104  i2c.o(.text)
+    watchdog_init                            0x0000d515   Thumb Code    56  watchdog.o(.text)
+    watchdog_reset                           0x0000d54d   Thumb Code    24  watchdog.o(.text)
+    memo_read                                0x0000d565   Thumb Code  1450  memo.o(.text)
+    init_timer1                              0x0000db31   Thumb Code    34  timer.o(.text)
+    lcd1_chk                                 0x0000db6d   Thumb Code    86  lcd_agm1232_uku206.o(.text)
+    lcd2_chk                                 0x0000dbc3   Thumb Code    86  lcd_agm1232_uku206.o(.text)
+    lcd1_wr                                  0x0000dc19   Thumb Code   184  lcd_agm1232_uku206.o(.text)
+    lcd2_wr                                  0x0000dcd1   Thumb Code   188  lcd_agm1232_uku206.o(.text)
+    data1_wr                                 0x0000dd8d   Thumb Code   186  lcd_agm1232_uku206.o(.text)
+    data2_wr                                 0x0000de47   Thumb Code   184  lcd_agm1232_uku206.o(.text)
+    lcd_set_page                             0x0000deff   Thumb Code    20  lcd_agm1232_uku206.o(.text)
+    lcd_set_col                              0x0000df13   Thumb Code    16  lcd_agm1232_uku206.o(.text)
+    lcd_set_raw                              0x0000df23   Thumb Code    20  lcd_agm1232_uku206.o(.text)
+    lcd_init                                 0x0000df37   Thumb Code   194  lcd_agm1232_uku206.o(.text)
+    lcd_init_                                0x0000dff9   Thumb Code   184  lcd_agm1232_uku206.o(.text)
+    lcd_clear                                0x0000e0b1   Thumb Code    52  lcd_agm1232_uku206.o(.text)
+    lcd_on                                   0x0000e0e5   Thumb Code    18  lcd_agm1232_uku206.o(.text)
+    lcd_out                                  0x0000e0f7   Thumb Code    80  lcd_agm1232_uku206.o(.text)
+    pcf8563_read                             0x0000e159   Thumb Code   330  pcf8563.o(.text)
+    pcf8563_write                            0x0000e2a3   Thumb Code    60  pcf8563.o(.text)
+    spi1                                     0x0000e2e5   Thumb Code    18  25lc640.o(.text)
+    spi1_config                              0x0000e2f7   Thumb Code    56  25lc640.o(.text)
+    spi1_unconfig                            0x0000e32f   Thumb Code    20  25lc640.o(.text)
+    lc640_wren                               0x0000e343   Thumb Code    50  25lc640.o(.text)
+    lc640_rdsr                               0x0000e375   Thumb Code    62  25lc640.o(.text)
+    lc640_read_int                           0x0000e3b3   Thumb Code   108  25lc640.o(.text)
+    lc640_read_long                          0x0000e41f   Thumb Code   132  25lc640.o(.text)
+    lc640_read_long_ptr                      0x0000e4a3   Thumb Code   122  25lc640.o(.text)
+    lc640_write                              0x0000e51d   Thumb Code   100  25lc640.o(.text)
+    lc640_write_int                          0x0000e581   Thumb Code   112  25lc640.o(.text)
+    lc640_write_long                         0x0000e5f1   Thumb Code   124  25lc640.o(.text)
+    lc640_write_long_ptr                     0x0000e66d   Thumb Code   132  25lc640.o(.text)
+    spi1_ad7705_config                       0x0000e6f1   Thumb Code    44  ad7705.o(.text)
+    ad7705_reset                             0x0000e71d   Thumb Code    32  ad7705.o(.text)
+    ad7705_write                             0x0000e73d   Thumb Code    96  ad7705.o(.text)
+    ad7705_read                              0x0000e79d   Thumb Code   128  ad7705.o(.text)
+    ad7705_drv                               0x0000e81d   Thumb Code   312  ad7705.o(.text)
+    beep_init                                0x0000e971   Thumb Code    48  beep.o(.text)
+    beep_hndl                                0x0000e9a1   Thumb Code   230  beep.o(.text)
+    beep_drv                                 0x0000ea87   Thumb Code    78  beep.o(.text)
+    Inline ARM to Thumb Veneer to CRC1_in    0x0000eb04   ARM Code       8  full_can.o(.text)
+    CRC1_in                                  0x0000eb0d   Thumb Code    46  full_can.o(.text)
+    CRC2_in                                  0x0000eb3b   Thumb Code    44  full_can.o(.text)
+    CRC1_out                                 0x0000eb67   Thumb Code    46  full_can.o(.text)
+    CRC2_out                                 0x0000eb95   Thumb Code    46  full_can.o(.text)
+    can1_out_adr                             0x0000ebc3   Thumb Code   880  full_can.o(.text)
+    paking                                   0x0000ef33   Thumb Code   124  full_can.o(.text)
+    can2_out                                 0x0000efaf   Thumb Code   138  full_can.o(.text)
+    can_adr_hndl                             0x0000f039   Thumb Code    38  full_can.o(.text)
+    can_in_an1                               0x0000f05f   Thumb Code  1118  full_can.o(.text)
+    can_in_an2                               0x0000f4bd   Thumb Code   258  full_can.o(.text)
+    can1_init                                0x0000f5bf   Thumb Code   108  full_can.o(.text)
+    can2_init                                0x0000f62b   Thumb Code   134  full_can.o(.text)
+    FullCAN_SetFilter                        0x0000f6b1   Thumb Code   184  full_can.o(.text)
+    can_isr_rx1                              0x0000f7b0   ARM Code     388  full_can.o(.text)
+    can_isr_rx2                              0x0000f934   ARM Code     236  full_can.o(.text)
+    can_isr_tx                               0x0000fa20   ARM Code     268  full_can.o(.text)
+    can_isr_err                              0x0000fb2c   ARM Code      72  full_can.o(.text)
+    crc_87                                   0x0000fb9d   Thumb Code    34  uart0.o(.text)
+    crc_95                                   0x0000fbbf   Thumb Code    32  uart0.o(.text)
+    putchar0                                 0x0000fbdf   Thumb Code    56  uart0.o(.text)
+    uart_out0                                0x0000fc17   Thumb Code    88  uart0.o(.text)
+    uart_out_adr0                            0x0000fc6f   Thumb Code    72  uart0.o(.text)
+    uart0_init                               0x0000fcb7   Thumb Code   100  uart0.o(.text)
+    uart_in_an0                              0x0000fd1b   Thumb Code  1436  uart0.o(.text)
+    index_offset0                            0x000102b7   Thumb Code    32  uart0.o(.text)
+    control_check0                           0x000102d7   Thumb Code    84  uart0.o(.text)
+    uart_in0                                 0x0001032b   Thumb Code   222  uart0.o(.text)
+    uart0_interrupt                          0x00010408   ARM Code     188  uart0.o(.text)
+    putchar1                                 0x000104d5   Thumb Code    62  uart1.o(.text)
+    uart_out1                                0x00010513   Thumb Code    88  uart1.o(.text)
+    uart_out_adr1                            0x0001056b   Thumb Code    72  uart1.o(.text)
+    uart1_init                               0x000105b3   Thumb Code   110  uart1.o(.text)
+    uart_in_an1                              0x00010621   Thumb Code  5214  uart1.o(.text)
+    index_offset1                            0x00011a7f   Thumb Code    32  uart1.o(.text)
+    control_check1                           0x00011a9f   Thumb Code    86  uart1.o(.text)
+    uart_in1                                 0x00011af5   Thumb Code   182  uart1.o(.text)
+    uart1_interrupt                          0x00011bbc   ARM Code     200  uart1.o(.text)
+    __aeabi_uidiv                            0x00011c95   Thumb Code     0  uidiv.o(.text)
+    __aeabi_uidivmod                         0x00011c95   Thumb Code    46  uidiv.o(.text)
+    __aeabi_idiv                             0x00011cc3   Thumb Code     0  idiv.o(.text)
+    __aeabi_idivmod                          0x00011cc3   Thumb Code    44  idiv.o(.text)
+    __aeabi_memcpy                           0x00011cef   Thumb Code    36  memcpya.o(.text)
+    __aeabi_memcpy4                          0x00011cef   Thumb Code     0  memcpya.o(.text)
+    __aeabi_memcpy8                          0x00011cef   Thumb Code     0  memcpya.o(.text)
+    Inline ARM to Thumb Veneer to __scatterload 0x00011d14   ARM Code       8  init.o(.text)
+    __scatterload                            0x00011d1d   Thumb Code    24  init.o(.text)
+    __scatterload_rt2                        0x00011d1d   Thumb Code     0  init.o(.text)
+    __decompress                             0x00011d3c   ARM Code       0  __dczerorl.o(.text)
+    __decompress0                            0x00011d3c   ARM Code      80  __dczerorl.o(.text)
+    Long ARM to Thumb Veneer to adc_drv      0x00011d8c   ARM Code      12  anon$$obj.o(Veneer$$Code)
+    Long ARM to Thumb Veneer to beep_drv     0x00011d98   ARM Code      12  anon$$obj.o(Veneer$$Code)
+    Long ARM to Thumb Veneer to CRC2_in      0x00011da4   ARM Code      12  anon$$obj.o(Veneer$$Code)
+    Long ARM to Thumb Veneer to can_in_an1   0x00011db0   ARM Code      12  anon$$obj.o(Veneer$$Code)
+    Long ARM to Thumb Veneer to can_in_an2   0x00011dbc   ARM Code      12  anon$$obj.o(Veneer$$Code)
+    Short Thumb to ARM Veneer to __main_after_scatterload 0x00011dc9   Thumb Code     8  anon$$obj.o(Veneer$$Code)
+    __ARM_common_call_via_r3                 0x00011dd1   Thumb Code     2  init.o(i.__ARM_common_call_via_r3)
+    Inline Thumb to ARM Veneer to __ARM_common_disable_irq 0x00011dd5   Thumb Code     4  watchdog.o(i.__ARM_common_disable_irq)
+    __ARM_common_disable_irq                 0x00011dd8   ARM Code      20  watchdog.o(i.__ARM_common_disable_irq)
+    Inline Thumb to ARM Veneer to __ARM_common_enable_irq 0x00011ded   Thumb Code     4  watchdog.o(i.__ARM_common_enable_irq)
+    __ARM_common_enable_irq                  0x00011df0   ARM Code      16  watchdog.o(i.__ARM_common_enable_irq)
+    __scatterload_copy                       0x00011e00   ARM Code      24  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x00011e18   ARM Code       4  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x00011e1c   ARM Code      24  handlers.o(i.__scatterload_zeroinit)
+    ADR_EE_BAT_ZAR_CNT                       0x00011e34   Data           4  eeprom_map.o(.constdata)
+    ADR_EE_BAT_ZAR_CNT_KE                    0x00011e38   Data           4  eeprom_map.o(.constdata)
+    ADR_EE_BAT_C_NOM                         0x00011e3c   Data           4  eeprom_map.o(.constdata)
+    ADR_EE_BAT_YEAR_OF_ON                    0x00011e40   Data           4  eeprom_map.o(.constdata)
+    ADR_EE_BAT_IS_ON                         0x00011e44   Data           4  eeprom_map.o(.constdata)
+    ADR_EE_BAT_DAY_OF_ON                     0x00011e48   Data           4  eeprom_map.o(.constdata)
+    ADR_EE_BAT_MONTH_OF_ON                   0x00011e4c   Data           4  eeprom_map.o(.constdata)
+    ADR_EE_BAT_RESURS                        0x00011e50   Data           4  eeprom_map.o(.constdata)
+    ADR_EE_BAT_C_REAL                        0x00011e54   Data           4  eeprom_map.o(.constdata)
+    ADR_KUBAT                                0x00011e58   Data           4  eeprom_map.o(.constdata)
+    ADR_KI0BAT                               0x00011e5c   Data           4  eeprom_map.o(.constdata)
+    ADR_KI1BAT                               0x00011e60   Data           4  eeprom_map.o(.constdata)
+    ADR_KTBAT                                0x00011e64   Data           4  eeprom_map.o(.constdata)
+    ADR_TMAX_EXT_EN                          0x00011e68   Data           6  eeprom_map.o(.constdata)
+    ADR_TMAX_EXT                             0x00011e6e   Data           6  eeprom_map.o(.constdata)
+    ADR_TMIN_EXT_EN                          0x00011e74   Data           6  eeprom_map.o(.constdata)
+    ADR_TMIN_EXT                             0x00011e7a   Data           6  eeprom_map.o(.constdata)
+    ADR_T_EXT_REL_EN                         0x00011e80   Data           6  eeprom_map.o(.constdata)
+    ADR_T_EXT_ZVUK_EN                        0x00011e86   Data           6  eeprom_map.o(.constdata)
+    ADR_T_EXT_LCD_EN                         0x00011e8c   Data           6  eeprom_map.o(.constdata)
+    ADR_T_EXT_RS_EN                          0x00011e92   Data           6  eeprom_map.o(.constdata)
+    ADR_SK_SIGN                              0x00011e98   Data           8  eeprom_map.o(.constdata)
+    ADR_SK_ZVUK_EN                           0x00011ea0   Data           8  eeprom_map.o(.constdata)
+    ADR_SK_LCD_EN                            0x00011ea8   Data           8  eeprom_map.o(.constdata)
+    ADR_SK_RS_EN                             0x00011eb0   Data           8  eeprom_map.o(.constdata)
+    caracter                                 0x00011eb8   Data        1536  main.o(.constdata)
+    sm_mont                                  0x000124b8   Data          52  main.o(.constdata)
+    sm_                                      0x000124ec   Data          21  main.o(.constdata)
+    sm_exit                                  0x00012501   Data          21  main.o(.constdata)
+    sm_time                                  0x00012516   Data          21  main.o(.constdata)
+    ABCDEF                                   0x0001252b   Data          17  main.o(.constdata)
+    sAVNET                                   0x0001253c   Data         150  simbols.o(.constdata)
+    sAVNET1                                  0x000125d2   Data         150  simbols.o(.constdata)
+    sBPS1                                    0x00012668   Data          30  simbols.o(.constdata)
+    sBPS2                                    0x00012686   Data          30  simbols.o(.constdata)
+    sAVT                                     0x000126a4   Data          30  simbols.o(.constdata)
+    sAVU                                     0x000126c2   Data          30  simbols.o(.constdata)
+    Table87                                  0x000126e0   Data         256  full_can.o(.constdata)
+    Table95                                  0x000127e0   Data         256  full_can.o(.constdata)
+    Region$$Table$$Base                      0x000128e0   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00012900   Number         0  anon$$obj.o(Region$$Table)
+    adc_stat                                 0x40000000   Data           1  control.o(.data)
+    vent_stat                                0x40000001   Data           1  control.o(.data)
+    adc_cnt                                  0x4000000b   Data           1  control.o(.data)
+    adc_ch                                   0x4000000c   Data           1  control.o(.data)
+    net_buff_cnt                             0x4000000d   Data           1  control.o(.data)
+    rele_stat                                0x4000000e   Data           1  control.o(.data)
+    bRELE_OUT                                0x4000000f   Data           1  control.o(.data)
+    bAVG                                     0x40000010   Data           1  control.o(.data)
+    avg_num                                  0x40000011   Data           1  control.o(.data)
+    kb_full_ver                              0x40000012   Data           1  control.o(.data)
+    num_of_wrks_bps                          0x40000013   Data           1  control.o(.data)
+    spc_stat                                 0x40000014   Data           1  control.o(.data)
+    spc_bat                                  0x40000015   Data           1  control.o(.data)
+    spc_phase                                0x40000016   Data           1  control.o(.data)
+    bAVZ                                     0x40000017   Data           1  control.o(.data)
+    ke_start_stat                            0x40000018   Data           1  control.o(.data)
+    cntrl_stat                               0x4000001a   Data           2  control.o(.data)
+    cntrl_stat_old                           0x4000001c   Data           2  control.o(.data)
+    avg_main_cnt                             0x4000001e   Data           2  control.o(.data)
+    zero_cnt                                 0x40000024   Data           2  control.o(.data)
+    net_buff_                                0x40000026   Data           2  control.o(.data)
+    ADWR                                     0x40000028   Data           2  control.o(.data)
+    period_cnt                               0x4000002a   Data           2  control.o(.data)
+    plazma_adc_cnt                           0x4000002c   Data           2  control.o(.data)
+    cntrl_stat_new                           0x4000002e   Data           2  control.o(.data)
+    Ibmax                                    0x40000030   Data           2  control.o(.data)
+    samokalibr_cnt                           0x40000032   Data           2  control.o(.data)
+    i_avg_max                                0x40000034   Data           2  control.o(.data)
+    i_avg_min                                0x40000036   Data           2  control.o(.data)
+    i_avg_summ                               0x40000038   Data           2  control.o(.data)
+    i_avg                                    0x4000003a   Data           2  control.o(.data)
+    avg                                      0x4000003c   Data           2  control.o(.data)
+    main_kb_cnt                              0x4000003e   Data           2  control.o(.data)
+    kb_cnt_1lev                              0x40000040   Data           2  control.o(.data)
+    kb_cnt_2lev                              0x40000042   Data           2  control.o(.data)
+    kb_start                                 0x40000044   Data           2  control.o(.data)
+    bps_on_mask                              0x40000046   Data           2  control.o(.data)
+    bps_off_mask                             0x40000048   Data           2  control.o(.data)
+    vz_cnt_s                                 0x4000004a   Data           2  control.o(.data)
+    vz_cnt_h                                 0x4000004c   Data           2  control.o(.data)
+    vz_cnt_h_                                0x4000004e   Data           2  control.o(.data)
+    cnt_end_ke                               0x40000050   Data           2  control.o(.data)
+    cntrl_stat_blok_cnt                      0x40000052   Data           2  control.o(.data)
+    cntrl_stat_blok_cnt_                     0x40000054   Data           2  control.o(.data)
+    cntrl_stat_blok_cnt_plus                 0x4000005e   Data           4  control.o(.data)
+    cntrl_stat_blok_cnt_minus                0x40000062   Data           4  control.o(.data)
+    ke_date                                  0x40000068   Data           8  control.o(.data)
+    mess_data                                0x40000070   Data           8  mess.o(.data)
+    retind                                   0x40000078   Data           1  ret.o(.data)
+    retsub                                   0x40000079   Data           1  ret.o(.data)
+    retindsec                                0x4000007a   Data           1  ret.o(.data)
+    f0                                       0x4000007b   Data           1  ret.o(.data)
+    fc0                                      0x4000007c   Data           1  ret.o(.data)
+    f1                                       0x4000007d   Data           1  ret.o(.data)
+    fc1                                      0x4000007e   Data           1  ret.o(.data)
+    ret_duty                                 0x40000080   Data           2  ret.o(.data)
+    retcnt                                   0x40000084   Data           4  ret.o(.data)
+    retcntsec                                0x40000088   Data           4  ret.o(.data)
+    avar_stat                                0x4000008c   Data           4  avar_hndl.o(.data)
+    avar_ind_stat                            0x40000090   Data           4  avar_hndl.o(.data)
+    avar_stat_old                            0x40000094   Data           4  avar_hndl.o(.data)
+    avar_stat_new                            0x40000098   Data           4  avar_hndl.o(.data)
+    avar_stat_offed                          0x4000009c   Data           4  avar_hndl.o(.data)
+    av_inv                                   0x400000a0   Data           6  avar_hndl.o(.data)
+    cnt_of_slave                             0x400000a8   Data           1  main.o(.data)
+    mnemo_cnt                                0x400000a9   Data           1  main.o(.data)
+    flag                                     0x400000aa   Data           1  main.o(.data)
+    bRESET                                   0x400000ab   Data           1  main.o(.data)
+    b1000Hz                                  0x400000b6   Data           1  main.o(.data)
+    b100Hz                                   0x400000b7   Data           1  main.o(.data)
+    b50Hz                                    0x400000b8   Data           1  main.o(.data)
+    b10Hz                                    0x400000b9   Data           1  main.o(.data)
+    b5Hz                                     0x400000ba   Data           1  main.o(.data)
+    b2Hz                                     0x400000bb   Data           1  main.o(.data)
+    b1Hz                                     0x400000bc   Data           1  main.o(.data)
+    bFL5                                     0x400000bd   Data           1  main.o(.data)
+    bFL2                                     0x400000be   Data           1  main.o(.data)
+    bFL                                      0x400000bf   Data           1  main.o(.data)
+    bFL_                                     0x400000c0   Data           1  main.o(.data)
+    APV_ON1                                  0x400000c1   Data           1  main.o(.data)
+    APV_ON2                                  0x400000c2   Data           1  main.o(.data)
+    AVZ                                      0x400000c3   Data           1  main.o(.data)
+    MNEMO_ON                                 0x400000c4   Data           1  main.o(.data)
+    phase                                    0x400000c5   Data           1  main.o(.data)
+    simax                                    0x400000c6   Data           1  main.o(.data)
+    bFF                                      0x400000c7   Data           1  main.o(.data)
+    bFF_                                     0x400000c8   Data           1  main.o(.data)
+    net_av                                   0x400000c9   Data           1  main.o(.data)
+    but                                      0x400000ca   Data           1  main.o(.data)
+    but0_cnt                                 0x400000cb   Data           1  main.o(.data)
+    but1_cnt                                 0x400000cc   Data           1  main.o(.data)
+    but_onL_temp                             0x400000cd   Data           1  main.o(.data)
+    cnt_net_drv                              0x400000ce   Data           1  main.o(.data)
+    speed                                    0x400000cf   Data           1  main.o(.data)
+    l_but                                    0x400000d0   Data           1  main.o(.data)
+    n_but                                    0x400000d1   Data           1  main.o(.data)
+    default_temp                             0x400000d2   Data           1  main.o(.data)
+    plazma_plazma_plazma                     0x400000d3   Data           1  main.o(.data)
+    main_10Hz_cnt                            0x400000d4   Data           2  main.o(.data)
+    main_1Hz_cnt                             0x400000d6   Data           2  main.o(.data)
+    t0cnt                                    0x400000d8   Data           2  main.o(.data)
+    t0cnt0                                   0x400000da   Data           2  main.o(.data)
+    t0cnt1                                   0x400000dc   Data           2  main.o(.data)
+    t0cnt2                                   0x400000de   Data           2  main.o(.data)
+    t0cnt3                                   0x400000e0   Data           2  main.o(.data)
+    t0cnt4                                   0x400000e2   Data           2  main.o(.data)
+    t0cnt5                                   0x400000e4   Data           2  main.o(.data)
+    UMAX                                     0x400000e6   Data           2  main.o(.data)
+    UB0                                      0x400000e8   Data           2  main.o(.data)
+    UB20                                     0x400000ea   Data           2  main.o(.data)
+    TMAX                                     0x400000ec   Data           2  main.o(.data)
+    TSIGN                                    0x400000ee   Data           2  main.o(.data)
+    AV_OFF_AVT                               0x400000f0   Data           2  main.o(.data)
+    USIGN                                    0x400000f2   Data           2  main.o(.data)
+    UMN                                      0x400000f4   Data           2  main.o(.data)
+    ZV_ON                                    0x400000f6   Data           2  main.o(.data)
+    IKB                                      0x400000f8   Data           2  main.o(.data)
+    KVZ                                      0x400000fa   Data           2  main.o(.data)
+    IMAX                                     0x400000fc   Data           2  main.o(.data)
+    KIMAX                                    0x400000fe   Data           2  main.o(.data)
+    IZMAX                                    0x40000100   Data           2  main.o(.data)
+    U0B                                      0x40000102   Data           2  main.o(.data)
+    TZAS                                     0x40000104   Data           2  main.o(.data)
+    VZ_HR                                    0x40000106   Data           2  main.o(.data)
+    TBAT                                     0x40000108   Data           2  main.o(.data)
+    U_AVT                                    0x4000010a   Data           2  main.o(.data)
+    DU                                       0x4000010c   Data           2  main.o(.data)
+    PAR                                      0x4000010e   Data           2  main.o(.data)
+    TBATMAX                                  0x40000110   Data           2  main.o(.data)
+    TBATSIGN                                 0x40000112   Data           2  main.o(.data)
+    NUMBAT                                   0x40000114   Data           2  main.o(.data)
+    NUMIST                                   0x40000116   Data           2  main.o(.data)
+    NUMINV                                   0x40000118   Data           2  main.o(.data)
+    NUMDT                                    0x4000011a   Data           2  main.o(.data)
+    NUMSK                                    0x4000011c   Data           2  main.o(.data)
+    NUMEXT                                   0x4000011e   Data           2  main.o(.data)
+    APV_ON2_TIME                             0x40000120   Data           2  main.o(.data)
+    BAT_IS_ON                                0x40000122   Data           2  main.o(.data)
+    HOUR_AVZ                                 0x40000124   Data           2  main.o(.data)
+    MIN_AVZ                                  0x40000126   Data           2  main.o(.data)
+    SEC_AVZ                                  0x40000128   Data           2  main.o(.data)
+    DATE_AVZ                                 0x4000012a   Data           2  main.o(.data)
+    MONTH_AVZ                                0x4000012c   Data           2  main.o(.data)
+    YEAR_AVZ                                 0x4000012e   Data           2  main.o(.data)
+    AVZ_TIME                                 0x40000130   Data           2  main.o(.data)
+    MNEMO_TIME                               0x40000132   Data           2  main.o(.data)
+    load_U                                   0x40000134   Data           2  main.o(.data)
+    load_I                                   0x40000136   Data           2  main.o(.data)
+    av_j_si_max                              0x40000138   Data           2  main.o(.data)
+    net_U                                    0x4000013a   Data           2  main.o(.data)
+    net_F                                    0x4000013c   Data           2  main.o(.data)
+    hz_out                                   0x4000013e   Data           2  main.o(.data)
+    hz_out_cnt                               0x40000140   Data           2  main.o(.data)
+    u_necc                                   0x40000142   Data           2  main.o(.data)
+    av_beep                                  0x40000144   Data           2  main.o(.data)
+    av_rele                                  0x40000146   Data           2  main.o(.data)
+    parol                                    0x40000148   Data           3  main.o(.data)
+    sk_stat                                  0x4000014b   Data           4  main.o(.data)
+    sk_av_stat                               0x4000014f   Data           4  main.o(.data)
+    Kibat0                                   0x40000154   Data           4  main.o(.data)
+    Kibat1                                   0x40000158   Data           4  main.o(.data)
+    BAT_DAY_OF_ON                            0x4000015c   Data           4  main.o(.data)
+    BAT_MONTH_OF_ON                          0x40000160   Data           4  main.o(.data)
+    BAT_YEAR_OF_ON                           0x40000164   Data           4  main.o(.data)
+    BAT_C_NOM                                0x40000168   Data           4  main.o(.data)
+    BAT_RESURS                               0x4000016c   Data           4  main.o(.data)
+    BAT_C_REAL                               0x40000170   Data           4  main.o(.data)
+    bSILENT                                  0x40000174   Data           4  main.o(.data)
+    but_n                                    0x40000178   Data           4  main.o(.data)
+    but_s                                    0x4000017c   Data           4  main.o(.data)
+    a_ind                                    0x40000180   Data           5  main.o(.data)
+    TMAX_EXT_EN                              0x40000186   Data           6  main.o(.data)
+    TMAX_EXT                                 0x4000018c   Data           6  main.o(.data)
+    TMIN_EXT_EN                              0x40000192   Data           6  main.o(.data)
+    TMIN_EXT                                 0x40000198   Data           6  main.o(.data)
+    T_EXT_REL_EN                             0x4000019e   Data           6  main.o(.data)
+    T_EXT_ZVUK_EN                            0x400001a4   Data           6  main.o(.data)
+    T_EXT_LCD_EN                             0x400001aa   Data           6  main.o(.data)
+    T_EXT_RS_EN                              0x400001b0   Data           6  main.o(.data)
+    t_ext                                    0x400001b6   Data           6  main.o(.data)
+    SK_SIGN                                  0x400001bc   Data           8  main.o(.data)
+    SK_REL_EN                                0x400001c4   Data           8  main.o(.data)
+    SK_ZVUK_EN                               0x400001cc   Data           8  main.o(.data)
+    SK_LCD_EN                                0x400001d4   Data           8  main.o(.data)
+    SK_RS_EN                                 0x400001dc   Data           8  main.o(.data)
+    lcd_buffer                               0x400001e4   Data         300  main.o(.data)
+    ind_pointer                              0x40000310   Data           2  main.o(.data)
+    Kubat                                    0x40000312   Data           4  main.o(.data)
+    Ktbat                                    0x40000316   Data           4  main.o(.data)
+    Kunet                                    0x4000031a   Data           2  main.o(.data)
+    Ktext                                    0x4000031c   Data           6  main.o(.data)
+    Kuload                                   0x40000322   Data           2  main.o(.data)
+    MAIN_IST                                 0x40000324   Data           2  main.o(.data)
+    APV_ON                                   0x40000326   Data           2  main.o(.data)
+    AUSW_MAIN                                0x40000328   Data           2  main.o(.data)
+    AUSW_MAIN_NUMBER                         0x4000032c   Data           4  main.o(.data)
+    AUSW_DAY                                 0x40000330   Data           2  main.o(.data)
+    AUSW_MONTH                               0x40000332   Data           2  main.o(.data)
+    AUSW_YEAR                                0x40000334   Data           2  main.o(.data)
+    AUSW_UKU                                 0x40000336   Data           2  main.o(.data)
+    AUSW_UKU_SUB                             0x40000338   Data           2  main.o(.data)
+    AUSW_UKU_NUMBER                          0x4000033c   Data           4  main.o(.data)
+    AUSW_BPS1_NUMBER                         0x40000340   Data           4  main.o(.data)
+    AUSW_BPS2_NUMBER                         0x40000344   Data           4  main.o(.data)
+    AUSW_RS232                               0x40000348   Data           2  main.o(.data)
+    AUSW_PDH                                 0x4000034a   Data           2  main.o(.data)
+    AUSW_SDH                                 0x4000034c   Data           2  main.o(.data)
+    AUSW_ETH                                 0x4000034e   Data           2  main.o(.data)
+    bat_u_old_cnt                            0x40000350   Data           2  main.o(.data)
+    dig                                      0x40000352   Data           5  main.o(.data)
+    zero_on                                  0x40000357   Data           1  main.o(.data)
+    net_Ustore                               0x40000358   Data           2  main.o(.data)
+    unet_drv_cnt                             0x4000035a   Data           1  main.o(.data)
+    sk_cnt                                   0x4000035b   Data           4  main.o(.data)
+    sk_av_cnt                                0x4000035f   Data           4  main.o(.data)
+    u_necc_up                                0x40000364   Data           2  main.o(.data)
+    u_necc_dn                                0x40000366   Data           2  main.o(.data)
+    num_necc                                 0x40000368   Data           2  main.o(.data)
+    mat_temper                               0x4000036c   Data           4  main.o(.data)
+    Isumm                                    0x40000370   Data           2  main.o(.data)
+    Isumm_                                   0x40000372   Data           2  main.o(.data)
+    sign_U                                   0x40000374   Data           2  main.o(.data)
+    sign_I                                   0x40000376   Data           2  main.o(.data)
+    superviser_cnt                           0x40000378   Data           1  main.o(.data)
+    sec_bcd                                  0x40000379   Data           1  pcf8563.o(.data)
+    sec__                                    0x4000037a   Data           1  pcf8563.o(.data)
+    min_bcd                                  0x4000037b   Data           1  pcf8563.o(.data)
+    min__                                    0x4000037c   Data           1  pcf8563.o(.data)
+    hour_bcd                                 0x4000037d   Data           1  pcf8563.o(.data)
+    hour__                                   0x4000037e   Data           1  pcf8563.o(.data)
+    day_bcd                                  0x4000037f   Data           1  pcf8563.o(.data)
+    day__                                    0x40000380   Data           1  pcf8563.o(.data)
+    month_bcd                                0x40000381   Data           1  pcf8563.o(.data)
+    month__                                  0x40000382   Data           1  pcf8563.o(.data)
+    year_bcd                                 0x40000383   Data           1  pcf8563.o(.data)
+    year__                                   0x40000384   Data           1  pcf8563.o(.data)
+    b7705ch                                  0x40000386   Data           1  ad7705.o(.data)
+    ad7705_wrk_cnt                           0x40000387   Data           1  ad7705.o(.data)
+    ad7705_res1                              0x40000388   Data           2  ad7705.o(.data)
+    ad7705_res2                              0x4000038a   Data           2  ad7705.o(.data)
+    ad7705_res                               0x4000038c   Data           2  ad7705.o(.data)
+    cnt_ad7705_vis                           0x4000038e   Data           2  ad7705.o(.data)
+    cnt_ad7705_vis_wrk                       0x40000390   Data           2  ad7705.o(.data)
+    ad7705_buff_                             0x40000392   Data           4  ad7705.o(.data)
+    beep_stat_cnt                            0x40000399   Data           1  beep.o(.data)
+    beep_cnt                                 0x4000039a   Data           1  beep.o(.data)
+    bU_BAT2REL_AV_BAT                        0x4000039b   Data           1  beep.o(.data)
+    beep_stat_temp                           0x4000039c   Data           4  beep.o(.data)
+    beep_stat                                0x400003a0   Data           4  beep.o(.data)
+    bOUT_FREE                                0x400003a4   Data           1  full_can.o(.data)
+    bOUT_FREE2                               0x400003a5   Data           1  full_can.o(.data)
+    ptr_can1_tx_wr                           0x400003a6   Data           1  full_can.o(.data)
+    ptr_can1_tx_rd                           0x400003a7   Data           1  full_can.o(.data)
+    ptr_can2_tx_wr                           0x400003a8   Data           1  full_can.o(.data)
+    ptr_can2_tx_rd                           0x400003a9   Data           1  full_can.o(.data)
+    bR                                       0x400003aa   Data           1  full_can.o(.data)
+    bIN                                      0x400003ab   Data           1  full_can.o(.data)
+    bIN2                                     0x400003ac   Data           1  full_can.o(.data)
+    TX_len                                   0x400003ad   Data           1  full_can.o(.data)
+    can_tx_cnt                               0x400003ae   Data           1  full_can.o(.data)
+    gCANFilter                               0x400003b0   Data           2  full_can.o(.data)
+    bRXIN0                                   0x400003b2   Data           1  uart0.o(.data)
+    rx_wr_index0                             0x400003b3   Data           1  uart0.o(.data)
+    rx_rd_index0                             0x400003b4   Data           1  uart0.o(.data)
+    rx_counter0                              0x400003b5   Data           1  uart0.o(.data)
+    tx_wr_index0                             0x400003b6   Data           1  uart0.o(.data)
+    tx_rd_index0                             0x400003b7   Data           1  uart0.o(.data)
+    tx_counter0                              0x400003b8   Data           1  uart0.o(.data)
+    rx_buffer_overflow0                      0x400003b9   Data           1  uart0.o(.data)
+    bRXIN1                                   0x400003ba   Data           1  uart1.o(.data)
+    rx_buffer_overflow1                      0x400003bb   Data           1  uart1.o(.data)
+    plazma_uart1                             0x400003bc   Data           1  uart1.o(.data)
+    usart1_router_stat                       0x400003bd   Data           1  uart1.o(.data)
+    usart1_router_wrk                        0x400003be   Data           1  uart1.o(.data)
+    rx_wr_index1                             0x400003c0   Data           2  uart1.o(.data)
+    rx_rd_index1                             0x400003c2   Data           2  uart1.o(.data)
+    rx_counter1                              0x400003c4   Data           2  uart1.o(.data)
+    tx_wr_index1                             0x400003c6   Data           2  uart1.o(.data)
+    tx_rd_index1                             0x400003c8   Data           2  uart1.o(.data)
+    tx_counter1                              0x400003ca   Data           2  uart1.o(.data)
+    plazma_suz                               0x400003cc   Data           5  uart1.o(.data)
+    adc_buff                                 0x400003d4   Data         512  control.o(.bss)
+    adc_buff_                                0x400005d4   Data          32  control.o(.bss)
+    net_buff                                 0x400005f4   Data          64  control.o(.bss)
+    mess                                     0x40000634   Data          10  mess.o(.bss)
+    mess_old                                 0x4000063e   Data          10  mess.o(.bss)
+    mess_cnt                                 0x40000648   Data          10  mess.o(.bss)
+    mess_par0                                0x40000654   Data          40  mess.o(.bss)
+    mess_par1                                0x4000067c   Data          40  mess.o(.bss)
+    bat                                      0x400006a4   Data         136  main.o(.bss)
+    bps                                      0x4000072c   Data         960  main.o(.bss)
+    lcd_bitmap                               0x40000aec   Data        1024  main.o(.bss)
+    tst_state                                0x40000eec   Data          10  main.o(.bss)
+    content                                  0x40000ef6   Data          63  main.o(.bss)
+    b_ind                                    0x40000f35   Data          50  main.o(.bss)
+    ND_EXT                                   0x40000f68   Data          12  main.o(.bss)
+    ad7705_buff                              0x40000f74   Data          64  ad7705.o(.bss)
+    can1_info                                0x40000fb4   Data          32  full_can.o(.bss)
+    can1_id                                  0x40000fd4   Data          32  full_can.o(.bss)
+    can1_data                                0x40000ff4   Data          32  full_can.o(.bss)
+    can1_datb                                0x40001014   Data          32  full_can.o(.bss)
+    can2_info                                0x40001034   Data          32  full_can.o(.bss)
+    can2_id                                  0x40001054   Data          32  full_can.o(.bss)
+    can2_data                                0x40001074   Data          32  full_can.o(.bss)
+    can2_datb                                0x40001094   Data          32  full_can.o(.bss)
+    rotor_can                                0x400010b4   Data          12  full_can.o(.bss)
+    gFullCANList                             0x400010c0   Data          24  full_can.o(.bss)
+    RXBUFF                                   0x400010d8   Data          40  full_can.o(.bss)
+    TXBUFF                                   0x40001100   Data          40  full_can.o(.bss)
+    RXBUFF2                                  0x40001128   Data          40  full_can.o(.bss)
+    can_debug_plazma                         0x40001150   Data          20  full_can.o(.bss)
+    UIB0                                     0x40001164   Data          10  uart0.o(.bss)
+    rx_buffer0                               0x4000116e   Data          64  uart0.o(.bss)
+    tx_buffer0                               0x400011ae   Data         128  uart0.o(.bss)
+    memo_out                                 0x4000122e   Data         100  uart0.o(.bss)
+    UIB1                                     0x40001292   Data          20  uart1.o(.bss)
+    rx_buffer1                               0x400012a6   Data         100  uart1.o(.bss)
+    tx_buffer1                               0x4000130a   Data         300  uart1.o(.bss)
+    uart1_mess                               0x40001436   Data          10  uart1.o(.bss)
+    data_rs1                                 0x40001440   Data          40  uart1.o(.bss)
+    memo_out1                                0x40001468   Data         100  uart1.o(.bss)
+    UIB10                                    0x400014cc   Data          30  uart1.o(.bss)
+    __initial_sp                             0x40001cf0   Data         520  startup.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x00000118
+
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00012cd4, Max: 0x00020000, ABSOLUTE, COMPRESSED[0x00012924])
+
+    Execution Region ER_IROM1 (Base: 0x00000000, Size: 0x00012900, Max: 0x00020000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000118   Code   RO            3    RESET               startup.o
+    0x00000118   0x00000000   Code   RO          720  * .ARM.Collect$$$$00000000  entry.o(mc_t.l)
+    0x00000118   0x00000004   Code   RO          731    .ARM.Collect$$$$00000001  entry2.o(mc_t.l)
+    0x0000011c   0x00000004   Code   RO          733    .ARM.Collect$$$$00000004  entry5.o(mc_t.l)
+    0x00000120   0x0000000c   Code   RO          734    .ARM.Collect$$$$00000007  entry7.o(mc_t.l)
+    0x0000012c   0x00000004   Code   RO          732    .ARM.Collect$$$$00002712  entry2.o(mc_t.l)
+    0x00000130   0x00000ea4   Code   RO            8    .text               common_func.o
+    0x00000fd4   0x000021d0   Code   RO           89    .text               control.o
+    0x000031a4   0x000000f8   Code   RO          127    .text               mess.o
+    0x0000329c   0x00000040   Code   RO          143    .text               ret.o
+    0x000032dc   0x00000058   Code   RO          173    .text               gran.o
+    0x00003334   0x00000ccc   Code   RO          191    .text               avar_hndl.o
+    0x00004000   0x00008910   Code   RO          255    .text               main.o
+    0x0000c910   0x00000228   Code   RO          256    .text               main.o
+    0x0000cb38   0x000006fc   Code   RO          390    .text               graphic.o
+    0x0000d234   0x000002e0   Code   RO          404    .text               i2c.o
+    0x0000d514   0x00000050   Code   RO          419    .text               watchdog.o
+    0x0000d564   0x000005cc   Code   RO          438    .text               memo.o
+    0x0000db30   0x0000003c   Code   RO          452    .text               timer.o
+    0x0000db6c   0x000005ec   Code   RO          478    .text               lcd_agm1232_uku206.o
+    0x0000e158   0x0000018c   Code   RO          519    .text               pcf8563.o
+    0x0000e2e4   0x0000040c   Code   RO          557    .text               25lc640.o
+    0x0000e6f0   0x00000280   Code   RO          582    .text               ad7705.o
+    0x0000e970   0x00000194   Code   RO          598    .text               beep.o
+    0x0000eb04   0x00000008   Ven    RO          613    .text               full_can.o
+    0x0000eb0c   0x00000ca4   Code   RO          613    .text               full_can.o
+    0x0000f7b0   0x000003ec   Code   RO          614    .text               full_can.o
+    0x0000fb9c   0x0000086c   Code   RO          650    .text               uart0.o
+    0x00010408   0x000000cc   Code   RO          651    .text               uart0.o
+    0x000104d4   0x000016e8   Code   RO          686    .text               uart1.o
+    0x00011bbc   0x000000d8   Code   RO          687    .text               uart1.o
+    0x00011c94   0x0000002e   Code   RO          723    .text               uidiv.o(mc_t.l)
+    0x00011cc2   0x0000002c   Code   RO          725    .text               idiv.o(mc_t.l)
+    0x00011cee   0x00000024   Code   RO          727    .text               memcpya.o(mc_t.l)
+    0x00011d12   0x00000002   PAD
+    0x00011d14   0x00000008   Ven    RO          735    .text               init.o(mc_t.l)
+    0x00011d1c   0x00000020   Code   RO          735    .text               init.o(mc_t.l)
+    0x00011d3c   0x00000050   Code   RO          747    .text               __dczerorl.o(mc_t.l)
+    0x00011d8c   0x0000000c   Ven    RO          753    Veneer$$Code        anon$$obj.o
+    0x00011d98   0x0000000c   Ven    RO          754    Veneer$$Code        anon$$obj.o
+    0x00011da4   0x0000000c   Ven    RO          755    Veneer$$Code        anon$$obj.o
+    0x00011db0   0x0000000c   Ven    RO          756    Veneer$$Code        anon$$obj.o
+    0x00011dbc   0x0000000c   Ven    RO          757    Veneer$$Code        anon$$obj.o
+    0x00011dc8   0x00000008   Ven    RO          758    Veneer$$Code        anon$$obj.o
+    0x00011dd0   0x00000002   Code   RO          737    i.__ARM_common_call_via_r3  init.o(mc_t.l)
+    0x00011dd2   0x00000002   PAD
+    0x00011dd4   0x00000004   Ven    RO          430    i.__ARM_common_disable_irq  watchdog.o
+    0x00011dd8   0x00000014   Code   RO          430    i.__ARM_common_disable_irq  watchdog.o
+    0x00011dec   0x00000004   Ven    RO          428    i.__ARM_common_enable_irq  watchdog.o
+    0x00011df0   0x00000010   Code   RO          428    i.__ARM_common_enable_irq  watchdog.o
+    0x00011e00   0x00000018   Code   RO          741    i.__scatterload_copy  handlers.o(mc_t.l)
+    0x00011e18   0x00000004   Code   RO          742    i.__scatterload_null  handlers.o(mc_t.l)
+    0x00011e1c   0x00000018   Code   RO          743    i.__scatterload_zeroinit  handlers.o(mc_t.l)
+    0x00011e34   0x00000004   Data   RO          218    .constdata          eeprom_map.o
+    0x00011e38   0x00000004   Data   RO          219    .constdata          eeprom_map.o
+    0x00011e3c   0x00000004   Data   RO          220    .constdata          eeprom_map.o
+    0x00011e40   0x00000004   Data   RO          221    .constdata          eeprom_map.o
+    0x00011e44   0x00000004   Data   RO          222    .constdata          eeprom_map.o
+    0x00011e48   0x00000004   Data   RO          223    .constdata          eeprom_map.o
+    0x00011e4c   0x00000004   Data   RO          224    .constdata          eeprom_map.o
+    0x00011e50   0x00000004   Data   RO          225    .constdata          eeprom_map.o
+    0x00011e54   0x00000004   Data   RO          226    .constdata          eeprom_map.o
+    0x00011e58   0x00000004   Data   RO          227    .constdata          eeprom_map.o
+    0x00011e5c   0x00000004   Data   RO          228    .constdata          eeprom_map.o
+    0x00011e60   0x00000004   Data   RO          229    .constdata          eeprom_map.o
+    0x00011e64   0x00000004   Data   RO          230    .constdata          eeprom_map.o
+    0x00011e68   0x00000006   Data   RO          231    .constdata          eeprom_map.o
+    0x00011e6e   0x00000006   Data   RO          232    .constdata          eeprom_map.o
+    0x00011e74   0x00000006   Data   RO          233    .constdata          eeprom_map.o
+    0x00011e7a   0x00000006   Data   RO          234    .constdata          eeprom_map.o
+    0x00011e80   0x00000006   Data   RO          235    .constdata          eeprom_map.o
+    0x00011e86   0x00000006   Data   RO          236    .constdata          eeprom_map.o
+    0x00011e8c   0x00000006   Data   RO          237    .constdata          eeprom_map.o
+    0x00011e92   0x00000006   Data   RO          238    .constdata          eeprom_map.o
+    0x00011e98   0x00000008   Data   RO          239    .constdata          eeprom_map.o
+    0x00011ea0   0x00000008   Data   RO          241    .constdata          eeprom_map.o
+    0x00011ea8   0x00000008   Data   RO          242    .constdata          eeprom_map.o
+    0x00011eb0   0x00000008   Data   RO          243    .constdata          eeprom_map.o
+    0x00011eb8   0x00000673   Data   RO          261    .constdata          main.o
+    0x0001252b   0x00000011   Data   RO          262    .constdata          main.o
+    0x0001253c   0x00000096   Data   RO          374    .constdata          simbols.o
+    0x000125d2   0x00000096   Data   RO          375    .constdata          simbols.o
+    0x00012668   0x0000001e   Data   RO          376    .constdata          simbols.o
+    0x00012686   0x0000001e   Data   RO          377    .constdata          simbols.o
+    0x000126a4   0x0000001e   Data   RO          378    .constdata          simbols.o
+    0x000126c2   0x0000001e   Data   RO          379    .constdata          simbols.o
+    0x000126e0   0x00000200   Data   RO          620    .constdata          full_can.o
+    0x000128e0   0x00000020   Data   RO          739    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Base: 0x40000000, Size: 0x00001ef8, Max: 0x00004000, ABSOLUTE, COMPRESSED[0x00000024])
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x40000000   0x00000070   Data   RW           91    .data               control.o
+    0x40000070   0x00000008   Data   RW          129    .data               mess.o
+    0x40000078   0x00000014   Data   RW          146    .data               ret.o
+    0x4000008c   0x0000001a   Data   RW          192    .data               avar_hndl.o
+    0x400000a6   0x00000002   PAD
+    0x400000a8   0x00000268   Data   RW          263    .data               main.o
+    0x40000310   0x00000002   Data   RW          265    .data               main.o
+    0x40000312   0x00000004   Data   RW          272    .data               main.o
+    0x40000316   0x00000004   Data   RW          273    .data               main.o
+    0x4000031a   0x00000002   Data   RW          274    .data               main.o
+    0x4000031c   0x00000006   Data   RW          275    .data               main.o
+    0x40000322   0x00000002   Data   RW          276    .data               main.o
+    0x40000324   0x00000002   Data   RW          277    .data               main.o
+    0x40000326   0x00000002   Data   RW          278    .data               main.o
+    0x40000328   0x00000002   Data   RW          279    .data               main.o
+    0x4000032a   0x00000002   PAD
+    0x4000032c   0x00000004   Data   RW          280    .data               main.o
+    0x40000330   0x00000002   Data   RW          281    .data               main.o
+    0x40000332   0x00000002   Data   RW          282    .data               main.o
+    0x40000334   0x00000002   Data   RW          283    .data               main.o
+    0x40000336   0x00000002   Data   RW          284    .data               main.o
+    0x40000338   0x00000002   Data   RW          285    .data               main.o
+    0x4000033a   0x00000002   PAD
+    0x4000033c   0x00000004   Data   RW          286    .data               main.o
+    0x40000340   0x00000004   Data   RW          287    .data               main.o
+    0x40000344   0x00000004   Data   RW          288    .data               main.o
+    0x40000348   0x00000002   Data   RW          289    .data               main.o
+    0x4000034a   0x00000002   Data   RW          290    .data               main.o
+    0x4000034c   0x00000002   Data   RW          291    .data               main.o
+    0x4000034e   0x00000002   Data   RW          292    .data               main.o
+    0x40000350   0x00000002   Data   RW          293    .data               main.o
+    0x40000352   0x00000005   Data   RW          294    .data               main.o
+    0x40000357   0x00000001   Data   RW          295    .data               main.o
+    0x40000358   0x00000002   Data   RW          296    .data               main.o
+    0x4000035a   0x00000001   Data   RW          297    .data               main.o
+    0x4000035b   0x00000004   Data   RW          301    .data               main.o
+    0x4000035f   0x00000004   Data   RW          302    .data               main.o
+    0x40000363   0x00000001   PAD
+    0x40000364   0x00000002   Data   RW          304    .data               main.o
+    0x40000366   0x00000002   Data   RW          305    .data               main.o
+    0x40000368   0x00000002   Data   RW          307    .data               main.o
+    0x4000036a   0x00000002   PAD
+    0x4000036c   0x00000004   Data   RW          311    .data               main.o
+    0x40000370   0x00000002   Data   RW          322    .data               main.o
+    0x40000372   0x00000002   Data   RW          323    .data               main.o
+    0x40000374   0x00000002   Data   RW          325    .data               main.o
+    0x40000376   0x00000002   Data   RW          326    .data               main.o
+    0x40000378   0x00000001   Data   RW          327    .data               main.o
+    0x40000379   0x0000000c   Data   RW          520    .data               pcf8563.o
+    0x40000385   0x00000001   PAD
+    0x40000386   0x00000010   Data   RW          584    .data               ad7705.o
+    0x40000396   0x00000002   PAD
+    0x40000398   0x0000000c   Data   RW          599    .data               beep.o
+    0x400003a4   0x0000000e   Data   RW          621    .data               full_can.o
+    0x400003b2   0x00000008   Data   RW          656    .data               uart0.o
+    0x400003ba   0x00000017   Data   RW          690    .data               uart1.o
+    0x400003d1   0x00000003   PAD
+    0x400003d4   0x00000260   Zero   RW           90    .bss                control.o
+    0x40000634   0x00000070   Zero   RW          128    .bss                mess.o
+    0x400006a4   0x00000891   Zero   RW          258    .bss                main.o
+    0x40000f35   0x00000032   Zero   RW          259    .bss                main.o
+    0x40000f67   0x00000001   PAD
+    0x40000f68   0x0000000c   Zero   RW          260    .bss                main.o
+    0x40000f74   0x00000040   Zero   RW          583    .bss                ad7705.o
+    0x40000fb4   0x000001b0   Zero   RW          616    .bss                full_can.o
+    0x40001164   0x0000012e   Zero   RW          653    .bss                uart0.o
+    0x40001292   0x00000258   Zero   RW          689    .bss                uart1.o
+    0x400014ea   0x00000006   PAD
+    0x400014f0   0x00000a08   Zero   RW            1    STACK               startup.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+      1036         14          0          0          0       3430   25lc640.o
+       640         28          0         16         64       2725   ad7705.o
+      3276        142          0         26          0       6690   avar_hndl.o
+       404         48          0         12          0       1411   beep.o
+      3748         98          0          0          0      15398   common_func.o
+      8656        656          0        112        608      17091   control.o
+         0          0        132          0          0       1791   eeprom_map.o
+      4240        208        512         14        432      11148   full_can.o
+        88          0          0          0          0       1006   gran.o
+      1788         12          0          0          0       5365   graphic.o
+       736          4          0          0          0       1895   i2c.o
+      1516         26          0          0          0       3789   lcd_agm1232_uku206.o
+     35640       9444       1668        714       2255      39428   main.o
+      1484        348          0          0          0        848   memo.o
+       248         10          0          8        112       2023   mess.o
+       396          6          0         12          0       1391   pcf8563.o
+        64          4          0         20          0       1373   ret.o
+         0          0        420          0          0        559   simbols.o
+       280         52          0          0       2568        256   startup.o
+        60         26          0          0          0        334   timer.o
+      2360        120          0          8        302       6807   uart0.o
+      6080        368          0         23        600      11905   uart1.o
+       116          0          0          0          0        823   watchdog.o
+
+    ----------------------------------------------------------------------
+     72940      11634       2764        980       6948     137486   Object Totals
+        84         20         32          0          0          0   (incl. Generated)
+         0          0          0         15          7          2   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+        80          0          0          0          0          0   __dczerorl.o
+         0          0          0          0          0          0   entry.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+        12          4          0          0          0          0   entry7.o
+        52          0          0          0          0          0   handlers.o
+        44          0          0          0          0         84   idiv.o
+        42          8          0          0          0        136   init.o
+        36          0          0          0          0         60   memcpya.o
+        46          0          0          0          0         72   uidiv.o
+
+    ----------------------------------------------------------------------
+       328         16          0          0          0        352   Library Totals
+         4          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       324         16          0          0          0        352   mc_t.l
+
+    ----------------------------------------------------------------------
+       328         16          0          0          0        352   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+     73268      11650       2764        980       6948     135868   Grand Totals
+     73268      11650       2764         36       6948     135868   ELF Image Totals (compressed)
+     73268      11650       2764         36          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                76032 (  74.25kB)
+    Total RW  Size (RW Data + ZI Data)              7928 (   7.74kB)
+    Total ROM Size (Code + RO Data + RW Data)      76068 (  74.29kB)
+
+==============================================================================
+
