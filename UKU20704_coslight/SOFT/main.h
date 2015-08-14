@@ -718,7 +718,8 @@ typedef enum {
 	iAvt,iLan_set,
 	iInv,iInv_v2,
 	iNpn_set,
-	iByps,iInv_tabl,iSet_bat_sel}i_enum;
+	iByps,iInv_tabl,iSet_bat_sel,
+	iBatSetupQuest}i_enum;
 typedef struct  
 {
 
@@ -1035,9 +1036,20 @@ typedef struct
 	signed short	_rs485_cnt;
 	signed short 	_cnt;
 	signed short 	_battCommState;	//0 - норма, 1 - отсутствует связь промежуточной платы и батареи(RS485), 2 - отсутствует связь с промежуточной платой (KAN) 	
+	signed short   _battIsOn;		//0 - отсутствует, 1 - присутствует
+	signed short 	_isOnCnt;
+
 	} LAKB_STAT; 
-extern LAKB_STAT lakb[2];
+extern LAKB_STAT lakb[7];
 extern char lakb_damp[7][60];
+extern char bLAKB_KONF_CH;
+extern char bLAKB_KONF_CH_old;
+extern char lakb_ison_mass[7];
+extern short lakb_mn_ind_cnt;
+extern char bLAKB_KONF_CH_EN;
+extern char bRS485ERR;
+extern short LBAT_STRUKT;
+
 
 
 //***********************************************
@@ -1149,7 +1161,7 @@ typedef struct
 	char _pwm_en;
 	char _phase_mode;
      } INV_STAT; 
-extern INV_STAT inv[20];
+//extern INV_STAT inv[20];
 extern char first_inv_slot;
 
 //***********************************************

@@ -108,6 +108,7 @@ TBOXWARMON=lc640_read_int(EE_TBOXWARMON);
 TBOXWARMOFF=lc640_read_int(EE_TBOXWARMOFF);
 NUMBYPASS=lc640_read_int(EE_NUMBYPASS);
 BAT_TYPE=lc640_read_int(EE_BAT_TYPE);
+LBAT_STRUKT=lc640_read_int(EE_LBAT_STRUKT);
 
 BAT_IS_ON[0]=(enum_bat_is_on)lc640_read_int(EE_BAT1_IS_ON);
 BAT_IS_ON[1]=(enum_bat_is_on)lc640_read_int(EE_BAT2_IS_ON);

@@ -1686,7 +1686,7 @@ if(load_I<0)load_I=0;
 
 #endif
 
-inv[0]._Uio=6;
+//inv[0]._Uio=6;
 
 #ifdef UKU_GLONASS
 
@@ -1719,7 +1719,7 @@ if (NUMINV)
 #endif
 
 #ifndef UKU_GLONASS
-if (NUMINV)
+/*if (NUMINV)
 	{
 	for(i=0;i<NUMINV;i++)
 		{
@@ -1758,7 +1758,7 @@ if (NUMINV)
 			   
      		}
      	}
-   	}
+   	}*/
 #endif
 
 #ifdef GLADKOV
@@ -1780,7 +1780,7 @@ inv[1]._Uin=bps[21]._buff[8]+(bps[21]._buff[9]*256);
 inv[1]._Uil=bps[21]._buff[10]+(bps[21]._buff[11]*256);
 inv[1]._cnt=0;    
 #endif
-
+/*
 if((BAT_IS_ON[0]==bisON)&&(BAT_TYPE==1))
 	{
 	lakb[0]._battCommState=0;
@@ -1795,20 +1795,64 @@ if((BAT_IS_ON[0]==bisON)&&(BAT_TYPE==1))
 		bat[0]._Tb=(signed short)lakb[0]._max_cell_temp;
 		}
 	}
+*/
 
 
-{
-char temp=0;
-if(lakb[0]._rat_cap!=0)temp++;
-if(lakb[1]._rat_cap!=0)temp++;
-if(lakb[2]._rat_cap!=0)temp++;
-if(lakb[3]._rat_cap!=0)temp++;
-if(lakb[4]._rat_cap!=0)temp++;
-if(lakb[5]._rat_cap!=0)temp++;
-if(lakb[6]._rat_cap!=0)temp++;
+for(i=0;i<7;i++)
+	{
+	lakb[i]._rat_cap= (lakb_damp[i][13]*256)+ lakb_damp[i][14];
+	lakb[i]._max_cell_volt= (lakb_damp[i][0]*256)+ lakb_damp[i][1];
+	lakb[i]._min_cell_volt= (lakb_damp[i][2]*256)+ lakb_damp[i][3];
+	lakb[i]._max_cell_temp= lakb_damp[i][4];
+	lakb[i]._min_cell_temp= lakb_damp[i][5];
+	lakb[i]._tot_bat_volt= (lakb_damp[i][6]*256)+ lakb_damp[i][7];
+	lakb[i]._ch_curr= (lakb_damp[i][8]*256)+ lakb_damp[i][8];
+	lakb[i]._dsch_curr= (lakb_damp[i][10]*256)+ lakb_damp[i][11];
+	lakb[i]._s_o_c= lakb_damp[i][12];
+	lakb[i]._r_b_t= lakb_damp[i][15];
+	lakb[i]._c_c_l_v= (lakb_damp[i][16]*256)+ lakb_damp[i][17];
+	lakb[i]._s_o_h= lakb_damp[i][18];
 
-NUMLBAT=temp;
-}
+	if(lakb[i]._rat_cap==0)
+		{
+		if(lakb[i]._isOnCnt)
+			{
+			lakb[i]._isOnCnt--;
+			if(lakb[i]._isOnCnt==0)
+				{
+				if(lakb[i]._battIsOn!=0) bLAKB_KONF_CH=1;
+				}
+			}
+		}
+	else 
+		{
+		if(lakb[i]._isOnCnt<50)
+			{
+			lakb[i]._isOnCnt++;
+			if(lakb[i]._isOnCnt==50)
+				{
+				if(lakb[i]._battIsOn!=1) bLAKB_KONF_CH=1;
+				}
+			}
+		}
+	gran(&lakb[i]._isOnCnt,0,50);
+
+	
+
+	}
+
+if(lakb_damp[0][34]==100)
+	{
+	bRS485ERR=1;
+	}
+if(lakb_damp[0][34]==0)
+	{
+	if(bRS485ERR)bLAKB_KONF_CH=1;
+	bRS485ERR=0;
+	}
+
+
+
 
 
 /*
@@ -3289,7 +3333,7 @@ for(i=0;i<NUMIST;i++)
 #define AV_T	1
 #define AVUMAX	3
 #define AVUMIN	4
-
+/*
 //-----------------------------------------------
 void inv_drv(char in)
 {
@@ -3490,7 +3534,7 @@ else if ((net_av)&&(bps[in]._Uii<200))		bps[in]._state=bsOFF_AV_NET;
 else if (bps[in]._flags_tm&BIN8(100000))	bps[in]._state=bsRDY;
 else if (bps[in]._cnt<20)					bps[in]._state=bsWRK;
 */
-}	
+/*}*/	
 
 //-----------------------------------------------
 void bps_drv(char in)

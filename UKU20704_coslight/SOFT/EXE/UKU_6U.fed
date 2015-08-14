@@ -1,4 +1,4 @@
-;#<FEEDBACK># ARM Linker, 4.1 [Build 644]: Last Updated: Thu Aug 06 15:53:21 2015
+;#<FEEDBACK># ARM Linker, 4.1 [Build 644]: Last Updated: Thu Aug 13 14:59:51 2015
 ;VERSION 0.2
 ;FILE 25lc640.o
 lc640_read_str <= USED 0
@@ -58,7 +58,6 @@ int2lcd_mm <= USED 0
 int2lcdhyx <= USED 0
 ;FILE control.o
 adc_drv6 <= USED 0
-inv_drv <= USED 0
 samokalibr_init <= USED 0
 ;FILE emac_lpc17xx.o
 ;FILE full_can.o

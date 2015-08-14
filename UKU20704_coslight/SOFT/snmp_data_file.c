@@ -395,7 +395,7 @@ snmp_bps_temperature[7]=bps[7]._Ti;
 snmp_bps_stat[7]=bps[7]._av;
 
 
-
+/*
 snmp_inv_number[0]=1;
 snmp_inv_voltage[0]=inv[0]._Uio;
 snmp_inv_current[0]=inv[0]._Ii;
@@ -413,7 +413,7 @@ snmp_inv_voltage[2]=inv[2]._Uio;
 snmp_inv_current[2]=inv[2]._Ii;
 snmp_inv_temperature[2]=inv[2]._Ti;
 snmp_inv_stat[2]=inv[2]._flags_tm;
-
+*/
 
 
 
@@ -620,28 +620,28 @@ for (i=0;i<7;i++)
 	snmp_lakb_voltage[i]=lakb[i]._tot_bat_volt;				//Напряжение ЛАКБ
 	snmp_lakb_max_cell_voltage[i]=lakb[i]._max_cell_volt;		//Максимальное напряжение ячейки ЛАКБ
 	snmp_lakb_min_cell_voltage[i]=lakb[i]._min_cell_volt;		//Минимальное напряжение ячейки ЛАКБ
-	snmp_lakb_max_cell_temperature[0]=lakb[0]._max_cell_temp;	//Максимальная температура ячейки ЛАКБ
-	snmp_lakb_max_cell_temperature[1]=lakb[1]._max_cell_temp;	//Максимальная температура ячейки ЛАКБ
-	snmp_lakb_min_cell_temperature[0]=lakb[0]._min_cell_temp;	//Минимальная температура ячейки ЛАКБ
-	snmp_lakb_min_cell_temperature[1]=lakb[1]._min_cell_temp;	//Минимальная температура ячейки ЛАКБ
-	snmp_lakb_ch_curr[0]=lakb[0]._ch_curr;					//Ток заряда ЛАКБ
-	snmp_lakb_ch_curr[1]=lakb[1]._ch_curr;					//Ток заряда ЛАКБ
-	snmp_lakb_dsch_curr[0]=lakb[0]._dsch_curr;				//Ток разряда ЛАКБ
-	snmp_lakb_dsch_curr[1]=lakb[1]._dsch_curr;				//Ток разряда ЛАКБ
-	snmp_lakb_rat_cap[0]=lakb[0]._rat_cap;					//Номинальная емкость ЛАКБ
-	snmp_lakb_rat_cap[1]=lakb[1]._rat_cap;					//Номинальная емкость ЛАКБ
-	snmp_lakb_soh[0]=lakb[0]._s_o_h;						//Остаточная емкость ЛАКБ
-	snmp_lakb_soh[1]=lakb[1]._s_o_h;						//Остаточная емкость ЛАКБ
-	snmp_lakb_soc[0]=lakb[0]._s_o_c;						//Заряд ЛАКБ
-	snmp_lakb_soc[1]=lakb[1]._s_o_c;						//Заряд ЛАКБ
-	snmp_lakb_cclv[0]=lakb[0]._c_c_l_v;  					//Максимальный ток заряда ЛАКБ
-	snmp_lakb_cclv[1]=lakb[1]._c_c_l_v;  					//Максимальный ток заряда ЛАКБ
-	snmp_lakb_rbt[0]=lakb[0]._r_b_t;						//Оцениваемое время работы ЛАКБ
-	snmp_lakb_rbt[1]=lakb[1]._r_b_t;						//Оцениваемое время работы ЛАКБ
-	snmp_lakb_flags1[0]=lakb[0]._flags1;					//Первый флаг состояния ЛАКБ
-	snmp_lakb_flags1[1]=lakb[1]._flags1;					//Первый флаг состояния ЛАКБ
-	snmp_lakb_flags2[0]=lakb[0]._flags2;					//Второй флаг состояния ЛАКБ
-	snmp_lakb_flags2[1]=lakb[1]._flags2;					//Второй флаг состояния ЛАКБ
+	snmp_lakb_max_cell_temperature[i]=lakb[i]._max_cell_temp;	//Максимальная температура ячейки ЛАКБ
+	//snmp_lakb_max_cell_temperature[1]=lakb[1]._max_cell_temp;	//Максимальная температура ячейки ЛАКБ
+	snmp_lakb_min_cell_temperature[i]=lakb[i]._min_cell_temp;	//Минимальная температура ячейки ЛАКБ
+	//snmp_lakb_min_cell_temperature[1]=lakb[1]._min_cell_temp;	//Минимальная температура ячейки ЛАКБ
+	snmp_lakb_ch_curr[i]=lakb[i]._ch_curr;					//Ток заряда ЛАКБ
+	//snmp_lakb_ch_curr[1]=lakb[1]._ch_curr;					//Ток заряда ЛАКБ
+	snmp_lakb_dsch_curr[i]=lakb[i]._dsch_curr;				//Ток разряда ЛАКБ
+	//snmp_lakb_dsch_curr[1]=lakb[1]._dsch_curr;				//Ток разряда ЛАКБ
+	snmp_lakb_rat_cap[i]=lakb[i]._rat_cap;					//Номинальная емкость ЛАКБ
+	//snmp_lakb_rat_cap[1]=lakb[1]._rat_cap;					//Номинальная емкость ЛАКБ
+	snmp_lakb_soh[i]=lakb[i]._s_o_h;						//Остаточная емкость ЛАКБ
+	//snmp_lakb_soh[1]=lakb[1]._s_o_h;						//Остаточная емкость ЛАКБ
+	snmp_lakb_soc[i]=lakb[i]._s_o_c;						//Заряд ЛАКБ
+	//snmp_lakb_soc[1]=lakb[1]._s_o_c;						//Заряд ЛАКБ
+	snmp_lakb_cclv[i]=lakb[i]._c_c_l_v;  					//Максимальный ток заряда ЛАКБ
+	//snmp_lakb_cclv[1]=lakb[1]._c_c_l_v;  					//Максимальный ток заряда ЛАКБ
+	snmp_lakb_rbt[i]=lakb[i]._r_b_t;						//Оцениваемое время работы ЛАКБ
+	//snmp_lakb_rbt[1]=lakb[1]._r_b_t;						//Оцениваемое время работы ЛАКБ
+	snmp_lakb_flags1[i]=lakb[i]._flags1;					//Первый флаг состояния ЛАКБ
+	//snmp_lakb_flags1[1]=lakb[1]._flags1;					//Первый флаг состояния ЛАКБ
+	snmp_lakb_flags2[i]=lakb[i]._flags2;					//Второй флаг состояния ЛАКБ
+	//snmp_lakb_flags2[1]=lakb[1]._flags2;					//Второй флаг состояния ЛАКБ
 	}
 
 /*
