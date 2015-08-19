@@ -356,7 +356,7 @@ char cnt_net_drv;
 
 //***********************************************
 //ÊÀÍ 
-extern char ptr_can1_tx_wr,ptr_can1_tx_rd;
+extern short ptr_can1_tx_wr,ptr_can1_tx_rd;
 extern char ptr_can2_tx_wr,ptr_can2_tx_rd;
 extern unsigned short rotor_can[6];
 extern char RXBUFF[40],TXBUFF[40];
@@ -781,7 +781,7 @@ if(++cnt_net_drv>max_net_slot)
 	
 	
 	
-if((cnt_net_drv>=MINIM_INV_ADRESS)&&(cnt_net_drv<MINIM_INV_ADRESS+16))
+if((cnt_net_drv>=MINIM_INV_ADRESS)&&(cnt_net_drv<MINIM_INV_ADRESS+15))
 	{
 	if((!bCAN_OFF)&&(cnt_net_drv!=4))can1_out(cnt_net_drv,cnt_net_drv,GETTM,bps[cnt_net_drv]._flags_tu,*((char*)(&bps[cnt_net_drv]._vol_u)),*((char*)((&bps[cnt_net_drv]._vol_u))+1),*((char*)(&bps[cnt_net_drv]._vol_i)),*((char*)((&bps[cnt_net_drv]._vol_i))+1));
      
@@ -1328,11 +1328,12 @@ if(ind==iMn_INV)
 
 	//int2lcdyx(byps._adress,0,2,0); 
 	///int2lcdyx(byps._cnt,0,5,0);
-	//int2lcdyx(bRESET,0,6,0);
+	int2lcdyx(plazma_can1,1,3,0);
+	int2lcdyx(plazma_can2,2,3,0);
 /*	int2lcdyx(makb[2]._cnt,0,10,0);*/
 	int2lcdyx(LPC_SC->RSID,0,3,0);	
- 	int2lcdyx(reset_plazma,0,19,0);
-	char2lcdbyx(snmp_numofevents,0,16);
+ 	int2lcdyx(reset_plazma,0,6,0);
+	int2lcdyx(snmp_numofevents,0,9,0);
 	}
 
 #ifndef _DEBUG_
@@ -5142,31 +5143,30 @@ if(ind==iDeb)
 
     else if(sub_ind==2)
      	{
-     	bgnd_par(	"ÊÁ                  ",
+     	bgnd_par(	"CAN                 ",
      		    	"                    ",
      		    	"                    ",
      		    	"                    ");
 
-		int2lcdyx(main_kb_cnt,1,4,0);
-		int2lcdyx(TBAT,2,4,0);
-		int2lcdyx(cntrl_stat,3,4,0); 
-
-		int2lcdyx(kb_start[0],1,7,0);
-		int2lcdyx(kb_start[1],2,7,0);
-		int2lcdyx(kb_start_ips,3,7,0); 
-
-		int2lcdyx(kb_cnt_1lev,1,10,0);
-		int2lcdyx(kb_cnt_2lev,2,10,0);
-		int2lcdyx(kb_full_ver,3,10,0);
 
 
-		int2lcdyx(ips_bat_av_vzvod,0,10,0);
-		int2lcdyx(ips_bat_av_stat,0,7,0);
+		int2lcdyx(plazma_can1,0,19,0);
+		int2lcdyx(plazma_can2,1,19,0);
+		int2lcdyx(plazma_can3,2,19,0);
+		int2lcdyx(plazma_can4,3,19,0);  
 
-/*		int2lcdhyx(avar_ind_stat,0,7);
-		char2lcdbyx(rele_stat,1,7);
-		
-		int2lcdyx(sk_av_stat[0],0,19,0);
+
+		int2lcdyx(can_rotor[0],0,14,0);
+		int2lcdyx(can_rotor[1],1,14,0);
+		int2lcdyx(can_rotor[2],2,14,0);
+		int2lcdyx(can_rotor[3],3,14,0);
+
+		/*	int2lcdyx(makb[2]._cnt,0,10,0);*/
+		int2lcdyx(LPC_SC->RSID,1,3,0);	
+ 		int2lcdyx(reset_plazma,2,3,0);
+		int2lcdyx(snmp_numofevents,3,3,0);
+			
+/*		int2lcdyx(sk_av_stat[0],0,19,0);
 		int2lcdyx(sk_av_stat[1],1,19,0);
 		int2lcdyx(sk_av_stat[2],2,19,0);
 
@@ -6844,7 +6844,11 @@ else if(ind==iMn_INV)
 		sub_ind--;
 		gran_char(&sub_ind,0,3+NUMINV+NUMBYPASS);
 		}	
-
+	else if(but==butD_)
+		{
+		tree_up(iLog,0,0,0);
+		ret(1000);
+		}
 	else if(but==butE_)
 		{
 		//can1_init(BITRATE62_5K25MHZ);
@@ -7131,7 +7135,7 @@ else if(ind==iInv)
 	     ret(0);
 		}		
 	}
-
+#endif
 else if(ind==iInv_v2)
 	{
 	ret_ind(0,0,0);
@@ -7191,6 +7195,8 @@ else if(ind==iInv_tabl)
 		}				
 	}
 
+
+
 else if(ind==iByps)
 	{
 	ret_ind(0,0,0);
@@ -7221,6 +7227,7 @@ else if(ind==iByps)
 		}		
 	}
 
+#ifndef _DEBUG_
 else if(ind==iLoad)
 	{
 	ret(1000);
@@ -8004,7 +8011,7 @@ else if(ind==iKe)
  	else sub_ind=0;     
 	}
 
-
+#endif
 else if(ind==iLog)
 	{
 	ret_ind_sec(0,0);
@@ -8104,6 +8111,8 @@ else if(ind==iLog_)
 		tree_down(0,0/*sub_ind1-sub_ind*/);
 		}		
 	}	
+
+#ifndef _DEBUG_
 
 else if(ind==iSet)
 	{
@@ -16568,9 +16577,10 @@ LPC_GPIO0->FIOSET|=(1<<11);
 lc640_write_int(100,134);
 
 can1_init(BITRATE62_5K25MHZ); 
-can2_init(BITRATE125K25MHZ);
-FullCAN_SetFilter(1,0x0e9);
+//can2_init(BITRATE125K25MHZ);
+//FullCAN_SetFilter(1,0x0e9);
 FullCAN_SetFilter(0,0x18e);
+//FullCAN_SetFilter(0,0x09e);
 
 UARTInit(0, 9600);	/* baud rate setting */
 
@@ -16643,7 +16653,13 @@ if((AUSW_MAIN==2400)||(AUSW_MAIN==4800)||(AUSW_MAIN==6000))
 	{
 	cntrl_stat=350;
 	cntrl_stat_old=350;
-	}	
+	}
+	
+snmp_trap_send("Reload",1,2,3);
+
+tree_up(iDeb,2,0,0);
+
+		
 while (1)  
 	{
 	bTPS=0; 

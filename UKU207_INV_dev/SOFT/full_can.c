@@ -12,11 +12,11 @@
 // Counts number of filters (CAN message objects) used so far
 short volatile gCANFilter = 0;
 
-char ptr_can1_tx_wr,ptr_can1_tx_rd;
-long can1_info[8];
-long can1_id[8];
-long can1_data[8];
-long can1_datb[8];
+short ptr_can1_tx_wr,ptr_can1_tx_rd;
+long can1_info[32];
+long can1_id[32];
+long can1_data[32];
+long can1_datb[32];
 																							 
 char ptr_can2_tx_wr,ptr_can2_tx_rd;
 
@@ -100,7 +100,7 @@ char plazma_can_pal_index;
 
 // char can_reset_cnt=0;
 char plazma_can;
-char plazma_can1,plazma_can2,plazma_can3,plazma_can4;
+short plazma_can1,plazma_can2,plazma_can3,plazma_can4;
 short can2_tx_cnt;
 
 //-----------------------------------------------
@@ -525,7 +525,7 @@ can1_id[ptr_can1_tx_wr]=0x0000009eUL;
 *(((char*)&can1_datb[ptr_can1_tx_wr])+2)=dat6;
 *(((char*)&can1_datb[ptr_can1_tx_wr])+3)=dat7;	
 ptr_can1_tx_wr++;
-if(ptr_can1_tx_wr>=8)ptr_can1_tx_wr=0;
+if(ptr_can1_tx_wr>=32)ptr_can1_tx_wr=0;
 
 
 if(bOUT_FREE)
@@ -538,7 +538,7 @@ if(bOUT_FREE)
      LPC_CAN1->TDB1=can1_datb[ptr_can1_tx_rd];
      LPC_CAN1->CMR=0x00000021;
      ptr_can1_tx_rd++;
-     if(ptr_can1_tx_rd>=8)ptr_can1_tx_rd=0;
+     if(ptr_can1_tx_rd>=32)ptr_can1_tx_rd=0;
      bOUT_FREE=0;	
 	}
 }	
@@ -1224,6 +1224,7 @@ if((RXBUFF[1]==PUTTM1INV2)&&((RXBUFF[0]&0x3f)>=MINIM_INV_ADRESS)&&((RXBUFF[0]&0x
      {
 	//can_debug_plazma[1][2]++;
      slave_num=RXBUFF[0]&0x3f;
+	rotor_can[2]++;
      
     //if((RXBUFF[0]&0xc0)==0)bps[slave_num]._device=dSRC;
     /*else if((RXBUFF[0]&0xe0)==0x40)*/bps[slave_num]._device=dINV;
@@ -1259,6 +1260,8 @@ if((RXBUFF[1]==PUTTM2INV2)&&((RXBUFF[0]&0x3f)>=MINIM_INV_ADRESS)&&((RXBUFF[0]&0x
 
     //if((RXBUFF[0]&0xe0)==0)bps[slave_num]._device=dSRC;
     /*else if((RXBUFF[0]&0xe0)==0x40)*/bps[slave_num]._device=dINV;
+
+    rotor_can[2]++;
      
 	bps[slave_num]._buff[6]=RXBUFF[2]; 
 	bps[slave_num]._buff[7]=RXBUFF[3];
@@ -1550,12 +1553,14 @@ char temp;
 char *ptr,j;
 //can_cnt++;
 
+//__disable_irq();
+
 rotor_can[0]++;
 
   if (!(LPC_CAN1->RFS & 0xC0000400L))
   { // 11-bit ID, no RTR, matched a filter
 
-rotor_can[1]++;
+	rotor_can[1]++;
     // initialize destination pointer
     // filter number is in lower 10 bits of C1RFS
     pDest = (unsigned int *) &(gFullCANList[(LPC_CAN1->RFS & 0x000003FFL)].Dat1);
@@ -1596,6 +1601,8 @@ rotor_can[1]++;
   }
 
   LPC_CAN1->CMR = 0x04; // release receive buffer
+
+//__enable_irq();
 }
 
 
@@ -2047,6 +2054,7 @@ if ( CANStatus & (1 << 0) )
      {
 	CAN_ISR_Rx1();
 	plazma_can1++;
+
      }
 
 if ( CANStatus & (1 << 1) )

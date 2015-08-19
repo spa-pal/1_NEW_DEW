@@ -260,7 +260,7 @@ snmp_numofbat=1;
 
 */
 
-snmp_load_voltage=load_U;
+snmp_load_voltage=lc640_read_int(CNT_EVENT_LOG);//load_U;
 snmp_load_current=load_I;
 snmp_numofbat=NUMBAT;
 snmp_numofbps=NUMIST;

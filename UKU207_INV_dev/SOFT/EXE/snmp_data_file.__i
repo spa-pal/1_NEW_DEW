@@ -1,1 +1,0 @@
--c --cpu Cortex-M3 -g -O3 --apcs=interwork -I "C:\Keil\ARM\CMSIS\Include" -I "C:\Keil\ARM\INC\NXP\LPC17xx" -DUKU_INV -o ".\EXE\snmp_data_file.o" --omf_browse ".\EXE\snmp_data_file.crf" --depend ".\EXE\snmp_data_file.d" "snmp_data_file.c"

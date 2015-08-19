@@ -36,11 +36,11 @@ USER DEFINABLE PARAMETERS
 // Counts number of filters (CAN message objects) used so far
 //extern short volatile gCANFilter = 0;
 
-extern char ptr_can1_tx_wr,ptr_can1_tx_rd;
-extern long can1_info[8];
-extern long can1_id[8];
-extern long can1_data[8];
-extern long can1_datb[8];
+extern short ptr_can1_tx_wr,ptr_can1_tx_rd;
+extern long can1_info[32];
+extern long can1_id[32];
+extern long can1_data[32];
+extern long can1_datb[32];
 																							 
 extern char ptr_can2_tx_wr,ptr_can2_tx_rd;
 
@@ -75,7 +75,7 @@ extern char can_debug_plazma[2][10];
 extern char bOUT_FREE;
 extern char can_rotor[10];
 extern char plazma_can;
-extern char plazma_can1,plazma_can2,plazma_can3,plazma_can4;
+extern short plazma_can1,plazma_can2,plazma_can3,plazma_can4;
 
 
 
