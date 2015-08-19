@@ -2685,7 +2685,13 @@ else if (ind==iTst_BPS1)
      int2lcd(cntrl_stat1,'#',0);		
      int2lcd(u_necc,'$',1);	
 	
-	MSG_IND2OUT_DIS_BAT=1;	
+	MSG_IND2OUT_DIS_BAT=1;
+	
+/*	int2lcdyx(MSG_IND2PWM_SRC1,0,3,0);
+	int2lcdyx(Uload,0,7,0);
+	int2lcdyx(u_necc,0,11,0);
+	int2lcdyx(Ubat,0,15,0);
+	int2lcdyx(Us[1],0,19,0);	*/
  	} 
 
 

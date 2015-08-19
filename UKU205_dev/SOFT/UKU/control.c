@@ -288,12 +288,12 @@ else if((MSG_IND2PWM_SRC1==0x5555)||(MSG_IND2PWM_SRC2==0x5555))
 	{
  	if(Uload>u_necc)
 		{
-		if(((Ubat-u_necc)>10)&&(cntrl_stat>0))cntrl_stat-=50;
+		if(((Uload-u_necc)>10)&&(cntrl_stat>0))cntrl_stat-=50;
 		else if(cntrl_stat)cntrl_stat--;
 		}
 	else if(Uload<u_necc)
 		{
-		if(((u_necc-Ubat)>10)&&(cntrl_stat<1015))cntrl_stat+=50;
+		if(((u_necc-Uload)>10)&&(cntrl_stat<1015))cntrl_stat+=50;
 		else	if(cntrl_stat<1020)cntrl_stat++;
 		}		
 	}
@@ -1135,7 +1135,7 @@ if((kb_full_ver)&&(abs(Ibat)>IKB))
 	}
 
 
-if(Ubat>=100) Uload=Ubat;
+if((Ubat>=100)&&(MSG_IND2OUT_DIS_BAT==0)) Uload=Ubat;
 else if (Us[0]>=100) Uload=Us[0];
 else Uload=Us[1];
 

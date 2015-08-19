@@ -1,1 +1,0 @@
--c --cpu Cortex-M3 -g -O3 --apcs=interwork -I..\common\inc -IC:\Keil\ARM\INC\NXP\LPC17xx -I "C:\Keil\ARM\CMSIS\Include" -I "C:\Keil\ARM\INC\NXP" -DUKU_VERSION="900" -o ".\exe\memo.o" --omf_browse ".\exe\memo.crf" --depend ".\exe\memo.d" "memo.c"

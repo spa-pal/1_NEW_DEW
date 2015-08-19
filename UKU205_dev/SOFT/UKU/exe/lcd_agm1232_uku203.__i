@@ -1,1 +1,0 @@
--c --cpu Cortex-M3 -g -O3 --apcs=interwork -I..\common\inc -IC:\Keil\ARM\INC\NXP\LPC17xx -I "C:\Keil\ARM\CMSIS\Include" -I "C:\Keil\ARM\INC\NXP" -DUKU_VERSION="900" -o ".\exe\lcd_agm1232_uku203.o" --omf_browse ".\exe\lcd_agm1232_uku203.crf" --depend ".\exe\lcd_agm1232_uku203.d" "lcd_agm1232_uku203.c"
