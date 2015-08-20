@@ -18,3 +18,16 @@ FAT52_dev/SOFT/1
 *.class
 *uvgui*
 *uvopt*
+*.uvopt
+*.bak
+*.d
+*.crf
+*.dep
+*.o
+*.plg
+*.sct
+*.tra
+*.uvgui.*
+*.log
+*.class
+*.~*
