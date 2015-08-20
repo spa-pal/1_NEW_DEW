@@ -490,10 +490,10 @@
       <FileType>1</FileType>
       <tvExp>1</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>82</ColumnNumber>
+      <ColumnNumber>5</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>19</TopLine>
-      <CurrentLine>50</CurrentLine>
+      <CurrentLine>36</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
@@ -809,7 +809,7 @@
   </Group>
 
   <AlienFiles>
-    <PathWithFilename>C:\Users\OLEG\PROJECTS\KEIL\IBP2000\FAT47_dev\SOFT\UKU_UPS_1766\simbol16x9.h</PathWithFilename>
+    <PathWithFilename>C:\USERS\OLEG\PROJECTS\KEIL\1_NEW_DEW\FAT47_dev\SOFT\UKU_UPS_1766\simbol16x9.h</PathWithFilename>
     <TopLine>1</TopLine>
     <CurrentLine>16</CurrentLine>
     <Constant>0</Constant>
@@ -843,9 +843,9 @@
       <Documents>
         <Doc>
           <Name>.\main.c</Name>
-          <ColumnNumber>82</ColumnNumber>
+          <ColumnNumber>5</ColumnNumber>
           <TopLine>19</TopLine>
-          <CurrentLine>50</CurrentLine>
+          <CurrentLine>36</CurrentLine>
         </Doc>
         <Doc>
           <Name>simbol16x9.h</Name>
