@@ -1,4 +1,4 @@
-
+/*
 #define SCL_HIGH() 	LPC_GPIO2->FIODIR&=~(1<<8);LPC_GPIO2->FIOPIN&=~(1<<8);
 #define SCL_LOW()  	LPC_GPIO2->FIODIR|=(1<<8);LPC_GPIO2->FIOPIN&=~(1<<8);
 #define SCL_PIN 	(LPC_GPIO2->FIOPIN)&(1<<8)
@@ -6,7 +6,15 @@
 #define SDA_HIGH() 	LPC_GPIO2->FIODIR&=~(1<<9);LPC_GPIO2->FIOPIN|=(1<<9);
 #define SDA_LOW()  	LPC_GPIO2->FIODIR|=(1<<9);LPC_GPIO2->FIOPIN&=~(1<<9);
 #define SDA_PIN 	(LPC_GPIO2->FIOPIN)&(1<<9) 
+*/
 
+#define SCL_HIGH() 	LPC_GPIO0->FIODIR&=~(1<<11);LPC_GPIO0->FIOPIN&=~(1<<11);
+#define SCL_LOW()  	LPC_GPIO0->FIODIR|=(1<<11);LPC_GPIO0->FIOPIN&=~(1<<11);
+#define SCL_PIN 	(LPC_GPIO0->FIOPIN)&(1<<11)
+
+#define SDA_HIGH() 	LPC_GPIO0->FIODIR&=~(1<<10);LPC_GPIO0->FIOPIN|=(1<<10);
+#define SDA_LOW()  	LPC_GPIO0->FIODIR|=(1<<10);LPC_GPIO0->FIOPIN&=~(1<<10);
+#define SDA_PIN 	(LPC_GPIO0->FIOPIN)&(1<<10)
 //-----------------------------------------------
 void i2c_init(void);
 //-----------------------------------------------
