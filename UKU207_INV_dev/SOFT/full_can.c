@@ -1745,6 +1745,8 @@ char temp;
 
 //plazma_can2++;
 
+//__disable_irq();
+
 can_tx_cnt++;
 
 rotor_can[5]++;
@@ -1761,6 +1763,8 @@ if(ptr_can1_tx_wr!=ptr_can1_tx_rd)
 	}
 else bOUT_FREE=1;
 temp=LPC_CAN1->ICR;
+
+//__enable_irq();
 
 }
 
@@ -1816,7 +1820,7 @@ LPC_CAN1->MOD = 0; // Enter Normal Operating Mode
 
 
 NVIC_EnableIRQ(CAN_IRQn);
-LPC_CAN1->IER =0x0003;
+LPC_CAN1->IER =0x00003;
 return 1;
 }
 

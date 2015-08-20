@@ -1336,7 +1336,7 @@ if(ind==iMn_INV)
 	int2lcdyx(snmp_numofevents,0,9,0);
 	}
 
-#ifndef _DEBUG_
+
 
 
  else if(ind==iBps)
@@ -1622,7 +1622,7 @@ else if(ind==iByps)
 	//int2lcdyx(iByps_ind_cnt,0,2,0);
 	//int2lcdyx(byps._flags,0,6,0);
     }
-	 	  
+#ifndef _DEBUG_	 	  
 else if(ind==iNet)
 	{
 	bgnd_par(		"        ÑÅÒÜ        ",
@@ -2063,7 +2063,7 @@ else if(ind==iKe)
 	int2lcd(sub_ind1+1,'{',0);
 	}	  
 
-
+#endif
 
 else if(ind==iLog)
 	{
@@ -2450,7 +2450,7 @@ else if(ind==iLog_)
 
 	
 	}
-		 
+#ifndef _DEBUG_		 
 else if(ind==iBatLog)
 	{
 	if(BAT_IS_ON[sub_ind1]==bisON)ptrs[0]=" Ââåäåíà  0!/@  /0# ";
@@ -5166,10 +5166,12 @@ if(ind==iDeb)
  		int2lcdyx(reset_plazma,2,3,0);
 		int2lcdyx(snmp_numofevents,3,3,0);
 			
-/*		int2lcdyx(sk_av_stat[0],0,19,0);
-		int2lcdyx(sk_av_stat[1],1,19,0);
-		int2lcdyx(sk_av_stat[2],2,19,0);
-
+		int2lcdyx(ptr_can1_tx_wr,0,5,0);
+		int2lcdyx(ptr_can1_tx_rd,1,5,0);
+		int2lcdyx(ptr_can1_tx_wr-ptr_can1_tx_rd,2,5,0);
+		int2lcdyx(((LPC_CAN1->GSR)>>16)&0x00ff,3,5,0);
+		int2lcdyx(((LPC_CAN1->GSR)>>24)&0x00ff,3,10,0);
+/*
 		int2lcdyx(SK_REL_EN[0]&0x000f,0,16,0);
 		int2lcdyx(SK_REL_EN[1]&0x000f,1,16,0);
 		int2lcdyx(SK_REL_EN[2]&0x000f,2,16,0);
@@ -16579,7 +16581,7 @@ lc640_write_int(100,134);
 can1_init(BITRATE62_5K25MHZ); 
 //can2_init(BITRATE125K25MHZ);
 //FullCAN_SetFilter(1,0x0e9);
-FullCAN_SetFilter(0,0x18e);
+//FullCAN_SetFilter(0,0x18e);
 //FullCAN_SetFilter(0,0x09e);
 
 UARTInit(0, 9600);	/* baud rate setting */
@@ -16719,7 +16721,7 @@ while (1)
 		{
 		b50Hz=0;
 
-		//net_drv();
+		net_drv();
 		}
 
 	if(b10Hz)

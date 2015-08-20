@@ -7932,7 +7932,7 @@
             <uThumb>0</uThumb>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>UKU_INV</Define>
+              <Define>UKU_INV, _DEBUG_</Define>
               <Undefine></Undefine>
               <IncludePath></IncludePath>
             </VariousControls>
