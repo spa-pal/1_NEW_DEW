@@ -22,6 +22,7 @@
 #include "ssd_1306.h"
 //#include "simbol.h"
 #include "simbol16x9.h"
+#include "stdio.h"
 
 extern LOCALM localm[];
 extern U8 own_hw_adr[];
@@ -29,7 +30,7 @@ extern U8  snmp_Community[];
 extern U16  snmp_PortNum;
 extern U16  snmp_TrapPort;
 
-
+unsigned char delete_oleg;
 const char sm_mont[13][4]={"упс","янв","фев","мар","апр","май","июн","июл","авг","сен","окт","ноя","дек"}; //
 char tcp_init_cnt;
 
@@ -49,7 +50,7 @@ ind_mode level_U_mode,level_I_mode,level_Q_mode;
 stuct_ind a,b[10];
 short ind_out[3];
 char lcd_bitmap[1024];
-char lcd_buffer[LCD_SIZE+100]={"QWERTYUIOP12345ZXCVBNMASDFGHJKL12345"};
+char lcd_buffer[LCD_SIZE+100]={"QWERTYUIOP12345ZXCVBNMASDFGHJKL12345ФЫВА"};
 //-----Состояние
 //typedef enum work{power_net,acb} work;
 work work_at=power_net;
@@ -408,8 +409,8 @@ for(i=0;i<1023;i++)
 for(i=0;i<4;i++) {
 	for(x=0;x<10;x++)
 	 	{
-		//если 192 то надо 95
-		if(lcd_buffer[x+10*i]>191) z=((lcd_buffer[x+10*i]-97-32)*24);
+		//если 192 то надо 93
+		if(lcd_buffer[x+10*i]>191) z=((lcd_buffer[x+10*i]-99)*24);
 		if(lcd_buffer[x+10*i]>31) z=(lcd_buffer[x+10*i]-32)*24;
 		else z=0;
 
@@ -1105,12 +1106,14 @@ ssd1306_init(SSD1306_SWITCHCAPVCC);
 //LPC_GPIO2->FIOPIN|=(1<<9);
 
 
-
+ sprintf(lcd_buffer,"asd");
  bitmap_hndl16x9();
  for(iiii_=0;iiii_<1024;iiii_++)	ssd1306_data(lcd_bitmap[iiii_]);
 while(1){
- //for(iiii_=0;iiii_<1024;iiii_++)	ssd1306_data(lcd_bitmap[iiii_]);
- Delay(10000000);
+  bitmap_hndl16x9();
+ for(iiii_=0;iiii_<1024;iiii_++)	ssd1306_data(lcd_bitmap[iiii_]);
+ Delay(100000);
+ delete_oleg++;;
 }
 
 while(1)
