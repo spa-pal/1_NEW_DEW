@@ -619,11 +619,6 @@
               <FileType>1</FileType>
               <FilePath>.\SNMP_MIB.c</FilePath>
             </File>
-            <File>
-              <FileName>simbols.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\simbols.c</FilePath>
-            </File>
           </Files>
         </Group>
       </Groups>
@@ -1240,11 +1235,6 @@
               <FileName>SNMP_MIB.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\SNMP_MIB.c</FilePath>
-            </File>
-            <File>
-              <FileName>simbols.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\simbols.c</FilePath>
             </File>
           </Files>
         </Group>

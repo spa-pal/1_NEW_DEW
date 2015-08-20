@@ -4,7 +4,7 @@
 #include "main.h"
 
 
-#define CMD(c)        do { ssd1306SendByte( c ); } while (0);
+
 
 
 void ssd1306SendByte(uint8_t byte)
@@ -69,7 +69,7 @@ void ssd1306_init(uint8_t vccstate)
   CMD(SSD1306_SETMULTIPLEX);                  // 0xA8
   CMD(0x3F);                                  // 0x3F 1/64 duty
   CMD(SSD1306_SETDISPLAYOFFSET);              // 0xD3
-  CMD(0x0);                                   // no offset
+  CMD(0x00);                                   // no offset
   CMD(SSD1306_SETDISPLAYCLOCKDIV);            // 0xD5
   CMD(0x80);                                  // the suggested ratio 0x80
   CMD(SSD1306_SETPRECHARGE);                  // 0xd9
@@ -77,6 +77,8 @@ void ssd1306_init(uint8_t vccstate)
     { CMD(0x22) }
   else 
     { CMD(0xF1) }
+  CMD(0x2E); // отключен скролл
+  CMD(0xB0);
   CMD(SSD1306_SETCOMPINS);                    // 0xDA
   CMD(0x12);                                  // disable COM left/right remap
   CMD(SSD1306_SETVCOMDETECT);                 // 0xDB
@@ -94,3 +96,4 @@ void ssd1306_init(uint8_t vccstate)
   // Enabled the OLED panel
   CMD(SSD1306_DISPLAYON);
 }
+

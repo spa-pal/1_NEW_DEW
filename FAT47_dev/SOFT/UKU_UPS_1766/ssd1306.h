@@ -46,7 +46,7 @@
 #define SSD1306_VERTICAL_AND_LEFT_HORIZONTAL_SCROLL 0x2A
 
 
-
+#define CMD(c)        do { ssd1306SendByte( c ); } while (0);
 
 void ssd1306_command(char cmnd); 
 

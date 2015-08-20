@@ -20,7 +20,8 @@
 #include "ssd1306.h"
 #include "i2c.h"
 #include "ssd_1306.h"
-#include "simbol.h"
+//#include "simbol.h"
+#include "simbol16x9.h"
 
 extern LOCALM localm[];
 extern U8 own_hw_adr[];
@@ -28,8 +29,11 @@ extern U8  snmp_Community[];
 extern U16  snmp_PortNum;
 extern U16  snmp_TrapPort;
 
+
 const char sm_mont[13][4]={"упс","янв","фев","мар","апр","май","июн","июл","авг","сен","окт","ноя","дек"}; //
 char tcp_init_cnt;
+
+/////
 
 //------Таймер
 short t100=10-10,t50=20-5,t10=100-25,t5=200-45,t2=500-65,t1=1000-85;   // подобрана фаза для несовпадения событий
@@ -45,7 +49,7 @@ ind_mode level_U_mode,level_I_mode,level_Q_mode;
 stuct_ind a,b[10];
 short ind_out[3];
 char lcd_bitmap[1024];
-char lcd_buffer[LCD_SIZE+100]={	"01230000000000000000000000000000000000000000000000000000000000"};
+char lcd_buffer[LCD_SIZE+100]={"QWERTYUIOP12345ZXCVBNMASDFGHJKL12345"};
 //-----Состояние
 //typedef enum work{power_net,acb} work;
 work work_at=power_net;
@@ -308,7 +312,7 @@ while (--syst);
 #define butE		247
 #define butE_		247-128
 
-
+ /*
 //-----------------------------------------------
 void bitmap_hndl(void)
 {
@@ -387,7 +391,59 @@ for(i=0;i<4;i++)
 		} 
 	}
 }
+*/
+//-----------------------------------------------
+void bitmap_hndl16x9(void)
+{
+short x,i,a;
+unsigned int ptr_bitmap, z;
 
+
+for(i=0;i<1023;i++)
+	{
+	lcd_bitmap[i]=0;
+	}
+
+
+for(i=0;i<4;i++) {
+	for(x=0;x<10;x++)
+	 	{
+		//если 192 то надо 95
+		if(lcd_buffer[x+10*i]>191) z=((lcd_buffer[x+10*i]-97-32)*24);
+		if(lcd_buffer[x+10*i]>31) z=(lcd_buffer[x+10*i]-32)*24;
+		else z=0;
+
+		ptr_bitmap=(256*(unsigned)i)+(12*x);
+		lcd_bitmap[ptr_bitmap++]=caracter16x9[z];
+		lcd_bitmap[ptr_bitmap++]=caracter16x9[z+2];
+		lcd_bitmap[ptr_bitmap++]=caracter16x9[z+4];
+		lcd_bitmap[ptr_bitmap++]=caracter16x9[z+6];
+		lcd_bitmap[ptr_bitmap++]=caracter16x9[z+8];
+		lcd_bitmap[ptr_bitmap++]=caracter16x9[z+10];
+		lcd_bitmap[ptr_bitmap++]=caracter16x9[z+12];
+		lcd_bitmap[ptr_bitmap++]=caracter16x9[z+14];
+		lcd_bitmap[ptr_bitmap++]=caracter16x9[z+16];
+		lcd_bitmap[ptr_bitmap++]=caracter16x9[z+18];
+		lcd_bitmap[ptr_bitmap++]=caracter16x9[z+20];
+		ptr_bitmap=(256*(unsigned)i)+(12*x)+128;
+		lcd_bitmap[ptr_bitmap++]=caracter16x9[z+1];
+		lcd_bitmap[ptr_bitmap++]=caracter16x9[z+3];
+		lcd_bitmap[ptr_bitmap++]=caracter16x9[z+5];
+		lcd_bitmap[ptr_bitmap++]=caracter16x9[z+7];
+		lcd_bitmap[ptr_bitmap++]=caracter16x9[z+9];
+		lcd_bitmap[ptr_bitmap++]=caracter16x9[z+11];
+		lcd_bitmap[ptr_bitmap++]=caracter16x9[z+13];
+		lcd_bitmap[ptr_bitmap++]=caracter16x9[z+15];
+		lcd_bitmap[ptr_bitmap++]=caracter16x9[z+17];
+		lcd_bitmap[ptr_bitmap++]=caracter16x9[z+19];
+		lcd_bitmap[ptr_bitmap++]=caracter16x9[z+21];
+		} 
+	
+
+	 
+	}
+
+}
 //-----------------------------------------------
 void but_an(void)
 {
@@ -959,7 +1015,7 @@ if (++t1==1000)
 //===============================================
 int main (void)
 {
-
+short iiii_;
 char mac_adr[6] = { 0x00,0x73,0x05,50,60,70 };
 
 SystemInit();
@@ -994,11 +1050,14 @@ SERIAL_NUMBER=lc640_read_long(EE_SERIAL_NUMBER);
 mac_adr[5]=*((char*)&SERIAL_NUMBER);
 mac_adr[4]=*(((char*)&SERIAL_NUMBER)+1);
 mac_adr[3]=*(((char*)&SERIAL_NUMBER)+2);
+
 mem_copy (own_hw_adr, mac_adr, 6);
+
 LPC_GPIO1->FIOPIN^=(1<<20);
 
+
 snmp_Community[0]=(char)lc640_read(EE_SNMP_READ_COMMUNITY);
-//if((snmp_Community[0]==0)||(snmp_Community[0]==' '))snmp_Community[0]=0;
+if((snmp_Community[0]==0)||(snmp_Community[0]==' '))snmp_Community[0]=0;
 snmp_Community[1]=(char)lc640_read(EE_SNMP_READ_COMMUNITY+1);
 if((snmp_Community[1]==0)||(snmp_Community[1]==' '))snmp_Community[1]=0;
 snmp_Community[2]=(char)lc640_read(EE_SNMP_READ_COMMUNITY+2);
@@ -1039,14 +1098,23 @@ if((snmp_Community[15]==0)||(snmp_Community[15]==' '))snmp_Community[15]=0;
 ///	init_ETH();
 ///LPC_GPIO1->FIOPIN^=(1<<20); 
 
+
 i2c_init();
 ssd1306_init(SSD1306_SWITCHCAPVCC); 
 //LPC_GPIO2->FIODIR|=(1<<9);
 //LPC_GPIO2->FIOPIN|=(1<<9);
 
+
+
+ bitmap_hndl16x9();
+ for(iiii_=0;iiii_<1024;iiii_++)	ssd1306_data(lcd_bitmap[iiii_]);
+while(1){
+ //for(iiii_=0;iiii_<1024;iiii_++)	ssd1306_data(lcd_bitmap[iiii_]);
+ Delay(10000000);
+}
+
 while(1)
 	{
-
 	if(f1000Hz)
 		{
 		f1000Hz=0;
@@ -1154,11 +1222,11 @@ snmp_TrapPort = lc640_read_int(EE_SNMP_WRITE_PORT);
 		if(level_U_mode==flash||level_I_mode==flash||level_Q_mode==flash) flash_=0;
 
 
-		bitmap_hndl2();
+		//bitmap_hndl2();
+		//bitmap_hndl();
 
-
-		data++;
-		for(iiii=0;iiii<1024;iiii++)	ssd1306_data(lcd_bitmap[iiii]);
+		//data++;
+		//for(iiii=0;iiii<1024;iiii++)	ssd1306_data(lcd_bitmap[iiii]);
 		//ssd1306_command(SSD1306_DISPLAYOFF);
 	/*	ssd1306_command(SSD1306_DISPLAYALLON );
 		ssd1306_command(SSD1306_DISPLAYON);
@@ -1179,5 +1247,6 @@ snmp_TrapPort = lc640_read_int(EE_SNMP_WRITE_PORT);
 		if(main_cnt<1000)main_cnt++;
 //snmp_trap_send("Main power alarm. Power source is ACB",1,1);	 
 		}
-	}
+	}// end while
+	
 }
