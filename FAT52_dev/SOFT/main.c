@@ -442,7 +442,10 @@ char temp,i;
 signed temp_S;
 int tempI;
 
-
+	GPIOD->DDR|=(1<<7);
+	GPIOD->CR1|=(1<<7);
+	GPIOD->CR2&=~(1<<7);	
+	GPIOD->ODR^=(1<<7);
 
 //if((mess[0]==1)&&(mess[1]==2)&&(mess[2]==3)&&(mess[3]==4)&&(mess[4]==5)&&(mess[5]==6)&&(mess[6]==7)&&(mess[7]==8))can_transmit1(1,2,3,4,5,6,7//,8);
 
@@ -854,6 +857,12 @@ enableInterrupts();
 	if(b1Hz)
 		{
 		b1Hz=0;
+		
+		
+		/*GPIOD->DDR|=(1<<7);
+		GPIOD->CR1|=(1<<7);
+		GPIOD->CR2&=~(1<<7);	
+		GPIOD->ODR^=(1<<7);*/
 		
 		
 		if(++rs485_cnt>=100)
